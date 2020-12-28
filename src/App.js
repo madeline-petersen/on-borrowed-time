@@ -3,7 +3,7 @@ import './App.css';
 import {
   Link,
   Route,
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch
 } from "react-router-dom";
 
@@ -32,9 +32,8 @@ setConfiguration({
 });
 
 function App() {
-  console.log('*** ', process.env.PUBLIC_URL)
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
     <ScreenClassProvider>
       <div>
         <ul>
