@@ -1,8 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+
+import { ScreenClassProvider } from 'react-grid-system';
+import logo from './logo.svg';
 
 function App() {
   return (
+    <ScreenClassProvider>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -19,6 +22,7 @@ function App() {
         </a>
       </header>
     </div>
+    </ScreenClassProvider>
   );
 }
 
