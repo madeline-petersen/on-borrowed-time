@@ -16,10 +16,10 @@ setConfiguration({
   breakpoints: [375, 756, 1056, 1440, 1800],
 
   // The container widths in pixels of devices in screen class sm, md, lg, xl, and xxl.
-  // containerWidths: [],
+  containerWidths: [],
 
   // The gutter width in pixels. A gutter width of 30 means 15px on each side of a column.
-  gutterWidth: 30,
+  gutterWidth: 20,
 
   // The number of columns in the grid .
   gridColumns: 12,
