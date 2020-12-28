@@ -39,7 +39,7 @@ function App() {
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="">Home</Link>
           </li>
           <li>
             <Link to="index">Index</Link>
