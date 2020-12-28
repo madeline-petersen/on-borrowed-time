@@ -38,10 +38,10 @@ function App() {
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/on-borrowed-time/">Home</Link>
           </li>
           <li>
-            <Link to="/index">Index</Link>
+            <Link to="/on-borrowed-time/index">Index</Link>
           </li>
         </ul>
 
