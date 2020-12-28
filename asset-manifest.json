@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/on-borrowed-time/static/css/main.ab7136cd.chunk.css",
-    "main.js": "/on-borrowed-time/static/js/main.70b3334e.chunk.js",
-    "main.js.map": "/on-borrowed-time/static/js/main.70b3334e.chunk.js.map",
-    "runtime-main.js": "/on-borrowed-time/static/js/runtime-main.df2a1ed6.js",
-    "runtime-main.js.map": "/on-borrowed-time/static/js/runtime-main.df2a1ed6.js.map",
-    "static/js/2.811d8d57.chunk.js": "/on-borrowed-time/static/js/2.811d8d57.chunk.js",
-    "static/js/2.811d8d57.chunk.js.map": "/on-borrowed-time/static/js/2.811d8d57.chunk.js.map",
-    "static/js/3.88d34a05.chunk.js": "/on-borrowed-time/static/js/3.88d34a05.chunk.js",
-    "static/js/3.88d34a05.chunk.js.map": "/on-borrowed-time/static/js/3.88d34a05.chunk.js.map",
+    "main.css": "/on-borrowed-time/static/css/main.2494514d.chunk.css",
+    "main.js": "/on-borrowed-time/static/js/main.079b675e.chunk.js",
+    "main.js.map": "/on-borrowed-time/static/js/main.079b675e.chunk.js.map",
+    "runtime-main.js": "/on-borrowed-time/static/js/runtime-main.31b3d553.js",
+    "runtime-main.js.map": "/on-borrowed-time/static/js/runtime-main.31b3d553.js.map",
+    "static/js/2.b67f6283.chunk.js": "/on-borrowed-time/static/js/2.b67f6283.chunk.js",
+    "static/js/2.b67f6283.chunk.js.map": "/on-borrowed-time/static/js/2.b67f6283.chunk.js.map",
+    "static/js/3.56297ade.chunk.js": "/on-borrowed-time/static/js/3.56297ade.chunk.js",
+    "static/js/3.56297ade.chunk.js.map": "/on-borrowed-time/static/js/3.56297ade.chunk.js.map",
     "index.html": "/on-borrowed-time/index.html",
-    "static/css/main.ab7136cd.chunk.css.map": "/on-borrowed-time/static/css/main.ab7136cd.chunk.css.map",
-    "static/js/2.811d8d57.chunk.js.LICENSE.txt": "/on-borrowed-time/static/js/2.811d8d57.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/on-borrowed-time/static/media/logo.6ce24c58.svg"
+    "static/css/main.2494514d.chunk.css.map": "/on-borrowed-time/static/css/main.2494514d.chunk.css.map",
+    "static/js/2.b67f6283.chunk.js.LICENSE.txt": "/on-borrowed-time/static/js/2.b67f6283.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.df2a1ed6.js",
-    "static/js/2.811d8d57.chunk.js",
-    "static/css/main.ab7136cd.chunk.css",
-    "static/js/main.70b3334e.chunk.js"
+    "static/js/runtime-main.31b3d553.js",
+    "static/js/2.b67f6283.chunk.js",
+    "static/css/main.2494514d.chunk.css",
+    "static/js/main.079b675e.chunk.js"
   ]
 }
