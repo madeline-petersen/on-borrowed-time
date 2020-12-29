@@ -20,7 +20,7 @@ setConfiguration({
   containerWidths: [],
 
   // The gutter width in pixels. A gutter width of 30 means 15px on each side of a column.
-  gutterWidth: 20,
+  gutterWidth: 24,
 
   // The number of columns in the grid .
   gridColumns: 12,
