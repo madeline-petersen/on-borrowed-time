@@ -68,9 +68,26 @@
         {
             "title": "The June Fourth “Incident”",
             "subEvents": [
-                {"title": "Death of an Icon", "entries": [{"anecdote": "Champion for Liberalisation","source": "", "type": ""}]},
-                {"title": "Tiananmen Square Massacre"},
-                {"title": "A New Diasporic Reality"}
+                {"title": "Death of an Icon", "entries": [
+                    {"anecdote": "Champion for Liberalisation","source": "China’s Struggle for Democracy, Its Prelude", "type": "Excerpt (Book) 1989"},
+                    {"anecdote": "Death of Hu Yaobang","source": "Tiananmen Papers", "type": "Excerpt (Book) 1989"},
+                    {"anecdote": "Mourning of Hu Yaobang","source": "Tiananmen Papers", "type": "Excerpt (Journal) 1989"},
+                    {"anecdote": "Beijing Hints at Crackdown on Students","source": "New York Times", "type": "Excerpt (Article) 1989"}
+                ]},
+                {"title": "Tiananmen Square Massacre", "entries": [
+                    {"anecdote": "“Staying”","source": "In the People’s Republic of Amnesia", "type": "Excerpt (Book) 2015"},
+                    {"anecdote": "Tonight Marshall was Imposed","source": "Written Anonymously", "type": "Written Anonymously"},
+                    {"anecdote": "Capturing Tank Man","source": "Phaidon", "type": "Excerpt (Article) 2016"},
+                    {"anecdote": "Eyewitness Accounts of Massacre","source": "Asian Cha", "type": "Excerpt (Article) 1989"}
+
+                ]},
+                {"title": "A New Diasporic Reality", "entries": [
+                    {"anecdote": "An Impossible Dream","source": "New York Times", "type": "Excerpt (Article) 1989"},
+                    {"anecdote": "Today Tiananmen, Tomorrow's Hong Kong","source": "Washington Post", "type": "Excerpt (Article) 2017"},
+                    {"anecdote": "Writing Diaspora","source": "Writing Diaspora; Tactics of Intervention in…", "type": "Excerpt (Journal) 1993"},
+                    {"anecdote": "Hong Kong's Identity Begins to Crystallize ","source": "Time", "type": "Excerpt (Article) 1989"}
+
+                ]}
             ]
         }
     ]

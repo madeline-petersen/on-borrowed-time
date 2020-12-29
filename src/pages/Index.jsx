@@ -81,7 +81,7 @@ const Index = () => {
           </Col>
         </Row>
         <Row className="grid__row divider thin" />
-        {data.events.map((event, index) => {
+        {data.events.map((event, eventIndex) => {
           return (
             <>
               <Row className="grid__row event-header">
@@ -90,23 +90,39 @@ const Index = () => {
                   <div>1989</div>
                 </Col>
               </Row>
-              <Row className="grid__row divider thinnest" />
-              {event.subEvents.map((subevent, index) => {
+              {event.subEvents.map((subevent, subeventIndex) => {
                 return (
                   <>
+                    <Row className="grid__row divider thinnest" />
                     <Row className="grid__row index-entry">
                       <Col md={4} className="regular-caption">
                         {subevent.title}
                       </Col>
-                      <Col md={3} className="regular-caption">
-                        Champion for Liberalisation
-                      </Col>
-                      <Col md={3} className="regular-caption light">
-                        China’s Struggle for Democracy, Its…
-                      </Col>
-                      <Col md={2} className="regular-caption light">
-                        Excerpt (Book) 1989
-                      </Col>
+                      {subevent.entries.map((entry, entryIndex) => {
+                        return (
+                          <>
+                            <Col
+                              offset={{ md: entryIndex ? 4 : 0 }}
+                              md={3}
+                              className="regular-caption truncate"
+                            >
+                              {entry.anecdote}
+                            </Col>
+                            <Col
+                              md={3}
+                              className="regular-caption light truncate"
+                            >
+                              {entry.source}
+                            </Col>
+                            <Col
+                              md={2}
+                              className="regular-caption light truncate"
+                            >
+                              {entry.type}
+                            </Col>
+                          </>
+                        );
+                      })}
                     </Row>
                   </>
                 );

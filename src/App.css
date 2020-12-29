@@ -66,6 +66,12 @@ a {
   color: black;
 }
 
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .grid__row {
   border-left: 11px solid white;
   border-right: 11px solid white;

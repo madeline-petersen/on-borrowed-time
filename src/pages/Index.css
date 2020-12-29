@@ -1,7 +1,7 @@
 /* breakpoints: [375, 756, 1056, 1440, 1800], */
 
 .Index .grid__container {
-  padding-bottom: 230px;
+  padding-bottom: 214px;
 }
 
 .directory {
@@ -32,10 +32,14 @@
 }
 
 .divider.thinnest {
-  margin-top: 50px;
+  margin-top: 34px;
   margin-bottom: 15px;
 }
 
-.index-entry {
+.event-header {
+  padding-bottom: 16px;
+}
+
+.index-entry div {
   padding-bottom: 16px;
 }
