@@ -1,5 +1,9 @@
 /* breakpoints: [375, 756, 1056, 1440, 1800], */
 
+.Index .grid-container {
+  padding-bottom: 230px;
+}
+
 .index-title-block {
   padding-bottom: 100px;
 }
@@ -7,4 +11,17 @@
 .lower-heading {
   padding-top: 10px;
   padding-bottom: 40px;
+}
+
+.divider.thin {
+  margin-bottom: 20px;
+}
+
+.divider.thinnest {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.index-entry {
+  padding-bottom: 16px;
 }

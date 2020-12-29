@@ -29,6 +29,32 @@ a {
   color: var(--Black1);
 }
 
+.medium-body {
+  font-family: LyonText;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: -0.1px;
+  color: #090909;
+}
+
+.regular-caption {
+  font-family: Graphik-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: var(--Black1);
+}
+
+.regular-caption.light {
+  color: #515151;
+}
+
 .medium-caption {
   font-family: Graphik-Medium;
   font-size: 12px;
@@ -65,6 +91,10 @@ a {
 }
 
 .divider.thin {
+  opacity: 0.25;
+}
+
+.divider.thinnest {
   opacity: 0.25;
 }
 
