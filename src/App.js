@@ -27,7 +27,7 @@ setConfiguration({
   gridColumns: 12,
 
   // The screen class used when the view port cannot be determined using window.
-  defaultScreenClass: 'xxl',
+  defaultScreenClass: 'lg',
 
   // The maximum screen class to be used.
   maxScreenClass: 'xxl',
@@ -38,8 +38,8 @@ function App() {
     <Router>
     <ScreenClassProvider>
       <GridHelper />
-        <Container className="grid-container">
-          <Row className="bx--row header">
+        <Container className="grid__container">
+          <Row className="grid__row nav-bar">
             <Col md={4} className="medium-caption"><Link to="/">On Borrowed Time</Link></Col>
             <Col md={3} className="medium-caption"><Link>Theme</Link></Col>
             <Col md={4} className="medium-caption"><Link to="/index">Index</Link></Col>

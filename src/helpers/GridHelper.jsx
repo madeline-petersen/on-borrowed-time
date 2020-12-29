@@ -36,8 +36,8 @@ class GridHelper extends React.Component {
           this.state.isVisible ? ' isVisible' : ''
         }`}
       >
-        <Container className="grid-container">
-          <Row className="bx--row">
+        <Container className="grid__container">
+          <Row className="grid__row">
             <Col md={1} className="grid-helper__col"/>
             <Col md={1} className="grid-helper__col"/>
             <Col md={1} className="grid-helper__col"/>
