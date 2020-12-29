@@ -1,17 +1,10 @@
 /* breakpoints: [375, 756, 1056, 1440, 1800], */
 
-.Index {
-  font-family: LyonText;
-  font-size: 44px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.3;
-  letter-spacing: -0.92px;
-  color: var(--Black1);
+.index-title-block {
+  padding-bottom: 100px;
 }
 
-.index-helper .bx--row {
-  border-left: 11px solid rgba(235, 77, 222, 0.1);
-  border-right: 11px solid rgba(235, 77, 222, 0.1);
+.lower-heading {
+  padding-top: 10px;
+  padding-bottom: 40px;
 }

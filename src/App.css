@@ -3,9 +3,69 @@
   src: url('./LyonText-Regular.otf') format('opentype');
 }
 
+@font-face {
+  font-family: Graphik-Regular;
+  src: url('./Graphik-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Graphik-Medium;
+  src: url('./Graphik-Medium.otf') format('opentype');
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.large-headline {
+  font-family: LyonText;
+  font-size: 44px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: -0.92px;
+  color: var(--Black1);
+}
+
+.medium-caption {
+  font-family: Graphik-Medium;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: normal;
+  color: var(--Black1);
+}
+
 .grid-container {
   margin-left: 3rem !important;
   margin-right: 3rem !important;
+}
+
+.bx--row {
+  border-left: 11px solid rgba(235, 77, 222, 0.1);
+  border-right: 11px solid rgba(235, 77, 222, 0.1);
+}
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.divider {
+  height: 1px;
+  background: black;
+}
+
+.divider.thick {
+  opacity: 0.75;
+}
+
+.divider.thin {
+  opacity: 0.25;
 }
 
 @media screen and (max-width: 1439px) {
