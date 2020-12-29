@@ -1,8 +1,4 @@
 @font-face {
-  font-family: LyonText-Regular;
+  font-family: LyonText;
   src: url('./LyonText-Regular.otf') format('opentype');
-}
-
-div {
-  font-family: LyonText-Regular;
 }
