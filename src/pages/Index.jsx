@@ -4,6 +4,7 @@ import { Col, Container, Row } from "react-grid-system";
 
 import React from "react";
 import cx from "classnames/bind";
+import data from "../data/index.json";
 import useHover from "../hooks/useHover";
 
 const Index = () => {
@@ -14,49 +15,7 @@ const Index = () => {
   const [hoverRef5, isHovered5] = useHover();
   const [hoverRef6, isHovered6] = useHover();
   const [hoverRef7, isHovered7] = useHover();
-
-  const entry = (
-    <>
-      <Row className="grid__row index-entry">
-        <Col md={4} className="regular-caption">
-          Death of an Icon
-        </Col>
-        <Col md={3} className="regular-caption">
-          Champion for Liberalisation
-        </Col>
-        <Col md={3} className="regular-caption light">
-          China’s Struggle for Democracy, Its…
-        </Col>
-        <Col md={2} className="regular-caption light">
-          Excerpt (Book) 1989
-        </Col>
-      </Row>
-      <Row className="grid__row index-entry">
-        <Col md={4} className="regular-caption"></Col>
-        <Col md={3} className="regular-caption">
-          Death of Hu Yaobang
-        </Col>
-        <Col md={3} className="regular-caption light">
-          Tiananmen Papers
-        </Col>
-        <Col md={2} className="regular-caption light">
-          Excerpt (Book) 1989
-        </Col>
-      </Row>
-      <Row className="grid__row index-entry">
-        <Col md={4} className="regular-caption"></Col>
-        <Col md={3} className="regular-caption">
-          Mourning of Hu Yaobang
-        </Col>
-        <Col md={3} className="regular-caption light">
-          Tiananmen Papers
-        </Col>
-        <Col md={2} className="regular-caption light">
-          Excerpt (Book) 1989
-        </Col>
-      </Row>
-    </>
-  );
+  console.log(data);
 
   return (
     <div className="Index">
@@ -122,18 +81,39 @@ const Index = () => {
           </Col>
         </Row>
         <Row className="grid__row divider thin" />
-        <Row className="grid__row event-header">
-          <Col md={4} className="medium-body">
-            <div>The June Fourth “Incident”</div>
-            <div>1989</div>
-          </Col>
-        </Row>
-        <Row className="grid__row divider thinnest" />
-        {entry}
-        <Row className="grid__row divider thinnest" />
-        {entry}
-        <Row className="grid__row divider thinnest" />
-        {entry}
+        {data.events.map((event, index) => {
+          return (
+            <>
+              <Row className="grid__row event-header">
+                <Col md={4} className="medium-body">
+                  <div>{event.title}</div>
+                  <div>1989</div>
+                </Col>
+              </Row>
+              <Row className="grid__row divider thinnest" />
+              {event.subEvents.map((subevent, index) => {
+                return (
+                  <>
+                    <Row className="grid__row index-entry">
+                      <Col md={4} className="regular-caption">
+                        {subevent.title}
+                      </Col>
+                      <Col md={3} className="regular-caption">
+                        Champion for Liberalisation
+                      </Col>
+                      <Col md={3} className="regular-caption light">
+                        China’s Struggle for Democracy, Its…
+                      </Col>
+                      <Col md={2} className="regular-caption light">
+                        Excerpt (Book) 1989
+                      </Col>
+                    </Row>
+                  </>
+                );
+              })}
+            </>
+          );
+        })}
       </Container>
     </div>
   );
