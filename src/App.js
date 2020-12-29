@@ -7,6 +7,7 @@ import {
   Switch
 } from "react-router-dom";
 
+import GridHelper from './helpers/GridHelper.jsx';
 import Index from './pages/Index.jsx';
 import { ScreenClassProvider } from 'react-grid-system';
 import { setConfiguration } from 'react-grid-system';
@@ -35,6 +36,7 @@ function App() {
   return (
     <Router>
     <ScreenClassProvider>
+      {/* <GridHelper /> */}
       <div>
         <ul>
           <li>
