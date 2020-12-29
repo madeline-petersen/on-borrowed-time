@@ -1,11 +1,11 @@
-import "./Index.css";
+import './Index.css';
 
-import { Col, Container, Row } from "react-grid-system";
+import { Col, Container, Row } from 'react-grid-system';
 
-import React from "react";
-import cx from "classnames/bind";
-import data from "../data/index.json";
-import useHover from "../hooks/useHover";
+import React from 'react';
+import cx from 'classnames/bind';
+import data from '../data/index.json';
+import useHover from '../hooks/useHover';
 
 const Index = () => {
   const [hoverRef1, isHovered1] = useHover();
@@ -31,15 +31,15 @@ const Index = () => {
               isHovered6,
               isHovered7
             ].some(x => !!x)
-              ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum."
+              ? 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum.'
               : null}
           </Col>
 
           <Col
             offset={{ md: 1 }}
             md={8}
-            className={cx("large-headline", "directory__list", {
-              "directory__list--hover": [
+            className={cx('large-headline', 'directory__list', {
+              'directory__list--hover': [
                 isHovered1,
                 isHovered2,
                 isHovered3,

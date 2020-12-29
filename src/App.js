@@ -1,13 +1,13 @@
-import "./App.css";
+import './App.css';
 
-import { Col, Container, Row } from "react-grid-system";
-import { Link, Route, HashRouter as Router, Switch } from "react-router-dom";
+import { Col, Container, Row } from 'react-grid-system';
+import { Link, Route, HashRouter as Router, Switch } from 'react-router-dom';
 
-import GridHelper from "./helpers/GridHelper.jsx";
-import Index from "./pages/Index.jsx";
-import React from "react";
-import { ScreenClassProvider } from "react-grid-system";
-import { setConfiguration } from "react-grid-system";
+import GridHelper from './helpers/GridHelper.jsx';
+import Index from './pages/Index.jsx';
+import React from 'react';
+import { ScreenClassProvider } from 'react-grid-system';
+import { setConfiguration } from 'react-grid-system';
 
 setConfiguration({
   // The breakpoints (minimum width) of devices in screen class sm, md, lg, xl, and xxl.
@@ -23,10 +23,10 @@ setConfiguration({
   gridColumns: 12,
 
   // The screen class used when the view port cannot be determined using window.
-  defaultScreenClass: "lg",
+  defaultScreenClass: 'lg',
 
   // The maximum screen class to be used.
-  maxScreenClass: "xxl"
+  maxScreenClass: 'xxl'
 });
 
 function App() {

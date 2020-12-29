@@ -32,24 +32,22 @@ class GridHelper extends React.Component {
   render() {
     return (
       <div
-        className={`grid-helper ${
-          this.state.isVisible ? ' isVisible' : ''
-        }`}
+        className={`grid-helper ${this.state.isVisible ? ' isVisible' : ''}`}
       >
         <Container className="grid__container">
           <Row className="grid__row">
-            <Col md={1} className="grid-helper__col"/>
-            <Col md={1} className="grid-helper__col"/>
-            <Col md={1} className="grid-helper__col"/>
-            <Col md={1} className="grid-helper__col"/>
-            <Col md={1} className="grid-helper__col"/>
-            <Col md={1} className="grid-helper__col"/>
-            <Col md={1} className="grid-helper__col"/>
-            <Col md={1} className="grid-helper__col"/>
-            <Col md={1} className="grid-helper__col"/>
-            <Col md={1} className="grid-helper__col"/>
-            <Col md={1} className="grid-helper__col"/>
-            <Col md={1} className="grid-helper__col"/>
+            <Col md={1} className="grid-helper__col" />
+            <Col md={1} className="grid-helper__col" />
+            <Col md={1} className="grid-helper__col" />
+            <Col md={1} className="grid-helper__col" />
+            <Col md={1} className="grid-helper__col" />
+            <Col md={1} className="grid-helper__col" />
+            <Col md={1} className="grid-helper__col" />
+            <Col md={1} className="grid-helper__col" />
+            <Col md={1} className="grid-helper__col" />
+            <Col md={1} className="grid-helper__col" />
+            <Col md={1} className="grid-helper__col" />
+            <Col md={1} className="grid-helper__col" />
           </Row>
         </Container>
       </div>
