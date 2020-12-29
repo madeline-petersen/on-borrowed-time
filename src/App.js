@@ -36,7 +36,7 @@ function App() {
   return (
     <Router>
     <ScreenClassProvider>
-      {/* <GridHelper /> */}
+      <GridHelper />
       <div>
         <ul>
           <li>

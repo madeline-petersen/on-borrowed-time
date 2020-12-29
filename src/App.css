@@ -2,3 +2,36 @@
   font-family: LyonText;
   src: url('./LyonText-Regular.otf') format('opentype');
 }
+
+.grid-container {
+  margin-left: 3rem !important;
+  margin-right: 3rem !important;
+}
+
+@media screen and (max-width: 1439px) {
+  .grid-container {
+    margin-left: 58px !important;
+    margin-right: 58px !important;
+  }
+}
+
+@media screen and (max-width: 1055px) {
+  .grid-container {
+    margin-left: 3rem !important;
+    margin-right: 3rem !important;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .grid-container {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .grid-container {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+}
