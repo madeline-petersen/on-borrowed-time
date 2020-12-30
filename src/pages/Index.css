@@ -1,11 +1,18 @@
 /* breakpoints: [375, 756, 1056, 1440, 1800], */
 
-.sticky-container {
+.sticky {
   position: -webkit-sticky; /* Safari */
   position: sticky;
-  top: 44px;
   z-index: 999;
   background: white;
+}
+
+.lower-nav__container {
+  top: 44px;
+}
+
+.event__container {
+  top: 110px;
 }
 
 .Index .grid__container {
@@ -51,16 +58,13 @@
   padding-bottom: 40px;
 }
 
-.divider.thin {
-  margin-bottom: 20px;
-}
-
 .divider.thinnest {
   margin-top: 34px;
   margin-bottom: 15px;
 }
 
 .event-header {
+  padding-top: 20px;
   padding-bottom: 16px;
 }
 

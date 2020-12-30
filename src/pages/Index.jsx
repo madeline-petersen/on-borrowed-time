@@ -79,7 +79,7 @@ const Index = () => {
             <span ref={hoverRef7}>National Identity</span>
           </Col>
         </Row>
-        <div className="sticky-container">
+        <div className="lower-nav__container sticky">
           <Row className="grid__row divider thick" />
           <Row className="grid__row lower-nav-bar">
             <Col md={4} className="medium-caption">
@@ -100,16 +100,18 @@ const Index = () => {
         {data.events.map((event, eventIndex) => {
           return (
             <>
-              <Row className="grid__row event-header">
-                <Col md={4} className="medium-body">
-                  <div>{event.title}</div>
-                  <div>1989</div>
-                </Col>
-              </Row>
+              <div className="event__container sticky">
+                <Row className="grid__row event-header">
+                  <Col md={4} className="medium-body">
+                    <div>{event.title}</div>
+                    <div>1989</div>
+                  </Col>
+                </Row>
+                <Row className="grid__row divider thinnest" />
+              </div>
               {event.subEvents.map((subevent, subeventIndex) => {
                 return (
                   <>
-                    <Row className="grid__row divider thinnest" />
                     <Row className="grid__row index-entry">
                       <Col md={4} className="regular-caption">
                         {subevent.title}
@@ -136,6 +138,7 @@ const Index = () => {
                             >
                               {entry.type}
                             </Col>
+                            <Row className="grid__row divider thinnest" />
                           </>
                         );
                       })}
