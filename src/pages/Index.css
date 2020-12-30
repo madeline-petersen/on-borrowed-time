@@ -9,8 +9,13 @@
 }
 
 .directory__list span:hover {
-  cursor: pointer;
   opacity: 1;
+  cursor: pointer;
+}
+
+.directory__list span {
+  opacity: 1;
+  transition: 0.2s;
 }
 
 .directory__list--hover span {
