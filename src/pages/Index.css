@@ -1,5 +1,13 @@
 /* breakpoints: [375, 756, 1056, 1440, 1800], */
 
+.sticky-container {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 44px;
+  z-index: 999;
+  background: white;
+}
+
 .Index .grid__container {
   padding-bottom: 214px;
 }

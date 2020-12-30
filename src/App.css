@@ -77,6 +77,14 @@ a {
   border-right: 11px solid white;
 }
 
+.nav-bar__container {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: white;
+}
+
 .nav-bar {
   padding-top: 20px;
   padding-bottom: 10px;

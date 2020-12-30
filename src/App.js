@@ -34,22 +34,24 @@ function App() {
     <Router>
       <ScreenClassProvider>
         <GridHelper />
-        <Container className="grid__container">
-          <Row className="grid__row nav-bar">
-            <Col md={4} className="medium-caption">
-              <Link to="/">On Borrowed Time</Link>
-            </Col>
-            <Col md={3} className="medium-caption">
-              <Link>Theme</Link>
-            </Col>
-            <Col md={4} className="medium-caption">
-              <Link to="/index">Index</Link>
-            </Col>
-            <Col md={1} className="medium-caption">
-              <Link>English</Link>
-            </Col>
-          </Row>
-        </Container>
+        <div className="nav-bar__container">
+          <Container className="grid__container">
+            <Row className="grid__row nav-bar">
+              <Col md={4} className="medium-caption">
+                <Link to="/">On Borrowed Time</Link>
+              </Col>
+              <Col md={3} className="medium-caption">
+                <Link>Theme</Link>
+              </Col>
+              <Col md={4} className="medium-caption">
+                <Link to="/index">Index</Link>
+              </Col>
+              <Col md={1} className="medium-caption">
+                <Link>English</Link>
+              </Col>
+            </Row>
+          </Container>
+        </div>
 
         <Switch>
           <Route exact path="/">

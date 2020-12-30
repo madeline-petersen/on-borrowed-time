@@ -79,22 +79,24 @@ const Index = () => {
             <span ref={hoverRef7}>National Identity</span>
           </Col>
         </Row>
-        <Row className="grid__row divider thick" />
-        <Row className="grid__row lower-nav-bar">
-          <Col md={4} className="medium-caption">
-            Event
-          </Col>
-          <Col md={3} className="medium-caption">
-            Anecdotes
-          </Col>
-          <Col md={3} className="medium-caption">
-            Source
-          </Col>
-          <Col md={2} className="medium-caption">
-            Type
-          </Col>
-        </Row>
-        <Row className="grid__row divider thin" />
+        <div className="sticky-container">
+          <Row className="grid__row divider thick" />
+          <Row className="grid__row lower-nav-bar">
+            <Col md={4} className="medium-caption">
+              Event
+            </Col>
+            <Col md={3} className="medium-caption">
+              Anecdotes
+            </Col>
+            <Col md={3} className="medium-caption">
+              Source
+            </Col>
+            <Col md={2} className="medium-caption">
+              Type
+            </Col>
+          </Row>
+          <Row className="grid__row divider thin" />
+        </div>
         {data.events.map((event, eventIndex) => {
           return (
             <>
