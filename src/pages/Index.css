@@ -8,11 +8,11 @@
 }
 
 .lower-nav__container {
-  top: 44px;
+  top: 174px;
 }
 
 .event__container {
-  top: 110px;
+  top: 240px;
 }
 
 .Index .grid__container {
@@ -67,6 +67,7 @@
 
 .directory__current-theme {
   opacity: 0;
+  top: 44px;
   padding-bottom: 100px;
 }
 

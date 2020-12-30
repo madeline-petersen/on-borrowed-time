@@ -157,7 +157,7 @@ const Index = () => {
         </Row>
         <Row
           className={cx('grid__row directory__current-theme', {
-            'directory__current-theme--visible': anyIsSelected()
+            'sticky directory__current-theme--visible': anyIsSelected()
           })}
         >
           <Col offset={{ md: 4 }} md={8}>
