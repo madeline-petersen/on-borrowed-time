@@ -138,11 +138,11 @@ const Index = () => {
                             >
                               {entry.type}
                             </Col>
-                            <Row className="grid__row divider thinnest" />
                           </>
                         );
                       })}
                     </Row>
+                    <Row className="grid__row divider thinnest" />
                   </>
                 );
               })}
