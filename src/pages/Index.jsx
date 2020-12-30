@@ -30,9 +30,23 @@ const Index = () => {
               isHovered5,
               isHovered6,
               isHovered7
-            ].some(x => !!x)
-              ? 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum.'
-              : null}
+            ].some(x => !!x) ? (
+              <div className="directory__item-description--visible">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                congue euismod lorem consequat vehicula. Integer eu bibendum
+                nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor
+                scelerisque, mi elit rhoncus purus, quis euismod mauris sapien
+                quis ipsum.
+              </div>
+            ) : (
+              <div className="directory__item-description--hidden">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                congue euismod lorem consequat vehicula. Integer eu bibendum
+                nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor
+                scelerisque, mi elit rhoncus purus, quis euismod mauris sapien
+                quis ipsum.
+              </div>
+            )}
           </Col>
 
           <Col

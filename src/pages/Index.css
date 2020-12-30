@@ -28,6 +28,16 @@
   align-items: center;
 }
 
+.directory__item-description--visible {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.directory__item-description--hidden {
+  opacity: 0;
+  transition: 0.2s;
+}
+
 .lower-nav-bar {
   padding-top: 10px;
   padding-bottom: 40px;
