@@ -20,19 +20,27 @@
 }
 
 .directory {
-  padding-bottom: 100px;
 }
 
-.directory__list span:hover {
-  opacity: 1;
-  cursor: pointer;
+.directory__list {
+  display: flex;
+  flex-direction: column;
 }
 
 .directory__list span {
   opacity: 1;
   transition: 0.2s;
+  width: fit-content;
+  cursor: pointer;
 }
 
+.directory__list-item--selected,
+.directory__list span:hover {
+  opacity: 1;
+}
+
+/* list is hovered, or item in list is selected */
+.directory__list--selected span,
 .directory__list--hover span {
   opacity: 0.2;
   transition: 0.2s;
@@ -51,6 +59,19 @@
 .directory__item-description--hidden {
   opacity: 0;
   transition: 0.2s;
+}
+
+.directory__list-item--selected {
+  opacity: 1;
+}
+
+.directory__current-theme {
+  opacity: 0;
+  padding-bottom: 100px;
+}
+
+.directory__current-theme--visible {
+  opacity: 1;
 }
 
 .lower-nav-bar {
