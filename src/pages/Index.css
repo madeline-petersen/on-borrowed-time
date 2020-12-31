@@ -20,6 +20,7 @@
 }
 
 .directory {
+  padding-bottom: 100px;
 }
 
 .directory__list {
@@ -34,13 +35,28 @@
   cursor: pointer;
 }
 
-.directory__list-item--selected,
+.directory__list--selected {
+  visibility: hidden;
+}
+
+.directory__list-item--selected {
+  visibility: visible;
+  /* @extend .small-headline; */
+  font-family: LyonText;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: -0.2px;
+  color: #090909;
+  top: 44px;
+}
+
 .directory__list span:hover {
   opacity: 1;
 }
 
-/* list is hovered, or item in list is selected */
-.directory__list--selected span,
 .directory__list--hover span {
   opacity: 0.2;
   transition: 0.2s;
@@ -62,16 +78,6 @@
 }
 
 .directory__list-item--selected {
-  opacity: 1;
-}
-
-.directory__current-theme {
-  opacity: 0;
-  top: 44px;
-  padding-bottom: 100px;
-}
-
-.directory__current-theme--visible {
   opacity: 1;
 }
 
