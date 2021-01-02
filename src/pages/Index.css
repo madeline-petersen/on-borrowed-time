@@ -1,10 +1,11 @@
 /* breakpoints: [375, 756, 1056, 1440, 1800], */
 
 .sticky {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
+  position: -webkit-sticky !important; /* Safari */
+  position: sticky !important;
   z-index: 999;
   background: white;
+  top: 0;
 }
 
 .lower-nav__container {
@@ -15,11 +16,11 @@
   top: 240px;
 }
 
-.Index .grid__container {
-  padding-bottom: 214px;
+.sub-event__container {
+  padding-top: 15px;
 }
 
-.directory {
+.directory__container {
   padding-bottom: 100px;
 }
 
@@ -88,7 +89,6 @@
 
 .divider.thinnest {
   margin-top: 34px;
-  margin-bottom: 15px;
 }
 
 .event-header {

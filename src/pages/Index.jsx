@@ -46,8 +46,12 @@ const Index = () => {
 
   return (
     <div className="Index">
-      <Container className="grid__container">
-        <Row className="grid__row directory">
+      <Container
+        className={cx('grid__container', 'directory__container', {
+          fixed: anyIsSelected()
+        })}
+      >
+        <Row className="grid__row">
           <Col md={3} className="medium-body directory__item-description">
             {anyIsHovered() ? (
               <div className="directory__item-description--visible">
@@ -67,7 +71,6 @@ const Index = () => {
               </div>
             )}
           </Col>
-
           <Col
             offset={{ md: 1 }}
             md={8}
@@ -158,77 +161,76 @@ const Index = () => {
             </span>
           </Col>
         </Row>
-        <div className="lower-nav__container sticky">
-          <Row className="grid__row divider thick" />
-          <Row className="grid__row lower-nav-bar">
-            <Col md={4} className="medium-caption">
-              Event
-            </Col>
-            <Col md={3} className="medium-caption">
-              Anecdotes
-            </Col>
-            <Col md={3} className="medium-caption">
-              Source
-            </Col>
-            <Col md={2} className="medium-caption">
-              Type
-            </Col>
-          </Row>
-          <Row className="grid__row divider thin" />
-        </div>
+      </Container>
+      <Container className="grid__container lower-nav__container sticky">
+        <Row className="grid__row divider thick" />
+        <Row className="grid__row lower-nav-bar">
+          <Col md={4} className="medium-caption">
+            Event
+          </Col>
+          <Col md={3} className="medium-caption">
+            Anecdotes
+          </Col>
+          <Col md={3} className="medium-caption">
+            Source
+          </Col>
+          <Col md={2} className="medium-caption">
+            Type
+          </Col>
+        </Row>
+        <Row className="grid__row divider thin" />
+      </Container>
+      <Container className="grid__container event__container sticky">
         {data.events.map((event, eventIndex) => {
           return (
             <>
-              <div className="event__container sticky">
-                <Row className="grid__row event-header">
-                  <Col md={4} className="medium-body">
-                    <div>{event.title}</div>
-                    <div>1989</div>
-                  </Col>
-                </Row>
-                <Row className="grid__row divider thinnest" />
-              </div>
-              {event.subEvents.map((subevent, subeventIndex) => {
-                return (
-                  <>
-                    <Row className="grid__row index-entry">
-                      <Col md={4} className="regular-caption">
-                        {subevent.title}
-                      </Col>
-                      {subevent.entries.map((entry, entryIndex) => {
-                        return (
-                          <>
-                            <Col
-                              offset={{ md: entryIndex ? 4 : 0 }}
-                              md={3}
-                              className="regular-caption truncate"
-                            >
-                              {entry.anecdote}
-                            </Col>
-                            <Col
-                              md={3}
-                              className="regular-caption light truncate"
-                            >
-                              {entry.source}
-                            </Col>
-                            <Col
-                              md={2}
-                              className="regular-caption light truncate"
-                            >
-                              {entry.type}
-                            </Col>
-                          </>
-                        );
-                      })}
-                    </Row>
-                    <Row className="grid__row divider thinnest" />
-                  </>
-                );
-              })}
+              <Row className="grid__row event-header">
+                <Col md={4} className="medium-body">
+                  <div>{event.title}</div>
+                  <div>1989</div>
+                </Col>
+              </Row>
+              <Row className="grid__row divider thinnest" />
             </>
           );
         })}
       </Container>
+      <Container className="grid__container sub-event__container">
+        {data.events.map((event, eventIndex) => {
+          return event.subEvents.map((subevent, subeventIndex) => {
+            return (
+              <>
+                <Row className="grid__row index-entry">
+                  <Col md={4} className="regular-caption">
+                    {subevent.title}
+                  </Col>
+                  {subevent.entries.map((entry, entryIndex) => {
+                    return (
+                      <>
+                        <Col
+                          offset={{ md: entryIndex ? 4 : 0 }}
+                          md={3}
+                          className="regular-caption truncate"
+                        >
+                          {entry.anecdote}
+                        </Col>
+                        <Col md={3} className="regular-caption light truncate">
+                          {entry.source}
+                        </Col>
+                        <Col md={2} className="regular-caption light truncate">
+                          {entry.type}
+                        </Col>
+                      </>
+                    );
+                  })}
+                </Row>
+                <Row className="grid__row divider thinnest" />
+              </>
+            );
+          });
+        })}
+      </Container>
+      );
     </div>
   );
 };
