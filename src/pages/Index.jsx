@@ -195,41 +195,42 @@ const Index = () => {
           );
         })}
       </Container>
-      <Container className="grid__container sub-event__container">
-        {data.events.map((event, eventIndex) => {
-          return event.subEvents.map((subevent, subeventIndex) => {
-            return (
-              <>
-                <Row className="grid__row index-entry">
-                  <Col md={4} className="regular-caption">
-                    {subevent.title}
-                  </Col>
-                  {subevent.entries.map((entry, entryIndex) => {
-                    return (
-                      <>
-                        <Col
-                          offset={{ md: entryIndex ? 4 : 0 }}
-                          md={3}
-                          className="regular-caption truncate"
-                        >
-                          {entry.anecdote}
-                        </Col>
-                        <Col md={3} className="regular-caption light truncate">
-                          {entry.source}
-                        </Col>
-                        <Col md={2} className="regular-caption light truncate">
-                          {entry.type}
-                        </Col>
-                      </>
-                    );
-                  })}
-                </Row>
-                <Row className="grid__row divider thinnest" />
-              </>
-            );
-          });
-        })}
-      </Container>
+      {data.events.map((event, eventIndex) => {
+        return event.subEvents.map((subevent, subeventIndex) => {
+          return (
+            <Container
+              key={subeventIndex}
+              className="grid__container sub-event__container"
+            >
+              <Row className="grid__row index-entry">
+                <Col md={4} className="regular-caption">
+                  {subevent.title}
+                </Col>
+                {subevent.entries.map((entry, entryIndex) => {
+                  return (
+                    <>
+                      <Col
+                        offset={{ md: entryIndex ? 4 : 0 }}
+                        md={3}
+                        className="regular-caption truncate"
+                      >
+                        {entry.anecdote}
+                      </Col>
+                      <Col md={3} className="regular-caption light truncate">
+                        {entry.source}
+                      </Col>
+                      <Col md={2} className="regular-caption light truncate">
+                        {entry.type}
+                      </Col>
+                    </>
+                  );
+                })}
+              </Row>
+              <Row className="grid__row divider thinnest" />
+            </Container>
+          );
+        });
+      })}
       );
     </div>
   );
