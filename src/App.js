@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 
 import { Col, Container, Row } from 'react-grid-system';
 import { Link, Route, HashRouter as Router, Switch } from 'react-router-dom';
