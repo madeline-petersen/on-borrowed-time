@@ -3,25 +3,21 @@
 .sticky {
   position: -webkit-sticky !important; /* Safari */
   position: sticky !important;
-  z-index: 999;
+  z-index: 998;
   background: white;
   top: 0;
 }
 
-.lower-nav__container {
-  top: 174px;
-}
-
-.event__container {
-  top: 240px;
-}
-
-.sub-event__container {
-  padding-top: 15px;
-}
-
 .directory__container {
-  padding-bottom: 100px;
+  height: 519px;
+}
+
+.directory__container.sticky {
+  top: -345px;
+}
+
+.directory {
+  height: 100%;
 }
 
 .directory__list {
@@ -30,18 +26,24 @@
 }
 
 .directory__list span {
-  opacity: 1;
-  transition: 0.2s;
   width: fit-content;
   cursor: pointer;
+
+  /* fade in on un-hover */
+  transition: 0.2s;
+  opacity: 1;
 }
 
 .directory__list--selected {
+  /* hide list after selection */
   visibility: hidden;
 }
 
-.directory__list-item--selected {
+span.directory__list-item--selected {
+  /* show only selected item after selection */
   visibility: visible;
+  opacity: 1;
+
   /* @extend .small-headline; */
   font-family: LyonText;
   font-size: 24px;
@@ -51,35 +53,41 @@
   line-height: 1.25;
   letter-spacing: -0.2px;
   color: #090909;
+}
+
+.directory__list-item--selected.sticky {
+  /* combines with position: sticky */
   top: 44px;
 }
 
 .directory__list span:hover {
+  /* make hovered item opaque */
   opacity: 1;
 }
 
 .directory__list--hover span {
+  /* make list faded */
+  /* shrinks font to small headline after selected */
   opacity: 0.2;
   transition: 0.2s;
 }
 
 .directory__item-description {
+  /* vertically center description */
   display: flex;
   align-items: center;
 }
 
 .directory__item-description--visible {
+  /* fade in */
   opacity: 1;
   transition: 0.2s;
 }
 
 .directory__item-description--hidden {
+  /* fade out */
   opacity: 0;
   transition: 0.2s;
-}
-
-.directory__list-item--selected {
-  opacity: 1;
 }
 
 .lower-nav-bar {
@@ -94,6 +102,18 @@
 .event-header {
   padding-top: 20px;
   padding-bottom: 16px;
+}
+
+.lower-nav__container.sticky {
+  top: 174px;
+}
+
+.event__container.sticky {
+  top: 240px;
+}
+
+.sub-event__container {
+  padding-top: 15px;
 }
 
 .index-entry div {

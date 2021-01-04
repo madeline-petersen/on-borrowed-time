@@ -41,17 +41,13 @@ const Index = () => {
 
   const onThemeSelect = id => {
     setSelectedTheme(id);
-    window.scroll({ top: 342, left: 0, behavior: 'smooth' });
+    window.scroll({ top: 389, left: 0, behavior: 'smooth' });
   };
 
   return (
     <div className="Index">
-      <Container
-        className={cx('grid__container', 'directory__container', {
-          fixed: anyIsSelected()
-        })}
-      >
-        <Row className="grid__row">
+      <Container className="grid__container directory__container sticky">
+        <Row className="grid__row directory">
           <Col md={3} className="medium-body directory__item-description">
             {anyIsHovered() ? (
               <div className="directory__item-description--visible">
@@ -231,7 +227,6 @@ const Index = () => {
           );
         });
       })}
-      );
     </div>
   );
 };
