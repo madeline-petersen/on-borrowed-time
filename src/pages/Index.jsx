@@ -41,7 +41,7 @@ const Index = () => {
 
   const onThemeSelect = id => {
     setSelectedTheme(id);
-    window.scroll({ top: 389, left: 0, behavior: 'smooth' });
+    // window.scroll({ top: 389, left: 0, behavior: 'smooth' });
   };
 
   return (
@@ -80,9 +80,7 @@ const Index = () => {
               id="all"
               onClick={e => onThemeSelect(e.target.id)}
               className={cx('directory__list-item', {
-                'sticky small-headline directory__list-item--selected': isSelected(
-                  'all'
-                )
+                'sticky directory__list-item--selected': isSelected('all')
               })}
             >
               All
@@ -92,9 +90,7 @@ const Index = () => {
               id="language"
               onClick={e => onThemeSelect(e.target.id)}
               className={cx('directory__list-item', {
-                'sticky small-headline directory__list-item--selected': isSelected(
-                  'language'
-                )
+                'sticky directory__list-item--selected': isSelected('language')
               })}
             >
               Language
@@ -106,7 +102,7 @@ const Index = () => {
                 onThemeSelect(e.target.id);
               }}
               className={cx('directory__list-item', {
-                'sticky small-headline directory__list-item--selected': isSelected(
+                'sticky directory__list-item--selected': isSelected(
                   'censorship'
                 )
               })}
@@ -118,7 +114,7 @@ const Index = () => {
               id="collective_memory"
               onClick={e => onThemeSelect(e.target.id)}
               className={cx('directory__list-item', {
-                'sticky small-headline directory__list-item--selected': isSelected(
+                'sticky directory__list-item--selected': isSelected(
                   'collective_memory'
                 )
               })}
@@ -130,9 +126,7 @@ const Index = () => {
               id="diaspora"
               onClick={e => onThemeSelect(e.target.id)}
               className={cx('directory__list-item', {
-                'sticky small-headline directory__list-item--selected': isSelected(
-                  'diaspora'
-                )
+                'sticky directory__list-item--selected': isSelected('diaspora')
               })}
             >
               Diaspora
@@ -142,7 +136,7 @@ const Index = () => {
               id="in_betweeness"
               onClick={e => onThemeSelect(e.target.id)}
               className={cx('directory__list-item', {
-                'sticky small-headline directory__list-item--selected': isSelected(
+                'sticky directory__list-item--selected': isSelected(
                   'in_betweeness'
                 )
               })}
@@ -154,7 +148,7 @@ const Index = () => {
               id="national_identity"
               onClick={e => onThemeSelect(e.target.id)}
               className={cx('directory__list-item', {
-                'sticky small-headline directory__list-item--selected': isSelected(
+                'sticky directory__list-item--selected': isSelected(
                   'national_identity'
                 )
               })}

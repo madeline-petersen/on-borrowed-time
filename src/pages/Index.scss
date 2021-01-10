@@ -8,6 +8,17 @@
   top: 0;
 }
 
+.small-headline {
+  font-family: LyonText;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: -0.2px;
+  color: #090909;
+}
+
 .directory__container {
   height: 519px;
 
@@ -20,48 +31,54 @@
   height: 100%;
 }
 
-// DIRECTORY LIST
 .directory__list {
   display: flex;
   flex-direction: column;
-}
 
-// each individual list item
-.directory__list .directory__list-item {
-  width: fit-content;
-  cursor: pointer;
+  // each individual list item
+  .directory__list-item {
+    width: fit-content;
+    cursor: pointer;
 
-  /* fade in on un-hover */
-  transition: 0.2s;
-  opacity: 1;
-}
-
-.directory__list--selected {
-  /* hide list after selection */
-  visibility: hidden;
-}
-
-.directory__list-item.directory__list-item--selected {
-  /* show only selected item after selection */
-  visibility: visible;
-  opacity: 1;
-
-  &.sticky {
-    /* combines with position: sticky */
-    top: 44px;
+    /* fade in on un-hover */
+    transition: 0.2s;
+    opacity: 1;
   }
-}
 
-.directory__list .directory__list-item:hover {
-  /* make hovered item opaque */
-  opacity: 1;
-}
+  &--selected {
+    /* hide list after selection */
+    visibility: hidden;
+    transition: 0s;
+  }
 
-.directory__list--hover .directory__list-item {
-  /* make list faded */
-  /* shrinks font to small headline after selected */
-  opacity: 0.2;
-  transition: 0.2s;
+  .directory__list-item {
+    &--selected {
+      /* override visibility to bring back selected item */
+      visibility: visible;
+
+      /* shrinks font to small headline after selected */
+      @extend .small-headline;
+      transition: 0.2s;
+    }
+
+    &:hover {
+      /* keep hovered item opaque */
+      opacity: 1;
+    }
+
+    &.sticky {
+      top: 44px;
+    }
+  }
+
+  &--hover {
+    // when list is hovered
+    .directory__list-item {
+      /* fade each individual list item */
+      opacity: 0.2;
+      transition: 0.2s;
+    }
+  }
 }
 
 .directory__item-description {
