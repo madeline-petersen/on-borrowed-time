@@ -67,18 +67,18 @@ span.directory__list-item--selected {
   /* vertically center description */
   display: flex;
   align-items: center;
-}
 
-.directory__item-description--visible {
-  /* fade in */
-  opacity: 1;
-  transition: 0.2s;
-}
+  &--visible {
+    /* fade in */
+    opacity: 1;
+    transition: 0.2s;
+  }
 
-.directory__item-description--hidden {
-  /* fade out */
-  opacity: 0;
-  transition: 0.2s;
+  &--hidden {
+    /* fade out */
+    opacity: 0;
+    transition: 0.2s;
+  }
 }
 
 .lower-nav-bar {
@@ -105,8 +105,8 @@ span.directory__list-item--selected {
 
 .sub-event__container {
   padding-top: 15px;
-}
 
-.index-entry div {
-  padding-bottom: 16px;
+  .index-entry .regular-caption {
+    padding-bottom: 16px;
+  }
 }
