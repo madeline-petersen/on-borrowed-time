@@ -10,16 +10,17 @@
 
 .directory__container {
   height: 519px;
-}
 
-.directory__container.sticky {
-  top: -345px;
+  &.sticky {
+    top: -345px;
+  }
 }
 
 .directory {
   height: 100%;
 }
 
+// DIRECTORY LIST
 .directory__list {
   display: flex;
   flex-direction: column;
@@ -44,20 +45,10 @@ span.directory__list-item--selected {
   visibility: visible;
   opacity: 1;
 
-  /* @extend .small-headline; */
-  font-family: LyonText;
-  font-size: 24px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.25;
-  letter-spacing: -0.2px;
-  color: #090909;
-}
-
-.directory__list-item--selected.sticky {
-  /* combines with position: sticky */
-  top: 44px;
+  &.sticky {
+    /* combines with position: sticky */
+    top: 44px;
+  }
 }
 
 .directory__list span:hover {
