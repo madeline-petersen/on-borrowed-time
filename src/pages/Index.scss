@@ -19,116 +19,238 @@
   color: #090909;
 }
 
-.directory__container {
-  height: 519px;
+.page-container {
+  .directory__container {
+    height: 519px;
 
-  &.sticky {
-    top: -345px;
+    &.sticky {
+      top: -345px;
+      background: lightcyan;
+    }
+
+    .directory {
+      height: 100%;
+
+      .directory__list {
+        display: flex;
+        flex-direction: column;
+
+        // each individual list item
+        .directory__list-item {
+          width: fit-content;
+          cursor: pointer;
+
+          /* fade in on un-hover */
+          transition: 0.2s;
+          opacity: 1;
+        }
+
+        &--selected {
+          /* hide list after selection */
+          visibility: hidden;
+          transition: 0s;
+        }
+
+        .directory__list-item {
+          &--selected {
+            /* override visibility to bring back selected item */
+            visibility: visible;
+
+            /* shrinks font to small headline after selected */
+            @extend .small-headline;
+            transition: 0.2s;
+          }
+
+          &:hover {
+            /* keep hovered item opaque */
+            opacity: 1;
+          }
+
+          &.sticky {
+            top: 44px;
+          }
+        }
+
+        &--hover {
+          // when list is hovered
+          .directory__list-item {
+            /* fade each individual list item */
+            opacity: 0.2;
+            transition: 0.2s;
+          }
+        }
+      }
+
+      .directory__item-description {
+        /* vertically center description */
+        display: flex;
+        align-items: center;
+
+        &--visible {
+          /* fade in */
+          opacity: 1;
+          transition: 0.2s;
+        }
+
+        &--hidden {
+          /* fade out */
+          opacity: 0;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+
+  .divider.thinnest {
+    margin-top: 34px;
+  }
+
+  .lower-nav__container {
+    &.sticky {
+      top: 174px;
+      // top: 354px; mini
+    }
+
+    .lower-nav-bar {
+      padding-top: 10px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .event__container {
+    &.sticky {
+      top: 240px;
+    }
+
+    .event-header {
+      padding-top: 20px;
+      padding-bottom: 16px;
+    }
+  }
+
+  .sub-event__container {
+    padding-top: 15px;
+
+    .index-entry .regular-caption {
+      padding-bottom: 16px;
+    }
   }
 }
 
-.directory {
-  height: 100%;
-}
-
-.directory__list {
-  display: flex;
-  flex-direction: column;
-
-  // each individual list item
-  .directory__list-item {
-    width: fit-content;
-    cursor: pointer;
-
-    /* fade in on un-hover */
-    transition: 0.2s;
-    opacity: 1;
-  }
-
-  &--selected {
-    /* hide list after selection */
-    visibility: hidden;
-    transition: 0s;
-  }
-
-  .directory__list-item {
-    &--selected {
-      /* override visibility to bring back selected item */
-      visibility: visible;
-
-      /* shrinks font to small headline after selected */
-      @extend .small-headline;
-      transition: 0.2s;
-    }
-
-    &:hover {
-      /* keep hovered item opaque */
-      opacity: 1;
-    }
+.page-container--mini {
+  .directory__container {
+    height: 310px;
+    background: lavenderblush;
 
     &.sticky {
       top: 44px;
     }
-  }
 
-  &--hover {
-    // when list is hovered
-    .directory__list-item {
-      /* fade each individual list item */
-      opacity: 0.2;
-      transition: 0.2s;
+    .directory {
+      height: 100%;
+
+      .directory__list {
+        display: flex;
+        flex-direction: column;
+
+        // each individual list item
+        .directory__list-item {
+          width: fit-content;
+          cursor: pointer;
+
+          /* fade in on un-hover */
+          transition: 0.2s;
+          opacity: 1;
+        }
+
+        &--selected {
+          /* hide list after selection */
+          visibility: hidden;
+          transition: 0s;
+        }
+
+        .directory__list-item {
+          /* shrinks font to small headline after selected */
+          @extend .small-headline;
+
+          &--selected {
+            /* override visibility to bring back selected item */
+            visibility: visible;
+
+            transition: 0.2s;
+          }
+
+          &:hover {
+            /* keep hovered item opaque */
+            opacity: 1;
+          }
+
+          &.sticky {
+            top: 44px;
+          }
+        }
+
+        &--hover {
+          // when list is hovered
+          .directory__list-item {
+            /* fade each individual list item */
+            opacity: 0.2;
+            transition: 0.2s;
+          }
+        }
+      }
+
+      .directory__item-description {
+        /* vertically center description */
+        display: flex;
+        align-items: center;
+
+        &--visible {
+          /* fade in */
+          opacity: 1;
+          transition: 0.2s;
+        }
+
+        &--hidden {
+          /* fade out */
+          opacity: 0;
+          transition: 0.2s;
+        }
+      }
     }
   }
-}
 
-.directory__item-description {
-  /* vertically center description */
-  display: flex;
-  align-items: center;
-
-  &--visible {
-    /* fade in */
-    opacity: 1;
-    transition: 0.2s;
+  .divider.thinnest {
+    margin-top: 34px;
   }
 
-  &--hidden {
-    /* fade out */
-    opacity: 0;
-    transition: 0.2s;
-  }
-}
+  .lower-nav__container {
+    &.sticky {
+      top: 354px;
+    }
 
-.divider.thinnest {
-  margin-top: 34px;
-}
-
-.lower-nav__container {
-  &.sticky {
-    top: 174px;
+    .lower-nav-bar {
+      padding-top: 10px;
+      padding-bottom: 40px;
+    }
   }
 
-  .lower-nav-bar {
-    padding-top: 10px;
-    padding-bottom: 40px;
+  .event__container {
+    &.sticky {
+      top: 420px;
+    }
+
+    .event-header {
+      padding-top: 20px;
+      padding-bottom: 16px;
+    }
   }
-}
 
-.event__container {
-  &.sticky {
-    top: 240px;
-  }
+  .sub-event__container {
+    padding-top: 15px;
 
-  .event-header {
-    padding-top: 20px;
-    padding-bottom: 16px;
-  }
-}
-
-.sub-event__container {
-  padding-top: 15px;
-
-  .index-entry .regular-caption {
-    padding-bottom: 16px;
+    .index-entry .regular-caption {
+      padding-bottom: 16px;
+    }
   }
 }
