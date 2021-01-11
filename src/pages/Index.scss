@@ -80,12 +80,16 @@
         &--selected {
           /* hide list after selection */
           visibility: hidden;
-          transition: 0s;
+          transition: 0.2s;
+        }
+
+        &--unselected {
+          .directory__list-item {
+            @extend .large-headline;
+          }
         }
 
         .directory__list-item {
-          @extend .large-headline;
-
           &--selected {
             /* override visibility to bring back selected item */
             visibility: visible;

@@ -89,6 +89,7 @@ const Index = () => {
               md={8}
               className={cx('directory__list', {
                 'directory__list--hover': anyIsHovered(),
+                'directory__list--unselected': !anyIsSelected(),
                 'directory__list--selected': anyIsSelected()
               })}
             >
