@@ -65,7 +65,7 @@ const Index = () => {
           })}
         >
           <Row className={cx('grid__row', 'directory')}>
-            <Col md={3} className="medium-body directory__item-description">
+            <Col md={3} className="directory__item-description">
               {anyIsHovered() ? (
                 <div className="directory__item-description--visible">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.

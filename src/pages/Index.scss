@@ -19,6 +19,28 @@
   color: #090909;
 }
 
+.medium-body {
+  font-family: LyonText;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: -0.1px;
+  color: #090909;
+}
+
+.small-body {
+  font-family: LyonText;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  color: #090909;
+}
+
 .page-container {
   .directory__container {
     height: 519px;
@@ -84,6 +106,7 @@
         /* vertically center description */
         display: flex;
         align-items: center;
+        @extend .medium-body;
 
         &--visible {
           /* fade in */
@@ -151,6 +174,10 @@
           /* shrinks font to small headline after selected */
           @extend .small-headline;
         }
+      }
+
+      .directory__item-description {
+        @extend .small-body;
       }
     }
   }
