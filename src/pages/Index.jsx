@@ -87,7 +87,7 @@ const Index = () => {
             <Col
               offset={{ md: 1 }}
               md={8}
-              className={cx('large-headline', 'directory__list', {
+              className={cx('directory__list', {
                 'directory__list--hover': anyIsHovered(),
                 'directory__list--selected': anyIsSelected()
               })}
