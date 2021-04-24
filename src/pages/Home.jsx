@@ -35,7 +35,11 @@ const Home = () => {
       >
         <Row className="grid__row pt-64 pb-24">
           <Col md={1} />
-          <Col md={11} className="large-headline">
+          <Col
+            md={11}
+            className="large-headline"
+            style={{ textIndent: `calc(200%/11)` }} // indent 2/11 columns
+          >
             Praesent eget magna purus. Aliquam imperdiet tincidunt enim, ac
             molestie dolor elementum ac. Duis eget velit quis magna suscipit
             commodo id vel odio. Sed placerat feugiat est et mattis.
@@ -43,7 +47,11 @@ const Home = () => {
             <br />
           </Col>
           <Col md={1} />
-          <Col md={11} className="large-headline">
+          <Col
+            md={11}
+            className="large-headline"
+            style={{ textIndent: `calc(200%/11)` }} // indent 2/11 columns
+          >
             Pellentesque vel sollicitudin nunc, sit amet porta turpis. In eget
             fringilla nunc. Nullam vel mauris at nibh interdum fringilla. Sed
             convallis, ipsum non semper interdum, lacus dui gravida tellus, sed
