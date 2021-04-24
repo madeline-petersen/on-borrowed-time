@@ -15,8 +15,8 @@
 
 .grid-helper .grid__row {
   height: 100%;
-  border-left: 11px solid rgba(235, 77, 222, 0.1);
-  border-right: 11px solid rgba(235, 77, 222, 0.1);
+  padding-left: 11px;
+  padding-right: 11px;
 }
 
 .grid-helper__col {

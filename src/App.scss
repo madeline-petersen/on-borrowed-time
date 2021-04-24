@@ -29,6 +29,23 @@ a {
   color: #090909;
 }
 
+.large-headline {
+  /* Headline/Event / L */
+
+  font-family: Lyon Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 130%;
+  /* or 57px */
+
+  letter-spacing: -0.02em;
+  text-indent: 226px;
+
+  /* Black */
+  color: #161616;
+}
+
 .regular-caption {
   font-family: Graphik-Regular;
   font-size: 14px;
@@ -62,8 +79,8 @@ a {
 }
 
 .grid__row {
-  border-left: 11px solid white;
-  border-right: 11px solid white;
+  padding-left: 11px;
+  padding-right: 11px;
 }
 
 .nav-bar__container {
