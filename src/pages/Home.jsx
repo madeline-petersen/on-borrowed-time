@@ -5,26 +5,20 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div
-      className="Home"
-      style={{ background: '#EEEEEE', borderLeft: '1px solid purple' }}
-    >
+    <div className="Home h-auto bg-gray-100">
       <Container
-        className="grid__container"
+        className="grid__container sticky top-0"
         style={{ borderLeft: '1px solid #8D8D8D' }}
       >
-        <Row className="grid__row nav-bar">
-          <Col md={4} className="medium-caption">
+        <Row className="grid__row pt-5">
+          <Col md={3} className="medium-caption">
             <Link to="/">On Borrowed Time</Link>
           </Col>
-          <Col md={3} className="medium-caption">
+          <Col md={8} className="medium-caption">
             <Link>Theme</Link>
           </Col>
-          <Col md={4} className="medium-caption">
-            <Link to="/index">Index</Link>
-          </Col>
           <Col md={1} className="medium-caption">
-            <Link>English</Link>
+            <Link to="/index">Index</Link>
           </Col>
         </Row>
       </Container>
