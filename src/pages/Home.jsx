@@ -23,6 +23,7 @@ const Home = () => {
         </Row>
       </Container>
 
+      {/* Event */}
       <Container
         className="grid__container"
         style={{ borderLeft: '1px solid #8D8D8D' }}
@@ -46,6 +47,39 @@ const Home = () => {
             className="large-headline"
             style={{ textIndent: `calc(200%/11)` }} // indent 2/11 columns
           >
+            Pellentesque vel sollicitudin nunc, sit amet porta turpis. In eget
+            fringilla nunc. Nullam vel mauris at nibh interdum fringilla. Sed
+            convallis, ipsum non semper interdum, lacus dui gravida tellus, sed
+            aliquam tellus ipsum ac est.
+          </Col>
+        </Row>
+      </Container>
+
+      {/* Reflection */}
+      <Container
+        className="grid__container"
+        style={{ borderLeft: '1px solid #8D8D8D' }}
+      >
+        <Row className="grid__row pt-64 pb-24">
+          <Col md={1} />
+          <Col md={11} className="medium-headline" style={{ textIndent: '0' }}>
+            Praesent eget magna purus. Aliquam imperdiet tincidunt enim, ac
+            molestie dolor elementum ac. Duis eget velit quis magna suscipit
+            commodo id vel odio. Sed placerat feugiat est et mattis.
+            <br />
+            <br />
+          </Col>
+          <Col md={3} />
+          <Col md={7} className="medium-body" style={{ textIndent: '0' }}>
+            Pellentesque vel sollicitudin nunc, sit amet porta turpis. In eget
+            fringilla nunc. Nullam vel mauris at nibh interdum fringilla. Sed
+            convallis, ipsum non semper interdum, lacus dui gravida tellus, sed
+            aliquam tellus ipsum ac est.
+            <br />
+            <br />
+          </Col>
+          <Col md={3} />
+          <Col md={7} className="medium-body" style={{ textIndent: '0' }}>
             Pellentesque vel sollicitudin nunc, sit amet porta turpis. In eget
             fringilla nunc. Nullam vel mauris at nibh interdum fringilla. Sed
             convallis, ipsum non semper interdum, lacus dui gravida tellus, sed
