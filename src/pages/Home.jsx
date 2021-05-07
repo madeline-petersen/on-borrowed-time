@@ -2,6 +2,7 @@ import { Col, Container, Row } from 'react-grid-system';
 
 import { Link } from 'react-router-dom';
 import React from 'react';
+import ResourceTable from '../components/ResourceTable';
 
 const Home = () => {
   return (
@@ -53,6 +54,7 @@ const Home = () => {
             aliquam tellus ipsum ac est.
           </Col>
         </Row>
+        <ResourceTable />
       </Container>
 
       {/* Reflection */}
