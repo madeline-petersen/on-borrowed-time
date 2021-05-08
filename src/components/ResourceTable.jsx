@@ -34,8 +34,8 @@ const ResourceTable = () => {
     <div>
       {/* Resource Table */}
       <Row className="grid__row">
-        <Col lg={3} />
-        <Col lg={9}>
+        <Col lg={3} md={2} />
+        <Col lg={9} md={10}>
           <div className="border-t border-gray-700 pb-4" />
         </Col>
       </Row>
@@ -44,22 +44,31 @@ const ResourceTable = () => {
           <Row className="grid__row" key={index}>
             {index !== 0 && (
               <>
-                <Col lg={3} />
-                <Col lg={9}>
+                <Col lg={3} md={2} />
+                <Col lg={9} md={10}>
                   <div className="border-t border-gray-400 pt-4" />
                 </Col>
               </>
             )}
 
-            <Col lg={3} />
-            <Col lg={4} className="regular-caption">
+            <Col lg={3} md={2} />
+            <Col lg={4} md={4} sm={4} xs={12} className="regular-caption">
               <div className="gray-900 font-bold">{entry.title}</div>
             </Col>
-            <Col lg={3} className="regular-caption text-gray-50">
+            <Col
+              lg={3}
+              md={3}
+              sm={4}
+              xs={12}
+              className="regular-caption text-gray-50"
+            >
               <div className="text-gray-400">{entry.source}</div>
             </Col>
             <Col
               lg={2}
+              md={3}
+              sm={4}
+              xs={12}
               className="regular-caption"
               style={{ display: 'flex', justifyContent: 'space-between' }}
             >
@@ -67,8 +76,8 @@ const ResourceTable = () => {
               <div className="text-gray-400">{entry.year}</div>
             </Col>
 
-            <Col lg={3} />
-            <Col lg={9} className="pb-8" />
+            <Col lg={3} md={2} />
+            <Col lg={9} md={10} className="pb-8" />
           </Row>
         );
       })}
