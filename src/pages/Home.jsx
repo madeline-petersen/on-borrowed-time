@@ -3,22 +3,26 @@ import { Col, Container, Row } from 'react-grid-system';
 import { Link } from 'react-router-dom';
 import React from 'react';
 import ResourceTable from '../components/ResourceTable';
+import { useScreenClass } from 'react-grid-system';
 
 const Home = () => {
+  const screenClass = useScreenClass();
+
   return (
     <div className="Home h-auto bg-gray-100">
+      {/* Header */}
       <Container
         className="grid__container sticky top-0"
         style={{ borderLeft: '1px solid #8D8D8D' }}
       >
         <Row className="grid__row pt-5">
-          <Col md={3} className="medium-caption">
+          <Col lg={3} md={4} sm={4} className="medium-caption">
             <Link to="/">On Borrowed Time</Link>
           </Col>
-          <Col md={8} className="medium-caption">
+          <Col lg={8} md={3} sm={4} className="medium-caption">
             <Link>Theme</Link>
           </Col>
-          <Col md={1} className="medium-caption">
+          <Col lg={1} md={5} sm={4} className="medium-caption">
             <Link to="/index">Index</Link>
           </Col>
         </Row>
@@ -30,11 +34,20 @@ const Home = () => {
         style={{ borderLeft: '1px solid #8D8D8D' }}
       >
         <Row className="grid__row pt-64 pb-24">
-          <Col md={1} />
+          <Col lg={1} md={2} />
           <Col
-            md={11}
+            lg={11}
+            md={10}
+            sm={12}
+            xs={12}
             className="large-headline"
-            style={{ textIndent: `calc(200%/11)` }} // indent 2/11 columns
+            style={{
+              textIndent: ['lg', 'xl', 'xxl'].includes(screenClass)
+                ? `calc(200%/11)` // indent 2/11 columns for large
+                : ['md'].includes(screenClass)
+                ? `calc(200%/10)` // indent 2/10 columns for medium
+                : '0' // indent 0 for small, x-small
+            }}
           >
             Praesent eget magna purus. Aliquam imperdiet tincidunt enim, ac
             molestie dolor elementum ac. Duis eget velit quis magna suscipit
@@ -42,9 +55,9 @@ const Home = () => {
             <br />
             <br />
           </Col>
-          <Col md={1} />
+          <Col lg={1} />
           <Col
-            md={11}
+            lg={11}
             className="large-headline"
             style={{ textIndent: `calc(200%/11)` }} // indent 2/11 columns
           >
@@ -63,16 +76,16 @@ const Home = () => {
         style={{ borderLeft: '1px solid #8D8D8D' }}
       >
         <Row className="grid__row pt-64 pb-24">
-          <Col md={1} />
-          <Col md={11} className="medium-headline" style={{ textIndent: '0' }}>
+          <Col lg={1} />
+          <Col lg={11} className="medium-headline" style={{ textIndent: '0' }}>
             Praesent eget magna purus. Aliquam imperdiet tincidunt enim, ac
             molestie dolor elementum ac. Duis eget velit quis magna suscipit
             commodo id vel odio. Sed placerat feugiat est et mattis.
             <br />
             <br />
           </Col>
-          <Col md={3} />
-          <Col md={7} className="medium-body" style={{ textIndent: '0' }}>
+          <Col lg={3} />
+          <Col lg={7} className="medium-body" style={{ textIndent: '0' }}>
             Pellentesque vel sollicitudin nunc, sit amet porta turpis. In eget
             fringilla nunc. Nullam vel mauris at nibh interdum fringilla. Sed
             convallis, ipsum non semper interdum, lacus dui gravida tellus, sed
@@ -80,8 +93,8 @@ const Home = () => {
             <br />
             <br />
           </Col>
-          <Col md={3} />
-          <Col md={7} className="medium-body" style={{ textIndent: '0' }}>
+          <Col lg={3} />
+          <Col lg={7} className="medium-body" style={{ textIndent: '0' }}>
             Pellentesque vel sollicitudin nunc, sit amet porta turpis. In eget
             fringilla nunc. Nullam vel mauris at nibh interdum fringilla. Sed
             convallis, ipsum non semper interdum, lacus dui gravida tellus, sed

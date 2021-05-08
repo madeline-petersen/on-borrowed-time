@@ -6,7 +6,7 @@ const ResourceTable = () => {
   const entries = [
     {
       title: 'Vivamus feugiat quis',
-      source: 'Suspendisse tristique pulvinar neque at bibendum',
+      source: 'Suspendisse tristique, pulvinar neque, at bibendum',
       type: 'Book Excerpt',
       year: '1990'
     },
@@ -29,31 +29,46 @@ const ResourceTable = () => {
       year: '1989'
     }
   ];
+
   return (
     <div>
       {/* Resource Table */}
+      <Row className="grid__row">
+        <Col lg={3} />
+        <Col lg={9}>
+          <div className="border-t border-gray-700 pb-4" />
+        </Col>
+      </Row>
       {entries.map((entry, index) => {
         return (
           <Row className="grid__row" key={index}>
-            <Col md={3} />
-            <Col md={9} className="border-t pt-3" />
+            {index !== 0 && (
+              <>
+                <Col lg={3} />
+                <Col lg={9}>
+                  <div className="border-t border-gray-400 pt-4" />
+                </Col>
+              </>
+            )}
 
-            <Col md={3} />
-            <Col md={4} className="regular-caption">
-              {entry.title}
-              <br />
-              {entry.source}
+            <Col lg={3} />
+            <Col lg={4} className="regular-caption">
+              <div className="gray-900 font-bold">{entry.title}</div>
             </Col>
-            <Col md={2} />
-            <Col md={2} className="regular-caption">
-              {entry.type}
+            <Col lg={3} className="regular-caption text-gray-50">
+              <div className="text-gray-400">{entry.source}</div>
             </Col>
-            <Col md={1} className="regular-caption">
-              {entry.year}
+            <Col
+              lg={2}
+              className="regular-caption"
+              style={{ display: 'flex', justifyContent: 'space-between' }}
+            >
+              <div className="text-gray-400">{entry.type}</div>
+              <div className="text-gray-400">{entry.year}</div>
             </Col>
 
-            <Col md={3} />
-            <Col md={9} className="pb-8" />
+            <Col lg={3} />
+            <Col lg={9} className="pb-8" />
           </Row>
         );
       })}

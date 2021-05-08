@@ -1,6 +1,6 @@
 import './GridHelper.css';
 
-import { Col, Container, Row } from 'react-grid-system';
+import { Col, Container, Row, Visible } from 'react-grid-system';
 
 // Packages
 import React from 'react';
@@ -35,19 +35,137 @@ class GridHelper extends React.Component {
         className={`grid-helper ${this.state.isVisible ? ' isVisible' : ''}`}
       >
         <Container className="grid__container">
+          <p>
+            <span>Your current screen class is </span>
+            <Visible xs>
+              <strong>xs</strong>
+            </Visible>
+            <Visible sm>
+              <strong>sm</strong>
+            </Visible>
+            <Visible md>
+              <strong>md</strong>
+            </Visible>
+            <Visible lg>
+              <strong>lg</strong>
+            </Visible>
+            <Visible xl>
+              <strong>xl</strong>
+            </Visible>
+            <Visible xxl>
+              <strong>xxl</strong>
+            </Visible>
+            <span>.</span>
+          </p>
           <Row className="grid__row">
-            <Col md={1} className="grid-helper__col" />
-            <Col md={1} className="grid-helper__col" />
-            <Col md={1} className="grid-helper__col" />
-            <Col md={1} className="grid-helper__col" />
-            <Col md={1} className="grid-helper__col" />
-            <Col md={1} className="grid-helper__col" />
-            <Col md={1} className="grid-helper__col" />
-            <Col md={1} className="grid-helper__col" />
-            <Col md={1} className="grid-helper__col" />
-            <Col md={1} className="grid-helper__col" />
-            <Col md={1} className="grid-helper__col" />
-            <Col md={1} className="grid-helper__col" />
+            <Col
+              xxl={1}
+              xl={1}
+              lg={1}
+              md={1}
+              sm={1}
+              xs={1}
+              className="grid-helper__col"
+            />
+            <Col
+              xxl={1}
+              xl={1}
+              lg={1}
+              md={1}
+              sm={1}
+              xs={1}
+              className="grid-helper__col"
+            />
+            <Col
+              xxl={1}
+              xl={1}
+              lg={1}
+              md={1}
+              sm={1}
+              xs={1}
+              className="grid-helper__col"
+            />
+            <Col
+              xxl={1}
+              xl={1}
+              lg={1}
+              md={1}
+              sm={1}
+              xs={1}
+              className="grid-helper__col"
+            />
+            <Col
+              xxl={1}
+              xl={1}
+              lg={1}
+              md={1}
+              sm={1}
+              xs={1}
+              className="grid-helper__col"
+            />
+            <Col
+              xxl={1}
+              xl={1}
+              lg={1}
+              md={1}
+              sm={1}
+              xs={1}
+              className="grid-helper__col"
+            />
+            <Col
+              xxl={1}
+              xl={1}
+              lg={1}
+              md={1}
+              sm={1}
+              xs={1}
+              className="grid-helper__col"
+            />
+            <Col
+              xxl={1}
+              xl={1}
+              lg={1}
+              md={1}
+              sm={1}
+              xs={1}
+              className="grid-helper__col"
+            />
+            <Col
+              xxl={1}
+              xl={1}
+              lg={1}
+              md={1}
+              sm={1}
+              xs={1}
+              className="grid-helper__col"
+            />
+            <Col
+              xxl={1}
+              xl={1}
+              lg={1}
+              md={1}
+              sm={1}
+              xs={1}
+              className="grid-helper__col"
+            />
+            <Col
+              xxl={1}
+              xl={1}
+              lg={1}
+              md={1}
+              sm={1}
+              xs={1}
+              className="grid-helper__col"
+            />
+            <Col
+              xxl={1}
+              xl={1}
+              lg={1}
+              md={1}
+              sm={1}
+              xs={1}
+              className="grid-helper__col"
+            />
           </Row>
         </Container>
       </div>
