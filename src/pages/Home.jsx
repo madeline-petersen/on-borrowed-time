@@ -9,7 +9,7 @@ const Home = () => {
   const screenClass = useScreenClass();
 
   return (
-    <div className="Home h-auto bg-gray-100">
+    <div className="Home h-auto bg-gray-10">
       {/* Header */}
       <Container
         className="grid__container sticky top-0"
