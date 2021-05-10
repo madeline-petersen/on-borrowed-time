@@ -3,6 +3,8 @@ import { Col, Container, Row } from 'react-grid-system';
 import { Link } from 'react-router-dom';
 import React from 'react';
 import ResourceTable from '../components/ResourceTable';
+import car from '../images/car.png';
+import crowd from '../images/crowd.png';
 import { useScreenClass } from 'react-grid-system';
 
 const Home = () => {
@@ -82,6 +84,37 @@ const Home = () => {
       </Container>
 
       {/* Reflection */}
+      <Container
+        className="grid__container"
+        style={{ borderLeft: '1px solid #8D8D8D' }}
+      >
+        <Row className="grid__row pt-64 pb-20">
+          <Col lg={1} />
+          <Col lg={11} md={12}>
+            <img src={crowd} alt="" />
+          </Col>
+          <Col lg={3} />
+          <Col lg={4} md={4} className="regular-caption mt-8">
+            Pellentesque vel sollicitudin nunc, sit amet porta turpis. In eget
+            fringilla nunc. Nullam vel mauris at nibh interdum fringilla. Sed
+            convallis, ipsum non semper interdum, lacus dui gravida tellus, sed
+            aliquam tellus ipsum ac est.
+          </Col>
+        </Row>
+        <Row className="grid__row pt-20 pb-24">
+          <Col lg={3} />
+          <Col lg={7} md={12}>
+            <img src={car} alt="" />
+          </Col>
+          <Col lg={3} />
+          <Col lg={4} md={4} className="regular-caption mt-5">
+            Pellentesque vel sollicitudin nunc, sit amet porta turpis. In eget
+            fringilla nunc.
+          </Col>
+        </Row>
+      </Container>
+
+      {/* Final Reflection */}
       <Container
         className="grid__container"
         style={{ borderLeft: '1px solid #8D8D8D' }}
