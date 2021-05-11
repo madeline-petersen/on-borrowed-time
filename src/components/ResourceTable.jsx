@@ -1,35 +1,9 @@
 import { Col, Row } from 'react-grid-system';
 
+import PropTypes from 'prop-types';
 import React from 'react';
 
-const ResourceTable = () => {
-  const entries = [
-    {
-      title: 'Vivamus feugiat quis',
-      source: 'Suspendisse tristique, pulvinar neque, at bibendum',
-      type: 'Book Excerpt',
-      year: '1990'
-    },
-    {
-      title: 'In non quam in ligula',
-      source: 'Suspendisse quis condimentum felis',
-      type: 'Book Excerpt',
-      year: '2001'
-    },
-    {
-      title: 'In at cursus nisl',
-      source: 'Maecenas auctor vulputate ex a auctor',
-      type: 'Book Excerpt',
-      year: '2001'
-    },
-    {
-      title: 'Etiam sit amet nunc',
-      source: 'Duis suscipit turpis',
-      type: 'Article Excerpt',
-      year: '1989'
-    }
-  ];
-
+const ResourceTable = ({ data }) => {
   return (
     <div>
       {/* Resource Table */}
@@ -39,7 +13,7 @@ const ResourceTable = () => {
           <div className="border-t border-gray-70 pb-4" />
         </Col>
       </Row>
-      {entries.map((entry, index) => {
+      {data.map((entry, index) => {
         return (
           <Row className="grid__row" key={index}>
             {index !== 0 && (
@@ -77,6 +51,10 @@ const ResourceTable = () => {
       })}
     </div>
   );
+};
+
+ResourceTable.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.shape())
 };
 
 export default ResourceTable;
