@@ -151,18 +151,16 @@ const Home = () => {
         className="grid__container"
         style={{ borderLeft: '1px solid #8D8D8D' }}
       >
-        <Row className="grid__row pt-64 pb-24">
+        <Row className="grid__row pt-64 pb-40">
           <Col lg={1} />
           <Col lg={11} md={12}>
-            <p className="medium-headline">
+            <p className="medium-headline pb-16">
               After Hu Yaobang’s death, there was an emerging vitality to
               China’s pro-democracy movement. Overseas, Hong Kong citizens
               contributed to the movement by providing moral and material
               support; in the hopes that the reunification process would be
               smoother if liberal reforms could be achieved in China before the
               handover.
-              <br />
-              <br />
             </p>
           </Col>
           <Col lg={3} />
