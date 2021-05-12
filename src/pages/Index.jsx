@@ -218,7 +218,7 @@ const Index = () => {
             return (
               <Container key={subeventIndex} className="grid__container pt-4">
                 <Row className="grid__row index-entry">
-                  <Col md={4} className="regular-caption pb-4">
+                  <Col md={4} className="small-body pb-4">
                     {subevent.title}
                   </Col>
                   {subevent.entries.map((entry, entryIndex) => {
@@ -227,20 +227,14 @@ const Index = () => {
                         <Col
                           offset={{ md: entryIndex ? 4 : 0 }}
                           md={3}
-                          className="regular-caption truncate pb-4"
+                          className="small-body truncate pb-4"
                         >
                           {entry.anecdote}
                         </Col>
-                        <Col
-                          md={3}
-                          className="regular-caption light truncate pb-4"
-                        >
+                        <Col md={3} className="small-body light truncate pb-4">
                           {entry.source}
                         </Col>
-                        <Col
-                          md={2}
-                          className="regular-caption light truncate pb-4"
-                        >
+                        <Col md={2} className="small-body light truncate pb-4">
                           {entry.type}
                         </Col>
                       </>

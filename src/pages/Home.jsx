@@ -120,7 +120,7 @@ const Home = () => {
           </Col>
           <Col lg={3} />
           <Col lg={4} md={4}>
-            <p className="regular-caption mt-8">
+            <p className="small-body mt-8">
               Some two hundred thousand pro-democracy students staged an
               unauthorized demonstration in Tiananmen Square during the funeral
               ceremony of the Chinese Communist Party leader and liberal
@@ -136,7 +136,7 @@ const Home = () => {
           </Col>
           <Col lg={3} />
           <Col lg={4} md={4}>
-            <p className="regular-caption mt-5">
+            <p className="small-body mt-5">
               A weary protester pleads with a PLA officer sitting in his truck
               to not crackdown on the student demonstrators in Tiananmen Square.
               (Photo by Peter Turnley/Getty Images)
