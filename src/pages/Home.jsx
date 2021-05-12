@@ -13,16 +13,13 @@ const Home = () => {
   return (
     <div className="Home h-auto bg-gray-10">
       {/* Header */}
-      <Container
-        className="grid__container sticky top-0"
-        style={{ borderLeft: '1px solid #8D8D8D' }}
-      >
+      <Container className="grid__container sticky top-0 border-l border-gray-50">
         <Row className="grid__row pt-5">
           <Col lg={3} md={4} sm={4} xs={4} className="medium-caption">
             <Link to="/">On Borrowed Time</Link>
           </Col>
           <Col lg={8} md={3} sm={4} xs={4} className="medium-caption">
-            <Link>Theme</Link>
+            <Link>1989 &ldquo;The June Fourth Incident&rdquo;</Link>
           </Col>
           <Col lg={1} md={5} sm={4} xs={4} className="medium-caption">
             <Link to="/index">Index</Link>
@@ -31,12 +28,17 @@ const Home = () => {
       </Container>
 
       {/* Event intro */}
+      <Container className="grid__container border-l border-gray-50">
+        <Row className="grid__row pt-64 pb-24">
+          <Col lg={3} md={3} />
+          <Col lg={9} md={9} sm={12} xs={12}>
+            <p className="medium-caption sticky top-0">Scene I</p>
+          </Col>
+        </Row>
+      </Container>
 
       {/* Event */}
-      <Container
-        className="grid__container"
-        style={{ borderLeft: '1px solid #8D8D8D' }}
-      >
+      <Container className="grid__container border-l border-gray-50">
         <Row className="grid__row pt-64 pb-24">
           <Col lg={1} md={2} />
           <Col lg={11} md={10} sm={12} xs={12}>
@@ -110,10 +112,7 @@ const Home = () => {
       </Container>
 
       {/* Reflection */}
-      <Container
-        className="grid__container"
-        style={{ borderLeft: '1px solid #8D8D8D' }}
-      >
+      <Container className="grid__container border-l border-gray-50">
         <Row className="grid__row pt-64 pb-20">
           <Col lg={1} />
           <Col lg={11} md={12}>
@@ -147,10 +146,7 @@ const Home = () => {
       </Container>
 
       {/* Final Reflection */}
-      <Container
-        className="grid__container"
-        style={{ borderLeft: '1px solid #8D8D8D' }}
-      >
+      <Container className="grid__container border-l border-gray-50">
         <Row className="grid__row pt-64 pb-40">
           <Col lg={1} />
           <Col lg={11} md={12}>

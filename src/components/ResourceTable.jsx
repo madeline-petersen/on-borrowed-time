@@ -27,7 +27,7 @@ const ResourceTable = ({ data }) => {
 
             <Col lg={3} md={2} />
             <Col lg={4} md={4} sm={4} xs={12} className="regular-caption">
-              <div className="text-gray-100 font-bold">{entry.title}</div>
+              <div className="text-gray-100">{entry.title}</div>
             </Col>
             <Col lg={3} md={3} sm={4} xs={12} className="regular-caption">
               <div className="text-gray-40">{entry.source}</div>
