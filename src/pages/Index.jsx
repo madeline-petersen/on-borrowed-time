@@ -182,7 +182,7 @@ const Index = () => {
         </Container>
         <Container className="grid__container lower-nav__container sticky">
           <Row className="grid__row divider thick" />
-          <Row className="grid__row lower-nav-bar">
+          <Row className="grid__row lower-nav-bar pt-2 pb-10">
             <Col md={4} className="medium-caption">
               Event
             </Col>
@@ -202,13 +202,13 @@ const Index = () => {
           {data.events.map((event, eventIndex) => {
             return (
               <>
-                <Row className="grid__row event-header">
+                <Row className="grid__row pt-5 pb-4">
                   <Col md={4} className="medium-body">
                     <div>{event.title}</div>
                     <div>1989</div>
                   </Col>
                 </Row>
-                <Row className="grid__row divider thinnest" />
+                <Row className="grid__row divider thinnest mt-8" />
               </>
             );
           })}
@@ -216,12 +216,9 @@ const Index = () => {
         {data.events.map((event, eventIndex) => {
           return event.subEvents.map((subevent, subeventIndex) => {
             return (
-              <Container
-                key={subeventIndex}
-                className="grid__container sub-event__container"
-              >
+              <Container key={subeventIndex} className="grid__container pt-4">
                 <Row className="grid__row index-entry">
-                  <Col md={4} className="regular-caption">
+                  <Col md={4} className="regular-caption pb-4">
                     {subevent.title}
                   </Col>
                   {subevent.entries.map((entry, entryIndex) => {
@@ -230,14 +227,20 @@ const Index = () => {
                         <Col
                           offset={{ md: entryIndex ? 4 : 0 }}
                           md={3}
-                          className="regular-caption truncate"
+                          className="regular-caption truncate pb-4"
                         >
                           {entry.anecdote}
                         </Col>
-                        <Col md={3} className="regular-caption light truncate">
+                        <Col
+                          md={3}
+                          className="regular-caption light truncate pb-4"
+                        >
                           {entry.source}
                         </Col>
-                        <Col md={2} className="regular-caption light truncate">
+                        <Col
+                          md={2}
+                          className="regular-caption light truncate pb-4"
+                        >
                           {entry.type}
                         </Col>
                       </>
