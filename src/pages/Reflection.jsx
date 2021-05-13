@@ -43,13 +43,11 @@ const Reflection = () => {
             <p className="medium-caption scene-animation pt-2 absolute top-0 text-gray-50">
               Scene I
             </p>
-            <p className="small-body title-animation pt-2 text-gray-50">
+            <p className="small-body title-animation pt-2 pb-2 text-gray-50">
               Death of an Icon
             </p>
           </Col>
         </Row>
-        {/* black to transparent background gradient */}
-        <Row className="grid__row h-48 bg-gradient-to-b from-black" />
       </Container>
 
       {/* Final Reflection */}

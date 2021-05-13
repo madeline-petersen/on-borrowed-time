@@ -49,11 +49,11 @@ const Event = () => {
             <p className="medium-caption scene-animation pt-2 absolute top-0">
               Scene I
             </p>
-            <p className="small-body title-animation pt-2">Death of an Icon</p>
+            <p className="small-body title-animation pt-2 pb-2">
+              Death of an Icon
+            </p>
           </Col>
         </Row>
-        {/* gray to transparent background gradient */}
-        <Row className="grid__row h-48 bg-gradient-to-b from-gray-10" />
       </Container>
 
       {/* Event */}
