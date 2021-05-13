@@ -30,7 +30,7 @@ const Home = () => {
       </Container>
 
       <Container className="grid__container border-l border-gray-50">
-        <Row className="grid__row pt-64">
+        <Row className="grid__row shrink-animation">
           <Col lg={12} md={12} sm={12} xs={12} />
         </Row>
       </Container>
@@ -128,7 +128,7 @@ const Home = () => {
       </Container>
 
       {/* Reflection */}
-      <Container className="grid__container border-l border-gray-50">
+      {/* <Container className="grid__container border-l border-gray-50">
         <Row className="grid__row pt-64 pb-20">
           <Col lg={1} />
           <Col lg={11} md={12}>
@@ -159,10 +159,10 @@ const Home = () => {
             </p>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
 
       {/* Final Reflection */}
-      <Container className="grid__container border-l border-gray-50">
+      {/* <Container className="grid__container border-l border-gray-50">
         <Row className="grid__row pt-64 pb-40">
           <Col lg={1} />
           <Col lg={11} md={12}>
@@ -208,7 +208,7 @@ const Home = () => {
             </p>
           </Col>
         </Row>
-      </Container>
+      </Container> */}
     </div>
   );
 };
