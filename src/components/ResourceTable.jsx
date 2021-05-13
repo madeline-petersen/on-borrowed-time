@@ -7,7 +7,7 @@ const ResourceTable = ({ data }) => {
   return (
     <div>
       {/* Resource Table */}
-      <Row className="grid__row">
+      <Row className="grid__row delayed-fade-in">
         <Col lg={3} md={2} />
         <Col lg={9} md={10}>
           <div className="border-t border-gray-70 pb-4" />
@@ -15,7 +15,7 @@ const ResourceTable = ({ data }) => {
       </Row>
       {data.map((entry, index) => {
         return (
-          <Row className="grid__row" key={index}>
+          <Row className="grid__row delayed-fade-in" key={index}>
             {index !== 0 && (
               <>
                 <Col lg={3} md={2} />

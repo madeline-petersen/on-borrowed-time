@@ -13,7 +13,7 @@ const Index = () => {
   const [showMiniMenu, setShowMiniMenu] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0 });
   }, []);
 
   const [hoverRef1, isHovered1] = useHover();

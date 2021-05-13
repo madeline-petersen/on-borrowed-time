@@ -8,7 +8,7 @@ import crowd from '../images/crowd.png';
 
 const Imagery = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0 });
   }, []);
 
   return (

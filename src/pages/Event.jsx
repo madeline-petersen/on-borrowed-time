@@ -12,7 +12,7 @@ const Event = () => {
   const screenClass = useScreenClass();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0 });
   }, []);
 
   return (
@@ -137,13 +137,13 @@ const Event = () => {
 
         {/* Footer */}
         <Container className="grid__container border-l border-gray-50">
-          <Row className="grid__row">
+          <Row className="grid__row delayed-fade-in">
             <Col lg={1} md={1} />
             <Col lg={11} md={11}>
               <div className="border-t border-gray-60 mt-44" />
             </Col>
           </Row>
-          <Row className="grid__row bg-gray-10">
+          <Row className="grid__row bg-gray-10 delayed-fade-in">
             <Col lg={1} md={1} />
             <Link to="/imagery" className="contents cursor-pointer">
               <Col lg={2} md={2} sm={2} xs={2}>
