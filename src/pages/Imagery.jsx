@@ -1,5 +1,3 @@
-import './Imagery.scss';
-
 import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect } from 'react';
 

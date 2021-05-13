@@ -146,3 +146,19 @@ a {
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
+
+@keyframes screen-transition-animation {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: 0vh;
+  }
+}
+
+.screen-transition-animation {
+  height: 100vh;
+  animation-name: screen-transition-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
