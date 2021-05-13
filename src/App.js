@@ -8,6 +8,7 @@ import GridHelper from './helpers/GridHelper.jsx';
 import Imagery from './pages/Imagery.jsx';
 import Index from './pages/Index.jsx';
 import React from 'react';
+import Reflection from './pages/Reflection.jsx';
 import { ScreenClassProvider } from 'react-grid-system';
 import { setConfiguration } from 'react-grid-system';
 
@@ -45,6 +46,9 @@ function App() {
           </Route>
           <Route path="/imagery">
             <Imagery />
+          </Route>
+          <Route path="/reflection">
+            <Reflection />
           </Route>
           <Route path="/index">
             <Index />
