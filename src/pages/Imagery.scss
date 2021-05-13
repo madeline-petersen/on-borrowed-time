@@ -1,0 +1,32 @@
+@keyframes background-animation {
+  0% {
+    background-color: #f4f4f4;
+  }
+  100% {
+    background-color: #090909;
+  }
+}
+
+.background-animation {
+  background-color: #f4f4f4;
+  animation-name: background-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes foreground-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.foreground-fade-in {
+  opacity: 0;
+  animation-name: foreground-fade-in;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}

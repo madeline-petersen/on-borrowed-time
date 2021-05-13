@@ -1,3 +1,5 @@
+import './Imagery.scss';
+
 import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect } from 'react';
 
@@ -12,10 +14,10 @@ const Imagery = () => {
   }, []);
 
   return (
-    <div className="h-auto bg-black">
+    <div className="h-auto background-animation">
       {/* Header */}
-      <Container className="grid__container sticky top-0 border-l border-gray-50 bg-black">
-        <Row className="grid__row pt-5">
+      <Container className="grid__container sticky top-0 border-l border-gray-50 background-animation">
+        <Row className="grid__row pt-5 foreground-fade-in">
           <Col lg={3} md={4} sm={4} xs={4} className="medium-caption">
             <Link to="/" className="text-gray-10">
               On Borrowed Time
@@ -37,7 +39,7 @@ const Imagery = () => {
       {/* Event intro */}
       <Container className="grid__container sticky top-8 border-l border-gray-50">
         {/* solid black background */}
-        <Row className="grid__row bg-black">
+        <Row className="grid__row bg-black background-animation">
           <Col lg={3} md={3} />
           <Col lg={9} md={9} sm={12} xs={12}>
             <p className="medium-caption scene-animation pt-2 absolute top-0 text-gray-50">
@@ -52,7 +54,7 @@ const Imagery = () => {
 
       {/* Reflection */}
       <Container className="grid__container border-l border-gray-50">
-        <Row className="grid__row pt-64 pb-20">
+        <Row className="grid__row pt-64 pb-20 foreground-fade-in">
           <Col lg={1} />
           <Col lg={11} md={12}>
             <img src={crowd} alt="" />
@@ -68,7 +70,7 @@ const Imagery = () => {
             </p>
           </Col>
         </Row>
-        <Row className="grid__row pt-20 pb-24">
+        <Row className="grid__row pt-20 pb-24 foreground-fade-in">
           <Col lg={3} />
           <Col lg={7} md={12}>
             <img src={car} alt="" />
