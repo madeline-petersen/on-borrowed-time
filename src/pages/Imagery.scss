@@ -1,15 +1,15 @@
-@keyframes background-animation {
+@keyframes screen-transition-animation {
   0% {
-    background-color: #f4f4f4;
+    height: 100vh;
   }
   100% {
-    background-color: #090909;
+    height: 0vh;
   }
 }
 
-.background-animation {
-  background-color: #f4f4f4;
-  animation-name: background-animation;
+.screen-transition-animation {
+  height: 100vh;
+  animation-name: screen-transition-animation;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }

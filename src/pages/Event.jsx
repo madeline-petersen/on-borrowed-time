@@ -6,8 +6,6 @@ import React, { useEffect } from 'react';
 import { ArrowDown16 } from '@carbon/icons-react';
 import { Link } from 'react-router-dom';
 import ResourceTable from '../components/ResourceTable';
-import car from '../images/car.png';
-import crowd from '../images/crowd.png';
 import { useScreenClass } from 'react-grid-system';
 
 const Event = () => {
