@@ -128,3 +128,21 @@ a {
     margin-right: 10px !important;
   }
 }
+
+// Animations
+@keyframes foreground-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.foreground-fade-in {
+  opacity: 0;
+  animation-name: foreground-fade-in;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}

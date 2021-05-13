@@ -3,8 +3,6 @@ import React, { useEffect } from 'react';
 
 import { ArrowDown16 } from '@carbon/icons-react';
 import { Link } from 'react-router-dom';
-import car from '../images/car.png';
-import crowd from '../images/crowd.png';
 
 const Reflection = () => {
   useEffect(() => {
@@ -15,7 +13,7 @@ const Reflection = () => {
     <div className="h-auto bg-black">
       {/* Header */}
       <Container className="grid__container sticky top-0 border-l border-gray-50 bg-black">
-        <Row className="grid__row pt-5">
+        <Row className="grid__row pt-5 foreground-fade-in">
           <Col lg={3} md={4} sm={4} xs={4} className="medium-caption">
             <Link to="/" className="text-gray-10">
               On Borrowed Time
@@ -37,7 +35,7 @@ const Reflection = () => {
       {/* Event intro */}
       <Container className="grid__container sticky top-8 border-l border-gray-50">
         {/* solid black background */}
-        <Row className="grid__row bg-black">
+        <Row className="grid__row foreground-fade-in bg-black">
           <Col lg={3} md={3} />
           <Col lg={9} md={9} sm={12} xs={12}>
             <p className="medium-caption scene-animation pt-2 absolute top-0 text-gray-50">
@@ -52,7 +50,7 @@ const Reflection = () => {
 
       {/* Final Reflection */}
       <Container className="grid__container border-l border-gray-50">
-        <Row className="grid__row pt-64 pb-40">
+        <Row className="grid__row foreground-fade-in pt-64 pb-40">
           <Col lg={1} />
           <Col lg={11} md={12}>
             <p className="medium-headline text-gray-40 pb-16">
@@ -101,13 +99,13 @@ const Reflection = () => {
 
       {/* Footer */}
       <Container className="grid__container border-l border-gray-50">
-        <Row className="grid__row">
+        <Row className="grid__row foreground-fade-in">
           <Col lg={1} md={1} />
           <Col lg={11} md={11}>
             <div className="border-t border-gray-60 mt-44" />
           </Col>
         </Row>
-        <Row className="grid__row bg-black">
+        <Row className="grid__row foreground-fade-in bg-black">
           <Col lg={1} md={1} />
           <Link to="/event" className="contents cursor-pointer">
             <Col lg={2} md={2} sm={2} xs={2}>
