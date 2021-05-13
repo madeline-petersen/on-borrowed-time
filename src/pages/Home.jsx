@@ -1,3 +1,5 @@
+import './Home.scss';
+
 import { Col, Container, Row } from 'react-grid-system';
 
 import { Link } from 'react-router-dom';
@@ -11,9 +13,9 @@ const Home = () => {
   const screenClass = useScreenClass();
 
   return (
-    <div className="Home h-auto bg-gray-10">
+    <div className="h-auto bg-gray-10">
       {/* Header */}
-      <Container className="grid__container sticky top-0 border-l border-gray-50">
+      <Container className="grid__container sticky top-0 border-l border-gray-50 bg-gray-10">
         <Row className="grid__row pt-5">
           <Col lg={3} md={4} sm={4} xs={4} className="medium-caption">
             <Link to="/">On Borrowed Time</Link>
@@ -27,14 +29,28 @@ const Home = () => {
         </Row>
       </Container>
 
-      {/* Event intro */}
       <Container className="grid__container border-l border-gray-50">
-        <Row className="grid__row pt-64 pb-24">
+        <Row className="grid__row pt-64">
+          <Col lg={12} md={12} sm={12} xs={12} />
+        </Row>
+      </Container>
+
+      {/* Event intro */}
+      <Container className="grid__container sticky top-8 border-l border-gray-50">
+        {/* solid gray background */}
+        <Row className="grid__row bg-gray-10">
           <Col lg={3} md={3} />
           <Col lg={9} md={9} sm={12} xs={12}>
-            <p className="medium-caption sticky top-0">Scene I</p>
+            <p className="medium-caption pt-2 scene-animation absolute top-0">
+              Scene I
+            </p>
+            <p className="medium-caption pt-2 title-animation">
+              Death of an Icon
+            </p>
           </Col>
         </Row>
+        {/* gray to transparent background gradient */}
+        <Row className="grid__row h-48 bg-gradient-to-b from-gray-10" />
       </Container>
 
       {/* Event */}

@@ -1,12 +1,5 @@
 /* breakpoints: [375, 756, 1056, 1440, 1800], */
 
-.sticky {
-  position: -webkit-sticky !important; /* Safari */
-  position: sticky !important;
-  z-index: 998;
-  top: 0;
-}
-
 .large-headline {
   font-family: LyonText;
   font-size: 44px;
@@ -34,16 +27,6 @@
   font-stretch: normal;
   font-style: normal;
   line-height: 1.44;
-  letter-spacing: -0.1px;
-}
-
-.small-body {
-  font-family: LyonText;
-  font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.5;
   letter-spacing: -0.1px;
 }
 
@@ -164,7 +147,6 @@
       }
 
       .directory__item-description {
-        @extend .small-body;
       }
     }
   }

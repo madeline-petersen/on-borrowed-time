@@ -18,6 +18,13 @@ a {
   text-decoration: none;
 }
 
+.sticky {
+  position: -webkit-sticky !important; /* Safari */
+  position: sticky !important;
+  align-self: flex-start; /* <-- this is the fix */
+  z-index: 998;
+}
+
 .large-headline {
   font-family: LyonText;
   font-size: 44px;
@@ -87,31 +94,6 @@ a {
 .grid__row {
   padding-left: 11px;
   padding-right: 11px;
-}
-
-.nav-bar__container {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background: white;
-}
-
-.divider {
-  height: 1px;
-  background: black;
-}
-
-.divider.thick {
-  opacity: 0.75;
-}
-
-.divider.thin {
-  opacity: 0.25;
-}
-
-.divider.thinnest {
-  opacity: 0.1;
 }
 
 .grid__container {
