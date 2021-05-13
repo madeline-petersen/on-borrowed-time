@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "https://maddleline.github.io/on-borrowed-time/static/css/main.60d82e54.chunk.css",
-    "main.js": "https://maddleline.github.io/on-borrowed-time/static/js/main.e04fe4c5.chunk.js",
-    "main.js.map": "https://maddleline.github.io/on-borrowed-time/static/js/main.e04fe4c5.chunk.js.map",
-    "runtime-main.js": "https://maddleline.github.io/on-borrowed-time/static/js/runtime-main.ef162566.js",
-    "runtime-main.js.map": "https://maddleline.github.io/on-borrowed-time/static/js/runtime-main.ef162566.js.map",
-    "static/js/2.c21c6467.chunk.js": "https://maddleline.github.io/on-borrowed-time/static/js/2.c21c6467.chunk.js",
-    "static/js/2.c21c6467.chunk.js.map": "https://maddleline.github.io/on-borrowed-time/static/js/2.c21c6467.chunk.js.map",
-    "static/js/3.04a14462.chunk.js": "https://maddleline.github.io/on-borrowed-time/static/js/3.04a14462.chunk.js",
-    "static/js/3.04a14462.chunk.js.map": "https://maddleline.github.io/on-borrowed-time/static/js/3.04a14462.chunk.js.map",
+    "main.css": "https://maddleline.github.io/on-borrowed-time/static/css/main.7dfb57b8.chunk.css",
+    "main.js": "https://maddleline.github.io/on-borrowed-time/static/js/main.b96a799b.chunk.js",
+    "main.js.map": "https://maddleline.github.io/on-borrowed-time/static/js/main.b96a799b.chunk.js.map",
+    "runtime-main.js": "https://maddleline.github.io/on-borrowed-time/static/js/runtime-main.58ddb59e.js",
+    "runtime-main.js.map": "https://maddleline.github.io/on-borrowed-time/static/js/runtime-main.58ddb59e.js.map",
+    "static/js/2.1807da7c.chunk.js": "https://maddleline.github.io/on-borrowed-time/static/js/2.1807da7c.chunk.js",
+    "static/js/2.1807da7c.chunk.js.map": "https://maddleline.github.io/on-borrowed-time/static/js/2.1807da7c.chunk.js.map",
+    "static/js/3.f3b5b3ef.chunk.js": "https://maddleline.github.io/on-borrowed-time/static/js/3.f3b5b3ef.chunk.js",
+    "static/js/3.f3b5b3ef.chunk.js.map": "https://maddleline.github.io/on-borrowed-time/static/js/3.f3b5b3ef.chunk.js.map",
     "index.html": "https://maddleline.github.io/on-borrowed-time/index.html",
-    "static/css/main.60d82e54.chunk.css.map": "https://maddleline.github.io/on-borrowed-time/static/css/main.60d82e54.chunk.css.map",
-    "static/js/2.c21c6467.chunk.js.LICENSE.txt": "https://maddleline.github.io/on-borrowed-time/static/js/2.c21c6467.chunk.js.LICENSE.txt",
+    "static/css/main.7dfb57b8.chunk.css.map": "https://maddleline.github.io/on-borrowed-time/static/css/main.7dfb57b8.chunk.css.map",
+    "static/js/2.1807da7c.chunk.js.LICENSE.txt": "https://maddleline.github.io/on-borrowed-time/static/js/2.1807da7c.chunk.js.LICENSE.txt",
     "static/media/App.scss": "https://maddleline.github.io/on-borrowed-time/static/media/LyonText-Regular.fd915fa5.otf",
     "static/media/car.33149d70.png": "https://maddleline.github.io/on-borrowed-time/static/media/car.33149d70.png",
     "static/media/crowd.9c9cd39a.png": "https://maddleline.github.io/on-borrowed-time/static/media/crowd.9c9cd39a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ef162566.js",
-    "static/js/2.c21c6467.chunk.js",
-    "static/css/main.60d82e54.chunk.css",
-    "static/js/main.e04fe4c5.chunk.js"
+    "static/js/runtime-main.58ddb59e.js",
+    "static/js/2.1807da7c.chunk.js",
+    "static/css/main.7dfb57b8.chunk.css",
+    "static/js/main.b96a799b.chunk.js"
   ]
 }
