@@ -3,8 +3,9 @@ import './App.scss';
 import { Col, Container, Row } from 'react-grid-system';
 import { Link, Route, HashRouter as Router, Switch } from 'react-router-dom';
 
+import Event from './pages/Event.jsx';
 import GridHelper from './helpers/GridHelper.jsx';
-import Home from './pages/Home.jsx';
+import Imagery from './pages/Imagery.jsx';
 import Index from './pages/Index.jsx';
 import React from 'react';
 import { ScreenClassProvider } from 'react-grid-system';
@@ -37,7 +38,13 @@ function App() {
         <GridHelper />
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Event />
+          </Route>
+          <Route path="/event">
+            <Event />
+          </Route>
+          <Route path="/imagery">
+            <Imagery />
           </Route>
           <Route path="/index">
             <Index />

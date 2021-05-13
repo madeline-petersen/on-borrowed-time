@@ -1,8 +1,8 @@
 import './Index.scss';
 
 import { Col, Container, Row } from 'react-grid-system';
+import React, { useEffect } from 'react';
 
-import React from 'react';
 import cx from 'classnames/bind';
 import data from '../data/index.json';
 import useHover from '../hooks/useHover';
@@ -11,6 +11,10 @@ import { useState } from 'react';
 const Index = () => {
   const [selectedTheme, setSelectedTheme] = useState(null);
   const [showMiniMenu, setShowMiniMenu] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [hoverRef1, isHovered1] = useHover();
   const [hoverRef2, isHovered2] = useHover();
