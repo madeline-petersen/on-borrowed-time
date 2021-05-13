@@ -2,6 +2,7 @@ import './Home.scss';
 
 import { Col, Container, Row } from 'react-grid-system';
 
+import { ArrowDown16 } from '@carbon/icons-react';
 import { Link } from 'react-router-dom';
 import React from 'react';
 import ResourceTable from '../components/ResourceTable';
@@ -41,12 +42,10 @@ const Home = () => {
         <Row className="grid__row bg-gray-10">
           <Col lg={3} md={3} />
           <Col lg={9} md={9} sm={12} xs={12}>
-            <p className="medium-caption pt-2 scene-animation absolute top-0">
+            <p className="medium-caption scene-animation pt-2 absolute top-0">
               Scene I
             </p>
-            <p className="medium-caption pt-2 title-animation">
-              Death of an Icon
-            </p>
+            <p className="small-body title-animation pt-2">Death of an Icon</p>
           </Col>
         </Row>
         {/* gray to transparent background gradient */}
@@ -125,6 +124,39 @@ const Home = () => {
             }
           ]}
         />
+      </Container>
+
+      {/* Footer */}
+      <Container className="grid__container border-l border-gray-50">
+        <Row className="grid__row">
+          <Col lg={1} md={1} />
+          <Col lg={11} md={11}>
+            <div className="border-t border-gray-60 mt-44" />
+          </Col>
+        </Row>
+        <Row className="grid__row bg-gray-10">
+          <Col lg={1} md={1} />
+          <div className="contents cursor-pointer">
+            <Col lg={2} md={2} sm={2} xs={2}>
+              <p className="small-body pb-4 pt-4">Up Next</p>
+            </Col>
+            <Col lg={2} md={2} sm={2} xs={2}>
+              <p className="small-body pb-4 pt-4">Scene I</p>
+            </Col>
+            <Col
+              lg={7}
+              md={7}
+              sm={7}
+              xs={7}
+              style={{ display: 'flex', justifyContent: 'space-between' }}
+            >
+              <p className="small-body pb-4 pt-4">Imagery</p>
+              <p className="pb-4 pt-4">
+                <ArrowDown16 />
+              </p>
+            </Col>
+          </div>
+        </Row>
       </Container>
 
       {/* Reflection */}
