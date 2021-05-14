@@ -5,6 +5,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Header = ({ theme, isClicked }) => {
+  /**
+   * PurgeCSS:
+   * bg-black
+   * bg-gray-10
+   * text-black
+   * text-gray-10
+   **/
+
   return (
     <Container
       className={`grid__container sticky top-0 border-l border-gray-50 bg-${theme.background}`}
