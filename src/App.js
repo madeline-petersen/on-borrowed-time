@@ -10,6 +10,7 @@ import Index from './pages/Index.jsx';
 import React from 'react';
 import Reflection from './pages/Reflection.jsx';
 import { ScreenClassProvider } from 'react-grid-system';
+import ScrollToTop from './ScrollToTop.jsx';
 import { setConfiguration } from 'react-grid-system';
 
 setConfiguration({
@@ -35,6 +36,7 @@ setConfiguration({
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <ScreenClassProvider>
         <GridHelper />
         <Switch>
