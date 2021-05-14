@@ -16,7 +16,10 @@ const Event = () => {
 
   const handleOnClick = () => {
     setMyState(true);
-    history.push('/imagery');
+    setTimeout(function() {
+      // executed after 1 second
+      history.push('/imagery');
+    }, 1000);
   };
 
   return (
