@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import SubHeader from '../components/SubHeader';
 
 const Reflection = () => {
   const [isClicked, setClicked] = useState(false);
@@ -21,23 +22,10 @@ const Reflection = () => {
           isClicked={isClicked}
         />
 
-        {/* Event intro */}
-        <Container className="grid__container sticky top-8 border-l border-gray-50">
-          {/* solid black background */}
-          <Row
-            className={`grid__row bg-black ${isClicked ? 'fade-out' : null}`}
-          >
-            <Col lg={3} md={3} />
-            <Col lg={9} md={9} sm={12} xs={12}>
-              <p className="medium-caption scene-animation pt-2 absolute top-0 text-gray-50">
-                Scene I
-              </p>
-              <p className="small-body title-animation pt-2 pb-2 text-gray-50">
-                Death of an Icon
-              </p>
-            </Col>
-          </Row>
-        </Container>
+        <SubHeader
+          theme={{ background: 'black', text: 'gray-10' }}
+          isClicked={isClicked}
+        />
 
         {/* Final Reflection */}
         <Container className="grid__container border-l border-gray-50">

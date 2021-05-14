@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import ResourceTable from '../components/ResourceTable';
+import SubHeader from '../components/SubHeader';
 import { useScreenClass } from 'react-grid-system';
 
 const Event = () => {
@@ -32,23 +33,10 @@ const Event = () => {
           </Row>
         </Container>
 
-        {/* Event intro */}
-        <Container className="grid__container sticky top-8 border-l border-gray-50">
-          {/* solid gray background */}
-          <Row
-            className={`grid__row bg-gray-10 ${isClicked ? 'fade-out' : null}`}
-          >
-            <Col lg={3} md={3} />
-            <Col lg={9} md={9} sm={12} xs={12}>
-              <p className="medium-caption scene-animation pt-2 absolute top-0">
-                Scene I
-              </p>
-              <p className="small-body title-animation pt-2 pb-2">
-                Death of an Icon
-              </p>
-            </Col>
-          </Row>
-        </Container>
+        <SubHeader
+          theme={{ background: 'gray-10', text: 'black' }}
+          isClicked={isClicked}
+        />
 
         {/* Event */}
         <Container className="grid__container border-l border-gray-50">
