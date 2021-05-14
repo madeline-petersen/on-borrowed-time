@@ -15,11 +15,11 @@ const Event = () => {
 
   return (
     <>
-      <div className="bg-black">
+      {/* <div className="bg-black">
         <Container className="grid__container border-l border-gray-50">
           <Row className="grid__row screen-transition-animation" />
         </Container>
-      </div>
+      </div> */}
 
       <div className="h-auto bg-gray-10">
         <Header
