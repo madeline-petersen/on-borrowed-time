@@ -1,7 +1,7 @@
 import './Event.scss';
 
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { ArrowDown16 } from '@carbon/icons-react';
 import { Link } from 'react-router-dom';

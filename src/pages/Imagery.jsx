@@ -13,9 +13,11 @@ const Imagery = () => {
 
   return (
     <>
-      <Container className="grid__container border-l border-gray-50">
-        <Row className="grid__row screen-transition-animation" />
-      </Container>
+      <div className="bg-gray-10">
+        <Container className="grid__container border-l border-gray-50">
+          <Row className="grid__row screen-transition-animation" />
+        </Container>
+      </div>
 
       <div className="h-auto bg-black">
         {/* Header */}
