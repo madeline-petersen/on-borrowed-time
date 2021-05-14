@@ -3,24 +3,14 @@ import './Event.scss';
 import { Col, Container, Row } from 'react-grid-system';
 import React, { useState } from 'react';
 
-import { ArrowDown16 } from '@carbon/icons-react';
+import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import ResourceTable from '../components/ResourceTable';
-import { useHistory } from 'react-router-dom';
 import { useScreenClass } from 'react-grid-system';
 
 const Event = () => {
   const screenClass = useScreenClass();
-  const [myState, setMyState] = useState(false);
-  let history = useHistory();
-
-  const handleOnClick = () => {
-    setMyState(true);
-    setTimeout(function() {
-      // executed after 1 second
-      history.push('/imagery');
-    }, 1000);
-  };
+  const [isClicked, setClicked] = useState(false);
 
   return (
     <>
@@ -33,7 +23,7 @@ const Event = () => {
       <div className="h-auto bg-gray-10">
         {/* Header */}
         <Container className="grid__container sticky top-0 border-l border-gray-50 bg-gray-10">
-          <Row className={`grid__row pt-5 ${myState ? 'fade-out' : null}`}>
+          <Row className={`grid__row pt-5 ${isClicked ? 'fade-out' : null}`}>
             <Col lg={3} md={4} sm={4} xs={4} className="medium-caption">
               <Link to="/">On Borrowed Time</Link>
             </Col>
@@ -56,7 +46,7 @@ const Event = () => {
         <Container className="grid__container sticky top-8 border-l border-gray-50">
           {/* solid gray background */}
           <Row
-            className={`grid__row bg-gray-10 ${myState ? 'fade-out' : null}`}
+            className={`grid__row bg-gray-10 ${isClicked ? 'fade-out' : null}`}
           >
             <Col lg={3} md={3} />
             <Col lg={9} md={9} sm={12} xs={12}>
@@ -76,7 +66,7 @@ const Event = () => {
             <Col lg={1} md={2} />
             <Col lg={11} md={10} sm={12} xs={12}>
               <p
-                className={`large-headline ${myState ? 'fade-out' : null}`}
+                className={`large-headline ${isClicked ? 'fade-out' : null}`}
                 style={{
                   textIndent: ['lg', 'xl', 'xxl'].includes(screenClass)
                     ? `calc(200%/11)` // indent 2/11 columns for large
@@ -96,7 +86,7 @@ const Event = () => {
             <Col lg={1} md={2} />
             <Col lg={11} md={10} sm={12} xs={12}>
               <p
-                className={`large-headline ${myState ? 'fade-out' : null}`}
+                className={`large-headline ${isClicked ? 'fade-out' : null}`}
                 style={{
                   textIndent: ['lg', 'xl', 'xxl'].includes(screenClass)
                     ? `calc(200%/11)` // indent 2/11 columns for large
@@ -115,7 +105,7 @@ const Event = () => {
             </Col>
           </Row>
           <ResourceTable
-            tableState={myState}
+            tableState={isClicked}
             data={[
               {
                 title: 'A Champion of Liberalisation',
@@ -145,64 +135,14 @@ const Event = () => {
           />
         </Container>
 
-        {/* Footer */}
-        <Container className="grid__container border-l border-gray-50">
-          <Row className={`grid__row delayed-fade-in`}>
-            <Col lg={1} md={1} />
-            <Col lg={11} md={11}>
-              <div
-                className={`border-t border-gray-60 mt-44 ${
-                  myState ? 'fade-out' : null
-                }`}
-              />
-            </Col>
-          </Row>
-          <Row className={`grid__row bg-gray-10 delayed-fade-in`}>
-            <Col lg={1} md={1} />
-            <div
-              to="/imagery"
-              className={`contents  ${myState ? 'fade-out' : 'cursor-pointer'}`}
-              onClick={() => handleOnClick()}
-            >
-              <Col lg={2} md={2} sm={2} xs={2}>
-                <p
-                  className={`small-body pb-4 pt-4 ${
-                    myState ? 'fade-out' : null
-                  }`}
-                >
-                  Up Next
-                </p>
-              </Col>
-              <Col lg={2} md={2} sm={2} xs={2}>
-                <p
-                  className={`small-body pb-4 pt-4 ${
-                    myState ? 'fade-out' : null
-                  }`}
-                >
-                  Scene I
-                </p>
-              </Col>
-              <Col
-                lg={7}
-                md={7}
-                sm={7}
-                xs={7}
-                style={{ display: 'flex', justifyContent: 'space-between' }}
-              >
-                <p
-                  className={`small-body pb-4 pt-4 ${
-                    myState ? 'fade-out' : null
-                  }`}
-                >
-                  Imagery
-                </p>
-                <p className={`pb-4 pt-4 ${myState ? 'fade-out' : null}`}>
-                  <ArrowDown16 />
-                </p>
-              </Col>
-            </div>
-          </Row>
-        </Container>
+        <Footer
+          pushTo="/imagery"
+          upNext="Imagery"
+          scene="I"
+          setClicked={setClicked}
+          isClicked={isClicked}
+          theme={{ background: 'gray-10', text: 'black' }}
+        />
       </div>
     </>
   );

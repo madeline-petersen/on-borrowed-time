@@ -1,15 +1,13 @@
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 
-import { ArrowDown16 } from '@carbon/icons-react';
+import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import car from '../images/car.png';
 import crowd from '../images/crowd.png';
 
 const Imagery = () => {
-  useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, []);
+  const [isClicked, setClicked] = useState(false);
 
   return (
     <>
@@ -44,7 +42,7 @@ const Imagery = () => {
         {/* Event intro */}
         <Container className="grid__container sticky top-8 border-l border-gray-50">
           {/* solid black background */}
-          <Row className="grid__row bg-black">
+          <Row className={`grid__row bg-black`}>
             <Col lg={3} md={3} />
             <Col lg={9} md={9} sm={12} xs={12}>
               <p className="medium-caption scene-animation pt-2 absolute top-0 text-gray-50">
@@ -91,38 +89,14 @@ const Imagery = () => {
           </Row>
         </Container>
 
-        {/* Footer */}
-        <Container className="grid__container border-l border-gray-50">
-          <Row className="grid__row">
-            <Col lg={1} md={1} />
-            <Col lg={11} md={11}>
-              <div className="border-t border-gray-60 mt-44" />
-            </Col>
-          </Row>
-          <Row className="grid__row bg-black">
-            <Col lg={1} md={1} />
-            <Link to="/reflection" className="contents cursor-pointer">
-              <Col lg={2} md={2} sm={2} xs={2}>
-                <p className="small-body text-gray-40 pb-4 pt-4">Up Next</p>
-              </Col>
-              <Col lg={2} md={2} sm={2} xs={2}>
-                <p className="small-body text-gray-40 pb-4 pt-4">Scene I</p>
-              </Col>
-              <Col
-                lg={7}
-                md={7}
-                sm={7}
-                xs={7}
-                style={{ display: 'flex', justifyContent: 'space-between' }}
-              >
-                <p className="small-body text-gray-40 pb-4 pt-4">Reflection</p>
-                <p className="text-gray-40 pb-4 pt-4">
-                  <ArrowDown16 />
-                </p>
-              </Col>
-            </Link>
-          </Row>
-        </Container>
+        <Footer
+          pushTo="/reflection"
+          upNext="Reflection"
+          scene="I"
+          setClicked={setClicked}
+          isClicked={isClicked}
+          theme={{ background: 'black', text: 'gray-40' }}
+        />
       </div>
     </>
   );

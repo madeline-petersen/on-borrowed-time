@@ -129,6 +129,19 @@ a {
   }
 }
 
+// Transitions
+.fade-out {
+  opacity: 0;
+  cursor: default;
+
+  a {
+    cursor: default;
+  }
+
+  // transition: property duration timing-function delay|initial|inherit;
+  transition: opacity 0.5s;
+}
+
 // Animations
 @keyframes foreground-fade-in {
   0% {
