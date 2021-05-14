@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Header = ({ theme, isClicked }) => {
+const Header = ({ year, title, theme, isClicked }) => {
   /**
    * PurgeCSS:
    * bg-black
@@ -25,7 +25,7 @@ const Header = ({ theme, isClicked }) => {
         </Col>
         <Col lg={8} md={3} sm={4} xs={4} className="medium-caption">
           <Link className={`text-${theme.text}`}>
-            1989 &ldquo;The June Fourth Incident&rdquo;
+            {year} {title}
           </Link>
         </Col>
         <Col lg={1} md={5} sm={4} xs={4} className="medium-caption">
@@ -39,6 +39,8 @@ const Header = ({ theme, isClicked }) => {
 };
 
 Header.propTypes = {
+  year: PropTypes.string,
+  title: PropTypes.string,
   theme: PropTypes.shape(),
   isClicked: PropTypes.bool
 };

@@ -1,9 +1,7 @@
 import './App.scss';
 
-import { Col, Container, Row } from 'react-grid-system';
-import { Link, Route, HashRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-import Event from './pages/Event.jsx';
 import GridHelper from './helpers/GridHelper.jsx';
 import Imagery from './pages/Imagery.jsx';
 import Index from './pages/Index.jsx';
@@ -11,6 +9,7 @@ import React from 'react';
 import Reflection from './pages/Reflection.jsx';
 import { ScreenClassProvider } from 'react-grid-system';
 import ScrollToTop from './ScrollToTop.jsx';
+import Year from './pages/Year.jsx';
 import { setConfiguration } from 'react-grid-system';
 
 setConfiguration({
@@ -41,16 +40,10 @@ function App() {
         <ScrollToTop>
           <Switch>
             <Route exact path="/">
-              <Event />
+              <Year />
             </Route>
-            <Route path="/event">
-              <Event />
-            </Route>
-            <Route path="/imagery">
-              <Imagery />
-            </Route>
-            <Route path="/reflection">
-              <Reflection />
+            <Route path="/1989">
+              <Year />
             </Route>
             <Route path="/index">
               <Index />

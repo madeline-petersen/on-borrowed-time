@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import PropTypes from 'prop-types';
 import SubHeader from '../components/SubHeader';
 import car from '../images/car.png';
 import crowd from '../images/crowd.png';
 
-const Imagery = () => {
+const Imagery = ({ year, scene, event }) => {
   const [isClicked, setClicked] = useState(false);
 
   return (
@@ -22,11 +23,15 @@ const Imagery = () => {
         <Header
           theme={{ background: 'black', text: 'gray-10' }}
           isClicked={isClicked}
+          year={year.year}
+          title={year.title}
         />
 
         <SubHeader
           theme={{ background: 'black', text: 'gray-10' }}
           isClicked={isClicked}
+          sceneNumber="I"
+          title={scene.title}
         />
 
         {/* Reflection */}
@@ -76,7 +81,7 @@ const Imagery = () => {
         </Container>
 
         <Footer
-          pushTo="/reflection"
+          pushTo="reflection"
           upNext="Reflection"
           scene="I"
           setClicked={setClicked}
@@ -86,6 +91,12 @@ const Imagery = () => {
       </div>
     </>
   );
+};
+
+Imagery.propTypes = {
+  year: PropTypes.shape(),
+  scene: PropTypes.shape(),
+  event: PropTypes.shape()
 };
 
 export default Imagery;

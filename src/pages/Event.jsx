@@ -5,13 +5,15 @@ import React, { useState } from 'react';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import PropTypes from 'prop-types';
 import ResourceTable from '../components/ResourceTable';
 import SubHeader from '../components/SubHeader';
 import { useScreenClass } from 'react-grid-system';
 
-const Event = () => {
+const Event = ({ year, scene, event }) => {
   const screenClass = useScreenClass();
   const [isClicked, setClicked] = useState(false);
+  console.log(year);
 
   return (
     <>
@@ -25,6 +27,8 @@ const Event = () => {
         <Header
           theme={{ background: 'gray-10', text: 'black' }}
           isClicked={isClicked}
+          year={year.year}
+          title={year.title}
         />
 
         <Container className="grid__container border-l border-gray-50">
@@ -36,85 +40,44 @@ const Event = () => {
         <SubHeader
           theme={{ background: 'gray-10', text: 'black' }}
           isClicked={isClicked}
+          sceneNumber="I"
+          title={scene.title}
         />
 
         {/* Event */}
         <Container className="grid__container border-l border-gray-50">
           <Row className={`grid__row pt-64 pb-24 delayed-fade-in`}>
-            <Col lg={1} md={2} />
-            <Col lg={11} md={10} sm={12} xs={12}>
-              <p
-                className={`large-headline ${isClicked ? 'fade-out' : null}`}
-                style={{
-                  textIndent: ['lg', 'xl', 'xxl'].includes(screenClass)
-                    ? `calc(200%/11)` // indent 2/11 columns for large
-                    : ['md'].includes(screenClass)
-                    ? `calc(200%/10)` // indent 2/10 columns for medium
-                    : '0' // indent 0 for small, x-small
-                }}
-              >
-                A high ranking official of the Chinese Communist Party, Hu
-                Yaobang2 was an icon for political reform and democratic
-                change1. His critique on Mao’s cult-like ideology differentiated
-                from other political figures, and made him a beloved leader.
-                <br />
-                <br />
-              </p>
-            </Col>
-            <Col lg={1} md={2} />
-            <Col lg={11} md={10} sm={12} xs={12}>
-              <p
-                className={`large-headline ${isClicked ? 'fade-out' : null}`}
-                style={{
-                  textIndent: ['lg', 'xl', 'xxl'].includes(screenClass)
-                    ? `calc(200%/11)` // indent 2/11 columns for large
-                    : ['md'].includes(screenClass)
-                    ? `calc(200%/10)` // indent 2/10 columns for medium
-                    : '0' // indent 0 for small, x-small
-                }}
-              >
-                The death of Hu on April 15 1989, ignited a public outcry —
-                mourning3, grief, and anger quickly developed into a series of
-                student-led pro-democracy demonstrations and hunger strikes
-                across China.
-                <br />
-                <br />
-              </p>
-            </Col>
+            {event.paragraphs.map(paragraph => {
+              return (
+                <>
+                  <Col lg={1} md={2} />
+                  <Col lg={11} md={10} sm={12} xs={12}>
+                    <p
+                      className={`large-headline ${
+                        isClicked ? 'fade-out' : null
+                      }`}
+                      style={{
+                        textIndent: ['lg', 'xl', 'xxl'].includes(screenClass)
+                          ? `calc(200%/11)` // indent 2/11 columns for large
+                          : ['md'].includes(screenClass)
+                          ? `calc(200%/10)` // indent 2/10 columns for medium
+                          : '0' // indent 0 for small, x-small
+                      }}
+                    >
+                      {paragraph}
+                      <br />
+                      <br />
+                    </p>
+                  </Col>
+                </>
+              );
+            })}
           </Row>
-          <ResourceTable
-            tableState={isClicked}
-            data={[
-              {
-                title: 'A Champion of Liberalisation',
-                source: `China's Struggle for Democracy, its Prelude, Development, Aftermath, and Impact`,
-                type: 'Journal Excerpt',
-                year: '1990'
-              },
-              {
-                title: 'The Death of Hu Yaobang',
-                source: `Tiananman Papers`,
-                type: 'Book Excerpt',
-                year: '2001'
-              },
-              {
-                title: 'The Mourning of Hu Yaobang',
-                source: `Tiananman Papers`,
-                type: 'Book Excerpt',
-                year: '2001'
-              },
-              {
-                title: 'Beijing Hints on Crackdown on Students',
-                source: `New York Times`,
-                type: 'Article Excerpt',
-                year: '1989'
-              }
-            ]}
-          />
+          <ResourceTable tableState={isClicked} data={event.resources} />
         </Container>
 
         <Footer
-          pushTo="/imagery"
+          pushTo="imagery"
           upNext="Imagery"
           scene="I"
           setClicked={setClicked}
@@ -124,6 +87,12 @@ const Event = () => {
       </div>
     </>
   );
+};
+
+Event.propTypes = {
+  year: PropTypes.shape(),
+  scene: PropTypes.shape(),
+  event: PropTypes.shape()
 };
 
 export default Event;

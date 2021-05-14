@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import PropTypes from 'prop-types';
 import SubHeader from '../components/SubHeader';
 
-const Reflection = () => {
+const Reflection = ({ year, scene, event }) => {
   const [isClicked, setClicked] = useState(false);
 
   return (
@@ -20,11 +21,15 @@ const Reflection = () => {
         <Header
           theme={{ background: 'black', text: 'gray-10' }}
           isClicked={isClicked}
+          year={year.year}
+          title={year.title}
         />
 
         <SubHeader
           theme={{ background: 'black', text: 'gray-10' }}
           isClicked={isClicked}
+          sceneNumber="I"
+          title={scene.title}
         />
 
         {/* Final Reflection */}
@@ -89,7 +94,7 @@ const Reflection = () => {
         </Container>
 
         <Footer
-          pushTo="/event"
+          pushTo="event"
           upNext="Event"
           scene="II"
           setClicked={setClicked}
@@ -99,6 +104,12 @@ const Reflection = () => {
       </div>
     </>
   );
+};
+
+Reflection.propTypes = {
+  year: PropTypes.shape(),
+  scene: PropTypes.shape(),
+  event: PropTypes.shape()
 };
 
 export default Reflection;
