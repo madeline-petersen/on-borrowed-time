@@ -1,9 +1,8 @@
 import { Col, Container, Row } from 'react-grid-system';
 import React, { useState } from 'react';
 
-import { ArrowDown16 } from '@carbon/icons-react';
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 
 const Reflection = () => {
   const [isClicked, setClicked] = useState(false);
@@ -17,31 +16,17 @@ const Reflection = () => {
       </div>
 
       <div className="h-auto bg-black">
-        {/* Header */}
-        <Container className="grid__container sticky top-0 border-l border-gray-50 bg-black">
-          <Row className="grid__row pt-5 foreground-fade-in">
-            <Col lg={3} md={4} sm={4} xs={4} className="medium-caption">
-              <Link to="/" className="text-gray-10">
-                On Borrowed Time
-              </Link>
-            </Col>
-            <Col lg={8} md={3} sm={4} xs={4} className="medium-caption">
-              <Link className="text-gray-10">
-                1989 &ldquo;The June Fourth Incident&rdquo;
-              </Link>
-            </Col>
-            <Col lg={1} md={5} sm={4} xs={4} className="medium-caption">
-              <Link to="/index" className="text-gray-10">
-                Index
-              </Link>
-            </Col>
-          </Row>
-        </Container>
+        <Header
+          theme={{ background: 'black', text: 'gray-10' }}
+          isClicked={isClicked}
+        />
 
         {/* Event intro */}
         <Container className="grid__container sticky top-8 border-l border-gray-50">
           {/* solid black background */}
-          <Row className="grid__row foreground-fade-in bg-black">
+          <Row
+            className={`grid__row bg-black ${isClicked ? 'fade-out' : null}`}
+          >
             <Col lg={3} md={3} />
             <Col lg={9} md={9} sm={12} xs={12}>
               <p className="medium-caption scene-animation pt-2 absolute top-0 text-gray-50">
@@ -59,7 +44,11 @@ const Reflection = () => {
           <Row className="grid__row foreground-fade-in pt-64 pb-40">
             <Col lg={1} />
             <Col lg={11} md={12}>
-              <p className="medium-headline text-gray-40 pb-16">
+              <p
+                className={`medium-headline text-gray-40 pb-16 ${
+                  isClicked ? 'fade-out' : null
+                }`}
+              >
                 After Hu Yaobang’s death, there was an emerging vitality to
                 China’s pro-democracy movement. Overseas, Hong Kong citizens
                 contributed to the movement by providing moral and material
@@ -70,7 +59,11 @@ const Reflection = () => {
             </Col>
             <Col lg={3} />
             <Col lg={7} md={12}>
-              <p className="medium-body text-gray-40">
+              <p
+                className={`medium-body text-gray-40 ${
+                  isClicked ? 'fade-out' : null
+                }`}
+              >
                 The inhabitants of Hong Kong usually reserve their deepest
                 passions for business, not politics. But last week, in the
                 largest and most emotional outburst ever seen in the British
@@ -86,7 +79,11 @@ const Reflection = () => {
             </Col>
             <Col lg={3} />
             <Col lg={7} md={12}>
-              <p className="medium-body text-gray-40">
+              <p
+                className={`medium-body text-gray-40 ${
+                  isClicked ? 'fade-out' : null
+                }`}
+              >
                 The unprecedented outcry reflected Hong Kong&apos;s growing
                 anxiety over its return to China in 1997. A sleek modern city on
                 the South China Sea, Hong Kong has become a hotbed of capitalism

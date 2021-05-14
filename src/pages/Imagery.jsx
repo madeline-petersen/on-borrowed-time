@@ -2,7 +2,7 @@ import { Col, Container, Row } from 'react-grid-system';
 import React, { useState } from 'react';
 
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 import car from '../images/car.png';
 import crowd from '../images/crowd.png';
 
@@ -18,31 +18,17 @@ const Imagery = () => {
       </div>
 
       <div className="h-auto bg-black">
-        {/* Header */}
-        <Container className="grid__container sticky top-0 border-l border-gray-50 bg-black">
-          <Row className="grid__row pt-5 foreground-fade-in">
-            <Col lg={3} md={4} sm={4} xs={4} className="medium-caption">
-              <Link to="/" className="text-gray-10">
-                On Borrowed Time
-              </Link>
-            </Col>
-            <Col lg={8} md={3} sm={4} xs={4} className="medium-caption">
-              <Link className="text-gray-10">
-                1989 &ldquo;The June Fourth Incident&rdquo;
-              </Link>
-            </Col>
-            <Col lg={1} md={5} sm={4} xs={4} className="medium-caption">
-              <Link to="/index" className="text-gray-10">
-                Index
-              </Link>
-            </Col>
-          </Row>
-        </Container>
+        <Header
+          theme={{ background: 'black', text: 'gray-10' }}
+          isClicked={isClicked}
+        />
 
         {/* Event intro */}
         <Container className="grid__container sticky top-8 border-l border-gray-50">
           {/* solid black background */}
-          <Row className={`grid__row bg-black`}>
+          <Row
+            className={`grid__row bg-black ${isClicked ? 'fade-out' : null}`}
+          >
             <Col lg={3} md={3} />
             <Col lg={9} md={9} sm={12} xs={12}>
               <p className="medium-caption scene-animation pt-2 absolute top-0 text-gray-50">
@@ -60,11 +46,19 @@ const Imagery = () => {
           <Row className="grid__row pt-64 pb-20 foreground-fade-in">
             <Col lg={1} />
             <Col lg={11} md={12}>
-              <img src={crowd} alt="" />
+              <img
+                src={crowd}
+                alt=""
+                className={isClicked ? 'fade-out' : null}
+              />
             </Col>
             <Col lg={3} />
             <Col lg={4} md={4}>
-              <p className="small-body text-gray-40 mt-8">
+              <p
+                className={`small-body text-gray-40 mt-8 ${
+                  isClicked ? 'fade-out' : null
+                }`}
+              >
                 Some two hundred thousand pro-democracy students staged an
                 unauthorized demonstration in Tiananmen Square during the
                 funeral ceremony of the Chinese Communist Party leader and
@@ -76,11 +70,15 @@ const Imagery = () => {
           <Row className="grid__row pt-20 pb-24 foreground-fade-in">
             <Col lg={3} />
             <Col lg={7} md={12}>
-              <img src={car} alt="" />
+              <img src={car} alt="" className={isClicked ? 'fade-out' : null} />
             </Col>
             <Col lg={3} />
             <Col lg={4} md={4}>
-              <p className="small-body text-gray-40 mt-5">
+              <p
+                className={`small-body text-gray-40 mt-5 ${
+                  isClicked ? 'fade-out' : null
+                }`}
+              >
                 A weary protester pleads with a PLA officer sitting in his truck
                 to not crackdown on the student demonstrators in Tiananmen
                 Square. (Photo by Peter Turnley/Getty Images)

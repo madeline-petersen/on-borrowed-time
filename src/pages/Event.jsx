@@ -4,7 +4,7 @@ import { Col, Container, Row } from 'react-grid-system';
 import React, { useState } from 'react';
 
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 import ResourceTable from '../components/ResourceTable';
 import { useScreenClass } from 'react-grid-system';
 
@@ -21,20 +21,10 @@ const Event = () => {
       </div>
 
       <div className="h-auto bg-gray-10">
-        {/* Header */}
-        <Container className="grid__container sticky top-0 border-l border-gray-50 bg-gray-10">
-          <Row className={`grid__row pt-5 ${isClicked ? 'fade-out' : null}`}>
-            <Col lg={3} md={4} sm={4} xs={4} className="medium-caption">
-              <Link to="/">On Borrowed Time</Link>
-            </Col>
-            <Col lg={8} md={3} sm={4} xs={4} className="medium-caption">
-              <Link>1989 &ldquo;The June Fourth Incident&rdquo;</Link>
-            </Col>
-            <Col lg={1} md={5} sm={4} xs={4} className="medium-caption">
-              <Link to="/index">Index</Link>
-            </Col>
-          </Row>
-        </Container>
+        <Header
+          theme={{ background: 'gray-10', text: 'black' }}
+          isClicked={isClicked}
+        />
 
         <Container className="grid__container border-l border-gray-50">
           <Row className="grid__row shrink-animation">
