@@ -32,7 +32,7 @@ const Footer = ({ isClicked, setClicked, pushTo, upNext, scene, theme }) => {
         <Col lg={1} md={1} />
         <div
           to="/imagery"
-          className={`contents  ${isClicked ? 'fade-out' : 'cursor-pointer'}`}
+          className={`contents ${isClicked ? 'fade-out' : 'cursor-pointer'}`}
           onClick={() => handleOnClick()}
         >
           <Col lg={2} md={2} sm={2} xs={2}>

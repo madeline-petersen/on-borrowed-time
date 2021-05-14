@@ -36,26 +36,27 @@ setConfiguration({
 function App() {
   return (
     <Router>
-      <ScrollToTop />
       <ScreenClassProvider>
         <GridHelper />
-        <Switch>
-          <Route exact path="/">
-            <Event />
-          </Route>
-          <Route path="/event">
-            <Event />
-          </Route>
-          <Route path="/imagery">
-            <Imagery />
-          </Route>
-          <Route path="/reflection">
-            <Reflection />
-          </Route>
-          <Route path="/index">
-            <Index />
-          </Route>
-        </Switch>
+        <ScrollToTop>
+          <Switch>
+            <Route exact path="/">
+              <Event />
+            </Route>
+            <Route path="/event">
+              <Event />
+            </Route>
+            <Route path="/imagery">
+              <Imagery />
+            </Route>
+            <Route path="/reflection">
+              <Reflection />
+            </Route>
+            <Route path="/index">
+              <Index />
+            </Route>
+          </Switch>
+        </ScrollToTop>
       </ScreenClassProvider>
     </Router>
   );

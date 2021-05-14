@@ -1,12 +1,24 @@
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { Fragment, useEffect } from 'react';
 
-export default function ScrollToTop() {
-  const { pathname } = useLocation();
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
+function ScrollToTop({ history, children }) {
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    const unlisten = history.listen(() => {
+      window.scrollTo(0, 0);
+    });
+    return () => {
+      unlisten();
+    };
+  }, []);
 
-  return null;
+  return <Fragment>{children}</Fragment>;
 }
+
+ScrollToTop.propTypes = {
+  history: PropTypes.shape(),
+  children: PropTypes.shape()
+};
+
+export default withRouter(ScrollToTop);
