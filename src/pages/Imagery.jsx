@@ -17,7 +17,7 @@ const imageLookup = {
   candles: candles
 };
 
-const Imagery = ({ year, scene, sceneNumber, imagery }) => {
+const Imagery = ({ year, scene, romanSceneNumber, imagery }) => {
   const [isClicked, setClicked] = useState(false);
 
   return (
@@ -39,7 +39,7 @@ const Imagery = ({ year, scene, sceneNumber, imagery }) => {
         <SubHeader
           theme={{ background: 'black', text: 'gray-10' }}
           isClicked={isClicked}
-          sceneNumber={sceneNumber}
+          romanSceneNumber={romanSceneNumber}
           title={scene.title}
         />
 
@@ -94,7 +94,7 @@ const Imagery = ({ year, scene, sceneNumber, imagery }) => {
         <Footer
           pushTo="reflection"
           upNext="Reflection"
-          sceneNumber={sceneNumber}
+          romanSceneNumber={romanSceneNumber}
           setClicked={setClicked}
           isClicked={isClicked}
           theme={{ background: 'black', text: 'gray-40' }}
@@ -107,7 +107,7 @@ const Imagery = ({ year, scene, sceneNumber, imagery }) => {
 Imagery.propTypes = {
   year: PropTypes.shape(),
   scene: PropTypes.shape(),
-  sceneNumber: PropTypes.string,
+  romanSceneNumber: PropTypes.string,
   imagery: PropTypes.shape()
 };
 

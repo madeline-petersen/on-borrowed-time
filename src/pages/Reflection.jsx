@@ -20,7 +20,7 @@ const Reflection = ({ year, scene, romanSceneNumber, reflection }) => {
     : roman.toRoman(sceneNumber + 1);
 
   let nextUrl = isLastScene()
-    ? '/1999/scene-I/event'
+    ? '/1990/scene-I/event'
     : `/1989/scene-${nextRomanSceneNumber}/event`;
 
   return (

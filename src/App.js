@@ -45,6 +45,9 @@ function App() {
             <Route path="/1989">
               <Year />
             </Route>
+            <Route path="/1990">
+              <Year />
+            </Route>
             <Route path="/index">
               <Index />
             </Route>
