@@ -2,6 +2,7 @@ import { Col, Row } from 'react-grid-system';
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
 
 const ResourceTable = ({ data, tableState }) => {
   return (
@@ -36,7 +37,7 @@ const ResourceTable = ({ data, tableState }) => {
             <Col lg={3} md={2} />
             <Col lg={4} md={4} sm={4} xs={12} className="small-body">
               <div className={`${tableState ? 'fade-out' : null}`}>
-                {entry.title}
+                {ReactHtmlParser(entry.title)}
               </div>
             </Col>
             <Col lg={3} md={3} sm={4} xs={12} className="small-body">

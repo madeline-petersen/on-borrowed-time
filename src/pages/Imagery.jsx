@@ -8,7 +8,7 @@ import SubHeader from '../components/SubHeader';
 import car from '../images/car.png';
 import crowd from '../images/crowd.png';
 
-const Imagery = ({ year, scene, event }) => {
+const Imagery = ({ year, scene, sceneNumber, event }) => {
   const [isClicked, setClicked] = useState(false);
 
   return (
@@ -30,7 +30,7 @@ const Imagery = ({ year, scene, event }) => {
         <SubHeader
           theme={{ background: 'black', text: 'gray-10' }}
           isClicked={isClicked}
-          sceneNumber="I"
+          sceneNumber={sceneNumber}
           title={scene.title}
         />
 
@@ -83,7 +83,7 @@ const Imagery = ({ year, scene, event }) => {
         <Footer
           pushTo="reflection"
           upNext="Reflection"
-          scene="I"
+          sceneNumber={sceneNumber}
           setClicked={setClicked}
           isClicked={isClicked}
           theme={{ background: 'black', text: 'gray-40' }}
@@ -96,6 +96,7 @@ const Imagery = ({ year, scene, event }) => {
 Imagery.propTypes = {
   year: PropTypes.shape(),
   scene: PropTypes.shape(),
+  sceneNumber: PropTypes.string,
   event: PropTypes.shape()
 };
 

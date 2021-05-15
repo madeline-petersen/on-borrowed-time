@@ -12,6 +12,7 @@ import Imagery from './Imagery.jsx';
 import React from 'react';
 import Reflection from './Reflection.jsx';
 import data from '../data/years.json';
+import { roman } from '@sguest/roman-js';
 
 function Years() {
   let match = useRouteMatch();
@@ -20,34 +21,63 @@ function Years() {
     // The Years page has its own <Switch> with more routes
     // that build on the /{year} URL path. You can think of the
     <Switch>
-      <Route path={`${match.path}/:topicId`}>
+      <Route path={`${match.path}/:sceneId/:topicId`}>
         <Page />
-      </Route>
-      <Route path={match.path}>
-        <h3>Home</h3>
       </Route>
     </Switch>
   );
 }
 
 function Page() {
+  let { sceneId } = useParams();
   let { topicId } = useParams();
+
+  const romanSceneNumber = sceneId.split('-')[1].toUpperCase();
+  const sceneNumber = roman.parseRoman(romanSceneNumber);
   const year = data.years[0]; // number, title
-  const scene = data.years[0].scenes[0]; // title, event, imagery, reflection
-  const event = data.years[0].scenes[0].event; // paragraphs, resources
+  const scene = year.scenes[sceneNumber - 1]; // title, event, imagery, reflection
+  const event = scene.event; // paragraphs, resources
 
   switch (topicId) {
     case 'event':
-      return <Event year={year} scene={scene} event={event} />;
+      return (
+        <Event
+          year={year}
+          scene={scene}
+          sceneNumber={romanSceneNumber}
+          event={event}
+        />
+      );
       break;
     case 'imagery':
-      return <Imagery year={year} scene={scene} event={event} />;
+      return (
+        <Imagery
+          year={year}
+          scene={scene}
+          sceneNumber={romanSceneNumber}
+          event={event}
+        />
+      );
       break;
     case 'reflection':
-      return <Reflection year={year} scene={scene} event={event} />;
+      return (
+        <Reflection
+          year={year}
+          scene={scene}
+          sceneNumber={romanSceneNumber}
+          event={event}
+        />
+      );
       break;
     default:
-      return <Event year={year} scene={scene} event={event} />;
+      return (
+        <Event
+          year={year}
+          scene={scene}
+          sceneNumber={romanSceneNumber}
+          event={event}
+        />
+      );
   }
 }
 

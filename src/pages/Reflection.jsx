@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import PropTypes from 'prop-types';
 import SubHeader from '../components/SubHeader';
 
-const Reflection = ({ year, scene, event }) => {
+const Reflection = ({ year, scene, sceneNumber, event }) => {
   const [isClicked, setClicked] = useState(false);
 
   return (
@@ -28,7 +28,7 @@ const Reflection = ({ year, scene, event }) => {
         <SubHeader
           theme={{ background: 'black', text: 'gray-10' }}
           isClicked={isClicked}
-          sceneNumber="I"
+          sceneNumber={sceneNumber}
           title={scene.title}
         />
 
@@ -94,7 +94,7 @@ const Reflection = ({ year, scene, event }) => {
         </Container>
 
         <Footer
-          pushTo="event"
+          pushTo="/1989/scene-II/event"
           upNext="Event"
           scene="II"
           setClicked={setClicked}
@@ -109,6 +109,7 @@ const Reflection = ({ year, scene, event }) => {
 Reflection.propTypes = {
   year: PropTypes.shape(),
   scene: PropTypes.shape(),
+  sceneNumber: PropTypes.string,
   event: PropTypes.shape()
 };
 

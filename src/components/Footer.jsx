@@ -5,7 +5,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-const Footer = ({ isClicked, setClicked, pushTo, upNext, scene, theme }) => {
+const Footer = ({
+  isClicked,
+  setClicked,
+  pushTo,
+  upNext,
+  sceneNumber,
+  theme
+}) => {
   let history = useHistory();
 
   const handleOnClick = () => {
@@ -50,7 +57,7 @@ const Footer = ({ isClicked, setClicked, pushTo, upNext, scene, theme }) => {
                 isClicked ? 'fade-out' : null
               }`}
             >
-              Scene {scene}
+              Scene {sceneNumber}
             </p>
           </Col>
           <Col
@@ -84,7 +91,7 @@ const Footer = ({ isClicked, setClicked, pushTo, upNext, scene, theme }) => {
 Footer.propTypes = {
   pushTo: PropTypes.string,
   upNext: PropTypes.string,
-  scene: PropTypes.string,
+  sceneNumber: PropTypes.string,
   setClicked: PropTypes.func,
   isClicked: PropTypes.bool,
   theme: PropTypes.shape()
