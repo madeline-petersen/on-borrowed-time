@@ -5,10 +5,19 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import PropTypes from 'prop-types';
 import SubHeader from '../components/SubHeader';
+import candles from '../images/candles.png';
 import car from '../images/car.png';
 import crowd from '../images/crowd.png';
+import tanks from '../images/tanks.png';
 
-const Imagery = ({ year, scene, sceneNumber, event }) => {
+const imageLookup = {
+  car: car,
+  crowd: crowd,
+  tanks: tanks,
+  candles: candles
+};
+
+const Imagery = ({ year, scene, sceneNumber, imagery }) => {
   const [isClicked, setClicked] = useState(false);
 
   return (
@@ -36,48 +45,50 @@ const Imagery = ({ year, scene, sceneNumber, event }) => {
 
         {/* Reflection */}
         <Container className="grid__container border-l border-gray-50">
-          <Row className="grid__row pt-64 pb-20 foreground-fade-in">
-            <Col lg={1} />
-            <Col lg={11} md={12}>
-              <img
-                src={crowd}
-                alt=""
-                className={isClicked ? 'fade-out' : null}
-              />
-            </Col>
-            <Col lg={3} />
-            <Col lg={4} md={4}>
-              <p
-                className={`small-body text-gray-40 mt-8 ${
-                  isClicked ? 'fade-out' : null
-                }`}
-              >
-                Some two hundred thousand pro-democracy students staged an
-                unauthorized demonstration in Tiananmen Square during the
-                funeral ceremony of the Chinese Communist Party leader and
-                liberal reformer Hu Yaobang, on April 22, 1989. Photograph by
-                Catherine Henriette/AFP/Getty.
-              </p>
-            </Col>
-          </Row>
-          <Row className="grid__row pt-20 pb-24 foreground-fade-in">
-            <Col lg={3} />
-            <Col lg={7} md={12}>
-              <img src={car} alt="" className={isClicked ? 'fade-out' : null} />
-            </Col>
-            <Col lg={3} />
-            <Col lg={4} md={4}>
-              <p
-                className={`small-body text-gray-40 mt-5 ${
-                  isClicked ? 'fade-out' : null
-                }`}
-              >
-                A weary protester pleads with a PLA officer sitting in his truck
-                to not crackdown on the student demonstrators in Tiananmen
-                Square. (Photo by Peter Turnley/Getty Images)
-              </p>
-            </Col>
-          </Row>
+          {imagery.length > 0 && (
+            <Row className="grid__row pt-64 pb-20 foreground-fade-in">
+              <Col lg={1} />
+              <Col lg={11} md={12}>
+                <img
+                  src={imageLookup[imagery[0].source]}
+                  alt=""
+                  className={isClicked ? 'fade-out' : null}
+                />
+              </Col>
+              <Col lg={3} />
+              <Col lg={4} md={4}>
+                <p
+                  className={`small-body text-gray-40 mt-8 ${
+                    isClicked ? 'fade-out' : null
+                  }`}
+                >
+                  {imagery[0].caption}
+                </p>
+              </Col>
+            </Row>
+          )}
+          {imagery.length > 1 && (
+            <Row className="grid__row pt-20 pb-24 foreground-fade-in">
+              <Col lg={3} />
+              <Col lg={7} md={12}>
+                <img
+                  src={imageLookup[imagery[1].source]}
+                  alt=""
+                  className={isClicked ? 'fade-out' : null}
+                />
+              </Col>
+              <Col lg={3} />
+              <Col lg={4} md={4}>
+                <p
+                  className={`small-body text-gray-40 mt-5 ${
+                    isClicked ? 'fade-out' : null
+                  }`}
+                >
+                  {imagery[1].caption}
+                </p>
+              </Col>
+            </Row>
+          )}
         </Container>
 
         <Footer
@@ -97,7 +108,7 @@ Imagery.propTypes = {
   year: PropTypes.shape(),
   scene: PropTypes.shape(),
   sceneNumber: PropTypes.string,
-  event: PropTypes.shape()
+  imagery: PropTypes.shape()
 };
 
 export default Imagery;

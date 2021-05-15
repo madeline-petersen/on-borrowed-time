@@ -37,6 +37,8 @@ function Page() {
   const year = data.years[0]; // number, title
   const scene = year.scenes[sceneNumber - 1]; // title, event, imagery, reflection
   const event = scene.event; // paragraphs, resources
+  const imagery = scene.imagery; // array of images
+  const reflection = scene.reflection; // paragraphs
 
   switch (topicId) {
     case 'event':
@@ -55,7 +57,7 @@ function Page() {
           year={year}
           scene={scene}
           sceneNumber={romanSceneNumber}
-          event={event}
+          imagery={imagery}
         />
       );
       break;
@@ -65,7 +67,7 @@ function Page() {
           year={year}
           scene={scene}
           sceneNumber={romanSceneNumber}
-          event={event}
+          reflection={reflection}
         />
       );
       break;
