@@ -10,7 +10,7 @@ import ResourceTable from '../components/ResourceTable';
 import SubHeader from '../components/SubHeader';
 import { useScreenClass } from 'react-grid-system';
 
-const Event = ({ year, scene, sceneNumber, event }) => {
+const Event = ({ year, scene, romanSceneNumber, event }) => {
   const screenClass = useScreenClass();
   const [isClicked, setClicked] = useState(false);
   console.log(year);
@@ -40,7 +40,7 @@ const Event = ({ year, scene, sceneNumber, event }) => {
         <SubHeader
           theme={{ background: 'gray-10', text: 'black' }}
           isClicked={isClicked}
-          sceneNumber={sceneNumber}
+          romanSceneNumber={romanSceneNumber}
           title={scene.title}
         />
 
@@ -79,7 +79,7 @@ const Event = ({ year, scene, sceneNumber, event }) => {
         <Footer
           pushTo="imagery"
           upNext="Imagery"
-          sceneNumber={sceneNumber}
+          romanSceneNumber={romanSceneNumber}
           setClicked={setClicked}
           isClicked={isClicked}
           theme={{ background: 'gray-10', text: 'black' }}
@@ -92,7 +92,7 @@ const Event = ({ year, scene, sceneNumber, event }) => {
 Event.propTypes = {
   year: PropTypes.shape(),
   scene: PropTypes.shape(),
-  sceneNumber: PropTypes.string,
+  romanSceneNumber: PropTypes.string,
   event: PropTypes.shape()
 };
 

@@ -46,7 +46,7 @@ function Page() {
         <Event
           year={year}
           scene={scene}
-          sceneNumber={romanSceneNumber}
+          romanSceneNumber={romanSceneNumber}
           event={event}
         />
       );
@@ -56,7 +56,7 @@ function Page() {
         <Imagery
           year={year}
           scene={scene}
-          sceneNumber={romanSceneNumber}
+          romanSceneNumber={romanSceneNumber}
           imagery={imagery}
         />
       );
@@ -66,7 +66,7 @@ function Page() {
         <Reflection
           year={year}
           scene={scene}
-          sceneNumber={romanSceneNumber}
+          romanSceneNumber={romanSceneNumber}
           reflection={reflection}
         />
       );
@@ -76,7 +76,7 @@ function Page() {
         <Event
           year={year}
           scene={scene}
-          sceneNumber={romanSceneNumber}
+          romanSceneNumber={romanSceneNumber}
           event={event}
         />
       );

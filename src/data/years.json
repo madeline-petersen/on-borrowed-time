@@ -125,6 +125,10 @@
               }
             ]
           },
+          "imagery": [
+            {"source": "candles", "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong Kong, Hong Kong. Held to mark the crackdown on the pro-democracy movement in Beijing's Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"},
+            {"source": "crowd", "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"}
+          ],
           "reflection": [
             "With Britain rescinding its support and China tightening its grip, Hong Kong was trapped in an shifting diasporic reality between two dominant cultures, “neither of which takes the welfare of Hong Kong people into account even though both would turn to Hong Kong for financial and other forms of assistance when they needed it”.",
             "Now, more than four months later, Hong Kongers feel trapped between a looming Chinese motherland they cannot change and a departing imperial motherland - Britain - that is betraying them by pulling back the welcome mat from all but a select few (Scott, NYT, 1989).",

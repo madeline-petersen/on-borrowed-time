@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-grid-system';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const SubHeader = ({ isClicked, theme, sceneNumber, title }) => {
+const SubHeader = ({ isClicked, theme, romanSceneNumber, title }) => {
   return (
     <Container className="grid__container sticky top-8 border-l border-gray-50">
       {/* solid background */}
@@ -17,7 +17,7 @@ const SubHeader = ({ isClicked, theme, sceneNumber, title }) => {
           <p
             className={`medium-caption scene-animation pt-2 absolute top-0 text-${theme.text}`}
           >
-            Scene {sceneNumber}
+            Scene {romanSceneNumber}
           </p>
           <p
             className={`small-body title-animation pt-2 pb-2 text-${theme.text}`}
@@ -31,7 +31,7 @@ const SubHeader = ({ isClicked, theme, sceneNumber, title }) => {
 };
 
 SubHeader.propTypes = {
-  sceneNumber: PropTypes.string,
+  romanSceneNumber: PropTypes.string,
   title: PropTypes.string,
   isClicked: PropTypes.bool,
   theme: PropTypes.shape()

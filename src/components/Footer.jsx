@@ -10,7 +10,7 @@ const Footer = ({
   setClicked,
   pushTo,
   upNext,
-  sceneNumber,
+  romanSceneNumber,
   theme
 }) => {
   let history = useHistory();
@@ -57,7 +57,7 @@ const Footer = ({
                 isClicked ? 'fade-out' : null
               }`}
             >
-              Scene {sceneNumber}
+              Scene {romanSceneNumber}
             </p>
           </Col>
           <Col
@@ -91,7 +91,7 @@ const Footer = ({
 Footer.propTypes = {
   pushTo: PropTypes.string,
   upNext: PropTypes.string,
-  sceneNumber: PropTypes.string,
+  romanSceneNumber: PropTypes.string,
   setClicked: PropTypes.func,
   isClicked: PropTypes.bool,
   theme: PropTypes.shape()

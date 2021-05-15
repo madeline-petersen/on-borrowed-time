@@ -6,9 +6,22 @@ import Header from '../components/Header';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import SubHeader from '../components/SubHeader';
+import { roman } from '@sguest/roman-js';
 
-const Reflection = ({ year, scene, sceneNumber, reflection }) => {
+const Reflection = ({ year, scene, romanSceneNumber, reflection }) => {
   const [isClicked, setClicked] = useState(false);
+  const sceneNumber = roman.parseRoman(romanSceneNumber);
+  const isLastScene = () => {
+    return sceneNumber < year.scenes.length ? false : true;
+  };
+
+  let nextRomanSceneNumber = isLastScene()
+    ? 'I'
+    : roman.toRoman(sceneNumber + 1);
+
+  let nextUrl = isLastScene()
+    ? '/1999/scene-I/event'
+    : `/1989/scene-${nextRomanSceneNumber}/event`;
 
   return (
     <>
@@ -29,7 +42,7 @@ const Reflection = ({ year, scene, sceneNumber, reflection }) => {
         <SubHeader
           theme={{ background: 'black', text: 'gray-10' }}
           isClicked={isClicked}
-          sceneNumber={sceneNumber}
+          romanSceneNumber={romanSceneNumber}
           title={scene.title}
         />
 
@@ -75,9 +88,9 @@ const Reflection = ({ year, scene, sceneNumber, reflection }) => {
         </Container>
 
         <Footer
-          pushTo="/1989/scene-II/event"
+          pushTo={nextUrl}
           upNext="Event"
-          scene="II"
+          romanSceneNumber={nextRomanSceneNumber}
           setClicked={setClicked}
           isClicked={isClicked}
           theme={{ background: 'black', text: 'gray-40' }}
@@ -90,7 +103,7 @@ const Reflection = ({ year, scene, sceneNumber, reflection }) => {
 Reflection.propTypes = {
   year: PropTypes.shape(),
   scene: PropTypes.shape(),
-  sceneNumber: PropTypes.string,
+  romanSceneNumber: PropTypes.string,
   reflection: PropTypes.shape()
 };
 
