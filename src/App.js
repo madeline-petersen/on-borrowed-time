@@ -45,13 +45,15 @@ function Page() {
   let { pageId } = useParams();
   console.log(yearId, sceneId, pageId);
 
-  const romanSceneNumber = sceneId.split('-')[1].toUpperCase();
-  const sceneNumber = roman.parseRoman(romanSceneNumber);
   const yearIndex = data.years.findIndex(year => year.year === yearId);
   const year = data.years[yearIndex]; // year, title
   const nextYear = data.years[yearIndex + 1];
+
+  const romanSceneNumber = sceneId.split('-')[1].toUpperCase();
+  const sceneNumber = roman.parseRoman(romanSceneNumber);
   const scene = year.scenes[sceneNumber - 1]; // title, event, artifacts, reflection
   const nextScene = year.scenes[sceneNumber]; // title, event, artifacts, reflection
+
   const event = scene.event; // paragraphs, resources
   const artifacts = scene.artifacts; // array of images
   const reflection = scene.reflection; // paragraphs
