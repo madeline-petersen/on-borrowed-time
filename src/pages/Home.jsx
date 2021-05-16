@@ -1,13 +1,25 @@
 import { Col, Container, Row } from 'react-grid-system';
 
 import React from 'react';
+import { useScreenClass } from 'react-grid-system';
 
 const Home = () => {
+  const screenClass = useScreenClass();
+
   return (
     <div className="h-screen bg-black">
       <Container className="grid__container">
-        <Row className="grid__row">
-          <div className="h-screen w-full flex flex-col justify-between py-5">
+        <Row
+          className="grid__row"
+          style={{
+            margin: ['lg', 'xl', 'xxl'].includes(screenClass)
+              ? '0 -70px' // lg, xl, xxl
+              : ['md'].includes(screenClass)
+              ? '0 -60px' // md
+              : '0 -22px' // sm, xs
+          }}
+        >
+          <div className="h-screen w-full flex flex-col justify-between py-6">
             {/* top container */}
             <div>
               <Col lg={12} md={12} sm={12} xs={12}>
@@ -16,14 +28,14 @@ const Home = () => {
                     A Borrowed Place, On Borrowed Time
                   </h3>
                   {/* hide below md breakpoint */}
-                  <h3 className="small-headline-characters text-white md:block hidden">
+                  <h3 className="small-headline-characters text-white sm:block hidden">
                     暫借的地方，暫借的時間
                   </h3>
                 </div>
               </Col>
               <Col lg={12} md={12} sm={12} xs={12}>
                 {/* show below md breakpoint */}
-                <h3 className="small-headline-characters text-white md:hidden block mb-5">
+                <h3 className="small-headline-characters text-white sm:hidden block mb-5">
                   暫借的地方，暫借的時間
                 </h3>
               </Col>

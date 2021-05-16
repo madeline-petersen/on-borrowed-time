@@ -109,6 +109,8 @@ a {
   margin-right: 3rem !important;
 }
 
+// breakpoints: [375, 756, 1056, 1440, 1800]
+// lg (up to xl-minus-1)
 @media screen and (max-width: 1439px) {
   .grid__container {
     margin-left: 58px !important;
@@ -116,6 +118,7 @@ a {
   }
 }
 
+// md (up to lg-minus-1)
 @media screen and (max-width: 1055px) {
   .grid__container {
     margin-left: 3rem !important;
@@ -123,6 +126,7 @@ a {
   }
 }
 
+// sm (up to md-minus-1)
 @media screen and (max-width: 755px) {
   .grid__container {
     margin-left: 10px !important;
@@ -130,6 +134,7 @@ a {
   }
 }
 
+// xs (up to sm-minus-1)
 @media screen and (max-width: 374px) {
   .grid__container {
     margin-left: 10px !important;

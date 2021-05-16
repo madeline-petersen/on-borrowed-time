@@ -35,7 +35,7 @@ class GridHelper extends React.Component {
         className={`grid-helper ${this.state.isVisible ? ' isVisible' : ''}`}
       >
         <Container className="grid__container">
-          <p>
+          <p className="text-gray-40">
             <span>Your current screen class is </span>
             <Visible xs>
               <strong>xs</strong>
