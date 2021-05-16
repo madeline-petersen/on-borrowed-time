@@ -1,7 +1,13 @@
 import './App.scss';
 
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import {
+  Route,
+  BrowserRouter as Router,
+  Switch,
+  useParams
+} from 'react-router-dom';
 
+import Event from './pages/Event.jsx';
 import GridHelper from './helpers/GridHelper.jsx';
 import Imagery from './pages/Imagery.jsx';
 import Index from './pages/Index.jsx';
@@ -9,7 +15,8 @@ import React from 'react';
 import Reflection from './pages/Reflection.jsx';
 import { ScreenClassProvider } from 'react-grid-system';
 import ScrollToTop from './ScrollToTop.jsx';
-import Year from './pages/Year.jsx';
+import data from './data/years.json';
+import { roman } from '@sguest/roman-js';
 import { setConfiguration } from 'react-grid-system';
 
 setConfiguration({
@@ -32,6 +39,63 @@ setConfiguration({
   maxScreenClass: 'xxl'
 });
 
+function Page() {
+  let { yearId } = useParams();
+  let { sceneId } = useParams();
+  let { pageId } = useParams();
+  console.log(yearId, sceneId, pageId);
+
+  const romanSceneNumber = sceneId.split('-')[1].toUpperCase();
+  const sceneNumber = roman.parseRoman(romanSceneNumber);
+  const year = data.years[0]; // number, title
+  const scene = year.scenes[sceneNumber - 1]; // title, event, imagery, reflection
+  const event = scene.event; // paragraphs, resources
+  const imagery = scene.imagery; // array of images
+  const reflection = scene.reflection; // paragraphs
+
+  switch (pageId) {
+    case 'event':
+      return (
+        <Event
+          year={year}
+          scene={scene}
+          romanSceneNumber={romanSceneNumber}
+          event={event}
+        />
+      );
+      break;
+    case 'imagery':
+      return (
+        <Imagery
+          year={year}
+          scene={scene}
+          romanSceneNumber={romanSceneNumber}
+          imagery={imagery}
+        />
+      );
+      break;
+    case 'reflection':
+      return (
+        <Reflection
+          year={year}
+          scene={scene}
+          romanSceneNumber={romanSceneNumber}
+          reflection={reflection}
+        />
+      );
+      break;
+    default:
+      return (
+        <Event
+          year={year}
+          scene={scene}
+          romanSceneNumber={romanSceneNumber}
+          event={event}
+        />
+      );
+  }
+}
+
 function App() {
   return (
     <Router>
@@ -39,14 +103,11 @@ function App() {
         <GridHelper />
         <ScrollToTop>
           <Switch>
-            <Route exact path="/">
+            {/* <Route path="/">
               <Year />
-            </Route>
-            <Route path="/1989">
-              <Year />
-            </Route>
-            <Route path="/1990">
-              <Year />
+            </Route> */}
+            <Route path={`/:yearId/:sceneId/:pageId`}>
+              <Page />
             </Route>
             <Route path="/index">
               <Index />
