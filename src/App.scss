@@ -14,8 +14,8 @@
 }
 
 @font-face {
-  font-family: NotoSerifJP;
-  src: url('./NotoSerifJP-Regular.otf') format('opentype');
+  font-family: NotoSerifJP-SemiBold;
+  src: url('./NotoSerifJP-SemiBold.otf') format('opentype');
 }
 
 a {
@@ -61,7 +61,7 @@ a {
 }
 
 .small-headline-characters {
-  font-family: NotoSerifJP;
+  font-family: NotoSerifJP-SemiBold;
   font-style: normal;
   font-weight: 600;
   font-size: 21px;
