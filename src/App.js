@@ -10,6 +10,7 @@ import {
 import Artifacts from './pages/Artifacts.jsx';
 import Event from './pages/Event.jsx';
 import GridHelper from './helpers/GridHelper.jsx';
+import Home from './pages/Home.jsx';
 import Index from './pages/Index.jsx';
 import React from 'react';
 import Reflection from './pages/Reflection.jsx';
@@ -110,9 +111,9 @@ function App() {
         <GridHelper />
         <ScrollToTop>
           <Switch>
-            {/* <Route path="/">
-              <Year />
-            </Route> */}
+            <Route path="/">
+              <Home />
+            </Route>
             <Route path={`/:yearId/:sceneId/:pageId`}>
               <Page />
             </Route>

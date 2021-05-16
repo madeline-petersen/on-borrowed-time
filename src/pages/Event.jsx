@@ -13,7 +13,6 @@ import { useScreenClass } from 'react-grid-system';
 const Event = ({ year, scene, romanSceneNumber, event }) => {
   const screenClass = useScreenClass();
   const [isClicked, setClicked] = useState(false);
-  console.log(year);
 
   return (
     <>
