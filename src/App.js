@@ -47,7 +47,7 @@ function Page() {
 
   const romanSceneNumber = sceneId.split('-')[1].toUpperCase();
   const sceneNumber = roman.parseRoman(romanSceneNumber);
-  const year = data.years[0]; // number, title
+  const year = data.years.find(year => year.year === yearId); // year, title
   const scene = year.scenes[sceneNumber - 1]; // title, event, imagery, reflection
   const event = scene.event; // paragraphs, resources
   const imagery = scene.imagery; // array of images
