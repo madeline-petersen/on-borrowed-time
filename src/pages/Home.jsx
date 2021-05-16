@@ -8,21 +8,31 @@ const Home = () => {
       <Container className="grid__container">
         <Row className="grid__row">
           <div className="h-screen w-full flex flex-col justify-between py-5">
+            {/* top container */}
             <div>
               <Col lg={12} md={12} sm={12} xs={12}>
-                <div className="flex justify-between items-center mb-2">
+                <div className="flex justify-between items-center mb-3">
                   <h3 className="small-headline text-white">
                     A Borrowed Place, On Borrowed Time
                   </h3>
-                  <h3 className="small-headline-characters text-white">
+                  {/* hide below md breakpoint */}
+                  <h3 className="small-headline-characters text-white md:block hidden">
                     暫借的地方，暫借的時間
                   </h3>
                 </div>
               </Col>
               <Col lg={12} md={12} sm={12} xs={12}>
+                {/* show below md breakpoint */}
+                <h3 className="small-headline-characters text-white md:hidden block mb-5">
+                  暫借的地方，暫借的時間
+                </h3>
+              </Col>
+              <Col lg={12} md={12} sm={12} xs={12}>
                 <h3 className="small-body text-white">Project coming soon</h3>
               </Col>
             </div>
+
+            {/* bottom container */}
             <div>
               <Col lg={12} md={12} sm={12} xs={12}>
                 <h3 className="small-body text-white opacity-50">
