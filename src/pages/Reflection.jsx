@@ -12,6 +12,7 @@ const Reflection = ({
   year,
   nextYear,
   scene,
+  nextScene,
   romanSceneNumber,
   reflection
 }) => {
@@ -94,10 +95,12 @@ const Reflection = ({
           </Row>
         </Container>
 
+        {/* unless last scene and last year */}
+        {/* display footer */}
         {!(isLastScene() && !nextYear) && (
           <Footer
             pushTo={nextUrl}
-            upNext="Event"
+            upNext={!isLastScene() && nextScene.title}
             romanSceneNumber={nextRomanSceneNumber}
             nextYear={nextYear}
             setClicked={setClicked}
@@ -115,6 +118,7 @@ Reflection.propTypes = {
   year: PropTypes.shape(),
   nextYear: PropTypes.shape(),
   scene: PropTypes.shape(),
+  nextScene: PropTypes.shape(),
   romanSceneNumber: PropTypes.string,
   reflection: PropTypes.shape()
 };

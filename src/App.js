@@ -51,6 +51,7 @@ function Page() {
   const year = data.years[yearIndex]; // year, title
   const nextYear = data.years[yearIndex + 1];
   const scene = year.scenes[sceneNumber - 1]; // title, event, artifacts, reflection
+  const nextScene = year.scenes[sceneNumber]; // title, event, artifacts, reflection
   const event = scene.event; // paragraphs, resources
   const artifacts = scene.artifacts; // array of images
   const reflection = scene.reflection; // paragraphs
@@ -80,10 +81,11 @@ function Page() {
       return (
         <Reflection
           year={year}
+          nextYear={nextYear}
           scene={scene}
+          nextScene={nextScene}
           romanSceneNumber={romanSceneNumber}
           reflection={reflection}
-          nextYear={nextYear}
         />
       );
       break;
