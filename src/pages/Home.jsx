@@ -6,6 +6,46 @@ import { useScreenClass } from 'react-grid-system';
 const Home = () => {
   const screenClass = useScreenClass();
 
+  // Set the date we're counting down to
+  let countDownDate = new Date('Jul 1, 2047 00:00:00').getTime();
+
+  function makeMeTwoDigits(n) {
+    return (n < 10 ? '0' : '') + n;
+  }
+
+  // Update the count down every 1 second
+  let x = setInterval(function() {
+    // Get today's date and time
+    let now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    let distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById('demo').innerHTML =
+      days +
+      ' days ' +
+      makeMeTwoDigits(hours) +
+      ':' +
+      makeMeTwoDigits(minutes) +
+      ':' +
+      makeMeTwoDigits(seconds);
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById('demo').innerHTML = 'EXPIRED';
+    }
+  }, 1000);
+
   return (
     <div className="h-screen bg-black">
       <Container className="grid__container">
@@ -48,7 +88,7 @@ const Home = () => {
             <div>
               <Col lg={12} md={12} sm={12} xs={12}>
                 <h3 className="small-body text-white opacity-50">
-                  The Handover — 9230 days 16:16:20
+                  The Handover — <span id="demo" />
                 </h3>
               </Col>
             </div>
