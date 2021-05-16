@@ -25,9 +25,10 @@ const Reflection = ({
     ? 'I'
     : roman.toRoman(sceneNumber + 1);
 
-  let nextUrl = isLastScene()
-    ? `/${nextYear.year}/scene-I/event`
-    : `/${year.year}/scene-${nextRomanSceneNumber}/event`;
+  let nextUrl =
+    isLastScene() && nextYear
+      ? `/${nextYear.year}/scene-I/event`
+      : `/${year.year}/scene-${nextRomanSceneNumber}/event`;
 
   return (
     <>
@@ -93,16 +94,18 @@ const Reflection = ({
           </Row>
         </Container>
 
-        <Footer
-          pushTo={nextUrl}
-          upNext="Event"
-          romanSceneNumber={nextRomanSceneNumber}
-          nextYear={nextYear}
-          setClicked={setClicked}
-          isClicked={isClicked}
-          isLastScene={isLastScene()}
-          theme={{ background: 'black', text: 'gray-40' }}
-        />
+        {!(isLastScene() && !nextYear) && (
+          <Footer
+            pushTo={nextUrl}
+            upNext="Event"
+            romanSceneNumber={nextRomanSceneNumber}
+            nextYear={nextYear}
+            setClicked={setClicked}
+            isClicked={isClicked}
+            isLastScene={isLastScene()}
+            theme={{ background: 'black', text: 'gray-40' }}
+          />
+        )}
       </div>
     </>
   );
