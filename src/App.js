@@ -7,9 +7,9 @@ import {
   useParams
 } from 'react-router-dom';
 
+import Artifacts from './pages/Artifacts.jsx';
 import Event from './pages/Event.jsx';
 import GridHelper from './helpers/GridHelper.jsx';
-import Imagery from './pages/Imagery.jsx';
 import Index from './pages/Index.jsx';
 import React from 'react';
 import Reflection from './pages/Reflection.jsx';
@@ -50,9 +50,9 @@ function Page() {
   const yearIndex = data.years.findIndex(year => year.year === yearId);
   const year = data.years[yearIndex]; // year, title
   const nextYear = data.years[yearIndex + 1];
-  const scene = year.scenes[sceneNumber - 1]; // title, event, imagery, reflection
+  const scene = year.scenes[sceneNumber - 1]; // title, event, artifacts, reflection
   const event = scene.event; // paragraphs, resources
-  const imagery = scene.imagery; // array of images
+  const artifacts = scene.artifacts; // array of images
   const reflection = scene.reflection; // paragraphs
 
   switch (pageId) {
@@ -66,13 +66,13 @@ function Page() {
         />
       );
       break;
-    case 'imagery':
+    case 'artifacts':
       return (
-        <Imagery
+        <Artifacts
           year={year}
           scene={scene}
           romanSceneNumber={romanSceneNumber}
-          imagery={imagery}
+          artifacts={artifacts}
         />
       );
       break;

@@ -17,7 +17,7 @@ const imageLookup = {
   candles: candles
 };
 
-const Imagery = ({ year, scene, romanSceneNumber, imagery }) => {
+const Artifacts = ({ year, scene, romanSceneNumber, artifacts }) => {
   const [isClicked, setClicked] = useState(false);
 
   return (
@@ -45,12 +45,12 @@ const Imagery = ({ year, scene, romanSceneNumber, imagery }) => {
 
         {/* Reflection */}
         <Container className="grid__container border-l border-gray-50">
-          {imagery.length > 0 && (
+          {artifacts.length > 0 && (
             <Row className="grid__row pt-64 pb-20 foreground-fade-in">
               <Col lg={1} />
               <Col lg={11} md={12}>
                 <img
-                  src={imageLookup[imagery[0].source]}
+                  src={imageLookup[artifacts[0].source]}
                   alt=""
                   className={isClicked ? 'fade-out' : null}
                 />
@@ -62,17 +62,17 @@ const Imagery = ({ year, scene, romanSceneNumber, imagery }) => {
                     isClicked ? 'fade-out' : null
                   }`}
                 >
-                  {imagery[0].caption}
+                  {artifacts[0].caption}
                 </p>
               </Col>
             </Row>
           )}
-          {imagery.length > 1 && (
+          {artifacts.length > 1 && (
             <Row className="grid__row pt-20 pb-24 foreground-fade-in">
               <Col lg={3} />
               <Col lg={7} md={12}>
                 <img
-                  src={imageLookup[imagery[1].source]}
+                  src={imageLookup[artifacts[1].source]}
                   alt=""
                   className={isClicked ? 'fade-out' : null}
                 />
@@ -84,7 +84,7 @@ const Imagery = ({ year, scene, romanSceneNumber, imagery }) => {
                     isClicked ? 'fade-out' : null
                   }`}
                 >
-                  {imagery[1].caption}
+                  {artifacts[1].caption}
                 </p>
               </Col>
             </Row>
@@ -104,11 +104,11 @@ const Imagery = ({ year, scene, romanSceneNumber, imagery }) => {
   );
 };
 
-Imagery.propTypes = {
+Artifacts.propTypes = {
   year: PropTypes.shape(),
   scene: PropTypes.shape(),
   romanSceneNumber: PropTypes.string,
-  imagery: PropTypes.shape()
+  artifacts: PropTypes.shape()
 };
 
-export default Imagery;
+export default Artifacts;

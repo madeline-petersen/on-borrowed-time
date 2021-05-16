@@ -40,7 +40,7 @@ const Footer = ({
       <Row className={`grid__row bg-${theme.background}`}>
         <Col lg={1} md={1} />
         <div
-          to="/imagery"
+          to="/artifacts"
           className={`contents ${isClicked ? 'fade-out' : 'cursor-pointer'}`}
           onClick={() => handleOnClick()}
         >

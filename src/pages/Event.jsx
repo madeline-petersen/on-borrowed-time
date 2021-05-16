@@ -77,8 +77,8 @@ const Event = ({ year, scene, romanSceneNumber, event }) => {
         </Container>
 
         <Footer
-          pushTo="imagery"
-          upNext="Imagery"
+          pushTo="artifacts"
+          upNext="Artifacts"
           romanSceneNumber={romanSceneNumber}
           setClicked={setClicked}
           isClicked={isClicked}
