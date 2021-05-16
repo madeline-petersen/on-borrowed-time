@@ -53,13 +53,13 @@ const Home = () => {
           className="grid__row"
           style={{
             margin: ['lg', 'xl', 'xxl'].includes(screenClass)
-              ? '0 -70px' // lg, xl, xxl
+              ? '0 -74px' // lg, xl, xxl
               : ['md'].includes(screenClass)
-              ? '0 -60px' // md
-              : '0 -22px' // sm, xs
+              ? '0 -64px' // md
+              : '0 -26px' // sm, xs
           }}
         >
-          <div className="h-screen w-full flex flex-col justify-between py-6">
+          <div className="h-screen w-full flex flex-col justify-between py-5">
             {/* top container */}
             <div>
               <Col lg={12} md={12} sm={12} xs={12}>
