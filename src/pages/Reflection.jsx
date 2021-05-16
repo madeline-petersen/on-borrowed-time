@@ -8,7 +8,13 @@ import ReactHtmlParser from 'react-html-parser';
 import SubHeader from '../components/SubHeader';
 import { roman } from '@sguest/roman-js';
 
-const Reflection = ({ year, scene, romanSceneNumber, reflection }) => {
+const Reflection = ({
+  year,
+  nextYear,
+  scene,
+  romanSceneNumber,
+  reflection
+}) => {
   const [isClicked, setClicked] = useState(false);
   const sceneNumber = roman.parseRoman(romanSceneNumber);
   const isLastScene = () => {
@@ -20,8 +26,8 @@ const Reflection = ({ year, scene, romanSceneNumber, reflection }) => {
     : roman.toRoman(sceneNumber + 1);
 
   let nextUrl = isLastScene()
-    ? '/1990/scene-I/event'
-    : `/1989/scene-${nextRomanSceneNumber}/event`;
+    ? `/${nextYear.year}/scene-I/event`
+    : `/${year.year}/scene-${nextRomanSceneNumber}/event`;
 
   return (
     <>
@@ -91,8 +97,10 @@ const Reflection = ({ year, scene, romanSceneNumber, reflection }) => {
           pushTo={nextUrl}
           upNext="Event"
           romanSceneNumber={nextRomanSceneNumber}
+          nextYear={nextYear}
           setClicked={setClicked}
           isClicked={isClicked}
+          isLastScene={isLastScene()}
           theme={{ background: 'black', text: 'gray-40' }}
         />
       </div>
@@ -102,6 +110,7 @@ const Reflection = ({ year, scene, romanSceneNumber, reflection }) => {
 
 Reflection.propTypes = {
   year: PropTypes.shape(),
+  nextYear: PropTypes.shape(),
   scene: PropTypes.shape(),
   romanSceneNumber: PropTypes.string,
   reflection: PropTypes.shape()

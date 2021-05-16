@@ -11,6 +11,8 @@ const Footer = ({
   pushTo,
   upNext,
   romanSceneNumber,
+  nextYear,
+  isLastScene,
   theme
 }) => {
   let history = useHistory();
@@ -57,7 +59,7 @@ const Footer = ({
                 isClicked ? 'fade-out' : null
               }`}
             >
-              Scene {romanSceneNumber}
+              {isLastScene ? nextYear.year : `Scene ${romanSceneNumber}`}
             </p>
           </Col>
           <Col
@@ -72,7 +74,7 @@ const Footer = ({
                 isClicked ? 'fade-out' : null
               }`}
             >
-              {upNext}
+              {isLastScene ? nextYear.title : upNext}
             </p>
             <p
               className={`pb-4 pt-4 text-${theme.text} ${
@@ -92,6 +94,8 @@ Footer.propTypes = {
   pushTo: PropTypes.string,
   upNext: PropTypes.string,
   romanSceneNumber: PropTypes.string,
+  nextYear: PropTypes.shape(),
+  isLastScene: PropTypes.bool,
   setClicked: PropTypes.func,
   isClicked: PropTypes.bool,
   theme: PropTypes.shape()
