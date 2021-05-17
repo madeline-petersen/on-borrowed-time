@@ -108,7 +108,7 @@ function App() {
   return (
     <Router>
       <ScreenClassProvider>
-        <GridHelper />
+        {process.env.NODE_ENV === 'development' && <GridHelper />}
         <ScrollToTop>
           <Switch>
             <Route exact path="/">
