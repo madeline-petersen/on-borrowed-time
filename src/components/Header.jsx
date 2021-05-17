@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Header = ({ year, title, theme, isClicked }) => {
+const Header = ({ label, theme, border, isClicked }) => {
   /**
    * PurgeCSS:
    * bg-black
@@ -15,7 +15,9 @@ const Header = ({ year, title, theme, isClicked }) => {
 
   return (
     <Container
-      className={`grid__container sticky top-0 border-l border-gray-50 bg-${theme.background}`}
+      className={`grid__container sticky top-0 ${
+        border ? 'border-l border-gray-50' : ''
+      } bg-${theme.background}`}
     >
       <Row className={`grid__row pt-5 ${isClicked ? 'fade-out' : null}`}>
         <Col lg={3} md={4} sm={4} xs={4} className="medium-caption">
@@ -24,9 +26,7 @@ const Header = ({ year, title, theme, isClicked }) => {
           </Link>
         </Col>
         <Col lg={8} md={3} sm={4} xs={4} className="medium-caption">
-          <Link className={`text-${theme.text}`}>
-            {year} {title}
-          </Link>
+          <Link className={`text-${theme.text}`}>{label}</Link>
         </Col>
         <Col lg={1} md={5} sm={4} xs={4} className="medium-caption">
           <Link to="/index" className={`text-${theme.text}`}>
@@ -38,10 +38,17 @@ const Header = ({ year, title, theme, isClicked }) => {
   );
 };
 
+Header.defaultProps = {
+  label: '',
+  theme: { background: 'gray-10', text: 'black' },
+  border: true,
+  isClicked: false
+};
+
 Header.propTypes = {
-  year: PropTypes.string,
-  title: PropTypes.string,
+  label: PropTypes.string,
   theme: PropTypes.shape(),
+  border: PropTypes.bool,
   isClicked: PropTypes.bool
 };
 

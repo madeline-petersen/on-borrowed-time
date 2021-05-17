@@ -30,10 +30,10 @@ const Artifacts = ({ year, scene, romanSceneNumber, artifacts }) => {
 
       <div className="h-auto bg-black">
         <Header
+          label={`${year.year} ${year.title}`}
           theme={{ background: 'black', text: 'gray-10' }}
+          border={true}
           isClicked={isClicked}
-          year={year.year}
-          title={year.title}
         />
 
         <SubHeader

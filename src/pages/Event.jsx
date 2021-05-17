@@ -24,10 +24,10 @@ const Event = ({ year, scene, romanSceneNumber, event }) => {
 
       <div className="h-auto bg-gray-10">
         <Header
+          label={`${year.year} ${year.title}`}
           theme={{ background: 'gray-10', text: 'black' }}
+          border={true}
           isClicked={isClicked}
-          year={year.year}
-          title={year.title}
         />
 
         <Container className="grid__container border-l border-gray-50">

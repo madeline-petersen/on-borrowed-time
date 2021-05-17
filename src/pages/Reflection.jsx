@@ -41,10 +41,10 @@ const Reflection = ({
 
       <div className="h-auto bg-black">
         <Header
+          label={`${year.year} ${year.title}`}
           theme={{ background: 'black', text: 'gray-10' }}
           isClicked={isClicked}
-          year={year.year}
-          title={year.title}
+          border={true}
         />
 
         <SubHeader

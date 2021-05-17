@@ -3,6 +3,7 @@ import './Index.scss';
 import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect } from 'react';
 
+import Header from '../components/Header';
 import cx from 'classnames/bind';
 import data from '../data/index.json';
 import useHover from '../hooks/useHover';
@@ -58,6 +59,12 @@ const Index = () => {
 
   return (
     <div className="Index">
+      <Header
+        theme={{ background: 'white', text: 'black' }}
+        label="Theme"
+        border={false}
+      />
+
       <div
         className={cx('page-container', {
           'page-container--mini': showMiniMenu
@@ -91,7 +98,7 @@ const Index = () => {
             <Col
               offset={{ md: 1 }}
               md={8}
-              className={cx('directory__list', {
+              className={cx('directory__list', 'pt-16', {
                 'directory__list--hover': anyIsHovered(),
                 'directory__list--unselected': !anyIsSelected(),
                 'directory__list--selected': anyIsSelected()
@@ -185,8 +192,12 @@ const Index = () => {
           </Row>
         </Container>
         <Container className="grid__container lower-nav__container sticky">
-          <Row className="grid__row divider thick" />
-          <Row className="grid__row lower-nav-bar pt-2 pb-10">
+          <Row className="grid__row">
+            <Col lg={12} md={12}>
+              <div className="border-t border-gray-100 opacity-75" />
+            </Col>
+          </Row>
+          <Row className="grid__row lower-nav-bar pt-2 pb-8">
             <Col md={4} className="medium-caption">
               Event
             </Col>
@@ -200,19 +211,27 @@ const Index = () => {
               Type
             </Col>
           </Row>
-          <Row className="grid__row divider thin" />
+          <Row className="grid__row">
+            <Col lg={12} md={12}>
+              <div className="border-t border-gray-100 opacity-25" />
+            </Col>
+          </Row>
         </Container>
-        <Container className="grid__container event__container sticky">
+        <Container className="grid__container event__container sticky bg-white">
           {data.events.map((event, eventIndex) => {
             return (
               <>
-                <Row className="grid__row pt-5 pb-4">
+                <Row className="grid__row pt-5 pb-12">
                   <Col md={4} className="medium-body">
                     <div>{event.title}</div>
                     <div>1989</div>
                   </Col>
                 </Row>
-                <Row className="grid__row divider thinnest mt-8" />
+                <Row className="grid__row">
+                  <Col lg={12} md={12}>
+                    <div className="border-t border-gray-100 opacity-25" />
+                  </Col>
+                </Row>
               </>
             );
           })}
