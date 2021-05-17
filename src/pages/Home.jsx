@@ -63,7 +63,7 @@ const Home = () => {
             {/* top container */}
             <div>
               <Col lg={12} md={12} sm={12} xs={12}>
-                <div className="flex justify-between items-center mb-3">
+                <div className="flex justify-between items-center mb-4">
                   <h3 className="small-headline text-white">
                     A Borrowed Place, On Borrowed Time
                   </h3>
