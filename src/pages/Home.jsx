@@ -63,7 +63,7 @@ const Home = () => {
             {/* top container */}
             <div>
               <Col lg={12} md={12} sm={12} xs={12}>
-                <div className="flex justify-between items-center mb-4">
+                <div className="flex justify-between items-center mb-2.5">
                   <h3 className="small-headline text-white">
                     A Borrowed Place, On Borrowed Time
                   </h3>
@@ -75,7 +75,7 @@ const Home = () => {
               </Col>
               <Col lg={12} md={12} sm={12} xs={12}>
                 {/* show below md breakpoint */}
-                <h3 className="small-headline-characters text-white sm:hidden block mb-5">
+                <h3 className="small-headline-characters text-white sm:hidden block pt-1 mb-5">
                   暫借的地方，暫借的時間
                 </h3>
               </Col>
