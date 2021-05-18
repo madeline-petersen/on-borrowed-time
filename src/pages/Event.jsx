@@ -1,7 +1,7 @@
 import './Event.scss';
 
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -13,6 +13,10 @@ import { useScreenClass } from 'react-grid-system';
 const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
   const screenClass = useScreenClass();
   const [isClicked, setClicked] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
