@@ -47,54 +47,56 @@ const Home = () => {
   }, 1000);
 
   return (
-    <div className="h-screen bg-black">
-      <Container className="grid__container">
-        <Row
-          className="grid__row"
-          style={{
-            margin: ['lg', 'xl', 'xxl'].includes(screenClass)
-              ? '0 -74px' // lg, xl, xxl
-              : ['md'].includes(screenClass)
-              ? '0 -64px' // md
-              : '0 -26px' // sm, xs
-          }}
-        >
-          <div className="h-screen w-full flex flex-col justify-between py-5">
-            {/* top container */}
-            <div>
-              <Col lg={12} md={12} sm={12} xs={12}>
-                <div className="flex justify-between items-center mb-2.5">
-                  <h3 className="small-headline text-white">
-                    A Borrowed Place, On Borrowed Time
-                  </h3>
-                  {/* hide below md breakpoint */}
-                  <h3 className="small-headline-characters text-white sm:block hidden">
+    <div className="absolute inset-0">
+      <div className="h-screen bg-black">
+        <Container className="grid__container">
+          <Row
+            className="grid__row"
+            style={{
+              margin: ['lg', 'xl', 'xxl'].includes(screenClass)
+                ? '0 -74px' // lg, xl, xxl
+                : ['md'].includes(screenClass)
+                ? '0 -64px' // md
+                : '0 -26px' // sm, xs
+            }}
+          >
+            <div className="h-screen w-full flex flex-col justify-between py-5">
+              {/* top container */}
+              <div>
+                <Col lg={12} md={12} sm={12} xs={12}>
+                  <div className="flex justify-between items-center mb-2.5">
+                    <h3 className="small-headline text-white">
+                      A Borrowed Place, On Borrowed Time
+                    </h3>
+                    {/* hide below md breakpoint */}
+                    <h3 className="small-headline-characters text-white sm:block hidden">
+                      暫借的地方，暫借的時間
+                    </h3>
+                  </div>
+                </Col>
+                <Col lg={12} md={12} sm={12} xs={12}>
+                  {/* show below md breakpoint */}
+                  <h3 className="small-headline-characters text-white sm:hidden block pt-1 mb-5">
                     暫借的地方，暫借的時間
                   </h3>
-                </div>
-              </Col>
-              <Col lg={12} md={12} sm={12} xs={12}>
-                {/* show below md breakpoint */}
-                <h3 className="small-headline-characters text-white sm:hidden block pt-1 mb-5">
-                  暫借的地方，暫借的時間
-                </h3>
-              </Col>
-              <Col lg={12} md={12} sm={12} xs={12}>
-                <h3 className="small-body text-white">Project coming soon</h3>
-              </Col>
-            </div>
+                </Col>
+                <Col lg={12} md={12} sm={12} xs={12}>
+                  <h3 className="small-body text-white">Project coming soon</h3>
+                </Col>
+              </div>
 
-            {/* bottom container */}
-            <div>
-              <Col lg={12} md={12} sm={12} xs={12}>
-                <h3 className="small-body text-white opacity-50">
-                  The Handover — <span id="demo" />
-                </h3>
-              </Col>
+              {/* bottom container */}
+              <div>
+                <Col lg={12} md={12} sm={12} xs={12}>
+                  <h3 className="small-body text-white opacity-50">
+                    The Handover — <span id="demo" />
+                  </h3>
+                </Col>
+              </div>
             </div>
-          </div>
-        </Row>
-      </Container>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 };
