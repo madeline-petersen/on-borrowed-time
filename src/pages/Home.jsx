@@ -78,7 +78,7 @@ const Home = () => {
             {/* top container */}
             <div>
               <Col lg={12} md={12} sm={12} xs={12}>
-                <div className="flex justify-between items-center mb-2.5">
+                <div className="flex justify-between items-center mb-2">
                   <h3 className="small-headline text-white text-fade-in">
                     A Borrowed Place,
                     <br className="md:hidden" /> On Borrowed Time
@@ -91,7 +91,7 @@ const Home = () => {
               </Col>
               <Col lg={12} md={12} sm={12} xs={12}>
                 {/* show below md breakpoint */}
-                <h3 className="small-headline-characters text-white md:hidden block pt-2.5 mb-5 text-fade-in">
+                <h3 className="small-headline-characters text-white md:hidden block pt-1 mb-4 text-fade-in">
                   暫借的地方，暫借的時間
                 </h3>
               </Col>
