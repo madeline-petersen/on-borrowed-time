@@ -65,8 +65,10 @@ const Home = () => {
         <Row
           className="grid__row"
           style={{
-            margin: ['lg', 'xl', 'xxl'].includes(screenClass)
-              ? '0 -74px' // lg, xl, xxl
+            margin: ['xl', 'xxl'].includes(screenClass)
+              ? '0 -64px' // xl, xxl
+              : ['lg'].includes(screenClass)
+              ? '0 -74px' // lg
               : ['md'].includes(screenClass)
               ? '0 -64px' // md
               : '0 -26px' // sm, xs
