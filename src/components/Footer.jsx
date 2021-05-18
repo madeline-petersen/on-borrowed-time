@@ -15,9 +15,6 @@ const Footer = ({
 }) => {
   let history = useHistory();
 
-  console.log('next', next);
-  console.log('nextParams', nextParams);
-
   const handleOnClick = () => {
     setClicked(true);
     setTimeout(function() {
