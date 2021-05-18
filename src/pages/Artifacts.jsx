@@ -1,5 +1,5 @@
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -26,6 +26,12 @@ const Artifacts = ({
   next
 }) => {
   const [isClicked, setClicked] = useState(false);
+
+  useEffect(() => {
+    setTimeout(function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 1000);
+  }, []);
 
   return (
     <>

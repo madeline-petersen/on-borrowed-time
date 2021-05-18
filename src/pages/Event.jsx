@@ -15,7 +15,9 @@ const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
   const [isClicked, setClicked] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    setTimeout(function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 1000);
   }, []);
 
   return (
