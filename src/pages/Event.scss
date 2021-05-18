@@ -1,5 +1,6 @@
 $a: 58px;
 $halfHeight: calc(50vh - #{$a});
+$quarterHeight: calc(30vh - #{$a});
 
 // Animations
 @keyframes scene-animation {
@@ -87,4 +88,8 @@ $halfHeight: calc(50vh - #{$a});
   animation-duration: 1s;
   animation-delay: 5s;
   animation-fill-mode: forwards;
+}
+
+.intro-paragraph {
+  padding-top: calc(#{$quarterHeight} - 20px);
 }

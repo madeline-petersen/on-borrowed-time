@@ -12,7 +12,7 @@ const ResourceTable = ({ data, tableState }) => {
         <Col lg={3} md={2} />
         <Col lg={9} md={10}>
           <div
-            className={`border-t border-gray-70 pb-4 ${
+            className={`border-t border-gray-60 pb-4 ${
               tableState ? 'fade-out' : null
             }`}
           />
@@ -41,7 +41,7 @@ const ResourceTable = ({ data, tableState }) => {
               </div>
             </Col>
             <Col lg={3} md={3} sm={4} xs={12} className="small-body">
-              <div className={`text-gray-40 ${tableState ? 'fade-out' : null}`}>
+              <div className={`text-gray-70 ${tableState ? 'fade-out' : null}`}>
                 {entry.source}
               </div>
             </Col>
@@ -53,8 +53,8 @@ const ResourceTable = ({ data, tableState }) => {
               className={`small-body ${tableState ? 'fade-out' : null}`}
               style={{ display: 'flex', justifyContent: 'space-between' }}
             >
-              <div className="text-gray-40">{entry.type}</div>
-              <div className="text-gray-40">{entry.year}</div>
+              <div className="text-gray-70">{entry.type}</div>
+              <div className="text-gray-70">{entry.year}</div>
             </Col>
 
             <Col lg={3} md={2} />

@@ -8,7 +8,7 @@ module.exports = {
       gray: {
         '10': '#F4F4F4',
         '20': '#E0E0E0',
-        '30': '#C6C6C6',
+        '30': '#BFBFBF', // untitled sans site
         '40': '#A8A8A8',
         '50': '#8D8D8D',
         '60': '#6F6F6F',

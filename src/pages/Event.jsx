@@ -21,35 +21,35 @@ const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
   return (
     <>
       <div className="bg-black">
-        <Container className="grid__container border-l border-gray-50">
+        <Container className="grid__container border-l border-gray-60">
           <Row className="grid__row screen-transition-animation" />
         </Container>
       </div>
 
-      <div className="h-auto bg-gray-10">
+      <div className="h-auto bg-gray-30">
         <Header
           label={`${year.id} ${year.title}`}
-          theme={{ background: 'gray-10', text: 'black' }}
+          theme={{ background: 'gray-30', text: 'black', border: 'gray-60' }}
           border={true}
           isClicked={isClicked}
         />
 
-        <Container className="grid__container border-l border-gray-50">
+        <Container className="grid__container border-l border-gray-60">
           <Row className="grid__row shrink-animation">
             <Col lg={12} md={12} sm={12} xs={12} />
           </Row>
         </Container>
 
         <SubHeader
-          theme={{ background: 'gray-10', text: 'black' }}
+          theme={{ background: 'gray-30', text: 'black', border: 'gray-60' }}
           isClicked={isClicked}
           romanSceneNumber={romanSceneNumber}
           title={scene.title}
         />
 
         {/* Event */}
-        <Container className="grid__container border-l border-gray-50">
-          <Row className={`grid__row pt-64 pb-24 delayed-fade-in`}>
+        <Container className="grid__container border-l border-gray-60">
+          <Row className={`grid__row intro-paragraph pb-24 delayed-fade-in`}>
             {event.paragraphs.map(paragraph => {
               return (
                 <>
@@ -85,7 +85,7 @@ const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
           changingParam={'page'}
           setClicked={setClicked}
           isClicked={isClicked}
-          theme={{ background: 'gray-10', text: 'black' }}
+          theme={{ background: 'gray-30', text: 'black', border: 'gray-60' }}
         />
       </div>
     </>

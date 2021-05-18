@@ -29,8 +29,8 @@ const Artifacts = ({
 
   return (
     <>
-      <div className="bg-gray-10">
-        <Container className="grid__container border-l border-gray-50">
+      <div className="bg-gray-30">
+        <Container className="grid__container border-l border-gray-80">
           <Row className="grid__row screen-transition-animation" />
         </Container>
       </div>
@@ -38,20 +38,20 @@ const Artifacts = ({
       <div className="h-auto bg-black">
         <Header
           label={`${year.id} ${year.title}`}
-          theme={{ background: 'black', text: 'gray-10' }}
+          theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
           border={true}
           isClicked={isClicked}
         />
 
         <SubHeader
-          theme={{ background: 'black', text: 'gray-10' }}
+          theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
           isClicked={isClicked}
           romanSceneNumber={romanSceneNumber}
           title={scene.title}
         />
 
         {/* Reflection */}
-        <Container className="grid__container border-l border-gray-50">
+        <Container className="grid__container border-l border-gray-80">
           {artifacts.images.length > 0 && (
             <Row className="grid__row pt-64 pb-20 foreground-fade-in">
               <Col lg={1} />
@@ -104,7 +104,7 @@ const Artifacts = ({
           changingParam={'page'}
           setClicked={setClicked}
           isClicked={isClicked}
-          theme={{ background: 'black', text: 'gray-40' }}
+          theme={{ background: 'black', text: 'gray-40', border: 'gray-80' }}
         />
       </div>
     </>

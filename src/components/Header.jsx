@@ -8,15 +8,15 @@ const Header = ({ label, theme, border, isClicked }) => {
   /**
    * PurgeCSS:
    * bg-black
-   * bg-gray-10
+   * bg-gray-30
    * text-black
-   * text-gray-10
+   * text-gray-30
    **/
 
   return (
     <Container
       className={`grid__container sticky top-0 ${
-        border ? 'border-l border-gray-50' : ''
+        border ? `border-l border-${theme.border}` : ''
       } bg-${theme.background}`}
     >
       <Row className={`grid__row pt-5 ${isClicked ? 'fade-out' : null}`}>
@@ -25,10 +25,10 @@ const Header = ({ label, theme, border, isClicked }) => {
             On Borrowed Time
           </Link>
         </Col>
-        <Col lg={8} md={3} sm={4} xs={4} className="medium-caption">
+        <Col lg={8} md={7} sm={4} xs={4} className="medium-caption">
           <Link className={`text-${theme.text}`}>{label}</Link>
         </Col>
-        <Col lg={1} md={5} sm={4} xs={4} className="medium-caption">
+        <Col lg={1} md={1} sm={4} xs={4} className="medium-caption">
           <Link to="/index" className={`text-${theme.text}`}>
             Index
           </Link>
@@ -40,7 +40,7 @@ const Header = ({ label, theme, border, isClicked }) => {
 
 Header.defaultProps = {
   label: '',
-  theme: { background: 'gray-10', text: 'black' },
+  theme: { background: 'gray-30', text: 'black', border: 'gray-60' },
   border: true,
   isClicked: false
 };

@@ -21,7 +21,7 @@ const Reflection = ({
   return (
     <>
       <div className="bg-black">
-        <Container className="grid__container border-l border-gray-50">
+        <Container className="grid__container border-l border-gray-80">
           <Row className="grid__row screen-transition-animation" />
         </Container>
       </div>
@@ -29,20 +29,20 @@ const Reflection = ({
       <div className="h-auto bg-black">
         <Header
           label={`${year.id} ${year.title}`}
-          theme={{ background: 'black', text: 'gray-10' }}
+          theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
           isClicked={isClicked}
           border={true}
         />
 
         <SubHeader
-          theme={{ background: 'black', text: 'gray-10' }}
+          theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
           isClicked={isClicked}
           romanSceneNumber={romanSceneNumber}
           title={scene.title}
         />
 
         {/* Final Reflection */}
-        <Container className="grid__container border-l border-gray-50">
+        <Container className="grid__container border-l border-gray-80">
           <Row className="grid__row foreground-fade-in pt-64 pb-40">
             {reflection.paragraphs.map((paragraph, index) => {
               if (index === 0) {
@@ -89,7 +89,7 @@ const Reflection = ({
             changingParam={changingParam}
             setClicked={setClicked}
             isClicked={isClicked}
-            theme={{ background: 'black', text: 'gray-40' }}
+            theme={{ background: 'black', text: 'gray-40', border: 'gray-80' }}
           />
         )}
       </div>

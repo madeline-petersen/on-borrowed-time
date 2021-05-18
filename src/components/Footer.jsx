@@ -26,12 +26,12 @@ const Footer = ({
   };
 
   return (
-    <Container className="grid__container border-l border-gray-50">
+    <Container className={`grid__container border-l border-${theme.border}`}>
       <Row className={`grid__row`}>
         <Col lg={1} md={1} />
         <Col lg={11} md={11}>
           <div
-            className={`border-t border-gray-60 mt-44 ${
+            className={`border-t border-${theme.border} mt-44 ${
               isClicked ? 'fade-out' : null
             }`}
           />
@@ -97,6 +97,10 @@ const Footer = ({
       </Row>
     </Container>
   );
+};
+
+Footer.defaultProps = {
+  theme: { background: 'gray-30', text: 'black', border: 'gray-60' }
 };
 
 Footer.propTypes = {
