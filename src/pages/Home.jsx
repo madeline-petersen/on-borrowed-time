@@ -80,7 +80,8 @@ const Home = () => {
               <Col lg={12} md={12} sm={12} xs={12}>
                 <div className="flex justify-between items-center mb-2.5">
                   <h3 className="small-headline text-white">
-                    A Borrowed Place, On Borrowed Time
+                    A Borrowed Place,
+                    <br className="md:hidden" /> On Borrowed Time
                   </h3>
                   {/* hide below md breakpoint */}
                   <h3 className="small-headline-characters text-white sm:block hidden">

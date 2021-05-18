@@ -18,6 +18,13 @@ module.exports = {
         '100': '#161616'
       },
       black: '#090909'
+    },
+    screens: {
+      sm: '375px',
+      md: '756px',
+      lg: '1056px',
+      xl: '1440px',
+      xxl: '1800px'
     }
   },
   variants: {
