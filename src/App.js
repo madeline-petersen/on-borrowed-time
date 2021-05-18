@@ -44,20 +44,60 @@ function Page() {
   let { yearId } = useParams();
   let { sceneId } = useParams();
   let { pageId } = useParams();
-  console.log(yearId, sceneId, pageId);
 
-  const yearIndex = data.years.findIndex(year => year.year === yearId);
+  const yearIndex = data.years.findIndex(year => year.id === yearId);
   const year = data.years[yearIndex]; // year, title
   const nextYear = data.years[yearIndex + 1];
 
   const romanSceneNumber = sceneId.split('-')[1].toUpperCase();
-  const sceneNumber = roman.parseRoman(romanSceneNumber);
-  const scene = year.scenes[sceneNumber - 1]; // title, event, artifacts, reflection
-  const nextScene = year.scenes[sceneNumber]; // title, event, artifacts, reflection
+  const sceneIndex = roman.parseRoman(romanSceneNumber) - 1;
+  const scene = year.scenes[sceneIndex]; // title, pages
+  const nextScene = year.scenes[sceneIndex + 1]; // title, pages
+  const nextRomanSceneNumber = roman.toRoman(sceneIndex + 2);
 
-  const event = scene.event; // paragraphs, resources
-  const artifacts = scene.artifacts; // array of images
-  const reflection = scene.reflection; // paragraphs
+  const pageIndex = scene.pages.findIndex(page => page.type === pageId);
+  const page = scene.pages[pageIndex];
+  const nextPage = scene.pages[pageIndex + 1];
+
+  const isLastYear = yearIndex === data.years.length - 1;
+  const isLastScene = sceneIndex === year.scenes.length - 1;
+  const isLastPage = pageIndex === scene.pages.length - 1;
+
+  const next = isLastPage
+    ? isLastScene
+      ? isLastYear
+        ? null
+        : nextYear
+      : nextScene
+    : nextPage;
+
+  const changingParam = isLastPage
+    ? isLastScene
+      ? isLastYear
+        ? null
+        : 'year'
+      : 'scene'
+    : 'page';
+
+  const nextParams = isLastPage
+    ? isLastScene
+      ? isLastYear
+        ? null
+        : {
+            year: nextYear.id, // next year
+            scene: `scene-I`,
+            page: 'event'
+          } // nextYear.id nextYear.title
+      : {
+          year: year.id,
+          scene: `scene-${nextRomanSceneNumber}`, // next scene
+          page: 'event'
+        } // scene nextScene.title
+    : {
+        year: year.id,
+        scene: `scene-${romanSceneNumber}`,
+        page: nextPage.type // next page;
+      }; // Scene {romanSceneNumber}  nextPage.title
 
   switch (pageId) {
     case 'event':
@@ -66,7 +106,9 @@ function Page() {
           year={year}
           scene={scene}
           romanSceneNumber={romanSceneNumber}
-          event={event}
+          event={page}
+          next={next}
+          nextParams={nextParams}
         />
       );
       break;
@@ -76,7 +118,9 @@ function Page() {
           year={year}
           scene={scene}
           romanSceneNumber={romanSceneNumber}
-          artifacts={artifacts}
+          artifacts={page}
+          next={next}
+          nextParams={nextParams}
         />
       );
       break;
@@ -84,11 +128,12 @@ function Page() {
       return (
         <Reflection
           year={year}
-          nextYear={nextYear}
           scene={scene}
-          nextScene={nextScene}
           romanSceneNumber={romanSceneNumber}
-          reflection={reflection}
+          reflection={page}
+          next={next}
+          nextParams={nextParams}
+          changingParam={changingParam}
         />
       );
       break;
@@ -98,7 +143,9 @@ function Page() {
           year={year}
           scene={scene}
           romanSceneNumber={romanSceneNumber}
-          event={event}
+          event={page}
+          next={next}
+          nextParams={nextParams}
         />
       );
   }

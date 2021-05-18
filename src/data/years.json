@@ -1,361 +1,456 @@
 {
   "years": [
     {
-      "year": "1989",
+      "id": "1989",
       "title": "“The June Fourth Incident”",
       "scenes": [
         {
           "title": "Death of an Icon",
-          "event": {
-            "paragraphs": [
-              "A high ranking official of the Chinese Communist Party, Hu Yaobang2 was an icon for political reform and democratic change1. His critique on Mao’s cult-like ideology differentiated from other political figures, and made him a beloved leader.",
-              "The death of Hu on April 15 1989, ignited a public outcry — mourning3, grief, and anger quickly developed into a series of student-led pro-democracy demonstrations and hunger strikes across China."
-            ],
-            "resources": [
-              {
-                "title": "A Champion of Liberalisation",
-                "source": "China's Struggle for Democracy, its Prelude, Development, Aftermath, and Impact",
-                "type": "Journal Excerpt",
-                "year": "1990"
-              },
-              {
-                "title": "The Death of Hu Yaobang",
-                "source": "Tiananman Papers",
-                "type": "Book Excerpt",
-                "year": "2001"
-              },
-              {
-                "title": "The Mourning of Hu Yaobang",
-                "source": "Tiananman Papers",
-                "type": "Book Excerpt",
-                "year": "2001"
-              },
-              {
-                "title": "Beijing Hints on Crackdown on Students",
-                "source": "New York Times",
-                "type": "Article Excerpt",
-                "year": "1989"
-              }
-            ]
-          },
-          "artifacts": [
-            {"source": "crowd", "caption": "Some two hundred thousand pro-democracy students staged an unauthorized demonstration in Tiananmen Square during the funeral ceremony of the Chinese Communist Party leader and liberal reformer Hu Yaobang, on April 22, 1989.  Photograph by Catherine Henriette/AFP/Getty."},
-            {"source": "car", "caption": "A weary protester pleads with a PLA officer sitting in his truck to not crackdown on the student demonstrators in Tiananmen Square. (Photo by Peter Turnley/Getty Images)"}
-          ],
-          "reflection": [
-            "After Hu Yaobang’s death, there was an emerging vitality to China’s pro-democracy movement. Overseas, Hong Kong citizens contributed to the movement by providing moral and material support; in the hopes that the reunification process would be smoother if liberal reforms could be achieved in China before the handover.",
-            "The inhabitants of Hong Kong usually reserve their deepest passions for business, not politics. But last week, in the largest and most emotional outburst ever seen in the British colony, more than 500,000 demonstrators marched through Hong Kong's narrow streets, waving pro-democracy banners and singing anthems like We Shall Overcome. Including the spectators who cheered and applauded, an estimated 1 million people, one-sixth of Hong Kong's populace, turned out to proclaim their support for the embattled students in China.",
-            "The unprecedented outcry reflected Hong Kong's growing anxiety over its return to China in 1997. A sleek modern city on the South China Sea, Hong Kong has become a hotbed of capitalism during 147 years of British rule. But Britain's sovereignty is set to run out under an Anglo-Chinese agreement reached in 1984. Now Hong Kong's residents, the vast majority of whom are descendants of refugees from the mainland, scrutinize the crisis in China for clues to the fate of the colony under Communist control. Declared a banner that Hong Kong students carried last week: TODAY'S CHINA IS TOMORROW'S HONG KONG. (Times, Greenwald, 1989)"
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": [
+                "A high ranking official of the Chinese Communist Party, Hu Yaobang2 was an icon for political reform and democratic change1. His critique on Mao’s cult-like ideology differentiated from other political figures, and made him a beloved leader.",
+                "The death of Hu on April 15 1989, ignited a public outcry — mourning3, grief, and anger quickly developed into a series of student-led pro-democracy demonstrations and hunger strikes across China."
+              ],
+              "resources": [
+                {
+                  "title": "A Champion of Liberalisation",
+                  "source": "China's Struggle for Democracy, its Prelude, Development, Aftermath, and Impact",
+                  "type": "Journal Excerpt",
+                  "year": "1990"
+                },
+                {
+                  "title": "The Death of Hu Yaobang",
+                  "source": "Tiananman Papers",
+                  "type": "Book Excerpt",
+                  "year": "2001"
+                },
+                {
+                  "title": "The Mourning of Hu Yaobang",
+                  "source": "Tiananman Papers",
+                  "type": "Book Excerpt",
+                  "year": "2001"
+                },
+                {
+                  "title": "Beijing Hints on Crackdown on Students",
+                  "source": "New York Times",
+                  "type": "Article Excerpt",
+                  "year": "1989"
+                }
+              ]
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "images": [
+                {"source": "crowd", "caption": "Some two hundred thousand pro-democracy students staged an unauthorized demonstration in Tiananmen Square during the funeral ceremony of the Chinese Communist Party leader and liberal reformer Hu Yaobang, on April 22, 1989.  Photograph by Catherine Henriette/AFP/Getty."},
+                {"source": "car", "caption": "A weary protester pleads with a PLA officer sitting in his truck to not crackdown on the student demonstrators in Tiananmen Square. (Photo by Peter Turnley/Getty Images)"}
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                "After Hu Yaobang’s death, there was an emerging vitality to China’s pro-democracy movement. Overseas, Hong Kong citizens contributed to the movement by providing moral and material support; in the hopes that the reunification process would be smoother if liberal reforms could be achieved in China before the handover.",
+                "The inhabitants of Hong Kong usually reserve their deepest passions for business, not politics. But last week, in the largest and most emotional outburst ever seen in the British colony, more than 500,000 demonstrators marched through Hong Kong's narrow streets, waving pro-democracy banners and singing anthems like We Shall Overcome. Including the spectators who cheered and applauded, an estimated 1 million people, one-sixth of Hong Kong's populace, turned out to proclaim their support for the embattled students in China.",
+                "The unprecedented outcry reflected Hong Kong's growing anxiety over its return to China in 1997. A sleek modern city on the South China Sea, Hong Kong has become a hotbed of capitalism during 147 years of British rule. But Britain's sovereignty is set to run out under an Anglo-Chinese agreement reached in 1984. Now Hong Kong's residents, the vast majority of whom are descendants of refugees from the mainland, scrutinize the crisis in China for clues to the fate of the colony under Communist control. Declared a banner that Hong Kong students carried last week: TODAY'S CHINA IS TOMORROW'S HONG KONG. (Times, Greenwald, 1989)"
+              ]
+            }
           ]
         },
         {
           "title": "Tiananmen Square Massacre",
-          "event": {
-            "paragraphs": [
-              "On the night of June 3-4, 1989, a series of peaceful demonstrations led by pro-democracy protesters in Beijing were violently suppressed by Chinese authorities. Known as “The June Fourth Incident”, thousands of unarmed protestors were massacred at Tiananmen Square and thousands more were arrested across cities in China.",
-              "The death of Hu Yaobang2 on April 15 1989, ignited a public outcry — mourning3, grief, and anger quickly developed into a series of student-led pro-democracy demonstrations and hunger strikes across China."
-            ],
-            "resources": [
-              {
-                "title": "&ldquo;Staying&rdquo;",
-                "source": "The People’s Republic of Amnesia",
-                "type": "Book Excerpt",
-                "year": "2014"
-              },
-              {
-                "title": "Tonight Marshall Law was Imposed",
-                "source": "Poems from Tiananmen Square",
-                "type": "Poem",
-                "year": "1989"
-              },
-              {
-                "title": "Capturing Tank Man",
-                "source": "The Documentary Impulse",
-                "type": "Book Excerpt",
-                "year": "2016"
-              },
-              {
-                "title": "Eyewitness Accounts of Massacre",
-                "source": "Asian Cha",
-                "type": "Article Excerpt",
-                "year": "1989"
-              }
-            ]
-          },
-          "artifacts": [
-            {"source": "tanks", "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier. Photo by Peter Charlesworth/LightRocket via Getty Images"}
-          ],
-          "reflection": [
-            "The Tiananmen Incident validated Hong Kong's concerns about China’s capacity to violently oppress pro-democracy movements, further cementing the region’s anxiety about its eventual handover. Since then, &ldquo;Hong Kong has become a city frightened of its future and obsessed with one date - July 1, 1997.&rdquo;",
-            "Since the Beijing massacres on June 4, Hong Kong has become a city frightened of its future and obsessed with one date - July 1, 1997, when Britain is to return its colony to China (Box, p.32). The city of almost six million is increasingly torn between those who already have a foreign passport or can obtain one, and the 60 percent or so who cannot afford to leave or are unwanted elsewhere (Scott, NYT, 1989).",
-            "In Hong Kong that Sunday, mournful defiance reigned, and by day's end, hundreds of thousands of people had poured into the streets in protest. It wasn't long, however, before protest gave way to panic and, for many, a frantic search for a way out (Box, NYT, 1989)."
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": [
+                "On the night of June 3-4, 1989, a series of peaceful demonstrations led by pro-democracy protesters in Beijing were violently suppressed by Chinese authorities. Known as “The June Fourth Incident”, thousands of unarmed protestors were massacred at Tiananmen Square and thousands more were arrested across cities in China.",
+                "The death of Hu Yaobang2 on April 15 1989, ignited a public outcry — mourning3, grief, and anger quickly developed into a series of student-led pro-democracy demonstrations and hunger strikes across China."
+              ],
+              "resources": [
+                {
+                  "title": "&ldquo;Staying&rdquo;",
+                  "source": "The People’s Republic of Amnesia",
+                  "type": "Book Excerpt",
+                  "year": "2014"
+                },
+                {
+                  "title": "Tonight Marshall Law was Imposed",
+                  "source": "Poems from Tiananmen Square",
+                  "type": "Poem",
+                  "year": "1989"
+                },
+                {
+                  "title": "Capturing Tank Man",
+                  "source": "The Documentary Impulse",
+                  "type": "Book Excerpt",
+                  "year": "2016"
+                },
+                {
+                  "title": "Eyewitness Accounts of Massacre",
+                  "source": "Asian Cha",
+                  "type": "Article Excerpt",
+                  "year": "1989"
+                }
+              ]
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "images": [
+                {"source": "tanks", "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier. Photo by Peter Charlesworth/LightRocket via Getty Images"}
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                "The Tiananmen Incident validated Hong Kong's concerns about China’s capacity to violently oppress pro-democracy movements, further cementing the region’s anxiety about its eventual handover. Since then, &ldquo;Hong Kong has become a city frightened of its future and obsessed with one date - July 1, 1997.&rdquo;",
+                "Since the Beijing massacres on June 4, Hong Kong has become a city frightened of its future and obsessed with one date - July 1, 1997, when Britain is to return its colony to China (Box, p.32). The city of almost six million is increasingly torn between those who already have a foreign passport or can obtain one, and the 60 percent or so who cannot afford to leave or are unwanted elsewhere (Scott, NYT, 1989).",
+                "In Hong Kong that Sunday, mournful defiance reigned, and by day's end, hundreds of thousands of people had poured into the streets in protest. It wasn't long, however, before protest gave way to panic and, for many, a frantic search for a way out (Box, NYT, 1989)."
+              ]
+            }
           ]
         },
         {
           "title": "A New Diasporic Condition",
-          "event": {
-            "paragraphs": [
-              "After the Tiananmen Massacre, Beijing drastically shifted its policy by taking a tougher stance on how Hong Kong would be governed after 1997. China’s tighter grip on Hong Kong made citizens fear that the mantra, “Today’s Tiananmen, Tomorrow Hong Kong” would become a reality.",
-              "At the same time, in the months following the Communist repression of the pro-democracy movement in China, Britain reaffirmed its decision not to give Hong Kong’s 3.25 million Chinese who hold British passports the right to live in Britain after the handover in 1997."
-            ],
-            "resources": [
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              }
-            ]
-          },
-          "artifacts": [
-            {"source": "candles", "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong Kong, Hong Kong. Held to mark the crackdown on the pro-democracy movement in Beijing's Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"},
-            {"source": "crowd", "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"}
-          ],
-          "reflection": [
-            "With Britain rescinding its support and China tightening its grip, Hong Kong was trapped in an shifting diasporic reality between two dominant cultures, “neither of which takes the welfare of Hong Kong people into account even though both would turn to Hong Kong for financial and other forms of assistance when they needed it”.",
-            "Now, more than four months later, Hong Kongers feel trapped between a looming Chinese motherland they cannot change and a departing imperial motherland - Britain - that is betraying them by pulling back the welcome mat from all but a select few (Scott, NYT, 1989).",
-            "In Hong Kong that Sunday, mournful defiance reigned, and by day's end, hundreds of thousands of people had poured into the streets in protest. It wasn't long, however, before protest gave way to panic and, for many, a frantic search for a way out (Rule, 1989, NYT)"
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": [
+                "After the Tiananmen Massacre, Beijing drastically shifted its policy by taking a tougher stance on how Hong Kong would be governed after 1997. China’s tighter grip on Hong Kong made citizens fear that the mantra, “Today’s Tiananmen, Tomorrow Hong Kong” would become a reality.",
+                "At the same time, in the months following the Communist repression of the pro-democracy movement in China, Britain reaffirmed its decision not to give Hong Kong’s 3.25 million Chinese who hold British passports the right to live in Britain after the handover in 1997."
+              ],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "images": [
+                {"source": "candles", "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong Kong, Hong Kong. Held to mark the crackdown on the pro-democracy movement in Beijing's Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"},
+                {"source": "crowd", "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"}
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                "With Britain rescinding its support and China tightening its grip, Hong Kong was trapped in an shifting diasporic reality between two dominant cultures, “neither of which takes the welfare of Hong Kong people into account even though both would turn to Hong Kong for financial and other forms of assistance when they needed it”.",
+                "Now, more than four months later, Hong Kongers feel trapped between a looming Chinese motherland they cannot change and a departing imperial motherland - Britain - that is betraying them by pulling back the welcome mat from all but a select few (Scott, NYT, 1989).",
+                "In Hong Kong that Sunday, mournful defiance reigned, and by day's end, hundreds of thousands of people had poured into the streets in protest. It wasn't long, however, before protest gave way to panic and, for many, a frantic search for a way out (Rule, 1989, NYT)"
+              ]
+            }
           ]
         },
         {
           "title": "Purging the Past",
-          "event": {
-            "paragraphs": [
-              "In the years following the massacre, China began interrogating the memory of Tiananmen Square by censoring the events that occurred on June 4th, 1989. The deadly suppression of protesters became an unspoken moment in China's past, purged from its history books.",
-              "Meanwhile, Hong Kong became a safe haven for democratic activists to commemorate the tragedy of the massacre, as China continued to use insidious tactics to contest the memory of Tiananmen Square."
-            ],
-            "resources": [
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              }
-            ]
-          },
-          "artifacts": [
-            {"source": "candles", "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong Kong, Hong Kong. Held to mark the crackdown on the pro-democracy movement in Beijing's Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"},
-            {"source": "crowd", "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"}
-          ],
-          "reflection": [
-            "Through manipulating its people's collective memory of the past, China reinforced a sense of national amnesia by expunging the Tiananmen Square Massacre from its history. Vigils in Hong Kong served as a reminder of the tragic episodes of violence and turmoil. Fearful of its own future, Hong Kong began to be increasingly cognisant of China's ability to exert control and to rewrite its own narrative.",
-            "&ldquo;I had left China when I was too young to know about censorship, when I was just being introduced to the written word and to the stories that written words told. It would never have occurred to me, or, perhaps, to any child, to question the history books, because that would have seemed like an interrogation of reality itself. In China, the past is never past, but it is frequently purged. The story is rewritten, the narrative reframed, the villains and the heroes recast. There is a hallucinatory quality to such a society, as if you are living a life that does not and never can fully belong to you.&rdquo; (Fan, The New Yorker, 2019)"
+          "pages": [
+            {
+              "type": "event",
+              "paragraphs": [
+                "In the years following the massacre, China began interrogating the memory of Tiananmen Square by censoring the events that occurred on June 4th, 1989. The deadly suppression of protesters became an unspoken moment in China's past, purged from its history books.",
+                "Meanwhile, Hong Kong became a safe haven for democratic activists to commemorate the tragedy of the massacre, as China continued to use insidious tactics to contest the memory of Tiananmen Square."
+              ],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "images": [
+                {"source": "candles", "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong Kong, Hong Kong. Held to mark the crackdown on the pro-democracy movement in Beijing's Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"},
+                {"source": "crowd", "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"}
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                "Through manipulating its people's collective memory of the past, China reinforced a sense of national amnesia by expunging the Tiananmen Square Massacre from its history. Vigils in Hong Kong served as a reminder of the tragic episodes of violence and turmoil. Fearful of its own future, Hong Kong began to be increasingly cognisant of China's ability to exert control and to rewrite its own narrative.",
+                "&ldquo;I had left China when I was too young to know about censorship, when I was just being introduced to the written word and to the stories that written words told. It would never have occurred to me, or, perhaps, to any child, to question the history books, because that would have seemed like an interrogation of reality itself. In China, the past is never past, but it is frequently purged. The story is rewritten, the narrative reframed, the villains and the heroes recast. There is a hallucinatory quality to such a society, as if you are living a life that does not and never can fully belong to you.&rdquo; (Fan, The New Yorker, 2019)"
+              ]
+            }
           ]
         }
       ]
     },
     {
-      "year": "1997",
+      "id": "1997",
       "title": "A New Disorientation",
       "scenes": [
         {
           "title": "Death of an Icon",
-          "event": {
-            "paragraphs": [
-              "A high ranking official of the Chinese Communist Party, Hu Yaobang2 was an icon for political reform and democratic change1. His critique on Mao’s cult-like ideology differentiated from other political figures, and made him a beloved leader.",
-              "The death of Hu on April 15 1989, ignited a public outcry — mourning3, grief, and anger quickly developed into a series of student-led pro-democracy demonstrations and hunger strikes across China."
-            ],
-            "resources": [
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              }
-            ]
-          },
-          "artifacts": [
-            {"source": "crowd", "caption": "Some two hundred thousand pro-democracy students staged an unauthorized demonstration in Tiananmen Square during the funeral ceremony of the Chinese Communist Party leader and liberal reformer Hu Yaobang, on April 22, 1989.  Photograph by Catherine Henriette/AFP/Getty."},
-            {"source": "car", "caption": "A weary protester pleads with a PLA officer sitting in his truck to not crackdown on the student demonstrators in Tiananmen Square. (Photo by Peter Turnley/Getty Images)"}
-          ],
-          "reflection": [
-            "After Hu Yaobang’s death, there was an emerging vitality to China’s pro-democracy movement. Overseas, Hong Kong citizens contributed to the movement by providing moral and material support; in the hopes that the reunification process would be smoother if liberal reforms could be achieved in China before the handover.",
-            "The inhabitants of Hong Kong usually reserve their deepest passions for business, not politics. But last week, in the largest and most emotional outburst ever seen in the British colony, more than 500,000 demonstrators marched through Hong Kong's narrow streets, waving pro-democracy banners and singing anthems like We Shall Overcome. Including the spectators who cheered and applauded, an estimated 1 million people, one-sixth of Hong Kong's populace, turned out to proclaim their support for the embattled students in China.",
-            "The unprecedented outcry reflected Hong Kong's growing anxiety over its return to China in 1997. A sleek modern city on the South China Sea, Hong Kong has become a hotbed of capitalism during 147 years of British rule. But Britain's sovereignty is set to run out under an Anglo-Chinese agreement reached in 1984. Now Hong Kong's residents, the vast majority of whom are descendants of refugees from the mainland, scrutinize the crisis in China for clues to the fate of the colony under Communist control. Declared a banner that Hong Kong students carried last week: TODAY'S CHINA IS TOMORROW'S HONG KONG. (Times, Greenwald, 1989)"
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": [
+                "A high ranking official of the Chinese Communist Party, Hu Yaobang2 was an icon for political reform and democratic change1. His critique on Mao’s cult-like ideology differentiated from other political figures, and made him a beloved leader.",
+                "The death of Hu on April 15 1989, ignited a public outcry — mourning3, grief, and anger quickly developed into a series of student-led pro-democracy demonstrations and hunger strikes across China."
+              ],
+              "resources": [
+                {
+                  "title": "A Champion of Liberalisation",
+                  "source": "China's Struggle for Democracy, its Prelude, Development, Aftermath, and Impact",
+                  "type": "Journal Excerpt",
+                  "year": "1990"
+                },
+                {
+                  "title": "The Death of Hu Yaobang",
+                  "source": "Tiananman Papers",
+                  "type": "Book Excerpt",
+                  "year": "2001"
+                },
+                {
+                  "title": "The Mourning of Hu Yaobang",
+                  "source": "Tiananman Papers",
+                  "type": "Book Excerpt",
+                  "year": "2001"
+                },
+                {
+                  "title": "Beijing Hints on Crackdown on Students",
+                  "source": "New York Times",
+                  "type": "Article Excerpt",
+                  "year": "1989"
+                }
+              ]
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "images": [
+                {"source": "crowd", "caption": "Some two hundred thousand pro-democracy students staged an unauthorized demonstration in Tiananmen Square during the funeral ceremony of the Chinese Communist Party leader and liberal reformer Hu Yaobang, on April 22, 1989.  Photograph by Catherine Henriette/AFP/Getty."},
+                {"source": "car", "caption": "A weary protester pleads with a PLA officer sitting in his truck to not crackdown on the student demonstrators in Tiananmen Square. (Photo by Peter Turnley/Getty Images)"}
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                "After Hu Yaobang’s death, there was an emerging vitality to China’s pro-democracy movement. Overseas, Hong Kong citizens contributed to the movement by providing moral and material support; in the hopes that the reunification process would be smoother if liberal reforms could be achieved in China before the handover.",
+                "The inhabitants of Hong Kong usually reserve their deepest passions for business, not politics. But last week, in the largest and most emotional outburst ever seen in the British colony, more than 500,000 demonstrators marched through Hong Kong's narrow streets, waving pro-democracy banners and singing anthems like We Shall Overcome. Including the spectators who cheered and applauded, an estimated 1 million people, one-sixth of Hong Kong's populace, turned out to proclaim their support for the embattled students in China.",
+                "The unprecedented outcry reflected Hong Kong's growing anxiety over its return to China in 1997. A sleek modern city on the South China Sea, Hong Kong has become a hotbed of capitalism during 147 years of British rule. But Britain's sovereignty is set to run out under an Anglo-Chinese agreement reached in 1984. Now Hong Kong's residents, the vast majority of whom are descendants of refugees from the mainland, scrutinize the crisis in China for clues to the fate of the colony under Communist control. Declared a banner that Hong Kong students carried last week: TODAY'S CHINA IS TOMORROW'S HONG KONG. (Times, Greenwald, 1989)"
+              ]
+            }
           ]
         },
         {
           "title": "Tiananmen Square Massacre",
-          "event": {
-            "paragraphs": [
-              "On the night of June 3-4, 1989, a series of peaceful demonstrations led by pro-democracy protesters in Beijing were violently suppressed by Chinese authorities. Known as “The June Fourth Incident”, thousands of unarmed protestors were massacred at Tiananmen Square and thousands more were arrested across cities in China.",
-              "The death of Hu Yaobang2 on April 15 1989, ignited a public outcry — mourning3, grief, and anger quickly developed into a series of student-led pro-democracy demonstrations and hunger strikes across China."
-            ],
-            "resources": [
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              }
-            ]
-          },
-          "artifacts": [
-            {"source": "tanks", "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier. Photo by Peter Charlesworth/LightRocket via Getty Images"}
-          ],
-          "reflection": [
-            "The Tiananmen Incident validated Hong Kong's concerns about China’s capacity to violently oppress pro-democracy movements, further cementing the region’s anxiety about its eventual handover. Since then, &ldquo;Hong Kong has become a city frightened of its future and obsessed with one date - July 1, 1997.&rdquo;",
-            "Since the Beijing massacres on June 4, Hong Kong has become a city frightened of its future and obsessed with one date - July 1, 1997, when Britain is to return its colony to China (Box, p.32). The city of almost six million is increasingly torn between those who already have a foreign passport or can obtain one, and the 60 percent or so who cannot afford to leave or are unwanted elsewhere (Scott, NYT, 1989).",
-            "In Hong Kong that Sunday, mournful defiance reigned, and by day's end, hundreds of thousands of people had poured into the streets in protest. It wasn't long, however, before protest gave way to panic and, for many, a frantic search for a way out (Box, NYT, 1989)."
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": [
+                "On the night of June 3-4, 1989, a series of peaceful demonstrations led by pro-democracy protesters in Beijing were violently suppressed by Chinese authorities. Known as “The June Fourth Incident”, thousands of unarmed protestors were massacred at Tiananmen Square and thousands more were arrested across cities in China.",
+                "The death of Hu Yaobang2 on April 15 1989, ignited a public outcry — mourning3, grief, and anger quickly developed into a series of student-led pro-democracy demonstrations and hunger strikes across China."
+              ],
+              "resources": [
+                {
+                  "title": "&ldquo;Staying&rdquo;",
+                  "source": "The People’s Republic of Amnesia",
+                  "type": "Book Excerpt",
+                  "year": "2014"
+                },
+                {
+                  "title": "Tonight Marshall Law was Imposed",
+                  "source": "Poems from Tiananmen Square",
+                  "type": "Poem",
+                  "year": "1989"
+                },
+                {
+                  "title": "Capturing Tank Man",
+                  "source": "The Documentary Impulse",
+                  "type": "Book Excerpt",
+                  "year": "2016"
+                },
+                {
+                  "title": "Eyewitness Accounts of Massacre",
+                  "source": "Asian Cha",
+                  "type": "Article Excerpt",
+                  "year": "1989"
+                }
+              ]
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "images": [
+                {"source": "tanks", "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier. Photo by Peter Charlesworth/LightRocket via Getty Images"}
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                "The Tiananmen Incident validated Hong Kong's concerns about China’s capacity to violently oppress pro-democracy movements, further cementing the region’s anxiety about its eventual handover. Since then, &ldquo;Hong Kong has become a city frightened of its future and obsessed with one date - July 1, 1997.&rdquo;",
+                "Since the Beijing massacres on June 4, Hong Kong has become a city frightened of its future and obsessed with one date - July 1, 1997, when Britain is to return its colony to China (Box, p.32). The city of almost six million is increasingly torn between those who already have a foreign passport or can obtain one, and the 60 percent or so who cannot afford to leave or are unwanted elsewhere (Scott, NYT, 1989).",
+                "In Hong Kong that Sunday, mournful defiance reigned, and by day's end, hundreds of thousands of people had poured into the streets in protest. It wasn't long, however, before protest gave way to panic and, for many, a frantic search for a way out (Box, NYT, 1989)."
+              ]
+            }
           ]
         },
         {
           "title": "A New Diasporic Condition",
-          "event": {
-            "paragraphs": [
-              "After the Tiananmen Massacre, Beijing drastically shifted its policy by taking a tougher stance on how Hong Kong would be governed after 1997. China’s tighter grip on Hong Kong made citizens fear that the mantra, “Today’s Tiananmen, Tomorrow Hong Kong” would become a reality.",
-              "At the same time, in the months following the Communist repression of the pro-democracy movement in China, Britain reaffirmed its decision not to give Hong Kong’s 3.25 million Chinese who hold British passports the right to live in Britain after the handover in 1997."
-            ],
-            "resources": [
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              }
-            ]
-          },
-          "artifacts": [
-            {"source": "candles", "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong Kong, Hong Kong. Held to mark the crackdown on the pro-democracy movement in Beijing's Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"},
-            {"source": "crowd", "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"}
-          ],
-          "reflection": [
-            "With Britain rescinding its support and China tightening its grip, Hong Kong was trapped in an shifting diasporic reality between two dominant cultures, “neither of which takes the welfare of Hong Kong people into account even though both would turn to Hong Kong for financial and other forms of assistance when they needed it”.",
-            "Now, more than four months later, Hong Kongers feel trapped between a looming Chinese motherland they cannot change and a departing imperial motherland - Britain - that is betraying them by pulling back the welcome mat from all but a select few (Scott, NYT, 1989).",
-            "In Hong Kong that Sunday, mournful defiance reigned, and by day's end, hundreds of thousands of people had poured into the streets in protest. It wasn't long, however, before protest gave way to panic and, for many, a frantic search for a way out (Rule, 1989, NYT)"
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": [
+                "After the Tiananmen Massacre, Beijing drastically shifted its policy by taking a tougher stance on how Hong Kong would be governed after 1997. China’s tighter grip on Hong Kong made citizens fear that the mantra, “Today’s Tiananmen, Tomorrow Hong Kong” would become a reality.",
+                "At the same time, in the months following the Communist repression of the pro-democracy movement in China, Britain reaffirmed its decision not to give Hong Kong’s 3.25 million Chinese who hold British passports the right to live in Britain after the handover in 1997."
+              ],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "images": [
+                {"source": "candles", "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong Kong, Hong Kong. Held to mark the crackdown on the pro-democracy movement in Beijing's Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"},
+                {"source": "crowd", "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"}
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                "With Britain rescinding its support and China tightening its grip, Hong Kong was trapped in an shifting diasporic reality between two dominant cultures, “neither of which takes the welfare of Hong Kong people into account even though both would turn to Hong Kong for financial and other forms of assistance when they needed it”.",
+                "Now, more than four months later, Hong Kongers feel trapped between a looming Chinese motherland they cannot change and a departing imperial motherland - Britain - that is betraying them by pulling back the welcome mat from all but a select few (Scott, NYT, 1989).",
+                "In Hong Kong that Sunday, mournful defiance reigned, and by day's end, hundreds of thousands of people had poured into the streets in protest. It wasn't long, however, before protest gave way to panic and, for many, a frantic search for a way out (Rule, 1989, NYT)"
+              ]
+            }
           ]
         },
         {
           "title": "Purging the Past",
-          "event": {
-            "paragraphs": [
-              "In the years following the massacre, China began interrogating the memory of Tiananmen Square by censoring the events that occurred on June 4th, 1989. The deadly suppression of protesters became an unspoken moment in China's past, purged from its history books.",
-              "Meanwhile, Hong Kong became a safe haven for democratic activists to commemorate the tragedy of the massacre, as China continued to use insidious tactics to contest the memory of Tiananmen Square."
-            ],
-            "resources": [
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              },
-              {
-                "title": "",
-                "source": "",
-                "type": "",
-                "year": ""
-              }
-            ]
-          },
-          "artifacts": [
-            {"source": "candles", "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong Kong, Hong Kong. Held to mark the crackdown on the pro-democracy movement in Beijing's Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"},
-            {"source": "crowd", "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"}
-          ],
-          "reflection": [
-            "Through manipulating its people's collective memory of the past, China reinforced a sense of national amnesia by expunging the Tiananmen Square Massacre from its history. Vigils in Hong Kong served as a reminder of the tragic episodes of violence and turmoil. Fearful of its own future, Hong Kong began to be increasingly cognisant of China's ability to exert control and to rewrite its own narrative.",
-            "&ldquo;I had left China when I was too young to know about censorship, when I was just being introduced to the written word and to the stories that written words told. It would never have occurred to me, or, perhaps, to any child, to question the history books, because that would have seemed like an interrogation of reality itself. In China, the past is never past, but it is frequently purged. The story is rewritten, the narrative reframed, the villains and the heroes recast. There is a hallucinatory quality to such a society, as if you are living a life that does not and never can fully belong to you.&rdquo; (Fan, The New Yorker, 2019)"
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": [
+                "In the years following the massacre, China began interrogating the memory of Tiananmen Square by censoring the events that occurred on June 4th, 1989. The deadly suppression of protesters became an unspoken moment in China's past, purged from its history books.",
+                "Meanwhile, Hong Kong became a safe haven for democratic activists to commemorate the tragedy of the massacre, as China continued to use insidious tactics to contest the memory of Tiananmen Square."
+              ],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "images": [
+                {"source": "candles", "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong Kong, Hong Kong. Held to mark the crackdown on the pro-democracy movement in Beijing's Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"},
+                {"source": "crowd", "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"}
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                "Through manipulating its people's collective memory of the past, China reinforced a sense of national amnesia by expunging the Tiananmen Square Massacre from its history. Vigils in Hong Kong served as a reminder of the tragic episodes of violence and turmoil. Fearful of its own future, Hong Kong began to be increasingly cognisant of China's ability to exert control and to rewrite its own narrative.",
+                "&ldquo;I had left China when I was too young to know about censorship, when I was just being introduced to the written word and to the stories that written words told. It would never have occurred to me, or, perhaps, to any child, to question the history books, because that would have seemed like an interrogation of reality itself. In China, the past is never past, but it is frequently purged. The story is rewritten, the narrative reframed, the villains and the heroes recast. There is a hallucinatory quality to such a society, as if you are living a life that does not and never can fully belong to you.&rdquo; (Fan, The New Yorker, 2019)"
+              ]
+            }
           ]
         }
       ]

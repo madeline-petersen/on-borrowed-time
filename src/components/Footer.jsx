@@ -8,20 +8,23 @@ import { useHistory } from 'react-router-dom';
 const Footer = ({
   isClicked,
   setClicked,
-  pushTo,
-  upNext,
-  romanSceneNumber,
-  nextYear,
-  isLastScene,
+  nextParams,
+  changingParam,
+  next,
   theme
 }) => {
   let history = useHistory();
+
+  console.log('next', next);
+  console.log('nextParams', nextParams);
 
   const handleOnClick = () => {
     setClicked(true);
     setTimeout(function() {
       // executed after 1 second
-      history.push(pushTo);
+      history.push(
+        `/${nextParams.year}/${nextParams.scene}/${nextParams.page}`
+      );
     }, 1000);
   };
 
@@ -37,12 +40,13 @@ const Footer = ({
           />
         </Col>
       </Row>
-      <Row className={`grid__row bg-${theme.background}`}>
+      <Row
+        className={`grid__row bg-${theme.background}`}
+        onClick={() => handleOnClick()}
+      >
         <Col lg={1} md={1} />
         <div
-          to="/artifacts"
           className={`contents ${isClicked ? 'fade-out' : 'cursor-pointer'}`}
-          onClick={() => handleOnClick()}
         >
           <Col lg={2} md={2} sm={2} xs={2}>
             <p
@@ -59,7 +63,14 @@ const Footer = ({
                 isClicked ? 'fade-out' : null
               }`}
             >
-              {isLastScene ? nextYear.year : `Scene ${romanSceneNumber}`}
+              {/* current scene, next scene, next year */}
+              {changingParam === 'year'
+                ? nextParams.year
+                : nextParams.scene
+                    .replace(/-/g, ' ')
+                    .charAt(0)
+                    .toUpperCase() +
+                  nextParams.scene.replace(/-/g, ' ').slice(1)}
             </p>
           </Col>
           <Col
@@ -74,7 +85,8 @@ const Footer = ({
                 isClicked ? 'fade-out' : null
               }`}
             >
-              {isLastScene ? nextYear.title : upNext}
+              {/* next page, next scene, next year */}
+              {next.title}
             </p>
             <p
               className={`pb-4 pt-4 text-${theme.text} ${
@@ -91,14 +103,12 @@ const Footer = ({
 };
 
 Footer.propTypes = {
-  pushTo: PropTypes.string,
-  upNext: PropTypes.string,
-  romanSceneNumber: PropTypes.string,
-  nextYear: PropTypes.shape(),
-  isLastScene: PropTypes.bool,
+  nextParams: PropTypes.string,
+  next: PropTypes.shape(),
   setClicked: PropTypes.func,
   isClicked: PropTypes.bool,
-  theme: PropTypes.shape()
+  theme: PropTypes.shape(),
+  changingParam: PropTypes.string
 };
 
 export default Footer;

@@ -6,30 +6,17 @@ import Header from '../components/Header';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import SubHeader from '../components/SubHeader';
-import { roman } from '@sguest/roman-js';
 
 const Reflection = ({
   year,
-  nextYear,
   scene,
-  nextScene,
   romanSceneNumber,
-  reflection
+  reflection,
+  nextParams,
+  changingParam,
+  next
 }) => {
   const [isClicked, setClicked] = useState(false);
-  const sceneNumber = roman.parseRoman(romanSceneNumber);
-  const isLastScene = () => {
-    return sceneNumber < year.scenes.length ? false : true;
-  };
-
-  let nextRomanSceneNumber = isLastScene()
-    ? 'I'
-    : roman.toRoman(sceneNumber + 1);
-
-  let nextUrl =
-    isLastScene() && nextYear
-      ? `/${nextYear.year}/scene-I/event`
-      : `/${year.year}/scene-${nextRomanSceneNumber}/event`;
 
   return (
     <>
@@ -41,7 +28,7 @@ const Reflection = ({
 
       <div className="h-auto bg-black">
         <Header
-          label={`${year.year} ${year.title}`}
+          label={`${year.id} ${year.title}`}
           theme={{ background: 'black', text: 'gray-10' }}
           isClicked={isClicked}
           border={true}
@@ -57,7 +44,7 @@ const Reflection = ({
         {/* Final Reflection */}
         <Container className="grid__container border-l border-gray-50">
           <Row className="grid__row foreground-fade-in pt-64 pb-40">
-            {reflection.map((paragraph, index) => {
+            {reflection.paragraphs.map((paragraph, index) => {
               if (index === 0) {
                 return (
                   <>
@@ -95,17 +82,13 @@ const Reflection = ({
           </Row>
         </Container>
 
-        {/* unless last scene and last year */}
-        {/* display footer */}
-        {!(isLastScene() && !nextYear) && (
+        {next && (
           <Footer
-            pushTo={nextUrl}
-            upNext={!isLastScene() && nextScene.title}
-            romanSceneNumber={nextRomanSceneNumber}
-            nextYear={nextYear}
+            nextParams={nextParams}
+            next={next}
+            changingParam={changingParam}
             setClicked={setClicked}
             isClicked={isClicked}
-            isLastScene={isLastScene()}
             theme={{ background: 'black', text: 'gray-40' }}
           />
         )}
@@ -116,11 +99,12 @@ const Reflection = ({
 
 Reflection.propTypes = {
   year: PropTypes.shape(),
-  nextYear: PropTypes.shape(),
   scene: PropTypes.shape(),
-  nextScene: PropTypes.shape(),
   romanSceneNumber: PropTypes.string,
-  reflection: PropTypes.shape()
+  reflection: PropTypes.shape(),
+  next: PropTypes.shape(),
+  nextParams: PropTypes.string,
+  changingParam: PropTypes.string
 };
 
 export default Reflection;

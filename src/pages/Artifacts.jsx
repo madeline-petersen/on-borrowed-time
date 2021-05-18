@@ -17,7 +17,14 @@ const imageLookup = {
   candles: candles
 };
 
-const Artifacts = ({ year, scene, romanSceneNumber, artifacts }) => {
+const Artifacts = ({
+  year,
+  scene,
+  romanSceneNumber,
+  artifacts,
+  nextParams,
+  next
+}) => {
   const [isClicked, setClicked] = useState(false);
 
   return (
@@ -30,7 +37,7 @@ const Artifacts = ({ year, scene, romanSceneNumber, artifacts }) => {
 
       <div className="h-auto bg-black">
         <Header
-          label={`${year.year} ${year.title}`}
+          label={`${year.id} ${year.title}`}
           theme={{ background: 'black', text: 'gray-10' }}
           border={true}
           isClicked={isClicked}
@@ -45,12 +52,12 @@ const Artifacts = ({ year, scene, romanSceneNumber, artifacts }) => {
 
         {/* Reflection */}
         <Container className="grid__container border-l border-gray-50">
-          {artifacts.length > 0 && (
+          {artifacts.images.length > 0 && (
             <Row className="grid__row pt-64 pb-20 foreground-fade-in">
               <Col lg={1} />
               <Col lg={11} md={12}>
                 <img
-                  src={imageLookup[artifacts[0].source]}
+                  src={imageLookup[artifacts.images[0].source]}
                   alt=""
                   className={isClicked ? 'fade-out' : null}
                 />
@@ -62,7 +69,7 @@ const Artifacts = ({ year, scene, romanSceneNumber, artifacts }) => {
                     isClicked ? 'fade-out' : null
                   }`}
                 >
-                  {artifacts[0].caption}
+                  {artifacts.images[0].caption}
                 </p>
               </Col>
             </Row>
@@ -84,7 +91,7 @@ const Artifacts = ({ year, scene, romanSceneNumber, artifacts }) => {
                     isClicked ? 'fade-out' : null
                   }`}
                 >
-                  {artifacts[1].caption}
+                  {artifacts.images[1].caption}
                 </p>
               </Col>
             </Row>
@@ -92,9 +99,9 @@ const Artifacts = ({ year, scene, romanSceneNumber, artifacts }) => {
         </Container>
 
         <Footer
-          pushTo="reflection"
-          upNext="Reflection"
-          romanSceneNumber={romanSceneNumber}
+          nextParams={nextParams}
+          next={next}
+          changingParam={'page'}
           setClicked={setClicked}
           isClicked={isClicked}
           theme={{ background: 'black', text: 'gray-40' }}
@@ -108,7 +115,9 @@ Artifacts.propTypes = {
   year: PropTypes.shape(),
   scene: PropTypes.shape(),
   romanSceneNumber: PropTypes.string,
-  artifacts: PropTypes.shape()
+  artifacts: PropTypes.shape(),
+  next: PropTypes.shape(),
+  nextParams: PropTypes.string
 };
 
 export default Artifacts;
