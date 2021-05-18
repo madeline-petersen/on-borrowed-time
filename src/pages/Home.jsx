@@ -84,7 +84,7 @@ const Home = () => {
                     <br className="md:hidden" /> On Borrowed Time
                   </h3>
                   {/* hide below md breakpoint */}
-                  <h3 className="small-headline-characters text-white md:block hidden">
+                  <h3 className="medium-headline-characters text-white md:block hidden">
                     暫借的地方，暫借的時間
                   </h3>
                 </div>
@@ -96,7 +96,9 @@ const Home = () => {
                 </h3>
               </Col>
               <Col lg={12} md={12} sm={12} xs={12}>
-                <h3 className="small-body text-white">Project coming soon</h3>
+                <h3 className="small-body text-white opacity-50">
+                  Project coming soon
+                </h3>
               </Col>
             </div>
 

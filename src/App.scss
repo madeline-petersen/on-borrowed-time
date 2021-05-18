@@ -60,11 +60,19 @@ a {
   letter-spacing: -0.2px;
 }
 
-.small-headline-characters {
+.medium-headline-characters {
   font-family: NotoSerifJP-SemiBold;
   font-style: normal;
   font-weight: 600;
   font-size: 21px;
+  line-height: 120%;
+}
+
+.small-headline-characters {
+  font-family: NotoSerifJP-SemiBold;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
   line-height: 120%;
 }
 
