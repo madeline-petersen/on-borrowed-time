@@ -91,7 +91,7 @@ const Home = () => {
               </Col>
               <Col lg={12} md={12} sm={12} xs={12}>
                 {/* show below md breakpoint */}
-                <h3 className="small-headline-characters text-white md:hidden block pt-1 mb-5 text-fade-in">
+                <h3 className="small-headline-characters text-white md:hidden block pt-2.5 mb-5 text-fade-in">
                   暫借的地方，暫借的時間
                 </h3>
               </Col>
