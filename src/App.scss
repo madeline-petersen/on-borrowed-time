@@ -14,8 +14,8 @@
 }
 
 @font-face {
-  font-family: NotoSerifJP-SemiBold;
-  src: url('./NotoSerifJP-SemiBold.otf') format('opentype');
+  font-family: NotoSerifJP-Regular;
+  src: url('./NotoSerifJP-Regular.otf') format('opentype');
   font-display: block;
 }
 
@@ -61,19 +61,27 @@ a {
   letter-spacing: -0.2px;
 }
 
-.medium-headline-characters {
-  font-family: NotoSerifJP-SemiBold;
+.mobile-headline {
+  font-family: LyonText;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
   font-style: normal;
-  font-weight: 600;
-  font-size: 21px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.headline-characters {
+  font-family: NotoSerifJP-Regular;
+  font-style: normal;
+  font-size: 24px;
   line-height: 120%;
 }
 
-.small-headline-characters {
-  font-family: NotoSerifJP-SemiBold;
+.mobile-characters {
+  font-family: NotoSerifJP-Regular;
   font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 120%;
 }
 

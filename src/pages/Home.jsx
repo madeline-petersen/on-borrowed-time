@@ -60,59 +60,41 @@ const Home = () => {
   }, 1000);
 
   return (
-    <div className="my-element bg-black">
-      <Container className="grid__container">
-        <Row
-          className="grid__row"
-          style={{
-            margin: ['xl', 'xxl'].includes(screenClass)
-              ? '0 -64px' // xl, xxl
-              : ['lg'].includes(screenClass)
-              ? '0 -74px' // lg
-              : ['md'].includes(screenClass)
-              ? '0 -64px' // md
-              : '0 -26px' // sm, xs
-          }}
-        >
-          <div className="my-element w-full flex flex-col justify-between py-5">
-            {/* top container */}
-            <div>
-              <Col lg={12} md={12} sm={12} xs={12}>
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="small-headline text-white text-fade-in">
-                    A Borrowed Place,
-                    <br className="md:hidden" /> On Borrowed Time
-                  </h3>
-                  {/* hide below md breakpoint */}
-                  <h3 className="medium-headline-characters text-white md:block hidden text-fade-in">
-                    暫借的地方，暫借的時間
-                  </h3>
-                </div>
-              </Col>
-              <Col lg={12} md={12} sm={12} xs={12}>
-                {/* show below md breakpoint */}
-                <h3 className="small-headline-characters text-white md:hidden block pt-1 mb-4 text-fade-in">
-                  暫借的地方，暫借的時間
-                </h3>
-              </Col>
-              <Col lg={12} md={12} sm={12} xs={12}>
-                <h3 className="small-body text-gray-60 text-fade-in">
-                  Anthology coming soon
-                </h3>
-              </Col>
-            </div>
+    <div className="screen-height bg-black w-full flex flex-col justify-between p-4 md:p-5">
+      {/* top container */}
+      <div>
+        <div className="flex justify-between items-center lg:mb-2 md:mb-1">
+          <h3
+            className={`hidden md:block small-headline text-white text-fade-in`}
+          >
+            A Borrowed Place, On Borrowed Time
+          </h3>
+          <h3
+            className={`block md:hidden mobile-headline text-white text-fade-in mb-1`}
+          >
+            A Borrowed Place, On Borrowed Time
+          </h3>
 
-            {/* bottom container */}
-            <div>
-              <Col lg={12} md={12} sm={12} xs={12}>
-                <h3 className="small-body text-gray-60 text-fade-in">
-                  The Handover — <span id="demo" />
-                </h3>
-              </Col>
-            </div>
-          </div>
-        </Row>
-      </Container>
+          {/* hide below md breakpoint */}
+          <h3 className="headline-characters text-white md:block hidden text-fade-in">
+            暫借的地方, 暫借的時間
+          </h3>
+        </div>
+
+        {/* show below md breakpoint */}
+        <h3 className="mobile-characters text-white md:hidden mb-3.5 pb-px block text-fade-in">
+          暫借的地方, 暫借的時間
+        </h3>
+
+        <h3 className="small-body text-gray-60 text-fade-in">
+          Anthology coming soon
+        </h3>
+      </div>
+
+      {/* bottom container */}
+      <h3 className="small-body text-gray-60 text-fade-in">
+        The Handover — <span id="demo" />
+      </h3>
     </div>
   );
 };
