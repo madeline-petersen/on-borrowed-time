@@ -108,7 +108,7 @@ const Home = () => {
 
       {/* bottom container */}
       <h3 className="small-body text-gray-60 text-fade-in">
-        The Handover — <span id="demo" />
+        The Expiry — <span id="demo" />
       </h3>
     </div>
   );
