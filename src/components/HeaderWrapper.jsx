@@ -1,48 +1,32 @@
-import { Col, Container, Row } from 'react-grid-system';
+import { Container, Row } from 'react-grid-system';
+import React, { useEffect } from 'react';
 
-import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 import PropTypes from 'prop-types';
-import React from 'react';
 
-const HeaderWrapper = ({ label, theme, border, isClicked, children }) => {
-  /**
-   * PurgeCSS:
-   * bg-black
-   * bg-gray-30
-   * text-black
-   * text-gray-30
-   **/
+const HeaderWrapper = ({ year, theme, prevTheme, children }) => {
+  useEffect(() => {
+    setTimeout(function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 1000);
+  }, []);
 
   return (
     <>
-      <div className="bg-black">
-        <Container className="grid__container border-l border-gray-60">
+      <div className={`bg-${prevTheme.background}`}>
+        <Container
+          className={`grid__container border-l border-${prevTheme.border}`}
+        >
           <Row className="grid__row screen-transition-animation" />
         </Container>
       </div>
 
-      <div className="h-auto bg-gray-30">
-        <Container
-          className={`grid__container sticky top-0 ${
-            border ? `border-l border-${theme.border}` : ''
-          } bg-${theme.background}`}
-        >
-          <Row className={`grid__row pt-5 ${isClicked ? 'fade-out' : null}`}>
-            <Col lg={3} md={4} sm={4} xs={4} className="medium-caption">
-              <Link to="/" className={`text-${theme.text}`}>
-                On Borrowed Time
-              </Link>
-            </Col>
-            <Col lg={8} md={7} sm={4} xs={4} className="medium-caption">
-              <Link className={`text-${theme.text}`}>{label}</Link>
-            </Col>
-            <Col lg={1} md={1} sm={4} xs={4} className="medium-caption">
-              <Link to="/index" className={`text-${theme.text}`}>
-                Index
-              </Link>
-            </Col>
-          </Row>
-        </Container>
+      <div className={`h-auto bg-${theme.background}`}>
+        <Header
+          label={`${year.id} ${year.title}`}
+          theme={theme}
+          border={true}
+        />
 
         {children}
       </div>
@@ -51,17 +35,30 @@ const HeaderWrapper = ({ label, theme, border, isClicked, children }) => {
 };
 
 HeaderWrapper.defaultProps = {
-  label: '',
-  theme: { background: 'gray-30', text: 'black', border: 'gray-60' },
-  border: true,
-  isClicked: false
+  theme: {
+    background: 'gray-30',
+    text: 'black',
+    border: 'gray-60'
+  },
+  prevTheme: {
+    background: 'black',
+    text: 'gray-30',
+    border: 'gray-80'
+  }
 };
 
 HeaderWrapper.propTypes = {
-  label: PropTypes.string,
-  theme: PropTypes.shape(),
-  border: PropTypes.bool,
-  isClicked: PropTypes.bool,
+  year: PropTypes.shape(),
+  theme: PropTypes.shape({
+    background: PropTypes.string,
+    text: PropTypes.string,
+    border: PropTypes.string
+  }),
+  prevTheme: PropTypes.shape({
+    background: PropTypes.string,
+    text: PropTypes.string,
+    border: PropTypes.string
+  }),
   children: PropTypes.node
 };
 

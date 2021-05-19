@@ -10,6 +10,7 @@ import {
 import Artifacts from './pages/Artifacts.jsx';
 import Event from './pages/Event.jsx';
 import GridHelper from './helpers/GridHelper.jsx';
+import HeaderWrapper from './components/HeaderWrapper.jsx';
 import Home from './pages/Home.jsx';
 import Index from './pages/Index.jsx';
 import React from 'react';
@@ -102,14 +103,16 @@ function Page() {
   switch (pageId) {
     case 'event':
       return (
-        <Event
-          year={year}
-          scene={scene}
-          romanSceneNumber={romanSceneNumber}
-          event={page}
-          next={next}
-          nextParams={nextParams}
-        />
+        <HeaderWrapper year={year}>
+          <Event
+            year={year}
+            scene={scene}
+            romanSceneNumber={romanSceneNumber}
+            event={page}
+            next={next}
+            nextParams={nextParams}
+          />
+        </HeaderWrapper>
       );
       break;
     case 'artifacts':
