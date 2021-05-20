@@ -20,15 +20,33 @@ const Header = ({ label, theme, border, isClicked }) => {
       } bg-${theme.background}`}
     >
       <Row className={`grid__row pt-5 ${isClicked ? 'fade-out' : null}`}>
-        <Col lg={3} md={4} sm={4} xs={4} className="medium-caption">
+        <Col
+          lg={3}
+          md={4}
+          sm={4}
+          xs={4}
+          className="medium-caption foreground-fade-in"
+        >
           <Link to="/" className={`text-${theme.text}`}>
             On Borrowed Time
           </Link>
         </Col>
-        <Col lg={8} md={7} sm={4} xs={4} className="medium-caption">
+        <Col
+          lg={8}
+          md={7}
+          sm={4}
+          xs={4}
+          className="medium-caption foreground-fade-in"
+        >
           <Link className={`text-${theme.text}`}>{label}</Link>
         </Col>
-        <Col lg={1} md={1} sm={4} xs={4} className="medium-caption">
+        <Col
+          lg={1}
+          md={1}
+          sm={4}
+          xs={4}
+          className="medium-caption foreground-fade-in"
+        >
           <Link to="/index" className={`text-${theme.text}`}>
             Index
           </Link>
