@@ -1,7 +1,5 @@
 import './Home.scss';
 
-import { Col, Container, Row } from 'react-grid-system';
-
 import React from 'react';
 import onborrowedtime from '../images/onborrowedtime.jpg';
 import { useScreenClass } from 'react-grid-system';

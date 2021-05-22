@@ -1,4 +1,4 @@
-import { Col, Container, Row } from 'react-grid-system';
+import { Col, Row } from 'react-grid-system';
 
 import { ArrowDown16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
@@ -40,38 +40,35 @@ const Footer = ({
         onClick={() => handleOnClick()}
       >
         <Col lg={1} md={1} className="cursor-default" />
-        <div className={`contents`}>
-          <Col lg={2} md={2} sm={2} xs={2}>
-            <p className={`small-body pb-4 pt-4 text-${theme.text}`}>Up Next</p>
-          </Col>
-          <Col lg={2} md={2} sm={2} xs={2}>
-            <p className={`small-body pb-4 pt-4 text-${theme.text}`}>
-              {/* current scene, next scene, next year */}
-              {changingParam === 'year'
-                ? nextParams.year
-                : nextParams.scene
-                    .replace(/-/g, ' ')
-                    .charAt(0)
-                    .toUpperCase() +
-                  nextParams.scene.replace(/-/g, ' ').slice(1)}
-            </p>
-          </Col>
-          <Col
-            lg={7}
-            md={7}
-            sm={7}
-            xs={7}
-            style={{ display: 'flex', justifyContent: 'space-between' }}
-          >
-            <p className={`small-body pb-4 pt-4 text-${theme.text}`}>
-              {/* next page, next scene, next year */}
-              {next.title}
-            </p>
-            <p className={`pb-4 pt-4 text-${theme.text}`}>
-              <ArrowDown16 />
-            </p>
-          </Col>
-        </div>
+        <Col lg={2} md={2} sm={2} xs={2}>
+          <p className={`small-body pb-4 pt-4 contrast-text`}>Up Next</p>
+        </Col>
+        <Col lg={2} md={2} sm={2} xs={2}>
+          <p className={`small-body pb-4 pt-4 contrast-text`}>
+            {/* current scene, next scene, next year */}
+            {changingParam === 'year'
+              ? nextParams.year
+              : nextParams.scene
+                  .replace(/-/g, ' ')
+                  .charAt(0)
+                  .toUpperCase() + nextParams.scene.replace(/-/g, ' ').slice(1)}
+          </p>
+        </Col>
+        <Col
+          lg={7}
+          md={7}
+          sm={7}
+          xs={7}
+          style={{ display: 'flex', justifyContent: 'space-between' }}
+        >
+          <p className={`small-body pb-4 pt-4 contrast-text`}>
+            {/* next page, next scene, next year */}
+            {next.title}
+          </p>
+          <p className={`pb-4 pt-4 contrast-text`}>
+            <ArrowDown16 />
+          </p>
+        </Col>
       </Row>
     </>
   );

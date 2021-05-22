@@ -1,18 +1,10 @@
-import { Col, Container, Row } from 'react-grid-system';
+import { Col, Row } from 'react-grid-system';
 
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Header = ({ label, theme }) => {
-  /**
-   * PurgeCSS:
-   * bg-black
-   * bg-gray-30
-   * text-black
-   * text-gray-30
-   **/
-
+const Header = ({ label }) => {
   return (
     <Row className={`grid__row pt-5`}>
       <Col lg={3} md={4} sm={4} xs={4} className="medium-caption">
@@ -33,13 +25,11 @@ const Header = ({ label, theme }) => {
 };
 
 Header.defaultProps = {
-  label: '',
-  theme: { border: 'gray-60' }
+  label: ''
 };
 
 Header.propTypes = {
-  label: PropTypes.string,
-  theme: PropTypes.shape()
+  label: PropTypes.string
 };
 
 export default Header;

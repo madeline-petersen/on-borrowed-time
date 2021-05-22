@@ -1,10 +1,9 @@
-import { Col, Container, Row } from 'react-grid-system';
+import { Col, Row } from 'react-grid-system';
 
 import PropTypes from 'prop-types';
 import React from 'react';
 
 const SubHeader = ({
-  theme,
   romanSceneNumber,
   title,
   animate,
@@ -18,7 +17,7 @@ const SubHeader = ({
         {animate && (
           <p
             className={`medium-caption ${animate &&
-              'scene-animation'} absolute top-0 pt-2 text-${theme.text}`}
+              'scene-animation'} absolute top-0 pt-2 contrast-text`}
           >
             Scene {romanSceneNumber}
           </p>
@@ -36,12 +35,10 @@ const SubHeader = ({
 };
 
 SubHeader.defaultProps = {
-  theme: { border: 'gray-60' },
   animate: false
 };
 
 SubHeader.propTypes = {
-  theme: PropTypes.shape(),
   romanSceneNumber: PropTypes.string,
   title: PropTypes.string,
   animate: PropTypes.bool,
