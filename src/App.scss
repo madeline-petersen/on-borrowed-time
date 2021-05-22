@@ -201,9 +201,12 @@ a {
 }
 
 .foreground-fade-in {
-  opacity: 0;
-  animation-name: foreground-fade-in;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
+  img,
+  p {
+    opacity: 0;
+    animation-name: foreground-fade-in;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
 }

@@ -39,15 +39,6 @@ $quarterHeight: calc(30vh - #{$a});
   }
 }
 
-@keyframes delayed-fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 /* The element to apply animations to */
 .scene-animation {
   opacity: 0;
@@ -80,6 +71,15 @@ $quarterHeight: calc(30vh - #{$a});
   animation-duration: 1s;
   animation-delay: 4s;
   animation-fill-mode: forwards;
+}
+
+@keyframes delayed-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .delayed-fade-in p {

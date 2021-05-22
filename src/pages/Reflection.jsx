@@ -49,6 +49,8 @@ const Reflection = ({
             theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
             romanSceneNumber={romanSceneNumber}
             title={scene.title}
+            fadeOut={true}
+            isClicked={isClicked}
           />
 
           {/* Final Reflection */}

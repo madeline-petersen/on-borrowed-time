@@ -49,6 +49,7 @@ const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
             theme={{ background: 'gray-30', text: 'black', border: 'gray-60' }}
             romanSceneNumber={romanSceneNumber}
             title={scene.title}
+            animate={true}
           />
 
           {/* Event */}
