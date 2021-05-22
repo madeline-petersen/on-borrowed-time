@@ -176,7 +176,8 @@ a {
 #overflow-container {
   width: 100%;
   height: $screenMinusHeader;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 // Transitions
