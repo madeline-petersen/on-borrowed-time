@@ -35,13 +35,18 @@ const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
 
       <div className="h-auto bg-gray-30">
         <Container className="grid__container border-l border-gray-60">
-          <Header label={`${year.id} ${year.title}`} border={true} />
+          <Header
+            label={`${year.id} ${year.title}`}
+            theme={{ background: 'gray-30', text: 'black', border: 'gray-60' }}
+            border={true}
+          />
 
           <Row className="grid__row shrink-animation">
             <Col lg={12} md={12} sm={12} xs={12} />
           </Row>
 
           <SubHeader
+            theme={{ background: 'gray-30', text: 'black', border: 'gray-60' }}
             romanSceneNumber={romanSceneNumber}
             title={scene.title}
             animate={true}
@@ -86,6 +91,8 @@ const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
               setClicked={setClicked}
               isClicked={isClicked}
               theme={{
+                background: 'gray-30',
+                text: 'black',
                 border: 'gray-60'
               }}
             />

@@ -39,9 +39,14 @@ const Reflection = ({
 
       <div className="h-auto bg-black">
         <Container className="grid__container border-l border-gray-80">
-          <Header label={`${year.id} ${year.title}`} border={true} />
+          <Header
+            label={`${year.id} ${year.title}`}
+            theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
+            border={true}
+          />
 
           <SubHeader
+            theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
             romanSceneNumber={romanSceneNumber}
             title={scene.title}
             fadeOut={true}
@@ -90,6 +95,8 @@ const Reflection = ({
                 changingParam={changingParam}
                 setClicked={setClicked}
                 theme={{
+                  background: 'black',
+                  text: 'gray-40',
                   border: 'gray-80'
                 }}
               />
