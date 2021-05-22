@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Header = ({ label, theme, border, isClicked }) => {
+const Header = ({ label, theme }) => {
   /**
    * PurgeCSS:
    * bg-black
@@ -14,60 +14,32 @@ const Header = ({ label, theme, border, isClicked }) => {
    **/
 
   return (
-    <Container
-      className={`grid__container sticky top-0 ${
-        border ? `border-l border-${theme.border}` : ''
-      } bg-${theme.background}`}
-    >
-      <Row className={`grid__row pt-5 ${isClicked ? 'fade-out' : null}`}>
-        <Col
-          lg={3}
-          md={4}
-          sm={4}
-          xs={4}
-          className="medium-caption foreground-fade-in"
-        >
-          <Link to="/" className={`text-${theme.text}`}>
-            On Borrowed Time
-          </Link>
-        </Col>
-        <Col
-          lg={8}
-          md={7}
-          sm={4}
-          xs={4}
-          className="medium-caption foreground-fade-in"
-        >
-          <Link className={`text-${theme.text}`}>{label}</Link>
-        </Col>
-        <Col
-          lg={1}
-          md={1}
-          sm={4}
-          xs={4}
-          className="medium-caption foreground-fade-in"
-        >
-          <Link to="/index" className={`text-${theme.text}`}>
-            Index
-          </Link>
-        </Col>
-      </Row>
-    </Container>
+    <Row className={`grid__row pt-5`}>
+      <Col lg={3} md={4} sm={4} xs={4} className="medium-caption">
+        <Link to="/" className={`contrast-text`}>
+          On Borrowed Time
+        </Link>
+      </Col>
+      <Col lg={8} md={7} sm={4} xs={4} className="medium-caption">
+        <Link className="contrast-text">{label}</Link>
+      </Col>
+      <Col lg={1} md={1} sm={4} xs={4} className="medium-caption">
+        <Link to="/index" className="contrast-text">
+          Index
+        </Link>
+      </Col>
+    </Row>
   );
 };
 
 Header.defaultProps = {
   label: '',
-  theme: { background: 'gray-30', text: 'black', border: 'gray-60' },
-  border: true,
-  isClicked: false
+  theme: { border: 'gray-60' }
 };
 
 Header.propTypes = {
   label: PropTypes.string,
-  theme: PropTypes.shape(),
-  border: PropTypes.bool,
-  isClicked: PropTypes.bool
+  theme: PropTypes.shape()
 };
 
 export default Header;

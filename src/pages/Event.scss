@@ -1,4 +1,4 @@
-$a: 58px;
+$a: 78px;
 $halfHeight: calc(50vh - #{$a});
 $quarterHeight: calc(30vh - #{$a});
 
@@ -82,7 +82,7 @@ $quarterHeight: calc(30vh - #{$a});
   animation-fill-mode: forwards;
 }
 
-.delayed-fade-in {
+.delayed-fade-in p {
   opacity: 0;
   animation-name: delayed-fade-in;
   animation-duration: 1s;

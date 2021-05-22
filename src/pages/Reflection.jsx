@@ -36,13 +36,11 @@ const Reflection = ({
         <Header
           label={`${year.id} ${year.title}`}
           theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
-          isClicked={isClicked}
           border={true}
         />
 
         <SubHeader
           theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
-          isClicked={isClicked}
           romanSceneNumber={romanSceneNumber}
           title={scene.title}
         />
@@ -56,11 +54,7 @@ const Reflection = ({
                   <>
                     <Col lg={1} />
                     <Col lg={11} md={12}>
-                      <p
-                        className={`medium-headline text-gray-40 pb-16 ${
-                          isClicked ? 'fade-out' : null
-                        }`}
-                      >
+                      <p className={`medium-headline text-gray-40 pb-16`}>
                         {ReactHtmlParser(paragraph)}
                       </p>
                     </Col>
@@ -71,11 +65,7 @@ const Reflection = ({
                   <>
                     <Col lg={3} />
                     <Col lg={7} md={12}>
-                      <p
-                        className={`medium-body text-gray-40 ${
-                          isClicked ? 'fade-out' : null
-                        }`}
-                      >
+                      <p className={`medium-body text-gray-40`}>
                         {ReactHtmlParser(paragraph)}
                         <br />
                         <br />
@@ -94,7 +84,6 @@ const Reflection = ({
             next={next}
             changingParam={changingParam}
             setClicked={setClicked}
-            isClicked={isClicked}
             theme={{ background: 'black', text: 'gray-40', border: 'gray-80' }}
           />
         )}

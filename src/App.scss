@@ -1,3 +1,6 @@
+$headerHeight: 78px;
+$screenMinusHeader: calc(100vh - #{$headerHeight});
+
 @font-face {
   font-family: LyonText;
   src: url('./LyonText-Regular.otf') format('opentype');
@@ -121,6 +124,12 @@ a {
   text-overflow: ellipsis;
 }
 
+.contrast-text {
+  background-color: black;
+  color: #bfbfbf;
+  mix-blend-mode: difference;
+}
+
 .grid__row {
   padding-left: 11px;
   padding-right: 11px;
@@ -164,17 +173,21 @@ a {
   }
 }
 
+#overflow-container {
+  width: 100%;
+  height: $screenMinusHeader;
+  overflow: scroll;
+}
+
 // Transitions
 .fade-out {
   opacity: 0;
-  cursor: default;
-
-  a {
-    cursor: default;
-  }
-
-  // transition: property duration timing-function delay|initial|inherit;
   transition: opacity 0.5s;
+}
+
+.screen-shrink {
+  height: 0vh;
+  transition: height 1s 1s;
 }
 
 // Animations
@@ -192,21 +205,5 @@ a {
   animation-name: foreground-fade-in;
   animation-duration: 1s;
   animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes screen-transition-animation {
-  0% {
-    height: 100vh;
-  }
-  100% {
-    height: 0vh;
-  }
-}
-
-.screen-transition-animation {
-  height: 100vh;
-  animation-name: screen-transition-animation;
-  animation-duration: 1s;
   animation-fill-mode: forwards;
 }

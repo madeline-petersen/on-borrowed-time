@@ -4,57 +4,45 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 
-const ResourceTable = ({ data, tableState }) => {
+const ResourceTable = ({ data }) => {
   return (
     <>
       {/* Resource Table */}
-      <Row className={`grid__row delayed-fade-in`}>
+      <Row className={`grid__row`}>
         <Col lg={3} md={2} />
         <Col lg={9} md={10}>
-          <div
-            className={`border-t border-gray-60 pb-4 ${
-              tableState ? 'fade-out' : null
-            }`}
-          />
+          <p className={`border-t border-gray-60 pb-4`} />
         </Col>
       </Row>
       {data.map((entry, index) => {
         return (
-          <Row className={`grid__row delayed-fade-in`} key={index}>
+          <Row className={`grid__row`} key={index}>
             {index !== 0 && (
               <>
                 <Col lg={3} md={2} />
                 <Col lg={9} md={10}>
-                  <div
-                    className={`border-t border-gray-40 pt-4 ${
-                      tableState ? 'fade-out' : null
-                    }`}
-                  />
+                  <p className={`border-t border-gray-40 pt-4`} />
                 </Col>
               </>
             )}
 
             <Col lg={3} md={2} />
             <Col lg={4} md={4} sm={4} xs={12} className="small-body">
-              <div className={`${tableState ? 'fade-out' : null}`}>
-                {ReactHtmlParser(entry.title)}
-              </div>
+              <p className={`text-gray-70`}>{ReactHtmlParser(entry.title)}</p>
             </Col>
             <Col lg={3} md={3} sm={4} xs={12} className="small-body">
-              <div className={`text-gray-70 ${tableState ? 'fade-out' : null}`}>
-                {entry.source}
-              </div>
+              <p className={`text-gray-70`}>{entry.source}</p>
             </Col>
             <Col
               lg={2}
               md={3}
               sm={4}
               xs={12}
-              className={`small-body ${tableState ? 'fade-out' : null}`}
+              className={`small-body`}
               style={{ display: 'flex', justifyContent: 'space-between' }}
             >
-              <div className="text-gray-70">{entry.type}</div>
-              <div className="text-gray-70">{entry.year}</div>
+              <p className="text-gray-70">{entry.type}</p>
+              <p className="text-gray-70">{entry.year}</p>
             </Col>
 
             <Col lg={3} md={2} />
@@ -67,8 +55,7 @@ const ResourceTable = ({ data, tableState }) => {
 };
 
 ResourceTable.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape()),
-  tableState: PropTypes.bool
+  data: PropTypes.arrayOf(PropTypes.shape())
 };
 
 export default ResourceTable;

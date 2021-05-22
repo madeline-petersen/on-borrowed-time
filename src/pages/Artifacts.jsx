@@ -46,12 +46,10 @@ const Artifacts = ({
           label={`${year.id} ${year.title}`}
           theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
           border={true}
-          isClicked={isClicked}
         />
 
         <SubHeader
           theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
-          isClicked={isClicked}
           romanSceneNumber={romanSceneNumber}
           title={scene.title}
         />
@@ -62,19 +60,11 @@ const Artifacts = ({
             <Row className="grid__row pt-64 pb-20 foreground-fade-in">
               <Col lg={1} />
               <Col lg={11} md={12}>
-                <img
-                  src={imageLookup[artifacts.images[0].source]}
-                  alt=""
-                  className={isClicked ? 'fade-out' : null}
-                />
+                <img src={imageLookup[artifacts.images[0].source]} alt="" />
               </Col>
               <Col lg={3} />
               <Col lg={4} md={4}>
-                <p
-                  className={`small-body text-gray-40 mt-8 ${
-                    isClicked ? 'fade-out' : null
-                  }`}
-                >
+                <p className={`small-body text-gray-40 mt-8`}>
                   {artifacts.images[0].caption}
                 </p>
               </Col>
@@ -84,19 +74,11 @@ const Artifacts = ({
             <Row className="grid__row pt-20 pb-24 foreground-fade-in">
               <Col lg={3} />
               <Col lg={7} md={12}>
-                <img
-                  src={imageLookup[artifacts[1].source]}
-                  alt=""
-                  className={isClicked ? 'fade-out' : null}
-                />
+                <img src={imageLookup[artifacts[1].source]} alt="" />
               </Col>
               <Col lg={3} />
               <Col lg={4} md={4}>
-                <p
-                  className={`small-body text-gray-40 mt-5 ${
-                    isClicked ? 'fade-out' : null
-                  }`}
-                >
+                <p className={`small-body text-gray-40 mt-5`}>
                   {artifacts.images[1].caption}
                 </p>
               </Col>
@@ -109,7 +91,6 @@ const Artifacts = ({
           next={next}
           changingParam={'page'}
           setClicked={setClicked}
-          isClicked={isClicked}
           theme={{ background: 'black', text: 'gray-40', border: 'gray-80' }}
         />
       </div>
