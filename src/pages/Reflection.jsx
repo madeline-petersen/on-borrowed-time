@@ -17,6 +17,8 @@ const Reflection = ({
   next
 }) => {
   const [isClicked, setClicked] = useState(false);
+  const start = 'black';
+  const end = 'gray-30';
 
   useEffect(() => {
     setTimeout(function() {
@@ -26,67 +28,79 @@ const Reflection = ({
 
   return (
     <>
-      <div className="bg-black">
-        <Container className="grid__container border-l border-gray-80">
-          <Row className="grid__row screen-transition-animation" />
-        </Container>
+      {/* Backgrounds for page transition */}
+      <div className={`h-screen bg-${end} absolute top-0 w-full`}>
+        <div
+          className={`h-screen bg-${start} absolute top-0 w-full ${
+            isClicked ? 'screen-shrink' : ''
+          }`}
+        />
       </div>
 
       <div className="h-auto bg-black">
-        <Header
-          label={`${year.id} ${year.title}`}
-          theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
-          border={true}
-        />
-
-        <SubHeader
-          theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
-          romanSceneNumber={romanSceneNumber}
-          title={scene.title}
-        />
-
-        {/* Final Reflection */}
         <Container className="grid__container border-l border-gray-80">
-          <Row className="grid__row foreground-fade-in pt-64 pb-40">
-            {reflection.paragraphs.map((paragraph, index) => {
-              if (index === 0) {
-                return (
-                  <>
-                    <Col lg={1} />
-                    <Col lg={11} md={12}>
-                      <p className={`medium-headline text-gray-40 pb-16`}>
-                        {ReactHtmlParser(paragraph)}
-                      </p>
-                    </Col>
-                  </>
-                );
-              } else {
-                return (
-                  <>
-                    <Col lg={3} />
-                    <Col lg={7} md={12}>
-                      <p className={`medium-body text-gray-40`}>
-                        {ReactHtmlParser(paragraph)}
-                        <br />
-                        <br />
-                      </p>
-                    </Col>
-                  </>
-                );
-              }
-            })}
-          </Row>
-        </Container>
-
-        {next && (
-          <Footer
-            nextParams={nextParams}
-            next={next}
-            changingParam={changingParam}
-            setClicked={setClicked}
-            theme={{ background: 'black', text: 'gray-40', border: 'gray-80' }}
+          <Header
+            label={`${year.id} ${year.title}`}
+            theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
+            border={true}
           />
-        )}
+
+          <SubHeader
+            theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
+            romanSceneNumber={romanSceneNumber}
+            title={scene.title}
+          />
+
+          {/* Final Reflection */}
+          <div
+            id="overflow-container"
+            className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
+          >
+            <Row className="grid__row pt-64 pb-40">
+              {reflection.paragraphs.map((paragraph, index) => {
+                if (index === 0) {
+                  return (
+                    <>
+                      <Col lg={1} />
+                      <Col lg={11} md={12}>
+                        <p className={`medium-headline text-gray-40 pb-16`}>
+                          {ReactHtmlParser(paragraph)}
+                        </p>
+                      </Col>
+                    </>
+                  );
+                } else {
+                  return (
+                    <>
+                      <Col lg={3} />
+                      <Col lg={7} md={12}>
+                        <p className={`medium-body text-gray-40`}>
+                          {ReactHtmlParser(paragraph)}
+                          <br />
+                          <br />
+                        </p>
+                      </Col>
+                    </>
+                  );
+                }
+              })}
+            </Row>
+
+            {next && (
+              <Footer
+                nextParams={nextParams}
+                next={next}
+                changingParam={changingParam}
+                setClicked={setClicked}
+                theme={{
+                  background: 'black',
+                  text: 'gray-40',
+                  border: 'gray-80'
+                }}
+              />
+            )}
+          </div>
+        </Container>
       </div>
     </>
   );

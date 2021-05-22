@@ -26,6 +26,8 @@ const Artifacts = ({
   next
 }) => {
   const [isClicked, setClicked] = useState(false);
+  const start = 'black';
+  const end = 'black';
 
   useEffect(() => {
     setTimeout(function() {
@@ -35,64 +37,76 @@ const Artifacts = ({
 
   return (
     <>
-      <div className="bg-gray-30">
-        <Container className="grid__container border-l border-gray-80">
-          <Row className="grid__row screen-transition-animation" />
-        </Container>
+      {/* Backgrounds for page transition */}
+      <div className={`h-screen bg-${end} absolute top-0 w-full`}>
+        <div
+          className={`h-screen bg-${start} absolute top-0 w-full ${
+            isClicked ? 'screen-shrink' : ''
+          }`}
+        />
       </div>
 
       <div className="h-auto bg-black">
-        <Header
-          label={`${year.id} ${year.title}`}
-          theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
-          border={true}
-        />
-
-        <SubHeader
-          theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
-          romanSceneNumber={romanSceneNumber}
-          title={scene.title}
-        />
-
-        {/* Reflection */}
         <Container className="grid__container border-l border-gray-80">
-          {artifacts.images.length > 0 && (
-            <Row className="grid__row pt-64 pb-20 foreground-fade-in">
-              <Col lg={1} />
-              <Col lg={11} md={12}>
-                <img src={imageLookup[artifacts.images[0].source]} alt="" />
-              </Col>
-              <Col lg={3} />
-              <Col lg={4} md={4}>
-                <p className={`small-body text-gray-40 mt-8`}>
-                  {artifacts.images[0].caption}
-                </p>
-              </Col>
-            </Row>
-          )}
-          {artifacts.length > 1 && (
-            <Row className="grid__row pt-20 pb-24 foreground-fade-in">
-              <Col lg={3} />
-              <Col lg={7} md={12}>
-                <img src={imageLookup[artifacts[1].source]} alt="" />
-              </Col>
-              <Col lg={3} />
-              <Col lg={4} md={4}>
-                <p className={`small-body text-gray-40 mt-5`}>
-                  {artifacts.images[1].caption}
-                </p>
-              </Col>
-            </Row>
-          )}
-        </Container>
+          <Header
+            label={`${year.id} ${year.title}`}
+            theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
+            border={true}
+          />
 
-        <Footer
-          nextParams={nextParams}
-          next={next}
-          changingParam={'page'}
-          setClicked={setClicked}
-          theme={{ background: 'black', text: 'gray-40', border: 'gray-80' }}
-        />
+          <SubHeader
+            theme={{ background: 'black', text: 'gray-30', border: 'gray-80' }}
+            romanSceneNumber={romanSceneNumber}
+            title={scene.title}
+          />
+
+          {/* Reflection */}
+          <div
+            id="overflow-container"
+            className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
+          >
+            {artifacts.images.length > 0 && (
+              <Row className="grid__row pt-64 pb-20">
+                <Col lg={1} />
+                <Col lg={11} md={12}>
+                  <img src={imageLookup[artifacts.images[0].source]} alt="" />
+                </Col>
+                <Col lg={3} />
+                <Col lg={4} md={4}>
+                  <p className={`small-body text-gray-40 mt-8`}>
+                    {artifacts.images[0].caption}
+                  </p>
+                </Col>
+              </Row>
+            )}
+            {artifacts.length > 1 && (
+              <Row className="grid__row pt-20 pb-24">
+                <Col lg={3} />
+                <Col lg={7} md={12}>
+                  <img src={imageLookup[artifacts[1].source]} alt="" />
+                </Col>
+                <Col lg={3} />
+                <Col lg={4} md={4}>
+                  <p className={`small-body text-gray-40 mt-5`}>
+                    {artifacts.images[1].caption}
+                  </p>
+                </Col>
+              </Row>
+            )}
+
+            <Footer
+              nextParams={nextParams}
+              next={next}
+              changingParam={'page'}
+              setClicked={setClicked}
+              theme={{
+                background: 'black',
+                text: 'gray-40',
+                border: 'gray-80'
+              }}
+            />
+          </div>
+        </Container>
       </div>
     </>
   );
