@@ -52,18 +52,19 @@ const Anecdote = ({ title, type, children }) => {
               </span>
               <Col lg={2} />
               <Col lg={1} className="bg-white" />
-              <Col lg={9} className="bg-white pt-8 pb-8">
+              <Col lg={7} className="bg-white pt-8">
                 <div className="small-body mb-1">{title}</div>
                 <div className="small-body mb-12">{type}</div>
                 <div className="large-headline mb-4">{title}</div>
                 <div className="small-headline mb-16">
                   Winston L.Y. and Marsha L. Wagner
                 </div>
-                {/* </Col>
+              </Col>
+              <Col lg={2} className="bg-white" />
 
-            <Col lg={2} />
-            <Col lg={2} className="bg-white" />
-            <Col lg={8} className="bg-white"> */}
+              <Col lg={2} />
+              <Col lg={2} className="bg-white" />
+              <Col lg={6} className="bg-white pb-8">
                 <div>
                   <div className="medium-body">
                     On April 17 student mourning activities began to spread from
@@ -117,6 +118,7 @@ const Anecdote = ({ title, type, children }) => {
                   </div>
                 </div>
               </Col>
+              <Col lg={2} className="bg-white" />
             </Row>
           </Container>
         </div>
