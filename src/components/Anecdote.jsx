@@ -6,38 +6,36 @@ import { Close20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Anecdote = ({ title, type, children }) => {
-  const modal = document.getElementById('anecdoteModal');
+const Anecdote = ({ title, type, isActive }) => {
+  const modal = document.getElementById('modal-card');
+  const overlay = document.getElementById('modal-overlay');
 
-  const onClickBtn = () => {
-    document.getElementById('anecdoteModal').style.transform = 'translateX(0%)';
-    document.getElementById('modal-overlay').style.transform = 'translateX(0%)';
-    document.getElementById('modal-overlay').style.opacity = '1';
-  };
+  if (isActive) {
+    modal.style.transform = 'translateX(0%)';
+    overlay.style.transform = 'translateX(0%)';
+    overlay.style.opacity = '1';
+  }
 
   const onClickSpan = () => {
-    document.getElementById('anecdoteModal').style.transform =
-      'translateX(100%)';
-    document.getElementById('modal-overlay').style.transform =
-      'translateX(100%)';
-    document.getElementById('modal-overlay').style.opacity = '0';
+    closeModal();
   };
 
-  // window.onclick = function(event) {
-  //   if (event.target == modal) {
-  //     document.getElementById('anecdoteModal').style.display = 'none';
-  //   }
-  // };
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  };
+
+  const closeModal = () => {
+    modal.style.transform = 'translateX(100%)';
+    overlay.style.transform = 'translateX(100%)';
+    overlay.style.opacity = '0';
+  };
 
   return (
     <>
-      {/* <!-- Trigger/Open The Modal --> */}
-      <div onClick={onClickBtn} className="contents cursor-pointer">
-        {children}
-      </div>
-
       <div id="modal-overlay" className="modal-overlay" />
-      <div id="anecdoteModal" className="modal">
+      <div id="modal-card" className="modal-card">
         <div className="absolute top-24 background-color">
           <Container className="grid__container">
             <Row
@@ -128,7 +126,7 @@ const Anecdote = ({ title, type, children }) => {
 };
 
 Anecdote.propTypes = {
-  children: PropTypes.node,
+  isActive: PropTypes.bool,
   title: PropTypes.string,
   type: PropTypes.string
 };
