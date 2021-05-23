@@ -6,7 +6,15 @@ import { Close20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Anecdote = ({ title, type, isActive }) => {
+const Anecdote = ({
+  shortTitle,
+  type,
+  author,
+  source,
+  year,
+  isActive,
+  citation
+}) => {
   const modal = document.getElementById('modal-card');
   const overlay = document.getElementById('modal-overlay');
 
@@ -51,11 +59,11 @@ const Anecdote = ({ title, type, isActive }) => {
               <Col lg={2} />
               <Col lg={1} className="bg-white" />
               <Col lg={7} className="bg-white pt-8">
-                <div className="small-body mb-1">{title}</div>
+                <div className="small-body mb-1">{shortTitle}</div>
                 <div className="small-body mb-12">{type}</div>
-                <div className="large-headline mb-4">{title}</div>
+                <div className="large-headline mb-2">{source}</div>
                 <div className="small-headline mb-16">
-                  Winston L.Y. and Marsha L. Wagner
+                  {author}, {year}
                 </div>
               </Col>
               <Col lg={2} className="bg-white" />
@@ -64,56 +72,21 @@ const Anecdote = ({ title, type, isActive }) => {
               <Col lg={2} className="bg-white" />
               <Col lg={6} className="bg-white pb-8">
                 <div>
-                  <div className="medium-body">
-                    On April 17 student mourning activities began to spread from
-                    the Beijing campuses into the nation&rsquo;s symbolic
-                    central space, Tiananmen Square. The Square lies at the
-                    geographic center of the capital city and just southeast of
-                    Zhongnanhai, where the last dynasty&rsquo;s emperors had
-                    their hunting park and where the top Communist leaders now
-                    work. Beginning with the May Fourth Movement in 1919,
-                    Tiananmen has also become a traditional site for popular
-                    protests. These protests have often been led by university
-                    students, who are especially numerous here because Beijing
-                    is the country&rsquo;s preeminent center of higher
-                    education.
+                  <div className="medium-body pb-16">
+                    The students regarded Hu Yaobang not only as a champion of
+                    liberalisation but also as one of the few top government
+                    leaders not tainted by official corruption. Within hours of
+                    the death of this beloved figure, before official
+                    announcements had been made, students on campuses had begun
+                    posting elegies. One of the most frequently quoted poems
+                    began with the haunting couplet:
+                    <br />
+                    <br />
+                    Those who should have died live,
+                    <br />
+                    Those who should have lived have died.
                   </div>
-                  <br />
-                  <div className="medium-body">
-                    At People&rsquo;s University a &ldquo;Democracy Wall&rdquo;
-                    appeared on the evening of April 17. Spontaneous memorial
-                    activities took place on other campuses that until now had
-                    been quiet. In addition to pasting up eulogies, memorial
-                    couplets, and posters, students made speeches, set up
-                    symbolic biers, and delivered wreaths to the Square. Some
-                    even demanded to attend the funeral. In a single day,
-                    ninety-three handwritten memorial couplets appeared at the
-                    Beijing University of Science and Engineering.
-                  </div>
-                  <br />
-                  <div className="medium-body">
-                    At People&rsquo;s University a &ldquo;Democracy Wall&rdquo;
-                    appeared on the evening of April 17. Spontaneous memorial
-                    activities took place on other campuses that until now had
-                    been quiet. In addition to pasting up eulogies, memorial
-                    couplets, and posters, students made speeches, set up
-                    symbolic biers, and delivered wreaths to the Square. Some
-                    even demanded to attend the funeral. In a single day,
-                    ninety-three handwritten memorial couplets appeared at the
-                    Beijing University of Science and Engineering.
-                  </div>
-                  <br />
-                  <div className="medium-body">
-                    At People&rsquo;s University a &ldquo;Democracy Wall&rdquo;
-                    appeared on the evening of April 17. Spontaneous memorial
-                    activities took place on other campuses that until now had
-                    been quiet. In addition to pasting up eulogies, memorial
-                    couplets, and posters, students made speeches, set up
-                    symbolic biers, and delivered wreaths to the Square. Some
-                    even demanded to attend the funeral. In a single day,
-                    ninety-three handwritten memorial couplets appeared at the
-                    Beijing University of Science and Engineering.
-                  </div>
+                  <div className="small-body">{citation}</div>
                 </div>
               </Col>
               <Col lg={2} className="bg-white" />
@@ -127,8 +100,12 @@ const Anecdote = ({ title, type, isActive }) => {
 
 Anecdote.propTypes = {
   isActive: PropTypes.bool,
-  title: PropTypes.string,
-  type: PropTypes.string
+  type: PropTypes.string,
+  shortTitle: PropTypes.string,
+  author: PropTypes.string,
+  source: PropTypes.string,
+  year: PropTypes.string,
+  citation: PropTypes.string
 };
 
 export default Anecdote;

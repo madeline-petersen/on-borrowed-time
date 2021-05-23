@@ -44,10 +44,14 @@ const ResourceTable = ({ data }) => {
             >
               <Col lg={3} md={2} />
               <Col lg={4} md={4} sm={4} xs={12} className="small-body">
-                <p className={`text-gray-70`}>{ReactHtmlParser(entry.title)}</p>
+                <p className={`text-gray-70`}>
+                  {ReactHtmlParser(entry.shortTitle)}
+                </p>
               </Col>
               <Col lg={3} md={3} sm={4} xs={12} className="small-body">
-                <p className={`text-gray-70`}>{entry.source}</p>
+                <p className={`text-gray-70`}>
+                  {entry.source ? entry.source : entry.title}
+                </p>
               </Col>
               <Col
                 lg={2}

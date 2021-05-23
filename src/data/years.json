@@ -16,28 +16,42 @@
               ],
               "resources": [
                 {
-                  "title": "A Champion of Liberalisation",
+                  "shortTitle": "A Champion of Liberalisation",
+                  "author": "Marsha Wagner and Winston Yang",
                   "source": "China's Struggle for Democracy, its Prelude, Development, Aftermath, and Impact",
-                  "type": "Journal Excerpt",
-                  "year": "1990"
-                },
-                {
-                  "title": "The Death of Hu Yaobang",
-                  "source": "Tiananman Papers",
                   "type": "Book Excerpt",
-                  "year": "2001"
+                  "year": "1990",
+                  "content": [
+                    "The students regarded Hu Yaobang not only as a champion of liberalisation but also as one of the few top government leaders not tainted by official corruption. Within hours of the death of this beloved figure, before official announcements had been made, students on campuses had begun posting elegies. One of the most frequently quoted poems began with the haunting couplet:",
+                    "Those who should have died live",
+                    "Those who should have lived have died."
+                  ],
+                  "citation": "Wagner, Marsha, and Winston Yang, eds. “Tiananmen: China's Struggle for Democracy, Its Prelude, Development, Aftermath, and Impact. .” The China Quarterly 130 (1992): 48."
                 },
                 {
-                  "title": "The Mourning of Hu Yaobang",
-                  "source": "Tiananman Papers",
+                  "shortTitle": "The Death of Hu Yaobang",
+                  "author": "Liang Zhang, Andrew J. Nathan, Perry Link, Orville Schell",
+                  "source": "Tiananmen Papers",
                   "type": "Book Excerpt",
-                  "year": "2001"
+                  "year": "2001",
+                  "citation": "Wagner, Marsha, and Winston Yang, eds. “Tiananmen: China's Struggle for Democracy, Its Prelude, Development, Aftermath, and Impact. .” The China Quarterly 130 (1992): 48."
                 },
                 {
-                  "title": "Beijing Hints on Crackdown on Students",
+                  "shortTitle": "The Mourning of Hu Yaobang",
+                  "author": "Liang Zhang, Andrew J. Nathan, Perry Link, Orville Schell",
+                  "source": "Tiananmen Papers",
+                  "type": "Book Excerpt",
+                  "year": "2001",
+                  "citation": "Wagner, Marsha, and Winston Yang, eds. “Tiananmen: China's Struggle for Democracy, Its Prelude, Development, Aftermath, and Impact. .” The China Quarterly 130 (1992): 48."
+                },
+                {
+                  "title": "Beijing Hints on Crackdown For Students",
+                  "shortTitle": "Beijing Hints on Crackdown",
+                  "author": "Nicholas Kristof",
                   "source": "New York Times",
                   "type": "Article Excerpt",
-                  "year": "1989"
+                  "year": "1989",
+                  "citation": "Wagner, Marsha, and Winston Yang, eds. “Tiananmen: China's Struggle for Democracy, Its Prelude, Development, Aftermath, and Impact. .” The China Quarterly 130 (1992): 48."
                 }
               ]
             },
