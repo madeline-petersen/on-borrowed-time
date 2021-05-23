@@ -10,14 +10,22 @@ const ResourceTable = ({ data }) => {
   const [isModalActive, setIsModalActive] = useState(false);
 
   const openModal = entry => {
-    console.log(entry);
     setAnecdoteData(entry);
     setIsModalActive(true);
   };
 
+  const onCloseModal = () => {
+    setAnecdoteData({});
+    setIsModalActive(false);
+  };
+
   return (
     <>
-      <Anecdote {...anecdoteData} isActive={isModalActive} />
+      <Anecdote
+        {...anecdoteData}
+        isActive={isModalActive}
+        onCloseModal={onCloseModal}
+      />
 
       {/* Resource Table */}
       <Row className={`grid__row`}>

@@ -13,7 +13,8 @@ const Anecdote = ({
   source,
   year,
   isActive,
-  citation
+  citation,
+  onCloseModal
 }) => {
   const modal = document.getElementById('modal-card');
   const overlay = document.getElementById('modal-overlay');
@@ -38,6 +39,7 @@ const Anecdote = ({
     modal.style.transform = 'translateX(100%)';
     overlay.style.transform = 'translateX(100%)';
     overlay.style.opacity = '0';
+    onCloseModal();
   };
 
   return (
@@ -105,7 +107,8 @@ Anecdote.propTypes = {
   author: PropTypes.string,
   source: PropTypes.string,
   year: PropTypes.string,
-  citation: PropTypes.string
+  citation: PropTypes.string,
+  onCloseModal: PropTypes.func
 };
 
 export default Anecdote;
