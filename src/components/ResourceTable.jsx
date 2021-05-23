@@ -15,7 +15,6 @@ const ResourceTable = ({ data }) => {
   };
 
   const onCloseModal = () => {
-    setAnecdoteData({});
     setIsModalActive(false);
   };
 
