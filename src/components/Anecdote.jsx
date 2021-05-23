@@ -45,8 +45,8 @@ const Anecdote = ({ title, type, children }) => {
               </span>
               <Col lg={2} />
               <Col lg={1} className="bg-white" />
-              <Col lg={9} className="bg-white">
-                <div className="small-body mt-8 mb-1">{title}</div>
+              <Col lg={9} className="bg-white pt-8 pb-8">
+                <div className="small-body mb-1">{title}</div>
                 <div className="small-body mb-12">{type}</div>
                 <div className="large-headline mb-4">{title}</div>
                 <div className="small-headline mb-16">
