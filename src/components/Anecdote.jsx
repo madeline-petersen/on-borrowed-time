@@ -11,15 +11,16 @@ const Anecdote = ({ title, type, children }) => {
 
   const onClickBtn = () => {
     document.getElementById('anecdoteModal').style.transform = 'translateX(0%)';
+    document.getElementById('modal-overlay').style.transform = 'translateX(0%)';
     document.getElementById('modal-overlay').style.opacity = '1';
-    document.getElementById('modal-overlay').style.display = 'block';
   };
 
   const onClickSpan = () => {
     document.getElementById('anecdoteModal').style.transform =
       'translateX(100%)';
+    document.getElementById('modal-overlay').style.transform =
+      'translateX(100%)';
     document.getElementById('modal-overlay').style.opacity = '0';
-    document.getElementById('modal-overlay').style.display = 'none';
   };
 
   // window.onclick = function(event) {
