@@ -184,11 +184,13 @@ a {
 .fade-out {
   opacity: 0;
   transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
 }
 
 .screen-shrink {
   height: 0vh;
   transition: height 1s 1s;
+  -webkit-transition: height 1s 1s;
 }
 
 // Animations
