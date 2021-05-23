@@ -10,11 +10,12 @@ const Anecdote = ({ title, type, children }) => {
   const modal = document.getElementById('anecdoteModal');
 
   const onClickBtn = () => {
-    document.getElementById('anecdoteModal').style.display = 'block';
+    document.getElementById('anecdoteModal').style.transform = 'translateX(0%)';
   };
 
   const onClickSpan = () => {
-    document.getElementById('anecdoteModal').style.display = 'none';
+    document.getElementById('anecdoteModal').style.transform =
+      'translateX(-100%)';
   };
 
   // window.onclick = function(event) {
