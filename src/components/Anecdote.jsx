@@ -52,7 +52,7 @@ const Anecdote = ({
     <>
       <div id="modal-overlay" className="modal-overlay" />
       <div id="modal-card" className="modal-card">
-        <div className="absolute top-24 background-color">
+        <div className="absolute top-24 background-color right-0">
           <Container className="grid__container">
             <Row
               className="grid__row modal-height"
@@ -64,42 +64,73 @@ const Anecdote = ({
               >
                 <Close20 />
               </span>
-              <Col lg={2} />
-              <Col lg={1} className="bg-white" />
-              <Col lg={7} className="bg-white pt-8">
-                <div className="small-body mb-1">{shortTitle}</div>
-                <div className="small-body mb-12">{type}</div>
-                <div className="large-headline mb-2">
-                  {bookTitle
-                    ? bookTitle
-                    : articleTitle
-                    ? articleTitle
-                    : poemTitle}
-                </div>
-                <div className="small-headline mb-16">
-                  {author}
-                  {publication && `, ${publication},`} {year && `, ${year}`}
-                </div>
-              </Col>
-              <Col lg={2} className="bg-white" />
-
-              <Col lg={2} />
-              <Col lg={2} className="bg-white" />
-              <Col lg={6} className="bg-white pb-8">
+              {(bookTitle || articleTitle) && (
                 <>
-                  {content &&
-                    content.map((paragraph, index) => {
-                      return (
-                        <div className="medium-body" key={`paragraph-${index}`}>
-                          {ReactHtmlParser(paragraph)}
-                          <br />
-                        </div>
-                      );
-                    })}
-                  <Link className="small-body pt-16">{citation}</Link>
+                  <Col lg={2} />
+                  <Col lg={1} className="bg-white" />
+                  <Col lg={7} className="bg-white pt-8">
+                    <div className="small-body mb-1">{shortTitle}</div>
+                    <div className="small-body mb-12">{type}</div>
+                    <div className="large-headline mb-2">
+                      {bookTitle ? bookTitle : articleTitle}
+                    </div>
+                    <div className="small-headline mb-16">
+                      {author}
+                      {publication && `, ${publication},`} {year && `, ${year}`}
+                    </div>
+                  </Col>
+                  <Col lg={2} className="bg-white" />
+
+                  <Col lg={2} />
+                  <Col lg={2} className="bg-white" />
+                  <Col lg={6} className="bg-white pb-8">
+                    <>
+                      {content &&
+                        content.map((paragraph, index) => {
+                          return (
+                            <div
+                              className="medium-body"
+                              key={`paragraph-${index}`}
+                            >
+                              {ReactHtmlParser(paragraph)}
+                              <br />
+                            </div>
+                          );
+                        })}
+                      <Link className="small-body pt-16">{citation}</Link>
+                    </>
+                  </Col>
+                  <Col lg={2} className="bg-white" />
                 </>
-              </Col>
-              <Col lg={2} className="bg-white" />
+              )}
+              {poemTitle && (
+                <>
+                  <Col lg={6} />
+                  <Col lg={1} className="bg-white" />
+                  <Col lg={5} className="bg-white pt-8 pb-8">
+                    <div className="small-body mb-12">{type}</div>
+                    <div className="large-headline mb-2">{poemTitle}</div>
+                    <div className="small-headline mb-16">
+                      {author} {publication && `, ${publication},`}
+                      {year && `, ${year}`}
+                    </div>
+
+                    {content &&
+                      content.map((paragraph, index) => {
+                        return (
+                          <div
+                            className="medium-body"
+                            key={`paragraph-${index}`}
+                          >
+                            {ReactHtmlParser(paragraph)}
+                            <br />
+                          </div>
+                        );
+                      })}
+                    <Link className="small-body pt-16">{citation}</Link>
+                  </Col>
+                </>
+              )}
             </Row>
           </Container>
         </div>
