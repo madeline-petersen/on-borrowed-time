@@ -15,6 +15,7 @@ const Anecdote = ({
   year,
   articleTitle,
   bookTitle,
+  poemTitle,
   author,
   content,
   citation,
@@ -69,10 +70,15 @@ const Anecdote = ({
                 <div className="small-body mb-1">{shortTitle}</div>
                 <div className="small-body mb-12">{type}</div>
                 <div className="large-headline mb-2">
-                  {bookTitle ? bookTitle : articleTitle}
+                  {bookTitle
+                    ? bookTitle
+                    : articleTitle
+                    ? articleTitle
+                    : poemTitle}
                 </div>
                 <div className="small-headline mb-16">
-                  {author},{publication && ` ${publication},`} {year}
+                  {author}
+                  {publication && `, ${publication},`} {year && `, ${year}`}
                 </div>
               </Col>
               <Col lg={2} className="bg-white" />
@@ -86,7 +92,6 @@ const Anecdote = ({
                       return (
                         <div className="medium-body" key={`paragraph-${index}`}>
                           {ReactHtmlParser(paragraph)}
-                          <br />
                           <br />
                         </div>
                       );
@@ -108,6 +113,7 @@ Anecdote.propTypes = {
   shortTitle: PropTypes.string,
   articleTitle: PropTypes.string,
   bookTitle: PropTypes.string,
+  poemTitle: PropTypes.string,
   year: PropTypes.string,
   author: PropTypes.string,
   publication: PropTypes.string,
