@@ -22,6 +22,11 @@ const ResourceTable = ({ data }) => {
     <>
       <Anecdote
         {...anecdoteData}
+        title={
+          anecdoteData.articleTitle ||
+          anecdoteData.bookTitle ||
+          anecdoteData.poemTitle
+        }
         isActive={isModalActive}
         onCloseModal={onCloseModal}
       />

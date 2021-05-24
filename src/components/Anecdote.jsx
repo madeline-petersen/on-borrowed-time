@@ -13,9 +13,7 @@ const Anecdote = ({
   shortTitle,
   publication,
   year,
-  articleTitle,
-  bookTitle,
-  poemTitle,
+  title,
   author,
   content,
   citation,
@@ -24,6 +22,7 @@ const Anecdote = ({
 }) => {
   const modal = document.getElementById('modal-card');
   const overlay = document.getElementById('modal-overlay');
+  console.log('title ', title);
 
   if (isActive) {
     modal.style.transform = 'translateX(0%)';
@@ -64,16 +63,14 @@ const Anecdote = ({
               >
                 <Close20 />
               </span>
-              {(bookTitle || articleTitle) && (
+              {(type === 'Article Excerpt' || type === 'Book Excerpt') && (
                 <>
                   <Col lg={2} />
                   <Col lg={1} className="bg-white" />
                   <Col lg={7} className="bg-white pt-8">
                     <div className="small-body mb-1">{shortTitle}</div>
                     <div className="small-body mb-12">{type}</div>
-                    <div className="large-headline mb-2">
-                      {bookTitle ? bookTitle : articleTitle}
-                    </div>
+                    <div className="large-headline mb-2">{title}</div>
                     <div className="small-headline mb-16">
                       {author}
                       {publication && `, ${publication},`} {year && `, ${year}`}
@@ -103,13 +100,13 @@ const Anecdote = ({
                   <Col lg={2} className="bg-white" />
                 </>
               )}
-              {poemTitle && (
+              {type === 'Poem' && (
                 <>
                   <Col lg={6} />
                   <Col lg={1} className="bg-white" />
                   <Col lg={5} className="bg-white pt-8 pb-8">
                     <div className="small-body mb-12">{type}</div>
-                    <div className="large-headline mb-2">{poemTitle}</div>
+                    <div className="large-headline mb-2">{title}</div>
                     <div className="small-headline mb-16">
                       {author} {publication && `, ${publication},`}
                       {year && `, ${year}`}
@@ -142,9 +139,7 @@ const Anecdote = ({
 Anecdote.propTypes = {
   type: PropTypes.string,
   shortTitle: PropTypes.string,
-  articleTitle: PropTypes.string,
-  bookTitle: PropTypes.string,
-  poemTitle: PropTypes.string,
+  title: PropTypes.string,
   year: PropTypes.string,
   author: PropTypes.string,
   publication: PropTypes.string,
