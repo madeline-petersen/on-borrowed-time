@@ -3,17 +3,22 @@ import './Anecdote.scss';
 import { Col, Container, Row } from 'react-grid-system';
 
 import { Close20 } from '@carbon/icons-react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
 
 const Anecdote = ({
-  shortTitle,
   type,
-  author,
-  source,
+  shortTitle,
+  publication,
   year,
-  isActive,
+  articleTitle,
+  bookTitle,
+  author,
+  content,
   citation,
+  isActive,
   onCloseModal
 }) => {
   const modal = document.getElementById('modal-card');
@@ -63,9 +68,11 @@ const Anecdote = ({
               <Col lg={7} className="bg-white pt-8">
                 <div className="small-body mb-1">{shortTitle}</div>
                 <div className="small-body mb-12">{type}</div>
-                <div className="large-headline mb-2">{source}</div>
+                <div className="large-headline mb-2">
+                  {bookTitle ? bookTitle : articleTitle}
+                </div>
                 <div className="small-headline mb-16">
-                  {author}, {year}
+                  {author},{publication && ` ${publication},`} {year}
                 </div>
               </Col>
               <Col lg={2} className="bg-white" />
@@ -73,23 +80,19 @@ const Anecdote = ({
               <Col lg={2} />
               <Col lg={2} className="bg-white" />
               <Col lg={6} className="bg-white pb-8">
-                <div>
-                  <div className="medium-body pb-16">
-                    The students regarded Hu Yaobang not only as a champion of
-                    liberalisation but also as one of the few top government
-                    leaders not tainted by official corruption. Within hours of
-                    the death of this beloved figure, before official
-                    announcements had been made, students on campuses had begun
-                    posting elegies. One of the most frequently quoted poems
-                    began with the haunting couplet:
-                    <br />
-                    <br />
-                    Those who should have died live,
-                    <br />
-                    Those who should have lived have died.
-                  </div>
-                  <div className="small-body">{citation}</div>
-                </div>
+                <>
+                  {content &&
+                    content.map((paragraph, index) => {
+                      return (
+                        <div className="medium-body" key={`paragraph-${index}`}>
+                          {ReactHtmlParser(paragraph)}
+                          <br />
+                          <br />
+                        </div>
+                      );
+                    })}
+                  <Link className="small-body pt-16">{citation}</Link>
+                </>
               </Col>
               <Col lg={2} className="bg-white" />
             </Row>
@@ -101,13 +104,16 @@ const Anecdote = ({
 };
 
 Anecdote.propTypes = {
-  isActive: PropTypes.bool,
   type: PropTypes.string,
   shortTitle: PropTypes.string,
-  author: PropTypes.string,
-  source: PropTypes.string,
+  articleTitle: PropTypes.string,
+  bookTitle: PropTypes.string,
   year: PropTypes.string,
+  author: PropTypes.string,
+  publication: PropTypes.string,
+  content: PropTypes.arrayOf(PropTypes.string),
   citation: PropTypes.string,
+  isActive: PropTypes.bool,
   onCloseModal: PropTypes.func
 };
 
