@@ -38,7 +38,7 @@ const Reflection = ({
       </div>
 
       <div className="h-auto bg-black">
-        <Container className="grid__container border-l border-gray-80">
+        <Container className="grid__container border-l md:border-gray-80 border-black">
           <Header label={`${year.id} ${year.title}`} border={true} />
 
           <SubHeader
