@@ -79,7 +79,7 @@ const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
                     <Col lg={1} md={2} />
                     <Col lg={11} md={10} sm={12} xs={12}>
                       <p
-                        className={`large-headline`}
+                        className={`large-headline text-black`}
                         style={{
                           textIndent: ['lg', 'xl', 'xxl'].includes(screenClass)
                             ? `calc(200%/11)` // indent 2/11 columns for large

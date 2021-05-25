@@ -35,7 +35,7 @@ const ResourceTable = ({ data }) => {
       <Row className={`grid__row`}>
         <Col lg={3} md={2} />
         <Col lg={9} md={10}>
-          <p className={`border-t border-gray-60 pb-4`} />
+          <p className={`border-t border-gray-40 pb-4`} />
         </Col>
       </Row>
       {data.map((entry, index) => {
@@ -56,7 +56,7 @@ const ResourceTable = ({ data }) => {
             >
               <Col lg={3} md={2} />
               <Col lg={4} md={4} sm={4} xs={12} className="small-body">
-                <p className={`text-gray-70`}>
+                <p className={`text-black`}>
                   {ReactHtmlParser(entry.shortTitle)}
                 </p>
               </Col>

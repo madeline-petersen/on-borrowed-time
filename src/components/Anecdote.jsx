@@ -63,25 +63,26 @@ const Anecdote = ({
     <>
       <div id="modal-overlay" className="modal-overlay" />
       <div id="modal-card" className="modal-card">
-        <div className="absolute top-24 background-color right-0">
+        <div className="absolute background-color right-0">
           <Container className="grid__container">
             <Row
               className="grid__row modal-height"
               style={{ overflow: 'scroll' }}
             >
               <span
-                className="close absolute top-8 right-6 z-10"
+                className="close absolute top-5 right-6 z-10"
                 onClick={onClickSpan}
               >
                 <Close20 />
               </span>
+
               {(type === 'Article Excerpt' || type === 'Book Excerpt') && (
                 <>
                   <Col lg={2} />
                   <Col lg={1} className="bg-white" />
-                  <Col lg={7} className="bg-white pt-8">
+                  <Col lg={7} className="bg-white pt-5">
                     <div className="small-body mb-1">
-                      {ReactHtmlParser(shortTitle)}
+                      {shortTitle !== title ? ReactHtmlParser(shortTitle) : ''}
                     </div>
                     <div className="small-body mb-12">{type}</div>
                     <div className="large-headline mb-2">
@@ -97,7 +98,7 @@ const Anecdote = ({
 
                   <Col lg={2} />
                   <Col lg={2} className="bg-white" />
-                  <Col lg={6} className="bg-white pb-8">
+                  <Col lg={6} className="bg-white">
                     <>
                       {preamble && (
                         <div className="small-body">
@@ -117,6 +118,7 @@ const Anecdote = ({
                           );
                         })}
                       <Link className="small-body pt-16">{citation}</Link>
+                      <div className="bottom-spacer" />
                     </>
                   </Col>
                   <Col lg={2} className="bg-white" />
@@ -127,7 +129,10 @@ const Anecdote = ({
                 <>
                   <Col lg={4} />
                   <Col lg={1} className="bg-white" />
-                  <Col lg={6} className="bg-white pt-8">
+                  <Col lg={6} className="bg-white pt-5">
+                    <div className="small-body mb-1">
+                      {shortTitle !== title ? ReactHtmlParser(shortTitle) : ''}
+                    </div>
                     <div className="small-body mb-12">{type}</div>
                     <div className="large-headline mb-2">
                       {ReactHtmlParser(title)}
@@ -147,7 +152,7 @@ const Anecdote = ({
 
                   <Col lg={4} />
                   <Col lg={1} className="bg-white" />
-                  <Col lg={7} className="bg-white pb-8">
+                  <Col lg={7} className="bg-white">
                     {content &&
                       content.map((image, index) => {
                         return (
@@ -160,6 +165,7 @@ const Anecdote = ({
                         );
                       })}
                     <Link className="small-body pt-16">{citation}</Link>
+                    <div className="bottom-spacer" />
                   </Col>
                 </>
               )}
@@ -168,7 +174,10 @@ const Anecdote = ({
                 <>
                   <Col lg={6} />
                   <Col lg={1} className="bg-white" />
-                  <Col lg={5} className="bg-white pt-8 pb-8">
+                  <Col lg={5} className="bg-white pt-5">
+                    <div className="small-body mb-1">
+                      {shortTitle !== title ? ReactHtmlParser(shortTitle) : ''}
+                    </div>
                     <div className="small-body mb-12">{type}</div>
                     <div className="large-headline mb-2">
                       {ReactHtmlParser(title)}
@@ -178,7 +187,6 @@ const Anecdote = ({
                       {publication && `, ${publication}`}
                       {year && `, ${year}`}
                     </div>
-
                     {content &&
                       content.map((paragraph, index) => {
                         return (
@@ -192,6 +200,7 @@ const Anecdote = ({
                         );
                       })}
                     <Link className="small-body pt-16">{citation}</Link>
+                    <div className="bottom-spacer" />
                   </Col>
                 </>
               )}

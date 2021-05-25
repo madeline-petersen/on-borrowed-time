@@ -37,12 +37,18 @@
 }
 
 .modal-height {
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 78px);
 }
 
 .background-color {
   background: linear-gradient(90deg, transparent 50%, white 50%);
   width: 100%;
+  top: 78px;
+  bottom: 0;
+}
+
+.bottom-spacer {
+  height: 120px;
 }
 
 /* The Close Button */
