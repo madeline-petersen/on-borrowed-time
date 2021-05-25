@@ -110,12 +110,11 @@
               ],
               "resources": [
                 {
-                  "type": "",
+                  "type": "Book Excerpt",
                   "shortTitle": "&ldquo;Staying&rdquo;",
-                  "bookTitle": "",
-                  "articleTitle": "",
-                  "year": "",
-                  "author": "",
+                  "bookTitle": "The People&rsquo;s Republic of Amnesia",
+                  "year": "2014",
+                  "author": "Author",
                   "content": [],
                   "citation": "",
                   "linkTo": ""
@@ -124,9 +123,8 @@
                   "type": "Poem",
                   "shortTitle": "Tonight Marshall Law was Imposed",
                   "poemTitle": "Tonight Marshall Law was Imposed",
-                  "bookTitle": "",
-                  "articleTitle": "",
-                  "year": "",
+                  "publication": "Poems from Tiananmen Square",
+                  "year": "1989",
                   "author": "Written anomously",
                   "preamble": "&ldquo;Tonight Marshall Law was Imposed&rdquo; was one of a collection of anonymously written poems posted around Tiananmen Square in the lead up to the military crackdown. These poems were later gathered from the Square, faxed to Hong Kong, and then to Taiwan, where they were published in the China Times and translated into multiple foreign languages.",
                   "content": [
@@ -177,24 +175,25 @@
                   "linkTo": ""
                 },
                 {
-                  "type": "",
+                  "type": "Book Excerpt",
                   "shortTitle": "Capturing Tank Man",
-                  "bookTitle": "",
+                  "bookTitle": "The Documentary Impulse",
                   "articleTitle": "",
-                  "year": "",
-                  "author": "",
+                  "year": "2016",
+                  "author": "Author",
                   "content": [],
                   "citation": "",
                   "linkTo": ""
                 },
                 {
-                  "type": "",
+                  "type": "Imagery",
                   "shortTitle": "Eyewitness Accounts of Massacre",
-                  "bookTitle": "",
-                  "articleTitle": "",
-                  "year": "",
-                  "author": "",
-                  "content": [],
+                  "articleTitle": "Eyewitness Accounts of Massacre",
+                  "publication": "Asian Cha",
+                  "year": "1989",
+                  "author": "Scott Savitt",
+                  "preamble": "&ldquo;Tonight Marshall Law was Imposed&rdquo; was one of a collection of anonymously written poems posted around Tiananmen Square in the lead up to the military crackdown. These poems were later gathered from the Square, faxed to Hong Kong, and then to Taiwan, where they were published in the China Times and translated into multiple foreign languages.",
+                  "content": ["tanks", "car"],
                   "citation": "",
                   "linkTo": ""
                 }

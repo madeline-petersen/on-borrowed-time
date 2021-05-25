@@ -7,6 +7,17 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import candles from '../images/candles.png';
+import car from '../images/car.png';
+import crowd from '../images/crowd.png';
+import tanks from '../images/tanks.png';
+
+const imageLookup = {
+  car: car,
+  crowd: crowd,
+  tanks: tanks,
+  candles: candles
+};
 
 const Anecdote = ({
   type,
@@ -15,6 +26,7 @@ const Anecdote = ({
   year,
   title,
   author,
+  preamble,
   content,
   citation,
   isActive,
@@ -68,12 +80,17 @@ const Anecdote = ({
                   <Col lg={2} />
                   <Col lg={1} className="bg-white" />
                   <Col lg={7} className="bg-white pt-8">
-                    <div className="small-body mb-1">{shortTitle}</div>
+                    <div className="small-body mb-1">
+                      {ReactHtmlParser(shortTitle)}
+                    </div>
                     <div className="small-body mb-12">{type}</div>
-                    <div className="large-headline mb-2">{title}</div>
+                    <div className="large-headline mb-2">
+                      {ReactHtmlParser(title)}
+                    </div>
                     <div className="small-headline mb-16">
                       {author}
-                      {publication && `, ${publication},`} {year && `, ${year}`}
+                      {publication && `, ${publication}`}
+                      {year && `, ${year}`}
                     </div>
                   </Col>
                   <Col lg={2} className="bg-white" />
@@ -82,6 +99,11 @@ const Anecdote = ({
                   <Col lg={2} className="bg-white" />
                   <Col lg={6} className="bg-white pb-8">
                     <>
+                      {preamble && (
+                        <div className="small-body">
+                          {ReactHtmlParser(preamble)}
+                        </div>
+                      )}
                       {content &&
                         content.map((paragraph, index) => {
                           return (
@@ -100,15 +122,60 @@ const Anecdote = ({
                   <Col lg={2} className="bg-white" />
                 </>
               )}
+
+              {type === 'Imagery' && (
+                <>
+                  <Col lg={4} />
+                  <Col lg={1} className="bg-white" />
+                  <Col lg={6} className="bg-white pt-8">
+                    <div className="small-body mb-12">{type}</div>
+                    <div className="large-headline mb-2">
+                      {ReactHtmlParser(title)}
+                    </div>
+                    <div className="small-headline mb-16">
+                      {author}
+                      {publication && `, ${publication}`}
+                      {year && `, ${year}`}
+                    </div>
+                    {preamble && (
+                      <div className="small-body mb-16">
+                        {ReactHtmlParser(preamble)}
+                      </div>
+                    )}
+                  </Col>
+                  <Col lg={1} className="bg-white" />
+
+                  <Col lg={4} />
+                  <Col lg={1} className="bg-white" />
+                  <Col lg={7} className="bg-white pb-8">
+                    {content &&
+                      content.map((image, index) => {
+                        return (
+                          <div
+                            className="aspect-ratio-container bg-gray-20 mb-8"
+                            key={`image-${index}`}
+                          >
+                            {/* <img src={imageLookup[image]} alt="" /> */}
+                          </div>
+                        );
+                      })}
+                    <Link className="small-body pt-16">{citation}</Link>
+                  </Col>
+                </>
+              )}
+
               {type === 'Poem' && (
                 <>
                   <Col lg={6} />
                   <Col lg={1} className="bg-white" />
                   <Col lg={5} className="bg-white pt-8 pb-8">
                     <div className="small-body mb-12">{type}</div>
-                    <div className="large-headline mb-2">{title}</div>
+                    <div className="large-headline mb-2">
+                      {ReactHtmlParser(title)}
+                    </div>
                     <div className="small-headline mb-16">
-                      {author} {publication && `, ${publication},`}
+                      {author}
+                      {publication && `, ${publication}`}
                       {year && `, ${year}`}
                     </div>
 
@@ -143,6 +210,7 @@ Anecdote.propTypes = {
   year: PropTypes.string,
   author: PropTypes.string,
   publication: PropTypes.string,
+  preamble: PropTypes.string,
   content: PropTypes.arrayOf(PropTypes.string),
   citation: PropTypes.string,
   isActive: PropTypes.bool,

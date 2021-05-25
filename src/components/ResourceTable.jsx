@@ -62,7 +62,9 @@ const ResourceTable = ({ data }) => {
               </Col>
               <Col lg={3} md={3} sm={4} xs={12} className="small-body">
                 <p className={`text-gray-70`}>
-                  {entry.bookTitle ? entry.bookTitle : entry.publication}
+                  {ReactHtmlParser(
+                    `${entry.bookTitle ? entry.bookTitle : entry.publication}`
+                  )}
                 </p>
               </Col>
               <Col
