@@ -59,7 +59,7 @@ const UIShell = props => {
       >
         &#8226;
       </span>
-      <span className="absolute bottom-14 text-3xl cursor-pointer z-10 left-timeline contrast-text medium-caption">
+      <span className="absolute bottom-5 text-3xl cursor-pointer z-10 left-timeline contrast-text medium-caption">
         {props.years.map((year, index) => {
           let classes = isNewYear ? 'timeline-animation' : 'static-margin';
 
