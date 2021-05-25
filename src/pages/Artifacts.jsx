@@ -110,7 +110,7 @@ Artifacts.propTypes = {
   romanSceneNumber: PropTypes.string,
   artifacts: PropTypes.shape(),
   next: PropTypes.shape(),
-  nextParams: PropTypes.string
+  nextParams: PropTypes.shape()
 };
 
 export default Artifacts;

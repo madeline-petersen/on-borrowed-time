@@ -85,7 +85,7 @@ const Event = ({
       </span>
 
       <div className="h-auto bg-gray-30">
-        <Container className="grid__container border-l border-gray-60">
+        <Container className="grid__container border-l md:border-gray-60 border-gray-30">
           <Header label={`${year.id} ${year.title}`} border={true} />
 
           <Row className="grid__row shrink-animation">
@@ -156,7 +156,7 @@ Event.propTypes = {
   romanSceneNumber: PropTypes.string,
   event: PropTypes.shape(),
   next: PropTypes.shape(),
-  nextParams: PropTypes.string
+  nextParams: PropTypes.shape()
 };
 
 export default Event;

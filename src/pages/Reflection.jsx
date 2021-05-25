@@ -109,7 +109,7 @@ Reflection.propTypes = {
   romanSceneNumber: PropTypes.string,
   reflection: PropTypes.shape(),
   next: PropTypes.shape(),
-  nextParams: PropTypes.string,
+  nextParams: PropTypes.shape(),
   changingParam: PropTypes.string
 };
 

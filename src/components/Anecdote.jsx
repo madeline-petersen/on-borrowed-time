@@ -117,7 +117,9 @@ const Anecdote = ({
                             </div>
                           );
                         })}
-                      <Link className="small-body pt-16">{citation}</Link>
+                      <Link to="" className="small-body pt-16">
+                        {citation}
+                      </Link>
                       <div className="bottom-spacer" />
                     </>
                   </Col>
@@ -164,7 +166,9 @@ const Anecdote = ({
                           </div>
                         );
                       })}
-                    <Link className="small-body pt-16">{citation}</Link>
+                    <Link to="" className="small-body pt-16">
+                      {citation}
+                    </Link>
                     <div className="bottom-spacer" />
                   </Col>
                 </>
@@ -199,7 +203,9 @@ const Anecdote = ({
                           </div>
                         );
                       })}
-                    <Link className="small-body pt-16">{citation}</Link>
+                    <Link to="" className="small-body pt-16">
+                      {citation}
+                    </Link>
                     <div className="bottom-spacer" />
                   </Col>
                 </>

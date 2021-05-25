@@ -79,7 +79,7 @@ Footer.defaultProps = {
 };
 
 Footer.propTypes = {
-  nextParams: PropTypes.string,
+  nextParams: PropTypes.shape(),
   next: PropTypes.shape(),
   setClicked: PropTypes.func,
   theme: PropTypes.shape(),
