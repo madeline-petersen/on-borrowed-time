@@ -103,6 +103,7 @@ function Page() {
     case 'event':
       return (
         <Event
+          years={data.years}
           year={year}
           scene={scene}
           romanSceneNumber={romanSceneNumber}

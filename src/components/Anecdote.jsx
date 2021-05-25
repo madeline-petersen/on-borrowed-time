@@ -60,7 +60,7 @@ const Anecdote = ({
   };
 
   return (
-    <>
+    <div className="anecdote">
       <div id="modal-overlay" className="modal-overlay" />
       <div id="modal-card" className="modal-card">
         <div className="absolute background-color right-0">
@@ -208,7 +208,7 @@ const Anecdote = ({
           </Container>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

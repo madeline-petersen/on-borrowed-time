@@ -5,16 +5,35 @@ import React, { useEffect, useState } from 'react';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import LeftMenu from '../components/LeftMenu';
 import PropTypes from 'prop-types';
 import ResourceTable from '../components/ResourceTable';
 import SubHeader from '../components/SubHeader';
 import { useScreenClass } from 'react-grid-system';
 
-const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
+const Event = ({
+  years,
+  year,
+  scene,
+  romanSceneNumber,
+  event,
+  nextParams,
+  next
+}) => {
+  const [isModalActive, setIsModalActive] = useState(false);
+  const [isClicked, setClicked] = useState(false);
+
+  const openLeftMenu = entry => {
+    setIsModalActive(true);
+  };
+
+  const onCloseLeftMenu = () => {
+    setIsModalActive(false);
+  };
+
   const screenClass = useScreenClass();
   const start = 'gray-30';
   const end = 'black';
-  const [isClicked, setClicked] = useState(false);
 
   useEffect(() => {
     setTimeout(function() {
@@ -52,6 +71,18 @@ const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
           }`}
         />
       </div>
+
+      <LeftMenu
+        isActive={isModalActive}
+        onCloseLeftMenu={onCloseLeftMenu}
+        years={years}
+      />
+      <span
+        className="close absolute top-2 left-6 text-3xl cursor-pointer"
+        onClick={openLeftMenu}
+      >
+        &#8226;
+      </span>
 
       <div className="h-auto bg-gray-30">
         <Container className="grid__container border-l border-gray-60">
@@ -119,6 +150,7 @@ const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
 };
 
 Event.propTypes = {
+  years: PropTypes.arrayOf(PropTypes.shape()),
   year: PropTypes.shape(),
   scene: PropTypes.shape(),
   romanSceneNumber: PropTypes.string,
