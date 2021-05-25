@@ -1,5 +1,5 @@
 .left-menu {
-  .modal-card {
+  .menu-card {
     position: fixed; /* Stay in place */
     z-index: 2; /* Sit on top */
     left: 0;
@@ -16,7 +16,7 @@
     -webkit-transition: transform 1s;
   }
 
-  .modal-overlay {
+  .menu-overlay {
     opacity: 0;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -36,7 +36,7 @@
     -webkit-transition: transform 0s, opacity 1s;
   }
 
-  .modal-height {
+  .menu-height {
     height: calc(100vh - 78px);
   }
 

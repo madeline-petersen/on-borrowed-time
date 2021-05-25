@@ -20,15 +20,15 @@ const Event = ({
   nextParams,
   next
 }) => {
-  const [isModalActive, setIsModalActive] = useState(false);
+  const [isMenuActive, setIsMenuActive] = useState(false);
   const [isClicked, setClicked] = useState(false);
 
   const openLeftMenu = entry => {
-    setIsModalActive(true);
+    setIsMenuActive(true);
   };
 
   const onCloseLeftMenu = () => {
-    setIsModalActive(false);
+    setIsMenuActive(false);
   };
 
   const screenClass = useScreenClass();
@@ -73,7 +73,7 @@ const Event = ({
       </div>
 
       <LeftMenu
-        isActive={isModalActive}
+        isActive={isMenuActive}
         onCloseLeftMenu={onCloseLeftMenu}
         years={years}
       />

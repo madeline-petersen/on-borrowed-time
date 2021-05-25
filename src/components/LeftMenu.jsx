@@ -9,11 +9,11 @@ import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 
 const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
-  const modal = document.getElementById('modal-card');
-  const overlay = document.getElementById('modal-overlay');
+  const menu = document.getElementById('menu-card');
+  const overlay = document.getElementById('menu-overlay');
 
   if (isActive) {
-    modal.style.transform = 'translateX(0%)';
+    menu.style.transform = 'translateX(0%)';
     overlay.style.transform = 'translateX(0%)';
     overlay.style.opacity = '1';
   }
@@ -23,13 +23,13 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
   };
 
   window.onclick = function(event) {
-    if (event.target === modal) {
+    if (event.target === menu) {
       closeModal();
     }
   };
 
   const closeModal = () => {
-    modal.style.transform = 'translateX(-100%)';
+    menu.style.transform = 'translateX(-100%)';
     overlay.style.transform = 'translateX(-100%)';
     overlay.style.opacity = '0';
     onCloseLeftMenu();
@@ -37,11 +37,11 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
 
   return (
     <div className="left-menu">
-      <div id="modal-overlay" className="modal-overlay" />
-      <div id="modal-card" className="modal-card">
+      <div id="menu-overlay" className="menu-overlay" />
+      <div id="menu-card" className="menu-card">
         <div className="absolute background-color right-0">
           <Container className="grid__container">
-            <Row className="grid__row modal-height cursor-pointer">
+            <Row className="grid__row menu-height cursor-pointer">
               <Col lg={1} className="bg-black h-screen">
                 <div className="flex flex-col h-full justify-end pb-14">
                   {years.map((year, index) => (
