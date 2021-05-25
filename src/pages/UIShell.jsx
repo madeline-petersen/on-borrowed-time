@@ -10,6 +10,7 @@ import Reflection from './Reflection.jsx';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
+  const [isClicked, setClicked] = useState(false);
 
   const openLeftMenu = () => {
     setIsMenuActive(true);
@@ -22,17 +23,28 @@ const UIShell = props => {
   let pageComponent;
   switch (props.pageId) {
     case 'event':
-      pageComponent = <Event {...props} />;
+      pageComponent = (
+        <Event {...props} isClicked={isClicked} setClicked={setClicked} />
+      );
       break;
     case 'artifacts':
-      pageComponent = <Artifacts {...props} />;
+      pageComponent = (
+        <Artifacts {...props} isClicked={isClicked} setClicked={setClicked} />
+      );
       break;
     case 'reflection':
-      pageComponent = <Reflection {...props} />;
+      pageComponent = (
+        <Reflection {...props} isClicked={isClicked} setClicked={setClicked} />
+      );
       break;
     default:
-      pageComponent = <Event {...props} />;
+      pageComponent = (
+        <Event {...props} isClicked={isClicked} setClicked={setClicked} />
+      );
   }
+
+  let isNewYear = props.pageId === 'event' && props.romanSceneNumber === 'I';
+  let isYearEnd = props.isLastScene && props.isLastPage;
 
   return (
     <>
@@ -48,16 +60,19 @@ const UIShell = props => {
         &#8226;
       </span>
       <span className="absolute bottom-14 text-3xl cursor-pointer z-10 left-timeline contrast-text medium-caption">
-        {props.years.map((year, index) => (
-          <div
-            key={index}
-            className={`pb-2.5 ${
-              year.id === props.year.id ? 'opacity-100 mb-12' : 'opacity-60'
-            }`}
-          >
-            {year.id}
-          </div>
-        ))}
+        {props.years.map((year, index) => {
+          let classes = isNewYear ? 'timeline-animation' : 'static-margin';
+
+          return year.id === props.year.id ? (
+            <div key={index} className={`pb-2.5 opacity-100 ${classes}`}>
+              {year.id}
+            </div>
+          ) : (
+            <div key={index} className={`pb-2.5 opacity-60`}>
+              {year.id}
+            </div>
+          );
+        })}
       </span>
       {pageComponent}
     </>
@@ -67,6 +82,9 @@ const UIShell = props => {
 UIShell.propTypes = {
   pageId: PropTypes.string,
   year: PropTypes.shape,
+  romanSceneNumber: PropTypes.string,
+  isLastScene: PropTypes.bool,
+  isLastPage: PropTypes.bool,
   years: PropTypes.arrayOf(PropTypes.shape)
 };
 

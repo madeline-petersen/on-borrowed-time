@@ -1,7 +1,7 @@
 import './Event.scss';
 
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -10,8 +10,16 @@ import ResourceTable from '../components/ResourceTable';
 import SubHeader from '../components/SubHeader';
 import { useScreenClass } from 'react-grid-system';
 
-const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
-  const [isClicked, setClicked] = useState(false);
+const Event = ({
+  year,
+  scene,
+  romanSceneNumber,
+  event,
+  nextParams,
+  next,
+  isClicked,
+  setClicked
+}) => {
   const screenClass = useScreenClass();
   const start = 'gray-30';
   const end = 'black';
@@ -105,7 +113,9 @@ Event.propTypes = {
   romanSceneNumber: PropTypes.string,
   event: PropTypes.shape(),
   next: PropTypes.shape(),
-  nextParams: PropTypes.shape()
+  nextParams: PropTypes.shape(),
+  isClicked: PropTypes.bool,
+  setClicked: PropTypes.func
 };
 
 export default Event;

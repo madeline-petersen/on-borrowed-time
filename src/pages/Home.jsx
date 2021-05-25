@@ -41,20 +41,23 @@ const Home = () => {
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+    let demo = document.getElementById('demo');
     // Output the result in an element with id="demo"
-    document.getElementById('demo').innerHTML =
-      days +
-      ' days ' +
-      makeMeTwoDigits(hours) +
-      ':' +
-      makeMeTwoDigits(minutes) +
-      ':' +
-      makeMeTwoDigits(seconds);
+    if (demo !== null) {
+      demo.innerHTML =
+        days +
+        ' days ' +
+        makeMeTwoDigits(hours) +
+        ':' +
+        makeMeTwoDigits(minutes) +
+        ':' +
+        makeMeTwoDigits(seconds);
 
-    // If the count down is over, write some text
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById('demo').innerHTML = 'EXPIRED';
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        demo.innerHTML = 'EXPIRED';
+      }
     }
   }, 1000);
 
