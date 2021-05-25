@@ -47,7 +47,7 @@ const Artifacts = ({
       </div>
 
       <div className="h-auto bg-black">
-        <Container className="grid__container border-l md:border-gray-60 border-black">
+        <Container className="grid__container border-l lg:border-gray-60 border-black">
           <Header label={`${year.id} ${year.title}`} border={true} />
 
           <SubHeader romanSceneNumber={romanSceneNumber} title={scene.title} />

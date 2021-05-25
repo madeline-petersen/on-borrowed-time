@@ -1,9 +1,23 @@
 @import '../variables/';
 
 .left-menu-bullet {
+  top: 7px;
   left: 24px;
 
   @media screen and (max-width: $md) {
     left: 12px;
+  }
+}
+
+.left-timeline {
+  left: calc(3rem + 0.75rem);
+  z-index: 1;
+
+  @media screen and (max-width: $xl-minus-1) {
+    left: 70px;
+  }
+
+  @media screen and (max-width: $lg-minus-1) {
+    display: none;
   }
 }

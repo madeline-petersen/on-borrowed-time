@@ -42,10 +42,22 @@ const UIShell = props => {
         years={props.years}
       />
       <span
-        className="close absolute top-2 text-3xl cursor-pointer z-10 left-menu-bullet contrast-text"
+        className="absolute text-3xl cursor-pointer z-10 left-menu-bullet contrast-text"
         onClick={openLeftMenu}
       >
         &#8226;
+      </span>
+      <span className="absolute bottom-14 text-3xl cursor-pointer z-10 left-timeline contrast-text medium-caption">
+        {props.years.map((year, index) => (
+          <div
+            key={index}
+            className={`pb-2.5 ${
+              year.id === props.year.id ? 'opacity-100 mb-12' : 'opacity-60'
+            }`}
+          >
+            {year.id}
+          </div>
+        ))}
       </span>
       {pageComponent}
     </>
@@ -54,6 +66,7 @@ const UIShell = props => {
 
 UIShell.propTypes = {
   pageId: PropTypes.string,
+  year: PropTypes.shape,
   years: PropTypes.arrayOf(PropTypes.shape)
 };
 
