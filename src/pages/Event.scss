@@ -1,6 +1,7 @@
 $a: 78px;
 $halfHeight: calc(50vh - #{$a});
 $quarterHeight: calc(30vh - #{$a});
+@import '../variables/';
 
 // Animations
 @keyframes scene-animation {
@@ -92,4 +93,12 @@ $quarterHeight: calc(30vh - #{$a});
 
 .intro-paragraph {
   padding-top: calc(#{$quarterHeight} - 20px);
+}
+
+.left-menu-bullet {
+  left: 24px;
+
+  @media screen and (max-width: $md) {
+    left: 12px;
+  }
 }

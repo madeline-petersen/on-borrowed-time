@@ -78,7 +78,7 @@ const Event = ({
         years={years}
       />
       <span
-        className="close absolute top-2 left-6 text-3xl cursor-pointer"
+        className="close absolute top-2 text-3xl cursor-pointer left-menu-bullet"
         onClick={openLeftMenu}
       >
         &#8226;
