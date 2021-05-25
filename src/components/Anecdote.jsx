@@ -7,17 +7,18 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
-import candles from '../images/candles.png';
-import car from '../images/car.png';
-import crowd from '../images/crowd.png';
-import tanks from '../images/tanks.png';
 
-const imageLookup = {
-  car: car,
-  crowd: crowd,
-  tanks: tanks,
-  candles: candles
-};
+// import candles from '../images/candles.png';
+// import car from '../images/car.png';
+// import crowd from '../images/crowd.png';
+// import tanks from '../images/tanks.png';
+
+// const imageLookup = {
+//   car: car,
+//   crowd: crowd,
+//   tanks: tanks,
+//   candles: candles
+// };
 
 const Anecdote = ({
   type,
@@ -34,7 +35,6 @@ const Anecdote = ({
 }) => {
   const modal = document.getElementById('modal-card');
   const overlay = document.getElementById('modal-overlay');
-  console.log('title ', title);
 
   if (isActive) {
     modal.style.transform = 'translateX(0%)';
