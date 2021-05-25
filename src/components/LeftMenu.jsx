@@ -39,7 +39,7 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
     <div className="left-menu">
       <div id="menu-overlay" className="menu-overlay" />
       <div id="menu-card" className="menu-card">
-        <div className="absolute background-color right-0">
+        <div className="absolute background-color">
           <Container className="grid__container">
             <Row className="grid__row menu-height cursor-pointer">
               <Col lg={1} className="bg-black h-screen">
