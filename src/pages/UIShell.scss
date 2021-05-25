@@ -1,0 +1,9 @@
+@import '../variables/';
+
+.left-menu-bullet {
+  left: 24px;
+
+  @media screen and (max-width: $md) {
+    left: 12px;
+  }
+}

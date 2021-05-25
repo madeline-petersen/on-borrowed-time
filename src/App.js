@@ -7,15 +7,13 @@ import {
   useParams
 } from 'react-router-dom';
 
-import Artifacts from './pages/Artifacts.jsx';
-import Event from './pages/Event.jsx';
 import GridHelper from './helpers/GridHelper.jsx';
 import Home from './pages/Home.jsx';
 import Index from './pages/Index.jsx';
 import React from 'react';
-import Reflection from './pages/Reflection.jsx';
 import { ScreenClassProvider } from 'react-grid-system';
 import ScrollToTop from './ScrollToTop.jsx';
+import UIShell from './pages/UIShell.jsx';
 import data from './data/years.json';
 import { roman } from '@sguest/roman-js';
 import { setConfiguration } from 'react-grid-system';
@@ -99,57 +97,21 @@ function Page() {
         page: nextPage.type // next page;
       }; // Scene {romanSceneNumber}  nextPage.title
 
-  switch (pageId) {
-    case 'event':
-      return (
-        <Event
-          years={data.years}
-          year={year}
-          scene={scene}
-          romanSceneNumber={romanSceneNumber}
-          event={page}
-          next={next}
-          nextParams={nextParams}
-        />
-      );
-      break;
-    case 'artifacts':
-      return (
-        <Artifacts
-          year={year}
-          scene={scene}
-          romanSceneNumber={romanSceneNumber}
-          artifacts={page}
-          next={next}
-          nextParams={nextParams}
-        />
-      );
-      break;
-    case 'reflection':
-      return (
-        <Reflection
-          year={year}
-          scene={scene}
-          romanSceneNumber={romanSceneNumber}
-          reflection={page}
-          next={next}
-          nextParams={nextParams}
-          changingParam={changingParam}
-        />
-      );
-      break;
-    default:
-      return (
-        <Event
-          year={year}
-          scene={scene}
-          romanSceneNumber={romanSceneNumber}
-          event={page}
-          next={next}
-          nextParams={nextParams}
-        />
-      );
-  }
+  return (
+    <UIShell
+      pageId={pageId}
+      years={data.years}
+      year={year}
+      scene={scene}
+      romanSceneNumber={romanSceneNumber}
+      event={page}
+      artifacts={page}
+      reflection={page}
+      next={next}
+      nextParams={nextParams}
+      changingParam={changingParam}
+    />
+  );
 }
 
 function App() {

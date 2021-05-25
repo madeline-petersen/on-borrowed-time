@@ -5,32 +5,13 @@ import React, { useEffect, useState } from 'react';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import LeftMenu from '../components/LeftMenu';
 import PropTypes from 'prop-types';
 import ResourceTable from '../components/ResourceTable';
 import SubHeader from '../components/SubHeader';
 import { useScreenClass } from 'react-grid-system';
 
-const Event = ({
-  years,
-  year,
-  scene,
-  romanSceneNumber,
-  event,
-  nextParams,
-  next
-}) => {
-  const [isMenuActive, setIsMenuActive] = useState(false);
+const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
   const [isClicked, setClicked] = useState(false);
-
-  const openLeftMenu = entry => {
-    setIsMenuActive(true);
-  };
-
-  const onCloseLeftMenu = () => {
-    setIsMenuActive(false);
-  };
-
   const screenClass = useScreenClass();
   const start = 'gray-30';
   const end = 'black';
@@ -40,26 +21,6 @@ const Event = ({
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 1000);
   }, []);
-
-  // Get the modal
-  const modal = document.getElementById('myModal');
-
-  // When the user clicks the button, open the modal
-  const onClickBtn = () => {
-    modal.style.display = 'block';
-  };
-
-  // When the user clicks on <span> (x), close the modal
-  const onClickSpan = () => {
-    modal.style.display = 'none';
-  };
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      document.getElementById('myModal').style.display = 'none';
-    }
-  };
 
   return (
     <>
@@ -71,18 +32,6 @@ const Event = ({
           }`}
         />
       </div>
-
-      <LeftMenu
-        isActive={isMenuActive}
-        onCloseLeftMenu={onCloseLeftMenu}
-        years={years}
-      />
-      <span
-        className="close absolute top-2 text-3xl cursor-pointer left-menu-bullet"
-        onClick={openLeftMenu}
-      >
-        &#8226;
-      </span>
 
       <div className="h-auto bg-gray-30">
         <Container className="grid__container border-l md:border-gray-60 border-gray-30">
@@ -104,9 +53,9 @@ const Event = ({
             className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
           >
             <Row className={`grid__row intro-paragraph pb-24`}>
-              {event.paragraphs.map(paragraph => {
+              {event.paragraphs.map((paragraph, index) => {
                 return (
-                  <>
+                  <div key={`paragraph-${index}`} className="contents">
                     <Col lg={1} md={2} />
                     <Col lg={11} md={10} sm={12} xs={12}>
                       <p
@@ -124,7 +73,7 @@ const Event = ({
                         <br />
                       </p>
                     </Col>
-                  </>
+                  </div>
                 );
               })}
             </Row>
