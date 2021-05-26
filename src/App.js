@@ -39,6 +39,35 @@ setConfiguration({
   maxScreenClass: 'xxl'
 });
 
+function Intro() {
+  let { yearId } = useParams();
+
+  let yearIndex = data.years.findIndex(year => year.id === yearId);
+  const year = data.years[yearIndex]; // year, title
+
+  const nextScene = year.scenes[0]; // title, pages
+  const nextRomanSceneNumber = 'I';
+
+  const next = nextScene;
+  const changingParam = 'scene';
+  const nextParams = {
+    year: year.id,
+    scene: `scene-${nextRomanSceneNumber}`, // next scene
+    page: 'event'
+  };
+
+  return (
+    <UIShell
+      pageId="intro"
+      years={data.years}
+      year={year}
+      next={next}
+      changingParam={changingParam}
+      nextParams={nextParams}
+    />
+  );
+}
+
 function Page() {
   let { yearId } = useParams();
   let { sceneId } = useParams();
@@ -127,7 +156,9 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Redirect exact from="/:yearId" to="/:yearId/scene-I/event" />
+            <Route exact path="/:yearId">
+              <Intro />
+            </Route>
             <Redirect
               exact
               from="/:yearId/:sceneId"

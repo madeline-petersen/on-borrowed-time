@@ -1,9 +1,11 @@
 import './UIShell.scss';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import Artifacts from './Artifacts.jsx';
 import Event from './Event.jsx';
+import Header from '../components/Header';
+import Intro from './Intro.jsx';
 import LeftMenu from '../components/LeftMenu';
 import PropTypes from 'prop-types';
 import Reflection from './Reflection.jsx';
@@ -33,6 +35,9 @@ const UIShell = props => {
 
   let pageComponent;
   switch (props.pageId) {
+    case 'intro':
+      pageComponent = <Intro {...props} />;
+      break;
     case 'event':
       pageComponent = <Event {...props} />;
       break;
@@ -51,6 +56,7 @@ const UIShell = props => {
 
   return (
     <>
+      <Header label={`${props.year.id} ${props.year.title}`} border={true} />
       <LeftMenu
         isActive={isMenuActive}
         onCloseLeftMenu={onCloseLeftMenu}

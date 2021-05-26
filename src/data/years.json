@@ -363,7 +363,49 @@
         },
         {
           "title": "Purging the Past",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "paragraphs": [
+                "In the years following the massacre, China began interrogating the memory of Tiananmen Square by censoring the events that occurred on June 4th, 1989. The deadly suppression of protesters became an unspoken moment in China's past, purged from its history books.",
+                "Meanwhile, Hong Kong became a safe haven for democratic activists to commemorate the tragedy of the massacre, as China continued to use insidious tactics to contest the memory of Tiananmen Square."
+              ],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                "Through manipulating its people's collective memory of the past, China reinforced a sense of national amnesia by expunging the Tiananmen Square Massacre from its history. Vigils in Hong Kong served as a reminder of the tragic episodes of violence and turmoil. Fearful of its own future, Hong Kong began to be increasingly cognisant of China's ability to exert control and to rewrite its own narrative.",
+                "&ldquo;I had left China when I was too young to know about censorship, when I was just being introduced to the written word and to the stories that written words told. It would never have occurred to me, or, perhaps, to any child, to question the history books, because that would have seemed like an interrogation of reality itself. In China, the past is never past, but it is frequently purged. The story is rewritten, the narrative reframed, the villains and the heroes recast. There is a hallucinatory quality to such a society, as if you are living a life that does not and never can fully belong to you.&rdquo; (Fan, The New Yorker, 2019)"
+              ]
+            }
+          ]
         }
       ]
     },

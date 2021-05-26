@@ -2,7 +2,6 @@ import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect, useState } from 'react';
 
 import Footer from '../components/Footer';
-import Header from '../components/Header';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import SubHeader from '../components/SubHeader';
@@ -39,8 +38,6 @@ const Reflection = ({
 
       <div className="h-auto bg-black">
         <Container className="grid__container border-l lg:border-gray-60 border-black min-h-screen">
-          <Header label={`${year.id} ${year.title}`} border={true} />
-
           <SubHeader
             romanSceneNumber={romanSceneNumber}
             title={scene.title}

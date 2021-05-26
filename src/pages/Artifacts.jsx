@@ -2,7 +2,6 @@ import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect, useState } from 'react';
 
 import Footer from '../components/Footer';
-import Header from '../components/Header';
 import PropTypes from 'prop-types';
 import SubHeader from '../components/SubHeader';
 import candles from '../images/candles.png';
@@ -22,6 +21,7 @@ const Artifacts = ({
   scene,
   romanSceneNumber,
   artifacts,
+  changingParam,
   nextParams,
   next
 }) => {
@@ -48,8 +48,6 @@ const Artifacts = ({
 
       <div className="h-auto bg-black">
         <Container className="grid__container border-l lg:border-gray-60 border-black min-h-screen">
-          <Header label={`${year.id} ${year.title}`} border={true} />
-
           <SubHeader romanSceneNumber={romanSceneNumber} title={scene.title} />
 
           {/* Reflection */}
@@ -89,7 +87,7 @@ const Artifacts = ({
             <Footer
               nextParams={nextParams}
               next={next}
-              changingParam={'page'}
+              changingParam={changingParam}
               setClicked={setClicked}
               theme={{
                 background: 'black',
@@ -110,7 +108,8 @@ Artifacts.propTypes = {
   romanSceneNumber: PropTypes.string,
   artifacts: PropTypes.shape(),
   next: PropTypes.shape(),
-  nextParams: PropTypes.shape()
+  nextParams: PropTypes.shape(),
+  changingParam: PropTypes.string
 };
 
 export default Artifacts;

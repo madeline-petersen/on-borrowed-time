@@ -4,13 +4,20 @@ import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect, useState } from 'react';
 
 import Footer from '../components/Footer';
-import Header from '../components/Header';
 import PropTypes from 'prop-types';
 import ResourceTable from '../components/ResourceTable';
 import SubHeader from '../components/SubHeader';
 import { useScreenClass } from 'react-grid-system';
 
-const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
+const Event = ({
+  year,
+  scene,
+  romanSceneNumber,
+  event,
+  nextParams,
+  changingParam,
+  next
+}) => {
   const [isClicked, setClicked] = useState(false);
   const screenClass = useScreenClass();
   const start = 'gray-30';
@@ -35,8 +42,6 @@ const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
 
       <div className="h-auto bg-gray-30">
         <Container className="grid__container border-l lg:border-gray-60 border-gray-30 min-h-screen">
-          <Header label={`${year.id} ${year.title}`} border={true} />
-
           <Row className="grid__row shrink-animation">
             <Col lg={12} md={12} sm={12} xs={12} />
           </Row>
@@ -85,7 +90,7 @@ const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
               <Footer
                 nextParams={nextParams}
                 next={next}
-                changingParam={'page'}
+                changingParam={changingParam}
                 setClicked={setClicked}
                 isClicked={isClicked}
                 theme={{
@@ -109,7 +114,8 @@ Event.propTypes = {
   romanSceneNumber: PropTypes.string,
   event: PropTypes.shape(),
   next: PropTypes.shape(),
-  nextParams: PropTypes.shape()
+  nextParams: PropTypes.shape(),
+  changingParam: PropTypes.string
 };
 
 export default Event;

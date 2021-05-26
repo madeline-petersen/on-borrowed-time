@@ -48,6 +48,10 @@ $quarterHeight: calc(30vh - #{$a});
   animation-fill-mode: forwards;
 }
 
+.subheader p {
+  margin-top: 34px;
+}
+
 .title-animation {
   opacity: 0;
   animation-name: title-animation;
