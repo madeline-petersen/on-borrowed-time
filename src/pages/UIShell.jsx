@@ -26,9 +26,9 @@ const UIShell = props => {
   const onClickYear = year => {
     setYearIsClicked(true);
     setTimeout(function() {
-      // executed after 2 seconds
+      // executed after 1 second
       history.push(`/${year}`);
-    }, 2000);
+    }, 1000);
   };
 
   let pageComponent;
