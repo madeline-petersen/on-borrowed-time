@@ -2,7 +2,21 @@
   "years": [
     {
       "id": "1984",
-      "title": "The Prelude"
+      "title": "The Prelude",
+      "scenes": [
+        {
+          "title": "On the Question of Hong Kong",
+          "pages": []
+        },
+        {
+          "title": "A Borrowed Place, On Borrowed Time",
+          "pages": []
+        },
+        {
+          "title": "A Discourse on Semantics",
+          "pages": []
+        }
+      ]
     },
     {
       "id": "1989",
@@ -226,7 +240,7 @@
           ]
         },
         {
-          "title": "A New Diasporic Condition",
+          "title": "A Compromising Position",
           "pages": [
             {
               "type": "event",
@@ -288,7 +302,7 @@
           ]
         },
         {
-          "title": "Purging the Past",
+          "title": "A New Diasporic Condition",
           "pages": [
             {
               "type": "event",
@@ -346,6 +360,10 @@
               ]
             }
           ]
+        },
+        {
+          "title": "Purging the Past",
+          "pages": []
         }
       ]
     },
@@ -355,7 +373,7 @@
       "blurb": "The 1997 handover of Hong Kong marked the beginning of a new disorientation. A sense of uncertainty clouded Hong Kong's future, as the country began its gradual process of transforming from a liberal colony to a communist regime.",
       "scenes": [
         {
-          "title": "Death of an Icon",
+          "title": "The Mass Exodus",
           "pages": [
             {
               "type": "event",
@@ -417,7 +435,7 @@
           ]
         },
         {
-          "title": "Tiananmen Square Massacre",
+          "title": "Amid Changing Symbols",
           "pages": [
             {
               "type": "event",
@@ -475,7 +493,7 @@
           ]
         },
         {
-          "title": "A New Diasporic Condition",
+          "title": "The Handover",
           "pages": [
             {
               "type": "event",
@@ -538,83 +556,70 @@
         },
         {
           "title": "Purging the Past",
-          "pages": [
-            {
-              "type": "event",
-              "title": "Event",
-              "paragraphs": [
-                "In the years following the massacre, China began interrogating the memory of Tiananmen Square by censoring the events that occurred on June 4th, 1989. The deadly suppression of protesters became an unspoken moment in China's past, purged from its history books.",
-                "Meanwhile, Hong Kong became a safe haven for democratic activists to commemorate the tragedy of the massacre, as China continued to use insidious tactics to contest the memory of Tiananmen Square."
-              ],
-              "resources": [
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                },
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                },
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                },
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                }
-              ]
-            },
-            {
-              "type": "artifacts",
-              "title": "Artifacts",
-              "images": [
-                {
-                  "source": "candles",
-                  "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong Kong, Hong Kong. Held to mark the crackdown on the pro-democracy movement in Beijing's Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"
-                },
-                {
-                  "source": "crowd",
-                  "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"
-                }
-              ]
-            },
-            {
-              "type": "reflection",
-              "title": "Reflection",
-              "paragraphs": [
-                "Through manipulating its people's collective memory of the past, China reinforced a sense of national amnesia by expunging the Tiananmen Square Massacre from its history. Vigils in Hong Kong served as a reminder of the tragic episodes of violence and turmoil. Fearful of its own future, Hong Kong began to be increasingly cognisant of China's ability to exert control and to rewrite its own narrative.",
-                "&ldquo;I had left China when I was too young to know about censorship, when I was just being introduced to the written word and to the stories that written words told. It would never have occurred to me, or, perhaps, to any child, to question the history books, because that would have seemed like an interrogation of reality itself. In China, the past is never past, but it is frequently purged. The story is rewritten, the narrative reframed, the villains and the heroes recast. There is a hallucinatory quality to such a society, as if you are living a life that does not and never can fully belong to you.&rdquo; (Fan, The New Yorker, 2019)"
-              ]
-            }
-          ]
+          "pages": []
         }
       ]
     },
     {
       "id": "2003",
-      "title": "An Impossible Dream",
+      "title": "A Question of Patriotism",
       "scenes": [
         {
-          "title": "Death of an Icon",
+          "title": "Implementing Article 23",
+          "pages": []
+        },
+        {
+          "title": "A Confluence of Factors",
+          "pages": []
+        },
+        {
+          "title": "A Historic Demonstration",
+          "pages": []
+        },
+        {
+          "title": "Abrupt Resignations",
+          "pages": []
+        },
+        {
+          "title": "An Attempt at Political Harmony",
+          "pages": []
+        },
+        {
+          "title": "The “Ultimate Aim”",
           "pages": []
         }
       ]
     },
     {
       "id": "2014",
-      "title": "On the Question of Hong Kong",
+      "title": "An Impossible Dream",
       "scenes": [
         {
-          "title": "Death of an Icon",
+          "title": "Occupy Central Love and Peace",
+          "pages": []
+        },
+        {
+          "title": "The White Paper",
+          "pages": []
+        },
+        {
+          "title": "A Civil Referendum",
+          "pages": []
+        },
+        {
+          "title": "Seeking Genuine Suffrage",
+          "pages": []
+        },
+        {
+          "title": "The Umbrella Movement",
+          "pages": []
+        },
+        {
+          "title": "Umbrella Generation",
+          "pages": []
+        },
+        {
+          "title": "A Stalemate",
           "pages": []
         }
       ]

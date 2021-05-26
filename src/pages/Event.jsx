@@ -34,7 +34,7 @@ const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
       </div>
 
       <div className="h-auto bg-gray-30">
-        <Container className="grid__container border-l lg:border-gray-60 border-gray-30">
+        <Container className="grid__container border-l lg:border-gray-60 border-gray-30 min-h-screen">
           <Header label={`${year.id} ${year.title}`} border={true} />
 
           <Row className="grid__row shrink-animation">
