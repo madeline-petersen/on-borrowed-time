@@ -47,14 +47,12 @@
     }
   }
 
-  .clicked {
-    margin-bottom: 0px;
-    transition: margin-bottom 1s;
-  }
-
-  .not-clicked {
+  .reverse-timeline-animation {
     margin-bottom: 120px;
-    transition: margin-bottom 1s;
+    animation-name: reverse-timeline-animation;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
   }
 
   .static-margin {

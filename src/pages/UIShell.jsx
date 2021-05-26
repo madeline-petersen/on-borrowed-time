@@ -10,7 +10,6 @@ import Reflection from './Reflection.jsx';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const [isClicked, setClicked] = useState(false);
 
   const openLeftMenu = () => {
     setIsMenuActive(true);
@@ -23,24 +22,16 @@ const UIShell = props => {
   let pageComponent;
   switch (props.pageId) {
     case 'event':
-      pageComponent = (
-        <Event {...props} isClicked={isClicked} setClicked={setClicked} />
-      );
+      pageComponent = <Event {...props} />;
       break;
     case 'artifacts':
-      pageComponent = (
-        <Artifacts {...props} isClicked={isClicked} setClicked={setClicked} />
-      );
+      pageComponent = <Artifacts {...props} />;
       break;
     case 'reflection':
-      pageComponent = (
-        <Reflection {...props} isClicked={isClicked} setClicked={setClicked} />
-      );
+      pageComponent = <Reflection {...props} />;
       break;
     default:
-      pageComponent = (
-        <Event {...props} isClicked={isClicked} setClicked={setClicked} />
-      );
+      pageComponent = <Event {...props} isClicked={isClicked} />;
   }
 
   let isNewYear = props.pageId === 'event' && props.romanSceneNumber === 'I';
@@ -61,7 +52,11 @@ const UIShell = props => {
       </span>
       <span className="absolute bottom-5 text-3xl cursor-pointer z-10 left-timeline contrast-text medium-caption">
         {props.years.map((year, index) => {
-          let classes = isNewYear ? 'timeline-animation' : 'static-margin';
+          let classes = isNewYear
+            ? 'timeline-animation'
+            : isYearEnd
+            ? 'reverse-timeline-animation'
+            : 'static-margin';
 
           return year.id === props.year.id ? (
             <div key={index} className={`pb-2.5 opacity-100 ${classes}`}>
