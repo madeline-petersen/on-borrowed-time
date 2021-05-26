@@ -11,6 +11,8 @@ import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
+  const [yearIsClicked, setYearIsClicked] = useState(false);
+
   let history = useHistory();
 
   const openLeftMenu = () => {
@@ -22,7 +24,11 @@ const UIShell = props => {
   };
 
   const onClickYear = year => {
-    history.push(`/${year}`);
+    setYearIsClicked(true);
+    setTimeout(function() {
+      // executed after 2 seconds
+      history.push(`/${year}`);
+    }, 2000);
   };
 
   let pageComponent;
@@ -65,7 +71,11 @@ const UIShell = props => {
             : 'static-margin';
 
           return year.id === props.year.id ? (
-            <div key={index} className={`pb-2.5 opacity-100 ${classes}`}>
+            <div
+              key={index}
+              className={`pb-2.5 opacity-100 ${classes} ${yearIsClicked &&
+                'reverse-timeline-animation'}`}
+            >
               {year.id}
             </div>
           ) : (
