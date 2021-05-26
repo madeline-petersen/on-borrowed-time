@@ -1,6 +1,7 @@
 import './App.scss';
 
 import {
+  Redirect,
   Route,
   BrowserRouter as Router,
   Switch,
@@ -43,17 +44,17 @@ function Page() {
   let { sceneId } = useParams();
   let { pageId } = useParams();
 
-  const yearIndex = data.years.findIndex(year => year.id === yearId);
+  let yearIndex = data.years.findIndex(year => year.id === yearId);
   const year = data.years[yearIndex]; // year, title
   const nextYear = data.years[yearIndex + 1];
 
-  const romanSceneNumber = sceneId.split('-')[1].toUpperCase();
+  let romanSceneNumber = sceneId.split('-')[1].toUpperCase();
   const sceneIndex = roman.parseRoman(romanSceneNumber) - 1;
   const scene = year.scenes[sceneIndex]; // title, pages
   const nextScene = year.scenes[sceneIndex + 1]; // title, pages
   const nextRomanSceneNumber = roman.toRoman(sceneIndex + 2);
 
-  const pageIndex = scene.pages.findIndex(page => page.type === pageId);
+  let pageIndex = scene.pages.findIndex(page => page.type === pageId);
   const page = scene.pages[pageIndex];
   const nextPage = scene.pages[pageIndex + 1];
 
@@ -126,6 +127,12 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
+            <Redirect exact from="/:yearId" to="/:yearId/scene-I/event" />
+            <Redirect
+              exact
+              from="/:yearId/:sceneId"
+              to="/:yearId/:sceneId/event"
+            />
             <Route path={`/:yearId/:sceneId/:pageId`}>
               <Page />
             </Route>

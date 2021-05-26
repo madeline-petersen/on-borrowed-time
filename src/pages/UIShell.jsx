@@ -1,15 +1,17 @@
 import './UIShell.scss';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Artifacts from './Artifacts.jsx';
 import Event from './Event.jsx';
 import LeftMenu from '../components/LeftMenu';
 import PropTypes from 'prop-types';
 import Reflection from './Reflection.jsx';
+import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
+  let history = useHistory();
 
   const openLeftMenu = () => {
     setIsMenuActive(true);
@@ -17,6 +19,10 @@ const UIShell = props => {
 
   const onCloseLeftMenu = () => {
     setIsMenuActive(false);
+  };
+
+  const onClickYear = year => {
+    history.push(`/${year}`);
   };
 
   let pageComponent;
@@ -31,7 +37,7 @@ const UIShell = props => {
       pageComponent = <Reflection {...props} />;
       break;
     default:
-      pageComponent = <Event {...props} isClicked={isClicked} />;
+      pageComponent = <Event {...props} />;
   }
 
   let isNewYear = props.pageId === 'event' && props.romanSceneNumber === 'I';
@@ -50,7 +56,7 @@ const UIShell = props => {
       >
         &#8226;
       </span>
-      <span className="absolute bottom-5 text-3xl cursor-pointer z-10 left-timeline contrast-text medium-caption">
+      <span className="absolute bottom-5 text-3xl z-10 left-timeline contrast-text medium-caption">
         {props.years.map((year, index) => {
           let classes = isNewYear
             ? 'timeline-animation'
@@ -63,7 +69,11 @@ const UIShell = props => {
               {year.id}
             </div>
           ) : (
-            <div key={index} className={`pb-2.5 opacity-60`}>
+            <div
+              key={index}
+              className={`pb-2.5 opacity-60 cursor-pointer`}
+              onClick={() => onClickYear(year.id)}
+            >
               {year.id}
             </div>
           );
