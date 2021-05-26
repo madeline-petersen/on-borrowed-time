@@ -48,50 +48,54 @@ const Event = ({ year, scene, romanSceneNumber, event, nextParams, next }) => {
           />
 
           {/* Event */}
-          <div
-            id="overflow-container"
-            className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
-          >
-            <Row className={`grid__row intro-paragraph pb-24`}>
-              {event.paragraphs.map((paragraph, index) => {
-                return (
-                  <div key={`paragraph-${index}`} className="contents">
-                    <Col lg={1} md={2} />
-                    <Col lg={11} md={10} sm={12} xs={12}>
-                      <p
-                        className={`large-headline text-black`}
-                        style={{
-                          textIndent: ['lg', 'xl', 'xxl'].includes(screenClass)
-                            ? `calc(200%/11)` // indent 2/11 columns for large
-                            : ['md'].includes(screenClass)
-                            ? `calc(200%/10)` // indent 2/10 columns for medium
-                            : '0' // indent 0 for small, x-small
-                        }}
-                      >
-                        {paragraph}
-                        <br />
-                        <br />
-                      </p>
-                    </Col>
-                  </div>
-                );
-              })}
-            </Row>
-            <ResourceTable data={event.resources} />
+          {event && (
+            <div
+              id="overflow-container"
+              className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
+            >
+              <Row className={`grid__row intro-paragraph pb-24`}>
+                {event.paragraphs.map((paragraph, index) => {
+                  return (
+                    <div key={`paragraph-${index}`} className="contents">
+                      <Col lg={1} md={2} />
+                      <Col lg={11} md={10} sm={12} xs={12}>
+                        <p
+                          className={`large-headline text-black`}
+                          style={{
+                            textIndent: ['lg', 'xl', 'xxl'].includes(
+                              screenClass
+                            )
+                              ? `calc(200%/11)` // indent 2/11 columns for large
+                              : ['md'].includes(screenClass)
+                              ? `calc(200%/10)` // indent 2/10 columns for medium
+                              : '0' // indent 0 for small, x-small
+                          }}
+                        >
+                          {paragraph}
+                          <br />
+                          <br />
+                        </p>
+                      </Col>
+                    </div>
+                  );
+                })}
+              </Row>
+              <ResourceTable data={event.resources} />
 
-            <Footer
-              nextParams={nextParams}
-              next={next}
-              changingParam={'page'}
-              setClicked={setClicked}
-              isClicked={isClicked}
-              theme={{
-                background: 'gray-30',
-                text: 'black',
-                border: 'gray-60'
-              }}
-            />
-          </div>
+              <Footer
+                nextParams={nextParams}
+                next={next}
+                changingParam={'page'}
+                setClicked={setClicked}
+                isClicked={isClicked}
+                theme={{
+                  background: 'gray-30',
+                  text: 'black',
+                  border: 'gray-60'
+                }}
+              />
+            </div>
+          )}
         </Container>
       </div>
     </>

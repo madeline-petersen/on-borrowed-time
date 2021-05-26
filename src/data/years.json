@@ -1,8 +1,12 @@
 {
   "years": [
     {
+      "id": "1984",
+      "title": "The Prelude"
+    },
+    {
       "id": "1989",
-      "title": "“The June Fourth Incident”",
+      "title": "The June Fourth “Incident”",
       "blurb": "Morbi quis lorem a urna aliquam euismod. In imperdiet placerat diam in pulvinar. Integer eget maximus enim, ut elementum leo. Curabitur ultricies purus dolor, non lobortis metus scelerisque id.",
       "scenes": [
         {
@@ -592,6 +596,46 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "2003",
+      "title": "An Impossible Dream",
+      "scenes": [
+        {
+          "title": "Death of an Icon",
+          "pages": []
+        }
+      ]
+    },
+    {
+      "id": "2014",
+      "title": "On the Question of Hong Kong",
+      "scenes": [
+        {
+          "title": "Death of an Icon",
+          "pages": []
+        }
+      ]
+    },
+    {
+      "id": "2019",
+      "title": "A Summer of Discontent",
+      "scenes": [
+        {
+          "title": "Death of an Icon",
+          "pages": []
+        }
+      ]
+    },
+    {
+      "id": "2020",
+      "title": "A Silent Resistance",
+      "scenes": [
+        {
+          "title": "Death of an Icon",
+          "pages": []
         }
       ]
     }
