@@ -9,11 +9,11 @@ import {
 } from 'react-router-dom';
 
 import GridHelper from './helpers/GridHelper.jsx';
-import Home from './pages/Home.jsx';
 import Index from './pages/Index.jsx';
 import React from 'react';
 import { ScreenClassProvider } from 'react-grid-system';
 import ScrollToTop from './ScrollToTop.jsx';
+import Splash from './pages/Splash.jsx';
 import UIShell from './pages/UIShell.jsx';
 import data from './data/years.json';
 import { roman } from '@sguest/roman-js';
@@ -38,6 +38,13 @@ setConfiguration({
   // The maximum screen class to be used.
   maxScreenClass: 'xxl'
 });
+
+function HomeWrapper() {
+  let yearIndex = data.years.findIndex(year => year.id === '1989');
+  const year = data.years[yearIndex]; // year, title
+
+  return <UIShell pageId="home" year={year} years={data.years} />;
+}
 
 function Intro() {
   let { yearId } = useParams();
@@ -153,7 +160,10 @@ function App() {
         <ScrollToTop>
           <Switch>
             <Route exact path="/">
-              <Home />
+              <Splash />
+            </Route>
+            <Route exact path="/home">
+              <HomeWrapper />
             </Route>
             <Route exact path="/:yearId">
               <Intro />

@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Artifacts from './Artifacts.jsx';
 import Event from './Event.jsx';
 import Header from '../components/Header';
+import Home from './Home.jsx';
 import Intro from './Intro.jsx';
 import LeftMenu from '../components/LeftMenu';
 import PropTypes from 'prop-types';
@@ -35,6 +36,9 @@ const UIShell = props => {
 
   let pageComponent;
   switch (props.pageId) {
+    case 'home':
+      pageComponent = <Home {...props} />;
+      break;
     case 'intro':
       pageComponent = <Intro {...props} />;
       break;
@@ -58,7 +62,11 @@ const UIShell = props => {
     <>
       <Header
         label={
-          props.pageId === 'intro' ? '' : `${props.year.id} ${props.year.title}`
+          props.pageId === 'intro'
+            ? ''
+            : props.pageId === 'home'
+            ? props.year.blurb
+            : `${props.year.id} ${props.year.title}`
         }
         pageId={props.pageId}
         border={true}
@@ -74,8 +82,8 @@ const UIShell = props => {
       >
         &#8226;
       </span>
-      <span className="absolute top-0 pb-5 text-3xl left-timeline medium-caption contrast-text border-l border-white pl-4 h-screen">
-        <span className="absolute bottom-0">
+      <span className="absolute top-0 pb-5 text-3xl left-timeline medium-caption border-l border-white pl-4 h-screen">
+        <span className="absolute bottom-0 text-white">
           {props.years.map((year, index) => {
             let classes = isNewYear
               ? 'timeline-animation'
@@ -86,7 +94,7 @@ const UIShell = props => {
             return year.id === props.year.id ? (
               <div
                 key={index}
-                className={`pb-2.5 opacity-100 ${classes} ${yearIsClicked &&
+                className={`pb-2.5 ${classes} ${yearIsClicked &&
                   'reverse-timeline-animation'}`}
               >
                 {year.id}
@@ -94,7 +102,7 @@ const UIShell = props => {
             ) : (
               <div
                 key={index}
-                className={`pb-2.5 opacity-60 cursor-pointer`}
+                className={`pb-2.5 opacity-30 cursor-pointer`}
                 onClick={() => onClickYear(year.id)}
               >
                 {year.id}
@@ -106,6 +114,10 @@ const UIShell = props => {
       {pageComponent}
     </>
   );
+};
+
+UIShell.defaultProps = {
+  year: { id: '', title: '' }
 };
 
 UIShell.propTypes = {

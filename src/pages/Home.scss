@@ -1,25 +1,16 @@
-.screen-height {
-  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
-}
-
-@keyframes text-fade-in {
-  0% {
-    opacity: 0;
+.home {
+  .hero-image {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)),
+      url('../images/test-0.png');
+    background-color: #cccccc;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
   }
-  100% {
-    opacity: 1;
+
+  .scene-name {
+    top: 50%;
   }
-}
-
-.text-fade-in {
-  opacity: 0;
-  animation-name: text-fade-in;
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-.desktop-container {
-  width: 25vw;
 }
