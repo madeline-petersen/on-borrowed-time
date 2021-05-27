@@ -22,42 +22,4 @@
   @media screen and (max-width: $lg-minus-1) {
     display: none;
   }
-
-  @keyframes timeline-animation {
-    0% {
-      margin-bottom: 0;
-    }
-    100% {
-      margin-bottom: 120px;
-    }
-  }
-
-  .timeline-animation {
-    margin-bottom: 0;
-    animation-name: timeline-animation;
-    animation-duration: 1s;
-    animation-delay: 4s;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes reverse-timeline-animation {
-    0% {
-      margin-bottom: 120px;
-    }
-    100% {
-      margin-bottom: 0;
-    }
-  }
-
-  .reverse-timeline-animation {
-    margin-bottom: 120px;
-    animation-name: reverse-timeline-animation;
-    animation-duration: 1s;
-    animation-delay: 0s;
-    animation-fill-mode: forwards;
-  }
-
-  .static-margin {
-    margin-bottom: 120px;
-  }
 }

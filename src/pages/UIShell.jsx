@@ -85,18 +85,8 @@ const UIShell = props => {
       <span className="absolute top-0 pb-5 text-3xl left-timeline medium-caption border-l border-white pl-4 h-screen">
         <span className="absolute bottom-0 text-white">
           {props.years.map((year, index) => {
-            let classes = isNewYear
-              ? 'timeline-animation'
-              : isYearEnd
-              ? 'reverse-timeline-animation'
-              : 'static-margin';
-
             return year.id === props.year.id ? (
-              <div
-                key={index}
-                className={`pb-2.5 ${classes} ${yearIsClicked &&
-                  'reverse-timeline-animation'}`}
-              >
+              <div key={index} className={`pb-2.5`}>
                 {year.id}
               </div>
             ) : (
