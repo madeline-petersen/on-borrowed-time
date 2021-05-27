@@ -19,9 +19,13 @@ const Footer = ({
     setClicked(true);
     setTimeout(function() {
       // executed after 2 seconds
-      history.push(
-        `/${nextParams.year}/${nextParams.scene}/${nextParams.page}`
-      );
+      if (changingParam === 'year') {
+        history.push(`/${nextParams.year}`);
+      } else {
+        history.push(
+          `/${nextParams.year}/${nextParams.scene}/${nextParams.page}`
+        );
+      }
     }, 2000);
   };
 

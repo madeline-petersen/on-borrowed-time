@@ -7,7 +7,6 @@ import ReactHtmlParser from 'react-html-parser';
 import SubHeader from '../components/SubHeader';
 
 const Reflection = ({
-  year,
   scene,
   romanSceneNumber,
   reflection,
@@ -16,8 +15,13 @@ const Reflection = ({
   next
 }) => {
   const [isClicked, setClicked] = useState(false);
-  const start = 'black';
-  const end = 'gray-30';
+
+  let start = 'black';
+  let end = 'gray-30';
+  if (changingParam === 'year') {
+    start = 'black';
+    end = 'black';
+  }
 
   useEffect(() => {
     setTimeout(function() {
@@ -101,7 +105,6 @@ const Reflection = ({
 };
 
 Reflection.propTypes = {
-  year: PropTypes.shape(),
   scene: PropTypes.shape(),
   romanSceneNumber: PropTypes.string,
   reflection: PropTypes.shape(),

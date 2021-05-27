@@ -112,9 +112,7 @@ function Page() {
       ? isLastYear
         ? null
         : {
-            year: nextYear.id, // next year
-            scene: `scene-I`,
-            page: 'event'
+            year: nextYear.id // next year
           } // nextYear.id nextYear.title
       : {
           year: year.id,
