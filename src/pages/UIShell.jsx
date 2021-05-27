@@ -56,7 +56,13 @@ const UIShell = props => {
 
   return (
     <>
-      <Header label={`${props.year.id} ${props.year.title}`} border={true} />
+      <Header
+        label={
+          props.pageId === 'intro' ? '' : `${props.year.id} ${props.year.title}`
+        }
+        pageId={props.pageId}
+        border={true}
+      />
       <LeftMenu
         isActive={isMenuActive}
         onCloseLeftMenu={onCloseLeftMenu}
@@ -68,32 +74,34 @@ const UIShell = props => {
       >
         &#8226;
       </span>
-      <span className="absolute bottom-5 text-3xl z-10 left-timeline contrast-text medium-caption">
-        {props.years.map((year, index) => {
-          let classes = isNewYear
-            ? 'timeline-animation'
-            : isYearEnd
-            ? 'reverse-timeline-animation'
-            : 'static-margin';
+      <span className="absolute top-0 pb-5 text-3xl left-timeline medium-caption contrast-text border-l border-white pl-4 h-screen">
+        <span className="absolute bottom-0">
+          {props.years.map((year, index) => {
+            let classes = isNewYear
+              ? 'timeline-animation'
+              : isYearEnd
+              ? 'reverse-timeline-animation'
+              : 'static-margin';
 
-          return year.id === props.year.id ? (
-            <div
-              key={index}
-              className={`pb-2.5 opacity-100 ${classes} ${yearIsClicked &&
-                'reverse-timeline-animation'}`}
-            >
-              {year.id}
-            </div>
-          ) : (
-            <div
-              key={index}
-              className={`pb-2.5 opacity-60 cursor-pointer`}
-              onClick={() => onClickYear(year.id)}
-            >
-              {year.id}
-            </div>
-          );
-        })}
+            return year.id === props.year.id ? (
+              <div
+                key={index}
+                className={`pb-2.5 opacity-100 ${classes} ${yearIsClicked &&
+                  'reverse-timeline-animation'}`}
+              >
+                {year.id}
+              </div>
+            ) : (
+              <div
+                key={index}
+                className={`pb-2.5 opacity-60 cursor-pointer`}
+                onClick={() => onClickYear(year.id)}
+              >
+                {year.id}
+              </div>
+            );
+          })}
+        </span>
       </span>
       {pageComponent}
     </>

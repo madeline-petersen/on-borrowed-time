@@ -47,7 +47,7 @@ const Artifacts = ({
       </div>
 
       <div className="h-auto bg-black">
-        <Container className="grid__container border-l lg:border-gray-60 border-black min-h-screen">
+        <Container className="grid__container min-h-screen">
           <SubHeader romanSceneNumber={romanSceneNumber} title={scene.title} />
 
           {/* Reflection */}

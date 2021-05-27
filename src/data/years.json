@@ -22,6 +22,11 @@
       "id": "1989",
       "title": "The June Fourth “Incident”",
       "blurb": "Morbi quis lorem a urna aliquam euismod. In imperdiet placerat diam in pulvinar. Integer eget maximus enim, ut elementum leo. Curabitur ultricies purus dolor, non lobortis metus scelerisque id.",
+      "intro": {
+        "paragraphs": [
+          "Observers feared that the violent crackdown of the 1989 pro-democracy movement in China foreshadowed Hong Kong's inevitable future. Caught in a new diasporic reality, Hong Kong began to witness the contradicting realities of living between two competing cultures."
+        ]
+      },
       "scenes": [
         {
           "title": "Death of an Icon",

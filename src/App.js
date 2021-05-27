@@ -59,6 +59,7 @@ function Intro() {
   return (
     <UIShell
       pageId="intro"
+      intro={year.intro}
       years={data.years}
       year={year}
       next={next}

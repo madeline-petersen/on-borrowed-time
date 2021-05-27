@@ -41,7 +41,7 @@ const Event = ({
       </div>
 
       <div className="h-auto bg-gray-30">
-        <Container className="grid__container border-l lg:border-gray-60 border-gray-30 min-h-screen">
+        <Container className="grid__container min-h-screen">
           <Row className="grid__row shrink-animation">
             <Col lg={12} md={12} sm={12} xs={12} />
           </Row>
