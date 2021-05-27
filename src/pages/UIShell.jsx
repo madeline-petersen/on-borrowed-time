@@ -57,6 +57,10 @@ const UIShell = props => {
 
   let isNewYear = props.pageId === 'event' && props.romanSceneNumber === 'I';
   let isYearEnd = props.isLastScene && props.isLastPage;
+  let timelineClasses =
+    props.pageId === 'home' || props.pageId === 'intro'
+      ? 'text-white'
+      : 'contrast-text';
 
   return (
     <>
@@ -82,8 +86,10 @@ const UIShell = props => {
       >
         &#8226;
       </span>
-      <span className="absolute top-0 pb-5 text-3xl left-timeline medium-caption border-l border-white pl-4 h-screen">
-        <span className="absolute bottom-0 text-white">
+      <span
+        className={`absolute top-0 pb-5 text-3xl left-timeline medium-caption border-l border-white pl-4 h-screen ${timelineClasses}`}
+      >
+        <span className={`absolute bottom-0 ${timelineClasses}`}>
           {props.years.map((year, index) => {
             return year.id === props.year.id ? (
               <div key={index} className={`pb-2.5`}>
