@@ -34,11 +34,7 @@
     -webkit-transition: transform 0s, opacity 1s;
   }
 
-  .menu-height {
-    height: calc(100vh - 78px);
-  }
-
-  .background-color {
+  .background-filler {
     background: linear-gradient(
       to left,
       transparent,
@@ -66,5 +62,9 @@
   .close:focus {
     text-decoration: none;
     cursor: pointer;
+  }
+
+  &__year {
+    transition: opacity 0.5s;
   }
 }

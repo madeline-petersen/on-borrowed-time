@@ -63,7 +63,7 @@ const Anecdote = ({
     <div className="anecdote">
       <div id="modal-overlay" className="modal-overlay z-20" />
       <div id="modal-card" className="modal-card z-30">
-        <div className="absolute background-color right-0">
+        <div className="absolute background-filler right-0">
           <Container className="grid__container">
             <Row
               className="grid__row modal-height"

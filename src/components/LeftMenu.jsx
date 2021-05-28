@@ -1,12 +1,13 @@
 import './LeftMenu.scss';
 
 import { Col, Container, Row } from 'react-grid-system';
+import React, { useState } from 'react';
 
 import { Close20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
-import React from 'react';
 
 const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
+  const [selectedYear, setSelectedYear] = useState(null);
   const menu = document.getElementById('menu-card');
   const overlay = document.getElementById('menu-overlay');
 
@@ -43,9 +44,9 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
     <div className="left-menu">
       <div id="menu-overlay" className="menu-overlay z-20" />
       <div id="menu-card" className="menu-card z-30">
-        <div className="absolute background-color">
+        <div className="absolute background-filler">
           <Container className="grid__container">
-            <Row className="grid__row menu-height">
+            <Row className="grid__row">
               <Col lg={4} className="bg-black h-screen">
                 <span
                   className="close absolute top-5 right-6 z-40"
@@ -54,11 +55,23 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                   <Close20 />
                 </span>
                 <div
-                  className="flex flex-col h-full justify-end"
+                  className={`flex flex-col h-full ${
+                    selectedYear !== null ? 'justify-center' : 'justify-end'
+                  }`}
                   style={{ paddingBottom: '52px' }}
                 >
                   {years.map(year => (
-                    <Row key={year.id} className="mb-2 cursor-pointer">
+                    <Row
+                      key={year.id}
+                      className={`left-menu__year mb-2 cursor-pointer ${
+                        selectedYear !== null
+                          ? selectedYear === year.id
+                            ? 'opacity-100'
+                            : 'opacity-0'
+                          : ''
+                      }`}
+                      onClick={() => setSelectedYear(year.id)}
+                    >
                       {/* 1/4 of 4 columns */}
                       <Col lg={3}>
                         <div className="medium-body text-white">{year.id}</div>
