@@ -10,6 +10,7 @@ import {
 
 import GridHelper from './helpers/GridHelper.jsx';
 import Index from './pages/Index.jsx';
+import NoMatch from './pages/NoMatch.jsx';
 import React from 'react';
 import { ScreenClassProvider } from 'react-grid-system';
 import ScrollToTop from './ScrollToTop.jsx';
@@ -82,18 +83,36 @@ function Page() {
   let { pageId } = useParams();
 
   let yearIndex = data.years.findIndex(year => year.id === yearId);
-  const year = data.years[yearIndex]; // year, title
-  const nextYear = data.years[yearIndex + 1];
+  let year;
+  let nextYear;
+  if (yearIndex > -1) {
+    year = data.years[yearIndex]; // year, title
+    nextYear = data.years[yearIndex + 1];
+  } else {
+    return <NoMatch />;
+  }
 
   let romanSceneNumber = sceneId.split('-')[1].toUpperCase();
   const sceneIndex = roman.parseRoman(romanSceneNumber) - 1;
   const scene = year.scenes[sceneIndex]; // title, pages
-  const nextScene = year.scenes[sceneIndex + 1]; // title, pages
-  const nextRomanSceneNumber = roman.toRoman(sceneIndex + 2);
+  let nextScene;
+  let nextRomanSceneNumber;
+  if (scene) {
+    nextScene = year.scenes[sceneIndex + 1]; // title, pages
+    nextRomanSceneNumber = roman.toRoman(sceneIndex + 2);
+  } else {
+    return <NoMatch />;
+  }
 
   let pageIndex = scene.pages.findIndex(page => page.type === pageId);
-  const page = scene.pages[pageIndex];
-  const nextPage = scene.pages[pageIndex + 1];
+  let page;
+  let nextPage;
+  if (pageIndex > -1) {
+    page = scene.pages[pageIndex];
+    nextPage = scene.pages[pageIndex + 1];
+  } else {
+    return <NoMatch />;
+  }
 
   const isLastYear = yearIndex === data.years.length - 1;
   const isLastScene = sceneIndex === year.scenes.length - 1;
@@ -178,6 +197,9 @@ function App() {
             />
             <Route path={`/:yearId/:sceneId/:pageId`}>
               <Page />
+            </Route>
+            <Route path="*">
+              <NoMatch />
             </Route>
           </Switch>
         </ScrollToTop>
