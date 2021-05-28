@@ -46,35 +46,41 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
         <div className="absolute background-color">
           <Container className="grid__container">
             <Row className="grid__row menu-height cursor-pointer">
-              <Col lg={1} className="bg-black h-screen">
-                <div className="flex flex-col h-full justify-end pb-14">
-                  {years.map((year, index) => (
-                    <div
-                      className="medium-body text-white"
-                      key={`year-${index}`}
-                    >
-                      {year.id}
-                    </div>
-                  ))}
-                </div>
-              </Col>
-              <Col lg={3} className="bg-black h-screen">
+              <Col lg={4} className="bg-black h-screen">
                 <span
                   className="close absolute top-5 right-6 z-40"
                   onClick={onClickSpan}
                 >
                   <Close20 />
                 </span>
-                <div className="flex flex-col h-full justify-end pb-14">
-                  {years.map((year, index) => (
-                    <div
-                      className="medium-body text-white"
-                      key={`year-${index}-title`}
-                    >
-                      {year.title}
+                <Row className="menu-height cursor-pointer">
+                  {/* 1/4 of 4 columns */}
+                  <Col lg={3} className="bg-black h-screen">
+                    <div className="flex flex-col h-full justify-end pb-14">
+                      {years.map((year, index) => (
+                        <div
+                          className="medium-body text-white"
+                          key={`year-${index}`}
+                        >
+                          {year.id}
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </Col>
+                  {/* 3/4 of 4 columns */}
+                  <Col lg={9} className="bg-black h-screen">
+                    <div className="flex flex-col h-full justify-end pb-14">
+                      {years.map((year, index) => (
+                        <div
+                          className="medium-body text-white"
+                          key={`year-${index}-title`}
+                        >
+                          {year.title}
+                        </div>
+                      ))}
+                    </div>
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </Container>
