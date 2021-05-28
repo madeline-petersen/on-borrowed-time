@@ -64,6 +64,7 @@ const Reflection = ({
                           <br />
                         </p>
                       </Col>
+                      <Col lg={3} />
                     </span>
                   );
                 }
