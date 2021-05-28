@@ -79,6 +79,17 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                         <div className="medium-body text-white">
                           {year.title}
                         </div>
+                        <div
+                          className={`small-body text-white left-menu__blurb absolute ${
+                            selectedYear !== null
+                              ? selectedYear === year.id
+                                ? 'opacity-100'
+                                : 'opacity-0'
+                              : 'opacity-0'
+                          }`}
+                        >
+                          {year.blurb}
+                        </div>
                       </Col>
                     </Row>
                   ))}

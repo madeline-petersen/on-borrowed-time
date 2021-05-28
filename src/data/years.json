@@ -3,6 +3,7 @@
     {
       "id": "1984",
       "title": "The Prelude",
+      "blurb": "Aenean mattis vulputate purus, eget ornare enim laoreet vitae. Mauris ultricies imperdiet augue vitae euismod. In eget nisl id purus euismod tempor vitae ut mi. Mauris accumsan fermentum dolor, sit amet sagittis lorem luctus in. Duis justo purus, pretium vel ante vel, porttitor euismod dui.",
       "scenes": [
         {
           "title": "On the Question of Hong Kong",
@@ -739,6 +740,7 @@
     {
       "id": "2003",
       "title": "A Question of Patriotism",
+      "blurb": "Etiam at facilisis dolor. Suspendisse eget interdum ipsum. Vivamus suscipit urna eget fringilla gravida. Sed eros lectus, consequat eget tempor vitae, pharetra vel augue. In eget iaculis erat.",
       "scenes": [
         {
           "title": "Implementing Article 23",
@@ -769,6 +771,7 @@
     {
       "id": "2014",
       "title": "An Impossible Dream",
+      "blurb": "Ut pellentesque laoreet arcu, vel ultrices ligula ullamcorper non. Aenean sit amet viverra nisl.",
       "scenes": [
         {
           "title": "Occupy Central Love and Peace",
@@ -803,6 +806,7 @@
     {
       "id": "2019",
       "title": "A Summer of Discontent",
+      "blurb": "Vivamus rhoncus, ipsum in bibendum fringilla, arcu nulla semper elit, eu finibus elit ante ut est. Sed congue pharetra dolor nec aliquet.",
       "scenes": [
         {
           "title": "Death of an Icon",
@@ -813,6 +817,7 @@
     {
       "id": "2020",
       "title": "A Silent Resistance",
+      "blurb": "Fusce non urna quis erat rhoncus pharetra auctor mattis risus. Nulla convallis, tortor commodo tempus tincidunt, libero tellus pretium quam, a placerat nisl nisl quis velit.",
       "scenes": [
         {
           "title": "Death of an Icon",

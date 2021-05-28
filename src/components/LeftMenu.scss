@@ -67,4 +67,9 @@
   &__year {
     transition: opacity 0.5s;
   }
+
+  &__blurb {
+    top: 55px;
+    transition: opacity 0.5s;
+  }
 }
