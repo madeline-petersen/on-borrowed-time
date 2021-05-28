@@ -14,13 +14,6 @@ const Reflection = ({
   isClicked,
   setClicked
 }) => {
-  let start = 'black';
-  let end = 'gray-30';
-  if (changingParam === 'year') {
-    start = 'black';
-    end = 'black';
-  }
-
   useEffect(() => {
     setTimeout(function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -30,9 +23,9 @@ const Reflection = ({
   return (
     <>
       {/* Backgrounds for page transition */}
-      <div className={`h-screen bg-${end} absolute top-0 w-full`}>
+      <div className={`h-screen bg-gray-30 absolute top-0 w-full`}>
         <div
-          className={`h-screen bg-${start} absolute top-0 w-full ${
+          className={`h-screen bg-black absolute top-0 w-full ${
             isClicked ? 'screen-shrink' : ''
           }`}
         />

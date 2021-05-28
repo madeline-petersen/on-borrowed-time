@@ -9,19 +9,9 @@ import PropTypes from 'prop-types';
 import ResourceTable from '../components/ResourceTable';
 import { useScreenClass } from 'react-grid-system';
 
-const Event = ({
-  year,
-  scene,
-  romanSceneNumber,
-  event,
-  nextParams,
-  changingParam,
-  next
-}) => {
+const Event = ({ event, nextParams, changingParam, next }) => {
   const [isClicked, setClicked] = useState(false);
   const screenClass = useScreenClass();
-  const start = 'gray-30';
-  const end = 'black';
 
   useEffect(() => {
     setTimeout(function() {
@@ -32,9 +22,9 @@ const Event = ({
   return (
     <>
       {/* Backgrounds for page transition */}
-      <div className={`h-screen bg-${end} absolute top-0 w-full`}>
+      <div className={`h-screen bg-black absolute top-0 w-full`}>
         <div
-          className={`h-screen bg-${start} absolute top-0 w-full ${
+          className={`h-screen bg-gray-30 absolute top-0 w-full ${
             isClicked ? 'screen-shrink' : ''
           }`}
         />
@@ -101,9 +91,6 @@ const Event = ({
 
 Event.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
-  year: PropTypes.shape(),
-  scene: PropTypes.shape(),
-  romanSceneNumber: PropTypes.string,
   event: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
