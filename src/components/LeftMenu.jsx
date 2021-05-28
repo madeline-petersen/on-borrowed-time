@@ -45,7 +45,7 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
       <div id="menu-card" className="menu-card z-30">
         <div className="absolute background-color">
           <Container className="grid__container">
-            <Row className="grid__row menu-height cursor-pointer">
+            <Row className="grid__row menu-height">
               <Col lg={4} className="bg-black h-screen">
                 <span
                   className="close absolute top-5 right-6 z-40"
@@ -53,34 +53,25 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                 >
                   <Close20 />
                 </span>
-                <Row className="menu-height cursor-pointer">
-                  {/* 1/4 of 4 columns */}
-                  <Col lg={3} className="bg-black h-screen">
-                    <div className="flex flex-col h-full justify-end pb-14">
-                      {years.map((year, index) => (
-                        <div
-                          className="medium-body text-white"
-                          key={`year-${index}`}
-                        >
-                          {year.id}
-                        </div>
-                      ))}
-                    </div>
-                  </Col>
-                  {/* 3/4 of 4 columns */}
-                  <Col lg={9} className="bg-black h-screen">
-                    <div className="flex flex-col h-full justify-end pb-14">
-                      {years.map((year, index) => (
-                        <div
-                          className="medium-body text-white"
-                          key={`year-${index}-title`}
-                        >
+                <div
+                  className="flex flex-col h-full justify-end"
+                  style={{ paddingBottom: '52px' }}
+                >
+                  {years.map(year => (
+                    <Row key={year.id} className="mb-2 cursor-pointer">
+                      {/* 1/4 of 4 columns */}
+                      <Col lg={3}>
+                        <div className="medium-body text-white">{year.id}</div>
+                      </Col>
+                      {/* 3/4 of 4 columns */}
+                      <Col lg={9}>
+                        <div className="medium-body text-white">
                           {year.title}
                         </div>
-                      ))}
-                    </div>
-                  </Col>
-                </Row>
+                      </Col>
+                    </Row>
+                  ))}
+                </div>
               </Col>
             </Row>
           </Container>
