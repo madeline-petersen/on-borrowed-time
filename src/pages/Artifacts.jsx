@@ -2,8 +2,8 @@ import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect, useState } from 'react';
 
 import Footer from '../components/Footer';
+import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
-import SubHeader from '../components/SubHeader';
 import candles from '../images/candles.png';
 import car from '../images/car.png';
 import crowd from '../images/crowd.png';
@@ -48,11 +48,7 @@ const Artifacts = ({
 
       <div className="h-auto bg-black">
         <Container className="grid__container min-h-screen">
-          <SubHeader
-            pageId={'artifacts'}
-            romanSceneNumber={romanSceneNumber}
-            title={scene.title}
-          />
+          <HeaderSpacer />
 
           {/* Reflection */}
           <div

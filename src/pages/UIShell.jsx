@@ -14,7 +14,7 @@ import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const [yearIsClicked, setYearIsClicked] = useState(false);
+  const [isClicked, setClicked] = useState(false);
 
   let history = useHistory();
 
@@ -27,7 +27,6 @@ const UIShell = props => {
   };
 
   const onClickYear = year => {
-    setYearIsClicked(true);
     setTimeout(function() {
       // executed after 1 second
       history.push(`/${year}`);
@@ -37,22 +36,34 @@ const UIShell = props => {
   let pageComponent;
   switch (props.pageId) {
     case 'home':
-      pageComponent = <Home {...props} />;
+      pageComponent = (
+        <Home {...props} isClicked={isClicked} setClicked={setClicked} />
+      );
       break;
     case 'intro':
-      pageComponent = <Intro {...props} />;
+      pageComponent = (
+        <Intro {...props} isClicked={isClicked} setClicked={setClicked} />
+      );
       break;
     case 'event':
-      pageComponent = <Event {...props} />;
+      pageComponent = (
+        <Event {...props} isClicked={isClicked} setClicked={setClicked} />
+      );
       break;
     case 'artifacts':
-      pageComponent = <Artifacts {...props} />;
+      pageComponent = (
+        <Artifacts {...props} isClicked={isClicked} setClicked={setClicked} />
+      );
       break;
     case 'reflection':
-      pageComponent = <Reflection {...props} />;
+      pageComponent = (
+        <Reflection {...props} isClicked={isClicked} setClicked={setClicked} />
+      );
       break;
     default:
-      pageComponent = <Event {...props} />;
+      pageComponent = (
+        <Event {...props} isClicked={isClicked} setClicked={setClicked} />
+      );
   }
 
   let isNewYear = props.pageId === 'event' && props.romanSceneNumber === 'I';
@@ -75,7 +86,9 @@ const UIShell = props => {
             : `${props.year.id} ${props.year.title}`
         }
         pageId={props.pageId}
-        border={true}
+        title={props.scene.title}
+        isClicked={isClicked}
+        romanSceneNumber={props.romanSceneNumber}
       />
       <LeftMenu
         isActive={isMenuActive}
@@ -121,6 +134,7 @@ UIShell.defaultProps = {
 UIShell.propTypes = {
   pageId: PropTypes.string,
   year: PropTypes.shape,
+  scene: PropTypes.shape,
   romanSceneNumber: PropTypes.string,
   isLastScene: PropTypes.bool,
   isLastPage: PropTypes.bool,

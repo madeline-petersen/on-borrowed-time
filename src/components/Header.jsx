@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Header = ({ label, pageId }) => {
+const Header = ({ label, pageId, title, isClicked, romanSceneNumber }) => {
   let textClasses =
     pageId === 'home' || pageId === 'intro'
       ? 'text-white'
@@ -35,6 +35,31 @@ const Header = ({ label, pageId }) => {
             </Link>
           </Col>
         </Row>
+        {pageId === 'event' && (
+          <Row className="grid__row shrink-animation">
+            <Col lg={12} md={12} sm={12} xs={12} />
+          </Row>
+        )}
+        <Row className={`grid__row`}>
+          <Col lg={3} md={4} sm={4} xs={4} />
+          <Col lg={9} md={8} sm={8} xs={8}>
+            {pageId === 'event' && (
+              <p
+                className={`medium-caption scene-animation absolute top-0 pt-2 ${textClasses}`}
+              >
+                Scene {romanSceneNumber}
+              </p>
+            )}
+            <p
+              className={`small-body ${pageId === 'event' &&
+                'title-animation'} ${pageId === 'reflection' &&
+                isClicked &&
+                'fade-out'} pt-2 pb-5 ${textClasses}`}
+            >
+              {title}
+            </p>
+          </Col>
+        </Row>
       </Container>
     </span>
   );
@@ -46,7 +71,10 @@ Header.defaultProps = {
 
 Header.propTypes = {
   label: PropTypes.string,
-  pageId: PropTypes.string
+  pageId: PropTypes.string,
+  title: PropTypes.string,
+  isClicked: PropTypes.bool,
+  romanSceneNumber: PropTypes.string
 };
 
 export default Header;

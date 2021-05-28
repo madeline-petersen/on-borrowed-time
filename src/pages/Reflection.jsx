@@ -1,21 +1,19 @@
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import Footer from '../components/Footer';
+import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
-import SubHeader from '../components/SubHeader';
 
 const Reflection = ({
-  scene,
-  romanSceneNumber,
   reflection,
   nextParams,
   changingParam,
-  next
+  next,
+  isClicked,
+  setClicked
 }) => {
-  const [isClicked, setClicked] = useState(false);
-
   let start = 'black';
   let end = 'gray-30';
   if (changingParam === 'year') {
@@ -42,13 +40,7 @@ const Reflection = ({
 
       <div className="h-auto bg-black">
         <Container className="grid__container min-h-screen">
-          <SubHeader
-            pageId={'reflection'}
-            romanSceneNumber={romanSceneNumber}
-            title={scene.title}
-            fadeOut={true}
-            isClicked={isClicked}
-          />
+          <HeaderSpacer />
 
           {/* Final Reflection */}
           <div
@@ -106,12 +98,12 @@ const Reflection = ({
 };
 
 Reflection.propTypes = {
-  scene: PropTypes.shape(),
-  romanSceneNumber: PropTypes.string,
   reflection: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
-  changingParam: PropTypes.string
+  changingParam: PropTypes.string,
+  isClicked: PropTypes.bool,
+  setClicked: PropTypes.func
 };
 
 export default Reflection;
