@@ -6,15 +6,100 @@
       "scenes": [
         {
           "title": "On the Question of Hong Kong",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at condimentum lorem. Phasellus placerat lobortis libero eu convallis. In hac habitasse platea dictumst. Cras nec luctus sapien. Nam non lorem sit amet diam tempor feugiat id a sem. Aliquam ullamcorper eget justo vel volutpat. Aliquam vel dignissim ex. Mauris finibus enim volutpat magna lobortis efficitur.",
+                "Fusce arcu purus, ullamcorper eget egestas in, ornare a erat. Aliquam luctus sagittis tincidunt. Praesent sodales risus ac urna blandit, eu finibus turpis pellentesque. Quisque at eros et erat tincidunt blandit nec eu ipsum. Proin est dui, vulputate id massa eu, molestie ultricies lectus. Proin ac ex id dolor volutpat congue et semper arcu. Nam ut ipsum libero. Proin et pharetra turpis, et aliquam tellus."
+              ],
+              "resources": []
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "images": [
+                {
+                  "source": "crowd",
+                  "caption": "In sed dapibus ipsum, sed dapibus enim. Proin convallis mollis sagittis. Duis eu vehicula nibh, at lobortis ante. Nunc viverra at quam nec lacinia. Maecenas et sodales quam. Nam nibh erat, imperdiet nec augue eu, varius rhoncus libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+                },
+                {
+                  "source": "car",
+                  "caption": "Nam elementum dapibus justo non tristique. Aenean nec risus augue. Ut in elit ligula. Donec molestie luctus gravida. Duis varius commodo lacinia. Duis a diam vitae ligula pretium consectetur ullamcorper at justo. Vivamus auctor enim metus, ac finibus libero tincidunt ut. Praesent tristique ante quis nisl maximus elementum. Aenean sodales imperdiet odio, vitae efficitur neque vulputate non. Etiam lacinia lorem hendrerit, luctus purus eget, fringilla enim."
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                "Duis et ultrices urna, eu suscipit eros. Proin luctus tellus ex, et pharetra dolor rhoncus ultricies. Mauris lobortis nec est sed consequat. In tincidunt orci ultricies lacus ullamcorper, ut venenatis sapien eleifend. Cras vestibulum odio eu efficitur pharetra. Suspendisse semper rhoncus diam. Nullam vel est congue, tristique libero nec, convallis est.",
+                "Vestibulum ac ultricies leo. Morbi nibh tellus, vestibulum at dapibus ut, vehicula venenatis lectus. Fusce rutrum metus eget lectus dictum egestas. Aliquam vestibulum viverra lectus, eu dignissim quam porta eget. Praesent eu leo at odio euismod feugiat lobortis ut felis.",
+                "Nullam interdum vulputate ante at dignissim. Curabitur imperdiet felis eu aliquet tincidunt. Suspendisse fermentum hendrerit ligula, in fermentum tellus convallis eu. Vestibulum dignissim et massa ut auctor."
+              ]
+            }
+          ]
         },
         {
           "title": "A Borrowed Place, On Borrowed Time",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at condimentum lorem. Phasellus placerat lobortis libero eu convallis. In hac habitasse platea dictumst. Cras nec luctus sapien. Nam non lorem sit amet diam tempor feugiat id a sem. Aliquam ullamcorper eget justo vel volutpat. Aliquam vel dignissim ex. Mauris finibus enim volutpat magna lobortis efficitur.",
+                "Fusce arcu purus, ullamcorper eget egestas in, ornare a erat. Aliquam luctus sagittis tincidunt. Praesent sodales risus ac urna blandit, eu finibus turpis pellentesque. Quisque at eros et erat tincidunt blandit nec eu ipsum. Proin est dui, vulputate id massa eu, molestie ultricies lectus. Proin ac ex id dolor volutpat congue et semper arcu. Nam ut ipsum libero. Proin et pharetra turpis, et aliquam tellus."
+              ],
+              "resources": []
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                "Duis et ultrices urna, eu suscipit eros. Proin luctus tellus ex, et pharetra dolor rhoncus ultricies. Mauris lobortis nec est sed consequat. In tincidunt orci ultricies lacus ullamcorper, ut venenatis sapien eleifend. Cras vestibulum odio eu efficitur pharetra. Suspendisse semper rhoncus diam. Nullam vel est congue, tristique libero nec, convallis est.",
+                "Vestibulum ac ultricies leo. Morbi nibh tellus, vestibulum at dapibus ut, vehicula venenatis lectus. Fusce rutrum metus eget lectus dictum egestas. Aliquam vestibulum viverra lectus, eu dignissim quam porta eget. Praesent eu leo at odio euismod feugiat lobortis ut felis.",
+                "Nullam interdum vulputate ante at dignissim. Curabitur imperdiet felis eu aliquet tincidunt. Suspendisse fermentum hendrerit ligula, in fermentum tellus convallis eu. Vestibulum dignissim et massa ut auctor."
+              ]
+            }
+          ]
         },
         {
           "title": "A Discourse on Semantics",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at condimentum lorem. Phasellus placerat lobortis libero eu convallis. In hac habitasse platea dictumst. Cras nec luctus sapien. Nam non lorem sit amet diam tempor feugiat id a sem. Aliquam ullamcorper eget justo vel volutpat. Aliquam vel dignissim ex. Mauris finibus enim volutpat magna lobortis efficitur.",
+                "Fusce arcu purus, ullamcorper eget egestas in, ornare a erat. Aliquam luctus sagittis tincidunt. Praesent sodales risus ac urna blandit, eu finibus turpis pellentesque. Quisque at eros et erat tincidunt blandit nec eu ipsum. Proin est dui, vulputate id massa eu, molestie ultricies lectus. Proin ac ex id dolor volutpat congue et semper arcu. Nam ut ipsum libero. Proin et pharetra turpis, et aliquam tellus."
+              ],
+              "resources": []
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "images": [
+                {
+                  "source": "crowd",
+                  "caption": "In sed dapibus ipsum, sed dapibus enim. Proin convallis mollis sagittis. Duis eu vehicula nibh, at lobortis ante. Nunc viverra at quam nec lacinia. Maecenas et sodales quam. Nam nibh erat, imperdiet nec augue eu, varius rhoncus libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+                },
+                {
+                  "source": "car",
+                  "caption": "Nam elementum dapibus justo non tristique. Aenean nec risus augue. Ut in elit ligula. Donec molestie luctus gravida. Duis varius commodo lacinia. Duis a diam vitae ligula pretium consectetur ullamcorper at justo. Vivamus auctor enim metus, ac finibus libero tincidunt ut. Praesent tristique ante quis nisl maximus elementum. Aenean sodales imperdiet odio, vitae efficitur neque vulputate non. Etiam lacinia lorem hendrerit, luctus purus eget, fringilla enim."
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                "Duis et ultrices urna, eu suscipit eros. Proin luctus tellus ex, et pharetra dolor rhoncus ultricies. Mauris lobortis nec est sed consequat. In tincidunt orci ultricies lacus ullamcorper, ut venenatis sapien eleifend. Cras vestibulum odio eu efficitur pharetra. Suspendisse semper rhoncus diam. Nullam vel est congue, tristique libero nec, convallis est.",
+                "Vestibulum ac ultricies leo. Morbi nibh tellus, vestibulum at dapibus ut, vehicula venenatis lectus. Fusce rutrum metus eget lectus dictum egestas. Aliquam vestibulum viverra lectus, eu dignissim quam porta eget. Praesent eu leo at odio euismod feugiat lobortis ut felis.",
+                "Nullam interdum vulputate ante at dignissim. Curabitur imperdiet felis eu aliquet tincidunt. Suspendisse fermentum hendrerit ligula, in fermentum tellus convallis eu. Vestibulum dignissim et massa ut auctor."
+              ]
+            }
+          ]
         }
       ]
     },
