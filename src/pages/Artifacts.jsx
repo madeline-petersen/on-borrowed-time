@@ -63,7 +63,7 @@ const Artifacts = ({
                 </Col>
                 <Col lg={3} />
                 <Col lg={4} md={4}>
-                  <p className={`small-body text-gray-40 mt-8`}>
+                  <p className={`small-body text-white mt-8`}>
                     {artifacts.images[0].caption}
                   </p>
                 </Col>
@@ -77,7 +77,7 @@ const Artifacts = ({
                 </Col>
                 <Col lg={3} />
                 <Col lg={4} md={4}>
-                  <p className={`small-body text-gray-40 mt-5`}>
+                  <p className={`small-body text-white mt-5`}>
                     {artifacts.images[1].caption}
                   </p>
                 </Col>

@@ -54,7 +54,7 @@ const Reflection = ({
                     <>
                       <Col lg={1} />
                       <Col lg={11} md={12}>
-                        <p className={`medium-headline text-gray-40 pb-16`}>
+                        <p className={`medium-headline text-white pb-16`}>
                           {ReactHtmlParser(paragraph)}
                         </p>
                       </Col>
@@ -65,7 +65,7 @@ const Reflection = ({
                     <>
                       <Col lg={3} />
                       <Col lg={7} md={12}>
-                        <p className={`medium-body text-gray-40`}>
+                        <p className={`medium-body text-white`}>
                           {ReactHtmlParser(paragraph)}
                           <br />
                           <br />
