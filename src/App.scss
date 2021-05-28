@@ -39,13 +39,6 @@ a {
   text-decoration: none;
 }
 
-.sticky {
-  position: -webkit-sticky !important; /* Safari */
-  position: sticky !important;
-  align-self: flex-start; /* <-- this is the fix */
-  z-index: 998;
-}
-
 .large-headline {
   font-family: LyonText;
   font-size: clamp(1.5rem, 2vw, 2.75rem);

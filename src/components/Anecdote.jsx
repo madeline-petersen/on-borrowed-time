@@ -61,8 +61,8 @@ const Anecdote = ({
 
   return (
     <div className="anecdote">
-      <div id="modal-overlay" className="modal-overlay" />
-      <div id="modal-card" className="modal-card">
+      <div id="modal-overlay" className="modal-overlay z-20" />
+      <div id="modal-card" className="modal-card z-30">
         <div className="absolute background-color right-0">
           <Container className="grid__container">
             <Row
@@ -70,7 +70,7 @@ const Anecdote = ({
               style={{ overflow: 'scroll' }}
             >
               <span
-                className="close absolute top-5 right-6 z-10"
+                className="close absolute top-5 right-6 z-40"
                 onClick={onClickSpan}
               >
                 <Close20 />

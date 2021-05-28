@@ -3,20 +3,12 @@ import './LeftMenu.scss';
 import { Col, Container, Row } from 'react-grid-system';
 
 import { Close20 } from '@carbon/icons-react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
 
 const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
   const menu = document.getElementById('menu-card');
   const overlay = document.getElementById('menu-overlay');
-
-  if (isActive) {
-    menu.style.transform = 'translateX(0%)';
-    overlay.style.transform = 'translateX(0%)';
-    overlay.style.opacity = '1';
-  }
 
   const onClickSpan = () => {
     closeModal();
@@ -29,16 +21,28 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
   };
 
   const closeModal = () => {
-    menu.style.transform = 'translateX(-100%)';
-    overlay.style.transform = 'translateX(-100%)';
-    overlay.style.opacity = '0';
-    onCloseLeftMenu();
+    // offscreen left
+    if (menu) {
+      menu.style.transform = 'translateX(-100%)';
+      overlay.style.transform = 'translateX(-100%)';
+      overlay.style.opacity = '0';
+      onCloseLeftMenu();
+    }
   };
+
+  if (isActive) {
+    // onscreen
+    menu.style.transform = 'translateX(0%)';
+    overlay.style.transform = 'translateX(0%)';
+    overlay.style.opacity = '1';
+  } else {
+    closeModal();
+  }
 
   return (
     <div className="left-menu">
-      <div id="menu-overlay" className="menu-overlay" />
-      <div id="menu-card" className="menu-card">
+      <div id="menu-overlay" className="menu-overlay z-20" />
+      <div id="menu-card" className="menu-card z-30">
         <div className="absolute background-color">
           <Container className="grid__container">
             <Row className="grid__row menu-height cursor-pointer">
@@ -56,7 +60,7 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
               </Col>
               <Col lg={3} className="bg-black h-screen">
                 <span
-                  className="close absolute top-5 right-6 z-10"
+                  className="close absolute top-5 right-6 z-40"
                   onClick={onClickSpan}
                 >
                   <Close20 />

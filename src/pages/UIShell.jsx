@@ -18,8 +18,8 @@ const UIShell = props => {
 
   let history = useHistory();
 
-  const openLeftMenu = () => {
-    setIsMenuActive(true);
+  const toggleLeftMenu = () => {
+    isMenuActive ? setIsMenuActive(false) : setIsMenuActive(true);
   };
 
   const onCloseLeftMenu = () => {
@@ -96,13 +96,13 @@ const UIShell = props => {
         years={props.years}
       />
       <span
-        className={`absolute text-3xl cursor-pointer z-10 left-menu-bullet ${timelineClasses}`}
-        onClick={openLeftMenu}
+        className={`absolute text-3xl cursor-pointer z-40 left-menu-bullet ${timelineClasses}`}
+        onClick={toggleLeftMenu}
       >
         &#8226;
       </span>
       <span
-        className={`absolute top-0 pb-5 text-3xl left-timeline medium-caption border-l border-white pl-4 h-screen ${timelineClasses}`}
+        className={`absolute top-0 z-10 pb-5 text-3xl left-timeline medium-caption border-l border-white pl-4 h-screen ${timelineClasses}`}
       >
         <span className={`absolute bottom-0 ${timelineClasses}`}>
           {props.years.map((year, index) => {
