@@ -57,7 +57,7 @@ const Reflection = ({
                   return (
                     <span key={`paragraph-${index}`} className="contents">
                       <Col lg={3} />
-                      <Col lg={7} md={12}>
+                      <Col lg={6} md={12}>
                         <p className={`medium-body text-white`}>
                           {ReactHtmlParser(paragraph)}
                           <br />

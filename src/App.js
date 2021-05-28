@@ -97,9 +97,17 @@ function Page() {
     return <NoMatch />;
   }
 
-  let romanSceneNumber = sceneId.split('-')[1].toUpperCase();
+  let romanChar = sceneId.split('-')[1];
+  let romanSceneNumber;
+  if (romanChar) {
+    romanSceneNumber = romanChar.toUpperCase();
+  } else {
+    return <NoMatch />;
+  }
+
   const sceneIndex = roman.parseRoman(romanSceneNumber) - 1;
   const scene = year.scenes[sceneIndex]; // title, pages
+
   let nextScene;
   let nextRomanSceneNumber;
   if (scene) {
