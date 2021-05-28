@@ -1,165 +1,112 @@
-// /* breakpoints: [375, 756, 1056, 1440, 1800], */
+/* breakpoints: [375, 756, 1056, 1440, 1800], */
+@import '../App.scss';
 
-// .large-headline {
-//   font-family: LyonText;
-//   font-size: 44px;
-//   font-weight: normal;
-//   font-stretch: normal;
-//   font-style: normal;
-//   line-height: 1.3;
-//   letter-spacing: -0.92px;
-// }
+.page-container {
+  .directory__container {
+    height: 519px;
 
-// .small-headline {
-//   font-family: LyonText;
-//   font-size: 24px;
-//   font-weight: normal;
-//   font-stretch: normal;
-//   font-style: normal;
-//   line-height: 1.25;
-//   letter-spacing: -0.2px;
-// }
+    &.sticky {
+      top: -345px;
+    }
 
-// .medium-body {
-//   font-family: LyonText;
-//   font-size: 18px;
-//   font-weight: normal;
-//   font-stretch: normal;
-//   font-style: normal;
-//   line-height: 1.44;
-//   letter-spacing: -0.1px;
-// }
+    .directory {
+      height: 100%;
 
-// .page-container {
-//   .directory__container {
-//     height: 519px;
+      .directory__list {
+        display: flex;
+        flex-direction: column;
 
-//     &.sticky {
-//       top: -345px;
-//     }
+        // each individual list item
+        .directory__list-item {
+          width: fit-content;
+          cursor: pointer;
 
-//     .directory {
-//       height: 100%;
+          /* fade in on un-hover */
+          transition: 0.2s;
+          opacity: 1;
+        }
 
-//       .directory__list {
-//         display: flex;
-//         flex-direction: column;
+        &--selected {
+          /* hide list after selection */
+          visibility: hidden;
+          transition: 0.2s;
+        }
 
-//         // each individual list item
-//         .directory__list-item {
-//           width: fit-content;
-//           cursor: pointer;
+        &--unselected {
+          .directory__list-item {
+            @extend .large-headline;
+          }
+        }
 
-//           /* fade in on un-hover */
-//           transition: 0.2s;
-//           opacity: 1;
-//         }
+        .directory__list-item {
+          &--selected {
+            /* override visibility to bring back selected item */
+            visibility: visible;
 
-//         &--selected {
-//           /* hide list after selection */
-//           visibility: hidden;
-//           transition: 0.2s;
-//         }
+            /* shrinks font to small headline after selected */
+            @extend .small-headline;
+            transition: 0.2s;
+          }
 
-//         &--unselected {
-//           .directory__list-item {
-//             @extend .large-headline;
-//           }
-//         }
+          &:hover {
+            /* keep hovered item opaque */
+            opacity: 1;
+          }
 
-//         .directory__list-item {
-//           &--selected {
-//             /* override visibility to bring back selected item */
-//             visibility: visible;
+          &.sticky {
+            top: 44px;
+          }
+        }
 
-//             /* shrinks font to small headline after selected */
-//             @extend .small-headline;
-//             transition: 0.2s;
-//           }
+        &--hover {
+          // when list is hovered
+          .directory__list-item {
+            /* fade each individual list item */
+            opacity: 0.2;
+            transition: 0.2s;
+          }
+        }
+      }
 
-//           &:hover {
-//             /* keep hovered item opaque */
-//             opacity: 1;
-//           }
+      .directory__item-description {
+        /* vertically center description */
+        display: flex;
+        align-items: center;
+        @extend .medium-body;
 
-//           &.sticky {
-//             top: 44px;
-//           }
-//         }
+        &--visible {
+          /* fade in */
+          opacity: 1;
+          transition: 0.2s;
+        }
 
-//         &--hover {
-//           // when list is hovered
-//           .directory__list-item {
-//             /* fade each individual list item */
-//             opacity: 0.2;
-//             transition: 0.2s;
-//           }
-//         }
-//       }
+        &--hidden {
+          /* fade out */
+          opacity: 0;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+}
 
-//       .directory__item-description {
-//         /* vertically center description */
-//         display: flex;
-//         align-items: center;
-//         @extend .medium-body;
+.page-container--mini {
+  .directory__container {
+    height: 310px;
 
-//         &--visible {
-//           /* fade in */
-//           opacity: 1;
-//           transition: 0.2s;
-//         }
+    &.sticky {
+      top: 44px;
+    }
 
-//         &--hidden {
-//           /* fade out */
-//           opacity: 0;
-//           transition: 0.2s;
-//         }
-//       }
-//     }
-//   }
+    .directory {
+      .directory__list {
+        .directory__list-item {
+          @extend .small-headline;
+        }
+      }
 
-//   .lower-nav__container {
-//     &.sticky {
-//       top: 174px;
-//     }
-//   }
-
-//   .event__container {
-//     &.sticky {
-//       top: 240px;
-//     }
-//   }
-// }
-
-// .page-container--mini {
-//   .directory__container {
-//     height: 310px;
-
-//     &.sticky {
-//       top: 44px;
-//     }
-
-//     .directory {
-//       .directory__list {
-//         .directory__list-item {
-//           @extend .small-headline;
-//         }
-//       }
-
-//       .directory__item-description {
-//       }
-//     }
-//   }
-
-//   .lower-nav__container {
-//     &.sticky {
-//       top: 354px;
-//     }
-//   }
-
-//   .event__container {
-//     &.sticky {
-//       top: 420px;
-//     }
-//   }
-// }
+      .directory__item-description {
+      }
+    }
+  }
+}

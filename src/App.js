@@ -165,6 +165,9 @@ function App() {
             <Route exact path="/home">
               <HomeWrapper />
             </Route>
+            <Route path="/index">
+              <Index />
+            </Route>
             <Route exact path="/:yearId">
               <Intro />
             </Route>
@@ -175,9 +178,6 @@ function App() {
             />
             <Route path={`/:yearId/:sceneId/:pageId`}>
               <Page />
-            </Route>
-            <Route path="/index">
-              <Index />
             </Route>
           </Switch>
         </ScrollToTop>

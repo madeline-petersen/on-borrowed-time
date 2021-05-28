@@ -3,7 +3,6 @@ import './Index.scss';
 import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect } from 'react';
 
-import Header from '../components/Header';
 import cx from 'classnames/bind';
 import data from '../data/index.json';
 import useHover from '../hooks/useHover';
@@ -59,12 +58,6 @@ const Index = () => {
 
   return (
     <div className="Index">
-      <Header
-        theme={{ background: 'white', text: 'black' }}
-        label="Theme"
-        border={false}
-      />
-
       <div
         className={cx('page-container', {
           'page-container--mini': showMiniMenu
@@ -191,84 +184,6 @@ const Index = () => {
             </Col>
           </Row>
         </Container>
-        <Container className="grid__container lower-nav__container sticky">
-          <Row className="grid__row">
-            <Col lg={12} md={12}>
-              <div className="border-t border-gray-100 opacity-75" />
-            </Col>
-          </Row>
-          <Row className="grid__row lower-nav-bar pt-2 pb-8">
-            <Col md={4} className="medium-caption">
-              Event
-            </Col>
-            <Col md={3} className="medium-caption">
-              Anecdotes
-            </Col>
-            <Col md={3} className="medium-caption">
-              Source
-            </Col>
-            <Col md={2} className="medium-caption">
-              Type
-            </Col>
-          </Row>
-          <Row className="grid__row">
-            <Col lg={12} md={12}>
-              <div className="border-t border-gray-100 opacity-25" />
-            </Col>
-          </Row>
-        </Container>
-        <Container className="grid__container event__container sticky bg-white">
-          {data.events.map((event, eventIndex) => {
-            return (
-              <span key={`event-${index}`} className="contents">
-                <Row className="grid__row pt-5 pb-12">
-                  <Col md={4} className="medium-body">
-                    <div>{event.title}</div>
-                    <div>1989</div>
-                  </Col>
-                </Row>
-                <Row className="grid__row">
-                  <Col lg={12} md={12}>
-                    <div className="border-t border-gray-100 opacity-25" />
-                  </Col>
-                </Row>
-              </span>
-            );
-          })}
-        </Container>
-        {data.events.map((event, eventIndex) => {
-          return event.subEvents.map((subevent, subeventIndex) => {
-            return (
-              <Container key={subeventIndex} className="grid__container pt-4">
-                <Row className="grid__row index-entry">
-                  <Col md={4} className="small-body pb-4">
-                    {subevent.title}
-                  </Col>
-                  {subevent.entries.map((entry, entryIndex) => {
-                    return (
-                      <span key={`subevent-${entryIndex}`} className="contents">
-                        <Col
-                          offset={{ md: entryIndex ? 4 : 0 }}
-                          md={3}
-                          className="small-body truncate pb-4"
-                        >
-                          {entry.anecdote}
-                        </Col>
-                        <Col md={3} className="small-body light truncate pb-4">
-                          {entry.source}
-                        </Col>
-                        <Col md={2} className="small-body light truncate pb-4">
-                          {entry.type}
-                        </Col>
-                      </span>
-                    );
-                  })}
-                </Row>
-                <Row className="grid__row divider thinnest" />
-              </Container>
-            );
-          });
-        })}
       </div>
     </div>
   );
