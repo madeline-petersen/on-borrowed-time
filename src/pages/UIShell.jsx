@@ -86,7 +86,7 @@ const UIShell = props => {
             : `${props.year.id} ${props.year.title}`
         }
         pageId={props.pageId}
-        title={props.scene.title}
+        title={props.scene ? props.scene.title : ''}
         isClicked={isClicked}
         romanSceneNumber={props.romanSceneNumber}
       />
