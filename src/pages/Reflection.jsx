@@ -51,18 +51,18 @@ const Reflection = ({
               {reflection.paragraphs.map((paragraph, index) => {
                 if (index === 0) {
                   return (
-                    <>
+                    <span key={`paragraph-${index}`} className="contents">
                       <Col lg={1} />
                       <Col lg={11} md={12}>
                         <p className={`medium-headline text-white pb-16`}>
                           {ReactHtmlParser(paragraph)}
                         </p>
                       </Col>
-                    </>
+                    </span>
                   );
                 } else {
                   return (
-                    <>
+                    <span key={`paragraph-${index}`} className="contents">
                       <Col lg={3} />
                       <Col lg={7} md={12}>
                         <p className={`medium-body text-white`}>
@@ -71,7 +71,7 @@ const Reflection = ({
                           <br />
                         </p>
                       </Col>
-                    </>
+                    </span>
                   );
                 }
               })}

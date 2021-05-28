@@ -133,12 +133,12 @@ UIShell.defaultProps = {
 
 UIShell.propTypes = {
   pageId: PropTypes.string,
-  year: PropTypes.shape,
-  scene: PropTypes.shape,
+  year: PropTypes.shape(),
+  scene: PropTypes.shape(),
   romanSceneNumber: PropTypes.string,
   isLastScene: PropTypes.bool,
   isLastPage: PropTypes.bool,
-  years: PropTypes.arrayOf(PropTypes.shape)
+  years: PropTypes.arrayOf(PropTypes.shape())
 };
 
 export default UIShell;

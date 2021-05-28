@@ -220,7 +220,7 @@ const Index = () => {
         <Container className="grid__container event__container sticky bg-white">
           {data.events.map((event, eventIndex) => {
             return (
-              <>
+              <span key={`event-${index}`} className="contents">
                 <Row className="grid__row pt-5 pb-12">
                   <Col md={4} className="medium-body">
                     <div>{event.title}</div>
@@ -232,7 +232,7 @@ const Index = () => {
                     <div className="border-t border-gray-100 opacity-25" />
                   </Col>
                 </Row>
-              </>
+              </span>
             );
           })}
         </Container>
@@ -246,7 +246,7 @@ const Index = () => {
                   </Col>
                   {subevent.entries.map((entry, entryIndex) => {
                     return (
-                      <>
+                      <span key={`subevent-${entryIndex}`} className="contents">
                         <Col
                           offset={{ md: entryIndex ? 4 : 0 }}
                           md={3}
@@ -260,7 +260,7 @@ const Index = () => {
                         <Col md={2} className="small-body light truncate pb-4">
                           {entry.type}
                         </Col>
-                      </>
+                      </span>
                     );
                   })}
                 </Row>
