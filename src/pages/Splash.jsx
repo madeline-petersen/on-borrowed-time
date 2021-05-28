@@ -66,7 +66,11 @@ const Splash = () => {
       <div>
         <div className="flex md:hidden w-100 justify-center">
           <div className="mobile-container">
-            <img src={onborrowedtime} alt="" className="text-fade-in" />
+            <img
+              src={onborrowedtime}
+              alt="A group of strangers walking towards an unidentified building in Tiananmen Square in 1982."
+              className="text-fade-in"
+            />
           </div>
         </div>
 
