@@ -55,9 +55,7 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                   <Close20 />
                 </span>
                 <div
-                  className={`flex flex-col h-full ${
-                    selectedYear !== null ? 'justify-center' : 'justify-end'
-                  }`}
+                  className={`flex flex-col h-full justify-end`}
                   style={{ paddingBottom: '52px' }}
                 >
                   {years.map(year => (
