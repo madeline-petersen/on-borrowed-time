@@ -48,7 +48,11 @@ const Artifacts = ({
 
       <div className="h-auto bg-black">
         <Container className="grid__container min-h-screen">
-          <SubHeader romanSceneNumber={romanSceneNumber} title={scene.title} />
+          <SubHeader
+            pageId={'artifacts'}
+            romanSceneNumber={romanSceneNumber}
+            title={scene.title}
+          />
 
           {/* Reflection */}
           <div

@@ -5,7 +5,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Header = ({ label, pageId }) => {
-  let textClasses = pageId === 'intro' ? 'text-white' : 'contrast-text';
+  let textClasses =
+    pageId === 'home' || pageId === 'intro'
+      ? 'text-white'
+      : pageId === 'event'
+      ? 'contrast-text gray'
+      : 'contrast-text';
 
   return (
     <span

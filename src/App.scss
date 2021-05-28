@@ -140,6 +140,11 @@ a {
   background-color: black;
   color: white;
   mix-blend-mode: difference;
+  transition: all 5s;
+
+  &.gray {
+    color: #bfbfbf;
+  }
 }
 
 .grid__row {

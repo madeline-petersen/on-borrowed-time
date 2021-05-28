@@ -60,6 +60,8 @@ const UIShell = props => {
   let timelineClasses =
     props.pageId === 'home' || props.pageId === 'intro'
       ? 'text-white'
+      : props.pageId === 'event'
+      ? 'contrast-text gray'
       : 'contrast-text';
 
   return (
@@ -81,7 +83,7 @@ const UIShell = props => {
         years={props.years}
       />
       <span
-        className="absolute text-3xl cursor-pointer z-10 left-menu-bullet contrast-text"
+        className={`absolute text-3xl cursor-pointer z-10 left-menu-bullet ${timelineClasses}`}
         onClick={openLeftMenu}
       >
         &#8226;

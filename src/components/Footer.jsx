@@ -11,7 +11,8 @@ const Footer = ({
   nextParams,
   changingParam,
   next,
-  theme
+  theme,
+  pageId
 }) => {
   let history = useHistory();
 
@@ -29,6 +30,13 @@ const Footer = ({
     }, 2000);
   };
 
+  let textClasses =
+    pageId === 'home' || pageId === 'intro'
+      ? 'text-white'
+      : pageId === 'event'
+      ? 'contrast-text gray'
+      : 'contrast-text';
+
   return (
     <>
       <Row className={`grid__row`}>
@@ -45,10 +53,10 @@ const Footer = ({
       >
         <Col lg={1} md={1} className="cursor-default" />
         <Col lg={2} md={2} sm={2} xs={2}>
-          <p className={`small-body pb-4 pt-4 contrast-text`}>Up Next</p>
+          <p className={`small-body pb-4 pt-4 ${textClasses}`}>Up Next</p>
         </Col>
         <Col lg={2} md={2} sm={2} xs={2}>
-          <p className={`small-body pb-4 pt-4 contrast-text`}>
+          <p className={`small-body pb-4 pt-4 ${textClasses}`}>
             {/* current scene, next scene, next year */}
             {changingParam === 'year'
               ? nextParams.year
@@ -65,11 +73,11 @@ const Footer = ({
           xs={7}
           style={{ display: 'flex', justifyContent: 'space-between' }}
         >
-          <p className={`small-body pb-4 pt-4 contrast-text`}>
+          <p className={`small-body pb-4 pt-4 ${textClasses}`}>
             {/* next page, next scene, next year */}
             {next.title}
           </p>
-          <p className={`pb-4 pt-4 contrast-text`}>
+          <p className={`pb-4 pt-4 ${textClasses}`}>
             <ArrowDown16 />
           </p>
         </Col>
@@ -88,7 +96,8 @@ Footer.propTypes = {
   setClicked: PropTypes.func,
   theme: PropTypes.shape(),
   changingParam: PropTypes.string,
-  isClicked: PropTypes.bool
+  isClicked: PropTypes.bool,
+  pageId: PropTypes.string
 };
 
 export default Footer;

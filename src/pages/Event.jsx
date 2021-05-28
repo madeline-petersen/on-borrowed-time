@@ -47,6 +47,7 @@ const Event = ({
           </Row>
 
           <SubHeader
+            pageId={'event'}
             romanSceneNumber={romanSceneNumber}
             title={scene.title}
             animate={true}
