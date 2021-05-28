@@ -51,7 +51,12 @@ function Intro() {
   let { yearId } = useParams();
 
   let yearIndex = data.years.findIndex(year => year.id === yearId);
-  const year = data.years[yearIndex]; // year, title
+  let year;
+  if (yearIndex > -1) {
+    year = data.years[yearIndex]; // year, title
+  } else {
+    return <NoMatch />;
+  }
 
   const nextScene = year.scenes[0]; // title, pages
   const nextRomanSceneNumber = 'I';
