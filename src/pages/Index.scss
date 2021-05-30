@@ -34,7 +34,7 @@
 
         &--unselected {
           .directory__list-item {
-            @extend .large-headline;
+            @extend .large-headline-static;
           }
         }
 

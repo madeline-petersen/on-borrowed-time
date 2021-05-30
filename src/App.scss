@@ -39,14 +39,19 @@ a {
   text-decoration: none;
 }
 
-.large-headline {
+.large-headline-static {
   font-family: LyonText;
-  font-size: clamp(1.5rem, 2vw, 3rem);
+  font-size: 3rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.3;
   letter-spacing: -0.03em;
+}
+
+.large-headline-dynamic {
+  @extend .large-headline-static;
+  font-size: clamp(1.5rem, 2vw, 3rem);
 }
 
 .medium-headline {
