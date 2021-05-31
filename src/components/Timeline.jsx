@@ -1,20 +1,25 @@
 import './Timeline.scss';
 
+import React, { useEffect, useState } from 'react';
+
 import PropTypes from 'prop-types';
-import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 const Timeline = props => {
+  const [scenes, setScenes] = useState(props.year.scenes.length);
   let history = useHistory();
 
   const onClickYear = year => {
+    setScenes(0);
     setTimeout(function() {
       // executed after 1 second
       history.push(`/${year}`);
     }, 1000);
   };
 
-  let scenes = props.year.scenes.length;
+  useEffect(() => {
+    setScenes(props.year.scenes.length);
+  }, [props.year]);
 
   return (
     <span
