@@ -71,11 +71,11 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                       onClick={() => setSelectedYear(year.id)}
                     >
                       {/* 1/4 of 4 columns */}
-                      <Col lg={3}>
+                      <Col lg={3} md={1} sm={2} xs={2}>
                         <div className="medium-body text-white">{year.id}</div>
                       </Col>
                       {/* 3/4 of 4 columns */}
-                      <Col lg={9}>
+                      <Col lg={9} md={11} sm={10} xs={10}>
                         <div className="medium-body text-white">
                           {year.title}
                         </div>
