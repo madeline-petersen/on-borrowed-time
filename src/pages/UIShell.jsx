@@ -11,6 +11,7 @@ import LeftMenu from '../components/LeftMenu';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Reflection from './Reflection.jsx';
+import Timeline from '../components/Timeline';
 import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
@@ -112,23 +113,11 @@ const UIShell = props => {
       <span
         className={`absolute top-0 z-10 pb-5 text-3xl left-timeline medium-caption border-l border-white pl-4 h-screen ${timelineClasses}`}
       >
-        <span className={`absolute bottom-0 ${timelineClasses}`}>
-          {props.years.map((year, index) => {
-            return year.id === props.year.id ? (
-              <div key={index} className={`pb-2.5`}>
-                {year.id}
-              </div>
-            ) : (
-              <div
-                key={index}
-                className={`pb-2.5 opacity-30 cursor-pointer`}
-                onClick={() => onClickYear(year.id)}
-              >
-                {year.id}
-              </div>
-            );
-          })}
-        </span>
+        <Timeline
+          timelineClasses={timelineClasses}
+          years={props.years}
+          year={props.year}
+        />
       </span>
       {pageComponent}
     </>

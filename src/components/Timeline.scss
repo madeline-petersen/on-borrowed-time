@@ -1,0 +1,15 @@
+@import '../variables/';
+
+.left-timeline {
+  border-left-width: 0.5px;
+  --tw-border-opacity: 0.15;
+  left: calc(3rem + 0.75rem);
+
+  @media screen and (max-width: $xl-minus-1) {
+    left: 70px;
+  }
+
+  @media screen and (max-width: $lg-minus-1) {
+    display: none;
+  }
+}
