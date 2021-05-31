@@ -138,11 +138,11 @@ a {
   background-color: black;
   color: white;
   mix-blend-mode: difference;
-  transition: color 0.5s;
+  transition: color 0.5s 1s;
 
   &.gray {
     color: #bfbfbf;
-    transition: color 0.5s;
+    transition: color 0.5s 1s;
   }
 }
 
