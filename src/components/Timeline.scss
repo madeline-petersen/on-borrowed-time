@@ -12,4 +12,8 @@
   @media screen and (max-width: $lg-minus-1) {
     display: none;
   }
+
+  &__current-year {
+    transition: margin-bottom 1s;
+  }
 }
