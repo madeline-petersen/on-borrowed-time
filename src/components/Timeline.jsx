@@ -14,23 +14,33 @@ const Timeline = props => {
     }, 1000);
   };
 
+  let scenes = props.year.scenes.length;
+
   return (
-    <span className={`absolute bottom-0 ${props.timelineClasses}`}>
-      {props.years.map((year, index) => {
-        return year.id === props.year.id ? (
-          <div key={index} className={`pb-2.5`}>
-            {year.id}
-          </div>
-        ) : (
-          <div
-            key={index}
-            className={`pb-2.5 opacity-30 cursor-pointer`}
-            onClick={() => onClickYear(year.id)}
-          >
-            {year.id}
-          </div>
-        );
-      })}
+    <span
+      className={`left-timeline absolute top-0 z-10 pb-5 text-3xl medium-caption border-l border-white pl-4 h-screen ${props.timelineClasses}`}
+    >
+      <span className={`absolute bottom-0 ${props.timelineClasses}`}>
+        {props.years.map((year, index) => {
+          return year.id === props.year.id ? (
+            <div
+              key={index}
+              className={`pb-2.5 left-timeline__current-year`}
+              style={{ marginBottom: `calc(${scenes} * 24px)` }}
+            >
+              {year.id}
+            </div>
+          ) : (
+            <div
+              key={index}
+              className={`pb-2.5 opacity-30 cursor-pointer`}
+              onClick={() => onClickYear(year.id)}
+            >
+              {year.id}
+            </div>
+          );
+        })}
+      </span>
     </span>
   );
 };

@@ -110,15 +110,11 @@ const UIShell = props => {
       >
         On Borrowed Time
       </Link>
-      <span
-        className={`absolute top-0 z-10 pb-5 text-3xl left-timeline medium-caption border-l border-white pl-4 h-screen ${timelineClasses}`}
-      >
-        <Timeline
-          timelineClasses={timelineClasses}
-          years={props.years}
-          year={props.year}
-        />
-      </span>
+      <Timeline
+        timelineClasses={timelineClasses}
+        years={props.years}
+        year={props.year}
+      />
       {pageComponent}
     </>
   );
