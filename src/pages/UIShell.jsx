@@ -69,12 +69,13 @@ const UIShell = props => {
 
   let isNewYear = props.pageId === 'event' && props.romanSceneNumber === 'I';
   let isYearEnd = props.isLastScene && props.isLastPage;
-  let timelineClasses =
-    props.pageId === 'home' || props.pageId === 'intro'
-      ? 'text-white'
-      : props.pageId === 'event'
-      ? 'contrast-text gray'
-      : 'contrast-text';
+  let timelineClasses = isMenuActive
+    ? 'contrast-text'
+    : props.pageId === 'home' || props.pageId === 'intro'
+    ? 'text-white'
+    : props.pageId === 'event'
+    ? 'contrast-text gray'
+    : 'contrast-text';
 
   return (
     <>
