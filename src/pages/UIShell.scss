@@ -9,6 +9,16 @@
   }
 }
 
+.page-title {
+  top: 20px;
+  left: 81px;
+
+  @media screen and (max-width: $lg) {
+    // left margin + padding
+    left: calc(3rem + 12px + 11px);
+  }
+}
+
 .left-timeline {
   border-left-width: 0.5px;
   --tw-border-opacity: 0.15;

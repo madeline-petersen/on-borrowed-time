@@ -8,6 +8,7 @@ import Header from '../components/Header';
 import Home from './Home.jsx';
 import Intro from './Intro.jsx';
 import LeftMenu from '../components/LeftMenu';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Reflection from './Reflection.jsx';
 import { useHistory } from 'react-router-dom';
@@ -101,6 +102,12 @@ const UIShell = props => {
       >
         &#8226;
       </span>
+      <Link
+        to="/"
+        className={`absolute text-3xl cursor-pointer z-40 medium-caption page-title ${timelineClasses}`}
+      >
+        On Borrowed Time
+      </Link>
       <span
         className={`absolute top-0 z-10 pb-5 text-3xl left-timeline medium-caption border-l border-white pl-4 h-screen ${timelineClasses}`}
       >

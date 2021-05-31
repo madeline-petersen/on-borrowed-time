@@ -18,11 +18,7 @@ const Header = ({ label, pageId, title, isClicked, romanSceneNumber }) => {
     >
       <Container className="grid__container">
         <Row className={`grid__row pt-5`}>
-          <Col lg={3} md={4} sm={4} xs={4}>
-            <Link to="/" className={textClasses}>
-              On Borrowed Time
-            </Link>
-          </Col>
+          <Col lg={3} md={4} sm={4} xs={4} />
           <Col lg={3} md={3} sm={3} xs={3}>
             <Link to="/" className={textClasses}>
               {label}
