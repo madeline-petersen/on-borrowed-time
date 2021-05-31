@@ -47,7 +47,7 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
         <div className="absolute background-filler">
           <Container className="grid__container">
             <Row className="grid__row">
-              <Col lg={4} className="bg-black h-screen">
+              <Col lg={4} md={8} sm={12} xs={12} className="bg-black h-screen">
                 <span
                   className="close absolute top-5 right-6 z-40"
                   onClick={onClickSpan}
@@ -71,11 +71,11 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                       onClick={() => setSelectedYear(year.id)}
                     >
                       {/* 1/4 of 4 columns */}
-                      <Col lg={3} md={1} sm={2} xs={2}>
+                      <Col lg={3} md={3} sm={2} xs={2}>
                         <div className="medium-body text-white">{year.id}</div>
                       </Col>
                       {/* 3/4 of 4 columns */}
-                      <Col lg={9} md={11} sm={10} xs={10}>
+                      <Col lg={9} md={9} sm={10} xs={10}>
                         <div className="medium-body text-white">
                           {year.title}
                         </div>
