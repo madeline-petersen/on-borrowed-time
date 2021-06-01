@@ -116,6 +116,8 @@ const UIShell = props => {
         sceneIndex={props.sceneIndex}
         years={props.years}
         year={props.year}
+        isYearEnd={isYearEnd}
+        isClicked={isClicked}
       />
       {pageComponent}
     </>

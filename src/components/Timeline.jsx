@@ -8,6 +8,7 @@ import { useHistory } from 'react-router-dom';
 const Timeline = props => {
   const [scenes, setScenes] = useState(props.year.scenes.length);
   let history = useHistory();
+  let moveToNextYear = props.isYearEnd && props.isClicked ? true : false;
 
   const onClickYear = year => {
     setScenes(0);
@@ -37,7 +38,9 @@ const Timeline = props => {
                 <span
                   className="circle"
                   style={{
-                    marginTop: `calc((${props.sceneIndex + 1} * 24px))`
+                    marginTop: `calc(((${props.sceneIndex + 1} * 24px) + ${
+                      moveToNextYear ? '24px' : '0px'
+                    }))`
                   }}
                 />
                 <span
@@ -83,7 +86,9 @@ Timeline.propTypes = {
   sceneIndex: PropTypes.string,
   pageId: PropTypes.string,
   year: PropTypes.shape(),
-  years: PropTypes.arrayOf(PropTypes.shape())
+  years: PropTypes.arrayOf(PropTypes.shape()),
+  isYearEnd: PropTypes.bool,
+  isClicked: PropTypes.bool
 };
 
 export default Timeline;
