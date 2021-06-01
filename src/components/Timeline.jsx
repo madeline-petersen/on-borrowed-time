@@ -34,10 +34,11 @@ const Timeline = props => {
               style={{ paddingBottom: `calc(${scenes} * 24px)` }}
             >
               <div className="scenes">
+                <span className="circle" />
                 <span
                   key={`intro`}
                   style={{
-                    marginTop: '6px'
+                    marginTop: '5px'
                   }}
                   className="dot"
                 />

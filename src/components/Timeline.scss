@@ -17,12 +17,23 @@
     margin-left: -17px;
     transition: padding-bottom 1s;
 
+    .circle {
+      width: 13px;
+      height: 13px;
+      position: absolute;
+      left: -23px;
+      border: 1px solid white;
+      border-radius: 50%;
+      color: white;
+      text-align: center;
+      line-height: 10px;
+    }
+
     .dot {
       height: 3px;
       width: 3px;
       position: absolute;
       left: -18px;
-      margin-top: 6px;
       background-color: white;
       border-radius: 50%;
       display: inline-block;
