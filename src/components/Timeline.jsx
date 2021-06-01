@@ -34,7 +34,12 @@ const Timeline = props => {
               style={{ paddingBottom: `calc(${scenes} * 24px)` }}
             >
               <div className="scenes">
-                <span className="circle" />
+                <span
+                  className="circle"
+                  style={{
+                    marginTop: `calc((${props.sceneIndex + 1} * 24px))`
+                  }}
+                />
                 <span
                   key={`intro`}
                   style={{
@@ -75,6 +80,8 @@ Timeline.defaultProps = {
 
 Timeline.propTypes = {
   timelineClasses: PropTypes.string,
+  sceneIndex: PropTypes.string,
+  pageId: PropTypes.string,
   year: PropTypes.shape(),
   years: PropTypes.arrayOf(PropTypes.shape())
 };

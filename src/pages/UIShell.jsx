@@ -112,6 +112,8 @@ const UIShell = props => {
       </Link>
       <Timeline
         timelineClasses={timelineClasses}
+        pageId={props.pageId}
+        sceneIndex={props.sceneIndex}
         years={props.years}
         year={props.year}
       />
@@ -128,6 +130,7 @@ UIShell.propTypes = {
   pageId: PropTypes.string,
   year: PropTypes.shape(),
   scene: PropTypes.shape(),
+  sceneIndex: PropTypes.string,
   romanSceneNumber: PropTypes.string,
   isLastScene: PropTypes.bool,
   isLastPage: PropTypes.bool,

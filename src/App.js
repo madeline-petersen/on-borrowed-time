@@ -173,6 +173,7 @@ function Page() {
       years={data.years}
       year={year}
       scene={scene}
+      sceneIndex={sceneIndex}
       romanSceneNumber={romanSceneNumber}
       event={page}
       artifacts={page}
