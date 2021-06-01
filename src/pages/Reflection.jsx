@@ -20,10 +20,12 @@ const Reflection = ({
     }, 1000);
   }, []);
 
+  let nextBackground = changingParam === 'year' ? 'black' : 'gray-30';
+
   return (
     <>
       {/* Backgrounds for page transition */}
-      <div className={`h-screen bg-gray-30 absolute top-0 w-full`}>
+      <div className={`h-screen bg-${nextBackground} absolute top-0 w-full`}>
         <div
           className={`h-screen bg-black absolute top-0 w-full ${
             isClicked ? 'screen-shrink' : ''

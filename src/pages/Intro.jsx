@@ -30,7 +30,7 @@ const Intro = ({ intro, year, scene, nextParams, changingParam, next }) => {
       </div>
 
       <div className="intro">
-        <div className="hero-image">
+        <div className={`hero-image bg-${year.id}`}>
           <div className="small-headline text-white absolute w-full scene-name">
             <Container className="grid__container">
               <Row className="grid__row">
