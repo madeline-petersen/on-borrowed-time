@@ -33,6 +33,7 @@ const Timeline = props => {
               className={`mb-2.5 left-timeline__current-year border-l border-white pl-4`}
               style={{ paddingBottom: `calc(${scenes} * 24px)` }}
             >
+              <span className="dot" />
               {year.id}
             </div>
           ) : (

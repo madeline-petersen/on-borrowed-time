@@ -16,5 +16,16 @@
   &__current-year {
     margin-left: -17px;
     transition: padding-bottom 1s;
+
+    .dot {
+      height: 3px;
+      width: 3px;
+      position: absolute;
+      left: -18px;
+      margin-top: 6px;
+      background-color: white;
+      border-radius: 50%;
+      display: inline-block;
+    }
   }
 }
