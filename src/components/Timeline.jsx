@@ -31,15 +31,21 @@ const Timeline = props => {
             <div
               key={index}
               className={`mb-2.5 left-timeline__current-year border-l border-white pl-4`}
-              style={{ paddingBottom: `calc(${scenes - 1} * 24px)` }}
+              style={{ paddingBottom: `calc(${scenes} * 24px)` }}
             >
               <div className="scenes">
+                <span
+                  key={`intro`}
+                  style={{
+                    marginTop: '6px'
+                  }}
+                  className="dot"
+                />
                 {year.scenes.map((scene, index) => (
                   <span
                     key={`scene-${index}`}
                     style={{
-                      marginTop:
-                        index === 0 ? '6px' : `calc((${index} * 24px) + 6px)`
+                      marginTop: `calc((${index + 1} * 24px) + 6px)`
                     }}
                     className="dot"
                   />
