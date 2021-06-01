@@ -30,15 +30,15 @@ const Timeline = props => {
           return year.id === props.year.id ? (
             <div
               key={index}
-              className={`pb-2.5 left-timeline__current-year`}
-              style={{ marginBottom: `calc(${scenes} * 24px)` }}
+              className={`mb-2.5 left-timeline__current-year border-l border-white pl-4`}
+              style={{ paddingBottom: `calc(${scenes} * 24px)` }}
             >
               {year.id}
             </div>
           ) : (
             <div
               key={index}
-              className={`pb-2.5 opacity-30 cursor-pointer`}
+              className={`mb-2.5 opacity-30 cursor-pointer`}
               onClick={() => onClickYear(year.id)}
             >
               {year.id}
