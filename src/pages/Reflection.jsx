@@ -1,5 +1,5 @@
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Footer from '../components/Footer';
 import HeaderSpacer from '../components/HeaderSpacer';
@@ -11,16 +11,21 @@ const Reflection = ({
   nextParams,
   changingParam,
   next,
-  isClicked,
   setClicked
 }) => {
+  const [isClicked, setFooterClicked] = useState(false);
   useEffect(() => {
     setTimeout(function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 1000);
   }, []);
 
-  let nextBackground = changingParam === 'year' ? nextParams.year : 'black';
+  let nextBackground = changingParam === 'year' ? nextParams.year : 'gray-30';
+
+  const onFooterClick = () => {
+    setFooterClicked(true);
+    setClicked(true);
+  };
 
   return (
     <>
@@ -80,7 +85,7 @@ const Reflection = ({
                 nextParams={nextParams}
                 next={next}
                 changingParam={changingParam}
-                setClicked={setClicked}
+                setClicked={onFooterClick}
                 theme={{
                   background: 'black',
                   text: 'gray-40',
