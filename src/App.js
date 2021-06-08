@@ -41,10 +41,7 @@ setConfiguration({
 });
 
 function HomeWrapper() {
-  let yearIndex = data.years.findIndex(year => year.id === '1989');
-  const year = data.years[yearIndex]; // year, title
-
-  return <UIShell pageId="home" year={year} years={data.years} />;
+  return <UIShell pageId="home" years={data.years} />;
 }
 
 function Intro() {

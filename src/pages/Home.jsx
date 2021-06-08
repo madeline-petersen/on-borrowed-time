@@ -29,10 +29,14 @@ const Home = ({ intro, years, scene, nextParams, changingParam, next }) => {
         />
       </div>
 
-      <div className="home">
+      <div className="home" id="home">
         {years.map(year => {
           return (
-            <div className={`hero-image bg-${year.id}-home`} key={year.id}>
+            <div
+              className={`hero-image bg-${year.id}-home`}
+              key={year.id}
+              id={year.id}
+            >
               <div className="small-headline text-white absolute w-full scene-name">
                 <Container className="grid__container">
                   <Row className="grid__row">

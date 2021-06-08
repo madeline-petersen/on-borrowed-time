@@ -6,7 +6,9 @@ import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 
 const Timeline = props => {
-  const [scenes, setScenes] = useState(props.year.scenes.length);
+  const [scenes, setScenes] = useState(
+    props.year.scenes ? props.year.scenes.length : 0
+  );
   let history = useHistory();
   let moveToNextYear = props.isYearEnd && props.isClicked ? true : false;
 
@@ -19,7 +21,7 @@ const Timeline = props => {
   };
 
   useEffect(() => {
-    setScenes(props.year.scenes.length);
+    setScenes(props.year.scenes ? props.year.scenes.length : 0);
   }, [props.year]);
 
   return (
