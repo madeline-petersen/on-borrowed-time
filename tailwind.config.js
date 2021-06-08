@@ -17,7 +17,21 @@ module.exports = {
         '2019':
           "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/test-2.png')",
         '2020':
-          "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/test-0.png')"
+          "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/test-0.png')",
+        '1984-home':
+          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/test-0.png')",
+        '1989-home':
+          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/test-1.png')",
+        '1997-home':
+          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/test-2.png')",
+        '2003-home':
+          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/test-0.png')",
+        '2014-home':
+          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/test-1.png')",
+        '2019-home':
+          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/test-2.png')",
+        '2020-home':
+          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/test-0.png')"
       })
     },
     colors: {
