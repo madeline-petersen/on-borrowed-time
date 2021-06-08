@@ -7,7 +7,11 @@ import { useHistory } from 'react-router-dom';
 
 const Timeline = props => {
   const [scenes, setScenes] = useState(
-    props.year.scenes ? props.year.scenes.length : 0
+    props.pageId === 'home'
+      ? props.year.scenes
+        ? props.year.scenes.length
+        : 0
+      : 0
   );
   let history = useHistory();
   let moveToNextYear = props.isYearEnd && props.isClicked ? true : false;
