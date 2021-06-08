@@ -4,8 +4,10 @@ import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect, useState } from 'react';
 
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 
 const Home = ({ years }) => {
+  let myHistory = useHistory();
   const [isClicked, setClicked] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring[1]);
   const [year, setYear] = useState(years[0]);
@@ -21,6 +23,10 @@ const Home = ({ years }) => {
       setYear(years[0]); // year, title
     }
   }, [hash]);
+
+  const onClickYear = year => {
+    myHistory.push(`/${year}`);
+  };
 
   return (
     <>
@@ -53,8 +59,14 @@ const Home = ({ years }) => {
             <Container className="grid__container">
               <Row className="grid__row">
                 <Col lg={2} />
-                <Col lg={6}>{year.title}</Col>
-                <Col lg={4}>{year.id}</Col>
+                <div
+                  className="contents cursor-pointer"
+                  onClick={() => onClickYear(year.id)}
+                >
+                  <Col lg={6}>{year.title}</Col>
+                  <Col lg={1}>{year.id}</Col>
+                </div>
+                <Col lg={3} />
               </Row>
             </Container>
           </div>
