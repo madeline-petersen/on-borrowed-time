@@ -9,11 +9,18 @@ import PropTypes from 'prop-types';
 import ResourceTable from '../components/ResourceTable';
 import { useScreenClass } from 'react-grid-system';
 
-const Event = ({ event, nextParams, changingParam, next }) => {
+const Event = ({
+  event,
+  nextParams,
+  changingParam,
+  next,
+  setFooterClicked
+}) => {
   const [isClicked, setClicked] = useState(false);
   const screenClass = useScreenClass();
 
   useEffect(() => {
+    setFooterClicked(false);
     setTimeout(function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 1000);
@@ -94,7 +101,8 @@ Event.propTypes = {
   event: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
-  changingParam: PropTypes.string
+  changingParam: PropTypes.string,
+  setFooterClicked: PropTypes.func
 };
 
 export default Event;

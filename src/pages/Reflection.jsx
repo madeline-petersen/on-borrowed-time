@@ -11,9 +11,9 @@ const Reflection = ({
   nextParams,
   changingParam,
   next,
-  setClicked
+  setFooterClicked
 }) => {
-  const [isClicked, setFooterClicked] = useState(false);
+  const [isClicked, setClicked] = useState(false);
   useEffect(() => {
     setTimeout(function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -105,8 +105,7 @@ Reflection.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  isClicked: PropTypes.bool,
-  setClicked: PropTypes.func
+  setFooterClicked: PropTypes.func
 };
 
 export default Reflection;

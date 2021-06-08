@@ -16,7 +16,7 @@ import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const [isClicked, setClicked] = useState(false);
+  const [isClicked, setFooterClicked] = useState(false);
 
   let history = useHistory();
 
@@ -38,34 +38,24 @@ const UIShell = props => {
   let pageComponent;
   switch (props.pageId) {
     case 'home':
-      pageComponent = (
-        <Home {...props} isClicked={isClicked} setClicked={setClicked} />
-      );
+      pageComponent = <Home {...props} />;
       break;
     case 'intro':
-      pageComponent = (
-        <Intro {...props} isClicked={isClicked} setClicked={setClicked} />
-      );
+      pageComponent = <Intro {...props} />;
       break;
     case 'event':
-      pageComponent = (
-        <Event {...props} isClicked={isClicked} setClicked={setClicked} />
-      );
+      pageComponent = <Event {...props} setFooterClicked={setFooterClicked} />;
       break;
     case 'artifacts':
-      pageComponent = (
-        <Artifacts {...props} isClicked={isClicked} setClicked={setClicked} />
-      );
+      pageComponent = <Artifacts {...props} />;
       break;
     case 'reflection':
       pageComponent = (
-        <Reflection {...props} isClicked={isClicked} setClicked={setClicked} />
+        <Reflection {...props} setFooterClicked={setFooterClicked} />
       );
       break;
     default:
-      pageComponent = (
-        <Event {...props} isClicked={isClicked} setClicked={setClicked} />
-      );
+      pageComponent = <Event {...props} setFooterClicked={setFooterClicked} />;
   }
 
   let isNewYear = props.pageId === 'event' && props.romanSceneNumber === 'I';
