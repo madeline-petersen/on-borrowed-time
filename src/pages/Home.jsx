@@ -3,20 +3,12 @@ import './Home.scss';
 import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect, useState } from 'react';
 
-import Footer from '../components/Footer';
 import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
 
-const Home = ({ intro, years, scene, nextParams, changingParam, next }) => {
+const Home = ({ years }) => {
   const [isClicked, setClicked] = useState(false);
   const start = 'black';
   const end = 'black';
-
-  useEffect(() => {
-    setTimeout(function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 1000);
-  }, []);
 
   return (
     <>
