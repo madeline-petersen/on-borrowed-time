@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 
 const Timeline = props => {
+  let history = useHistory();
+
   const [scenes, setScenes] = useState(
     props.pageId === 'home'
       ? props.year.scenes
@@ -13,8 +15,6 @@ const Timeline = props => {
         : 0
       : 0
   );
-  let history = useHistory();
-  let moveToNextYear = props.isYearEnd && props.isClicked ? true : false;
 
   const onClickYear = year => {
     setScenes(0);
@@ -30,48 +30,41 @@ const Timeline = props => {
 
   return (
     <span
-      className={`left-timeline absolute top-0 z-10 pb-5 text-3xl medium-caption border-l border-white pl-4 h-screen ${props.timelineClasses}`}
+      className={`year-timeline medium-caption pb-5 h-screen ${props.timelineClasses}`}
     >
       <span className={`absolute bottom-0 ${props.timelineClasses}`}>
         {props.years.map((year, index) => {
           return year.id === props.year.id ? (
             <div
-              key={index}
-              className={`mb-2.5 left-timeline__current-year border-l border-white pl-4`}
+              key={year.id}
+              className={`year-timeline__scene-timeline pl-4 mb-2.5`}
               style={{ paddingBottom: `calc(${scenes} * 24px)` }}
             >
-              <div className="scenes">
+              <span
+                key="intro"
+                className={`circle ${props.pageId === 'intro' &&
+                  'current-scene'}`}
+              >
+                <span className="dot mt-1 left-1" />
+              </span>
+              {year.scenes.map((scene, index) => (
                 <span
-                  className="circle"
+                  key={`scene-${index}`}
+                  className={`circle ${props.sceneIndex === index &&
+                    'current-scene'}`}
                   style={{
-                    marginTop: `calc(((${props.sceneIndex + 1} * 24px) + ${
-                      moveToNextYear ? '24px' : '0px'
-                    }))`
+                    marginTop: `calc((${index + 1} * 24px))`
                   }}
-                />
-                <span
-                  key={`intro`}
-                  style={{
-                    marginTop: '5px'
-                  }}
-                  className="dot"
-                />
-                {year.scenes.map((scene, index) => (
-                  <span
-                    key={`scene-${index}`}
-                    style={{
-                      marginTop: `calc((${index + 1} * 24px) + 6px)`
-                    }}
-                    className="dot"
-                  />
-                ))}
-              </div>
+                >
+                  <span className="dot mt-1 left-1" />
+                </span>
+              ))}
               {year.id}
             </div>
           ) : (
             <div
-              key={index}
-              className={`mb-2.5 opacity-30 cursor-pointer`}
+              key={year.id}
+              className={`pl-4 mb-2.5 opacity-30 cursor-pointer`}
               onClick={() => onClickYear(year.id)}
             >
               {year.id}
