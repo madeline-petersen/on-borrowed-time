@@ -21,7 +21,20 @@ const Home = ({ years }) => {
         />
       </div>
 
-      <div className="home" id="home">
+      <div
+        className="home"
+        id="home"
+        onScroll={e => {
+          let year = years[Math.floor(e.target.scrollTop / window.innerHeight)];
+          if (history.pushState) {
+            // IE10, Firefox, Chrome, etc.
+            window.history.pushState(null, null, '#' + year.id);
+          } else {
+            // IE9, IE8, etc
+            window.location.hash = '#!' + year.id;
+          }
+        }}
+      >
         {years.map(year => {
           return (
             <div
