@@ -12,13 +12,10 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Reflection from './Reflection.jsx';
 import Timeline from '../components/Timeline';
-import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [isClicked, setFooterClicked] = useState(false);
-
-  let history = useHistory();
 
   const toggleLeftMenu = () => {
     isMenuActive ? setIsMenuActive(false) : setIsMenuActive(true);
@@ -26,13 +23,6 @@ const UIShell = props => {
 
   const onCloseLeftMenu = () => {
     setIsMenuActive(false);
-  };
-
-  const onClickYear = year => {
-    setTimeout(function() {
-      // executed after 1 second
-      history.push(`/${year}`);
-    }, 1000);
   };
 
   let pageComponent;

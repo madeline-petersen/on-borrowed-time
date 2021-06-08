@@ -35,10 +35,12 @@ const Timeline = props => {
       <span className={`absolute bottom-0 ${props.timelineClasses}`}>
         {props.years.map((year, index) => {
           return year.id === props.year.id ? (
+            // current year
             <div
               key={year.id}
-              className={`year-timeline__scene-timeline pl-4 mb-2.5`}
+              className={`year-timeline__scene-timeline pl-4 mb-2.5 cursor-pointer`}
               style={{ paddingBottom: `calc(${scenes} * 24px)` }}
+              onClick={() => onClickYear(year.id)}
             >
               <span
                 key="intro"
@@ -62,6 +64,7 @@ const Timeline = props => {
               {year.id}
             </div>
           ) : (
+            // other years
             <div
               key={year.id}
               className={`pl-4 mb-2.5 opacity-30 cursor-pointer`}
