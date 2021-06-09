@@ -3,6 +3,7 @@ import './Timeline.scss';
 import React, { useEffect, useState } from 'react';
 
 import PropTypes from 'prop-types';
+import { roman } from '@sguest/roman-js';
 import { useHistory } from 'react-router-dom';
 
 const Timeline = props => {
@@ -25,6 +26,12 @@ const Timeline = props => {
       // executed after 1 second
       history.push(`/${year}`);
     }, 1000);
+  };
+
+  const onClickScene = sceneIndex => {
+    history.push(
+      `/${props.year.id}/scene-${roman.toRoman(sceneIndex + 1)}/event`
+    );
   };
 
   useEffect(() => {
@@ -65,9 +72,8 @@ const Timeline = props => {
                 // current year
                 <div
                   key={year.id}
-                  className={`year-timeline__scene-timeline pl-4 mb-2.5 cursor-pointer`}
+                  className={`year-timeline__scene-timeline pl-4 mb-2.5`}
                   style={{ paddingBottom: `calc(${scenes} * 24px)` }}
-                  onClick={() => onClickYear(year.id)}
                 >
                   <span
                     key="intro"
@@ -79,16 +85,22 @@ const Timeline = props => {
                   {year.scenes.map((scene, index) => (
                     <span
                       key={`scene-${index}`}
-                      className={`circle ${props.sceneIndex === index &&
-                        'current-scene'}`}
+                      className={`circle cursor-pointer ${props.sceneIndex ===
+                        index && 'current-scene'}`}
                       style={{
                         marginTop: `calc((${index + 1} * 24px))`
                       }}
+                      onClick={() => onClickScene(index)}
                     >
                       <span className="dot mt-1 left-1" />
                     </span>
                   ))}
-                  {year.id}
+                  <span
+                    onClick={() => onClickYear(year.id)}
+                    className="cursor-pointer"
+                  >
+                    {year.id}
+                  </span>
                 </div>
               ) : (
                 // other years
