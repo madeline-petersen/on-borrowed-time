@@ -6,6 +6,9 @@ import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 
 const Timeline = props => {
+  // timeline is absolutely positioned and overlayed on every page (except index)
+  // on the homepage, the year being previewed is highlighted
+  // on specific year pages, the year is highlighted and the scene timeline is active
   let history = useHistory();
 
   const [scenes, setScenes] = useState(
@@ -33,47 +36,71 @@ const Timeline = props => {
       className={`year-timeline medium-caption pb-5 h-screen ${props.timelineClasses}`}
     >
       <span className={`absolute bottom-0 ${props.timelineClasses}`}>
-        {props.years.map((year, index) => {
-          return year.id === props.year.id ? (
-            // current year
-            <div
-              key={year.id}
-              className={`year-timeline__scene-timeline pl-4 mb-2.5 cursor-pointer`}
-              style={{ paddingBottom: `calc(${scenes} * 24px)` }}
-              onClick={() => onClickYear(year.id)}
-            >
-              <span
-                key="intro"
-                className={`circle ${props.pageId === 'intro' &&
-                  'current-scene'}`}
-              >
-                <span className="dot mt-1 left-1" />
-              </span>
-              {year.scenes.map((scene, index) => (
-                <span
-                  key={`scene-${index}`}
-                  className={`circle ${props.sceneIndex === index &&
-                    'current-scene'}`}
-                  style={{
-                    marginTop: `calc((${index + 1} * 24px))`
-                  }}
+        {/* home page */}
+        {props.pageId === 'home'
+          ? props.years.map((year, index) => {
+              return year.id === props.previewedYear ? (
+                // current year
+                <div
+                  key={year.id}
+                  className={`pl-4 mb-2.5 cursor-pointer`}
+                  style={{ paddingBottom: `calc(${scenes} * 24px)` }}
+                  onClick={() => onClickYear(year.id)}
                 >
-                  <span className="dot mt-1 left-1" />
-                </span>
-              ))}
-              {year.id}
-            </div>
-          ) : (
-            // other years
-            <div
-              key={year.id}
-              className={`pl-4 mb-2.5 opacity-30 cursor-pointer`}
-              onClick={() => onClickYear(year.id)}
-            >
-              {year.id}
-            </div>
-          );
-        })}
+                  {year.id}
+                </div>
+              ) : (
+                // other years
+                <div
+                  key={year.id}
+                  className={`pl-4 mb-2.5 opacity-30 cursor-pointer`}
+                  onClick={() => onClickYear(year.id)}
+                >
+                  {year.id}
+                </div>
+              );
+            })
+          : props.years.map((year, index) => {
+              return year.id === props.year.id ? (
+                // current year
+                <div
+                  key={year.id}
+                  className={`year-timeline__scene-timeline pl-4 mb-2.5 cursor-pointer`}
+                  style={{ paddingBottom: `calc(${scenes} * 24px)` }}
+                  onClick={() => onClickYear(year.id)}
+                >
+                  <span
+                    key="intro"
+                    className={`circle ${props.pageId === 'intro' &&
+                      'current-scene'}`}
+                  >
+                    <span className="dot mt-1 left-1" />
+                  </span>
+                  {year.scenes.map((scene, index) => (
+                    <span
+                      key={`scene-${index}`}
+                      className={`circle ${props.sceneIndex === index &&
+                        'current-scene'}`}
+                      style={{
+                        marginTop: `calc((${index + 1} * 24px))`
+                      }}
+                    >
+                      <span className="dot mt-1 left-1" />
+                    </span>
+                  ))}
+                  {year.id}
+                </div>
+              ) : (
+                // other years
+                <div
+                  key={year.id}
+                  className={`pl-4 mb-2.5 opacity-30 cursor-pointer`}
+                  onClick={() => onClickYear(year.id)}
+                >
+                  {year.id}
+                </div>
+              );
+            })}
       </span>
     </span>
   );
@@ -88,6 +115,7 @@ Timeline.propTypes = {
   sceneIndex: PropTypes.string,
   pageId: PropTypes.string,
   year: PropTypes.shape(),
+  previewedYear: PropTypes.string,
   years: PropTypes.arrayOf(PropTypes.shape()),
   isYearEnd: PropTypes.bool,
   isClicked: PropTypes.bool

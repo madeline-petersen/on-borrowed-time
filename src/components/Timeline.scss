@@ -22,21 +22,21 @@
     transition: padding-bottom 1s; // padding is calculated based on number of scenes in current year
     border-left-width: 1px;
     border-color: rgba(255, 255, 255, 1); // white, opaque
+  }
 
-    .circle {
-      position: absolute;
-      left: -7px; // move circle onto timeline
-      width: 13px;
-      height: 13px;
-      border: 1px solid;
-      border-radius: 50%;
-      border-color: rgba(255, 255, 255, 0); // transparent
-      transition: border-color 1s;
+  .circle {
+    position: absolute;
+    left: -7px; // move circle onto timeline
+    width: 13px;
+    height: 13px;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color: rgba(255, 255, 255, 0); // transparent
+    transition: border-color 1s;
 
-      &.current-scene {
-        border-color: rgba(255, 255, 255, 1); // opaque
-        transition: border-color 1s 1s;
-      }
+    &.current-scene {
+      border-color: rgba(255, 255, 255, 1); // opaque
+      transition: border-color 1s 1s;
     }
 
     .dot {

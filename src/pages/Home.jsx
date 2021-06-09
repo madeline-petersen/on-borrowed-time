@@ -6,10 +6,10 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 
-const Home = ({ years }) => {
+const Home = ({ years, hash, setHash }) => {
+  console.log(hash);
   let myHistory = useHistory();
   const [isClicked, setClicked] = useState(false);
-  const [hash, setHash] = useState(window.location.hash.substring[1]);
   const [year, setYear] = useState(years[0]);
   const start = 'black';
   const end = 'black';
@@ -17,6 +17,7 @@ const Home = ({ years }) => {
   useEffect(() => {
     // get year, index from hash
     let yearIndex = years.findIndex(year => year.id === hash);
+    debugger;
     if (yearIndex > -1) {
       setYear(years[yearIndex]); // year, title
     } else {
@@ -42,6 +43,7 @@ const Home = ({ years }) => {
       <div
         className="home"
         id="home"
+        // hash is updated as page is scrolled
         onScroll={e => {
           let year = years[Math.floor(e.target.scrollTop / window.innerHeight)];
           setHash(year.id);
@@ -77,7 +79,7 @@ const Home = ({ years }) => {
               className={`hero-image bg-${year.id}-home`}
               key={year.id}
               id={year.id}
-            ></div>
+            />
           );
         })}
       </div>
@@ -87,6 +89,8 @@ const Home = ({ years }) => {
 
 Home.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
+  hash: PropTypes.string,
+  setHash: PropTypes.func,
   scene: PropTypes.shape(),
   intro: PropTypes.shape(PropTypes.arrayOf(PropTypes.string)),
   romanSceneNumber: PropTypes.string,

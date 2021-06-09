@@ -16,6 +16,7 @@ import Timeline from '../components/Timeline';
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [isClicked, setFooterClicked] = useState(false);
+  const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
 
   const toggleLeftMenu = () => {
     isMenuActive ? setIsMenuActive(false) : setIsMenuActive(true);
@@ -28,7 +29,7 @@ const UIShell = props => {
   let pageComponent;
   switch (props.pageId) {
     case 'home':
-      pageComponent = <Home {...props} />;
+      pageComponent = <Home {...props} hash={hash} setHash={setHash} />;
       break;
     case 'intro':
       pageComponent = <Intro {...props} />;
@@ -94,6 +95,7 @@ const UIShell = props => {
         timelineClasses={timelineClasses}
         pageId={props.pageId}
         sceneIndex={props.sceneIndex}
+        previewedYear={hash}
         years={props.years}
         year={props.year}
         isYearEnd={isYearEnd}
