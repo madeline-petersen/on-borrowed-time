@@ -46,24 +46,22 @@ const Timeline = props => {
         {/* home page */}
         {props.pageId === 'home'
           ? props.years.map((year, index) => {
-              return year.id === props.previewedYear ? (
-                // current year
+              // current year
+              return (
                 <div
                   key={year.id}
-                  className={`pl-4 mb-2.5 cursor-pointer`}
-                  style={{ paddingBottom: `calc(${scenes} * 24px)` }}
-                  onClick={() => onClickYear(year.id)}
+                  className={`pl-4 mb-2.5 cursor-pointer ${
+                    year.id === props.previewedYear
+                      ? 'opacity-100'
+                      : 'opacity-30'
+                  }`}
                 >
-                  {year.id}
-                </div>
-              ) : (
-                // other years
-                <div
-                  key={year.id}
-                  className={`pl-4 mb-2.5 opacity-30 cursor-pointer`}
-                  onClick={() => onClickYear(year.id)}
-                >
-                  {year.id}
+                  <span
+                    onClick={() => onClickYear(year.id)}
+                    className="cursor-pointer"
+                  >
+                    {year.id}
+                  </span>
                 </div>
               );
             })
