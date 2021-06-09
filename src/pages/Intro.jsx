@@ -10,8 +10,6 @@ import temple from '../images/Homepage_1984.jpg';
 
 const Intro = ({ year }) => {
   const [isClicked, setClicked] = useState(false);
-  const start = 'black';
-  const end = 'black';
 
   useEffect(() => {
     setTimeout(function() {
@@ -22,15 +20,17 @@ const Intro = ({ year }) => {
   return (
     <>
       {/* Backgrounds for page transition */}
-      <div className={`h-screen bg-${end} absolute top-0 w-full`}>
+      <div
+        className={`h-screen bg-gray-30 bg-center bg-no-repeat bg-cover absolute top-0 w-full`}
+      >
         <div
-          className={`h-screen bg-${start} absolute top-0 w-full ${
+          className={`h-screen bg-black absolute top-0 w-full ${
             isClicked ? 'screen-shrink' : ''
           }`}
         />
       </div>
 
-      <div className="intro">
+      <div className={`intro ${isClicked ? 'fade-out' : 'foreground-fade-in'}`}>
         <div className={`hero-image bg-${year.id}`}>
           <div className="small-headline text-white absolute w-full scene-name">
             <Container className="grid__container">

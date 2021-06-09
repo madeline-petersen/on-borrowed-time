@@ -52,7 +52,7 @@ const UIShell = props => {
   let isYearEnd = props.isLastScene && props.isLastPage;
   let timelineClasses = isMenuActive
     ? 'contrast-text'
-    : props.pageId === 'home' || props.pageId === 'intro'
+    : props.pageId === 'home'
     ? 'text-white'
     : props.pageId === 'event'
     ? 'contrast-text gray'
