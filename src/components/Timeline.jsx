@@ -77,8 +77,9 @@ const Timeline = props => {
                 >
                   <span
                     key="intro"
-                    className={`circle ${props.pageId === 'intro' &&
-                      'current-scene'}`}
+                    className={`circle cursor-pointer ${props.pageId ===
+                      'intro' && 'current-scene'}`}
+                    onClick={() => onClickYear(year.id)}
                   >
                     <span className="dot mt-1 left-1" />
                   </span>
