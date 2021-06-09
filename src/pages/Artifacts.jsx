@@ -27,15 +27,6 @@ const Artifacts = ({ artifacts, changingParam, nextParams, next }) => {
 
   return (
     <>
-      {/* Backgrounds for page transition */}
-      <div className={`h-screen bg-black absolute top-0 w-full`}>
-        <div
-          className={`h-screen bg-black absolute top-0 w-full ${
-            isClicked ? 'screen-shrink' : ''
-          }`}
-        />
-      </div>
-
       <div className="h-auto bg-black">
         <Container className="grid__container min-h-screen">
           <HeaderSpacer />
