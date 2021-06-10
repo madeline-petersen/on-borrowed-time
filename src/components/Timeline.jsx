@@ -43,16 +43,15 @@ const Timeline = props => {
       className={`year-timeline medium-caption pb-5 h-screen ${props.timelineClasses}`}
     >
       <span className={`absolute bottom-0 ${props.timelineClasses}`}>
-        {/* home page */}
         {props.pageId === 'home'
           ? props.years.map((year, index) => {
-              // current year
+              /* home page */
               return (
                 <div
                   key={year.id}
                   className={`pl-4 mb-2.5 cursor-pointer ${
                     year.id === props.previewedYear
-                      ? 'opacity-100'
+                      ? 'opacity-100' // highlight previewed year
                       : 'opacity-30'
                   }`}
                 >
@@ -66,13 +65,16 @@ const Timeline = props => {
               );
             })
           : props.years.map((year, index) => {
+              /* other pages */
               return year.id === props.year.id ? (
                 // current year
+                // scene timeline
                 <div
                   key={year.id}
                   className={`year-timeline__scene-timeline pl-4 mb-2.5`}
                   style={{ paddingBottom: `calc(${scenes} * 24px)` }}
                 >
+                  {/* intro circle */}
                   <span
                     key="intro"
                     className={`circle cursor-pointer ${props.pageId ===
@@ -81,6 +83,16 @@ const Timeline = props => {
                   >
                     <span className="dot mt-1 left-1" />
                   </span>
+
+                  {/* year */}
+                  <span
+                    onClick={() => onClickYear(year.id)}
+                    className="cursor-pointer"
+                  >
+                    {year.id}
+                  </span>
+
+                  {/* other scenes */}
                   {year.scenes.map((scene, index) => (
                     <span
                       key={`scene-${index}`}
@@ -94,12 +106,6 @@ const Timeline = props => {
                       <span className="dot mt-1 left-1" />
                     </span>
                   ))}
-                  <span
-                    onClick={() => onClickYear(year.id)}
-                    className="cursor-pointer"
-                  >
-                    {year.id}
-                  </span>
                 </div>
               ) : (
                 // other years
