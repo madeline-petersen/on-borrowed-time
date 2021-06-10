@@ -22,10 +22,7 @@ const Timeline = props => {
 
   const onClickYear = year => {
     setScenes(0);
-    setTimeout(function() {
-      // executed after 1 second
-      history.push(`/${year}`);
-    }, 1000);
+    props.handleClickYear(year);
   };
 
   const onClickScene = sceneIndex => {
@@ -129,6 +126,7 @@ Timeline.defaultProps = {
 
 Timeline.propTypes = {
   timelineClasses: PropTypes.string,
+  handleClickYear: PropTypes.func,
   sceneIndex: PropTypes.string,
   pageId: PropTypes.string,
   year: PropTypes.shape(),

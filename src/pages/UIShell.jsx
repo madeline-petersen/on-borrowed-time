@@ -12,11 +12,13 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Reflection from './Reflection.jsx';
 import Timeline from '../components/Timeline';
+import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [isClicked, setFooterClicked] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
+  let history = useHistory();
 
   const toggleLeftMenu = () => {
     isMenuActive ? setIsMenuActive(false) : setIsMenuActive(true);
@@ -29,7 +31,15 @@ const UIShell = props => {
   let pageComponent;
   switch (props.pageId) {
     case 'home':
-      pageComponent = <Home {...props} hash={hash} setHash={setHash} />;
+      pageComponent = (
+        <Home
+          {...props}
+          hash={hash}
+          setHash={setHash}
+          isClicked={isClicked}
+          setClicked={setFooterClicked}
+        />
+      );
       break;
     case 'intro':
       pageComponent = <Intro {...props} />;
@@ -100,6 +110,13 @@ const UIShell = props => {
         year={props.year}
         isYearEnd={isYearEnd}
         isClicked={isClicked}
+        handleClickYear={year => {
+          setFooterClicked(true);
+          setTimeout(function() {
+            // executed after 1 second
+            history.push(`/${year}`);
+          }, 1000);
+        }}
       />
       {pageComponent}
     </>

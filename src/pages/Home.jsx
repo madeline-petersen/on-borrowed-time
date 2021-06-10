@@ -6,10 +6,9 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 
-const Home = ({ years, hash, setHash }) => {
+const Home = ({ years, hash, setHash, isClicked, setClicked }) => {
   console.log(hash);
   let myHistory = useHistory();
-  const [isClicked, setClicked] = useState(false);
   const [year, setYear] = useState(years[0]);
   const start = 'black';
   const end = 'black';
@@ -25,7 +24,11 @@ const Home = ({ years, hash, setHash }) => {
   }, [hash]);
 
   const onClickYear = year => {
-    myHistory.push(`/${year}`);
+    setClicked(true);
+    setTimeout(function() {
+      // executed after 1 second
+      myHistory.push(`/${year}`);
+    }, 1000);
   };
 
   return (
@@ -40,7 +43,7 @@ const Home = ({ years, hash, setHash }) => {
       </div>
 
       <div
-        className="home"
+        className={`home ${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
         id="home"
         // hash is updated as page is scrolled
         onScroll={e => {
@@ -112,7 +115,9 @@ Home.propTypes = {
   artifacts: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
-  changingParam: PropTypes.string
+  changingParam: PropTypes.string,
+  isClicked: PropTypes.bool,
+  setClicked: PropTypes.func
 };
 
 export default Home;
