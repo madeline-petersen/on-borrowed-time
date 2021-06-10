@@ -11,7 +11,7 @@ const Reflection = ({
   nextParams,
   changingParam,
   next,
-  setFooterClicked
+  setNavigateAway
 }) => {
   const [isClicked, setClicked] = useState(false);
   useEffect(() => {
@@ -23,7 +23,7 @@ const Reflection = ({
   let nextBackground = changingParam === 'year' ? nextParams.year : 'gray-30';
 
   const onFooterClick = () => {
-    setFooterClicked(true);
+    setNavigateAway(true);
     setClicked(true);
   };
 
@@ -105,7 +105,7 @@ Reflection.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  setFooterClicked: PropTypes.func
+  setNavigateAway: PropTypes.func
 };
 
 export default Reflection;

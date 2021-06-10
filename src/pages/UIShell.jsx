@@ -16,7 +16,7 @@ import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const [isClicked, setFooterClicked] = useState(false);
+  const [isClicked, setNavigateAway] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   let history = useHistory();
 
@@ -37,7 +37,7 @@ const UIShell = props => {
           hash={hash}
           setHash={setHash}
           isClicked={isClicked}
-          setClicked={setFooterClicked}
+          setClicked={setNavigateAway}
         />
       );
       break;
@@ -45,18 +45,18 @@ const UIShell = props => {
       pageComponent = <Intro {...props} />;
       break;
     case 'event':
-      pageComponent = <Event {...props} setFooterClicked={setFooterClicked} />;
+      pageComponent = <Event {...props} setNavigateAway={setNavigateAway} />;
       break;
     case 'artifacts':
       pageComponent = <Artifacts {...props} />;
       break;
     case 'reflection':
       pageComponent = (
-        <Reflection {...props} setFooterClicked={setFooterClicked} />
+        <Reflection {...props} setNavigateAway={setNavigateAway} />
       );
       break;
     default:
-      pageComponent = <Event {...props} setFooterClicked={setFooterClicked} />;
+      pageComponent = <Event {...props} setNavigateAway={setNavigateAway} />;
   }
 
   let isNewYear = props.pageId === 'event' && props.romanSceneNumber === 'I';
@@ -111,7 +111,7 @@ const UIShell = props => {
         isYearEnd={isYearEnd}
         isClicked={isClicked}
         handleClickYear={year => {
-          setFooterClicked(true);
+          setNavigateAway(true);
           setTimeout(function() {
             // executed after 1 second
             history.push(`/${year}`);
