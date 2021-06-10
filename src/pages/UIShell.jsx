@@ -28,6 +28,46 @@ const UIShell = props => {
     setIsMenuActive(false);
   };
 
+  const interYearNavigation = year => {
+    console.log('navigating to the year ', year);
+    setNavigateAway(true);
+    setTimeout(function() {
+      // executed after 1 second
+      history.push(`/${year}`);
+    }, 1000);
+
+    // collapse scene timeline
+    // content fade out
+    // navigate to intro
+    // content fade in
+    // expand scene timeline
+  };
+
+  const intraYearNavigation = nextParams => {
+    console.log('navigating to the page ', nextParams);
+    // content fade out
+    // navigate to next page/scene
+    // content fade in
+  };
+
+  const onClickTimeline = () => {
+    setNavigateAway(true);
+    // if year
+    // inter-year
+
+    // if scene
+    // intra-year
+  };
+
+  const onClickFooter = () => {
+    setNavigateAway(true);
+    // if year end
+    // inter-year
+
+    // else
+    // intra-year
+  };
+
   let pageComponent;
   switch (props.pageId) {
     case 'home':
@@ -111,11 +151,7 @@ const UIShell = props => {
         isYearEnd={isYearEnd}
         isClicked={isClicked}
         handleClickYear={year => {
-          setNavigateAway(true);
-          setTimeout(function() {
-            // executed after 1 second
-            history.push(`/${year}`);
-          }, 1000);
+          interYearNavigation(year);
         }}
       />
       {pageComponent}
