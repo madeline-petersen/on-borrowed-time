@@ -9,7 +9,14 @@ import PropTypes from 'prop-types';
 import ResourceTable from '../components/ResourceTable';
 import { useScreenClass } from 'react-grid-system';
 
-const Event = ({ event, nextParams, changingParam, next, setNavigateAway }) => {
+const Event = ({
+  event,
+  nextParams,
+  changingParam,
+  next,
+  setNavigateAway,
+  onClickFooter
+}) => {
   const [isClicked, setClicked] = useState(false);
   const screenClass = useScreenClass();
 
@@ -76,6 +83,7 @@ const Event = ({ event, nextParams, changingParam, next, setNavigateAway }) => {
                 changingParam={changingParam}
                 setClicked={setClicked}
                 isClicked={isClicked}
+                onClickFooter={onClickFooter}
                 theme={{
                   background: 'gray-30',
                   text: 'black',
@@ -96,7 +104,8 @@ Event.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  setNavigateAway: PropTypes.func
+  setNavigateAway: PropTypes.func,
+  onClickFooter: PropTypes.func
 };
 
 export default Event;

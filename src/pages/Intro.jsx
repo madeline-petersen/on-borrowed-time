@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import stairs from '../images/Homepage_1989.jpg';
 import temple from '../images/Homepage_1984.jpg';
 
-const Intro = ({ year }) => {
+const Intro = ({ year, onClickFooter }) => {
   const [isClicked, setClicked] = useState(false);
 
   useEffect(() => {
@@ -75,6 +75,7 @@ const Intro = ({ year }) => {
             next={year.scenes[0]}
             changingParam="scene"
             setClicked={setClicked}
+            onClickFooter={onClickFooter}
             theme={{
               background: 'black',
               text: 'gray-40',
@@ -88,7 +89,8 @@ const Intro = ({ year }) => {
 };
 
 Intro.propTypes = {
-  year: PropTypes.shape()
+  year: PropTypes.shape(),
+  onClickFooter: PropTypes.func
 };
 
 export default Intro;

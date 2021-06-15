@@ -60,12 +60,20 @@ const UIShell = props => {
   };
 
   const onClickFooter = () => {
-    setNavigateAway(true);
-    // if year end
-    // inter-year
-
-    // else
-    // intra-year
+    setTimeout(function() {
+      // executed after 2 seconds
+      if (props.changingParam === 'year') {
+        // if year end
+        // inter-year
+        history.push(`/${props.nextParams.year}`);
+      } else {
+        // else
+        // intra-year
+        history.push(
+          `/${props.nextParams.year}/${props.nextParams.scene}/${props.nextParams.page}`
+        );
+      }
+    }, 2000);
   };
 
   let pageComponent;
@@ -82,21 +90,37 @@ const UIShell = props => {
       );
       break;
     case 'intro':
-      pageComponent = <Intro {...props} />;
+      pageComponent = <Intro {...props} onClickFooter={onClickFooter} />;
       break;
     case 'event':
-      pageComponent = <Event {...props} setNavigateAway={setNavigateAway} />;
+      pageComponent = (
+        <Event
+          {...props}
+          setNavigateAway={setNavigateAway}
+          onClickFooter={onClickFooter}
+        />
+      );
       break;
     case 'artifacts':
-      pageComponent = <Artifacts {...props} />;
+      pageComponent = <Artifacts {...props} onClickFooter={onClickFooter} />;
       break;
     case 'reflection':
       pageComponent = (
-        <Reflection {...props} setNavigateAway={setNavigateAway} />
+        <Reflection
+          {...props}
+          setNavigateAway={setNavigateAway}
+          onClickFooter={onClickFooter}
+        />
       );
       break;
     default:
-      pageComponent = <Event {...props} setNavigateAway={setNavigateAway} />;
+      pageComponent = (
+        <Event
+          {...props}
+          setNavigateAway={setNavigateAway}
+          onClickFooter={onClickFooter}
+        />
+      );
   }
 
   let isNewYear = props.pageId === 'event' && props.romanSceneNumber === 'I';
@@ -171,6 +195,8 @@ UIShell.propTypes = {
   romanSceneNumber: PropTypes.string,
   isLastScene: PropTypes.bool,
   isLastPage: PropTypes.bool,
+  nextParams: PropTypes.shape(),
+  changingParam: PropTypes.string,
   years: PropTypes.arrayOf(PropTypes.shape())
 };
 

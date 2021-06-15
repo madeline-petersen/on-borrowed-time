@@ -16,7 +16,13 @@ const imageLookup = {
   candles: candles
 };
 
-const Artifacts = ({ artifacts, changingParam, nextParams, next }) => {
+const Artifacts = ({
+  artifacts,
+  changingParam,
+  nextParams,
+  next,
+  onClickFooter
+}) => {
   const [isClicked, setClicked] = useState(false);
 
   useEffect(() => {
@@ -70,6 +76,7 @@ const Artifacts = ({ artifacts, changingParam, nextParams, next }) => {
               next={next}
               changingParam={changingParam}
               setClicked={setClicked}
+              onClickFooter={onClickFooter}
               theme={{
                 background: 'black',
                 text: 'gray-40',
@@ -87,7 +94,8 @@ Artifacts.propTypes = {
   artifacts: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
-  changingParam: PropTypes.string
+  changingParam: PropTypes.string,
+  onClickFooter: PropTypes.func
 };
 
 export default Artifacts;

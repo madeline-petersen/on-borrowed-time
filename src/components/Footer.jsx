@@ -3,31 +3,29 @@ import { Col, Row } from 'react-grid-system';
 import { ArrowDown16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
 const Footer = ({
+  // useState variables, used in page component to transition page
   isClicked,
   setClicked,
+
+  // used to determine navigation and labels
   nextParams,
   changingParam,
+  onClickFooter,
+
+  // object that contains title of next page
   next,
+
+  // border, background, text
   theme,
+
+  // current page id (intro, event, artifacts, reflection)
   pageId
 }) => {
-  let history = useHistory();
-
   const handleOnClick = () => {
     setClicked(true);
-    setTimeout(function() {
-      // executed after 2 seconds
-      if (changingParam === 'year') {
-        history.push(`/${nextParams.year}`);
-      } else {
-        history.push(
-          `/${nextParams.year}/${nextParams.scene}/${nextParams.page}`
-        );
-      }
-    }, 2000);
+    onClickFooter();
   };
 
   let textClasses =
@@ -91,12 +89,13 @@ Footer.defaultProps = {
 };
 
 Footer.propTypes = {
-  nextParams: PropTypes.shape(),
-  next: PropTypes.shape(),
-  setClicked: PropTypes.func,
-  theme: PropTypes.shape(),
-  changingParam: PropTypes.string,
   isClicked: PropTypes.bool,
+  setClicked: PropTypes.func,
+  changingParam: PropTypes.string,
+  nextParams: PropTypes.shape(),
+  onClickFooter: PropTypes.func,
+  next: PropTypes.shape(),
+  theme: PropTypes.shape(),
   pageId: PropTypes.string
 };
 
