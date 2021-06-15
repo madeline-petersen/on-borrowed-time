@@ -94,7 +94,7 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                         <div className="medium-body text-white">
                           {year.title}
                         </div>
-                        {/* <div
+                        <div
                           className={`small-body text-white left-menu__blurb absolute ${
                             selectedYear !== null
                               ? selectedYear.id === year.id
@@ -104,7 +104,7 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                           }`}
                         >
                           {year.blurb}
-                        </div> */}
+                        </div>
                       </Col>
                     </Row>
                   ))}
