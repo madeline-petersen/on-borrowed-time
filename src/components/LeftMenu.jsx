@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 
 import { Close20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
+import { roman } from '@sguest/roman-js';
 
 const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
   const [selectedYear, setSelectedYear] = useState(null);
@@ -72,41 +73,61 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                   }}
                 >
                   {years.map((year, index) => (
-                    <Row
-                      key={year.id}
-                      className={`left-menu__year mb-2 cursor-pointer ${
-                        selectedYear !== null
-                          ? selectedYear.id === year.id
-                            ? 'opacity-100'
-                            : 'opacity-0'
-                          : ''
-                      }`}
-                      onClick={() =>
-                        setSelectedYear({ id: year.id, index: index })
-                      }
-                    >
-                      {/* 1/4 of 4 columns */}
-                      <Col lg={3} md={3} sm={2} xs={2}>
-                        <div className="medium-body text-white">{year.id}</div>
-                      </Col>
-                      {/* 3/4 of 4 columns */}
-                      <Col lg={9} md={9} sm={10} xs={10}>
-                        <div className="medium-body text-white">
-                          {year.title}
-                        </div>
-                        <div
-                          className={`small-body text-white left-menu__blurb absolute ${
-                            selectedYear !== null
-                              ? selectedYear.id === year.id
-                                ? 'opacity-100'
-                                : 'opacity-0'
+                    <>
+                      <Row
+                        key={year.id}
+                        className={`left-menu__year mb-2 cursor-pointer ${
+                          selectedYear !== null
+                            ? selectedYear.id === year.id
+                              ? 'opacity-100'
                               : 'opacity-0'
-                          }`}
-                        >
-                          {year.blurb}
-                        </div>
-                      </Col>
-                    </Row>
+                            : ''
+                        }`}
+                        onClick={() =>
+                          setSelectedYear({ id: year.id, index: index })
+                        }
+                      >
+                        {/* 1/4 of 4 columns */}
+                        <Col lg={3} md={3} sm={2} xs={2}>
+                          <div className="medium-body text-white">
+                            {year.id}
+                          </div>
+                        </Col>
+                        {/* 3/4 of 4 columns */}
+                        <Col lg={9} md={9} sm={10} xs={10}>
+                          <div className="medium-body text-white">
+                            {year.title}
+                          </div>
+                        </Col>
+                      </Row>
+
+                      <Row
+                        className={`small-body text-white left-menu__blurb absolute ${
+                          selectedYear !== null
+                            ? selectedYear.id === year.id
+                              ? 'opacity-100'
+                              : 'opacity-0 hidden'
+                            : 'opacity-0 hidden'
+                        }`}
+                      >
+                        <Col lg={3} md={3} sm={2} xs={2} />
+                        <Col lg={9} md={9} sm={10} xs={10}>
+                          <div>{year.blurb}</div>
+                        </Col>
+                        {year.scenes.map((scene, index) => (
+                          <>
+                            <Col lg={3} md={3} sm={2} xs={2}>
+                              <div className={`small-body text-white`}>
+                                Scene {roman.toRoman(index + 1)}
+                              </div>
+                            </Col>
+                            <Col lg={9} md={9} sm={10} xs={10}>
+                              <div>{scene.title}</div>
+                            </Col>
+                          </>
+                        ))}
+                      </Row>
+                    </>
                   ))}
                 </div>
               </Col>
