@@ -64,6 +64,12 @@
     cursor: pointer;
   }
 
+  &__list {
+    &.transform {
+      transition: transform 1s;
+    }
+  }
+
   &__year {
     transition: opacity 0.5s;
     padding-right: 52px;

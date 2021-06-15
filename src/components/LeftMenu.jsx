@@ -55,20 +55,32 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                   <Close20 />
                 </span>
                 <div
-                  className={`flex flex-col h-full justify-end`}
-                  style={{ paddingBottom: '52px' }}
+                  className={`left-menu__list flex flex-col h-full justify-end ${
+                    selectedYear !== null ? 'transform' : ''
+                  }`}
+                  style={{
+                    paddingBottom: '52px',
+                    transform: `${
+                      selectedYear !== null
+                        ? `translate(0%, calc(-25% - ${selectedYear.index *
+                            33}px))`
+                        : ''
+                    }`
+                  }}
                 >
-                  {years.map(year => (
+                  {years.map((year, index) => (
                     <Row
                       key={year.id}
                       className={`left-menu__year mb-2 cursor-pointer ${
                         selectedYear !== null
-                          ? selectedYear === year.id
+                          ? selectedYear.id === year.id
                             ? 'opacity-100'
                             : 'opacity-0'
                           : ''
                       }`}
-                      onClick={() => setSelectedYear(year.id)}
+                      onClick={() =>
+                        setSelectedYear({ id: year.id, index: index })
+                      }
                     >
                       {/* 1/4 of 4 columns */}
                       <Col lg={3} md={3} sm={2} xs={2}>
@@ -82,7 +94,7 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                         {/* <div
                           className={`small-body text-white left-menu__blurb absolute ${
                             selectedYear !== null
-                              ? selectedYear === year.id
+                              ? selectedYear.id === year.id
                                 ? 'opacity-100'
                                 : 'opacity-0'
                               : 'opacity-0'
