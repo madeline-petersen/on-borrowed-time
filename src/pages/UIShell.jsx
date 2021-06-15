@@ -17,6 +17,13 @@ import { useHistory } from 'react-router-dom';
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [isClicked, setNavigateAway] = useState(false);
+  const [scenes, setScenes] = useState(
+    props.pageId === 'home'
+      ? props.year.scenes
+        ? props.year.scenes.length
+        : 0
+      : 0
+  );
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   let history = useHistory();
 
@@ -29,7 +36,7 @@ const UIShell = props => {
   };
 
   const interYearNavigation = year => {
-    console.log('navigating to the year ', year);
+    setScenes(0); // collapse timeline
     setNavigateAway(true);
     setTimeout(function() {
       // executed after 1 second
@@ -43,13 +50,6 @@ const UIShell = props => {
     // expand scene timeline
   };
 
-  const intraYearNavigation = nextParams => {
-    console.log('navigating to the page ', nextParams);
-    // content fade out
-    // navigate to next page/scene
-    // content fade in
-  };
-
   const onClickTimeline = () => {
     setNavigateAway(true);
     // if year
@@ -60,6 +60,10 @@ const UIShell = props => {
   };
 
   const onClickFooter = () => {
+    if (props.changingParam === 'year') {
+      setScenes(0); // collapse timeline
+    }
+
     setTimeout(function() {
       // executed after 2 seconds
       if (props.changingParam === 'year') {
@@ -172,6 +176,8 @@ const UIShell = props => {
         previewedYear={hash}
         years={props.years}
         year={props.year}
+        scenes={scenes}
+        setScenes={setScenes}
         isYearEnd={isYearEnd}
         isClicked={isClicked}
         handleClickYear={year => {
