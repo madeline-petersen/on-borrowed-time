@@ -13,6 +13,9 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
 
   const onClickSpan = () => {
     closeModal();
+    setTimeout(function() {
+      setSelectedYear(null);
+    }, 1000);
   };
 
   window.onclick = function(event) {
