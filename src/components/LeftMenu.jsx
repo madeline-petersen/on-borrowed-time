@@ -101,32 +101,26 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                         </Col>
                       </Row>
 
-                      <Row
-                        className={`small-body text-white left-menu__blurb absolute ${
-                          selectedYear !== null
-                            ? selectedYear.id === year.id
-                              ? 'opacity-100'
-                              : 'opacity-0 hidden'
-                            : 'opacity-0 hidden'
-                        }`}
-                      >
-                        <Col lg={3} md={3} sm={2} xs={2} />
-                        <Col lg={9} md={9} sm={10} xs={10}>
-                          <div>{year.blurb}</div>
-                        </Col>
-                        {year.scenes.map((scene, index) => (
-                          <>
-                            <Col lg={3} md={3} sm={2} xs={2}>
-                              <div className={`small-body text-white`}>
-                                Scene {roman.toRoman(index + 1)}
-                              </div>
-                            </Col>
-                            <Col lg={9} md={9} sm={10} xs={10}>
-                              <div>{scene.title}</div>
-                            </Col>
-                          </>
-                        ))}
-                      </Row>
+                      <span className="hidden">
+                        <Row className={`small-body text-white`}>
+                          <Col lg={3} md={3} sm={2} xs={2} />
+                          <Col lg={9} md={9} sm={10} xs={10}>
+                            <div>{year.blurb}</div>
+                          </Col>
+                          {year.scenes.map((scene, index) => (
+                            <>
+                              <Col lg={3} md={3} sm={2} xs={2}>
+                                <div className={`small-body text-white`}>
+                                  Scene {roman.toRoman(index + 1)}
+                                </div>
+                              </Col>
+                              <Col lg={9} md={9} sm={10} xs={10}>
+                                <div>{scene.title}</div>
+                              </Col>
+                            </>
+                          ))}
+                        </Row>
+                      </span>
                     </>
                   ))}
                 </div>
