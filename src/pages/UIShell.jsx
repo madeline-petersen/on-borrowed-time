@@ -18,6 +18,7 @@ const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [isClicked, setNavigateAway] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
+  const [scenes, setScenes] = useState(0);
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
@@ -136,6 +137,8 @@ const UIShell = props => {
         isYearEnd={isYearEnd}
         isClicked={isClicked}
         navigateTo={navigateTo}
+        scenes={scenes}
+        setScenes={setScenes}
       />
       {pageComponent}
     </>

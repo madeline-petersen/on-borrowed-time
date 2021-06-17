@@ -1,6 +1,6 @@
 import './Timeline.scss';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import PropTypes from 'prop-types';
 import { roman } from '@sguest/roman-js';
@@ -9,16 +9,9 @@ const Timeline = props => {
   // timeline is absolutely positioned and overlayed on every page (except index)
   // on the homepage, the year being previewed is highlighted
   // on specific year pages, the year is highlighted and the scene timeline is active
-  const [scenes, setScenes] = useState(
-    props.pageId === 'home'
-      ? props.year.scenes
-        ? props.year.scenes.length
-        : 0
-      : 0
-  );
 
   const onClickYear = year => {
-    setScenes(0); // collapse timeline
+    props.setScenes(0); // collapse timeline
     setTimeout(function() {
       // executed after 1 second
       props.navigateTo(year);
@@ -30,7 +23,7 @@ const Timeline = props => {
   };
 
   useEffect(() => {
-    setScenes(props.year.scenes ? props.year.scenes.length : 0);
+    props.setScenes(props.year.scenes ? props.year.scenes.length : 0);
   }, [props.year]);
 
   return (
@@ -67,7 +60,7 @@ const Timeline = props => {
                 <div
                   key={year.id}
                   className={`year-timeline__scene-timeline pl-4 mb-2.5`}
-                  style={{ paddingBottom: `calc(${scenes} * 24px)` }}
+                  style={{ paddingBottom: `calc(${props.scenes} * 24px)` }}
                 >
                   {/* intro circle */}
                   <span
@@ -129,7 +122,9 @@ Timeline.propTypes = {
   year: PropTypes.shape(),
   previewedYear: PropTypes.string,
   years: PropTypes.arrayOf(PropTypes.shape()),
-  navigateTo: PropTypes.func
+  navigateTo: PropTypes.func,
+  scenes: PropTypes.number,
+  setScenes: PropTypes.func
 };
 
 export default Timeline;
