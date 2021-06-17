@@ -28,9 +28,7 @@ const Timeline = props => {
   };
 
   const onClickScene = sceneIndex => {
-    history.push(
-      `/${props.year.id}/scene-${roman.toRoman(sceneIndex + 1)}/event`
-    );
+    props.navigateTo(props.year.id, roman.toRoman(sceneIndex + 1), 'event');
   };
 
   useEffect(() => {
