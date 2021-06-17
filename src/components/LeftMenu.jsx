@@ -15,9 +15,9 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
   let history = useHistory();
 
   const onClickScene = (year, sceneIndex) => {
+    closeModal();
     let romanSceneNumber = roman.toRoman(sceneIndex + 1).toUpperCase();
     history.push(`/${year}/scene-${romanSceneNumber}/event`);
-    closeModal();
     setTimeout(function() {
       setSelectedYear(null);
     }, 1000);
