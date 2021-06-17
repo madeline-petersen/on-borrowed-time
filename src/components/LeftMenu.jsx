@@ -6,11 +6,22 @@ import React, { useState } from 'react';
 import { Close20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import { roman } from '@sguest/roman-js';
+import { useHistory } from 'react-router-dom';
 
 const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
   const [selectedYear, setSelectedYear] = useState(null);
   const menu = document.getElementById('menu-card');
   const overlay = document.getElementById('menu-overlay');
+  let history = useHistory();
+
+  const onClickScene = (year, sceneIndex) => {
+    let romanSceneNumber = roman.toRoman(sceneIndex + 1).toUpperCase();
+    history.push(`/${year}/scene-${romanSceneNumber}/event`);
+    closeModal();
+    setTimeout(function() {
+      setSelectedYear(null);
+    }, 1000);
+  };
 
   const onClickSpan = () => {
     closeModal();
@@ -51,7 +62,13 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
         <div className="absolute background-filler">
           <Container className="grid__container">
             <Row className="grid__row">
-              <Col lg={4} md={8} sm={12} xs={12} className="bg-black h-screen">
+              <Col
+                lg={4}
+                md={8}
+                sm={12}
+                xs={12}
+                className="bg-black h-screen overflow-y-auto"
+              >
                 <span
                   className="close absolute top-5 right-6 z-40"
                   onClick={onClickSpan}
@@ -73,9 +90,8 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                   }}
                 >
                   {years.map((year, index) => (
-                    <>
+                    <span key={year.id}>
                       <Row
-                        key={year.id}
                         className={`left-menu__year mb-2 cursor-pointer ${
                           selectedYear !== null
                             ? selectedYear.id === year.id
@@ -84,7 +100,11 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                             : ''
                         }`}
                         onClick={() =>
-                          setSelectedYear({ id: year.id, index: index })
+                          setSelectedYear({
+                            id: year.id,
+                            index: index,
+                            ...year
+                          })
                         }
                       >
                         {/* 1/4 of 4 columns */}
@@ -100,30 +120,41 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                           </div>
                         </Col>
                       </Row>
-
-                      <span className="hidden">
-                        <Row className={`small-body text-white`}>
-                          <Col lg={3} md={3} sm={2} xs={2} />
-                          <Col lg={9} md={9} sm={10} xs={10}>
-                            <div>{year.blurb}</div>
-                          </Col>
-                          {year.scenes.map((scene, index) => (
-                            <>
-                              <Col lg={3} md={3} sm={2} xs={2}>
-                                <div className={`small-body text-white`}>
-                                  Scene {roman.toRoman(index + 1)}
-                                </div>
-                              </Col>
-                              <Col lg={9} md={9} sm={10} xs={10}>
-                                <div>{scene.title}</div>
-                              </Col>
-                            </>
-                          ))}
-                        </Row>
-                      </span>
-                    </>
+                    </span>
                   ))}
                 </div>
+                {selectedYear !== null && (
+                  <span className={`absolute`} style={{ top: '40%' }}>
+                    <Row className={`small-body text-white`}>
+                      <Col lg={3} md={3} sm={2} xs={2} />
+                      <Col lg={9} md={9} sm={10} xs={10}>
+                        <div className="pb-10 pr-12">{selectedYear.blurb}</div>
+                      </Col>
+                      {selectedYear.scenes.map((scene, index) => (
+                        <span
+                          key={index}
+                          className="contents cursor-pointer"
+                          onClick={() => onClickScene(selectedYear.id, index)}
+                        >
+                          <Col lg={11} md={11} sm={11} xs={11}>
+                            <p className="border-t border-gray-70 pt-4" />
+                          </Col>
+                          <Col lg={3} md={3} sm={2} xs={2}>
+                            <div className={`small-body text-gray-40`}>
+                              Scene {roman.toRoman(index + 1)}
+                            </div>
+                          </Col>
+                          <Col lg={9} md={9} sm={10} xs={10}>
+                            <div>{scene.title}</div>
+                          </Col>
+                          <Col lg={11} md={11} sm={11} xs={11}>
+                            <p className="pb-8" />
+                          </Col>
+                        </span>
+                      ))}
+                    </Row>
+                  </span>
+                )}
               </Col>
             </Row>
           </Container>
