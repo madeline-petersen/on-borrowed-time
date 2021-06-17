@@ -4,13 +4,11 @@ import React, { useEffect, useState } from 'react';
 
 import PropTypes from 'prop-types';
 import { roman } from '@sguest/roman-js';
-import { useHistory } from 'react-router-dom';
 
 const Timeline = props => {
   // timeline is absolutely positioned and overlayed on every page (except index)
   // on the homepage, the year being previewed is highlighted
   // on specific year pages, the year is highlighted and the scene timeline is active
-  let history = useHistory();
   const [scenes, setScenes] = useState(
     props.pageId === 'home'
       ? props.year.scenes
