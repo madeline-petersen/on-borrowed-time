@@ -38,8 +38,8 @@ const Footer = ({
   return (
     <>
       <Row className={`grid__row`}>
-        <Col lg={1} md={1} />
-        <Col lg={11} md={11}>
+        <Col lg={1} />
+        <Col lg={11} md={12}>
           <p className={`border-t border-${theme.border} mt-44`} />
         </Col>
       </Row>
@@ -49,8 +49,8 @@ const Footer = ({
         }`}
         onClick={() => handleOnClick()}
       >
-        <Col lg={1} md={1} className="cursor-default" />
-        <Col lg={2} md={2} sm={2} xs={2}>
+        <Col lg={1} className="cursor-default" />
+        <Col lg={2} md={3} sm={3} xs={3}>
           <p className={`small-body pb-4 pt-4 ${textClasses}`}>Up Next</p>
         </Col>
         <Col lg={2} md={2} sm={2} xs={2}>
