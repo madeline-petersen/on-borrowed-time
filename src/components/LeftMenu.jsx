@@ -123,14 +123,21 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                     </span>
                   ))}
                 </div>
-                {selectedYear !== null && (
-                  <span className={`absolute`} style={{ top: '40%' }}>
-                    <Row className={`small-body text-white`}>
-                      <Col lg={3} md={3} sm={2} xs={2} />
-                      <Col lg={9} md={9} sm={10} xs={10}>
-                        <div className="pb-10 pr-12">{selectedYear.blurb}</div>
-                      </Col>
-                      {selectedYear.scenes.map((scene, index) => (
+                <span
+                  className={`absolute ${
+                    selectedYear === null ? 'opacity-0' : 'opacity-100'
+                  } transition-opacity delay-1000`}
+                  style={{ top: '40%' }}
+                >
+                  <Row className={`small-body text-white`}>
+                    <Col lg={3} md={3} sm={2} xs={2} />
+                    <Col lg={9} md={9} sm={10} xs={10}>
+                      <div className="pb-10 pr-12">
+                        {selectedYear && selectedYear.blurb}
+                      </div>
+                    </Col>
+                    {selectedYear &&
+                      selectedYear.scenes.map((scene, index) => (
                         <span
                           key={index}
                           className="contents cursor-pointer"
@@ -152,9 +159,8 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                           </Col>
                         </span>
                       ))}
-                    </Row>
-                  </span>
-                )}
+                  </Row>
+                </span>
               </Col>
             </Row>
           </Container>
