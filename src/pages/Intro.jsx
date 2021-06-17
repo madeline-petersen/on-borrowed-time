@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import stairs from '../images/Homepage_1989.jpg';
 import temple from '../images/Homepage_1984.jpg';
 
-const Intro = ({ year, onClickFooter }) => {
+const Intro = ({ year, navigateTo }) => {
   const [isClicked, setClicked] = useState(false);
 
   useEffect(() => {
@@ -71,11 +71,11 @@ const Intro = ({ year, onClickFooter }) => {
           </Row>
 
           <Footer
-            nextParams={{ year: year.id, scene: 'scene-I', page: 'event' }}
+            nextParams={{ year: year.id, scene: 'I', page: 'event' }}
             next={year.scenes[0]}
             changingParam="scene"
             setClicked={setClicked}
-            onClickFooter={onClickFooter}
+            navigateTo={navigateTo}
             theme={{
               background: 'black',
               text: 'gray-40',
@@ -90,7 +90,7 @@ const Intro = ({ year, onClickFooter }) => {
 
 Intro.propTypes = {
   year: PropTypes.shape(),
-  onClickFooter: PropTypes.func
+  navigateTo: PropTypes.func
 };
 
 export default Intro;

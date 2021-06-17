@@ -62,7 +62,7 @@ function Intro() {
   const changingParam = 'scene';
   const nextParams = {
     year: year.id,
-    scene: `scene-${nextRomanSceneNumber}`, // next scene
+    scene: nextRomanSceneNumber,
     page: 'event'
   };
 
@@ -153,12 +153,12 @@ function Page() {
           } // nextYear.id nextYear.title
       : {
           year: year.id,
-          scene: `scene-${nextRomanSceneNumber}`, // next scene
+          scene: nextRomanSceneNumber, // next scene
           page: 'event'
         } // scene nextScene.title
     : {
         year: year.id,
-        scene: `scene-${romanSceneNumber}`,
+        scene: romanSceneNumber,
         page: nextPage.type // next page;
       }; // Scene {romanSceneNumber}  nextPage.title
 

@@ -53,27 +53,6 @@ const UIShell = props => {
     // intra-year
   };
 
-  const onClickFooter = () => {
-    if (props.changingParam === 'year') {
-      setScenes(0); // collapse timeline
-    }
-
-    setTimeout(function() {
-      // executed after 2 seconds
-      if (props.changingParam === 'year') {
-        // if year end
-        // inter-year
-        history.push(`/${props.nextParams.year}`);
-      } else {
-        // else
-        // intra-year
-        history.push(
-          `/${props.nextParams.year}/${props.nextParams.scene}/${props.nextParams.page}`
-        );
-      }
-    }, 2000);
-  };
-
   let pageComponent;
   switch (props.pageId) {
     case 'home':
@@ -88,26 +67,26 @@ const UIShell = props => {
       );
       break;
     case 'intro':
-      pageComponent = <Intro {...props} onClickFooter={onClickFooter} />;
+      pageComponent = <Intro {...props} navigateTo={navigateTo} />;
       break;
     case 'event':
       pageComponent = (
         <Event
           {...props}
           setNavigateAway={setNavigateAway}
-          onClickFooter={onClickFooter}
+          navigateTo={navigateTo}
         />
       );
       break;
     case 'artifacts':
-      pageComponent = <Artifacts {...props} onClickFooter={onClickFooter} />;
+      pageComponent = <Artifacts {...props} navigateTo={navigateTo} />;
       break;
     case 'reflection':
       pageComponent = (
         <Reflection
           {...props}
           setNavigateAway={setNavigateAway}
-          onClickFooter={onClickFooter}
+          navigateTo={navigateTo}
         />
       );
       break;
@@ -116,7 +95,7 @@ const UIShell = props => {
         <Event
           {...props}
           setNavigateAway={setNavigateAway}
-          onClickFooter={onClickFooter}
+          navigateTo={navigateTo}
         />
       );
   }

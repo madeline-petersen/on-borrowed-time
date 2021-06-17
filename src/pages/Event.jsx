@@ -15,7 +15,7 @@ const Event = ({
   changingParam,
   next,
   setNavigateAway,
-  onClickFooter
+  navigateTo
 }) => {
   const [isClicked, setClicked] = useState(false);
   const screenClass = useScreenClass();
@@ -83,7 +83,7 @@ const Event = ({
                 changingParam={changingParam}
                 setClicked={setClicked}
                 isClicked={isClicked}
-                onClickFooter={onClickFooter}
+                navigateTo={navigateTo}
                 theme={{
                   background: 'gray-30',
                   text: 'black',
@@ -105,7 +105,7 @@ Event.propTypes = {
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
   setNavigateAway: PropTypes.func,
-  onClickFooter: PropTypes.func
+  navigateTo: PropTypes.func
 };
 
 export default Event;

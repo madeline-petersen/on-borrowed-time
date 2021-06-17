@@ -12,7 +12,7 @@ const Reflection = ({
   changingParam,
   next,
   setNavigateAway,
-  onClickFooter
+  navigateTo
 }) => {
   const [isClicked, setClicked] = useState(false);
   useEffect(() => {
@@ -87,7 +87,7 @@ const Reflection = ({
                 next={next}
                 changingParam={changingParam}
                 setClicked={onFooterClick}
-                onClickFooter={onClickFooter}
+                navigateTo={navigateTo}
                 theme={{
                   background: 'black',
                   text: 'gray-40',
@@ -108,7 +108,7 @@ Reflection.propTypes = {
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
   setNavigateAway: PropTypes.func,
-  onClickFooter: PropTypes.func
+  navigateTo: PropTypes.func
 };
 
 export default Reflection;

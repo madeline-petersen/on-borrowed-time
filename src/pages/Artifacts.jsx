@@ -21,7 +21,7 @@ const Artifacts = ({
   changingParam,
   nextParams,
   next,
-  onClickFooter
+  navigateTo
 }) => {
   const [isClicked, setClicked] = useState(false);
 
@@ -76,7 +76,7 @@ const Artifacts = ({
               next={next}
               changingParam={changingParam}
               setClicked={setClicked}
-              onClickFooter={onClickFooter}
+              navigateTo={navigateTo}
               theme={{
                 background: 'black',
                 text: 'gray-40',
@@ -95,7 +95,7 @@ Artifacts.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  onClickFooter: PropTypes.func
+  navigateTo: PropTypes.func
 };
 
 export default Artifacts;

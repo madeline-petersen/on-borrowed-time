@@ -12,7 +12,7 @@ const Footer = ({
   // used to determine navigation and labels
   nextParams,
   changingParam,
-  onClickFooter,
+  navigateTo,
 
   // object that contains title of next page
   next,
@@ -25,7 +25,22 @@ const Footer = ({
 }) => {
   const handleOnClick = () => {
     setClicked(true);
-    onClickFooter();
+    setTimeout(function() {
+      // executed after 2 seconds
+      if (changingParam === 'year') {
+        // if year end
+        // inter-year
+        navigateTo(nextParams.year);
+      } else {
+        // else
+        // intra-year
+        navigateTo(
+          nextParams.year,
+          nextParams.scene, // should be romanSceneNumber
+          nextParams.page
+        );
+      }
+    }, 2000);
   };
 
   let textClasses =
@@ -58,10 +73,7 @@ const Footer = ({
             {/* current scene, next scene, next year */}
             {changingParam === 'year'
               ? nextParams.year
-              : nextParams.scene
-                  .replace(/-/g, ' ')
-                  .charAt(0)
-                  .toUpperCase() + nextParams.scene.replace(/-/g, ' ').slice(1)}
+              : `Scene ${nextParams.scene}`}
           </p>
         </Col>
         <Col
@@ -93,7 +105,7 @@ Footer.propTypes = {
   setClicked: PropTypes.func,
   changingParam: PropTypes.string,
   nextParams: PropTypes.shape(),
-  onClickFooter: PropTypes.func,
+  navigateTo: PropTypes.func,
   next: PropTypes.shape(),
   theme: PropTypes.shape(),
   pageId: PropTypes.string
