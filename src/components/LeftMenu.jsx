@@ -17,18 +17,18 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
   const onClickScene = (year, sceneIndex) => {
     closeModal();
     let romanSceneNumber = roman.toRoman(sceneIndex + 1).toUpperCase();
-    history.push(`/${year}/scene-${romanSceneNumber}/event`);
     setTimeout(function() {
+      history.push(`/${year}/scene-${romanSceneNumber}/event`);
       setSelectedYear(null);
-    }, 1000);
+    }, 500);
   };
 
   const onClickYear = year => {
     closeModal();
-    history.push(`/${year}`);
     setTimeout(function() {
+      history.push(`/${year}`);
       setSelectedYear(null);
-    }, 1000);
+    }, 500);
   };
 
   const onClickSpan = () => {
