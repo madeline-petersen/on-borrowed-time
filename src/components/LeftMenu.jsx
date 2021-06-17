@@ -70,19 +70,21 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
         <div className="absolute background-filler">
           <Container className="grid__container">
             <Row className="grid__row">
-              <Col
-                lg={4}
-                md={8}
-                sm={12}
-                xs={12}
-                className="bg-black h-screen overflow-y-auto"
-              >
+              <Col lg={4} md={8} sm={12} xs={12}>
                 <span
                   className="close absolute top-5 right-6 z-40"
                   onClick={onClickSpan}
                 >
                   <Close20 />
                 </span>
+              </Col>
+              <Col
+                lg={4}
+                md={8}
+                sm={12}
+                xs={12}
+                className="bg-black h-screen overflow-y-auto overflow-x-hidden"
+              >
                 <div
                   className={`left-menu__list flex flex-col h-full justify-end ${
                     selectedYear !== null ? 'transform' : ''
@@ -91,7 +93,7 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                     paddingBottom: '52px',
                     transform: `${
                       selectedYear !== null
-                        ? `translate(0%, calc(-25% - ${selectedYear.index *
+                        ? `translate(0%, calc(-40% - ${selectedYear.index *
                             33}px))`
                         : ''
                     }`
@@ -137,7 +139,7 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                   className={`absolute ${
                     selectedYear === null ? 'opacity-0' : 'opacity-100'
                   } transition-opacity delay-1000`}
-                  style={{ top: '40%' }}
+                  style={{ top: '26%' }}
                 >
                   <Row className={`small-body text-white`}>
                     <Col lg={3} md={3} sm={2} xs={2} />
