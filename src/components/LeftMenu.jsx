@@ -3,6 +3,7 @@ import './LeftMenu.scss';
 import { Col, Container, Row } from 'react-grid-system';
 import React, { useState } from 'react';
 
+import { ArrowLeft16 } from '@carbon/icons-react';
 import { Close20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import { roman } from '@sguest/roman-js';
@@ -77,6 +78,14 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                 xs={12}
                 className="bg-black h-screen overflow-y-auto overflow-x-hidden"
               >
+                {selectedYear !== null && (
+                  <span
+                    className={`text-white absolute top-24 z-40 cursor-pointer`}
+                    onClick={() => setSelectedYear(null)}
+                  >
+                    <ArrowLeft16 />
+                  </span>
+                )}
                 <span
                   className="close absolute top-5 right-6 z-40"
                   onClick={onClickSpan}

@@ -65,6 +65,8 @@
   }
 
   &__list {
+    transition: transform 1s;
+
     &.transform {
       transition: transform 1s;
     }
