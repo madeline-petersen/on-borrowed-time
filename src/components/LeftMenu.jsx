@@ -23,6 +23,14 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
     }, 1000);
   };
 
+  const onClickYear = year => {
+    closeModal();
+    history.push(`/${year}`);
+    setTimeout(function() {
+      setSelectedYear(null);
+    }, 1000);
+  };
+
   const onClickSpan = () => {
     closeModal();
     setTimeout(function() {
@@ -100,11 +108,13 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                             : ''
                         }`}
                         onClick={() =>
-                          setSelectedYear({
-                            id: year.id,
-                            index: index,
-                            ...year
-                          })
+                          selectedYear === null
+                            ? setSelectedYear({
+                                id: year.id,
+                                index: index,
+                                ...year
+                              })
+                            : onClickYear(year.id)
                         }
                       >
                         {/* 1/4 of 4 columns */}
