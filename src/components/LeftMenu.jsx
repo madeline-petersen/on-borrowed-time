@@ -109,13 +109,9 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                   {years.map((year, index) => (
                     <span key={year.id}>
                       <Row
-                        className={`left-menu__year mb-2 cursor-pointer ${
-                          selectedYear !== null
-                            ? selectedYear.id === year.id
-                              ? 'my-opacity-100'
-                              : 'my-opacity-0'
-                            : ''
-                        }`}
+                        className={`left-menu__year mb-2 cursor-pointer ${selectedYear &&
+                          selectedYear.id !== year.id &&
+                          'fade-out-content'}`}
                         onClick={() =>
                           selectedYear === null
                             ? setSelectedYear({
@@ -143,9 +139,8 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                   ))}
                 </div>
                 <span
-                  className={`absolute ${
-                    selectedYear === null ? 'my-opacity-0' : 'my-opacity-100'
-                  } transition-opacity delay-1000`}
+                  className={`left-menu__scenes absolute ${selectedYear ===
+                    null && 'fade-out-content'}`}
                   style={{ top: '26%' }}
                 >
                   <Row className={`small-body text-white`}>

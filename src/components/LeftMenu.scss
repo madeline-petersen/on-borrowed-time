@@ -79,8 +79,20 @@
     opacity: 100;
     transition: opacity 0.5s 1s;
 
-    &.my-opacity-0 {
+    &.fade-out-content {
       // fade out non-selected years
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+  }
+
+  &__scenes {
+    // fade in blurb/scenes
+    opacity: 100;
+    transition: opacity 0.5s 1s;
+
+    &.fade-out-content {
+      // fade out blurb/scenes
       opacity: 0;
       transition: opacity 0.5s;
     }
