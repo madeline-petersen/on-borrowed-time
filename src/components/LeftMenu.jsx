@@ -112,8 +112,8 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                         className={`left-menu__year mb-2 cursor-pointer ${
                           selectedYear !== null
                             ? selectedYear.id === year.id
-                              ? 'opacity-100'
-                              : 'opacity-0'
+                              ? 'my-opacity-100'
+                              : 'my-opacity-0'
                             : ''
                         }`}
                         onClick={() =>
@@ -144,7 +144,7 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                 </div>
                 <span
                   className={`absolute ${
-                    selectedYear === null ? 'opacity-0' : 'opacity-100'
+                    selectedYear === null ? 'my-opacity-0' : 'my-opacity-100'
                   } transition-opacity delay-1000`}
                   style={{ top: '26%' }}
                 >

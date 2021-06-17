@@ -75,11 +75,14 @@
   }
 
   &__year {
-    transition: opacity 0.5s;
-  }
+    // fade in non-selected years
+    opacity: 100;
+    transition: opacity 0.5s 1s;
 
-  &__blurb {
-    top: 50%;
-    transition: opacity 0.5s;
+    &.my-opacity-0 {
+      // fade out non-selected years
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
   }
 }
