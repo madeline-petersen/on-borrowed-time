@@ -17,15 +17,16 @@ import { useHistory } from 'react-router-dom';
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [isClicked, setNavigateAway] = useState(false);
-  const [scenes, setScenes] = useState(
-    props.pageId === 'home'
-      ? props.year.scenes
-        ? props.year.scenes.length
-        : 0
-      : 0
-  );
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   let history = useHistory();
+
+  const navigateTo = (year, romanSceneNumber, page) => {
+    if (year && romanSceneNumber && page) {
+      history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
+    } else if (year) {
+      history.push(`/${year}`);
+    }
+  };
 
   const toggleLeftMenu = () => {
     isMenuActive ? setIsMenuActive(false) : setIsMenuActive(true);
@@ -36,13 +37,6 @@ const UIShell = props => {
   };
 
   const interYearNavigation = year => {
-    setScenes(0); // collapse timeline
-    setNavigateAway(true);
-    setTimeout(function() {
-      // executed after 1 second
-      history.push(`/${year}`);
-    }, 1000);
-
     // collapse scene timeline
     // content fade out
     // navigate to intro
@@ -156,6 +150,7 @@ const UIShell = props => {
         isActive={isMenuActive}
         onCloseLeftMenu={onCloseLeftMenu}
         years={props.years}
+        navigateTo={navigateTo}
       />
       <span
         className={`absolute text-3xl cursor-pointer z-40 left-menu-bullet ${timelineClasses}`}
@@ -176,13 +171,9 @@ const UIShell = props => {
         previewedYear={hash}
         years={props.years}
         year={props.year}
-        scenes={scenes}
-        setScenes={setScenes}
         isYearEnd={isYearEnd}
         isClicked={isClicked}
-        handleClickYear={year => {
-          interYearNavigation(year);
-        }}
+        navigateTo={navigateTo}
       />
       {pageComponent}
     </>

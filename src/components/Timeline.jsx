@@ -11,9 +11,20 @@ const Timeline = props => {
   // on the homepage, the year being previewed is highlighted
   // on specific year pages, the year is highlighted and the scene timeline is active
   let history = useHistory();
+  const [scenes, setScenes] = useState(
+    props.pageId === 'home'
+      ? props.year.scenes
+        ? props.year.scenes.length
+        : 0
+      : 0
+  );
 
   const onClickYear = year => {
-    props.handleClickYear(year);
+    setScenes(0); // collapse timeline
+    setTimeout(function() {
+      // executed after 1 second
+      props.navigateTo(year);
+    }, 1000);
   };
 
   const onClickScene = sceneIndex => {
@@ -23,7 +34,7 @@ const Timeline = props => {
   };
 
   useEffect(() => {
-    props.setScenes(props.year.scenes ? props.year.scenes.length : 0);
+    setScenes(props.year.scenes ? props.year.scenes.length : 0);
   }, [props.year]);
 
   return (
@@ -60,7 +71,7 @@ const Timeline = props => {
                 <div
                   key={year.id}
                   className={`year-timeline__scene-timeline pl-4 mb-2.5`}
-                  style={{ paddingBottom: `calc(${props.scenes} * 24px)` }}
+                  style={{ paddingBottom: `calc(${scenes} * 24px)` }}
                 >
                   {/* intro circle */}
                   <span
@@ -117,16 +128,12 @@ Timeline.defaultProps = {
 
 Timeline.propTypes = {
   timelineClasses: PropTypes.string,
-  handleClickYear: PropTypes.func,
   sceneIndex: PropTypes.string,
   pageId: PropTypes.string,
   year: PropTypes.shape(),
-  scenes: PropTypes.number,
-  setScenes: PropTypes.func,
   previewedYear: PropTypes.string,
   years: PropTypes.arrayOf(PropTypes.shape()),
-  isYearEnd: PropTypes.bool,
-  isClicked: PropTypes.bool
+  navigateTo: PropTypes.func
 };
 
 export default Timeline;

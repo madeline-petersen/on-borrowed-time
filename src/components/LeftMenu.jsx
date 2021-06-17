@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import { roman } from '@sguest/roman-js';
 import { useHistory } from 'react-router-dom';
 
-const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
+const LeftMenu = ({ isActive, onCloseLeftMenu, years, navigateTo }) => {
   const [selectedYear, setSelectedYear] = useState(null);
   const menu = document.getElementById('menu-card');
   const overlay = document.getElementById('menu-overlay');
@@ -19,7 +19,7 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
     closeModal();
     let romanSceneNumber = roman.toRoman(sceneIndex + 1).toUpperCase();
     setTimeout(function() {
-      history.push(`/${year}/scene-${romanSceneNumber}/event`);
+      navigateTo(year, romanSceneNumber, 'event');
       setSelectedYear(null);
     }, 500);
   };
@@ -27,7 +27,7 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
   const onClickYear = year => {
     closeModal();
     setTimeout(function() {
-      history.push(`/${year}`);
+      navigateTo(year);
       setSelectedYear(null);
     }, 500);
   };
@@ -187,7 +187,8 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
 LeftMenu.propTypes = {
   isActive: PropTypes.bool,
   onCloseLeftMenu: PropTypes.func,
-  years: PropTypes.arrayOf(PropTypes.shape())
+  years: PropTypes.arrayOf(PropTypes.shape()),
+  navigateTo: PropTypes.func
 };
 
 export default LeftMenu;
