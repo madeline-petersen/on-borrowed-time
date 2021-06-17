@@ -19,9 +19,9 @@
   &__scene-timeline {
     // scene timeline
     margin-left: -1px; // move scene timeline onto year timeline
-    transition: padding-bottom 1s; // padding is calculated based on number of scenes in current year
     border-left-width: 1px;
     border-color: rgba(255, 255, 255, 1); // white, opaque
+    transition: padding-bottom 1s; // expand/collapse timeline
   }
 
   .circle {
@@ -32,11 +32,11 @@
     border: 1px solid;
     border-radius: 50%;
     border-color: rgba(255, 255, 255, 0); // transparent
-    transition: border-color 1s;
+    transition: border-color 1s; // fade out circle
 
     &.current-scene {
       border-color: rgba(255, 255, 255, 1); // opaque
-      transition: border-color 1s 1s;
+      transition: border-color 1s 1s; // fade in circle
     }
 
     .dot {
