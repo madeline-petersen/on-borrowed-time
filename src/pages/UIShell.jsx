@@ -36,23 +36,6 @@ const UIShell = props => {
     setIsMenuActive(false);
   };
 
-  const interYearNavigation = year => {
-    // collapse scene timeline
-    // content fade out
-    // navigate to intro
-    // content fade in
-    // expand scene timeline
-  };
-
-  const onClickTimeline = () => {
-    setNavigateAway(true);
-    // if year
-    // inter-year
-
-    // if scene
-    // intra-year
-  };
-
   let pageComponent;
   switch (props.pageId) {
     case 'home':
