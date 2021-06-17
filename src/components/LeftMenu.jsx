@@ -70,14 +70,6 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
         <div className="absolute background-filler">
           <Container className="grid__container">
             <Row className="grid__row">
-              <Col lg={4} md={8} sm={12} xs={12}>
-                <span
-                  className="close absolute top-5 right-6 z-40"
-                  onClick={onClickSpan}
-                >
-                  <Close20 />
-                </span>
-              </Col>
               <Col
                 lg={4}
                 md={8}
@@ -85,6 +77,12 @@ const LeftMenu = ({ isActive, onCloseLeftMenu, years }) => {
                 xs={12}
                 className="bg-black h-screen overflow-y-auto overflow-x-hidden"
               >
+                <span
+                  className="close absolute top-5 right-6 z-40"
+                  onClick={onClickSpan}
+                >
+                  <Close20 />
+                </span>
                 <div
                   className={`left-menu__list flex flex-col h-full justify-end ${
                     selectedYear !== null ? 'transform' : ''
