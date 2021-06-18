@@ -21,9 +21,19 @@ const UIShell = props => {
     setTransitioningFromReflection
   ] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
+  const [isInterYearNavigation, setInterYearNavigation] = useState(false);
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
+    let location = window.location.pathname.substring(1, 5);
+    if (location === year) {
+      console.log('intra-year', location, year);
+      setInterYearNavigation(false);
+    } else {
+      setInterYearNavigation(true);
+      console.log('inter-year', location, year);
+    }
+
     if (year && romanSceneNumber && page) {
       history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
     } else if (year) {
@@ -121,8 +131,8 @@ const UIShell = props => {
         sceneIndex={props.sceneIndex}
         previewedYear={hash}
         years={props.years}
-        year={props.year}
-        collapseTimeline={isYearEnd && isTransitioningFromReflection}
+        year={props.year} // expands timeline
+        isInterYearNavigation={isInterYearNavigation} // collapses timeline
         navigateTo={navigateTo}
       />
       {pageComponent}

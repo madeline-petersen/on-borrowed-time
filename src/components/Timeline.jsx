@@ -6,13 +6,11 @@ import PropTypes from 'prop-types';
 import { roman } from '@sguest/roman-js';
 
 const Timeline = props => {
-  // timeline is absolutely positioned and overlayed on every page (except index)
-  // on the homepage, the year being previewed is highlighted
-  // on specific year pages, the year is highlighted and the scene timeline is active
   const [numScenes, setNumScenes] = useState(0);
 
   const onClickYear = year => {
     setNumScenes(0); // collapse timeline
+    console.log('collapsing timeline');
     setTimeout(function() {
       // executed after 1 second
       props.navigateTo(year);
@@ -24,14 +22,17 @@ const Timeline = props => {
   };
 
   useEffect(() => {
-    setNumScenes(props.year.scenes ? props.year.scenes.length : 0);
-  }, [props.year]);
+    if (props.isInterYearNavigation) {
+      console.log('collapsing timeline');
+      setNumScenes(0); // collapse timeline
+    }
+  }, [props.isInterYearNavigation]);
 
   useEffect(() => {
-    if (props.collapseTimeline) {
-      setNumScenes(0);
-    }
-  }, [props.collapseTimeline]);
+    console.log(props.year);
+    console.log('expanding timeline');
+    setNumScenes(props.year.scenes.length); // expand timeline
+  }, [props.year]);
 
   return (
     <span
@@ -66,7 +67,11 @@ const Timeline = props => {
                 // scene timeline
                 <div
                   key={year.id}
-                  className={`year-timeline__scene-timeline pl-4 mb-2.5`}
+                  className={`year-timeline__scene-timeline pl-4 mb-2.5 ${
+                    numScenes === 0
+                      ? 'collapsed'
+                      : `expanded num-scenes-${numScenes}`
+                  }`}
                   style={{ paddingBottom: `calc(${numScenes} * 24px)` }}
                 >
                   {/* intro circle */}
@@ -132,7 +137,7 @@ Timeline.propTypes = {
   navigateTo: PropTypes.func,
   scenes: PropTypes.number,
   setNumScenes: PropTypes.func,
-  collapseTimeline: PropTypes.bool
+  isInterYearNavigation: PropTypes.bool
 };
 
 export default Timeline;

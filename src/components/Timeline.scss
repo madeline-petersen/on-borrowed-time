@@ -22,6 +22,36 @@
     border-left-width: 1px;
     border-color: rgba(255, 255, 255, 1); // white, opaque
     transition: padding-bottom 1s; // expand/collapse timeline
+
+    &.collapsed {
+      transition: padding-bottom 1s; // expand/collapse timeline
+      padding-bottom: 0;
+    }
+
+    &.expanded {
+      transition: padding-bottom 1s; // expand/collapse timeline
+      &.num-scenes-1 {
+        padding-bottom: calc(1 * 24px);
+      }
+      &.num-scenes-2 {
+        padding-bottom: calc(2 * 24px);
+      }
+      &.num-scenes-3 {
+        padding-bottom: calc(3 * 24px);
+      }
+      &.num-scenes-4 {
+        padding-bottom: calc(4 * 24px);
+      }
+      &.num-scenes-5 {
+        padding-bottom: calc(5 * 24px);
+      }
+      &.num-scenes-6 {
+        padding-bottom: calc(6 * 24px);
+      }
+      &.num-scenes-7 {
+        padding-bottom: calc(7 * 24px);
+      }
+    }
   }
 
   .circle {

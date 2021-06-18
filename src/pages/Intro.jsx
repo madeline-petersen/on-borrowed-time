@@ -9,6 +9,7 @@ import stairs from '../images/Homepage_1989.jpg';
 import temple from '../images/Homepage_1984.jpg';
 
 const Intro = ({ year, navigateTo }) => {
+  // we can trigger the transition animation by passing the isClicked value in via props (from timeline)
   const [isClicked, setClicked] = useState(false);
 
   useEffect(() => {
