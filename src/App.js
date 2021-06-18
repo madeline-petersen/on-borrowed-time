@@ -233,9 +233,6 @@ function App() {
             <Route path="/index">
               <Index />
             </Route>
-            {/* <Route exact path="/:yearId">
-              <Intro />
-            </Route> */}
             <Route exact path="/:yearId">
               <Page />
             </Route>
