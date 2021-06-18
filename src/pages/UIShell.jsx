@@ -130,7 +130,9 @@ const UIShell = props => {
         previewedYear={hash}
         years={props.years}
         year={props.year} // expands timeline
-        isInterYearNavigation={isInterYearNavigation} // collapses timeline
+        isInterYearNavigation={
+          isInterYearNavigation || isTransitioningFromReflection
+        } // collapses timeline
         navigateTo={navigateTo}
       />
       {pageComponent}
