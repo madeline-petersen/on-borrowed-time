@@ -45,8 +45,7 @@ const UIShell = props => {
           {...props}
           hash={hash}
           setHash={setHash}
-          isClicked={isClicked}
-          setClicked={setNavigateAway}
+          setNavigateAway={setNavigateAway}
         />
       );
       break;

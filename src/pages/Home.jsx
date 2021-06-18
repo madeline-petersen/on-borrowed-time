@@ -6,12 +6,9 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 
-const Home = ({ years, hash, setHash, isClicked, setClicked }) => {
-  console.log(hash);
+const Home = ({ years, hash, setHash, setNavigateAway }) => {
   let myHistory = useHistory();
   const [year, setYear] = useState(years[0]);
-  const start = 'black';
-  const end = 'black';
 
   useEffect(() => {
     // get year, index from hash
@@ -24,7 +21,7 @@ const Home = ({ years, hash, setHash, isClicked, setClicked }) => {
   }, [hash]);
 
   const onClickYear = year => {
-    setClicked(true);
+    setNavigateAway(true);
     setTimeout(function() {
       // executed after 1 second
       myHistory.push(`/${year}`);
@@ -33,17 +30,8 @@ const Home = ({ years, hash, setHash, isClicked, setClicked }) => {
 
   return (
     <>
-      {/* Backgrounds for page transition */}
-      <div className={`h-screen bg-${end} absolute top-0 w-full`}>
-        <div
-          className={`h-screen bg-${start} absolute top-0 w-full ${
-            isClicked ? 'screen-shrink' : ''
-          }`}
-        />
-      </div>
-
       <div
-        className={`home ${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
+        className="home"
         id="home"
         // hash is updated as page is scrolled
         onScroll={e => {
@@ -116,8 +104,7 @@ Home.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  isClicked: PropTypes.bool,
-  setClicked: PropTypes.func
+  setNavigateAway: PropTypes.func
 };
 
 export default Home;
