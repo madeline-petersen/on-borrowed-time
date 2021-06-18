@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 
-const Home = ({ years, hash, setHash, setNavigateAway }) => {
+const Home = ({ years, hash, setHash }) => {
   let myHistory = useHistory();
   const [year, setYear] = useState(years[0]);
 
@@ -21,7 +21,6 @@ const Home = ({ years, hash, setHash, setNavigateAway }) => {
   }, [hash]);
 
   const onClickYear = year => {
-    setNavigateAway(true);
     setTimeout(function() {
       // executed after 1 second
       myHistory.push(`/${year}`);
@@ -103,8 +102,7 @@ Home.propTypes = {
   artifacts: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
-  changingParam: PropTypes.string,
-  setNavigateAway: PropTypes.func
+  changingParam: PropTypes.string
 };
 
 export default Home;

@@ -40,14 +40,7 @@ const UIShell = props => {
   let pageComponent;
   switch (props.pageId) {
     case 'home':
-      pageComponent = (
-        <Home
-          {...props}
-          hash={hash}
-          setHash={setHash}
-          setNavigateAway={setNavigateAway}
-        />
-      );
+      pageComponent = <Home {...props} hash={hash} setHash={setHash} />;
       break;
     case 'intro':
       pageComponent = <Intro {...props} navigateTo={navigateTo} />;
@@ -74,13 +67,7 @@ const UIShell = props => {
       );
       break;
     default:
-      pageComponent = (
-        <Event
-          {...props}
-          setNavigateAway={setNavigateAway}
-          navigateTo={navigateTo}
-        />
-      );
+      pageComponent = <Home {...props} hash={hash} setHash={setHash} />;
   }
 
   let isNewYear = props.pageId === 'event' && props.romanSceneNumber === 'I';
