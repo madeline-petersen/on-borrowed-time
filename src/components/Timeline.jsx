@@ -29,7 +29,7 @@ const Timeline = props => {
   }, [props.isInterYearNavigation]);
 
   useEffect(() => {
-    setNumScenes(props.year.scenes.length); // expand timeline
+    setNumScenes(props.year.scenes ? props.year.scenes.length : 0); // expand timeline
   }, [props.year.id]);
 
   return (
