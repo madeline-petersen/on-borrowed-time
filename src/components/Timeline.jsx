@@ -9,8 +9,9 @@ const Timeline = props => {
   const [numScenes, setNumScenes] = useState(0);
 
   const onClickYear = year => {
-    setNumScenes(0); // collapse timeline
-    console.log('collapsing timeline');
+    if (year !== props.year.id) {
+      setNumScenes(0); // collapse timeline
+    }
     setTimeout(function() {
       // executed after 1 second
       props.navigateTo(year);
@@ -23,16 +24,18 @@ const Timeline = props => {
 
   useEffect(() => {
     if (props.isInterYearNavigation) {
-      console.log('collapsing timeline');
+      console.log(
+        'collapsing timeline (useEffect: props.isInterYearNavigation)'
+      );
       setNumScenes(0); // collapse timeline
     }
   }, [props.isInterYearNavigation]);
 
   useEffect(() => {
-    console.log(props.year);
-    console.log('expanding timeline');
+    console.log('props.year changing ', props.year.id);
+    console.log('expanding timeline (useEffect: props.year.id)');
     setNumScenes(props.year.scenes.length); // expand timeline
-  }, [props.year]);
+  }, [props.year.id]);
 
   return (
     <span
@@ -72,7 +75,6 @@ const Timeline = props => {
                       ? 'collapsed'
                       : `expanded num-scenes-${numScenes}`
                   }`}
-                  style={{ paddingBottom: `calc(${numScenes} * 24px)` }}
                 >
                   {/* intro circle */}
                   <span

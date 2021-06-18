@@ -94,92 +94,127 @@ function Page() {
     return <NoMatch />;
   }
 
-  let romanChar = sceneId.split('-')[1];
-  let romanSceneNumber;
-  if (romanChar) {
-    romanSceneNumber = romanChar.toUpperCase();
-  } else {
-    return <NoMatch />;
-  }
+  if (sceneId) {
+    let romanChar = sceneId.split('-')[1];
+    let romanSceneNumber;
+    if (romanChar) {
+      romanSceneNumber = romanChar.toUpperCase();
+    } else {
+      return <NoMatch />;
+    }
 
-  const sceneIndex = roman.parseRoman(romanSceneNumber) - 1;
-  const scene = year.scenes[sceneIndex]; // title, pages
+    const sceneIndex = roman.parseRoman(romanSceneNumber) - 1;
+    const scene = year.scenes[sceneIndex]; // title, pages
 
-  let nextScene;
-  let nextRomanSceneNumber;
-  if (scene) {
-    nextScene = year.scenes[sceneIndex + 1]; // title, pages
-    nextRomanSceneNumber = roman.toRoman(sceneIndex + 2);
-  } else {
-    return <NoMatch />;
-  }
+    let nextScene;
+    let nextRomanSceneNumber;
+    if (scene) {
+      nextScene = year.scenes[sceneIndex + 1]; // title, pages
+      nextRomanSceneNumber = roman.toRoman(sceneIndex + 2);
+    } else {
+      return <NoMatch />;
+    }
 
-  let pageIndex = scene.pages.findIndex(page => page.type === pageId);
-  let page;
-  let nextPage;
-  if (pageIndex > -1) {
-    page = scene.pages[pageIndex];
-    nextPage = scene.pages[pageIndex + 1];
-  } else {
-    return <NoMatch />;
-  }
+    let pageIndex = scene.pages.findIndex(page => page.type === pageId);
+    let page;
+    let nextPage;
+    if (pageIndex > -1) {
+      page = scene.pages[pageIndex];
+      nextPage = scene.pages[pageIndex + 1];
+    } else {
+      return <NoMatch />;
+    }
 
-  const isLastYear = yearIndex === data.years.length - 1;
-  const isLastScene = sceneIndex === year.scenes.length - 1;
-  const isLastPage = pageIndex === scene.pages.length - 1;
+    const isLastYear = yearIndex === data.years.length - 1;
+    const isLastScene = sceneIndex === year.scenes.length - 1;
+    const isLastPage = pageIndex === scene.pages.length - 1;
 
-  const next = isLastPage
-    ? isLastScene
-      ? isLastYear
-        ? null
-        : nextYear
-      : nextScene
-    : nextPage;
+    const next = isLastPage
+      ? isLastScene
+        ? isLastYear
+          ? null
+          : nextYear
+        : nextScene
+      : nextPage;
 
-  const changingParam = isLastPage
-    ? isLastScene
-      ? isLastYear
-        ? null
-        : 'year'
-      : 'scene'
-    : 'page';
+    const changingParam = isLastPage
+      ? isLastScene
+        ? isLastYear
+          ? null
+          : 'year'
+        : 'scene'
+      : 'page';
 
-  const nextParams = isLastPage
-    ? isLastScene
-      ? isLastYear
-        ? null
+    const nextParams = isLastPage
+      ? isLastScene
+        ? isLastYear
+          ? null
+          : {
+              year: nextYear.id // next year
+            } // nextYear.id nextYear.title
         : {
-            year: nextYear.id // next year
-          } // nextYear.id nextYear.title
+            year: year.id,
+            scene: nextRomanSceneNumber, // next scene
+            page: 'event'
+          } // scene nextScene.title
       : {
           year: year.id,
-          scene: nextRomanSceneNumber, // next scene
-          page: 'event'
-        } // scene nextScene.title
-    : {
-        year: year.id,
-        scene: romanSceneNumber,
-        page: nextPage.type // next page;
-      }; // Scene {romanSceneNumber}  nextPage.title
+          scene: romanSceneNumber,
+          page: nextPage.type // next page;
+        }; // Scene {romanSceneNumber}  nextPage.title
 
-  return (
-    <UIShell
-      pageId={pageId}
-      isLastScene={isLastScene}
-      isLastPage={isLastPage}
-      years={data.years}
-      year={year}
-      scene={scene}
-      sceneIndex={sceneIndex}
-      romanSceneNumber={romanSceneNumber}
-      event={page}
-      artifacts={page}
-      reflection={page}
-      next={next}
-      nextParams={nextParams}
-      changingParam={changingParam}
-    />
-  );
+    return (
+      <UIShell
+        pageId={pageId}
+        isLastScene={isLastScene}
+        isLastPage={isLastPage}
+        years={data.years}
+        year={year}
+        scene={scene}
+        sceneIndex={sceneIndex}
+        romanSceneNumber={romanSceneNumber}
+        event={page}
+        artifacts={page}
+        reflection={page}
+        next={next}
+        nextParams={nextParams}
+        changingParam={changingParam}
+      />
+    );
+  } else {
+    let { yearId } = useParams();
+
+    let yearIndex = data.years.findIndex(year => year.id === yearId);
+    let year;
+    if (yearIndex > -1) {
+      year = data.years[yearIndex]; // year, title
+    } else {
+      return <NoMatch />;
+    }
+
+    const nextScene = year.scenes[0]; // title, pages
+    const nextRomanSceneNumber = 'I';
+
+    const next = nextScene;
+    const changingParam = 'scene';
+    const nextParams = {
+      year: year.id,
+      scene: nextRomanSceneNumber,
+      page: 'event'
+    };
+
+    return (
+      <UIShell
+        pageId="intro"
+        intro={year.intro}
+        years={data.years}
+        year={year}
+        next={next}
+        changingParam={changingParam}
+        nextParams={nextParams}
+      />
+    );
+  }
 }
 
 function App() {
@@ -198,8 +233,11 @@ function App() {
             <Route path="/index">
               <Index />
             </Route>
-            <Route exact path="/:yearId">
+            {/* <Route exact path="/:yearId">
               <Intro />
+            </Route> */}
+            <Route exact path="/:yearId">
+              <Page />
             </Route>
             <Redirect
               exact

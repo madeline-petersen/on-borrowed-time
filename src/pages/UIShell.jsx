@@ -1,6 +1,6 @@
 import './UIShell.scss';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Artifacts from './Artifacts.jsx';
 import Event from './Event.jsx';
@@ -23,6 +23,10 @@ const UIShell = props => {
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   const [isInterYearNavigation, setInterYearNavigation] = useState(false);
   let history = useHistory();
+
+  useEffect(() => {
+    console.log('props.year.id changing ', props.year.id);
+  }, [props.year.id]);
 
   const navigateTo = (year, romanSceneNumber, page) => {
     let location = window.location.pathname.substring(1, 5);
