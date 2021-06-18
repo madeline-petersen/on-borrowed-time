@@ -21,7 +21,6 @@ const UIShell = props => {
     setTransitioningFromReflection
   ] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
-  const [scenes, setScenes] = useState(0);
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
@@ -123,10 +122,8 @@ const UIShell = props => {
         previewedYear={hash}
         years={props.years}
         year={props.year}
-        isYearEnd={isYearEnd}
+        collapseTimeline={isYearEnd && isTransitioningFromReflection}
         navigateTo={navigateTo}
-        scenes={scenes}
-        setScenes={setScenes}
       />
       {pageComponent}
     </>
