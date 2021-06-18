@@ -16,7 +16,10 @@ import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const [isClicked, setNavigateAway] = useState(false);
+  const [
+    isTransitioningFromReflection,
+    setTransitioningFromReflection
+  ] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   const [scenes, setScenes] = useState(0);
   let history = useHistory();
@@ -49,7 +52,7 @@ const UIShell = props => {
       pageComponent = (
         <Event
           {...props}
-          setNavigateAway={setNavigateAway}
+          setTransitioningFromReflection={setTransitioningFromReflection}
           navigateTo={navigateTo}
         />
       );
@@ -61,7 +64,7 @@ const UIShell = props => {
       pageComponent = (
         <Reflection
           {...props}
-          setNavigateAway={setNavigateAway}
+          setTransitioningFromReflection={setTransitioningFromReflection}
           navigateTo={navigateTo}
         />
       );
@@ -92,7 +95,7 @@ const UIShell = props => {
         }
         pageId={props.pageId}
         title={props.scene ? props.scene.title : ''}
-        isClicked={isClicked}
+        isTransitioningFromReflection={isTransitioningFromReflection}
         romanSceneNumber={props.romanSceneNumber}
       />
       <LeftMenu
@@ -121,7 +124,6 @@ const UIShell = props => {
         years={props.years}
         year={props.year}
         isYearEnd={isYearEnd}
-        isClicked={isClicked}
         navigateTo={navigateTo}
         scenes={scenes}
         setScenes={setScenes}

@@ -14,14 +14,14 @@ const Event = ({
   nextParams,
   changingParam,
   next,
-  setNavigateAway,
+  setTransitioningFromReflection,
   navigateTo
 }) => {
   const [isClicked, setClicked] = useState(false);
   const screenClass = useScreenClass();
 
   useEffect(() => {
-    setNavigateAway(false);
+    setTransitioningFromReflection(false);
     setTimeout(function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 1000);
@@ -104,7 +104,7 @@ Event.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  setNavigateAway: PropTypes.func,
+  setTransitioningFromReflection: PropTypes.func,
   navigateTo: PropTypes.func
 };
 

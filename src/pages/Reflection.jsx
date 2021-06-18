@@ -11,7 +11,7 @@ const Reflection = ({
   nextParams,
   changingParam,
   next,
-  setNavigateAway,
+  setTransitioningFromReflection,
   navigateTo
 }) => {
   const [isClicked, setClicked] = useState(false);
@@ -24,7 +24,7 @@ const Reflection = ({
   let nextBackground = changingParam === 'year' ? nextParams.year : 'gray-30';
 
   const onFooterClick = () => {
-    setNavigateAway(true);
+    setTransitioningFromReflection(true);
     setClicked(true);
   };
 
@@ -107,7 +107,7 @@ Reflection.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  setNavigateAway: PropTypes.func,
+  setTransitioningFromReflection: PropTypes.func,
   navigateTo: PropTypes.func
 };
 

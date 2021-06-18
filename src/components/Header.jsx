@@ -4,7 +4,13 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Header = ({ label, pageId, title, isClicked, romanSceneNumber }) => {
+const Header = ({
+  label,
+  pageId,
+  title,
+  isTransitioningFromReflection,
+  romanSceneNumber
+}) => {
   let textClasses =
     pageId === 'home' || pageId === 'intro'
       ? 'text-white'
@@ -49,7 +55,7 @@ const Header = ({ label, pageId, title, isClicked, romanSceneNumber }) => {
             <p
               className={`small-body ${pageId === 'event' &&
                 'title-animation'} ${pageId === 'reflection' &&
-                isClicked &&
+                isTransitioningFromReflection &&
                 'fade-out'} pt-2 pb-5 ${textClasses}`}
             >
               {title}
@@ -69,7 +75,7 @@ Header.propTypes = {
   label: PropTypes.string,
   pageId: PropTypes.string,
   title: PropTypes.string,
-  isClicked: PropTypes.bool,
+  isTransitioningFromReflection: PropTypes.bool,
   romanSceneNumber: PropTypes.string
 };
 
