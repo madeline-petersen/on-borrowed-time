@@ -24,16 +24,11 @@ const Timeline = props => {
 
   useEffect(() => {
     if (props.isInterYearNavigation) {
-      console.log(
-        'collapsing timeline (useEffect: props.isInterYearNavigation)'
-      );
       setNumScenes(0); // collapse timeline
     }
   }, [props.isInterYearNavigation]);
 
   useEffect(() => {
-    console.log('props.year changing ', props.year.id);
-    console.log('expanding timeline (useEffect: props.year.id)');
     setNumScenes(props.year.scenes.length); // expand timeline
   }, [props.year.id]);
 

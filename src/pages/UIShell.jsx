@@ -24,18 +24,12 @@ const UIShell = props => {
   const [isInterYearNavigation, setInterYearNavigation] = useState(false);
   let history = useHistory();
 
-  useEffect(() => {
-    console.log('props.year.id changing ', props.year.id);
-  }, [props.year.id]);
-
   const navigateTo = (year, romanSceneNumber, page) => {
     let location = window.location.pathname.substring(1, 5);
     if (location === year) {
-      console.log('intra-year', location, year);
       setInterYearNavigation(false);
     } else {
       setInterYearNavigation(true);
-      console.log('inter-year', location, year);
     }
 
     if (year && romanSceneNumber && page) {
