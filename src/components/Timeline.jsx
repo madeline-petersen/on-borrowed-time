@@ -103,7 +103,11 @@ const Timeline = props => {
                       }
                         `}
                       style={{
-                        marginTop: `calc((${index + 1} * 24px))`
+                        marginTop: `${
+                          year.id === props.year.id
+                            ? `calc((${index + 1} * 24px))`
+                            : '0'
+                        }`
                       }}
                       onClick={() => onClickScene(index)}
                     >
