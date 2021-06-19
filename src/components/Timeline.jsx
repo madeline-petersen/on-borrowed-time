@@ -80,37 +80,36 @@ const Timeline = props => {
                   >
                     {year.id}
                   </span>
+                  {/*  current year scene timeline */}
+                  {/* intro circle */}
+                  <span
+                    key="intro"
+                    className={`circle cursor-pointer ${props.pageId ===
+                      'intro' && 'current-scene'} ${
+                      year.id === props.year.id ? 'show' : 'hide'
+                    }`}
+                    onClick={() => onClickYear(year.id)}
+                  >
+                    <span className="dot mt-1 left-1" />
+                  </span>
 
-                  {year.id === props.year.id && (
-                    // current year
-                    // scene timeline
-                    <>
-                      {/* intro circle */}
-                      <span
-                        key="intro"
-                        className={`circle cursor-pointer ${props.pageId ===
-                          'intro' && 'current-scene'}`}
-                        onClick={() => onClickYear(year.id)}
-                      >
-                        <span className="dot mt-1 left-1" />
-                      </span>
-
-                      {/* other scenes */}
-                      {year.scenes.map((scene, index) => (
-                        <span
-                          key={`scene-${index}`}
-                          className={`circle cursor-pointer ${props.sceneIndex ===
-                            index && 'current-scene'}`}
-                          style={{
-                            marginTop: `calc((${index + 1} * 24px))`
-                          }}
-                          onClick={() => onClickScene(index)}
-                        >
-                          <span className="dot mt-1 left-1" />
-                        </span>
-                      ))}
-                    </>
-                  )}
+                  {/* other scenes */}
+                  {year.scenes.map((scene, index) => (
+                    <span
+                      key={`scene-${index}`}
+                      className={`circle cursor-pointer ${props.sceneIndex ===
+                        index && 'current-scene'} ${
+                        year.id === props.year.id ? 'show' : 'hide'
+                      }
+                        `}
+                      style={{
+                        marginTop: `calc((${index + 1} * 24px))`
+                      }}
+                      onClick={() => onClickScene(index)}
+                    >
+                      <span className="dot mt-1 left-1" />
+                    </span>
+                  ))}
                 </div>
               );
             })}

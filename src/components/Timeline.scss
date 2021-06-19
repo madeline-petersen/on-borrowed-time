@@ -68,6 +68,16 @@
     border-radius: 50%;
     border-color: rgba(255, 255, 255, 0); // transparent
     transition: border-color 1s; // fade out circle
+    opacity: 1;
+
+    &.show {
+      opacity: 1;
+      transition: opacity 0s 1s;
+    }
+
+    &.hide {
+      opacity: 0;
+    }
 
     &.current-scene {
       border-color: rgba(255, 255, 255, 1); // opaque
