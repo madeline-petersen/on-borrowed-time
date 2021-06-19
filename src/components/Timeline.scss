@@ -26,10 +26,15 @@
     &.collapsed {
       transition: padding-bottom 1s; // expand/collapse timeline
       padding-bottom: 0;
+
+      .dot {
+        opacity: 0;
+      }
     }
 
     &.expanded {
       transition: padding-bottom 1s; // expand/collapse timeline
+
       &.num-scenes-1 {
         padding-bottom: calc(1 * 24px);
       }
