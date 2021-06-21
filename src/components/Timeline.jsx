@@ -9,13 +9,17 @@ const Timeline = props => {
   const [numScenes, setNumScenes] = useState(0);
 
   const onClickYear = year => {
-    if (year !== props.year.id) {
-      setNumScenes(0); // collapse timeline
+    if (props.pageId === 'home') {
+      props.navigateTo(year); // execute immediately
+    } else {
+      if (year !== props.year.id) {
+        setNumScenes(0); // collapse timeline (1s duration)
+      }
+      setTimeout(function() {
+        // executed after 1 second
+        props.navigateTo(year);
+      }, 1000);
     }
-    setTimeout(function() {
-      // executed after 1 second
-      props.navigateTo(year);
-    }, 1000);
   };
 
   const onClickScene = sceneIndex => {
