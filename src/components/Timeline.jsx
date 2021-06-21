@@ -37,86 +37,71 @@ const Timeline = props => {
       className={`year-timeline medium-caption pb-5 h-screen ${props.timelineClasses}`}
     >
       <span className={`absolute bottom-0 ${props.timelineClasses}`}>
-        {props.pageId === 'home'
-          ? props.years.map(year => {
-              /* home page */
-              return (
-                <div
-                  key={year.id}
-                  className={`pl-4 mb-2.5 cursor-pointer ${
-                    year.id === props.previewedYear
-                      ? 'opacity-100' // highlight previewed year
-                      : 'opacity-30'
-                  }`}
-                >
-                  <span
-                    onClick={() => onClickYear(year.id)}
-                    className="cursor-pointer"
-                  >
-                    {year.id}
-                  </span>
-                </div>
-              );
-            })
-          : props.years.map(year => {
-              /* other pages */
-              return (
-                <div
-                  key={year.id}
-                  className={`${
-                    year.id === props.year.id
-                      ? `year-timeline__scene-timeline pl-4 mb-2.5 ${
-                          numScenes === 0
-                            ? 'collapsed'
-                            : `expanded num-scenes-${numScenes}`
-                        }`
-                      : `pl-4 mb-2.5 opacity-30 cursor-pointer`
-                  }`}
-                >
-                  {/* year */}
-                  <span
-                    onClick={() => onClickYear(year.id)}
-                    className="cursor-pointer"
-                  >
-                    {year.id}
-                  </span>
-                  {/*  current year scene timeline */}
-                  {/* intro circle */}
-                  <span
-                    key="intro"
-                    className={`circle cursor-pointer ${props.pageId ===
-                      'intro' && 'current-scene'} ${
-                      year.id === props.year.id ? 'show' : 'hide'
-                    }`}
-                    onClick={() => onClickYear(year.id)}
-                  >
-                    <span className="dot mt-1 left-1" />
-                  </span>
+        {props.years.map(year => {
+          return (
+            <div
+              key={year.id}
+              className={`${
+                props.pageId === 'home'
+                  ? year.id === props.previewedYear
+                    ? 'opacity-100' // highlight previewed year on homepage
+                    : 'opacity-30'
+                  : ''
+              }
+              ${
+                year.id === props.year.id
+                  ? `year-timeline__scene-timeline pl-4 mb-2.5 ${
+                      numScenes === 0
+                        ? 'collapsed'
+                        : `expanded num-scenes-${numScenes}`
+                    }`
+                  : `pl-4 mb-2.5 opacity-30 cursor-pointer`
+              }`}
+            >
+              {/* year */}
+              <span
+                onClick={() => onClickYear(year.id)}
+                className="cursor-pointer"
+              >
+                {year.id}
+              </span>
 
-                  {/* other scenes */}
-                  {year.scenes.map((scene, index) => (
-                    <span
-                      key={`scene-${index}`}
-                      className={`circle cursor-pointer ${props.sceneIndex ===
-                        index && 'current-scene'} ${
-                        year.id === props.year.id ? 'show' : 'hide'
-                      }
+              {/* first circle */}
+              <span
+                key="intro"
+                className={`circle cursor-pointer ${props.pageId === 'intro' &&
+                  'current-scene'} ${
+                  year.id === props.year.id ? 'show' : 'hide'
+                }`}
+                onClick={() => onClickYear(year.id)}
+              >
+                <span className="dot mt-1 left-1" />
+              </span>
+
+              {/* other circles */}
+              {year.scenes.map((scene, index) => (
+                <span
+                  key={`scene-${index}`}
+                  className={`circle cursor-pointer ${props.sceneIndex ===
+                    index && 'current-scene'} ${
+                    year.id === props.year.id ? 'show' : 'hide'
+                  }
                         `}
-                      style={{
-                        marginTop: `${
-                          year.id === props.year.id
-                            ? `calc((${index + 1} * 24px))`
-                            : '0'
-                        }`
-                      }}
-                      onClick={() => onClickScene(index)}
-                    >
-                      <span className="dot mt-1 left-1" />
-                    </span>
-                  ))}
-                </div>
-              );
-            })}
+                  style={{
+                    marginTop: `${
+                      year.id === props.year.id
+                        ? `calc((${index + 1} * 24px))`
+                        : '0'
+                    }`
+                  }}
+                  onClick={() => onClickScene(index)}
+                >
+                  <span className="dot mt-1 left-1" />
+                </span>
+              ))}
+            </div>
+          );
+        })}
       </span>
     </span>
   );
