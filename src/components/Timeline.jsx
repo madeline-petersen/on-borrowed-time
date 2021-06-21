@@ -65,7 +65,7 @@ const Timeline = props => {
               {/* year */}
               <span
                 onClick={() => onClickYear(year.id)}
-                className="cursor-pointer"
+                className="year-label cursor-pointer"
               >
                 {year.id}
               </span>

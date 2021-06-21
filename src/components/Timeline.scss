@@ -45,8 +45,14 @@
     }
 
     &.collapsed {
-      transition: padding-bottom 1s; // collapse timeline animation
       padding-bottom: 0;
+      border-color: rgba(255, 255, 255, 0); // left border
+      transition: padding-bottom 1s, border-color 1s; // collapse timeline and fade out
+
+      .year-label {
+        opacity: 0.3;
+        transition: opacity 1s;
+      }
 
       .circle {
         border-color: rgba(255, 255, 255, 0); // white, transparent
