@@ -38,7 +38,7 @@ const Timeline = props => {
     >
       <span className={`absolute bottom-0 ${props.timelineClasses}`}>
         {props.pageId === 'home'
-          ? props.years.map((year, index) => {
+          ? props.years.map(year => {
               /* home page */
               return (
                 <div
@@ -58,7 +58,7 @@ const Timeline = props => {
                 </div>
               );
             })
-          : props.years.map((year, index) => {
+          : props.years.map(year => {
               /* other pages */
               return (
                 <div
