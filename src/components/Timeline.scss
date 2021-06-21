@@ -21,10 +21,9 @@
     margin-left: -1px; // move scene timeline onto year timeline
     border-left-width: 1px;
     border-color: rgba(255, 255, 255, 1); // white, opaque
-    transition: padding-bottom 1s; // expand/collapse timeline
 
     &.collapsed {
-      transition: padding-bottom 1s; // expand/collapse timeline
+      transition: padding-bottom 1s; // collapse timeline animation
       padding-bottom: 0;
 
       .dot {
@@ -33,7 +32,7 @@
     }
 
     &.expanded {
-      transition: padding-bottom 1s; // expand/collapse timeline
+      transition: padding-bottom 1s; // expand timeline animation
 
       &.num-scenes-1 {
         padding-bottom: calc(1 * 24px);
