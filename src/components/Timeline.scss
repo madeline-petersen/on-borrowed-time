@@ -22,9 +22,35 @@
     border-left-width: 1px;
     border-color: rgba(255, 255, 255, 1); // white, opaque
 
+    .circle {
+      position: absolute;
+      left: -7px; // move circle onto timeline
+      width: 13px;
+      height: 13px;
+      border: 1px solid;
+      border-radius: 50%;
+      border-color: rgba(255, 255, 255, 0); // transparent
+
+      &.current-scene {
+        border-color: rgba(255, 255, 255, 1); // opaque
+      }
+
+      .dot {
+        position: absolute;
+        height: 3px;
+        width: 3px;
+        background-color: white;
+        border-radius: 50%;
+      }
+    }
+
     &.collapsed {
       transition: padding-bottom 1s; // collapse timeline animation
       padding-bottom: 0;
+
+      .circle {
+        border-color: rgba(255, 255, 255, 0); // white, transparent
+      }
 
       .dot {
         opacity: 0;
@@ -59,36 +85,13 @@
   }
 
   .circle {
-    position: absolute;
-    left: -7px; // move circle onto timeline
-    width: 13px;
-    height: 13px;
-    border: 1px solid;
-    border-radius: 50%;
-    border-color: rgba(255, 255, 255, 0); // transparent
-    transition: border-color 1s; // fade out circle
-    opacity: 1;
-
     &.show {
       opacity: 1;
-      transition: opacity 0s 1s;
+      transition: opacity 0s 1s; // delay appearance of circle, dots
     }
 
     &.hide {
       opacity: 0;
-    }
-
-    &.current-scene {
-      border-color: rgba(255, 255, 255, 1); // opaque
-      transition: border-color 1s 1s; // fade in circle
-    }
-
-    .dot {
-      position: absolute;
-      height: 3px;
-      width: 3px;
-      background-color: white;
-      border-radius: 50%;
     }
   }
 }
