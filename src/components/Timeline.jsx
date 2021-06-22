@@ -33,6 +33,12 @@ const Timeline = props => {
   };
 
   useEffect(() => {
+    if (props.isTransitioningFromReflection) {
+      setSceneIndex(null);
+    }
+  }, [props.isTransitioningFromReflection]);
+
+  useEffect(() => {
     if (props.isInterYearNavigation) {
       setNumScenes(0); // collapse timeline
     }
@@ -136,7 +142,8 @@ Timeline.propTypes = {
   navigateTo: PropTypes.func,
   scenes: PropTypes.number,
   setNumScenes: PropTypes.func,
-  isInterYearNavigation: PropTypes.bool
+  isInterYearNavigation: PropTypes.bool,
+  isTransitioningFromReflection: PropTypes.bool
 };
 
 export default Timeline;
