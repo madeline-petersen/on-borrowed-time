@@ -7,8 +7,10 @@ import { roman } from '@sguest/roman-js';
 
 const Timeline = props => {
   const [numScenes, setNumScenes] = useState(0);
+  const [currentSceneIndex, setSceneIndex] = useState(props.sceneIndex);
 
   const onClickYear = year => {
+    setSceneIndex(null);
     if (props.pageId === 'home') {
       props.navigateTo(year); // execute immediately
     } else {
@@ -18,11 +20,12 @@ const Timeline = props => {
       setTimeout(function() {
         // executed after 1 second
         props.navigateTo(year);
-      }, 1000);
+      }, 2000);
     }
   };
 
   const onClickScene = sceneIndex => {
+    setSceneIndex(null);
     setTimeout(function() {
       // executed after 2 second
       props.navigateTo(props.year.id, roman.toRoman(sceneIndex + 1), 'event');
@@ -38,6 +41,14 @@ const Timeline = props => {
   useEffect(() => {
     setNumScenes(props.year.scenes ? props.year.scenes.length : 0); // expand timeline
   }, [props.year.id]);
+
+  useEffect(() => {
+    if (props.pageId === 'intro') {
+      setSceneIndex('intro');
+    } else {
+      setSceneIndex(props.sceneIndex);
+    }
+  }, [props.sceneIndex, props.pageId]);
 
   return (
     <span
@@ -74,8 +85,8 @@ const Timeline = props => {
               {/* first circle */}
               <span
                 key="intro"
-                className={`circle cursor-pointer ${props.pageId === 'intro' &&
-                  'current-scene'} ${
+                className={`circle cursor-pointer ${currentSceneIndex ===
+                  'intro' && 'current-scene'} ${
                   year.id === props.year.id && numScenes > 0 ? 'show' : 'hide'
                 }`}
                 onClick={() => onClickYear(year.id)}
@@ -87,7 +98,7 @@ const Timeline = props => {
               {year.scenes.map((scene, index) => (
                 <span
                   key={`scene-${index}`}
-                  className={`circle cursor-pointer ${props.sceneIndex ===
+                  className={`circle cursor-pointer ${currentSceneIndex ===
                     index && 'current-scene'} ${
                     year.id === props.year.id && numScenes > 0 ? 'show' : 'hide'
                   }`}
