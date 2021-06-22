@@ -20,6 +20,7 @@ const Timeline = props => {
       setTimeout(function() {
         // executed after 1 second
         props.navigateTo(year);
+        setSceneIndex('intro');
       }, 1000);
     }
   };
@@ -29,7 +30,7 @@ const Timeline = props => {
     setTimeout(function() {
       // executed after 2 second
       props.navigateTo(props.year.id, roman.toRoman(sceneIndex + 1), 'event');
-    }, 2000);
+    }, 1000);
   };
 
   useEffect(() => {
