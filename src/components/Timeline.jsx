@@ -73,7 +73,7 @@ const Timeline = props => {
                 key="intro"
                 className={`circle cursor-pointer ${props.pageId === 'intro' &&
                   'current-scene'} ${
-                  year.id === props.year.id ? 'show' : 'hide'
+                  year.id === props.year.id && numScenes > 0 ? 'show' : 'hide'
                 }`}
                 onClick={() => onClickYear(year.id)}
               >
@@ -86,7 +86,7 @@ const Timeline = props => {
                   key={`scene-${index}`}
                   className={`circle cursor-pointer ${props.sceneIndex ===
                     index && 'current-scene'} ${
-                    year.id === props.year.id ? 'show' : 'hide'
+                    year.id === props.year.id && numScenes > 0 ? 'show' : 'hide'
                   }`}
                   style={{
                     marginTop: `${
