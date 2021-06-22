@@ -23,7 +23,10 @@ const Timeline = props => {
   };
 
   const onClickScene = sceneIndex => {
-    props.navigateTo(props.year.id, roman.toRoman(sceneIndex + 1), 'event');
+    setTimeout(function() {
+      // executed after 2 second
+      props.navigateTo(props.year.id, roman.toRoman(sceneIndex + 1), 'event');
+    }, 2000);
   };
 
   useEffect(() => {

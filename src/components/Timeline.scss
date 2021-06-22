@@ -100,7 +100,7 @@
   .circle {
     &.show {
       opacity: 1;
-      transition: opacity 0s 1s; // delay appearance of circle, dots
+      transition: opacity 0s 1s, border-color 1s; // delay appearance of circle, dots, fade circle in
     }
 
     &.hide {
