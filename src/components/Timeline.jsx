@@ -20,7 +20,7 @@ const Timeline = props => {
       setTimeout(function() {
         // executed after 1 second
         props.navigateTo(year);
-      }, 2000);
+      }, 1000);
     }
   };
 
