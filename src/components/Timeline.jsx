@@ -46,26 +46,24 @@ const Timeline = props => {
             <div
               key={year.id}
               className={`${
-                props.pageId === 'home'
-                  ? year.id === props.previewedYear
-                    ? 'opacity-100' // highlight previewed year on homepage
-                    : 'opacity-30'
-                  : ''
-              }
-              ${
                 year.id === props.year.id
                   ? `year-timeline__scene-timeline pl-4 mb-2.5 ${
                       numScenes === 0
                         ? 'collapsed'
                         : `expanded num-scenes-${numScenes}`
                     }`
-                  : `pl-4 mb-2.5 opacity-30 cursor-pointer`
+                  : `pl-4 mb-2.5 cursor-pointer`
               }`}
             >
               {/* year */}
               <span
                 onClick={() => onClickYear(year.id)}
-                className="year-label cursor-pointer"
+                className={`year-label cursor-pointer ${
+                  (year.id === props.year.id && numScenes !== 0) ||
+                  (props.pageId === 'home' && props.previewedYear === year.id)
+                    ? 'active'
+                    : 'inactive'
+                }`}
               >
                 {year.id}
               </span>
@@ -89,8 +87,7 @@ const Timeline = props => {
                   className={`circle cursor-pointer ${props.sceneIndex ===
                     index && 'current-scene'} ${
                     year.id === props.year.id ? 'show' : 'hide'
-                  }
-                        `}
+                  }`}
                   style={{
                     marginTop: `${
                       year.id === props.year.id
