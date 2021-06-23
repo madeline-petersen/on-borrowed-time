@@ -8,7 +8,7 @@ const Header = ({
   label,
   pageId,
   title,
-  isTransitioningFromReflection,
+  isTransitioning,
   romanSceneNumber
 }) => {
   let textClasses =
@@ -55,7 +55,7 @@ const Header = ({
             <p
               className={`small-body ${pageId === 'event' &&
                 'title-animation'} ${pageId === 'reflection' &&
-                isTransitioningFromReflection &&
+                isTransitioning &&
                 'fade-out'} pt-2 pb-5 ${textClasses}`}
             >
               {title}
@@ -75,7 +75,7 @@ Header.propTypes = {
   label: PropTypes.string,
   pageId: PropTypes.string,
   title: PropTypes.string,
-  isTransitioningFromReflection: PropTypes.bool,
+  isTransitioning: PropTypes.bool,
   romanSceneNumber: PropTypes.string
 };
 

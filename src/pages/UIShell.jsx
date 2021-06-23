@@ -121,7 +121,7 @@ const UIShell = props => {
         }
         pageId={props.pageId}
         title={props.scene ? props.scene.title : ''}
-        isTransitioningFromReflection={isTransitioningFromReflection}
+        isTransitioning={isTransitioning}
         romanSceneNumber={props.romanSceneNumber}
       />
       <LeftMenu

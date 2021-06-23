@@ -37,7 +37,7 @@ const Timeline = props => {
 
   useEffect(() => {
     if (props.isTransitioningFromReflection) {
-      setSceneIndex(null);
+      setSceneIndex(null); // fade out circle immediately
     }
   }, [props.isTransitioningFromReflection]);
 
