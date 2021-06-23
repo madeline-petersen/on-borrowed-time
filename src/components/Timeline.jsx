@@ -15,7 +15,7 @@ const Timeline = props => {
     if (props.pageId === 'home') {
       props.navigateTo(year); // execute immediately
     } else {
-      if (year !== props.year.id) {
+      if (year !== props.currentYear.id) {
         setNumScenes(0); // collapse timeline (1s duration)
       }
       setTimeout(function() {
@@ -31,7 +31,11 @@ const Timeline = props => {
     setSceneIndex(null);
     setTimeout(function() {
       // executed after 2 second
-      props.navigateTo(props.year.id, roman.toRoman(sceneIndex + 1), 'event');
+      props.navigateTo(
+        props.currentYear.id,
+        roman.toRoman(sceneIndex + 1),
+        'event'
+      );
     }, 1000);
   };
 
@@ -46,8 +50,10 @@ const Timeline = props => {
   }, [props.isTransitioning]);
 
   useEffect(() => {
-    setNumScenes(props.year.scenes ? props.year.scenes.length : 0); // expand timeline
-  }, [props.year.id]);
+    setNumScenes(
+      props.currentYear.scenes ? props.currentYear.scenes.length : 0
+    ); // expand timeline
+  }, [props.currentYear.id]);
 
   useEffect(() => {
     if (props.pageId === 'intro') {
@@ -67,7 +73,7 @@ const Timeline = props => {
             <div
               key={year.id}
               className={`${
-                year.id === props.year.id
+                year.id === props.currentYear.id
                   ? `year-timeline__scene-timeline pl-4 mb-2.5 ${
                       numScenes === 0
                         ? 'collapsed'
@@ -80,7 +86,7 @@ const Timeline = props => {
               <span
                 onClick={() => onClickYear(year.id)}
                 className={`year-label cursor-pointer ${
-                  (year.id === props.year.id && numScenes !== 0) ||
+                  (year.id === props.currentYear.id && numScenes !== 0) ||
                   (props.pageId === 'home' && props.previewedYear === year.id)
                     ? 'active'
                     : 'inactive'
@@ -94,7 +100,9 @@ const Timeline = props => {
                 key="intro"
                 className={`circle cursor-pointer ${currentSceneIndex ===
                   'intro' && 'current-scene'} ${
-                  year.id === props.year.id && numScenes > 0 ? 'show' : 'hide'
+                  year.id === props.currentYear.id && numScenes > 0
+                    ? 'show'
+                    : 'hide'
                 }`}
                 onClick={() => onClickYear(year.id)}
               >
@@ -107,11 +115,13 @@ const Timeline = props => {
                   key={`scene-${index}`}
                   className={`circle cursor-pointer ${currentSceneIndex ===
                     index && 'current-scene'} ${
-                    year.id === props.year.id && numScenes > 0 ? 'show' : 'hide'
+                    year.id === props.currentYear.id && numScenes > 0
+                      ? 'show'
+                      : 'hide'
                   }`}
                   style={{
                     marginTop: `${
-                      year.id === props.year.id
+                      year.id === props.currentYear.id
                         ? `calc((${index + 1} * 24px))`
                         : '0'
                     }`
@@ -130,19 +140,17 @@ const Timeline = props => {
 };
 
 Timeline.defaultProps = {
-  year: { id: '', title: '' }
+  currentYear: { id: '', title: '' }
 };
 
 Timeline.propTypes = {
   timelineClasses: PropTypes.string,
   sceneIndex: PropTypes.string,
   pageId: PropTypes.string,
-  year: PropTypes.shape(),
+  currentYear: PropTypes.shape(),
   previewedYear: PropTypes.string,
   years: PropTypes.arrayOf(PropTypes.shape()),
   navigateTo: PropTypes.func,
-  scenes: PropTypes.number,
-  setNumScenes: PropTypes.func,
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   isYearEnd: PropTypes.bool

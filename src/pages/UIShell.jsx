@@ -135,7 +135,7 @@ const UIShell = props => {
         sceneIndex={props.sceneIndex}
         previewedYear={hash}
         years={props.years}
-        year={props.year} // expands timeline
+        currentYear={props.year} // expands timeline
         setIsTransitioning={setIsTransitioning}
         isTransitioning={isTransitioning}
         isYearEnd={isYearEnd}
