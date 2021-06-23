@@ -8,11 +8,12 @@ import PropTypes from 'prop-types';
 import stairs from '../images/Homepage_1989.jpg';
 import temple from '../images/Homepage_1984.jpg';
 
-const Intro = ({ year, navigateTo }) => {
+const Intro = ({ year, navigateTo, setIsTransitioning }) => {
   // we can trigger the transition animation by passing the isClicked value in via props (from timeline)
   const [isClicked, setClicked] = useState(false);
 
   useEffect(() => {
+    setIsTransitioning(false);
     setTimeout(function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 1000);
@@ -76,6 +77,7 @@ const Intro = ({ year, navigateTo }) => {
             next={year.scenes[0]}
             changingParam="scene"
             setClicked={setClicked}
+            setIsTransitioning={setIsTransitioning}
             navigateTo={navigateTo}
             theme={{
               background: 'black',
@@ -91,7 +93,8 @@ const Intro = ({ year, navigateTo }) => {
 
 Intro.propTypes = {
   year: PropTypes.shape(),
-  navigateTo: PropTypes.func
+  navigateTo: PropTypes.func,
+  setIsTransitioning: PropTypes.func
 };
 
 export default Intro;

@@ -21,11 +21,13 @@ const Artifacts = ({
   changingParam,
   nextParams,
   next,
-  navigateTo
+  navigateTo,
+  setIsTransitioning
 }) => {
   const [isClicked, setClicked] = useState(false);
 
   useEffect(() => {
+    setIsTransitioning(false);
     setTimeout(function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 1000);
@@ -77,6 +79,7 @@ const Artifacts = ({
               changingParam={changingParam}
               setClicked={setClicked}
               navigateTo={navigateTo}
+              setIsTransitioning={setIsTransitioning}
               theme={{
                 background: 'black',
                 text: 'gray-40',
@@ -95,7 +98,8 @@ Artifacts.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  navigateTo: PropTypes.func
+  navigateTo: PropTypes.func,
+  setIsTransitioning: PropTypes.func
 };
 
 export default Artifacts;

@@ -24,6 +24,11 @@ const UIShell = props => {
   const [isInterYearNavigation, setInterYearNavigation] = useState(false);
   let history = useHistory();
 
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  useEffect(() => {
+    console.log('isTransitioning', isTransitioning);
+  }, [isTransitioning]);
+
   const navigateTo = (year, romanSceneNumber, page) => {
     let location = window.location.pathname.substring(1, 5);
     if (location === year) {
@@ -53,24 +58,38 @@ const UIShell = props => {
       pageComponent = <Home {...props} hash={hash} setHash={setHash} />;
       break;
     case 'intro':
-      pageComponent = <Intro {...props} navigateTo={navigateTo} />;
+      pageComponent = (
+        <Intro
+          {...props}
+          navigateTo={navigateTo}
+          setIsTransitioning={setIsTransitioning}
+        />
+      );
       break;
     case 'event':
       pageComponent = (
         <Event
           {...props}
           setTransitioningFromReflection={setTransitioningFromReflection}
+          setIsTransitioning={setIsTransitioning}
           navigateTo={navigateTo}
         />
       );
       break;
     case 'artifacts':
-      pageComponent = <Artifacts {...props} navigateTo={navigateTo} />;
+      pageComponent = (
+        <Artifacts
+          {...props}
+          navigateTo={navigateTo}
+          setIsTransitioning={setIsTransitioning}
+        />
+      );
       break;
     case 'reflection':
       pageComponent = (
         <Reflection
           {...props}
+          setIsTransitioning={setIsTransitioning}
           setTransitioningFromReflection={setTransitioningFromReflection}
           navigateTo={navigateTo}
         />

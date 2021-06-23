@@ -8,6 +8,7 @@ const Footer = ({
   // useState variables, used in page component to transition page
   isClicked,
   setClicked,
+  setIsTransitioning,
 
   // used to determine navigation and labels
   nextParams,
@@ -25,6 +26,7 @@ const Footer = ({
 }) => {
   const handleOnClick = () => {
     setClicked(true);
+    setIsTransitioning(true);
     setTimeout(function() {
       // executed after 2 seconds
       if (changingParam === 'year') {
@@ -103,6 +105,7 @@ Footer.defaultProps = {
 Footer.propTypes = {
   isClicked: PropTypes.bool,
   setClicked: PropTypes.func,
+  setIsTransitioning: PropTypes.func,
   changingParam: PropTypes.string,
   nextParams: PropTypes.shape(),
   navigateTo: PropTypes.func,

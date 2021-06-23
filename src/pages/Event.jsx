@@ -15,12 +15,14 @@ const Event = ({
   changingParam,
   next,
   setTransitioningFromReflection,
-  navigateTo
+  navigateTo,
+  setIsTransitioning
 }) => {
   const [isClicked, setClicked] = useState(false);
   const screenClass = useScreenClass();
 
   useEffect(() => {
+    setIsTransitioning(false);
     setTransitioningFromReflection(false);
     setTimeout(function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -84,6 +86,7 @@ const Event = ({
                 setClicked={setClicked}
                 isClicked={isClicked}
                 navigateTo={navigateTo}
+                setIsTransitioning={setIsTransitioning}
                 theme={{
                   background: 'gray-30',
                   text: 'black',
@@ -105,6 +108,7 @@ Event.propTypes = {
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
   setTransitioningFromReflection: PropTypes.func,
+  setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func
 };
 

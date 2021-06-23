@@ -11,11 +11,13 @@ const Reflection = ({
   nextParams,
   changingParam,
   next,
+  setIsTransitioning,
   setTransitioningFromReflection,
   navigateTo
 }) => {
   const [isClicked, setClicked] = useState(false);
   useEffect(() => {
+    setIsTransitioning(false);
     setTimeout(function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 1000);
@@ -24,6 +26,7 @@ const Reflection = ({
   let nextBackground = changingParam === 'year' ? nextParams.year : 'gray-30';
 
   const onFooterClick = () => {
+    setIsTransitioning(true);
     setTransitioningFromReflection(true);
     setClicked(true);
   };
@@ -88,6 +91,7 @@ const Reflection = ({
                 changingParam={changingParam}
                 setClicked={onFooterClick}
                 navigateTo={navigateTo}
+                setIsTransitioning={setIsTransitioning}
                 theme={{
                   background: 'black',
                   text: 'gray-40',
@@ -107,6 +111,7 @@ Reflection.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
+  setIsTransitioning: PropTypes.string,
   setTransitioningFromReflection: PropTypes.func,
   navigateTo: PropTypes.func
 };
