@@ -149,6 +149,7 @@ const UIShell = props => {
         previewedYear={hash}
         years={props.years}
         year={props.year} // expands timeline
+        setIsTransitioning={setIsTransitioning}
         isTransitioningFromReflection={isTransitioningFromReflection}
         isInterYearNavigation={
           isInterYearNavigation || (isYearEnd && isTransitioningFromReflection)

@@ -10,6 +10,7 @@ const Timeline = props => {
   const [currentSceneIndex, setSceneIndex] = useState(props.sceneIndex);
 
   const onClickYear = year => {
+    props.setIsTransitioning(true);
     setSceneIndex(null);
     if (props.pageId === 'home') {
       props.navigateTo(year); // execute immediately
@@ -26,6 +27,7 @@ const Timeline = props => {
   };
 
   const onClickScene = sceneIndex => {
+    props.setIsTransitioning(true);
     setSceneIndex(null);
     setTimeout(function() {
       // executed after 2 second
@@ -144,6 +146,7 @@ Timeline.propTypes = {
   scenes: PropTypes.number,
   setNumScenes: PropTypes.func,
   isInterYearNavigation: PropTypes.bool,
+  setIsTransitioning: PropTypes.func,
   isTransitioningFromReflection: PropTypes.bool
 };
 
