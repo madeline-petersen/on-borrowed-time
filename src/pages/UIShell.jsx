@@ -1,6 +1,6 @@
 import './UIShell.scss';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import Artifacts from './Artifacts.jsx';
 import Event from './Event.jsx';
@@ -12,17 +12,11 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Reflection from './Reflection.jsx';
 import Timeline from '../components/Timeline';
-import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
-  let history = useHistory();
-
   const [isTransitioning, setIsTransitioning] = useState(false);
-  useEffect(() => {
-    console.log('isTransitioning', isTransitioning);
-  }, [isTransitioning]);
 
   const navigateTo = (year, romanSceneNumber, page) => {
     if (year && romanSceneNumber && page) {
