@@ -129,6 +129,7 @@ const UIShell = props => {
         onCloseLeftMenu={onCloseLeftMenu}
         years={props.years}
         navigateTo={navigateTo}
+        setIsTransitioning={setIsTransitioning}
       />
       <span
         className={`absolute text-3xl cursor-pointer z-40 left-menu-bullet ${timelineClasses}`}
