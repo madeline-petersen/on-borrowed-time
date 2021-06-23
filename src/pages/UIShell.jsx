@@ -16,9 +16,13 @@ import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const [isTransitioning, setIsTransitioning] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   let history = useHistory();
+
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  useEffect(() => {
+    console.log('isTransitioning', isTransitioning);
+  }, [isTransitioning]);
 
   const navigateTo = (year, romanSceneNumber, page) => {
     if (year && romanSceneNumber && page) {
