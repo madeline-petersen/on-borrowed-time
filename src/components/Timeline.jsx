@@ -36,10 +36,10 @@ const Timeline = props => {
   };
 
   useEffect(() => {
-    if (props.isTransitioningFromReflection) {
+    if (props.isTransitioning && props.pageId === 'reflection') {
       setSceneIndex(null); // fade out circle immediately
     }
-  }, [props.isTransitioningFromReflection]);
+  }, [props.isTransitioning]);
 
   useEffect(() => {
     if (props.isInterYearNavigation) {
@@ -146,8 +146,8 @@ Timeline.propTypes = {
   scenes: PropTypes.number,
   setNumScenes: PropTypes.func,
   isInterYearNavigation: PropTypes.bool,
-  setIsTransitioning: PropTypes.func,
-  isTransitioningFromReflection: PropTypes.bool
+  isTransitioning: PropTypes.bool,
+  setIsTransitioning: PropTypes.func
 };
 
 export default Timeline;
