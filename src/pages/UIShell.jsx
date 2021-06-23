@@ -16,12 +16,7 @@ import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const [
-    isTransitioningFromReflection,
-    setTransitioningFromReflection
-  ] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
-  const [isInterYearNavigation, setInterYearNavigation] = useState(false);
   let history = useHistory();
 
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -30,13 +25,6 @@ const UIShell = props => {
   }, [isTransitioning]);
 
   const navigateTo = (year, romanSceneNumber, page) => {
-    let location = window.location.pathname.substring(1, 5);
-    if (location === year) {
-      setInterYearNavigation(false);
-    } else {
-      setInterYearNavigation(true);
-    }
-
     if (year && romanSceneNumber && page) {
       history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
     } else if (year) {
@@ -70,7 +58,6 @@ const UIShell = props => {
       pageComponent = (
         <Event
           {...props}
-          setTransitioningFromReflection={setTransitioningFromReflection}
           setIsTransitioning={setIsTransitioning}
           navigateTo={navigateTo}
         />
@@ -90,7 +77,6 @@ const UIShell = props => {
         <Reflection
           {...props}
           setIsTransitioning={setIsTransitioning}
-          setTransitioningFromReflection={setTransitioningFromReflection}
           navigateTo={navigateTo}
         />
       );
@@ -152,9 +138,7 @@ const UIShell = props => {
         year={props.year} // expands timeline
         setIsTransitioning={setIsTransitioning}
         isTransitioning={isTransitioning}
-        isInterYearNavigation={
-          isInterYearNavigation || (isYearEnd && isTransitioningFromReflection)
-        } // collapses timeline
+        isYearEnd={isYearEnd}
         navigateTo={navigateTo}
       />
       {pageComponent}

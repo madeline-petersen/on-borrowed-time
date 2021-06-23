@@ -12,7 +12,6 @@ const Reflection = ({
   changingParam,
   next,
   setIsTransitioning,
-  setTransitioningFromReflection,
   navigateTo
 }) => {
   const [isClicked, setClicked] = useState(false);
@@ -27,7 +26,6 @@ const Reflection = ({
 
   const onFooterClick = () => {
     setIsTransitioning(true);
-    setTransitioningFromReflection(true);
     setClicked(true);
   };
 
@@ -112,7 +110,6 @@ Reflection.propTypes = {
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
   setIsTransitioning: PropTypes.string,
-  setTransitioningFromReflection: PropTypes.func,
   navigateTo: PropTypes.func
 };
 

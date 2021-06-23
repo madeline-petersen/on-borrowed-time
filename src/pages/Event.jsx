@@ -14,7 +14,6 @@ const Event = ({
   nextParams,
   changingParam,
   next,
-  setTransitioningFromReflection,
   navigateTo,
   setIsTransitioning
 }) => {
@@ -23,7 +22,6 @@ const Event = ({
 
   useEffect(() => {
     setIsTransitioning(false);
-    setTransitioningFromReflection(false);
     setTimeout(function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 1000);
@@ -107,7 +105,6 @@ Event.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  setTransitioningFromReflection: PropTypes.func,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func
 };

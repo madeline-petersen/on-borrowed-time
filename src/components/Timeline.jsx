@@ -38,14 +38,12 @@ const Timeline = props => {
   useEffect(() => {
     if (props.isTransitioning && props.pageId === 'reflection') {
       setSceneIndex(null); // fade out circle immediately
+
+      if (props.isYearEnd) {
+        setNumScenes(0); // collapse timeline
+      }
     }
   }, [props.isTransitioning]);
-
-  useEffect(() => {
-    if (props.isInterYearNavigation) {
-      setNumScenes(0); // collapse timeline
-    }
-  }, [props.isInterYearNavigation]);
 
   useEffect(() => {
     setNumScenes(props.year.scenes ? props.year.scenes.length : 0); // expand timeline
@@ -145,9 +143,9 @@ Timeline.propTypes = {
   navigateTo: PropTypes.func,
   scenes: PropTypes.number,
   setNumScenes: PropTypes.func,
-  isInterYearNavigation: PropTypes.bool,
   isTransitioning: PropTypes.bool,
-  setIsTransitioning: PropTypes.func
+  setIsTransitioning: PropTypes.func,
+  isYearEnd: PropTypes.bool
 };
 
 export default Timeline;
