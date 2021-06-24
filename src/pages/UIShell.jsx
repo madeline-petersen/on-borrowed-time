@@ -1,6 +1,6 @@
 import './UIShell.scss';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import Artifacts from './Artifacts.jsx';
 import Event from './Event.jsx';
@@ -117,6 +117,7 @@ const UIShell = props => {
   return (
     <>
       <Header
+        currentYear={props.year.id}
         label={
           props.pageId === 'intro'
             ? ''
@@ -128,6 +129,9 @@ const UIShell = props => {
         title={props.scene ? props.scene.title : ''}
         isTransitioning={isTransitioning}
         romanSceneNumber={props.romanSceneNumber}
+        setNextBackground={setNextBackground}
+        setIsTransitioning={setIsTransitioning}
+        navigateTo={navigateTo}
       />
       <LeftMenu
         isActive={isMenuActive}

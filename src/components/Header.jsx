@@ -5,11 +5,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Header = ({
+  currentYear,
   label,
   pageId,
   title,
   isTransitioning,
-  romanSceneNumber
+  romanSceneNumber,
+  setNextBackground,
+  setIsTransitioning,
+  navigateTo
 }) => {
   let textClasses =
     pageId === 'home' || pageId === 'intro'
@@ -17,6 +21,30 @@ const Header = ({
       : pageId === 'event'
       ? 'contrast-text gray'
       : 'contrast-text';
+
+  const onClickYear = () => {
+    if (pageId !== 'intro') {
+      setNextBackground(currentYear);
+      setIsTransitioning(true);
+      // setSceneIndex(null); // disappear circle
+      // if (pageId !== 'home') {
+      //   if (year !== currentYear) {
+      //     setNumScenes(0); // collapse timeline (1s duration)
+      //   }
+      // }
+      navigateTo(currentYear);
+      // setSceneIndex('intro');
+    }
+  };
+
+  const onClickScene = () => {
+    if (pageId !== 'event') {
+      setNextBackground('gray-30');
+      setIsTransitioning(true);
+      // setSceneIndex(null); // disappear circle
+      navigateTo(currentYear, romanSceneNumber, 'event');
+    }
+  };
 
   return (
     <span
@@ -26,9 +54,13 @@ const Header = ({
         <Row className={`grid__row pt-5`}>
           <Col lg={3} md={4} sm={4} xs={4} />
           <Col lg={3} md={3} sm={3} xs={3}>
-            <Link to="/" className={textClasses}>
+            <p
+              className={`${pageId !== 'intro' &&
+                'cursor-pointer'} ${textClasses}`}
+              onClick={onClickYear}
+            >
               {label}
-            </Link>
+            </p>
           </Col>
           <Col lg={5} md={4} sm={4} xs={4} />
           <Col lg={1} md={1} sm={1} xs={1}>
@@ -53,10 +85,12 @@ const Header = ({
               </p>
             )}
             <p
-              className={`small-body ${pageId === 'event' &&
-                'title-animation'} ${pageId === 'reflection' &&
+              className={`small-body ${
+                pageId === 'event' ? 'title-animation' : 'cursor-pointer'
+              } ${pageId === 'reflection' &&
                 isTransitioning &&
                 'fade-out'} pt-2 pb-5 ${textClasses}`}
+              onClick={onClickScene}
             >
               {title}
             </p>
@@ -72,11 +106,15 @@ Header.defaultProps = {
 };
 
 Header.propTypes = {
+  currentYear: PropTypes.string,
   label: PropTypes.string,
   pageId: PropTypes.string,
   title: PropTypes.string,
   isTransitioning: PropTypes.bool,
-  romanSceneNumber: PropTypes.string
+  romanSceneNumber: PropTypes.string,
+  setNextBackground: PropTypes.func,
+  setIsTransitioning: PropTypes.func,
+  navigateTo: PropTypes.func
 };
 
 export default Header;
