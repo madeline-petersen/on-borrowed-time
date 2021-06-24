@@ -17,7 +17,6 @@ const Intro = ({
   setNextBackground
 }) => {
   const [isClicked, setClicked] = useState(false);
-  console.log('intro next background', nextBackground);
 
   useEffect(() => {
     setClicked(isTransitioning);

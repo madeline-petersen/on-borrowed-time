@@ -21,10 +21,6 @@ const UIShell = props => {
   const [nextBackground, setNextBackground] = useState(null);
   let history = useHistory();
 
-  useEffect(() => {
-    console.log('next background ', nextBackground);
-  }, [nextBackground]);
-
   const navigateTo = (year, romanSceneNumber, page) => {
     if (year && romanSceneNumber && page) {
       setTimeout(function() {

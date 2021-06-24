@@ -28,7 +28,6 @@ const Event = ({
   }, [isTransitioning]);
 
   useEffect(() => {
-    debugger;
     setIsTransitioning(false);
     setNextBackground(null);
     setTimeout(function() {
