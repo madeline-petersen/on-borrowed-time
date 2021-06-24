@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
+import yearBackgroundClasses from '../variables/backgroundImages.json';
 
 const Home = ({ years, hash, setHash }) => {
   let myHistory = useHistory();
@@ -25,16 +26,6 @@ const Home = ({ years, hash, setHash }) => {
       // executed after 1 second
       myHistory.push(`/${year}`);
     }, 1000);
-  };
-
-  let yearBackgroundClasses = {
-    '1984': 'bg-1984-home',
-    '1989': 'bg-1989-home',
-    '1997': 'bg-1997-home',
-    '2003': 'bg-2003-home',
-    '2014': 'bg-2014-home',
-    '2019': 'bg-2019-home',
-    '2020': 'bg-2020-home'
   };
 
   return (
