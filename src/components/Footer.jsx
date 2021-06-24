@@ -27,22 +27,19 @@ const Footer = ({
   const handleOnClick = () => {
     setClicked(true);
     setIsTransitioning(true);
-    setTimeout(function() {
-      // executed after 2 seconds
-      if (changingParam === 'year') {
-        // if year end
-        // inter-year
-        navigateTo(nextParams.year);
-      } else {
-        // else
-        // intra-year
-        navigateTo(
-          nextParams.year,
-          nextParams.scene, // should be romanSceneNumber
-          nextParams.page
-        );
-      }
-    }, 2000);
+    if (changingParam === 'year') {
+      // if year end
+      // inter-year
+      navigateTo(nextParams.year);
+    } else {
+      // else
+      // intra-year
+      navigateTo(
+        nextParams.year,
+        nextParams.scene, // should be romanSceneNumber
+        nextParams.page
+      );
+    }
   };
 
   let textClasses =

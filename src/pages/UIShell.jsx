@@ -20,11 +20,22 @@ const UIShell = props => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   let history = useHistory();
 
+  let nextBackground;
   const navigateTo = (year, romanSceneNumber, page) => {
     if (year && romanSceneNumber && page) {
-      history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
+      if (page === 'event') {
+        nextBackground === 'gray-30'; // event
+      } else {
+        nextBackground === 'black'; // artifacts, reflection
+      }
+      setTimeout(function() {
+        history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
+      }, 2000);
     } else if (year) {
-      history.push(`/${year}`);
+      nextBackground = year; // intro
+      setTimeout(function() {
+        history.push(`/${year}`);
+      }, 2000);
     }
   };
 
@@ -54,6 +65,7 @@ const UIShell = props => {
       pageComponent = (
         <Event
           {...props}
+          nextBackground={nextBackground}
           setIsTransitioning={setIsTransitioning}
           navigateTo={navigateTo}
         />
