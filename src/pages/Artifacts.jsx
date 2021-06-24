@@ -23,21 +23,30 @@ const Artifacts = ({
   next,
   navigateTo,
   nextBackground,
-  setIsTransitioning
+  isTransitioning,
+  setIsTransitioning,
+  setNextBackground
 }) => {
   const [isClicked, setClicked] = useState(false);
 
   useEffect(() => {
+    setClicked(isTransitioning);
+  }, [isTransitioning]);
+
+  useEffect(() => {
     setIsTransitioning(false);
+    setNextBackground(null);
     setTimeout(function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 1000);
-  }, []);
+  }, [artifacts]);
 
   return (
     <>
       {/* Backgrounds for page transition */}
-      <div className={`h-screen bg-${nextBackground} absolute top-0 w-full`}>
+      <div
+        className={`h-screen bg-${nextBackground} bg-center bg-no-repeat bg-cover absolute top-0 w-full`}
+      >
         <div
           className={`h-screen bg-black absolute top-0 w-full ${
             isClicked ? 'screen-shrink' : ''
@@ -114,7 +123,9 @@ Artifacts.propTypes = {
   changingParam: PropTypes.string,
   navigateTo: PropTypes.func,
   nextBackground: PropTypes.string,
-  setIsTransitioning: PropTypes.func
+  isTransitioning: PropTypes.bool,
+  setIsTransitioning: PropTypes.func,
+  setNextBackground: PropTypes.bool
 };
 
 export default Artifacts;

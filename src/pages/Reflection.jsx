@@ -12,16 +12,24 @@ const Reflection = ({
   changingParam,
   next,
   nextBackground,
+  isTransitioning,
   setIsTransitioning,
-  navigateTo
+  navigateTo,
+  setNextBackground
 }) => {
   const [isClicked, setClicked] = useState(false);
+
+  useEffect(() => {
+    setClicked(isTransitioning);
+  }, [isTransitioning]);
+
   useEffect(() => {
     setIsTransitioning(false);
+    setNextBackground(null);
     setTimeout(function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 1000);
-  }, []);
+  }, [reflection]);
 
   const onFooterClick = () => {
     setIsTransitioning(true);
@@ -113,8 +121,10 @@ Reflection.propTypes = {
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
   nextBackground: PropTypes.string,
+  isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.string,
-  navigateTo: PropTypes.func
+  navigateTo: PropTypes.func,
+  setNextBackground: PropTypes.func
 };
 
 export default Reflection;

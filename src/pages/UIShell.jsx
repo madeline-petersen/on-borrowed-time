@@ -1,6 +1,6 @@
 import './UIShell.scss';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Artifacts from './Artifacts.jsx';
 import Event from './Event.jsx';
@@ -18,7 +18,12 @@ const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [nextBackground, setNextBackground] = useState(null);
   let history = useHistory();
+
+  useEffect(() => {
+    console.log('next background ', nextBackground);
+  }, [nextBackground]);
 
   const navigateTo = (year, romanSceneNumber, page) => {
     if (year && romanSceneNumber && page) {
@@ -50,6 +55,9 @@ const UIShell = props => {
         <Intro
           {...props}
           navigateTo={navigateTo}
+          nextBackground={nextBackground === null ? 'gray-30' : nextBackground}
+          setNextBackground={setNextBackground}
+          isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
         />
       );
@@ -58,8 +66,11 @@ const UIShell = props => {
       pageComponent = (
         <Event
           {...props}
-          setIsTransitioning={setIsTransitioning}
           navigateTo={navigateTo}
+          nextBackground={nextBackground === null ? 'black' : nextBackground}
+          setNextBackground={setNextBackground}
+          isTransitioning={isTransitioning}
+          setIsTransitioning={setIsTransitioning}
         />
       );
       break;
@@ -68,6 +79,9 @@ const UIShell = props => {
         <Artifacts
           {...props}
           navigateTo={navigateTo}
+          nextBackground={nextBackground === null ? 'black' : nextBackground}
+          setNextBackground={setNextBackground}
+          isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
         />
       );
@@ -77,10 +91,16 @@ const UIShell = props => {
         <Reflection
           {...props}
           nextBackground={
-            props.changingParam === 'year' ? props.nextParams.year : 'gray-30'
+            nextBackground === null
+              ? props.changingParam === 'year'
+                ? props.nextParams.year
+                : 'gray-30'
+              : nextBackground
           }
-          setIsTransitioning={setIsTransitioning}
+          setNextBackground={setNextBackground}
           navigateTo={navigateTo}
+          isTransitioning={isTransitioning}
+          setIsTransitioning={setIsTransitioning}
         />
       );
       break;
@@ -143,6 +163,7 @@ const UIShell = props => {
         isTransitioning={isTransitioning}
         isYearEnd={isYearEnd}
         navigateTo={navigateTo}
+        setNextBackground={setNextBackground}
       />
       {pageComponent}
     </>

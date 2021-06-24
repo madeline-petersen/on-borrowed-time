@@ -16,22 +16,32 @@ const Event = ({
   next,
   navigateTo,
   nextBackground,
-  setIsTransitioning
+  isTransitioning,
+  setIsTransitioning,
+  setNextBackground
 }) => {
   const [isClicked, setClicked] = useState(false);
   const screenClass = useScreenClass();
 
   useEffect(() => {
+    setClicked(isTransitioning);
+  }, [isTransitioning]);
+
+  useEffect(() => {
+    debugger;
     setIsTransitioning(false);
+    setNextBackground(null);
     setTimeout(function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 1000);
-  }, []);
+  }, [event]);
 
   return (
     <>
       {/* Backgrounds for page transition */}
-      <div className={`h-screen bg-${nextBackground} absolute top-0 w-full`}>
+      <div
+        className={`h-screen bg-${nextBackground} bg-center bg-no-repeat bg-cover absolute top-0 w-full`}
+      >
         <div
           className={`h-screen bg-gray-30 absolute top-0 w-full ${
             isClicked ? 'screen-shrink' : ''
@@ -111,8 +121,10 @@ Event.propTypes = {
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
   nextBackground: PropTypes.string,
+  isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
-  navigateTo: PropTypes.func
+  navigateTo: PropTypes.func,
+  setNextBackground: PropTypes.bool
 };
 
 export default Event;
