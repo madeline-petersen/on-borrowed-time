@@ -27,6 +27,16 @@ const Home = ({ years, hash, setHash }) => {
     }, 1000);
   };
 
+  let yearBackgroundClasses = {
+    '1984': 'bg-1984-home',
+    '1989': 'bg-1989-home',
+    '1997': 'bg-1997-home',
+    '2003': 'bg-2003-home',
+    '2014': 'bg-2014-home',
+    '2019': 'bg-2019-home',
+    '2020': 'bg-2020-home'
+  };
+
   return (
     <>
       <div
@@ -81,7 +91,7 @@ const Home = ({ years, hash, setHash }) => {
         {years.map(year => {
           return (
             <div
-              className={`hero-image bg-${year.id}-home`}
+              className={`hero-image ${yearBackgroundClasses[year.id]}`}
               key={year.id}
               id={year.id}
             />
