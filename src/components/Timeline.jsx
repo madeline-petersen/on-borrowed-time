@@ -76,7 +76,7 @@ const Timeline = props => {
                         ? 'collapsed'
                         : `expanded num-scenes-${numScenes}`
                     }`
-                  : `pl-4 mb-2.5 cursor-pointer`
+                  : `pl-4 mb-2.5`
               }`}
             >
               {/* year */}
