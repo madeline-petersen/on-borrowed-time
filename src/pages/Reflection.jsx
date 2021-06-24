@@ -11,6 +11,7 @@ const Reflection = ({
   nextParams,
   changingParam,
   next,
+  nextBackground,
   setIsTransitioning,
   navigateTo
 }) => {
@@ -21,8 +22,6 @@ const Reflection = ({
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 1000);
   }, []);
-
-  let nextBackground = changingParam === 'year' ? nextParams.year : 'gray-30';
 
   const onFooterClick = () => {
     setIsTransitioning(true);
@@ -104,11 +103,16 @@ const Reflection = ({
   );
 };
 
+Reflection.defaultProps = {
+  nextBackground: 'gray-30'
+};
+
 Reflection.propTypes = {
   reflection: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
+  nextBackground: PropTypes.string,
   setIsTransitioning: PropTypes.string,
   navigateTo: PropTypes.func
 };

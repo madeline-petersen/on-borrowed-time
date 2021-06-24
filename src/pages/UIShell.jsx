@@ -72,6 +72,9 @@ const UIShell = props => {
       pageComponent = (
         <Reflection
           {...props}
+          nextBackground={
+            props.changingParam === 'year' ? props.nextParams.year : 'gray-30'
+          }
           setIsTransitioning={setIsTransitioning}
           navigateTo={navigateTo}
         />

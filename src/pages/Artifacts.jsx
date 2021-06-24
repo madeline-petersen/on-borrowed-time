@@ -22,6 +22,7 @@ const Artifacts = ({
   nextParams,
   next,
   navigateTo,
+  nextBackground,
   setIsTransitioning
 }) => {
   const [isClicked, setClicked] = useState(false);
@@ -35,6 +36,15 @@ const Artifacts = ({
 
   return (
     <>
+      {/* Backgrounds for page transition */}
+      <div className={`h-screen bg-${nextBackground} absolute top-0 w-full`}>
+        <div
+          className={`h-screen bg-black absolute top-0 w-full ${
+            isClicked ? 'screen-shrink' : ''
+          }`}
+        />
+      </div>
+
       <div className="h-auto bg-black">
         <Container className="grid__container min-h-screen">
           <HeaderSpacer />
@@ -93,12 +103,17 @@ const Artifacts = ({
   );
 };
 
+Artifacts.defaultProps = {
+  nextBackground: 'black'
+};
+
 Artifacts.propTypes = {
   artifacts: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
   navigateTo: PropTypes.func,
+  nextBackground: PropTypes.string,
   setIsTransitioning: PropTypes.func
 };
 

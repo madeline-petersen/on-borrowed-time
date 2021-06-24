@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import stairs from '../images/Homepage_1989.jpg';
 import temple from '../images/Homepage_1984.jpg';
 
-const Intro = ({ year, navigateTo, setIsTransitioning }) => {
+const Intro = ({ year, navigateTo, nextBackground, setIsTransitioning }) => {
   // we can trigger the transition animation by passing the isClicked value in via props (from timeline)
   const [isClicked, setClicked] = useState(false);
 
@@ -23,7 +23,7 @@ const Intro = ({ year, navigateTo, setIsTransitioning }) => {
     <>
       {/* Backgrounds for page transition */}
       <div
-        className={`h-screen bg-gray-30 bg-center bg-no-repeat bg-cover absolute top-0 w-full`}
+        className={`h-screen bg-${nextBackground} bg-center bg-no-repeat bg-cover absolute top-0 w-full`}
       >
         <div
           className={`h-screen bg-black absolute top-0 w-full ${
@@ -91,9 +91,14 @@ const Intro = ({ year, navigateTo, setIsTransitioning }) => {
   );
 };
 
+Intro.defaultProps = {
+  nextBackground: 'gray-30'
+};
+
 Intro.propTypes = {
   year: PropTypes.shape(),
   navigateTo: PropTypes.func,
+  nextBackground: PropTypes.string,
   setIsTransitioning: PropTypes.func
 };
 

@@ -15,6 +15,7 @@ const Event = ({
   changingParam,
   next,
   navigateTo,
+  nextBackground,
   setIsTransitioning
 }) => {
   const [isClicked, setClicked] = useState(false);
@@ -30,7 +31,7 @@ const Event = ({
   return (
     <>
       {/* Backgrounds for page transition */}
-      <div className={`h-screen bg-black absolute top-0 w-full`}>
+      <div className={`h-screen bg-${nextBackground} absolute top-0 w-full`}>
         <div
           className={`h-screen bg-gray-30 absolute top-0 w-full ${
             isClicked ? 'screen-shrink' : ''
@@ -99,12 +100,17 @@ const Event = ({
   );
 };
 
+Event.defaultProps = {
+  nextBackground: 'black'
+};
+
 Event.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
   event: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
+  nextBackground: PropTypes.string,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func
 };
