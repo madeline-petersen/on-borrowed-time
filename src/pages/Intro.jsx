@@ -30,11 +30,23 @@ const Intro = ({
     }, 1000);
   }, [year]);
 
+  let yearBackgroundClasses = {
+    '1984': 'bg-1984',
+    '1989': 'bg-1989',
+    '1997': 'bg-1997',
+    '2003': 'bg-2003',
+    '2014': 'bg-2014',
+    '2019': 'bg-2019',
+    '2020': 'bg-2020',
+    black: 'bg-black',
+    'gray-30': 'bg-gray-30'
+  };
+
   return (
     <>
       {/* Backgrounds for page transition */}
       <div
-        className={`h-screen bg-${nextBackground} bg-center bg-no-repeat bg-cover absolute top-0 w-full`}
+        className={`h-screen ${yearBackgroundClasses[nextBackground]} bg-center bg-no-repeat bg-cover absolute top-0 w-full`}
       >
         <div
           className={`h-screen bg-black absolute top-0 w-full ${
@@ -44,7 +56,7 @@ const Intro = ({
       </div>
 
       <div className={`intro ${isClicked ? 'fade-out' : 'foreground-fade-in'}`}>
-        <div className={`hero-image bg-${year.id}`}>
+        <div className={`hero-image ${yearBackgroundClasses[year.id]}`}>
           <div className="small-headline text-white absolute w-full scene-name">
             <Container className="grid__container">
               <Row className="grid__row">
