@@ -82,7 +82,7 @@ const Timeline = props => {
               {/* year */}
               <span
                 onClick={() => onClickYear(year.id)}
-                className={`year-label cursor-pointer ${
+                className={`year-label cursor-pointer hover:text-gray-50 ${
                   (year.id === props.currentYear.id && numScenes !== 0) ||
                   (props.pageId === 'home' && props.previewedYear === year.id)
                     ? 'active'
