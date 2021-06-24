@@ -13,15 +13,13 @@ const Timeline = props => {
     props.setNextBackground(year);
     props.setIsTransitioning(true);
     setSceneIndex(null); // disappear circle
-    if (props.pageId === 'home') {
-      props.navigateTo(year); // execute immediately
-    } else {
+    if (props.pageId !== 'home') {
       if (year !== props.currentYear.id) {
         setNumScenes(0); // collapse timeline (1s duration)
       }
-      props.navigateTo(year);
-      setSceneIndex('intro');
     }
+    props.navigateTo(year);
+    setSceneIndex('intro');
   };
 
   const onClickScene = sceneIndex => {
@@ -60,7 +58,7 @@ const Timeline = props => {
     } else {
       setSceneIndex(props.sceneIndex);
     }
-  }, [props.sceneIndex, props.pageId]);
+  }, [props.currentYear, props.sceneIndex, props.pageId]);
 
   return (
     <span
