@@ -27,9 +27,13 @@ const UIShell = props => {
         history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
       }, 2000);
     } else if (year) {
-      setTimeout(function() {
-        history.push(`/${year}`);
-      }, 2000);
+      if (props.pageId === 'home') {
+        history.push(`/${year}`); // delaying causes timeline to open abruptly
+      } else {
+        setTimeout(function() {
+          history.push(`/${year}`);
+        }, 2000);
+      }
     }
   };
 
