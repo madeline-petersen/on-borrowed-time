@@ -66,6 +66,9 @@ const Intro = ({
               </Row>
             </Container>
           </div>
+          <div className={`bg-gradient w-full h-full`}>
+            <div className={`bg-gradient-inverse w-full h-full`}></div>
+          </div>
         </div>
         <Container className="grid__container min-h-screen">
           <Row className="grid__row pt-64 pb-40">
