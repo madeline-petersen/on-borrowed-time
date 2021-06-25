@@ -50,13 +50,14 @@ const Event = ({
   return (
     <>
       {/* Backgrounds for page transition */}
-      <div
-        className={`h-screen ${yearBackgroundClasses[nextBackground]} bg-center bg-no-repeat bg-cover absolute top-0 w-full`}
-      >
+      <div className={`absolute top-0 w-full`}>
         <div
-          className={`h-screen bg-gray-30 absolute top-0 w-full ${
+          className={`h-screen bg-gray-30 w-full ${
             isClicked ? 'screen-shrink' : ''
           }`}
+        />
+        <div
+          className={`h-screen ${yearBackgroundClasses[nextBackground]} bg-center bg-no-repeat bg-cover w-full`}
         />
       </div>
 
