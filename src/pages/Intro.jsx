@@ -25,9 +25,6 @@ const Intro = ({
   useEffect(() => {
     setIsTransitioning(false);
     setNextBackground(null);
-    setTimeout(function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 1000);
   }, [year]);
 
   let yearBackgroundClasses = {
