@@ -51,9 +51,11 @@ const Intro = ({
             isClicked ? 'screen-shrink' : ''
           }`}
         />
-        <div
-          className={`h-screen ${yearBackgroundClasses[nextBackground]} bg-center bg-no-repeat bg-cover w-full`}
-        />
+        {isTransitioning && (
+          <div
+            className={`h-screen ${yearBackgroundClasses[nextBackground]} bg-center bg-no-repeat bg-cover w-full`}
+          />
+        )}
       </div>
 
       <div className={`intro ${isClicked ? 'fade-out' : 'foreground-fade-in'}`}>
