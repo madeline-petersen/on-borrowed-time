@@ -142,6 +142,7 @@ const UIShell = props => {
         onCloseLeftMenu={onCloseLeftMenu}
         years={props.years}
         navigateTo={navigateTo}
+        setNextBackground={setNextBackground}
         setIsTransitioning={setIsTransitioning}
       />
       <span
