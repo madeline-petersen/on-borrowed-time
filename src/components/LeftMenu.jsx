@@ -7,7 +7,6 @@ import { ArrowLeft16 } from '@carbon/icons-react';
 import { Close20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import { roman } from '@sguest/roman-js';
-import { useHistory } from 'react-router-dom';
 
 const LeftMenu = ({
   isActive,

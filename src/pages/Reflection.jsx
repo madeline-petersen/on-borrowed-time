@@ -33,7 +33,7 @@ const Reflection = ({
     setClicked(true);
   };
 
-  let yearBackgroundClasses = {
+  let transitionBackgroundClasses = {
     '1984': 'bg-1984',
     '1989': 'bg-1989',
     '1997': 'bg-1997',
@@ -56,7 +56,7 @@ const Reflection = ({
         />
         {isTransitioning && (
           <div
-            className={`h-screen ${yearBackgroundClasses[nextBackground]} bg-center bg-no-repeat bg-cover w-full`}
+            className={`h-screen ${transitionBackgroundClasses[nextBackground]} bg-center bg-no-repeat bg-cover w-full`}
           />
         )}
       </div>

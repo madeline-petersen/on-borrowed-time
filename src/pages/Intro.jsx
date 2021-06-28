@@ -27,6 +27,18 @@ const Intro = ({
     setNextBackground(null);
   }, [year]);
 
+  let transitionBackgroundClasses = {
+    '1984': 'bg-1984',
+    '1989': 'bg-1989',
+    '1997': 'bg-1997',
+    '2003': 'bg-2003',
+    '2014': 'bg-2014',
+    '2019': 'bg-2019',
+    '2020': 'bg-2020',
+    black: 'bg-black',
+    'gray-30': 'bg-gray-30'
+  };
+
   let yearBackgroundClasses = {
     '1984': 'bg-1984',
     '1989': 'bg-1989',
@@ -50,7 +62,7 @@ const Intro = ({
         />
         {isTransitioning && (
           <div
-            className={`h-screen ${yearBackgroundClasses[nextBackground]} bg-center bg-no-repeat bg-cover w-full`}
+            className={`h-screen ${transitionBackgroundClasses[nextBackground]} bg-center bg-no-repeat bg-cover w-full`}
           />
         )}
       </div>
@@ -65,9 +77,6 @@ const Intro = ({
                 <Col lg={4}>{year.id}</Col>
               </Row>
             </Container>
-          </div>
-          <div className={`bg-gradient w-full h-full`}>
-            <div className={`bg-gradient-inverse w-full h-full`}></div>
           </div>
         </div>
         <Container className="grid__container min-h-screen">
