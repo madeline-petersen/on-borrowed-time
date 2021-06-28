@@ -44,41 +44,6 @@ function HomeWrapper() {
   return <UIShell pageId="home" years={data.years} />;
 }
 
-function Intro() {
-  let { yearId } = useParams();
-
-  let yearIndex = data.years.findIndex(year => year.id === yearId);
-  let year;
-  if (yearIndex > -1) {
-    year = data.years[yearIndex]; // year, title
-  } else {
-    return <NoMatch />;
-  }
-
-  const nextScene = year.scenes[0]; // title, pages
-  const nextRomanSceneNumber = 'I';
-
-  const next = nextScene;
-  const changingParam = 'scene';
-  const nextParams = {
-    year: year.id,
-    scene: nextRomanSceneNumber,
-    page: 'event'
-  };
-
-  return (
-    <UIShell
-      pageId="intro"
-      intro={year.intro}
-      years={data.years}
-      year={year}
-      next={next}
-      changingParam={changingParam}
-      nextParams={nextParams}
-    />
-  );
-}
-
 function Page() {
   let { yearId } = useParams();
   let { sceneId } = useParams();
