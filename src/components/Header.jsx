@@ -64,9 +64,9 @@ const Header = ({
           </Col>
           <Col lg={5} md={4} sm={4} xs={4} />
           <Col lg={1} md={1} sm={1} xs={1}>
-            <Link to="/index" className={textClasses}>
+            {/* <Link to="/index" className={textClasses}>
               Index
-            </Link>
+            </Link> */}
           </Col>
         </Row>
         {pageId === 'event' && (
