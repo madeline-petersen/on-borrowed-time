@@ -28,13 +28,13 @@ const Home = ({ years, hash, setHash }) => {
   };
 
   let transitionBackgroundClasses = {
-    '1984': 'bg-1984-home-home',
-    '1989': 'bg-1989-home-home',
-    '1997': 'bg-1997-home-home',
-    '2003': 'bg-2003-home-home',
-    '2014': 'bg-2014-home-home',
-    '2019': 'bg-2019-home-home',
-    '2020': 'bg-2020-home'
+    '1984': 'bg-1984',
+    '1989': 'bg-1989',
+    '1997': 'bg-1997',
+    '2003': 'bg-2003',
+    '2014': 'bg-2014',
+    '2019': 'bg-2019',
+    '2020': 'bg-2020'
   };
 
   return (

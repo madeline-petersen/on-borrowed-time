@@ -33,13 +33,13 @@ const Event = ({
   }, [event]);
 
   let transitionBackgroundClasses = {
-    '1984': 'bg-1984-home',
-    '1989': 'bg-1989-home',
-    '1997': 'bg-1997-home',
-    '2003': 'bg-2003-home',
-    '2014': 'bg-2014-home',
-    '2019': 'bg-2019-home',
-    '2020': 'bg-2020-home',
+    '1984': 'bg-1984',
+    '1989': 'bg-1989',
+    '1997': 'bg-1997',
+    '2003': 'bg-2003',
+    '2014': 'bg-2014',
+    '2019': 'bg-2019',
+    '2020': 'bg-2020',
     black: 'bg-black',
     'gray-30': 'bg-gray-30'
   };
