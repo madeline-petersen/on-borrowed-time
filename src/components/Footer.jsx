@@ -49,16 +49,26 @@ const Footer = ({
       ? 'contrast-text gray'
       : 'contrast-text';
 
+  let borderClasses = {
+    'gray-60': 'border-gray-60',
+    'gray-80': 'border-gray-80'
+  };
+
+  let backgroundClasses = {
+    black: 'bg-black',
+    'gray-30': 'bg-30'
+  };
+
   return (
     <>
       <Row className={`grid__row`}>
         <Col lg={1} />
         <Col lg={11} md={12}>
-          <p className={`border-t border-${theme.border} mt-44`} />
+          <p className={`border-t ${borderClasses[theme.border]} mt-44`} />
         </Col>
       </Row>
       <Row
-        className={`grid__row bg-${theme.background} ${
+        className={`grid__row ${backgroundClasses[theme.background]} ${
           isClicked ? 'cursor-default' : 'cursor-pointer'
         }`}
         onClick={() => handleOnClick()}
