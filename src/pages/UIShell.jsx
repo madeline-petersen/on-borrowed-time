@@ -152,7 +152,7 @@ const UIShell = props => {
         &#8226;
       </span>
       <Link
-        to="/"
+        to="/home" // to do: change to "/" when homepage moves
         className={`absolute text-3xl cursor-pointer z-40 medium-caption page-title ${timelineClasses}`}
       >
         On Borrowed Time
