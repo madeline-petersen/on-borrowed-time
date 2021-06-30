@@ -108,7 +108,6 @@ const UIShell = props => {
       pageComponent = <Home {...props} hash={hash} setHash={setHash} />;
   }
 
-  let isNewYear = props.pageId === 'event' && props.romanSceneNumber === 'I';
   let isYearEnd = props.isLastScene && props.isLastPage;
   let timelineClasses = isMenuActive
     ? 'contrast-text'
