@@ -9,6 +9,7 @@ import { useHistory } from 'react-router-dom';
 const Home = ({ years, hash, setHash }) => {
   let myHistory = useHistory();
   const [year, setYear] = useState(years[0]);
+  const [isClicked, setClicked] = useState(false);
 
   useEffect(() => {
     // get year, index from hash
@@ -21,10 +22,8 @@ const Home = ({ years, hash, setHash }) => {
   }, [hash]);
 
   const onClickYear = year => {
-    setTimeout(function() {
-      // executed after 1 second
-      myHistory.push(`/${year}`);
-    }, 1000);
+    setClicked(true);
+    myHistory.push(`/${year}`);
   };
 
   let transitionBackgroundClasses = {
@@ -65,7 +64,9 @@ const Home = ({ years, hash, setHash }) => {
                     className="contents cursor-pointer"
                     onClick={() => onClickYear(year.id)}
                   >
-                    <Col lg={3}>{year.blurb}</Col>
+                    <Col lg={3} class={isClicked ? 'fade-out' : ''}>
+                      {year.blurb}
+                    </Col>
                   </div>
                   <Col lg={7} />
                 </Row>
