@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 
-const Home = ({ years, hash, setHash }) => {
+const Home = ({ years, hash, setHash, setIsTransitioning }) => {
   let myHistory = useHistory();
   const [year, setYear] = useState(years[0]);
   const [isClicked, setClicked] = useState(false);
@@ -21,8 +21,13 @@ const Home = ({ years, hash, setHash }) => {
     }
   }, [hash]);
 
+  useEffect(() => {
+    setIsTransitioning(false);
+  }, []);
+
   const onClickYear = year => {
     setClicked(true);
+    setIsTransitioning(true);
     myHistory.push(`/${year}`);
   };
 
@@ -107,13 +112,7 @@ Home.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
   hash: PropTypes.string,
   setHash: PropTypes.func,
-  scene: PropTypes.shape(),
-  intro: PropTypes.shape(PropTypes.arrayOf(PropTypes.string)),
-  romanSceneNumber: PropTypes.string,
-  artifacts: PropTypes.shape(),
-  next: PropTypes.shape(),
-  nextParams: PropTypes.shape(),
-  changingParam: PropTypes.string
+  setIsTransitioning: PropTypes.func
 };
 
 export default Home;

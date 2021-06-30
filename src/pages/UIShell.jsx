@@ -48,7 +48,14 @@ const UIShell = props => {
   let pageComponent;
   switch (props.pageId) {
     case 'home':
-      pageComponent = <Home {...props} hash={hash} setHash={setHash} />;
+      pageComponent = (
+        <Home
+          {...props}
+          hash={hash}
+          setHash={setHash}
+          setIsTransitioning={setIsMenuActive}
+        />
+      );
       break;
     case 'intro':
       pageComponent = (
@@ -105,7 +112,14 @@ const UIShell = props => {
       );
       break;
     default:
-      pageComponent = <Home {...props} hash={hash} setHash={setHash} />;
+      pageComponent = (
+        <Home
+          {...props}
+          hash={hash}
+          setHash={setHash}
+          setIsTransitioning={setIsMenuActive}
+        />
+      );
   }
 
   let isYearEnd = props.isLastScene && props.isLastPage;
