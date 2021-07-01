@@ -78,14 +78,14 @@ const Anecdote = ({
 
               {(type === 'Article Excerpt' || type === 'Book Excerpt') && (
                 <>
-                  <Col lg={2} />
-                  <Col lg={1} className="bg-white" />
-                  <Col lg={7} className="bg-white pt-5">
+                  <Col lg={2} md={2} sm={1} />
+                  <Col lg={1} md={2} sm={1} className="bg-white" />
+                  <Col lg={7} md={7} sm={9} className="bg-white pt-5">
                     <div className="small-body mb-1">
                       {shortTitle !== title ? ReactHtmlParser(shortTitle) : ''}
                     </div>
                     <div className="small-body mb-20">{type}</div>
-                    <div className="large-headline-static mb-2">
+                    <div className="large-headline-static mb-6">
                       {ReactHtmlParser(title)}
                     </div>
                     <div className="small-headline mb-20">
@@ -94,11 +94,11 @@ const Anecdote = ({
                       {year && `, ${year}`}
                     </div>
                   </Col>
-                  <Col lg={2} className="bg-white" />
+                  <Col lg={2} md={1} sm={1} className="bg-white" />
 
-                  <Col lg={2} />
-                  <Col lg={2} className="bg-white" />
-                  <Col lg={5} className="bg-white">
+                  <Col lg={2} md={2} sm={1} />
+                  <Col lg={2} md={2} sm={1} className="bg-white" />
+                  <Col lg={5} md={7} sm={9} className="bg-white">
                     <>
                       {preamble && (
                         <div className="small-body">
@@ -117,28 +117,28 @@ const Anecdote = ({
                             </div>
                           );
                         })}
-                      <Link to="" className="small-body">
-                        <div className="h-24" />
-                        <p className="border-t border-gray-40 pb-10" />
-                        {citation}
+                      <Link to="">
+                        <div className="h-12" />
+                        <p className="border-t border-gray-40 pb-5" />
+                        <p className="small-body text-gray-60">{citation}</p>
                       </Link>
                       <div className="bottom-spacer" />
                     </>
                   </Col>
-                  <Col lg={3} className="bg-white" />
+                  <Col lg={3} md={3} sm={1} className="bg-white" />
                 </>
               )}
 
               {type === 'Imagery' && (
                 <>
-                  <Col lg={4} />
-                  <Col lg={1} className="bg-white" />
-                  <Col lg={6} className="bg-white pt-5">
+                  <Col lg={4} md={2} sm={1} />
+                  <Col lg={1} md={2} sm={1} className="bg-white" />
+                  <Col lg={6} md={7} sm={9} className="bg-white pt-5">
                     <div className="small-body mb-1">
                       {shortTitle !== title ? ReactHtmlParser(shortTitle) : ''}
                     </div>
                     <div className="small-body mb-20">{type}</div>
-                    <div className="large-headline-static mb-2">
+                    <div className="large-headline-static mb-6">
                       {ReactHtmlParser(title)}
                     </div>
                     <div className="small-headline mb-20">
@@ -152,11 +152,11 @@ const Anecdote = ({
                       </div>
                     )}
                   </Col>
-                  <Col lg={1} className="bg-white" />
+                  <Col lg={1} md={1} sm={1} className="bg-white" />
 
-                  <Col lg={4} />
-                  <Col lg={1} className="bg-white" />
-                  <Col lg={7} className="bg-white">
+                  <Col lg={4} md={2} sm={1} />
+                  <Col lg={1} md={2} sm={1} className="bg-white" />
+                  <Col lg={7} md={7} sm={9} className="bg-white">
                     {content &&
                       content.map((image, index) => {
                         return (
@@ -168,25 +168,27 @@ const Anecdote = ({
                           </div>
                         );
                       })}
-                    <Link to="" className="small-body">
-                      <div className="h-24" />
-                      {citation}
+                    <Link to="">
+                      <div className="h-12" />
+                      <p className="border-t border-gray-40 pb-5" />
+                      <p className="small-body text-gray-60">{citation}</p>
                     </Link>
                     <div className="bottom-spacer" />
                   </Col>
+                  <Col lg={0} md={1} sm={1} />
                 </>
               )}
 
               {type === 'Poem' && (
                 <>
-                  <Col lg={6} />
-                  <Col lg={1} className="bg-white" />
-                  <Col lg={5} className="bg-white pt-5">
+                  <Col lg={6} md={2} sm={1} />
+                  <Col lg={1} md={2} sm={1} className="bg-white" />
+                  <Col lg={5} md={7} sm={9} className="bg-white pt-5">
                     <div className="small-body mb-1">
                       {shortTitle !== title ? ReactHtmlParser(shortTitle) : ''}
                     </div>
                     <div className="small-body mb-20">{type}</div>
-                    <div className="large-headline-static mb-2">
+                    <div className="large-headline-static mb-6">
                       {ReactHtmlParser(title)}
                     </div>
                     <div className="small-headline mb-20">
@@ -206,12 +208,14 @@ const Anecdote = ({
                           </div>
                         );
                       })}
-                    <Link to="" className="small-body">
-                      <div className="" />
-                      {citation}
+                    <Link to="">
+                      <div className="h-12" />
+                      <p className="border-t border-gray-40 pb-5" />
+                      <p className="small-body text-gray-60">{citation}</p>
                     </Link>
                     <div className="bottom-spacer" />
                   </Col>
+                  <Col lg={0} md={1} sm={1} />
                 </>
               )}
             </Row>
