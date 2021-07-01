@@ -1,3 +1,15 @@
+// breakpoints
+$sm: 375px;
+$sm-minus-1: 374px;
+$md: 756px;
+$md-minus-1: 755px;
+$lg: 1056px;
+$lg-minus-1: 1055px;
+$xl: 1440px;
+$xl-minus-1: 1439px;
+$xxl: 1800px;
+$xxl-minus-1: 1799px;
+
 .anecdote {
   .modal-card {
     position: fixed; /* Stay in place */
@@ -39,10 +51,41 @@
   }
 
   .background-filler {
-    background: linear-gradient(90deg, transparent 50%, white 50%);
     width: 100%;
     top: 78px;
     bottom: 0;
+
+    &.type-excerpt {
+      background: linear-gradient(to right, transparent 20%, white 20%);
+
+      @media screen and (max-width: $md-minus-1) {
+        background: linear-gradient(to right, transparent 12%, white 12%);
+      }
+    }
+
+    &.type-poem {
+      background: linear-gradient(to right, transparent 50%, white 50%);
+
+      @media screen and (max-width: $lg-minus-1) {
+        background: linear-gradient(to right, transparent 20%, white 20%);
+      }
+
+      @media screen and (max-width: $md-minus-1) {
+        background: linear-gradient(to right, transparent 12%, white 12%);
+      }
+    }
+
+    &.type-imagery {
+      background: linear-gradient(to right, transparent 35%, white 35%);
+
+      @media screen and (max-width: $lg-minus-1) {
+        background: linear-gradient(to right, transparent 20%, white 20%);
+      }
+
+      @media screen and (max-width: $md-minus-1) {
+        background: linear-gradient(to right, transparent 12%, white 12%);
+      }
+    }
   }
 
   .bottom-spacer {

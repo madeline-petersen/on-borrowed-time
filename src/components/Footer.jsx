@@ -56,7 +56,7 @@ const Footer = ({
 
   let backgroundClasses = {
     black: 'bg-black',
-    'gray-30': 'bg-30'
+    'gray-30': 'bg-gray-30'
   };
 
   return (
