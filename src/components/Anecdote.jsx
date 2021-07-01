@@ -88,7 +88,7 @@ const Anecdote = ({
                     <div className="large-headline-static mb-6">
                       {ReactHtmlParser(title)}
                     </div>
-                    <div className="small-headline mb-20">
+                    <div className="small-headline mb-20 md:mb-10 sm:mb-10">
                       {author}
                       {publication && `, ${publication}`}
                       {year && `, ${year}`}
@@ -125,7 +125,7 @@ const Anecdote = ({
                       <div className="bottom-spacer" />
                     </>
                   </Col>
-                  <Col lg={3} md={3} sm={1} className="bg-white" />
+                  <Col lg={3} md={1} sm={1} className="bg-white" />
                 </>
               )}
 
@@ -141,7 +141,7 @@ const Anecdote = ({
                     <div className="large-headline-static mb-6">
                       {ReactHtmlParser(title)}
                     </div>
-                    <div className="small-headline mb-20">
+                    <div className="small-headline mb-20 md:mb-10 sm:mb-10">
                       {author}
                       {publication && `, ${publication}`}
                       {year && `, ${year}`}
@@ -191,7 +191,7 @@ const Anecdote = ({
                     <div className="large-headline-static mb-6">
                       {ReactHtmlParser(title)}
                     </div>
-                    <div className="small-headline mb-20">
+                    <div className="small-headline mb-20 md:mb-10 sm:mb-10">
                       {author}
                       {publication && `, ${publication}`}
                       {year && `, ${year}`}

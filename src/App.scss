@@ -120,6 +120,10 @@ a {
   font-style: normal;
   line-height: 1.46;
   letter-spacing: -0.1px;
+
+  @media screen and (max-width: $md-minus-1) {
+    font-size: 14px;
+  }
 }
 
 .small-body {
@@ -128,8 +132,12 @@ a {
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.5s;
+  line-height: 1.5;
   letter-spacing: normal;
+
+  @media screen and (max-width: $md-minus-1) {
+    font-size: 12px;
+  }
 }
 
 .medium-caption {
