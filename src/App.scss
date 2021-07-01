@@ -55,7 +55,7 @@ a {
 
   // sm, xs
   @media screen and (max-width: $md-minus-1) {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 
@@ -208,6 +208,37 @@ a {
   height: $screenMinusHeader;
   overflow-y: scroll;
   overflow-x: hidden;
+  box-sizing: content-box; /* So the width will be 100% + 17px */
+  padding-right: calc(
+    17px + 3rem
+  ); /* Increase/decrease this value for cross-browser compatibility */
+
+  @media screen and (max-width: $xl-minus-1) {
+    padding-right: calc(
+      17px + 58px
+    ); /* Increase/decrease this value for cross-browser compatibility */
+  }
+
+  // md (up to lg-minus-1)
+  @media screen and (max-width: $lg-minus-1) {
+    padding-right: calc(
+      17px + 3rem
+    ); /* Increase/decrease this value for cross-browser compatibility */
+  }
+
+  // sm (up to md-minus-1)
+  @media screen and (max-width: $md-minus-1) {
+    padding-right: calc(
+      17px + 10px
+    ); /* Increase/decrease this value for cross-browser compatibility */
+  }
+
+  // xs (up to sm-minus-1)
+  @media screen and (max-width: $sm-minus-1) {
+    padding-right: calc(
+      17px + 10px
+    ); /* Increase/decrease this value for cross-browser compatibility */
+  }
 }
 
 // Transitions

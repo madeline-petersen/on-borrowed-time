@@ -1,7 +1,7 @@
 @import '../variables/breakpoints';
 
 .left-menu-bullet {
-  top: 7px;
+  top: 6px;
   left: 24px;
 
   @media screen and (max-width: $md) {
@@ -13,8 +13,13 @@
   top: 20px;
   left: 81px;
 
-  @media screen and (max-width: $lg) {
+  @media screen and (max-width: $lg-minus-1) {
     // left margin + padding
     left: calc(3rem + 12px + 11px);
+  }
+
+  @media screen and (max-width: $md-minus-1) {
+    // left margin + padding
+    left: calc(10px + 12px + 12px);
   }
 }

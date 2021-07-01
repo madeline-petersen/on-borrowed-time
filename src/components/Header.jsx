@@ -53,7 +53,7 @@ const Header = ({
       <Container className="grid__container">
         <Row className={`grid__row pt-5`}>
           <Col lg={3} md={4} sm={4} xs={4} />
-          <Col lg={3} md={3} sm={3} xs={3}>
+          <Col lg={9} md={8} sm={8} xs={8}>
             <p
               className={`${pageId !== 'intro' &&
                 'cursor-pointer'} ${textClasses}`}
@@ -61,12 +61,6 @@ const Header = ({
             >
               {label}
             </p>
-          </Col>
-          <Col lg={5} md={4} sm={4} xs={4} />
-          <Col lg={1} md={1} sm={1} xs={1}>
-            {/* <Link to="/index" className={textClasses}>
-              Index
-            </Link> */}
           </Col>
         </Row>
         {pageId === 'event' && (
