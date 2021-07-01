@@ -12,19 +12,19 @@ module.exports = {
         '2019': "url('./images/Homepage_2019.jpg')",
         '2020': "url('./images/Homepage_2020.jpg')",
         '1984-home':
-          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/Homepage_1984.jpg')",
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('./images/Homepage_1984.jpg')",
         '1989-home':
-          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/Homepage_1989.jpg')",
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('./images/Homepage_1989.jpg')",
         '1997-home':
-          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/Homepage_1997.jpg')",
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('./images/Homepage_1997.jpg')",
         '2003-home':
-          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/Homepage_2003.jpg')",
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('./images/Homepage_2003.jpg')",
         '2014-home':
-          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/Homepage_2014.jpg')",
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('./images/Homepage_2014.jpg')",
         '2019-home':
-          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/Homepage_2019.jpg')",
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('./images/Homepage_2019.jpg')",
         '2020-home':
-          "linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('./images/Homepage_2020.jpg')"
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('./images/Homepage_2020.jpg')"
       })
     },
     colors: {

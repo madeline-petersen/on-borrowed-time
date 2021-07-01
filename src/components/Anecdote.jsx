@@ -84,11 +84,11 @@ const Anecdote = ({
                     <div className="small-body mb-1">
                       {shortTitle !== title ? ReactHtmlParser(shortTitle) : ''}
                     </div>
-                    <div className="small-body mb-12">{type}</div>
+                    <div className="small-body mb-20">{type}</div>
                     <div className="large-headline-static mb-2">
                       {ReactHtmlParser(title)}
                     </div>
-                    <div className="small-headline mb-16">
+                    <div className="small-headline mb-20">
                       {author}
                       {publication && `, ${publication}`}
                       {year && `, ${year}`}
@@ -98,7 +98,7 @@ const Anecdote = ({
 
                   <Col lg={2} />
                   <Col lg={2} className="bg-white" />
-                  <Col lg={6} className="bg-white">
+                  <Col lg={5} className="bg-white">
                     <>
                       {preamble && (
                         <div className="small-body">
@@ -119,12 +119,13 @@ const Anecdote = ({
                         })}
                       <Link to="" className="small-body">
                         <div className="h-24" />
+                        <p className="border-t border-gray-40 pb-10" />
                         {citation}
                       </Link>
                       <div className="bottom-spacer" />
                     </>
                   </Col>
-                  <Col lg={2} className="bg-white" />
+                  <Col lg={3} className="bg-white" />
                 </>
               )}
 
@@ -136,11 +137,11 @@ const Anecdote = ({
                     <div className="small-body mb-1">
                       {shortTitle !== title ? ReactHtmlParser(shortTitle) : ''}
                     </div>
-                    <div className="small-body mb-12">{type}</div>
+                    <div className="small-body mb-20">{type}</div>
                     <div className="large-headline-static mb-2">
                       {ReactHtmlParser(title)}
                     </div>
-                    <div className="small-headline mb-16">
+                    <div className="small-headline mb-20">
                       {author}
                       {publication && `, ${publication}`}
                       {year && `, ${year}`}
@@ -184,11 +185,11 @@ const Anecdote = ({
                     <div className="small-body mb-1">
                       {shortTitle !== title ? ReactHtmlParser(shortTitle) : ''}
                     </div>
-                    <div className="small-body mb-12">{type}</div>
+                    <div className="small-body mb-20">{type}</div>
                     <div className="large-headline-static mb-2">
                       {ReactHtmlParser(title)}
                     </div>
-                    <div className="small-headline mb-16">
+                    <div className="small-headline mb-20">
                       {author}
                       {publication && `, ${publication}`}
                       {year && `, ${year}`}
@@ -206,7 +207,7 @@ const Anecdote = ({
                         );
                       })}
                     <Link to="" className="small-body">
-                      <div className="h-24" />
+                      <div className="" />
                       {citation}
                     </Link>
                     <div className="bottom-spacer" />
