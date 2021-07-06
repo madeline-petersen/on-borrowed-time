@@ -91,12 +91,25 @@ const Anecdote = ({
               {(type === 'Article Excerpt' || type === 'Book Excerpt') && (
                 <>
                   <Col lg={2} md={2} sm={1} />
-                  <Col lg={1} md={2} sm={1} className="bg-transparent" />
-                  <Col lg={7} md={7} sm={9} className="bg-transparent pt-5">
-                    <div className="small-body mb-1">
-                      {shortTitle !== title ? ReactHtmlParser(shortTitle) : ''}
+                  <Col lg={1} md={2} sm={1} />
+                  <Col lg={7} md={7} sm={9} className="pt-5">
+                    <div
+                      className="bg-white z-30 pt-5 w-full"
+                      style={{ position: 'fixed', top: '78px' }}
+                    >
+                      <div className="small-body mb-1">
+                        {shortTitle !== title
+                          ? ReactHtmlParser(shortTitle)
+                          : ''}
+                      </div>
+                      <div className="small-body mb-5">{type}</div>
                     </div>
-                    <div className="small-body mb-20">{type}</div>
+                  </Col>
+                  <Col lg={2} md={1} sm={1} />
+
+                  <Col lg={2} md={2} sm={1} />
+                  <Col lg={1} md={2} sm={1} />
+                  <Col lg={7} md={7} sm={9} className="anecdote-content">
                     <div className="large-headline-static mb-6">
                       {ReactHtmlParser(title)}
                     </div>
@@ -106,11 +119,11 @@ const Anecdote = ({
                       {year && `, ${year}`}
                     </div>
                   </Col>
-                  <Col lg={2} md={1} sm={1} className="bg-transparent" />
+                  <Col lg={2} md={1} sm={1} />
 
                   <Col lg={2} md={2} sm={1} />
-                  <Col lg={2} md={2} sm={1} className="bg-transparent" />
-                  <Col lg={5} md={7} sm={9} className="bg-transparent">
+                  <Col lg={2} md={2} sm={1} />
+                  <Col lg={5} md={7} sm={9}>
                     <>
                       {preamble && (
                         <div className="small-body">
@@ -137,19 +150,32 @@ const Anecdote = ({
                       <div className="bottom-spacer" />
                     </>
                   </Col>
-                  <Col lg={3} md={1} sm={1} className="bg-transparent" />
+                  <Col lg={3} md={1} sm={1} />
                 </>
               )}
 
               {type === 'Imagery' && (
                 <>
                   <Col lg={4} md={2} sm={1} />
-                  <Col lg={1} md={2} sm={1} className="bg-transparent" />
-                  <Col lg={6} md={7} sm={9} className="bg-transparent pt-5">
-                    <div className="small-body mb-1">
-                      {shortTitle !== title ? ReactHtmlParser(shortTitle) : ''}
+                  <Col lg={1} md={2} sm={1} />
+                  <Col lg={6} md={7} sm={9} className="pt-5">
+                    <div
+                      className="bg-white z-30 pt-5 w-full"
+                      style={{ position: 'fixed', top: '78px' }}
+                    >
+                      <div className="small-body mb-1">
+                        {shortTitle !== title
+                          ? ReactHtmlParser(shortTitle)
+                          : ''}
+                      </div>
+                      <div className="small-body mb-5">{type}</div>
                     </div>
-                    <div className="small-body mb-20">{type}</div>
+                  </Col>
+                  <Col lg={1} md={1} sm={1} />
+
+                  <Col lg={4} md={2} sm={1} />
+                  <Col lg={1} md={2} sm={1} />
+                  <Col lg={6} md={7} sm={9} className="anecdote-content">
                     <div className="large-headline-static mb-6">
                       {ReactHtmlParser(title)}
                     </div>
@@ -164,11 +190,11 @@ const Anecdote = ({
                       </div>
                     )}
                   </Col>
-                  <Col lg={1} md={1} sm={1} className="bg-transparent" />
+                  <Col lg={1} md={1} sm={1} />
 
                   <Col lg={4} md={2} sm={1} />
-                  <Col lg={1} md={2} sm={1} className="bg-transparent" />
-                  <Col lg={7} md={7} sm={9} className="bg-transparent">
+                  <Col lg={1} md={2} sm={1} />
+                  <Col lg={7} md={7} sm={9}>
                     {content &&
                       content.map((image, index) => {
                         return (
@@ -194,12 +220,25 @@ const Anecdote = ({
               {type === 'Poem' && (
                 <>
                   <Col lg={6} md={2} sm={1} />
-                  <Col lg={1} md={2} sm={1} className="bg-transparent" />
-                  <Col lg={5} md={7} sm={9} className="bg-transparent pt-5">
-                    <div className="small-body mb-1">
-                      {shortTitle !== title ? ReactHtmlParser(shortTitle) : ''}
+                  <Col lg={1} md={2} sm={1} />
+                  <Col lg={5} md={7} sm={9}>
+                    <div
+                      className="bg-white z-30 pt-5 w-full"
+                      style={{ position: 'fixed', top: '78px' }}
+                    >
+                      <div className="small-body mb-1">
+                        {shortTitle !== title
+                          ? ReactHtmlParser(shortTitle)
+                          : ''}
+                      </div>
+                      <div className="small-body mb-5">{type}</div>
                     </div>
-                    <div className="small-body mb-20">{type}</div>
+                  </Col>
+                  <Col lg={0} md={1} sm={1} />
+
+                  <Col lg={6} md={2} sm={1} />
+                  <Col lg={1} md={2} sm={1} />
+                  <Col lg={5} md={7} sm={9} className="anecdote-content">
                     <div className="large-headline-static mb-6">
                       {ReactHtmlParser(title)}
                     </div>

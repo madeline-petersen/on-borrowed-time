@@ -25,6 +25,10 @@ $xxl-minus-1: 1799px;
     -webkit-transform: translateX(100%);
     transition: transform 1s;
     -webkit-transition: transform 1s;
+
+    .anecdote-content {
+      padding-top: 90px;
+    }
   }
 
   .modal-overlay {
