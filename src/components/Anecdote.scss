@@ -55,37 +55,41 @@ $xxl-minus-1: 1799px;
     top: 78px;
     bottom: 0;
 
-    &.type-excerpt {
-      background: linear-gradient(to right, transparent 20%, white 20%);
+    // &.type-excerpt {
+    //   background: linear-gradient(
+    //     to right,
+    //     transparent calc((2 / 12) * (115%)),
+    //     white calc((2 / 12) * (115%))
+    //   );
 
-      @media screen and (max-width: $md-minus-1) {
-        background: linear-gradient(to right, transparent 12%, white 12%);
-      }
-    }
+    //   @media screen and (max-width: $md-minus-1) {
+    //     background: linear-gradient(to right, transparent 12%, white 12%);
+    //   }
+    // }
 
-    &.type-poem {
-      background: linear-gradient(to right, transparent 50%, white 50%);
+    // &.type-poem {
+    //   background: linear-gradient(to right, transparent 50%, white 50%);
 
-      @media screen and (max-width: $lg-minus-1) {
-        background: linear-gradient(to right, transparent 20%, white 20%);
-      }
+    //   @media screen and (max-width: $lg-minus-1) {
+    //     background: linear-gradient(to right, transparent 20%, white 20%);
+    //   }
 
-      @media screen and (max-width: $md-minus-1) {
-        background: linear-gradient(to right, transparent 12%, white 12%);
-      }
-    }
+    //   @media screen and (max-width: $md-minus-1) {
+    //     background: linear-gradient(to right, transparent 12%, white 12%);
+    //   }
+    // }
 
-    &.type-imagery {
-      background: linear-gradient(to right, transparent 35%, white 35%);
+    // &.type-imagery {
+    //   background: linear-gradient(to right, transparent 35%, white 35%);
 
-      @media screen and (max-width: $lg-minus-1) {
-        background: linear-gradient(to right, transparent 20%, white 20%);
-      }
+    //   @media screen and (max-width: $lg-minus-1) {
+    //     background: linear-gradient(to right, transparent 20%, white 20%);
+    //   }
 
-      @media screen and (max-width: $md-minus-1) {
-        background: linear-gradient(to right, transparent 12%, white 12%);
-      }
-    }
+    //   @media screen and (max-width: $md-minus-1) {
+    //     background: linear-gradient(to right, transparent 12%, white 12%);
+    //   }
+    // }
   }
 
   .bottom-spacer {

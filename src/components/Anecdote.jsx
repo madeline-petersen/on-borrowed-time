@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import { useScreenClass } from 'react-grid-system';
 
 // import candles from '../images/candles.png';
 // import car from '../images/car.png';
@@ -35,6 +36,24 @@ const Anecdote = ({
 }) => {
   const modal = document.getElementById('modal-card');
   const overlay = document.getElementById('modal-overlay');
+  const screenClass = useScreenClass();
+  const vw = Math.max(
+    document.documentElement.clientWidth || 0,
+    window.innerWidth || 0
+  );
+  const marginWidth = ['xl', 'xxl'].includes(screenClass)
+    ? 60 // 60px for xl, xxl
+    : ['lg'].includes(screenClass)
+    ? 70 // 70px for large
+    : ['md'].includes(screenClass)
+    ? 60 // 60px for medium
+    : 22; // 22px for small, x-small
+  const innerWidth = vw - marginWidth * 2;
+  const columnWidth = innerWidth / 12;
+  console.log('inner width ', innerWidth);
+  console.log('column width ', columnWidth);
+  const backgroundFillerWidth = marginWidth - 1 + columnWidth * 2;
+  console.log(backgroundFillerWidth);
 
   if (isActive) {
     modal.style.transform = 'translateX(0%)';
@@ -73,6 +92,9 @@ const Anecdote = ({
               ? 'type-imagery'
               : ''
           }`}
+          style={{
+            background: `linear-gradient( to right, transparent ${backgroundFillerWidth}px, white ${backgroundFillerWidth}px)`
+          }}
         >
           <Container className="grid__container">
             <Row
