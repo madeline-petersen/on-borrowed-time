@@ -48,11 +48,24 @@ const Anecdote = ({
     : ['md'].includes(screenClass)
     ? 60 // 60px for medium
     : 22; // 22px for small, x-small
+  let numColumns = 10;
+  numColumns =
+    type === 'Article Excerpt' || type === 'Book Excerpt'
+      ? 10
+      : type === 'Poem'
+      ? 6
+      : type === 'Imagery'
+      ? 8
+      : 10;
+  numColumns = ['lg', 'xl', 'xxl'].includes(screenClass)
+    ? numColumns
+    : ['md'].includes(screenClass)
+    ? 10
+    : 11;
   const innerWidth = vw - marginWidth * 2;
   const columnWidth = innerWidth / 12;
-  console.log('inner width ', innerWidth);
-  console.log('column width ', columnWidth);
-  const backgroundFillerWidth = marginWidth - 1 + columnWidth * 2;
+  const backgroundFillerWidth =
+    marginWidth - 1 + columnWidth * (12 - numColumns);
   console.log(backgroundFillerWidth);
 
   if (isActive) {
