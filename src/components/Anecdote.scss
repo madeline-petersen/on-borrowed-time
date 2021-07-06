@@ -55,11 +55,23 @@ $xxl-minus-1: 1799px;
     top: 78px;
     bottom: 0;
 
+    // default (margin 70px)
+    // 10 columns
     background: linear-gradient(
       to right,
       transparent calc(70px - 1px + (100vw - 140px) / 12 * 2),
       white calc(70px - 1px + (100vw - 140px) / 12 * 2)
     );
+
+    // xl, xxl (margin 60px)
+    // 10 columns
+    @media screen and (min-width: $xl) {
+      background: linear-gradient(
+        to right,
+        transparent calc(60px - 1px + (100vw - 120px) / 12 * 2),
+        white calc(60px - 1px + (100vw - 120px) / 12 * 2)
+      );
+    }
 
     // medium (margin 60px)
     // 10 columns
@@ -71,7 +83,7 @@ $xxl-minus-1: 1799px;
       );
     }
 
-    // small, xs
+    // small, xs (margin 22px)
     // 11 columns
     @media screen and (max-width: $md-minus-1) {
       background: linear-gradient(
@@ -82,7 +94,7 @@ $xxl-minus-1: 1799px;
     }
 
     &.type-poem {
-      // lg, xl, xxl
+      // lg
       // 6 columns
       @media screen and (min-width: $lg) {
         background: linear-gradient(
@@ -91,16 +103,36 @@ $xxl-minus-1: 1799px;
           white calc(70px - 1px + (100vw - 140px) / 12 * 6)
         );
       }
+
+      // xl, xxl
+      // 6 columns
+      @media screen and (min-width: $xl) {
+        background: linear-gradient(
+          to right,
+          transparent calc(60px - 1px + (100vw - 120px) / 12 * 6),
+          white calc(60px - 1px + (100vw - 120px) / 12 * 6)
+        );
+      }
     }
 
     &.type-imagery {
-      // lg, xl, xxl
+      // lg
       // 8 columns
       @media screen and (min-width: $lg) {
         background: linear-gradient(
           to right,
           transparent calc(70px - 1px + (100vw - 140px) / 12 * 4),
           white calc(70px - 1px + (100vw - 140px) / 12 * 4)
+        );
+      }
+
+      // xl, xxl
+      // 8 columns
+      @media screen and (min-width: $xl) {
+        background: linear-gradient(
+          to right,
+          transparent calc(60px - 1px + (100vw - 120px) / 12 * 4),
+          white calc(60px - 1px + (100vw - 120px) / 12 * 4)
         );
       }
     }
