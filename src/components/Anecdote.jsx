@@ -37,36 +37,6 @@ const Anecdote = ({
   const modal = document.getElementById('modal-card');
   const overlay = document.getElementById('modal-overlay');
   const screenClass = useScreenClass();
-  const vw = Math.max(
-    document.documentElement.clientWidth || 0,
-    window.innerWidth || 0
-  );
-  const marginWidth = ['xl', 'xxl'].includes(screenClass)
-    ? 60 // 60px for xl, xxl
-    : ['lg'].includes(screenClass)
-    ? 70 // 70px for large
-    : ['md'].includes(screenClass)
-    ? 60 // 60px for medium
-    : 22; // 22px for small, x-small
-  let numColumns = 10;
-  numColumns =
-    type === 'Article Excerpt' || type === 'Book Excerpt'
-      ? 10
-      : type === 'Poem'
-      ? 6
-      : type === 'Imagery'
-      ? 8
-      : 10;
-  numColumns = ['lg', 'xl', 'xxl'].includes(screenClass)
-    ? numColumns
-    : ['md'].includes(screenClass)
-    ? 10
-    : 11;
-  const innerWidth = vw - marginWidth * 2;
-  const columnWidth = innerWidth / 12;
-  const backgroundFillerWidth =
-    marginWidth - 1 + columnWidth * (12 - numColumns);
-  console.log(backgroundFillerWidth);
 
   if (isActive) {
     modal.style.transform = 'translateX(0%)';
@@ -105,9 +75,6 @@ const Anecdote = ({
               ? 'type-imagery'
               : ''
           }`}
-          style={{
-            background: `linear-gradient( to right, transparent ${backgroundFillerWidth}px, white ${backgroundFillerWidth}px)`
-          }}
         >
           <Container className="grid__container">
             <Row

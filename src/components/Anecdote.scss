@@ -55,41 +55,55 @@ $xxl-minus-1: 1799px;
     top: 78px;
     bottom: 0;
 
-    // &.type-excerpt {
-    //   background: linear-gradient(
-    //     to right,
-    //     transparent calc((2 / 12) * (115%)),
-    //     white calc((2 / 12) * (115%))
-    //   );
+    background: linear-gradient(
+      to right,
+      transparent calc(70px - 1px + (100vw - 140px) / 12 * 2),
+      white calc(70px - 1px + (100vw - 140px) / 12 * 2)
+    );
 
-    //   @media screen and (max-width: $md-minus-1) {
-    //     background: linear-gradient(to right, transparent 12%, white 12%);
-    //   }
-    // }
+    // medium (margin 60px)
+    // 10 columns
+    @media screen and (max-width: $lg-minus-1) {
+      background: linear-gradient(
+        to right,
+        transparent calc(60px - 1px + (100vw - 120px) / 12 * 2),
+        white calc(60px - 1px + (100vw - 120px) / 12 * 2)
+      );
+    }
 
-    // &.type-poem {
-    //   background: linear-gradient(to right, transparent 50%, white 50%);
+    // small, xs
+    // 11 columns
+    @media screen and (max-width: $md-minus-1) {
+      background: linear-gradient(
+        to right,
+        transparent calc(22px - 1px + (100vw - 44px) / 12),
+        white calc(22px - 1px + (100vw - 44px) / 12)
+      );
+    }
 
-    //   @media screen and (max-width: $lg-minus-1) {
-    //     background: linear-gradient(to right, transparent 20%, white 20%);
-    //   }
+    &.type-poem {
+      // lg, xl, xxl
+      // 6 columns
+      @media screen and (min-width: $lg) {
+        background: linear-gradient(
+          to right,
+          transparent calc(70px - 1px + (100vw - 140px) / 12 * 6),
+          white calc(70px - 1px + (100vw - 140px) / 12 * 6)
+        );
+      }
+    }
 
-    //   @media screen and (max-width: $md-minus-1) {
-    //     background: linear-gradient(to right, transparent 12%, white 12%);
-    //   }
-    // }
-
-    // &.type-imagery {
-    //   background: linear-gradient(to right, transparent 35%, white 35%);
-
-    //   @media screen and (max-width: $lg-minus-1) {
-    //     background: linear-gradient(to right, transparent 20%, white 20%);
-    //   }
-
-    //   @media screen and (max-width: $md-minus-1) {
-    //     background: linear-gradient(to right, transparent 12%, white 12%);
-    //   }
-    // }
+    &.type-imagery {
+      // lg, xl, xxl
+      // 8 columns
+      @media screen and (min-width: $lg) {
+        background: linear-gradient(
+          to right,
+          transparent calc(70px - 1px + (100vw - 140px) / 12 * 4),
+          white calc(70px - 1px + (100vw - 140px) / 12 * 4)
+        );
+      }
+    }
   }
 
   .bottom-spacer {
