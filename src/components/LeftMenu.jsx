@@ -85,7 +85,7 @@ const LeftMenu = ({
                 md={8}
                 sm={12}
                 xs={12}
-                className="bg-black h-screen overflow-y-auto overflow-x-hidden"
+                className="h-screen overflow-y-auto overflow-x-hidden"
               >
                 {selectedYear !== null && (
                   <span

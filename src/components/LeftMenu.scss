@@ -1,3 +1,15 @@
+// breakpoints
+$sm: 375px;
+$sm-minus-1: 374px;
+$md: 756px;
+$md-minus-1: 755px;
+$lg: 1056px;
+$lg-minus-1: 1055px;
+$xl: 1440px;
+$xl-minus-1: 1439px;
+$xxl: 1800px;
+$xxl-minus-1: 1799px;
+
 .left-menu {
   .menu-card {
     position: fixed; /* Stay in place */
@@ -35,22 +47,53 @@
   }
 
   .background-filler {
-    background: linear-gradient(
-      to left,
-      transparent,
-      transparent 50%,
-      transparent 75%,
-      black 75%
-    );
     width: 100%;
     top: 0;
     bottom: 0;
     left: 0;
+
+    // default (margin 70px)
+    // 10 columns
+    background: linear-gradient(
+      to right,
+      black calc(70px - 1px + (100vw - 140px) / 12 * 4),
+      transparent calc(70px - 1px + (100vw - 140px) / 12 * 4)
+    );
+
+    // xl, xxl (margin 60px)
+    // 10 columns
+    @media screen and (min-width: $xl) {
+      background: linear-gradient(
+        to right,
+        black calc(60px - 1px + (100vw - 120px) / 12 * 4),
+        transparent calc(60px - 1px + (100vw - 120px) / 12 * 4)
+      );
+    }
+
+    // medium (margin 60px)
+    // 10 columns
+    @media screen and (max-width: $lg-minus-1) {
+      background: linear-gradient(
+        to right,
+        black calc(60px - 1px + (100vw - 120px) / 12 * 7),
+        transparent calc(60px - 1px + (100vw - 120px) / 12 * 7)
+      );
+    }
+
+    // small, xs (margin 22px)
+    // 11 columns
+    @media screen and (max-width: $md-minus-1) {
+      background: linear-gradient(
+        to right,
+        black calc(22px - 1px + (100vw - 44px) / 12 * 11),
+        transparent calc(22px - 1px + (100vw - 44px) / 12 * 11)
+      );
+    }
   }
 
   /* The Close Button */
   .close {
-    color: white;
+    color: black;
 
     svg {
       width: 20px;
