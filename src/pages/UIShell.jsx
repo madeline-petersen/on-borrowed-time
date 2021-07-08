@@ -3,6 +3,7 @@ import './UIShell.scss';
 import React, { useState } from 'react';
 
 import Artifacts from './Artifacts.jsx';
+import { Close20 } from '@carbon/icons-react';
 import Event from './Event.jsx';
 import Header from '../components/Header';
 import Home from './Home.jsx';
@@ -159,10 +160,20 @@ const UIShell = props => {
         setIsTransitioning={setIsTransitioning}
       />
       <span
-        className={`absolute text-3xl cursor-pointer z-40 left-menu-bullet ${timelineClasses}`}
+        className={`absolute text-3xl cursor-pointer z-40 left-menu-bullet ${
+          isMenuActive ? 'fade-out' : 'fade-in'
+        } ${timelineClasses}`}
         onClick={toggleLeftMenu}
       >
         &#8226;
+      </span>
+      <span
+        className={`absolute text-3xl cursor-pointer z-40 left-menu-close ${
+          isMenuActive ? 'fade-in' : 'fade-out'
+        } ${timelineClasses}`}
+        onClick={toggleLeftMenu}
+      >
+        <Close20 />
       </span>
       <Link
         to="/home" // to do: change to "/" when homepage moves

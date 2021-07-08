@@ -256,6 +256,12 @@ a {
   -webkit-transition: opacity 0.5s;
 }
 
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s 1s;
+  -webkit-transition: opacity 0.5s 1s;
+}
+
 .screen-shrink {
   height: 0vh;
   transition: height 1s 1s;

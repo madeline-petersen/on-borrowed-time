@@ -9,6 +9,15 @@
   }
 }
 
+.left-menu-close {
+  top: 16px;
+  left: 20px;
+
+  @media screen and (max-width: $md) {
+    left: 9px;
+  }
+}
+
 .page-title {
   top: 20px;
   left: 81px;
