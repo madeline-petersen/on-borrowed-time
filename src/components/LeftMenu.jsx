@@ -77,7 +77,7 @@ const LeftMenu = ({
     <div className="left-menu">
       <div id="menu-overlay" className="menu-overlay z-20" />
       <div id="menu-card" className="menu-card z-30">
-        <div className="absolute background-filler">
+        <div className="absolute menu-background-filler">
           <Container className="grid__container">
             <Row className="grid__row">
               <Col

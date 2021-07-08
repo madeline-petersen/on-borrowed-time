@@ -1,6 +1,6 @@
 import './Anecdote.scss';
 
-import { Col, Container, Row } from 'react-grid-system';
+import { Col, Container, Row, Visible } from 'react-grid-system';
 
 import { Close20 } from '@carbon/icons-react';
 import { Link } from 'react-router-dom';
@@ -66,7 +66,7 @@ const Anecdote = ({
       <div id="modal-overlay" className="modal-overlay z-20" />
       <div id="modal-card" className="modal-card z-30">
         <div
-          className={`absolute background-filler right-0 ${
+          className={`absolute anecdote-background-filler right-0 ${
             type === 'Article Excerpt' || type === 'Book Excerpt'
               ? 'type-excerpt'
               : type === 'Poem'
@@ -90,9 +90,9 @@ const Anecdote = ({
 
               {(type === 'Article Excerpt' || type === 'Book Excerpt') && (
                 <>
-                  <Col lg={2} md={2} sm={1} />
-                  <Col lg={1} md={2} sm={1} />
-                  <Col lg={7} md={7} sm={9} className="pt-5">
+                  <Col lg={2} md={2} sm={1} xs={1} />
+                  <Col lg={1} md={2} sm={1} xs={1} />
+                  <Col lg={7} md={7} sm={9} xs={9} className="pt-5">
                     <div
                       className="bg-white z-30 pt-5 w-full"
                       style={{ position: 'fixed', top: '78px' }}
@@ -105,11 +105,11 @@ const Anecdote = ({
                       <div className="small-body mb-5">{type}</div>
                     </div>
                   </Col>
-                  <Col lg={2} md={1} sm={1} />
+                  <Col lg={2} md={1} sm={1} xs={1} />
 
-                  <Col lg={2} md={2} sm={1} />
-                  <Col lg={1} md={2} sm={1} />
-                  <Col lg={7} md={7} sm={9} className="anecdote-content">
+                  <Col lg={2} md={2} sm={1} xs={1} />
+                  <Col lg={1} md={2} sm={1} xs={1} />
+                  <Col lg={7} md={7} sm={9} xs={9} className="anecdote-content">
                     <div className="large-headline-static mb-6">
                       {ReactHtmlParser(title)}
                     </div>
@@ -119,11 +119,11 @@ const Anecdote = ({
                       {year && `, ${year}`}
                     </div>
                   </Col>
-                  <Col lg={2} md={1} sm={1} />
+                  <Col lg={2} md={1} sm={1} xs={1} />
 
-                  <Col lg={2} md={2} sm={1} />
-                  <Col lg={2} md={2} sm={1} />
-                  <Col lg={5} md={7} sm={9}>
+                  <Col lg={2} md={2} sm={1} xs={1} />
+                  <Col lg={2} md={2} sm={1} xs={1} />
+                  <Col lg={5} md={7} sm={9} xs={9}>
                     <>
                       {preamble && (
                         <div className="small-body">
@@ -150,15 +150,15 @@ const Anecdote = ({
                       <div className="bottom-spacer" />
                     </>
                   </Col>
-                  <Col lg={3} md={1} sm={1} />
+                  <Col lg={3} md={1} sm={1} xs={1} />
                 </>
               )}
 
               {type === 'Imagery' && (
                 <>
-                  <Col lg={4} md={2} sm={1} />
-                  <Col lg={1} md={2} sm={1} />
-                  <Col lg={6} md={7} sm={9} className="pt-5">
+                  <Col lg={4} md={2} sm={1} xs={1} />
+                  <Col lg={1} md={2} sm={1} xs={1} />
+                  <Col lg={6} md={7} sm={9} xs={9} className="pt-5">
                     <div
                       className="bg-white z-30 pt-5 w-full"
                       style={{ position: 'fixed', top: '78px' }}
@@ -171,11 +171,11 @@ const Anecdote = ({
                       <div className="small-body mb-5">{type}</div>
                     </div>
                   </Col>
-                  <Col lg={1} md={1} sm={1} />
+                  <Col lg={1} md={1} sm={1} xs={1} />
 
-                  <Col lg={4} md={2} sm={1} />
-                  <Col lg={1} md={2} sm={1} />
-                  <Col lg={6} md={7} sm={9} className="anecdote-content">
+                  <Col lg={4} md={2} sm={1} xs={1} />
+                  <Col lg={1} md={2} sm={1} xs={1} />
+                  <Col lg={6} md={7} sm={9} xs={9} className="anecdote-content">
                     <div className="large-headline-static mb-6">
                       {ReactHtmlParser(title)}
                     </div>
@@ -190,11 +190,11 @@ const Anecdote = ({
                       </div>
                     )}
                   </Col>
-                  <Col lg={1} md={1} sm={1} />
+                  <Col lg={1} md={1} sm={1} xs={1} />
 
-                  <Col lg={4} md={2} sm={1} />
-                  <Col lg={1} md={2} sm={1} />
-                  <Col lg={7} md={7} sm={9}>
+                  <Col lg={4} md={2} sm={1} xs={1} />
+                  <Col lg={1} md={2} sm={1} xs={1} />
+                  <Col lg={7} md={7} sm={9} xs={9}>
                     {content &&
                       content.map((image, index) => {
                         return (
@@ -213,15 +213,15 @@ const Anecdote = ({
                     </Link>
                     <div className="bottom-spacer" />
                   </Col>
-                  <Col lg={0} md={1} sm={1} />
+                  <Col lg={0} md={1} sm={1} xs={1} />
                 </>
               )}
 
               {type === 'Poem' && (
                 <>
-                  <Col lg={6} md={2} sm={1} />
-                  <Col lg={1} md={2} sm={1} />
-                  <Col lg={5} md={7} sm={9}>
+                  <Col lg={6} md={2} sm={1} xs={1} />
+                  <Col lg={1} md={2} sm={1} xs={1} />
+                  <Col lg={5} md={7} sm={9} xs={9}>
                     <div
                       className="bg-white z-30 pt-5 w-full"
                       style={{ position: 'fixed', top: '78px' }}
@@ -234,11 +234,13 @@ const Anecdote = ({
                       <div className="small-body mb-5">{type}</div>
                     </div>
                   </Col>
-                  <Col lg={0} md={1} sm={1} />
+                  <Visible md sm xs>
+                    <Col md={1} sm={1} xs={1} />
+                  </Visible>
 
-                  <Col lg={6} md={2} sm={1} />
-                  <Col lg={1} md={2} sm={1} />
-                  <Col lg={5} md={7} sm={9} className="anecdote-content">
+                  <Col lg={6} md={2} sm={1} xs={1} />
+                  <Col lg={1} md={2} sm={1} xs={1} />
+                  <Col lg={5} md={7} sm={9} xs={9} className="anecdote-content">
                     <div className="large-headline-static mb-6">
                       {ReactHtmlParser(title)}
                     </div>
@@ -266,7 +268,7 @@ const Anecdote = ({
                     </Link>
                     <div className="bottom-spacer" />
                   </Col>
-                  <Col lg={0} md={1} sm={1} />
+                  <Col lg={0} md={1} sm={1} xs={1} />
                 </>
               )}
             </Row>
