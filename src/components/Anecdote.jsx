@@ -85,7 +85,7 @@ const Anecdote = ({
 
               {(type === 'Article Excerpt' || type === 'Book Excerpt') && (
                 <>
-                  <Col lg={2} md={2} sm={1} xs={1} />
+                  <Col lg={2} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={7} md={7} sm={9} xs={9} className="pt-5">
                     <div className="bg-white z-30 pt-5 anecdote-fixed-header">
@@ -99,7 +99,7 @@ const Anecdote = ({
                   </Col>
                   <Col lg={2} md={1} sm={1} xs={1} />
 
-                  <Col lg={2} md={2} sm={1} xs={1} />
+                  <Col lg={2} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={7} md={7} sm={9} xs={9} className="anecdote-content">
                     <div className="large-headline-static mb-6">
@@ -113,7 +113,7 @@ const Anecdote = ({
                   </Col>
                   <Col lg={2} md={1} sm={1} xs={1} />
 
-                  <Col lg={2} md={2} sm={1} xs={1} />
+                  <Col lg={2} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={2} md={2} sm={1} xs={1} />
                   <Col lg={5} md={7} sm={9} xs={9}>
                     <>
@@ -148,7 +148,7 @@ const Anecdote = ({
 
               {type === 'Imagery' && (
                 <>
-                  <Col lg={4} md={2} sm={1} xs={1} />
+                  <Col lg={4} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={6} md={7} sm={9} xs={9} className="pt-5">
                     <div className="bg-white z-30 pt-5 anecdote-fixed-header">
@@ -162,7 +162,7 @@ const Anecdote = ({
                   </Col>
                   <Col lg={1} md={1} sm={1} xs={1} />
 
-                  <Col lg={4} md={2} sm={1} xs={1} />
+                  <Col lg={4} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={6} md={7} sm={9} xs={9} className="anecdote-content">
                     <div className="large-headline-static mb-6">
@@ -181,7 +181,7 @@ const Anecdote = ({
                   </Col>
                   <Col lg={1} md={1} sm={1} xs={1} />
 
-                  <Col lg={4} md={2} sm={1} xs={1} />
+                  <Col lg={4} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={7} md={7} sm={9} xs={9}>
                     {content &&
@@ -208,7 +208,7 @@ const Anecdote = ({
 
               {type === 'Poem' && (
                 <>
-                  <Col lg={6} md={2} sm={1} xs={1} />
+                  <Col lg={6} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={5} md={7} sm={9} xs={9}>
                     <div className="bg-white z-30 pt-5 anecdote-fixed-header">
@@ -224,7 +224,7 @@ const Anecdote = ({
                     <Col md={1} sm={1} xs={1} />
                   </Visible>
 
-                  <Col lg={6} md={2} sm={1} xs={1} />
+                  <Col lg={6} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={5} md={7} sm={9} xs={9} className="anecdote-content">
                     <div className="large-headline-static mb-6">
