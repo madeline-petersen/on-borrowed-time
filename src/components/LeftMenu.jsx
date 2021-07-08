@@ -1,10 +1,9 @@
 import './LeftMenu.scss';
 
-import { Col, Container, Row } from 'react-grid-system';
+import { Col, Container, Row, Visible } from 'react-grid-system';
 import React, { useState } from 'react';
 
 import { ArrowLeft16 } from '@carbon/icons-react';
-import { Close20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import { roman } from '@sguest/roman-js';
 
@@ -48,12 +47,6 @@ const LeftMenu = ({
     }, 1000);
   };
 
-  window.onclick = function(event) {
-    if (event.target === menu) {
-      closeModal();
-    }
-  };
-
   const closeModal = () => {
     // offscreen left
     if (menu) {
@@ -81,6 +74,8 @@ const LeftMenu = ({
           <Container className="grid__container">
             <Row className="grid__row">
               <Col
+                xxl={4}
+                xl={4}
                 lg={4}
                 md={8}
                 sm={12}
@@ -179,6 +174,9 @@ const LeftMenu = ({
                   </Row>
                 </span>
               </Col>
+              <Visible xxl xl lg md>
+                <Col xxl={8} xl={8} lg={8} md={4} onClick={closeModal} />
+              </Visible>
             </Row>
           </Container>
         </div>
