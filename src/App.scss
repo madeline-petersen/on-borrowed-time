@@ -122,13 +122,13 @@ a {
   letter-spacing: -0.1px;
 
   @media screen and (max-width: $md-minus-1) {
-    font-size: 14px;
+    font-size: 11px;
   }
 }
 
 .small-body {
   font-family: Graphik-Regular;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -136,13 +136,13 @@ a {
   letter-spacing: normal;
 
   @media screen and (max-width: $md-minus-1) {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
 .medium-caption {
   font-family: Graphik-Regular;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -216,35 +216,35 @@ a {
   height: $screenMinusHeader;
   overflow-y: scroll;
   overflow-x: hidden;
-  box-sizing: content-box; /* So the width will be 100% + 17px */
+  box-sizing: content-box; /* So the width will be 100% + 11px */
   padding-right: calc(
-    17px + 3rem
+    11px + 3rem
   ); /* Increase/decrease this value for cross-browser compatibility */
 
   @media screen and (max-width: $xl-minus-1) {
     padding-right: calc(
-      17px + 58px
+      11px + 58px
     ); /* Increase/decrease this value for cross-browser compatibility */
   }
 
   // md (up to lg-minus-1)
   @media screen and (max-width: $lg-minus-1) {
     padding-right: calc(
-      17px + 3rem
+      11px + 3rem
     ); /* Increase/decrease this value for cross-browser compatibility */
   }
 
   // sm (up to md-minus-1)
   @media screen and (max-width: $md-minus-1) {
     padding-right: calc(
-      17px + 10px
+      11px + 10px
     ); /* Increase/decrease this value for cross-browser compatibility */
   }
 
   // xs (up to sm-minus-1)
   @media screen and (max-width: $sm-minus-1) {
     padding-right: calc(
-      17px + 10px
+      11px + 10px
     ); /* Increase/decrease this value for cross-browser compatibility */
   }
 }
