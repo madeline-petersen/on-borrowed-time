@@ -217,35 +217,25 @@ a {
   overflow-y: scroll;
   overflow-x: hidden;
   box-sizing: content-box; /* So the width will be 100% + 11px */
-  padding-right: calc(
-    11px + 3rem
-  ); /* Increase/decrease this value for cross-browser compatibility */
+  padding-right: calc(11px + 3rem);
 
   @media screen and (max-width: $xl-minus-1) {
-    padding-right: calc(
-      11px + 58px
-    ); /* Increase/decrease this value for cross-browser compatibility */
+    padding-right: calc(11px + 58px);
   }
 
   // md (up to lg-minus-1)
   @media screen and (max-width: $lg-minus-1) {
-    padding-right: calc(
-      11px + 3rem
-    ); /* Increase/decrease this value for cross-browser compatibility */
+    padding-right: calc(11px + 3rem);
   }
 
   // sm (up to md-minus-1)
   @media screen and (max-width: $md-minus-1) {
-    padding-right: calc(
-      11px + 10px
-    ); /* Increase/decrease this value for cross-browser compatibility */
+    padding-right: calc(11px + 10px);
   }
 
   // xs (up to sm-minus-1)
   @media screen and (max-width: $sm-minus-1) {
-    padding-right: calc(
-      11px + 10px
-    ); /* Increase/decrease this value for cross-browser compatibility */
+    padding-right: calc(11px + 10px);
   }
 }
 

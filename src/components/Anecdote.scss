@@ -51,7 +51,36 @@ $xxl-minus-1: 1799px;
   }
 
   .modal-height {
+    width: 100%;
     height: calc(100vh - 78px);
+    overflow-y: scroll;
+    box-sizing: content-box; /* So the width will be 100% + 13px */
+    padding-right: calc(13px + 3rem);
+
+    @media screen and (max-width: $xl-minus-1) {
+      padding-right: calc(13px + 58px);
+    }
+
+    // md (up to lg-minus-1)
+    @media screen and (max-width: $lg-minus-1) {
+      padding-right: calc(13px + 3rem);
+    }
+
+    // sm (up to md-minus-1)
+    @media screen and (max-width: $md-minus-1) {
+      padding-right: calc(13px + 10px);
+    }
+
+    // xs (up to sm-minus-1)
+    @media screen and (max-width: $sm-minus-1) {
+      padding-right: calc(13px + 10px);
+    }
+  }
+
+  .anecdote-fixed-header {
+    position: fixed;
+    top: 78px;
+    width: inherit;
   }
 
   .anecdote-background-filler {

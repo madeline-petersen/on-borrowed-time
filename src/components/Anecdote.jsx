@@ -77,10 +77,7 @@ const Anecdote = ({
           }`}
         >
           <Container className="grid__container">
-            <Row
-              className="grid__row modal-height"
-              style={{ overflow: 'scroll' }}
-            >
+            <Row className="grid__row modal-height">
               <span
                 className="close absolute top-5 right-6 z-40"
                 onClick={onClickSpan}
@@ -93,10 +90,7 @@ const Anecdote = ({
                   <Col lg={2} md={2} sm={1} xs={1} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={7} md={7} sm={9} xs={9} className="pt-5">
-                    <div
-                      className="bg-white z-30 pt-5 w-full"
-                      style={{ position: 'fixed', top: '78px' }}
-                    >
+                    <div className="bg-white z-30 pt-5 anecdote-fixed-header">
                       <div className="small-body mb-1">
                         {shortTitle !== title
                           ? ReactHtmlParser(shortTitle)
@@ -159,10 +153,7 @@ const Anecdote = ({
                   <Col lg={4} md={2} sm={1} xs={1} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={6} md={7} sm={9} xs={9} className="pt-5">
-                    <div
-                      className="bg-white z-30 pt-5 w-full"
-                      style={{ position: 'fixed', top: '78px' }}
-                    >
+                    <div className="bg-white z-30 pt-5 anecdote-fixed-header">
                       <div className="small-body mb-1">
                         {shortTitle !== title
                           ? ReactHtmlParser(shortTitle)
@@ -222,10 +213,7 @@ const Anecdote = ({
                   <Col lg={6} md={2} sm={1} xs={1} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={5} md={7} sm={9} xs={9}>
-                    <div
-                      className="bg-white z-30 pt-5 w-full"
-                      style={{ position: 'fixed', top: '78px' }}
-                    >
+                    <div className="bg-white z-30 pt-5 anecdote-fixed-header">
                       <div className="small-body mb-1">
                         {shortTitle !== title
                           ? ReactHtmlParser(shortTitle)
