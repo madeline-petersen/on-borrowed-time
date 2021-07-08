@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
-import { useScreenClass } from 'react-grid-system';
 
 // import candles from '../images/candles.png';
 // import car from '../images/car.png';
@@ -36,7 +35,6 @@ const Anecdote = ({
 }) => {
   const modal = document.getElementById('modal-card');
   const overlay = document.getElementById('modal-overlay');
-  const screenClass = useScreenClass();
 
   if (isActive) {
     modal.style.transform = 'translateX(0%)';
