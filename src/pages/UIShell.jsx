@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Reflection from './Reflection.jsx';
 import Timeline from '../components/Timeline';
+import { Visible } from 'react-grid-system';
 import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
@@ -177,9 +178,17 @@ const UIShell = props => {
       </span>
       <Link
         to="/home" // to do: change to "/" when homepage moves
-        className={`absolute text-3xl cursor-pointer z-40 medium-caption page-title ${timelineClasses}`}
+        className={`absolute cursor-pointer z-40 medium-caption page-title ${timelineClasses}`}
       >
-        On Borrowed Time
+        On{' '}
+        <Visible sm xs>
+          <br />
+        </Visible>
+        Borrowed{' '}
+        <Visible sm xs>
+          <br />
+        </Visible>
+        Time
       </Link>
       <Timeline
         timelineClasses={timelineClasses}
