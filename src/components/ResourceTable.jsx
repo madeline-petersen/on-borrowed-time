@@ -50,11 +50,11 @@ const ResourceTable = ({ data }) => {
               </>
             )}
 
-            <div
+            <Col lg={3} md={2} />
+            <span
               onClick={() => openModal(entry)}
               className="contents cursor-pointer"
             >
-              <Col lg={3} md={2} />
               <Col lg={4} md={4} sm={4} xs={12} className="small-body">
                 <p className={`text-black`}>
                   {ReactHtmlParser(entry.shortTitle)}
@@ -78,8 +78,7 @@ const ResourceTable = ({ data }) => {
                 <p className="text-gray-70">{entry.type}</p>
                 <p className="text-gray-70">{entry.year}</p>
               </Col>
-            </div>
-
+            </span>
             <Col lg={3} md={2} />
             <Col lg={9} md={10} className="pb-8" />
           </Row>
