@@ -34,10 +34,7 @@ const Timeline = props => {
   };
 
   useEffect(() => {
-    if (
-      props.isTransitioning &&
-      (props.pageId === 'intro' || props.pageId === 'reflection')
-    ) {
+    if (props.isTransitioning) {
       setSceneIndex(null); // fade out circle immediately
 
       if (props.isYearEnd) {
