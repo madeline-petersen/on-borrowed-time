@@ -64,7 +64,11 @@ const Footer = ({
       <Row className={`grid__row`}>
         <Col lg={1} />
         <Col lg={11} md={12}>
-          <p className={`border-t ${borderClasses[theme.border]} mt-44`} />
+          <p
+            className={`border-t ${
+              borderClasses[theme.border]
+            } mt-44 fade-in-element`}
+          />
         </Col>
       </Row>
       <Row
@@ -75,10 +79,12 @@ const Footer = ({
       >
         <Col lg={1} className="cursor-default" />
         <Col lg={2} md={3} sm={3} xs={3}>
-          <p className={`small-body pb-4 pt-4 ${textClasses}`}>Up Next</p>
+          <p className={`small-body pb-4 pt-4 ${textClasses} fade-in-element`}>
+            Up Next
+          </p>
         </Col>
         <Col lg={2} md={2} sm={2} xs={2}>
-          <p className={`small-body pb-4 pt-4 ${textClasses}`}>
+          <p className={`small-body pb-4 pt-4 ${textClasses} fade-in-element`}>
             {/* current scene, next scene, next year */}
             {changingParam === 'year'
               ? nextParams.year
@@ -92,11 +98,11 @@ const Footer = ({
           xs={7}
           style={{ display: 'flex', justifyContent: 'space-between' }}
         >
-          <p className={`small-body pb-4 pt-4 ${textClasses}`}>
+          <p className={`small-body pb-4 pt-4 ${textClasses} fade-in-element`}>
             {/* next page, next scene, next year */}
             {next.title}
           </p>
-          <p className={`pb-4 pt-4 ${textClasses}`}>
+          <p className={`pb-4 pt-4 ${textClasses} fade-in-element`}>
             <ArrowDown16 />
           </p>
         </Col>

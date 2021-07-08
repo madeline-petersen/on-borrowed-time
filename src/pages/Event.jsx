@@ -77,7 +77,7 @@ const Event = ({
                       <Col lg={1} md={2} />
                       <Col lg={11} md={10} sm={12} xs={12}>
                         <p
-                          className={`large-headline-dynamic text-black`}
+                          className={`large-headline-dynamic text-black fade-in-element`}
                           style={{
                             textIndent: ['lg', 'xl', 'xxl'].includes(
                               screenClass

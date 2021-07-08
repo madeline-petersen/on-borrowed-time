@@ -82,7 +82,7 @@ $quarterHeight: calc(30vh - #{$a});
   }
 }
 
-.delayed-fade-in p {
+.delayed-fade-in .fade-in-element {
   opacity: 0;
   animation-name: delayed-fade-in;
   animation-duration: 1s;
