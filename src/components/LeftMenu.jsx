@@ -95,12 +95,6 @@ const LeftMenu = ({
                     <ArrowLeft16 />
                   </span>
                 )}
-                <span
-                  className="close absolute top-5 right-6 z-40"
-                  onClick={onClickSpan}
-                >
-                  <Close20 />
-                </span>
                 <div
                   className={`left-menu__list flex flex-col h-full justify-end ${
                     selectedYear !== null ? 'transform' : ''

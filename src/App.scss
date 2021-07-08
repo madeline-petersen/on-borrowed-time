@@ -258,8 +258,8 @@ a {
 
 .fade-in {
   opacity: 1;
-  transition: opacity 0.5s 1s;
-  -webkit-transition: opacity 0.5s 1s;
+  transition: opacity 0.5s 0.5s;
+  -webkit-transition: opacity 0.5s 0.5s;
 }
 
 .screen-shrink {
