@@ -744,7 +744,51 @@
       "scenes": [
         {
           "title": "Implementing Article 23",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": [
+                "After the Tiananmen Massacre, Beijing drastically shifted its policy by taking a tougher stance on how Hong Kong would be governed after 1997. China’s tighter grip on Hong Kong made citizens fear that the mantra, “Today’s Tiananmen, Tomorrow Hong Kong” would become a reality.",
+                "At the same time, in the months following the Communist repression of the pro-democracy movement in China, Britain reaffirmed its decision not to give Hong Kong’s 3.25 million Chinese who hold British passports the right to live in Britain after the handover in 1997."
+              ],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                "With Britain rescinding its support and China tightening its grip, Hong Kong was trapped in an shifting diasporic reality between two dominant cultures, “neither of which takes the welfare of Hong Kong people into account even though both would turn to Hong Kong for financial and other forms of assistance when they needed it”.",
+                "Now, more than four months later, Hong Kongers feel trapped between a looming Chinese motherland they cannot change and a departing imperial motherland - Britain - that is betraying them by pulling back the welcome mat from all but a select few (Scott, NYT, 1989).",
+                "In Hong Kong that Sunday, mournful defiance reigned, and by day's end, hundreds of thousands of people had poured into the streets in protest. It wasn't long, however, before protest gave way to panic and, for many, a frantic search for a way out (Rule, 1989, NYT)"
+              ]
+            }
+          ]
         },
         {
           "title": "A Confluence of Factors",
