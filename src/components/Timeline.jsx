@@ -134,7 +134,7 @@ const Timeline = props => {
 };
 
 Timeline.defaultProps = {
-  currentYear: { id: '', title: '' }
+  currentYear: { id: '', title: '', scenes: [] }
 };
 
 Timeline.propTypes = {

@@ -209,7 +209,7 @@ const UIShell = props => {
 };
 
 UIShell.defaultProps = {
-  year: { id: '', title: '' }
+  year: { id: '', title: '', scenes: [] }
 };
 
 UIShell.propTypes = {
