@@ -71,19 +71,22 @@ const Reflection = ({
             className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
           >
             <Row className="grid__row pt-64 pb-40">
-              {reflection.paragraphs.map((paragraph, index) => {
-                if (index === 0) {
+              {reflection.paragraphs[0] &&
+                reflection.paragraphs[0].map((paragraph, index) => {
                   return (
                     <span key={`paragraph-${index}`} className="contents">
                       <Col lg={1} />
                       <Col lg={11} md={12}>
-                        <p className={`medium-headline text-white pb-16`}>
+                        <p className={`medium-headline text-white`}>
                           {ReactHtmlParser(paragraph)}
                         </p>
+                        <br />
                       </Col>
                     </span>
                   );
-                } else {
+                })}
+              {reflection.paragraphs[1] &&
+                reflection.paragraphs[1].map((paragraph, index) => {
                   return (
                     <span key={`paragraph-${index}`} className="contents">
                       <Col lg={3} />
@@ -97,8 +100,7 @@ const Reflection = ({
                       <Col lg={3} />
                     </span>
                   );
-                }
-              })}
+                })}
             </Row>
 
             {next && (
