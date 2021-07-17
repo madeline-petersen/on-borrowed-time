@@ -35,6 +35,20 @@ const Anecdote = ({
 }) => {
   const modal = document.getElementById('modal-card');
   const overlay = document.getElementById('modal-overlay');
+  const anecdoteBackground = document.getElementById(
+    'anecdote-background-filler'
+  );
+
+  window.addEventListener('click', function(event) {
+    // left gutter
+    if (event.target === anecdoteBackground) {
+      closeModal();
+    }
+    // above the modal
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
 
   if (isActive) {
     modal.style.transform = 'translateX(0%)';
@@ -44,12 +58,6 @@ const Anecdote = ({
 
   const onClickSpan = () => {
     closeModal();
-  };
-
-  window.onclick = function(event) {
-    if (event.target === modal) {
-      closeModal();
-    }
   };
 
   const closeModal = () => {
@@ -64,6 +72,7 @@ const Anecdote = ({
       <div id="modal-overlay" className="modal-overlay z-20" />
       <div id="modal-card" className="modal-card z-30">
         <div
+          id="anecdote-background-filler"
           className={`absolute anecdote-background-filler right-0 ${
             type === 'Article Excerpt' || type === 'Book Excerpt'
               ? 'type-excerpt'
