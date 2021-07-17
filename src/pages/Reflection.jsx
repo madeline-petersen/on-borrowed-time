@@ -71,7 +71,7 @@ const Reflection = ({
             className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
           >
             <Row className="grid__row pt-64 pb-40">
-              {reflection.paragraphs[0] &&
+            {reflection.paragraphs[0] &&
                 reflection.paragraphs[0].map((paragraph, index) => {
                   return (
                     <span key={`paragraph-${index}`} className="contents">
@@ -84,7 +84,7 @@ const Reflection = ({
                       </Col>
                     </span>
                   );
-                })}
+                })}*/
               {reflection.paragraphs[1] &&
                 reflection.paragraphs[1].map((paragraph, index) => {
                   return (
