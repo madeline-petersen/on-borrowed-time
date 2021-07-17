@@ -17,7 +17,14 @@ const LeftMenu = ({
 }) => {
   const [selectedYear, setSelectedYear] = useState(null);
   const menu = document.getElementById('menu-card');
+  const menuBackground = document.getElementById('menu-background-filler');
   const overlay = document.getElementById('menu-overlay');
+
+  window.addEventListener('click', function(event) {
+    if (event.target === menuBackground) {
+      closeModal();
+    }
+  });
 
   const onClickScene = (year, sceneIndex) => {
     setNextBackground('gray-30');
@@ -38,13 +45,6 @@ const LeftMenu = ({
       navigateTo(year);
       setSelectedYear(null);
     }, 500);
-  };
-
-  const onClickSpan = () => {
-    closeModal();
-    setTimeout(function() {
-      setSelectedYear(null);
-    }, 1000);
   };
 
   const closeModal = () => {
@@ -70,7 +70,10 @@ const LeftMenu = ({
     <div className="left-menu">
       <div id="menu-overlay" className="menu-overlay z-20" />
       <div id="menu-card" className="menu-card z-30">
-        <div className="absolute menu-background-filler">
+        <div
+          id="menu-background-filler"
+          className="absolute menu-background-filler"
+        >
           <Container className="grid__container">
             <Row className="grid__row">
               <Col
