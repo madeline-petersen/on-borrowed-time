@@ -55,7 +55,7 @@ const UIShell = props => {
           {...props}
           hash={hash}
           setHash={setHash}
-          setIsTransitioning={setIsMenuActive}
+          setIsTransitioning={setIsTransitioning}
         />
       );
       break;
