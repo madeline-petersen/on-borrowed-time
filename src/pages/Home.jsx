@@ -64,16 +64,21 @@ const Home = ({ years, hash, setHash, setIsTransitioning }) => {
             <div className="medium-caption text-white z-10 absolute w-full blurb">
               <Container className="grid__container">
                 <Row className="grid__row">
-                  <Col lg={2} />
+                  <Col lg={2} md={2} xs={2} />
                   <div
                     className="contents cursor-pointer"
                     onClick={() => onClickYear(year.id)}
                   >
-                    <Col lg={3} class={isClicked ? 'fade-out' : ''}>
+                    <Col
+                      lg={3}
+                      md={5}
+                      xs={10}
+                      class={isClicked ? 'fade-out' : ''}
+                    >
                       {year.blurb}
                     </Col>
                   </div>
-                  <Col lg={7} />
+                  <Col lg={7} md={5} />
                 </Row>
               </Container>
             </div>
