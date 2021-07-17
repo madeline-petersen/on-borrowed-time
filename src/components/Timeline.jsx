@@ -10,6 +10,10 @@ const Timeline = props => {
   const [currentSceneIndex, setSceneIndex] = useState(props.sceneIndex);
 
   const onClickYear = year => {
+    if (year === props.currentYear.id && props.pageId === 'intro') {
+      return;
+    }
+
     props.setNextBackground(year);
     props.setIsTransitioning(true);
     setSceneIndex(null); // disappear circle
