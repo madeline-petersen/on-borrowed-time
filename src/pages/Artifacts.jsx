@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
+import ReactHtmlParser from 'react-html-parser';
 import candles from '../images/candles.png';
 import car from '../images/car.png';
 import crowd from '../images/crowd.png';
@@ -84,7 +85,7 @@ const Artifacts = ({
                 <Col lg={3} />
                 <Col lg={4} md={4}>
                   <p className={`small-body text-white mt-8`}>
-                    {artifacts.images[0].caption}
+                    {ReactHtmlParser(artifacts.images[0].caption)}
                   </p>
                 </Col>
               </Row>
@@ -98,7 +99,7 @@ const Artifacts = ({
                 <Col lg={3} />
                 <Col lg={4} md={4}>
                   <p className={`small-body text-white mt-5`}>
-                    {artifacts.images[1].caption}
+                    {ReactHtmlParser(artifacts.images[1].caption)}
                   </p>
                 </Col>
               </Row>
