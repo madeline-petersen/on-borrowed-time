@@ -7,45 +7,32 @@ $quarterHeight: calc(30vh - #{$a});
   0% {
     opacity: 0;
   }
-  25% {
-    opacity: 1;
-  }
+  25%,
   50% {
     opacity: 1;
   }
-  75% {
-    opacity: 0;
-  }
+  75%,
   100% {
     opacity: 0;
   }
 }
 
-@keyframes title-animation {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* The element to apply animations to */
 .scene-animation {
   opacity: 0;
   animation-name: scene-animation;
   animation-duration: 2s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
+}
+
+@keyframes title-animation {
+  0%,
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .title-animation {
