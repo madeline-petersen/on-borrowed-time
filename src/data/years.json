@@ -784,9 +784,9 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                "Pro-Beijing advocates suggested that other countries operating under democratic systems had similar sedition bills implemented. However, opponents felt that the bill was unprincipled, particularly because Hong Kong did not have other democratic qualities such as &ldquo;regular elections, a powerful free press, or vibrant civil society&rdquo; (Sansani, 2003) to counteract any arbitrary application of Article 23. Implementing the sedition law without these democratic qualities could lead to draconian consequences, since the ambiguous language of the bill could be legally misinterpreted to suppress pro-democratic activities.",
-                "&ldquo;Opponents to the implementation of a broad Article 23 argue that the aforementioned countries balance comparable legislation with democratic attributes including, inter alia, regular elections, a vibrant civil society, and a powerful, free press, each of which Hong Kong lacks. In theory, therefore, any arbitrary application of anti- sedition or subversion laws in those countries would be subject to plausible counter-pressures by one or all of the available democratic elements.&rdquo;",
-                "&ldquo;Opponents criticize the glaring ambiguities in the Consultation Document and argue that in the context of treason, secession, sedition, subversion, theft of state secrets, and increased police powers, the smallest errors in legal drafting or in the legal definitions provided by the new laws can easily have draconian consequences.&rdquo;"
+                ["Pro-Beijing advocates suggested that other countries operating under democratic systems had similar sedition bills implemented. However, opponents felt that the bill was unprincipled, particularly because Hong Kong did not have other democratic qualities such as &ldquo;regular elections, a powerful free press, or vibrant civil society&rdquo; (Sansani, 2003) to counteract any arbitrary application of Article 23. Implementing the sedition law without these democratic qualities could lead to draconian consequences, since the ambiguous language of the bill could be legally misinterpreted to suppress pro-democratic activities."],
+                ["&ldquo;Opponents to the implementation of a broad Article 23 argue that the aforementioned countries balance comparable legislation with democratic attributes including, inter alia, regular elections, a vibrant civil society, and a powerful, free press, each of which Hong Kong lacks. In theory, therefore, any arbitrary application of anti- sedition or subversion laws in those countries would be subject to plausible counter-pressures by one or all of the available democratic elements.&rdquo;",
+                "&ldquo;Opponents criticize the glaring ambiguities in the Consultation Document and argue that in the context of treason, secession, sedition, subversion, theft of state secrets, and increased police powers, the smallest errors in legal drafting or in the legal definitions provided by the new laws can easily have draconian consequences.&rdquo;"]
               ]
             }
           ]
@@ -797,7 +797,7 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["", ""],
+              "paragraphs": ["Appointed as Secretary for Security under Chief Executive Tung Chee-hwa&rsquo;s administration, Regina Ip became a controversial political figure for her fervent support for Article 23. Widely criticised for her aggressive approach to codifying the bill, Ip was deeply unpopular and perceived as pushing Beijing&rsquo;s agenda in the Hong Kong legislature.", "In addition to the widespread concern on the proposed bill was a growing dissatisfaction with the administration&rsquo;s response to the financial crisis and the SARS pandemic. Underlying this rising frustration felt by the Hong Kong people was an economic malaise that remained unresolved."],
               "resources": [
                 {
                   "title": "",
@@ -824,24 +824,193 @@
                   "year": ""
                 }
               ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["Frustrations directed towards a growing pandemic, diminishing economy, and inept government reached a boiling point with the proposed implementation of Article 23. The convergence of these events forced Hong Kong people to re-evaluate their relationship with Beijing for the first time since the handover, inevitably leading to the largest demonstration in the region to-date."],
+                ["&ldquo;A confluence of factors contributed to the eruption of political discontent this summer in Hong Kong, long described as generally apolitical. Conventional wisdom has attributed the public’s disaffection to economic malaise. The economic crisis that hit the region in 1997-98 certainly affected the livelihoods and mood of Hong Kong’s population.&rdquo;"]
+              ]
             }
           ]
         },
         {
           "title": "A Historic Demonstration",
-          "pages": []
+          "pages": [
+
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["The re-emergence of Article 23 in the proposed National Security Bill was highly criticised and ignited a massive demonstration. On July 1, 2003, over 500,000 people poured onto the streets of Hong Kong to protest the government&rsquo;s attempt to implement the ambiguously defined security law.", "This historical protest was the largest to be conducted in Hong Kong since the Tiananmen Square Massacre, and the most visible demonstration of Hong Kong people exercising their right to protest since the 1997 handover."],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["The overwhelming criticism directed towards the implementation of Article 23 was a sign of the Hong Kong people keeping Beijing accountable to the idea of &ldquo;one country, two systems&rdquo;, and the promise that their rights and freedoms would remain unchanged for fifty years. As a result, the historic nature of the protests was a symbolic reminder that Hong Kong people could not be characterised as apolitical, and would not tolerate the erosion of their democratic values."],
+                ["&ldquo;The events triggered by July 1 have &ldquo;mainstreamed&rdquo; what was formerly seen to be an activist agenda. At the same time that Hong Kong is experiencing a renewed interest in democratic governance, China is exploring its own political development. The full impact of Hong Kong&rsquo;s &ldquo;summer of discontent&rdquo; continues to unfold. One thing, though, is certain: Hong Kong&rsquo;s residents can no longer be characterised as &ldquo;apolitical&rdquo;.&rdquo;"]
+              ]
+            }
+          ]
         },
         {
           "title": "Abrupt Resignations",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["In the wake of the mass demonstrations, several principal Hong Kong officials announced their resignation. On July 16, 2003, Regina Ip formally stated her decision to step down, citing personal reasons for her departure.", "The abrupt resignation of several key officials further amplified the administration&rsquo;s inadequacy, and its continued struggle to manage the political state of Hong Kong. Without enough votes to move the bill forward, Tung was forced to defer the legislation."],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["The resignation of two key officials was a moral victory for the historic demonstration and a signal to Beijing that Hong Kong&rsquo;s collective identity was still grounded in democratic values and a vibrant civil society. As the protests gained momentum, Beijing closely monitored the political situation, and began revisiting a familiar question — whether to suppress or concede to an emerging democratic movement."],
+                ["&ldquo;Despite the crisis of confidence that the Hong Kong government faced, the central government remained relatively quiet after the protests. In the immediate aftermath of the July protest, and even after the Hong Kong government was forced to formally withdraw its Article 23 proposals in early September, the central government continued to assess the situation and largely kept its own counsel, largely refraining from public comment on the situation in Hong Kong.&rdquo;"]
+              ]
+            }
+          ]
         },
         {
           "title": "An Attempt at Political Harmony",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["On September 5, 2003, the Hong Kong administration announced the indefinite withdrawal of the Article 23 legislation. The administration attempted to keep a low-profile by making concessions with the Hong Kong people through economic support.","Despite the economic assistance from Beijing, the record voter turnout for the District Council elections in November, 2003, proved that people remained dissatisfied with the Tung administration and repeated their demands for democratisation."],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["The indefinite withdrawal of Article 23 was a victory for the pro-democracy movement, and proved that political protests, inspired by mass activism, could have a major influence on legislation.","Beijing&rsquo;s attempt to establish political harmony by providing economic assistance—instead of safeguarding the rights of Hong Kong—showed how heavily the Pro-Beijing conservative Party had underestimated what Hong Kong people genuinely desired. The overwhelming response to the district elections was a rebuke of Beijing&rsquo;s emerging influence, and further cemented the region&rsquo;s democratic identity."],
+                ["&ldquo;The record voter turnout rate was the most important feature of the 2003 District Council elections (see Tables 3 and 4). After the July 1 massive protest rally, Hong Kong people came out to vote in the local elections to express their dissatisfaction with the government and to repeat their demands for democratization. While the pro-Beijing united front had tried to explain the participation in the protest rally as an expression of concern over current economic difficulties, noting that people had various types of grievances, the record voter turnout rate was a clear indication that people remained dissatisfied with the Tung administration, even though Beijing strongly backed Tung and had provided economic assistance for Hong Kong.&rdquo;"]
+              ]
+            }
+          ]
         },
         {
           "title": "The “Ultimate Aim”",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["The National Security Bill&rsquo;s successful withdrawal led political activists to return to the ongoing debate regarding Hong Kong&rsquo;s pace of democratisation. With newfound political momentum, pro-democracy advocates shifted their focus away from Article 23 and revisited the &ldquo;ultimate aim&rdquo; of embracing universal suffrage as defined in Basic Law&rsquo;s Article 45 and 68.","Achieving universal suffrage would primarily depend on Beijing adhering to its promised pace of democratisation for two upcoming political milestones—the 2004 Legislative Council election and the 2007 Chief Executive election."],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["After the historic demonstrations in 2003,  the most debated political dilemma was whether Hong Kong would be able to elect their Chief Executive in 2007 through universal suffrage. This particular political milestone marked the 10 year anniversary of the handover and represented the earliest date that Basic Law promised universal suffrage could be achieved in Hong Kong.","Despite being considered as constitutional reform by certain observers, a pathway to universal suffrage is actually built into Basic Law, and therefore, is a right that Hong Kong citizens are entitled to. In order to keep Beijing accountable to this promise, Hong Kong would need to ensure that the pace of democratization would remain unobstructed as it enters into the 2007 Chief Executive Election."],
+                ["&ldquo;Whether Hong Kong will go ahead and embrace fully democratic elections is the first and perhaps the most important question on the HKSAR’s political agenda. Although this is certainly within the ambit of what Hong Kong political leaders and observers mean when they refer to “constitutional reform”, the election of the Chief Executive and Legislative Council through universal suffrage is fully consistent with the Basic Law as it currently exists and, therefore, is not, strictly speaking, a question of constitutional reform.&rdquo;"]
+              ]
+            }
+          ]
         }
       ]
     },
