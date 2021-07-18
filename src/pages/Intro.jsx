@@ -72,15 +72,16 @@ const Intro = ({
           className={`hero-image ${yearBackgroundClasses[year.id]} ${
             !isTransitioning ? 'hero-image-scale' : ''
           }`}
-        />
-        <div className="small-headline text-white absolute w-full scene-name">
-          <Container className="grid__container">
-            <Row className="grid__row">
-              <Col lg={2} />
-              <Col lg={6}>{year.title}</Col>
-              <Col lg={4}>{year.id}</Col>
-            </Row>
-          </Container>
+        >
+          <div className="small-headline text-white absolute w-full scene-name">
+            <Container className="grid__container">
+              <Row className="grid__row">
+                <Col lg={2} />
+                <Col lg={6}>{year.title}</Col>
+                <Col lg={4}>{year.id}</Col>
+              </Row>
+            </Container>
+          </div>
         </div>
         <Container className="grid__container min-h-screen">
           <Row className="grid__row pt-64 pb-40">
