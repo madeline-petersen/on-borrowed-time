@@ -1006,7 +1006,7 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["After the historic demonstrations in 2003,  the most debated political dilemma was whether Hong Kong would be able to elect their Chief Executive in 2007 through universal suffrage. This particular political milestone marked the 10 year anniversary of the handover and represented the earliest date that Basic Law promised universal suffrage could be achieved in Hong Kong.","Despite being considered as constitutional reform by certain observers, a pathway to universal suffrage is actually built into Basic Law, and therefore, is a right that Hong Kong citizens are entitled to. In order to keep Beijing accountable to this promise, Hong Kong would need to ensure that the pace of democratization would remain unobstructed as it enters into the 2007 Chief Executive Election."],
+                ["After the historic demonstrations in 2003, the most debated political dilemma was whether Hong Kong would be able to elect their Chief Executive in 2007 through universal suffrage. This particular political milestone marked the 10 year anniversary of the handover and represented the earliest date that Basic Law promised universal suffrage could be achieved in Hong Kong.","Despite being considered as constitutional reform by certain observers, a pathway to universal suffrage is actually built into Basic Law, and therefore, is a right that Hong Kong citizens are entitled to. In order to keep Beijing accountable to this promise, Hong Kong would need to ensure that the pace of democratization would remain unobstructed as it enters into the 2007 Chief Executive Election."],
                 ["&ldquo;Whether Hong Kong will go ahead and embrace fully democratic elections is the first and perhaps the most important question on the HKSAR’s political agenda. Although this is certainly within the ambit of what Hong Kong political leaders and observers mean when they refer to “constitutional reform”, the election of the Chief Executive and Legislative Council through universal suffrage is fully consistent with the Basic Law as it currently exists and, therefore, is not, strictly speaking, a question of constitutional reform.&rdquo;"]
               ]
             }
@@ -1021,31 +1021,311 @@
       "scenes": [
         {
           "title": "Occupy Central Love and Peace",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["In 2007, the Standing Committee of the National People’s Congress (NPCSC) suggested a timetable to implement steps towards universal suffrage beginning with the nomination process for Chief Executive candidates in 2017.","In anticipation, professors Benny Tai, Chan Kin-man, and reverend Chu Yiu-ming organised a movement called Occupy Central Love and Peace—the goal was to achieve &ldquo;genuine universal suffrage&rdquo; by mobilising people to participate in a civil referendum and, if necessary, through civil disobedience."],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["If the demands of Occupy Central were not met, the plan was to resort to civil disobedience by staging a peaceful sit-in at the heart of Hong Kong's financial district. Initially, the idea of Occupy Central was praised by pro-democracy advocates for its ingenuity, spirit, and novelty. But over time, criticism began to emerge. Moderates feared that a peaceful occupation was an impractical course of action, while student protestors desired a more radical response to the government."],
+                ["&ldquo;According to its final plan, protesters would stage a peaceful sit-in on a major road in Central, Hong Kong’s financial heart, for two to three days until their orderly removal and arrest by the police – hence the name “Occupy Central with Love and Peace”[...] to mark the rational and non-violent nature of civil disobedience. Tai’s proposal was at first welcomed by democracy supporters for its spirit and novelty, only to gain lukewarm support after it was criticised for being too radical and impractical on the one hand, and too docile, self-limiting, and distant from the youth on the other.&ldquo;"]
+              ]
+            }
+          ]
         },
         {
           "title": "The White Paper",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["As promised, Hong Kong opened a consultation period to discuss the possibility of implementing a new Chief Executive electoral process for 2017. In response, pro-democracy lawmakers provided different electoral recommendations to the Hong Kong government, in an attempt to formally implement a form of  &ldquo;genuine universal suffrage.&rdquo;", "At the same time, Beijing released a White Paper laying out their re-interpretation of the &ldquo;one country, two systems&rdquo; model, specifically identifying that the Hong Kong courts will not be the &ldquo;guardians of the rule of law&rdquo;. Rather, the NPCSC will have the final say on how the &ldquo;one country, two systems&rdquo; model will be exercised in the region."],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["The release of the White Paper was intentionally timed to coincide with the ongoing universal suffrage debate in 2017. Beijing made it clear that the NPC Standing Committee had full authority to not only interpret the definition of universal suffrage, but also define when “one country” takes precedence over “two systems”. The sharp change of tone signaled Beijing’s tighter grip on the semi-autonomous region,  making the path towards achieving a greater degree of democracy more difficult."],
+                ["&ldquo;In a sharp change of tone, Hong Kong people were now being told in the White Paper that all authority for the Hong Kong model comes from Beijing. Some Hong Kong people were said to have “confused and lopsided” views. The White Paper appears to nearly dismiss the continued importance of the Sino-British Joint Declaration, claiming Beijing as the sole authority for the “one country, two systems” policy. As the sole source of this policy, Beijing was said to have the authority to interpret or amend the Basic Law as it chooses.&ldquo;"]
+              ]
+            }
+          ]
         },
         {
           "title": "A Civil Referendum",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["From June 20 to 29, an unofficial pro-democracy referendum organised by Occupy Central Love and Peace (OCLP) opened in Hong Kong attracting an overwhelming turnout. The referendum offered voters three reform proposals for selecting candidates for the Chief Executive election in 2017, all of which included an element of civic nomination that Beijing was opposed to. Nearly 800,000 people turned out for the unofficial referendum, and voted for their preferred election process for filling the Chief Executive&rsquo;s office."],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["The civic referendum by the OCLP generated a mixture of responses and indicated that Hong Kong people had varying perceptions of what electoral reform should look like. Despite the varying opinions, voters overwhelmingly agreed that “genuine” universal suffrage meant that anyone should be able to run as a candidate, and that political screening from Beijing at the nomination stage would contradict the purpose of having an open election."],
+                ["The result indicates that although Hong Kong people may have diverse views on the electoral reform proposals, they have a clear bottom line – other than one person, one vote, universal suffrage should allow people from different backgrounds to enter into the election thus providing truly meaningful choices for the voters. Those who claim that even a non-genuine universal suffrage should be “accepted temporarily” have been defeated by the poll results."]
+              ]
+            }
+          ]
         },
         {
           "title": "Seeking Genuine Suffrage",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["On August 31, The NPC Standing Committee announced a decision that would allow all Hong Kong permanent residents to vote in the upcoming Chief Executive election. However, the election committee—composed primarily of Beijing loyalists—would pre-select the candidates as a part of the nomination process.","At the same time, the NPC Standing Committee suggested drastically increasing the nomination endorsement threshold from 12.5% to 50%, making it nearly impossible for any opposition democrats to be considered a candidate. This conservative decision would provide the Beijing government even more control over Hong Kong's leadership and democratic affairs."],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["By imposing tighter restrictions on the nomination process, Beijing’s interpretation of democracy diminishes the role of “universal suffrage” in order to “safeguard” civic opinion. However, this is diametrically opposed to Hong Kong’s general consensus that genuine universal suffrage ensures an open election that enables anyone to vote and run for office. The diverging interpretation of the definition of “democracy” could only be reconciled by determining Beijing’s degree of control—or if any at all— on Hong Kong’s elections."],
+                ["&ldquo;In blocking opposition candidates, Beijing dismisses the widely recognized international view that universal suffrage requires not only that everyone can vote, but also that they be given a free choice of candidates, without discrimination for political opinion or otherwise.&rdquo;"]
+              ]
+            }
+          ]
         },
         {
           "title": "The Umbrella Movement",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["In late September, an emerging student-led movement, conducted by Joshua Wong, Nathan Law, and others, protested the NPC Standing Committee’s decision to rule out an open nomination for the 2017 election. To capitalize on this momentum, the Occupy Central organizers accelerated the start date of their long-awaited civil disobedience campaign. Mobilizing supporters, pro-democracy protesters started to occupy major arteries within commercial centres, such as Central, Causeway Bay, Admiralty, and Mong Kok.","The movement escalated on September 28, with police firing tear gas and launching baton charges at peaceful protesters who used multi-coloured umbrellas to shield against these heavy-handed tactics. In the following days, demonstrations led by both students and Occupy Central organizers coalesced into a fragmented resistance otherwise known as the Umbrella Movement."],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["Unlike Occupy Central, the Umbrella Movement was not a pre-orchestrated campaign. Instead, it was guided by a new generation of pro-democracy advocates born in the threshold of the 1997 handover, who had “no memories of a British Hong Kong and no attachment to mainland China”. With the emergence of a new generation of advocates, the pro-democracy movement’s spirit was evolving, from its non-confrontational beginnings into a more disruptive resistance embodied by the new Umbrella Movement."],
+                ["&ldquo;While all walks of life are involved in the protests, those most deeply invested are students. These are the twenty-somethings whom Financial Times correspondent Ben Bland labeled “Generation HK” in his book of the same title: the citizens with no memories of a British Hong Kong and no attachment to mainland China, born in the confused threshold around the time of the handover. It is this generation, the people who will be in their 50s when Hong Kong loses its status as a Special Administrative Region, that have the most to lose.&rdquo;","&ldquo;But, from Hong Kong’s most recent protest, a rallying cry has emerged. It is a unified shout to safeguard Hong Kong’s unique identity and position in the modern world, to not let forces beyond its borders shape its destiny anymore. As the noose tightens around Hong Kong, what is at stake is more than anything politics can define. The people are fighting to preserve the essence of what it means to be a “Hongkonger.”&rdquo;"]
+              ]
+            }
+          ]
         },
         {
           "title": "Umbrella Generation",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["In the following two months, the &ldquo;Umbrella Generation&rdquo; increasingly became at the forefront of the movement for genuine universal suffrage. Formed predominantly by young people, the Umbrella Generation was leaderless, more radical, and more tolerant of employing disruptive methods to vocalize their demands.","Episodes of conflict transpired on the streets between pro-democracy protesters, riot police officers, and anti-protest supporters resulting in injuries, assaults, and arrests. The original mandate of &ldquo;nonviolent civil disobedience&rdquo; issued by Occupy Central was shifting into a new form of political awakening led by younger protesters prepared to resist through physical confrontation."],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["In retrospect, the Umbrella Movement was considered a pivotal “coming-of-age” moment for the younger generation of Hong Kong people and awakened a newfound sense of political consciousness. Previously perceived as politically indifferent, the younger generation were now at the center of the movement eclipsing the original mandate set out by the OCLP leaders."],
+                ["&ldquo;In sum, the Umbrella Movement could be seen as a people’s movement in terms of its extent of participation. Yet, adult leaders of the Occupy Central Movement have surprisingly played a minor role; they mainly offered consultation to the student leaders and helped with management affairs. The students have played the major role and have veered the course of the movement all along. They negotiated with officials of the HKSAR government; they proposed terms of negotiation, and they asked for a direct dialogue with Beijing. It is from this perspective that we can define the Umbrella Movement essentially as a student movement.&rdquo;"]
+              ]
+            }
+          ]
         },
         {
           "title": "A Stalemate",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["By the end of 2014, the Umbrella Movement&rsquo;s fragmented resistance led to a stalemate. With the Beijing government unwilling to accept civil nominations, and the Hong Kong government unable to end the protests, the public was growing weary of the occupation causing disruption to daily life in the city. With no substantial concessions in sight, the Umbrella Movement was losing its momentum and public support.","On December 3rd, the organizers of Occupy Central with Love and Peace surrendered to the police with the intention of persuading the Umbrella Movement to end. Benny Tai expressed to supporters that &ldquo;surrendering is not an act of cowardice, it is the courage to act on a promise. To surrender is to not fail, it is a silent denunciation of a heartless government.&rdquo;"],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["On December 15, the Umbrella Movement came to a quiet conclusion when police officers dismantled the last remnants of the occupation. Although the 79-day stand still did not achieve its stated goals, the Umbrella Movement had brought to the forefront the political concern that “freedom without democracy” would eventually erode the region’s autonomy. This lasting sentiment would shape the region’s ongoing struggle for democratic values, as Hong Kong returned once again to the underlying question of whether freedom can endure in the absence of democracy."],
+                ["&ldquo;Those skeptical of the Umbrella Movement often ask: &ldquo;Why the fuss about democracy or genuine universal suffrage? Has not Hong Kong preserved all its freedoms even without democracy?&rdquo; This sentiment sums up the political debate in Hong Kong: Can freedom survive without democracy? Hong Kong people, however they view the occupy movement, are one when it comes to the paramount importance of freedom, or what they call &ldquo;Hong Kong&rsquo;s core values.&rdquo; Hong Kong people cherish the rule of law, independent courts, impartial policing, press freedom, and a corruption-free civil service. Many who grew up in a free but undemocratic Hong Kong believe that they can continue to enjoy freedom in the absence of democracy. Umbrella Movement supporters, by contrast, are convinced that the &ldquo;freedom without democracy&rdquo; model is broken. Since 1997, successive chief executives unchecked by democratic accountability have eroded Hong Kong&rsquo;s autonomy and its core values."]
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1056,7 +1336,267 @@
       "scenes": [
         {
           "title": "Death of an Icon",
-          "pages": []
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["",""],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["",""],
+                ["",""]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Death of an Icon",
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["",""],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["",""],
+                ["",""]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Death of an Icon",
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["",""],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["",""],
+                ["",""]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Death of an Icon",
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["",""],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["",""],
+                ["",""]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Death of an Icon",
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["",""],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["",""],
+                ["",""]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Death of an Icon",
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["",""],
+              "resources": [
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                },
+                {
+                  "title": "",
+                  "source": "",
+                  "type": "",
+                  "year": ""
+                }
+              ]
+            },
+            {
+              "type": "reflection",
+              "title": "Reflection",
+              "paragraphs": [
+                ["",""],
+                ["",""]
+              ]
+            }
+          ]
         }
       ]
     },
