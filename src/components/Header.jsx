@@ -64,7 +64,7 @@ const Header = ({
           </Col>
         </Row>
         {pageId === 'event' && (
-          <Row className="grid__row shrink-animation">
+          <Row key={Math.random()} className="grid__row shrink-animation">
             <Col lg={12} md={12} sm={12} xs={12} />
           </Row>
         )}
@@ -73,17 +73,19 @@ const Header = ({
           <Col lg={9} md={8} sm={8} xs={8}>
             {pageId === 'event' && (
               <p
-                className={`medium-caption scene-animation absolute top-0 pt-2 ${textClasses}`}
+                key={Math.random()}
+                className={`medium-caption scene-animation absolute top-0 pt-2 ${textClasses} ${isTransitioning &&
+                  'fade-out hidden'}`} // fade-out not applying, using hidden as a backup
               >
                 Scene {romanSceneNumber}
               </p>
             )}
             <p
+              key={Math.random()}
               className={`small-body ${
                 pageId === 'event' ? 'title-animation' : 'cursor-pointer'
-              } ${pageId === 'reflection' &&
-                isTransitioning &&
-                'fade-out'} pt-2 pb-5 ${textClasses}`}
+              } ${isTransitioning &&
+                'fade-out hidden'} pt-2 pb-5 ${textClasses}`} // fade-out not applying, using hidden as a backup
               onClick={onClickScene}
             >
               {title}
