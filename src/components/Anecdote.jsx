@@ -162,70 +162,64 @@ const Anecdote = ({
               )}
 
               {type === 'Imagery' && (
-                  <>
-                    <Col lg={4} md={2} sm={1} xs={1} onClick={onClickSpan} />
-                    <Col lg={1} md={2} sm={1} xs={1} />
-                    <Col lg={6} md={7} sm={9} xs={9} className="pt-5">
-                      <div className="bg-white z-30 pt-5 anecdote-fixed-header">
-                        <div className="small-body mb-1">
-                          {shortTitle !== title
-                            ? ReactHtmlParser(shortTitle)
-                            : ''}
-                        </div>
-                        <div className="small-body mb-5">{type}</div>
+                <>
+                  <Col lg={4} md={2} sm={1} xs={1} onClick={onClickSpan} />
+                  <Col lg={1} md={2} sm={1} xs={1} />
+                  <Col lg={6} md={7} sm={9} xs={9} className="pt-5">
+                    <div className="bg-white z-30 pt-5 anecdote-fixed-header">
+                      <div className="small-body mb-1">
+                        {shortTitle !== title
+                          ? ReactHtmlParser(shortTitle)
+                          : ''}
                       </div>
-                    </Col>
-                    <Col lg={1} md={1} sm={1} xs={1} />
+                      <div className="small-body mb-5">{type}</div>
+                    </div>
+                  </Col>
+                  <Col lg={1} md={1} sm={1} xs={1} />
 
-                    <Col lg={4} md={2} sm={1} xs={1} onClick={onClickSpan} />
-                    <Col lg={1} md={2} sm={1} xs={1} />
-                    <Col
-                      lg={6}
-                      md={7}
-                      sm={9}
-                      xs={9}
-                      className="anecdote-content"
-                    >
-                      <div className="large-headline-static mb-6">
-                        {ReactHtmlParser(title)}
+                  <Col lg={4} md={2} sm={1} xs={1} onClick={onClickSpan} />
+                  <Col lg={1} md={2} sm={1} xs={1} />
+                  <Col lg={6} md={7} sm={9} xs={9} className="anecdote-content">
+                    <div className="large-headline-static mb-6">
+                      {ReactHtmlParser(title)}
+                    </div>
+                    <div className="small-headline mb-20 md:mb-10 sm:mb-10">
+                      {author}
+                      {publication && `, ${publication}`}
+                      {year && `, ${year}`}
+                    </div>
+                    {preamble && (
+                      <div className="small-body mb-16">
+                        {ReactHtmlParser(preamble)}
                       </div>
-                      <div className="small-headline mb-20 md:mb-10 sm:mb-10">
-                        {author}
-                        {publication && `, ${publication}`}
-                        {year && `, ${year}`}
-                      </div>
-                      {preamble && (
-                        <div className="small-body mb-16">
-                          {ReactHtmlParser(preamble)}
-                        </div>
-                      )}
-                    </Col>
-                    <Col lg={1} md={1} sm={1} xs={1} />
+                    )}
+                  </Col>
+                  <Col lg={1} md={1} sm={1} xs={1} />
 
-                    <Col lg={4} md={2} sm={1} xs={1} onClick={onClickSpan} />
-                    <Col lg={1} md={2} sm={1} xs={1} />
-                    <Col lg={7} md={7} sm={9} xs={9}>
-                      {content &&
-                        content.map((image, index) => {
-                          return (
-                            <div
-                              className="aspect-ratio-container bg-gray-20 mb-8"
-                              key={`image-${index}`}
-                            >
-                              {/* <img src={imageLookup[image]} alt="" /> */}
-                            </div>
-                          );
-                        })}
-                      <Link to="">
-                        <div className="h-12" />
-                        <p className="border-t border-gray-40 pb-5" />
-                        <p className="small-body text-gray-60">{citation}</p>
-                      </Link>
-                      <div className="bottom-spacer" />
-                    </Col>
-                    <Col lg={0} md={1} sm={1} xs={1} />
-                  </>
-                ))}
+                  <Col lg={4} md={2} sm={1} xs={1} onClick={onClickSpan} />
+                  <Col lg={1} md={2} sm={1} xs={1} />
+                  <Col lg={7} md={7} sm={9} xs={9}>
+                    {content &&
+                      content.map((image, index) => {
+                        return (
+                          <div
+                            className="aspect-ratio-container bg-gray-20 mb-8"
+                            key={`image-${index}`}
+                          >
+                            {/* <img src={imageLookup[image]} alt="" /> */}
+                          </div>
+                        );
+                      })}
+                    <Link to="">
+                      <div className="h-12" />
+                      <p className="border-t border-gray-40 pb-5" />
+                      <p className="small-body text-gray-60">{citation}</p>
+                    </Link>
+                    <div className="bottom-spacer" />
+                  </Col>
+                  <Col lg={0} md={1} sm={1} xs={1} />
+                </>
+              )}
 
               {type === 'Poem' && (
                 <>
