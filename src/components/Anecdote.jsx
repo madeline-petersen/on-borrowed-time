@@ -74,7 +74,10 @@ const Anecdote = ({
         <div
           id="anecdote-background-filler"
           className={`absolute anecdote-background-filler right-0 ${
-            type === 'Article Excerpt' || type === 'Book Excerpt'
+            type === 'Article Excerpt' ||
+            type === 'Book Excerpt' ||
+            type === 'Journal Excerpt' ||
+            type === 'Diary Excerpt'
               ? 'type-excerpt'
               : type === 'Poem'
               ? 'type-poem'
@@ -92,7 +95,10 @@ const Anecdote = ({
                 <Close20 />
               </span>
 
-              {(type === 'Article Excerpt' || type === 'Book Excerpt') && (
+              {(type === 'Article Excerpt' ||
+                type === 'Book Excerpt' ||
+                type === 'Journal Excerpt' ||
+                type === 'Diary Excerpt') && (
                 <>
                   <Col lg={2} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
