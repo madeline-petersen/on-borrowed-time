@@ -81,7 +81,7 @@ const Anecdote = ({
               ? 'type-excerpt'
               : type === 'Poem'
               ? 'type-poem'
-              : type === 'Imagery' || type === 'Map'
+              : type === 'Imagery'
               ? 'type-imagery'
               : ''
           }`}
@@ -161,8 +161,7 @@ const Anecdote = ({
                 </>
               )}
 
-              {type === 'Imagery' ||
-                (type === 'Map' && (
+              {type === 'Imagery' && (
                   <>
                     <Col lg={4} md={2} sm={1} xs={1} onClick={onClickSpan} />
                     <Col lg={1} md={2} sm={1} xs={1} />
