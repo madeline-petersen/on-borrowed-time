@@ -10,11 +10,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    transition: transform 1s;
-
-    &.hero-image-scale {
-      transform: scale(1.1);
-    }
   }
 
   .scene-name {
