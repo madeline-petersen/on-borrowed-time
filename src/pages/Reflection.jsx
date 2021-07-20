@@ -105,6 +105,7 @@ const Reflection = ({
 
             {next && (
               <Footer
+                pageId="reflection"
                 nextParams={nextParams}
                 next={next}
                 changingParam={changingParam}

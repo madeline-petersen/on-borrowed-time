@@ -42,28 +42,15 @@ const Footer = ({
     }
   };
 
-  let textClasses =
-    pageId === 'home' || pageId === 'intro'
-      ? 'text-white'
-      : pageId === 'event'
-      ? 'contrast-text gray'
-      : 'contrast-text';
-
-  let borderClasses = {
-    'gray-60': 'border-gray-60',
-    'gray-80': 'border-gray-80'
-  };
+  let textClasses = pageId === 'event' ? 'text-gray-70' : 'text-gray-30';
+  let borderClasses = pageId === 'event' ? 'border-gray-40' : 'border-gray-90';
 
   return (
     <>
       <Row className={`grid__row`}>
         <Col lg={1} />
         <Col lg={11} md={12}>
-          <p
-            className={`border-t ${
-              borderClasses[theme.border]
-            } mt-44 fade-in-element`}
-          />
+          <p className={`border-t ${borderClasses} mt-44 fade-in-element`} />
         </Col>
       </Row>
       <Row

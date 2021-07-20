@@ -81,6 +81,7 @@ const Intro = ({
           <div className="absolute w-full bottom-0">
             <Container className="grid__container">
               <Footer
+                pageId="intro"
                 nextParams={{ year: year.id, scene: 'I', page: 'event' }}
                 next={year.scenes[0]}
                 changingParam="scene"

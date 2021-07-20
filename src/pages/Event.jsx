@@ -101,6 +101,7 @@ const Event = ({
               <ResourceTable data={event.resources} />
 
               <Footer
+                pageId="event"
                 nextParams={nextParams}
                 next={next}
                 changingParam={changingParam}

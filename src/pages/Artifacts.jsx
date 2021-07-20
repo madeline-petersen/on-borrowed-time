@@ -106,6 +106,7 @@ const Artifacts = ({
             )}
 
             <Footer
+              pageId="artifacts"
               nextParams={nextParams}
               next={next}
               changingParam={changingParam}
