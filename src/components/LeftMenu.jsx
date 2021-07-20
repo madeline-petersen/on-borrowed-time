@@ -159,10 +159,12 @@ const LeftMenu = ({
                           onClick={() => onClickScene(selectedYear.id, index)}
                         >
                           <Col lg={11} md={11} sm={11} xs={11}>
-                            <p className="border-t border-gray-70 pt-4" />
+                            <p className="border-t border-white border-opacity-20 pt-4" />
                           </Col>
                           <Col lg={3} md={3} sm={2} xs={2}>
-                            <div className={`small-body text-gray-40`}>
+                            <div
+                              className={`small-body text-white text-opacity-50`}
+                            >
                               Scene {roman.toRoman(index + 1)}
                             </div>
                           </Col>

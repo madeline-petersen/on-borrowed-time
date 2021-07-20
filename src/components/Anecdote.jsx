@@ -151,8 +151,10 @@ const Anecdote = ({
                         })}
                       <Link to="">
                         <div className="h-12" />
-                        <p className="border-t border-gray-40 pb-5" />
-                        <p className="small-body text-gray-60">{citation}</p>
+                        <p className="border-t border-black border-opacity-10 pb-5" />
+                        <p className="small-body text-black text-opacity-60">
+                          {ReactHtmlParser(citation)}
+                        </p>
                       </Link>
                       <div className="bottom-spacer" />
                     </>
@@ -212,8 +214,8 @@ const Anecdote = ({
                       })}
                     <Link to="">
                       <div className="h-12" />
-                      <p className="border-t border-gray-40 pb-5" />
-                      <p className="small-body text-gray-60">
+                      <p className="border-t border-black border-opacity-10 pb-5" />
+                      <p className="small-body text-black text-opacity-60">
                         {ReactHtmlParser(citation)}
                       </p>
                     </Link>
@@ -266,8 +268,10 @@ const Anecdote = ({
                       })}
                     <Link to="">
                       <div className="h-12" />
-                      <p className="border-t border-gray-40 pb-5" />
-                      <p className="small-body text-gray-60">{citation}</p>
+                      <p className="border-t border-black border-opacity-10 pb-5" />
+                      <p className="small-body text-black text-opacity-60">
+                        {ReactHtmlParser(citation)}
+                      </p>
                     </Link>
                     <div className="bottom-spacer" />
                   </Col>

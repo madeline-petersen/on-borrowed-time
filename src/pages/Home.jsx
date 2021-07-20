@@ -4,6 +4,7 @@ import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect, useState } from 'react';
 
 import PropTypes from 'prop-types';
+import ReactHtmlParser from 'react-html-parser';
 import { useHistory } from 'react-router-dom';
 
 const Home = ({ years, hash, setHash, setIsTransitioning }) => {
@@ -75,7 +76,7 @@ const Home = ({ years, hash, setHash, setIsTransitioning }) => {
                       xs={10}
                       class={isClicked ? 'fade-out' : ''}
                     >
-                      {year.blurb}
+                      {ReactHtmlParser(year.blurb)}
                     </Col>
                   </div>
                   <Col lg={7} md={5} />

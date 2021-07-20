@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 
 import Footer from '../components/Footer';
 import PropTypes from 'prop-types';
+import ReactHtmlParser from 'react-html-parser';
 import stairs from '../images/Homepage_1989.jpg';
 import temple from '../images/Homepage_1984.jpg';
 
@@ -72,9 +73,10 @@ const Intro = ({
           <div className="small-headline text-white absolute w-full scene-name">
             <Container className="grid__container">
               <Row className="grid__row">
-                <Col lg={2} />
-                <Col lg={6}>{year.title}</Col>
-                <Col lg={4}>{year.id}</Col>
+                <Col lg={5} />
+                <Col lg={7}>
+                  <p>{ReactHtmlParser(year.blurb)}</p>
+                </Col>
               </Row>
             </Container>
           </div>
