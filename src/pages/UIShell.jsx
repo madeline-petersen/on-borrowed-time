@@ -138,9 +138,7 @@ const UIShell = props => {
       <Header
         currentYear={props.year.id}
         label={
-          props.pageId === 'intro'
-            ? ''
-            : props.pageId === 'home'
+          props.pageId === 'home'
             ? props.year.blurb
             : `${props.year.id} ${props.year.title}`
         }
