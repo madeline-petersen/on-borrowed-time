@@ -109,11 +109,6 @@ const Event = ({
                 isClicked={isClicked}
                 navigateTo={navigateTo}
                 setIsTransitioning={setIsTransitioning}
-                theme={{
-                  background: 'gray-30',
-                  text: 'black',
-                  border: 'gray-60'
-                }}
               />
             </div>
           )}

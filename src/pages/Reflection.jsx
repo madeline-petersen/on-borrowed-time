@@ -112,11 +112,6 @@ const Reflection = ({
                 setClicked={onFooterClick}
                 navigateTo={navigateTo}
                 setIsTransitioning={setIsTransitioning}
-                theme={{
-                  background: 'black',
-                  text: 'gray-40',
-                  border: 'gray-80'
-                }}
               />
             )}
           </div>

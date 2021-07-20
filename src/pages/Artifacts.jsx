@@ -113,11 +113,6 @@ const Artifacts = ({
               setClicked={setClicked}
               navigateTo={navigateTo}
               setIsTransitioning={setIsTransitioning}
-              theme={{
-                background: 'black',
-                text: 'gray-40',
-                border: 'gray-80'
-              }}
             />
           </div>
         </Container>

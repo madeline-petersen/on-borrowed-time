@@ -88,11 +88,6 @@ const Intro = ({
                 setClicked={setClicked}
                 setIsTransitioning={setIsTransitioning}
                 navigateTo={navigateTo}
-                theme={{
-                  background: 'black',
-                  text: 'gray-40',
-                  border: 'gray-80'
-                }}
               />
             </Container>
           </div>

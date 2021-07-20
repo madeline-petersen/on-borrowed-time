@@ -18,9 +18,6 @@ const Footer = ({
   // object that contains title of next page
   next,
 
-  // border, background, text
-  theme,
-
   // current page id (intro, event, artifacts, reflection)
   pageId
 }) => {
@@ -42,8 +39,14 @@ const Footer = ({
     }
   };
 
-  let textClasses = pageId === 'event' ? 'text-gray-70' : 'text-gray-30';
-  let borderClasses = pageId === 'event' ? 'border-gray-40' : 'border-gray-90';
+  let textClasses =
+    pageId === 'event'
+      ? 'text-black text-opacity-70'
+      : 'text-white text-opacity-90';
+  let borderClasses =
+    pageId === 'event'
+      ? 'border-black border-opacity-20'
+      : 'border-white border-opacity-20';
 
   return (
     <>
@@ -93,9 +96,7 @@ const Footer = ({
   );
 };
 
-Footer.defaultProps = {
-  theme: { background: 'gray-30', text: 'black', border: 'gray-60' }
-};
+Footer.defaultProps = {};
 
 Footer.propTypes = {
   isClicked: PropTypes.bool,
@@ -105,7 +106,6 @@ Footer.propTypes = {
   nextParams: PropTypes.shape(),
   navigateTo: PropTypes.func,
   next: PropTypes.shape(),
-  theme: PropTypes.shape(),
   pageId: PropTypes.string
 };
 
