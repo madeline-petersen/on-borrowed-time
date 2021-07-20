@@ -74,7 +74,9 @@ const Intro = ({
             <Container className="grid__container">
               <Row className="grid__row">
                 <Col lg={5} />
-                <Col lg={7}>{ReactHtmlParser(year.blurb)}</Col>
+                <Col lg={7}>
+                  <p>{ReactHtmlParser(year.blurb)}</p>
+                </Col>
               </Row>
             </Container>
           </div>
