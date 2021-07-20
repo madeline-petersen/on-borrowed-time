@@ -54,11 +54,6 @@ const Footer = ({
     'gray-80': 'border-gray-80'
   };
 
-  let backgroundClasses = {
-    black: 'bg-black',
-    'gray-30': 'bg-gray-30'
-  };
-
   return (
     <>
       <Row className={`grid__row`}>
@@ -72,7 +67,7 @@ const Footer = ({
         </Col>
       </Row>
       <Row
-        className={`grid__row ${backgroundClasses[theme.background]} ${
+        className={`grid__row ${
           isClicked ? 'cursor-default' : 'cursor-pointer'
         }`}
         onClick={() => handleOnClick()}
