@@ -162,8 +162,33 @@ a {
   mix-blend-mode: difference;
   transition: color 0.5s 1s;
 
-  &.gray {
+  &.bg-gray {
     color: #bfbfbf;
+    transition: color 0.5s 1s;
+  }
+
+  &.bg-red {
+    color: #c6573e;
+    transition: color 0.5s 1s;
+  }
+
+  &.bg-blue {
+    color: #8693ac;
+    transition: color 0.5s 1s;
+  }
+
+  &.bg-yellow {
+    color: #f8f2bf;
+    transition: color 0.5s 1s;
+  }
+
+  &.bg-purple {
+    color: #aea4be;
+    transition: color 0.5s 1s;
+  }
+
+  &.bg-brown {
+    color: #9e9081;
     transition: color 0.5s 1s;
   }
 }

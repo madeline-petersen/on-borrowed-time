@@ -22,6 +22,36 @@
     border-left-width: 1px;
     border-color: rgba(255, 255, 255, 1); // white, opaque
 
+    &.gray {
+      border-color: #bfbfbf;
+      transition: color 0.5s 1s;
+    }
+
+    &.red {
+      border-color: #c6573e;
+      transition: color 0.5s 1s;
+    }
+
+    &.blue {
+      border-color: #8693ac;
+      transition: color 0.5s 1s;
+    }
+
+    &.yellow {
+      border-color: #f8f2bf;
+      transition: color 0.5s 1s;
+    }
+
+    &.purple {
+      border-color: #aea4be;
+      transition: color 0.5s 1s;
+    }
+
+    &.brown {
+      border-color: #9e9081;
+      transition: color 0.5s 1s;
+    }
+
     .circle {
       position: absolute;
       left: -7px; // move circle onto timeline
@@ -33,6 +63,36 @@
 
       &.current-scene {
         border-color: rgba(255, 255, 255, 1); // opaque
+
+        &.gray {
+          border-color: #bfbfbf;
+          transition: color 0.5s 1s;
+        }
+
+        &.red {
+          border-color: #c6573e;
+          transition: color 0.5s 1s;
+        }
+
+        &.blue {
+          border-color: #8693ac;
+          transition: color 0.5s 1s;
+        }
+
+        &.yellow {
+          border-color: #f8f2bf;
+          transition: color 0.5s 1s;
+        }
+
+        &.purple {
+          border-color: #aea4be;
+          transition: color 0.5s 1s;
+        }
+
+        &.brown {
+          border-color: #9e9081;
+          transition: color 0.5s 1s;
+        }
       }
 
       .dot {
@@ -41,6 +101,36 @@
         width: 3px;
         background-color: white;
         border-radius: 50%;
+
+        &.gray {
+          background-color: #bfbfbf;
+          transition: color 0.5s 1s;
+        }
+
+        &.red {
+          background-color: #c6573e;
+          transition: color 0.5s 1s;
+        }
+
+        &.blue {
+          background-color: #8693ac;
+          transition: color 0.5s 1s;
+        }
+
+        &.yellow {
+          background-color: #f8f2bf;
+          transition: color 0.5s 1s;
+        }
+
+        &.purple {
+          background-color: #aea4be;
+          transition: color 0.5s 1s;
+        }
+
+        &.brown {
+          background-color: #9e9081;
+          transition: color 0.5s 1s;
+        }
       }
     }
 

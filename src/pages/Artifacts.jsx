@@ -23,7 +23,7 @@ const Artifacts = ({
   nextParams,
   next,
   navigateTo,
-  nextBackground,
+  nextBackgroundClass,
   isTransitioning,
   setIsTransitioning,
   setNextBackground
@@ -36,20 +36,8 @@ const Artifacts = ({
 
   useEffect(() => {
     setIsTransitioning(false);
-    setNextBackground(null);
+    setNextBackground(nextParams.year, nextParams.page);
   }, [artifacts]);
-
-  let transitionBackgroundClasses = {
-    '1984': 'bg-1984',
-    '1989': 'bg-1989',
-    '1997': 'bg-1997',
-    '2003': 'bg-2003',
-    '2014': 'bg-2014',
-    '2019': 'bg-2019',
-    '2020': 'bg-2020',
-    black: 'bg-black',
-    'gray-30': 'bg-gray-30'
-  };
 
   return (
     <>
@@ -62,7 +50,7 @@ const Artifacts = ({
         />
         {isTransitioning && (
           <div
-            className={`h-screen ${transitionBackgroundClasses[nextBackground]} bg-center bg-no-repeat bg-cover w-full`}
+            className={`h-screen ${nextBackgroundClass} bg-center bg-no-repeat bg-cover w-full`}
           />
         )}
       </div>
@@ -121,20 +109,16 @@ const Artifacts = ({
   );
 };
 
-Artifacts.defaultProps = {
-  nextBackground: 'black'
-};
-
 Artifacts.propTypes = {
   artifacts: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
   navigateTo: PropTypes.func,
-  nextBackground: PropTypes.string,
+  nextBackgroundClass: PropTypes.string,
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
-  setNextBackground: PropTypes.bool
+  setNextBackground: PropTypes.func
 };
 
 export default Artifacts;

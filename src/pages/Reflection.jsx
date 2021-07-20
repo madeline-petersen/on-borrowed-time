@@ -11,7 +11,7 @@ const Reflection = ({
   nextParams,
   changingParam,
   next,
-  nextBackground,
+  nextBackgroundClass,
   isTransitioning,
   setIsTransitioning,
   navigateTo,
@@ -25,24 +25,12 @@ const Reflection = ({
 
   useEffect(() => {
     setIsTransitioning(false);
-    setNextBackground(null);
+    setNextBackground(nextParams.year, nextParams.page);
   }, [reflection]);
 
   const onFooterClick = () => {
     setIsTransitioning(true);
     setClicked(true);
-  };
-
-  let transitionBackgroundClasses = {
-    '1984': 'bg-1984',
-    '1989': 'bg-1989',
-    '1997': 'bg-1997',
-    '2003': 'bg-2003',
-    '2014': 'bg-2014',
-    '2019': 'bg-2019',
-    '2020': 'bg-2020',
-    black: 'bg-black',
-    'gray-30': 'bg-gray-30'
   };
 
   return (
@@ -56,7 +44,7 @@ const Reflection = ({
         />
         {isTransitioning && (
           <div
-            className={`h-screen ${transitionBackgroundClasses[nextBackground]} bg-center bg-no-repeat bg-cover w-full`}
+            className={`h-screen ${nextBackgroundClass} bg-center bg-no-repeat bg-cover w-full`}
           />
         )}
       </div>
@@ -121,18 +109,14 @@ const Reflection = ({
   );
 };
 
-Reflection.defaultProps = {
-  nextBackground: 'gray-30'
-};
-
 Reflection.propTypes = {
   reflection: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  nextBackground: PropTypes.string,
+  nextBackgroundClass: PropTypes.string,
   isTransitioning: PropTypes.bool,
-  setIsTransitioning: PropTypes.string,
+  setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
   setNextBackground: PropTypes.func
 };

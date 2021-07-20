@@ -11,15 +11,17 @@ import ResourceTable from '../components/ResourceTable';
 import { useScreenClass } from 'react-grid-system';
 
 const Event = ({
+  year,
   event,
   nextParams,
   changingParam,
   next,
   navigateTo,
-  nextBackground,
+  nextBackgroundClass,
   isTransitioning,
   setIsTransitioning,
-  setNextBackground
+  setNextBackground,
+  colourBackgroundClass
 }) => {
   const [isClicked, setClicked] = useState(false);
   const screenClass = useScreenClass();
@@ -27,11 +29,11 @@ const Event = ({
   let matches = [];
   if (container) {
     matches = container.querySelectorAll('span');
-    console.log('it a match!', matches);
+    // console.log('it a match!', matches);
   }
 
   if (matches.length) {
-    console.log('many matches');
+    // console.log('many matches');
     matches[0].onclick = function() {
       alert('bla bla');
     };
@@ -43,38 +45,26 @@ const Event = ({
 
   useEffect(() => {
     setIsTransitioning(false);
-    setNextBackground(null);
+    setNextBackground(nextParams.year, nextParams.page);
   }, [event]);
-
-  let transitionBackgroundClasses = {
-    '1984': 'bg-1984',
-    '1989': 'bg-1989',
-    '1997': 'bg-1997',
-    '2003': 'bg-2003',
-    '2014': 'bg-2014',
-    '2019': 'bg-2019',
-    '2020': 'bg-2020',
-    black: 'bg-black',
-    'gray-30': 'bg-gray-30'
-  };
 
   return (
     <>
       {/* Backgrounds for page transition */}
       <div className={`absolute top-0 w-full`}>
         <div
-          className={`h-screen bg-gray-30 w-full ${
+          className={`h-screen ${colourBackgroundClass} w-full ${
             isClicked ? 'screen-shrink' : ''
           }`}
         />
         {isTransitioning && (
           <div
-            className={`h-screen ${transitionBackgroundClasses[nextBackground]} bg-center bg-no-repeat bg-cover w-full`}
+            className={`h-screen ${nextBackgroundClass} bg-center bg-no-repeat bg-cover w-full`}
           />
         )}
       </div>
 
-      <div className="h-auto bg-gray-30">
+      <div className={`h-auto ${colourBackgroundClass}`}>
         <Container className="grid__container min-h-screen">
           <HeaderSpacer />
 
@@ -134,21 +124,19 @@ const Event = ({
   );
 };
 
-Event.defaultProps = {
-  nextBackground: 'black'
-};
-
 Event.propTypes = {
+  year: PropTypes.shape(),
   years: PropTypes.arrayOf(PropTypes.shape()),
   event: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  nextBackground: PropTypes.string,
+  nextBackgroundClass: PropTypes.string,
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
-  setNextBackground: PropTypes.bool
+  setNextBackground: PropTypes.func,
+  colourBackgroundClass: PropTypes.string
 };
 
 export default Event;

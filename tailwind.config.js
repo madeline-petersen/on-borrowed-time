@@ -41,7 +41,12 @@ module.exports = {
         '90': '#262626',
         '100': '#161616'
       },
-      black: '#000008'
+      black: '#000008',
+      yellow: '#F8F2BF',
+      blue: '#8693AC',
+      red: '#C6573E',
+      brown: '#9E9081',
+      purple: '#AEA4BE'
     },
     screens: {
       sm: '375px',

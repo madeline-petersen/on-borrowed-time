@@ -9,6 +9,16 @@ const Timeline = props => {
   const [numScenes, setNumScenes] = useState(0);
   const [currentSceneIndex, setSceneIndex] = useState(props.sceneIndex);
 
+  let colourBackgroundClasses = {
+    '1984': 'gray-30',
+    '1989': 'red',
+    '1997': 'blue',
+    '2003': 'brown',
+    '2014': 'yellow',
+    '2019': 'purple',
+    '2020': 'black'
+  };
+
   const onClickYear = year => {
     if (year === props.currentYear.id && props.pageId === 'intro') {
       return;
@@ -27,7 +37,7 @@ const Timeline = props => {
   };
 
   const onClickScene = sceneIndex => {
-    props.setNextBackground('gray-30');
+    props.setNextBackground(props.currentYear.id, 'event');
     props.setIsTransitioning(true);
     setSceneIndex(null); // disappear circle
     props.navigateTo(
@@ -76,7 +86,8 @@ const Timeline = props => {
                       numScenes === 0
                         ? 'collapsed'
                         : `expanded num-scenes-${numScenes}`
-                    }`
+                    } ${props.pageId === 'event' &&
+                      colourBackgroundClasses[year.id]}`
                   : `pl-4 mb-2.5`
               }`}
             >
@@ -90,9 +101,12 @@ const Timeline = props => {
                 } ${
                   (year.id === props.currentYear.id && numScenes !== 0) ||
                   (props.pageId === 'home' && props.previewedYear === year.id)
-                    ? 'active'
+                    ? 'active contrast-text'
                     : 'inactive'
-                }`}
+                } ${year.id === props.currentYear.id &&
+                  props.pageId === 'event' &&
+                  props.colourBackgroundClass}
+                `}
               >
                 {year.id}
               </span>
@@ -101,14 +115,19 @@ const Timeline = props => {
               <span
                 key="intro"
                 className={`circle cursor-pointer ${currentSceneIndex ===
-                  'intro' && 'current-scene'} ${
-                  year.id === props.currentYear.id && numScenes > 0
-                    ? 'show'
-                    : 'hide'
-                }`}
+                  'intro' && 'current-scene'} ${props.pageId === 'event' &&
+                  colourBackgroundClasses[year.id]}
+                  ${
+                    year.id === props.currentYear.id && numScenes > 0
+                      ? 'show'
+                      : 'hide'
+                  }`}
                 onClick={() => onClickYear(year.id)}
               >
-                <span className="dot mt-1 left-1" />
+                <span
+                  className={`dot mt-1 left-1 ${props.pageId === 'event' &&
+                    colourBackgroundClasses[year.id]}`}
+                />
               </span>
 
               {/* other circles */}
@@ -116,11 +135,13 @@ const Timeline = props => {
                 <span
                   key={`scene-${index}`}
                   className={`circle cursor-pointer ${currentSceneIndex ===
-                    index && 'current-scene'} ${
-                    year.id === props.currentYear.id && numScenes > 0
-                      ? 'show'
-                      : 'hide'
-                  }`}
+                    index && 'current-scene'} ${props.pageId === 'event' &&
+                    colourBackgroundClasses[year.id]}
+                    ${
+                      year.id === props.currentYear.id && numScenes > 0
+                        ? 'show'
+                        : 'hide'
+                    }`}
                   style={{
                     marginTop: `${
                       year.id === props.currentYear.id
@@ -130,7 +151,10 @@ const Timeline = props => {
                   }}
                   onClick={() => onClickScene(index)}
                 >
-                  <span className="dot mt-1 left-1" />
+                  <span
+                    className={`dot mt-1 left-1 ${props.pageId === 'event' &&
+                      colourBackgroundClasses[year.id]}`}
+                  />
                 </span>
               ))}
             </div>
@@ -156,7 +180,8 @@ Timeline.propTypes = {
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   isYearEnd: PropTypes.bool,
-  setNextBackground: PropTypes.func
+  setNextBackground: PropTypes.func,
+  colourBackgroundClass: PropTypes.string
 };
 
 export default Timeline;

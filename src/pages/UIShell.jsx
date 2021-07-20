@@ -20,7 +20,7 @@ const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [nextBackground, setNextBackground] = useState(null);
+  const [nextBackgroundClass, setNextBackgroundClass] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
   let history = useHistory();
 
@@ -37,6 +37,40 @@ const UIShell = props => {
           history.push(`/${year}`);
         }, 2000);
       }
+    }
+  };
+
+  let imageBackgroundClasses = {
+    '1984': 'bg-1984',
+    '1989': 'bg-1989',
+    '1997': 'bg-1997',
+    '2003': 'bg-2003',
+    '2014': 'bg-2014',
+    '2019': 'bg-2019',
+    '2020': 'bg-2020'
+  };
+
+  let colourBackgroundClasses = {
+    '1984': 'bg-gray-30',
+    '1989': 'bg-red',
+    '1997': 'bg-blue',
+    '2003': 'bg-brown',
+    '2014': 'bg-yellow',
+    '2019': 'bg-purple',
+    '2020': 'bg-black'
+  };
+
+  const setNextBackground = (year, pageId = 'intro') => {
+    if (pageId === 'intro') {
+      setNextBackgroundClass(imageBackgroundClasses[year]);
+      console.log(imageBackgroundClasses[year]);
+    } else if (pageId === 'event') {
+      setNextBackgroundClass(colourBackgroundClasses[year]);
+      console.log(colourBackgroundClasses[year]);
+    } else {
+      // artifacts, reflection
+      setNextBackgroundClass('bg-black');
+      console.log('bg-black');
     }
   };
 
@@ -65,7 +99,8 @@ const UIShell = props => {
         <Intro
           {...props}
           navigateTo={navigateTo}
-          nextBackground={nextBackground === null ? 'gray-30' : nextBackground}
+          backgroundClass={imageBackgroundClasses[props.year.id]}
+          nextBackgroundClass={nextBackgroundClass}
           setNextBackground={setNextBackground}
           isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
@@ -77,10 +112,11 @@ const UIShell = props => {
         <Event
           {...props}
           navigateTo={navigateTo}
-          nextBackground={nextBackground === null ? 'black' : nextBackground}
+          nextBackgroundClass={nextBackgroundClass}
           setNextBackground={setNextBackground}
           isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
+          colourBackgroundClass={colourBackgroundClasses[props.year.id]}
         />
       );
       break;
@@ -89,7 +125,7 @@ const UIShell = props => {
         <Artifacts
           {...props}
           navigateTo={navigateTo}
-          nextBackground={nextBackground === null ? 'black' : nextBackground}
+          nextBackgroundClass={nextBackgroundClass}
           setNextBackground={setNextBackground}
           isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
@@ -100,13 +136,7 @@ const UIShell = props => {
       pageComponent = (
         <Reflection
           {...props}
-          nextBackground={
-            nextBackground === null
-              ? props.changingParam === 'year'
-                ? props.nextParams.year
-                : 'gray-30'
-              : nextBackground
-          }
+          nextBackgroundClass={nextBackgroundClass}
           setNextBackground={setNextBackground}
           navigateTo={navigateTo}
           isTransitioning={isTransitioning}
@@ -131,7 +161,7 @@ const UIShell = props => {
     : props.pageId === 'home'
     ? 'text-white'
     : props.pageId === 'event'
-    ? 'contrast-text gray'
+    ? `contrast-text ${colourBackgroundClasses[props.year.id]}`
     : 'contrast-text';
 
   return (
@@ -150,6 +180,8 @@ const UIShell = props => {
         setNextBackground={setNextBackground}
         setIsTransitioning={setIsTransitioning}
         navigateTo={navigateTo}
+        textClasses={timelineClasses}
+        colourBackgroundClass={colourBackgroundClasses[props.year.id]}
       />
       <LeftMenu
         isActive={isMenuActive}
@@ -209,6 +241,7 @@ const UIShell = props => {
         isYearEnd={isYearEnd}
         navigateTo={navigateTo}
         setNextBackground={setNextBackground}
+        colourBackgroundClass={colourBackgroundClasses[props.year.id]}
       />
       {pageComponent}
     </>

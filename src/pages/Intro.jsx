@@ -6,16 +6,16 @@ import React, { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
-import stairs from '../images/Homepage_1989.jpg';
-import temple from '../images/Homepage_1984.jpg';
 
 const Intro = ({
   year,
   navigateTo,
-  nextBackground,
+  backgroundClass,
+  nextBackgroundClass,
   isTransitioning,
   setIsTransitioning,
-  setNextBackground
+  setNextBackground,
+  nextParams
 }) => {
   const [isClicked, setClicked] = useState(false);
 
@@ -25,32 +25,8 @@ const Intro = ({
 
   useEffect(() => {
     setIsTransitioning(false);
-    setNextBackground(null);
+    setNextBackground(nextParams.year, nextParams.page);
   }, [year]);
-
-  let transitionBackgroundClasses = {
-    '1984': 'bg-1984',
-    '1989': 'bg-1989',
-    '1997': 'bg-1997',
-    '2003': 'bg-2003',
-    '2014': 'bg-2014',
-    '2019': 'bg-2019',
-    '2020': 'bg-2020',
-    black: 'bg-black',
-    'gray-30': 'bg-gray-30'
-  };
-
-  let yearBackgroundClasses = {
-    '1984': 'bg-1984',
-    '1989': 'bg-1989',
-    '1997': 'bg-1997',
-    '2003': 'bg-2003',
-    '2014': 'bg-2014',
-    '2019': 'bg-2019',
-    '2020': 'bg-2020',
-    black: 'bg-black',
-    'gray-30': 'bg-gray-30'
-  };
 
   return (
     <>
@@ -63,13 +39,13 @@ const Intro = ({
         />
         {isTransitioning && (
           <div
-            className={`h-screen ${transitionBackgroundClasses[nextBackground]} bg-center bg-no-repeat bg-cover w-full`}
+            className={`h-screen ${nextBackgroundClass} bg-center bg-no-repeat bg-cover w-full`}
           />
         )}
       </div>
 
       <div className={`intro ${isClicked ? 'fade-out' : 'foreground-fade-in'}`}>
-        <div className={`hero-image ${yearBackgroundClasses[year.id]}`}>
+        <div className={`hero-image ${backgroundClass}`}>
           <div className="small-headline text-white absolute w-full scene-name">
             <Container className="grid__container">
               <Row className="grid__row">
@@ -99,17 +75,15 @@ const Intro = ({
   );
 };
 
-Intro.defaultProps = {
-  nextBackground: 'gray-30'
-};
-
 Intro.propTypes = {
   year: PropTypes.shape(),
   navigateTo: PropTypes.func,
-  nextBackground: PropTypes.string,
+  backgroundClass: PropTypes.string,
+  nextBackgroundClass: PropTypes.string,
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
-  setNextBackground: PropTypes.func
+  setNextBackground: PropTypes.func,
+  nextParams: PropTypes.shape()
 };
 
 export default Intro;

@@ -1,6 +1,5 @@
 import { Col, Container, Row } from 'react-grid-system';
 
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -13,15 +12,9 @@ const Header = ({
   romanSceneNumber,
   setNextBackground,
   setIsTransitioning,
-  navigateTo
+  navigateTo,
+  textClasses
 }) => {
-  let textClasses =
-    pageId === 'home' || pageId === 'intro'
-      ? 'text-white'
-      : pageId === 'event'
-      ? 'contrast-text gray'
-      : 'contrast-text';
-
   const onClickYear = () => {
     if (pageId !== 'intro') {
       setNextBackground(currentYear);
@@ -39,7 +32,7 @@ const Header = ({
 
   const onClickScene = () => {
     if (pageId !== 'event') {
-      setNextBackground('gray-30');
+      setNextBackground(currentYear, 'event');
       setIsTransitioning(true);
       // setSceneIndex(null); // disappear circle
       navigateTo(currentYear, romanSceneNumber, 'event');
@@ -113,7 +106,8 @@ Header.propTypes = {
   romanSceneNumber: PropTypes.string,
   setNextBackground: PropTypes.func,
   setIsTransitioning: PropTypes.func,
-  navigateTo: PropTypes.func
+  navigateTo: PropTypes.func,
+  textClasses: PropTypes.string
 };
 
 export default Header;
