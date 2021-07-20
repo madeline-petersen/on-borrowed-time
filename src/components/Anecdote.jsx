@@ -213,7 +213,9 @@ const Anecdote = ({
                     <Link to="">
                       <div className="h-12" />
                       <p className="border-t border-gray-40 pb-5" />
-                      <p className="small-body text-gray-60">{citation}</p>
+                      <p className="small-body text-gray-60">
+                        {ReactHtmlParser(citation)}
+                      </p>
                     </Link>
                     <div className="bottom-spacer" />
                   </Col>
