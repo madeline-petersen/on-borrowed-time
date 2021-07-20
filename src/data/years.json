@@ -12,10 +12,22 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "Over the course of the 99 year lease to Britain, Hong Kong developed a unique in-between identity rooted in two competing cultures. These clashing influences created a unique diasporic condition, where Hong Kong maintained its Chinese heritage while embracing Western political ideals.",
-                "As the ending of the 99 year lease approached, Britain and China began negotiating the &ldquo;Joint Declaration on the Question of Hong Kong&rdquo;, which outlined the parameters of the colony&rsquo;s future. The concept of &ldquo;one country, two systems&rdquo; was introduced as a model to reunify the region with China, while preserving Hong Kong&rsquo;s socioeconomic system and way of life for a fifty year period before being fully integrated back with the motherland."
+                "Over the course of the 99 year lease to Britain, Hong Kong developed a unique in-between identity rooted in two competing cultures. These clashing influences created a unique diasporic condition<sup>1</sup>, where Hong Kong maintained its Chinese heritage while embracing Western political ideals.",
+                "As the ending of the 99 year lease approached, Britain and China began negotiating the &ldquo;Joint Declaration on the Question of Hong Kong&rdquo;<sup>2</sup>, which outlined the parameters of the colony&rsquo;s future. The concept of &ldquo;one country, two systems&rdquo;<sup>3</sup> was introduced as a model to reunify<sup>4</sup> the region with China, while preserving Hong Kong&rsquo;s socioeconomic system and way of life for a fifty year period before being fully integrated back with the motherland."
               ],
               "resources": [
+                {
+                  "type": "Journal Excerpt",
+                  "shortTitle": "The Welfare of Hong Kong People",
+                  "bookTitle": "Diasporic Memories and Conceptual Geography in Post-Colonial Hong Kong",
+                  "year": "2014",
+                  "author": "Angelina Y. Chin",
+                  "content": [
+                    "What I retain from these memories is not a history of personal or collective victimization but the sense of immediacy of a particular diasporic reality— of Hong Kong caught, as it always has been since the end of the Second World War, between two dominant cultures, British colonial and Chinese Communist, neither of which takes the welfare of Hong Kong people into account even though both would turn to Hong Kong for financial and other forms of assistance when they needed it. This marginalized position, which is not one chosen by those from Hong Kong but one constructed by history, brings with it a certain privilege of observation and an unwillingness to idealize oppression."
+                  ],
+                  "citation": "Chin, Angelina Y. “Diasporic Memories and Conceptual Geography in Post-Colonial Hong Kong.” <em>Modern Asian Studies</em> 48, no. 6 (November 2014): 1566–67. ",
+                  "linkTo": "https://www.jstor.org/stable/24494641?seq=1"
+                },
                 {
                   "type": "Journal Excerpt",
                   "shortTitle": "An Expiring Lease",
@@ -29,6 +41,21 @@
                   ],
                   "citation": "Chua, Christine. “The Sino-British Agreement and Nationality: Hong Kong's Future in the Hands of the People's Republic of China.” Pacific Basin Law Journal 8, no. 1 (1990): 165–66.",
                   "linkTo": "https://escholarship.org/content/qt9j3546s0/qt9j3546s0.pdf?t=n4ov53"
+                },
+                {
+                  "type": "Journal Excerpt",
+                  "shortTitle": "An Arms-Length Approach",
+                  "bookTitle": "Hong Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises",
+                  "year": "2015",
+                  "author": "Michael C. Davis",
+                  "content": [
+                    "The Joint Declaration aimed to carry out the “one country, two systems” policy, which was originally outlined in Article 31 of the PRC’s 1982 Constitution. The Declaration was the product of several difficult years of Sino-British negotiations in the early 1980s.<br>",
+                    "<br/>These talks followed on the heels of PRC leader Deng Xiaoping’s famous 1979 statement that those investing in (or thinking of investing in) the booming commercial and industrial metropolis of Hong Kong should “put their hearts at ease.” Amid the give-and-take of the negotiations, Deng had come to grasp that the preservation of Hong Kong’s distinctive capitalist system—and hence its ability to boost China’s economic development—would depend on a rocklike commitment to the “one country, two systems” model.<br>",
+                    "<br/>That model, in turn, aimed to protect Hong Kong from the intrusion of China’s socialist system. The PRC was then in the early stages of reform after the chaos of the 1960s and 1970s, years of turbulence that had culminated in a high-level power struggle following the death of Mao Zedong in 1976. Deng’s aim was for Hong Kong to be returned to China in a way that would preserve prosperity and social order and enable the city’s remarkably industrious and enterprising people to contribute to China’s modernization and economic development.<br>",
+                    "<br/>He no doubt hoped that this respectful, arms-length approach would kindle Hong Kong’s loyalty in return. In order to work, the model had to win the confidence of Hong Kong’s people. The city’s liberal, free-spirited, capitalistic populace was not going to be reassured by mere pronouncements from a regime that many of them justifiably distrusted. Similarly, the international acceptance needed for foreign governments and enterprises to treat Hong Kong as a distinct entity in their financial and commercial dealings would require more than vague promises.<br>"
+                  ],
+                  "citation": "Davis, Michael C. “Hong Kong's Umbrella Movement: Beijing's Broken Promises.” <em>Journal of Democracy</em> 26, no. 2 (April 17, 2015): 102. ",
+                  "linkTo": ""
                 },
                 {
                   "type": "Journal Excerpt",
@@ -81,33 +108,6 @@
                   ],
                   "citation": "“Business: Hong Kong's Golden Link.” Time. Time Inc., April 30, 1979.",
                   "linkTo": "http://content.time.com/time/subscriber/article/0,33009,723932-1,00.html"
-                },
-                {
-                  "type": "Journal Excerpt",
-                  "shortTitle": "An Arms-Length Approach",
-                  "bookTitle": "Hong Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises",
-                  "year": "2015",
-                  "author": "Michael C. Davis",
-                  "content": [
-                    "The Joint Declaration aimed to carry out the “one country, two systems” policy, which was originally outlined in Article 31 of the PRC’s 1982 Constitution. The Declaration was the product of several difficult years of Sino-British negotiations in the early 1980s.<br>",
-                    "<br/>These talks followed on the heels of PRC leader Deng Xiaoping’s famous 1979 statement that those investing in (or thinking of investing in) the booming commercial and industrial metropolis of Hong Kong should “put their hearts at ease.” Amid the give-and-take of the negotiations, Deng had come to grasp that the preservation of Hong Kong’s distinctive capitalist system—and hence its ability to boost China’s economic development—would depend on a rocklike commitment to the “one country, two systems” model.<br>",
-                    "<br/>That model, in turn, aimed to protect Hong Kong from the intrusion of China’s socialist system. The PRC was then in the early stages of reform after the chaos of the 1960s and 1970s, years of turbulence that had culminated in a high-level power struggle following the death of Mao Zedong in 1976. Deng’s aim was for Hong Kong to be returned to China in a way that would preserve prosperity and social order and enable the city’s remarkably industrious and enterprising people to contribute to China’s modernization and economic development.<br>",
-                    "<br/>He no doubt hoped that this respectful, arms-length approach would kindle Hong Kong’s loyalty in return. In order to work, the model had to win the confidence of Hong Kong’s people. The city’s liberal, free-spirited, capitalistic populace was not going to be reassured by mere pronouncements from a regime that many of them justifiably distrusted. Similarly, the international acceptance needed for foreign governments and enterprises to treat Hong Kong as a distinct entity in their financial and commercial dealings would require more than vague promises.<br>"
-                  ],
-                  "citation": "Davis, Michael C. “Hong Kong's Umbrella Movement: Beijing's Broken Promises.” <i>Journal of Democracy</i> 26, no. 2 (April 17, 2015): 102. ",
-                  "linkTo": ""
-                },
-                {
-                  "type": "Journal Excerpt",
-                  "shortTitle": "The Welfare of Hong Kong People",
-                  "bookTitle": "Diasporic Memories and Conceptual Geography in Post-Colonial Hong Kong",
-                  "year": "2014",
-                  "author": "Angelina Y. Chin",
-                  "content": [
-                    "What I retain from these memories is not a history of personal or collective victimization but the sense of immediacy of a particular diasporic reality— of Hong Kong caught, as it always has been since the end of the Second World War, between two dominant cultures, British colonial and Chinese Communist, neither of which takes the welfare of Hong Kong people into account even though both would turn to Hong Kong for financial and other forms of assistance when they needed it. This marginalized position, which is not one chosen by those from Hong Kong but one constructed by history, brings with it a certain privilege of observation and an unwillingness to idealize oppression."
-                  ],
-                  "citation": "Chin, Angelina Y. “Diasporic Memories and Conceptual Geography in Post-Colonial Hong Kong.” <i>Modern Asian Studies</i> 48, no. 6 (November 2014): 1566–67. ",
-                  "linkTo": "https://www.jstor.org/stable/24494641?seq=1"
                 }
               ]
             },
@@ -132,8 +132,8 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "Signed in 1984, the Sino-British Joint Declaration between Britain and China defined the conditions in which Hong Kong would fall back under China&rsquo;s authority. Hong Kong would become a &ldquo;Special Administrative Region&rdquo; of China as outlined in the Declaration, where its autonomy, capitalistic economy, and partial democratic political system were to remain largely unchanged for 50 years.",
-                "To codify the Declaration, China and Hong Kong would continue to negotiate the details of a constitutional document known as Basic Law, which would help protect the rights of Hong Kong citizens from Beijing oversight and build a path to achieving universal suffrage during the 50 year transition period."
+                "Signed in 1984, the Sino-British Joint Declaration<sup>1</sup> between Britain and China defined the conditions in which Hong Kong would fall back under China&rsquo;s authority. Hong Kong would become a &ldquo;Special Administrative Region&rdquo; of China as outlined in the Declaration, where its autonomy, capitalistic economy, and partial democratic political system were to remain largely unchanged for 50 years.",
+                "To codify the Declaration, China and Hong Kong would continue to negotiate the details of a constitutional document known as Basic Law<sup>2</sup>, which would help protect the rights of Hong Kong citizens from Beijing oversight and build a path to achieving universal suffrage during the 50 year transition period."
               ],
               "resources": [
                 {
@@ -164,7 +164,7 @@
                     "<br/>Upholding national unity and territorial integrity, maintaining the prosperity and stability of Hong Kong, and taking account of its history and realities, the People’s Republic of China has decided that upon China’s resumption of the exercise of sovereignty over Hong Kong, a Hong Kong Special Administrative Region will be established in accordance with the provisions of Article 31 of the Constitution of the People’s Republic of China, and that under the principle of “one country, two systems”, the socialist system and policies will not be practised in Hong Kong. The basic policies of the People’s Republic of China regarding Hong Kong have been elaborated by the Chinese Government in the Sino-British Joint Declaration.<br>",
                     "<br/>In accordance with the Constitution of the People’s Republic of China, the National People’s Congress hereby enacts the Basic Law of the Hong Kong Special Administrative Region of the People’s Republic of China, prescribing the systems to be practised in the Hong Kong Special Administrative Region, in order to ensure the implementation of the basic policies of the People’s Republic of China regarding Hong Kong."
                   ],
-                  "citation": "Chin, Angelina Y. “Diasporic Memories and Conceptual Geography in Post-Colonial Hong Kong.” <i>Modern Asian Studies</i> 48, no. 6 (November 2014): 1566–67. ",
+                  "citation": "Chin, Angelina Y. “Diasporic Memories and Conceptual Geography in Post-Colonial Hong Kong.” <em>Modern Asian Studies</em> 48, no. 6 (November 2014): 1566–67. ",
                   "linkTo": "https://www.jstor.org/stable/24494641?seq=1"
                 },
                 {
@@ -175,11 +175,11 @@
                   "author": "Chien-Min Chao",
                   "content": [
                     "In order to justify &ldquo;one country, two systems,&rdquo; Communist China cannot avoid taking a step backward and announcing publicly that socialism has not yet been achieved in mainland China. Under these circumstances, a careful examination of &ldquo;one country, two systems&rdquo; will reveal the following characteristic:",
-                    "<br/>Unevenness:",
-                    "<br/>Historicity:<br>",
-                    "<br/>Realism: The single most important reason for &ldquo;one country and two systems&rdquo; is that socialism is not attractive to and Hong Kong. In exchange for sovereignty, Peking is willing to guarantee their present lifestyles and economic prosperity. For Hong Kong to maintain its status as an international financial centre the capitalist system should be retained. If the current system is changed artificially, its superiority and prosperity will be lost...<br>",
-                    "<br/>Transition:<br>",
-                    "<br/>Subordination:<br>"
+                    "<br/><em>Unevenness</em>—In order to account for the discrepancies and discord that might exist in a society operating under two conflicting systems, Peking has stated that the dialectical principle of the &ldquo;unity of contradictions is the basic and most important objective theoretical source of 'one country, two systems,&rdquo; thus arguing that there is unevenness in the existence and development of things. On the one hand, this interpretation conforms with Mao Tse-tung's belief that &ldquo;contradictions still prevail in a socialist society&rdquo;; on the other hand, it rejects Mao's &ldquo;theory of continued revolution under the dictatorship of the proletariat,&rdquo; proclaiming that two different systems can coexist and that obstacles to socialism do not have to be removed immediately.",
+                    "<br/><em>Historicity</em>—Although in 1895 Taiwan was ceded to Japan as a result of its military defeat of the Ch'ing government, and in 1842 Hong Kong passed into British hands, both Taiwan and Hong Kong are integral parts of Chinese territory. Peking has linked &ldquo;one country, two systems&rdquo; with Chinese history, saying that it is designed to end the national division and separation caused by the confrontation between the two parties (Nationalist and Communist). &ldquo;One country, two systems&rdquo; has been used by Peking to arouse nationalistic and patriotic sentiment among Chinese, as part of the united &ldquo;frontline&rdquo; for patriotism, for the purpose of achieving the four modernizations and ultimately the reunification of China.<br>",
+                    "<br/><em>Realism</em>—The single most important reason for &ldquo;one country and two systems&rdquo; is that socialism is not attractive to and Hong Kong. In exchange for sovereignty, Peking is willing to guarantee their present lifestyles and economic prosperity. For Hong Kong to maintain its status as an international financial centre the capitalist system should be retained. If the current system is changed artificially, its superiority and prosperity will be lost...<br>",
+                    "<br/><em>Transition</em>—According to communist theory, human society evolves through stages from primitive communism, slave society, capitalism, socialism, and ultimately to communism. A process of development takes place within each stage. Marx said that socialist society, having been born out of capitalism, still carries tinges of the old capitalist society. Mao elaborated this further by distinguishing between minimum and maximum programs for socialism. Thus, in line with Marxist theory, the current Chinese Communist leadership claims that &ldquo;one country, two systems&rdquo; acts as a &ldquo;historical transition before this country can thoroughly replace the capitalist system with a socialist system.&rdquo; In other words, the two systems will be merged into one after the transitional period.<br>",
+                    "<br/><em>Subordination</em>—The scope and definition of the autonomy of Taiwan and Hong Kong will, of course, be decided by the central government in Peking. Governments in Taiwan and Hong Kong will be subordinate governments powerless to declare war, conduct their own defense, foreign affairs, or peace negotiations. Socialism will be the main political system, because the 1 billion people on the mainland will continue to practice socialism. Capitalism will be allowed to exist as a &ldquo;supplement to the development of socialism.&rdquo;<br>"
                   ],
                   "citation": "Chao, Chien-Min. “One Country, Two Systems.” Asian Affairs: An American Review 14, no. 2 (1987): 109-113.",
                   "linkTo": "https://www.jstor.org/stable/24494641?seq=1"
@@ -195,7 +195,7 @@
                     "<br/>&ldquo;The Basic Law is a unique document. It reflects a treaty made between two nations. It deals with the relationship between the sovereign and an autonomous region which practises a different system. It stipulates the organisations and functions of the different branches of government. It sets out the rights and obligations of the citizens. Hence, it has at least three dimensions: international, domestic and constitutional. It must also be borne in mind that it was not drafted by common law lawyers. It was drafted in the Chinese language with an official English version but the Chinese version takes precedence in case of discrepancies. That being the background and features of the Basic Law, it is obvious that there will be difficulties in the interpretation of its various provisions.&rdquo;<br>",
                     "<br/>&ldquo;Alongside the huge ideological gap and the vastly different stages of development between the HKSAR and the Mainland legal systems lies the great imbalance of political powers between the Special Administrative Region and its sovereign. When there is no clear demarcation of when two systems end and one country begins, and when mutual trust has not been fully established, it is not surprising that attempts were made by both sides to explore and perhaps also to exploit the boundary separating the two systems. This inevitably leads to controversies and conflicts, and is best exemplified by the conflicts arising from the dual nature of the Basic Law as a piece of national legislation of the PRC and as a constitution of the HKSAR. In a way, the first decade of constitutional experience in Hong Kong can be said to be a story of a delicate exploration in an uncharted sea.&rdquo;<br>"
                   ],
-                  "citation": "Chan, Johannes SC. “Basic Law and Constitutional Review: The First Decade.” <i>Hong Kong Law Journal</i> 37, no. 2 (2007): 407–9.",
+                  "citation": "Chan, Johannes SC. “Basic Law and Constitutional Review: The First Decade.” <em>Hong Kong Law Journal</em> 37, no. 2 (2007): 407–9.",
                   "linkTo": "https://hub.hku.hk/bitstream/10722/87975/3/content.pdf?accept=1"
                 }
               ]
@@ -221,10 +221,22 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "The ambiguous language of the Sino-British Joint Declaration and the drafts of Basic Law reflected opposing political philosophies and opened different interpretations on the meaning of &ldquo;one country, two systems&rdquo;.",
-                "A discourse on semantics unfolded between reformists and leftists, where contrasting perspectives on the Declaration&rsquo;s language inferred competing priorities on how Hong Kong would operate under Beijing&rsquo;s control. The contradictory nature of a communist regime overseeing Hong Kong&rsquo;s democratic rights and freedoms also fostered skepticism on Beijing&rsquo;s intentions and ability to honour the agreement."
+                "The ambiguous language<sup>1</sup> of the Sino-British Joint Declaration and the drafts of Basic Law reflected opposing political philosophies and opened different interpretations on the meaning of &ldquo;one country, two systems&rdquo;.",
+                "A discourse on semantics unfolded between reformists and leftists<sup>2</sup>, where contrasting perspectives<sup>3</sup> on the Declaration&rsquo;s language inferred competing priorities on how Hong Kong would operate under Beijing&rsquo;s control. The contradictory nature<sup>4</sup> of a communist regime overseeing Hong Kong&rsquo;s democratic rights and freedoms also fostered skepticism on Beijing&rsquo;s intentions and ability to honour the agreement."
               ],
               "resources": [
+                {
+                  "type": "Journal Excerpt",
+                  "shortTitle": "Ambiguous Language",
+                  "bookTitle": "One Country, Two Systems: Hong Kong&rsquo;s Paradox of Politics and Business",
+                  "year": "1987",
+                  "author": "Leonard J. Turkel",
+                  "content": [
+                    "An inherent conflict arises within the provisions establishing the SAR and the accompanying Basic Law. Specifically, how can China promulgate and enact a Basic Law which attempts to be consistent with its Constitution and at the same time not endorse any socialist practices, especially since China's constitution is itself a communist document? This question must be resolved when China eventually drafts the SAR's Basic Law. &ldquo;One fear is that China will intentionally make the wording of the Basic Law ambiguous, which will offer an opportunity for China to undermine Hong Kong's legal system in the future.&rdquo;"
+                  ],
+                  "citation": "Turkel, Leonard J. “One Country, Two Systems: Hong Kong's Paradox of Politics and Business.” <em>NYLS Journal of International and Comparative Law</em>, 8, no. 6 (1987): 477-78. ",
+                  "linkTo": "https://digitalcommons.nyls.edu/journal_of_international_and_comparative_law/vol8/iss3/6/?utm_source=digitalcommons.nyls.edu%2Fjournal_of_international_and_comparative_law%2Fvol8%2Fiss3%2F6&utm_medium=PDF&utm_campaign=PDFCoverPages"
+                },
                 {
                   "type": "Journal Excerpt",
                   "shortTitle": "Fostering Skepticism",
@@ -235,20 +247,8 @@
                     "<br>The Joint Declaration creates a new concept of &ldquo;one country, two systems.&rdquo; This concept, while novel in its approach, fosters skepticism among experts as to the PRC's future behaviour toward Hong Kong. The marriage between the world's freest economic marketplace and the world's largest socialist economy paints an ironic picture (p. 169).<br/>",
                     "<br/>Constant tension between reformists and leftists adds to Hong Kong's insecurity over its political and economic future. After Deng leaves power, Deng's followers' continuation of Party control would assure Hong Kong that the PRC will continue to adhere to the Joint Declaration and to interpret the treaty to promote Hong Kong's autonomy. In contrast, if the leftist faction of the Communist Party gains control after Deng's departure, it is doubtful that the PRC will adhere to the intent of the Joint Declaration and it is unlikely that the PRC will interpret the treaty to afford Hong Kong significant autonomy (p. 194).<br>"
                   ],
-                  "citation": "Jay, Goldstein R. “Chinese and Western Treaty Practice: An Application to the Joint Declaration Between the People's Republic of China and Great Britain Concerning the Question of Hong Kong.” <i>American University International Law Review</i> 1, no. 1 (1986): 169, 194.",
+                  "citation": "Jay, Goldstein R. “Chinese and Western Treaty Practice: An Application to the Joint Declaration Between the People's Republic of China and Great Britain Concerning the Question of Hong Kong.” <em>American University International Law Review</em> 1, no. 1 (1986): 169, 194.",
                   "linkTo": "https://digitalcommons.wcl.american.edu/cgi/viewcontent.cgi?article=1650&context=auilr"
-                },
-                {
-                  "type": "Journal Excerpt",
-                  "shortTitle": "Ambiguous Language",
-                  "bookTitle": "One Country, Two Systems: Hong Kong&rsquo;s Paradox of Politics and Business",
-                  "year": "1987",
-                  "author": "Leonard J. Turkel",
-                  "content": [
-                    "An inherent conflict arises within the provisions establishing the SAR and the accompanying Basic Law. Specifically, how can China promulgate and enact a Basic Law which attempts to be consistent with its Constitution and at the same time not endorse any socialist practices, especially since China's constitution is itself a communist document? This question must be resolved when China eventually drafts the SAR's Basic Law. &ldquo;One fear is that China will intentionally make the wording of the Basic Law ambiguous, which will offer an opportunity for China to undermine Hong Kong's legal system in the future.&rdquo;"
-                  ],
-                  "citation": "Turkel, Leonard J. “One Country, Two Systems: Hong Kong's Paradox of Politics and Business.” <i>NYLS Journal of International and Comparative Law</i>, 8, no. 6 (1987): 477-78. ",
-                  "linkTo": "https://digitalcommons.nyls.edu/journal_of_international_and_comparative_law/vol8/iss3/6/?utm_source=digitalcommons.nyls.edu%2Fjournal_of_international_and_comparative_law%2Fvol8%2Fiss3%2F6&utm_medium=PDF&utm_campaign=PDFCoverPages"
                 },
                 {
                   "type": "Journal Excerpt",
@@ -259,7 +259,7 @@
                   "content": [
                     "Seventh, there is a problem of semantics that reflects different political philosophies and suggests profound difficulties between the &ldquo;two systems&rdquo;. differences in perceptions of key words such democratic consultation, democratic centralism, confidential crop up, sometimes unexpectedly. At times, such differences are calculative and intentional, like the interpretations given to elections and one country, two systems. The rich and the powerful say that &ldquo;elections&rdquo; need not mean direct election by the general populace; controlled indirect elections will do just fine. The intellectuals and the mass say that is not so; elections must mean first and foremost direct elections based on general franchise. When referring to the one country, two systems concept, the mainlanders emphasize &ldquo;one country,&rdquo; while the Hong Kong people stress &ldquo;two systems&rdquo;."
                   ],
-                  "citation": "Weng, Byron S. “The Hong Kong Model of ‘One Country, Two Systems.” <i>Asian Affairs: An American Review</i> 14, no. 4 (1987): 199.",
+                  "citation": "Weng, Byron S. “The Hong Kong Model of ‘One Country, Two Systems.” <em>Asian Affairs: An American Review</em> 14, no. 4 (1987): 199.",
                   "linkTo": "https://www.jstor.org/stable/30172082"
                 },
                 {
@@ -296,7 +296,7 @@
                   "content": [
                     "Pessimists, however, provide constant reminders to the business community of the political realities involved in drafting Hong Kong's Basic Law. If differences in interpretation of the Joint Declaration continue to develop with regard to how the Basic Law will be drafted and what interests will be protected, one can only speculate as to the differences that may arise when implementing the final draft of Hong Kong's new constitution in 1997. The business community must realize that no matter how non-interventionist any government may be, ultimately governments control economies based upon their political doctrines. Thus, it has been stated that if &ldquo;China can barely run one system consistently for any length of time, what hope is there for two?&rdquo;"
                   ],
-                  "citation": "Turkel, Leonard J. “One Country, Two Systems: Hong Kong's Paradox of Politics and Business.” <i>NYLS Journal of International and Comparative Law</i>, 8, no. 6 (1987): 497.",
+                  "citation": "Turkel, Leonard J. “One Country, Two Systems: Hong Kong's Paradox of Politics and Business.” <em>NYLS Journal of International and Comparative Law</em>, 8, no. 6 (1987): 497.",
                   "linkTo": "https://digitalcommons.nyls.edu/journal_of_international_and_comparative_law/vol8/iss3/6/?utm_source=digitalcommons.nyls.edu%2Fjournal_of_international_and_comparative_law%2Fvol8%2Fiss3%2F6&utm_medium=PDF&utm_campaign=PDFCoverPages"
                 }
               ]
@@ -348,7 +348,7 @@
                     "The students regarded Hu Yaobang not only as a champion of liberalisation but also as one of the few top government leaders not tainted by official corruption. Within hours of the death of this beloved figure, before official announcements had been made, students on campuses had begun posting elegies. One of the most frequently quoted poems began with the haunting couplet:<br />",
                     "Those who should have died live<br />Those who should have lived have died.<br />"
                   ],
-                  "citation": "Wagner, Marsha, and Winston Yang, eds. “Tiananmen: China&rsquo;s Struggle for Democracy, Its Prelude, Development, Aftermath, and Impact.” <i>The China Quarterly</i> 130 (1992): 48.",
+                  "citation": "Wagner, Marsha, and Winston Yang, eds. “Tiananmen: China&rsquo;s Struggle for Democracy, Its Prelude, Development, Aftermath, and Impact.” <em>The China Quarterly</em> 130 (1992): 48.",
                   "linkTo": "https://digitalcommons.law.umaryland.edu/cgi/viewcontent.cgi?article=1096&context=mscas"
                 },
                 {
@@ -364,7 +364,7 @@
                     "&ldquo;Anyone have nitroglycerin?&rdquo; Zhao Ziyang asked urgently<br />",
                     "&ldquo;I do!&rdquo; It was Qin Jiwei, who also had a heart condition. He took two pills from his briefcase and put them into Hu Yaobang&rsquo;s mouth. Then to Hu Qili, who came rushing over, he said, &ldquo;Hurry and lay Comrade Yaobang on the floor.&rdquo;"
                   ],
-                  "citation": "Zhang, Liang, Andrew J. Nathan, and E. Perry Link. Essay. <i>In The Tiananmen Papers</i>. New York, NY: Public Affairs, 2002.",
+                  "citation": "Zhang, Liang, Andrew J. Nathan, and E. Perry Link. Essay. <em>In The Tiananmen Papers</em>. New York, NY: Public Affairs, 2002.",
                   "linkTo": "https://archive.nytimes.com/www.nytimes.com/books/first/l/liang-tiananmen.html"
                 },
                 {
@@ -377,7 +377,7 @@
                     "On April 17 student mourning activities began to spread from the Beijing campuses into the nation&rsquo;s symbolic central space, Tiananmen Square. The Square lies at the geographic center of the capital city and just southeast of Zhongnanhai, where the last dynasty&rsquo;s emperors had their hunting park and where the top Communist leaders now work. Beginning with the May Fourth Movement in 1919, Tiananmen has also become a traditional site for popular protests. These protests have often been led by university students, who are especially numerous here because Beijing is the country&rsquo;s preeminent center of higher education.<br />",
                     "At People&rsquo;s University a &ldquo;Democracy Wall&rdquo; appeared on the evening of April 17. Spontaneous memorial activities took place on other campuses that until now had been quiet. In addition to pasting up eulogies, memorial couplets, and posters, students made speeches, set up symbolic biers, and delivered wreaths to the Square. Some even demanded to attend the funeral. In a single day, ninety-three handwritten memorial couplets appeared at the Beijing University of Science and Engineering."
                   ],
-                  "citation": "Zhang, Liang, Andrew J. Nathan, and E. Perry Link. Essay. <i>In The Tiananmen Papers</i>. New York, NY: Public Affairs, 2002.",
+                  "citation": "Zhang, Liang, Andrew J. Nathan, and E. Perry Link. Essay. <em>In The Tiananmen Papers</em>. New York, NY: Public Affairs, 2002.",
                   "linkTo": "https://archive.nytimes.com/www.nytimes.com/books/first/l/liang-tiananmen.html"
                 },
                 {
@@ -502,7 +502,7 @@
                     "Freedom and Democracy,",
                     "that bright flag, will higher and higher wave."
                   ],
-                  "citation": "O'Connor, Mike, and Anonymous. “Poems from Tiananmen Square.” <i>Chicago Review</i> 39, no. 3 (1993): 284–87.",
+                  "citation": "O'Connor, Mike, and Anonymous. “Poems from Tiananmen Square.” <em>Chicago Review</em> 39, no. 3 (1993): 284–87.",
                   "linkTo": "https://www.jstor.org/stable/25305772"
                 },
                 {
