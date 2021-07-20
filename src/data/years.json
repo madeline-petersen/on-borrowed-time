@@ -23,7 +23,7 @@
                   "year": "1990",
                   "author": "Christine Chua",
                   "content": [
-                    "As the 1997 expiration of the lease grew nearer, uncertainty surrounding the Colony&rsquo;s political future translated into economic insecurity, threatening the stability of the world's third most important banking and financial center. This anxiety prompted the 1982 Sino-British negotiations on the future of Hong Kong. After two years of discussion, the United Kingdom and PRC governments produced the Joint Declaration. Focusing on the paramount goal of &ldquo;maint[aining] the prosperity and stability of Hong Kong,&ldquo; both sides made important concessions during the negotiations. Britain forfeited its legal rights (pursuant to the post-Opium War treaties) to Hong Kong Island and the Kowloon Peninsula. In return, the PRC agreed that Hong Kong would be exempt from the &ldquo;socialist system and socialist politicies&rdquo; governing the mainland.<br>", 
+                    "As the 1997 expiration of the lease grew nearer, uncertainty surrounding the Colony&rsquo;s political future translated into economic insecurity, threatening the stability of the world's third most important banking and financial center. This anxiety prompted the 1982 Sino-British negotiations on the future of Hong Kong. After two years of discussion, the United Kingdom and PRC governments produced the Joint Declaration. Focusing on the paramount goal of &ldquo;maint[aining] the prosperity and stability of Hong Kong,&ldquo; both sides made important concessions during the negotiations. Britain forfeited its legal rights (pursuant to the post-Opium War treaties) to Hong Kong Island and the Kowloon Peninsula. In return, the PRC agreed that Hong Kong would be exempt from the &ldquo;socialist system and socialist politicies&rdquo; governing the mainland.<br>",
                     "<br/>[...]<br>",
                     "<br/>Thus the Joint Declaration begins with a non-compromising statement by each side, one declaring its resignation, the other its resumption of sovereignty."
                   ],
@@ -49,9 +49,7 @@
                   "bookTitle": "Geography of Hong Kong",
                   "year": "—",
                   "author": "",
-                  "content": [
-                    ""
-                  ],
+                  "content": [""],
                   "citation": "",
                   "linkTo": "https://en.wikipedia.org/wiki/Geography_of_Hong_Kong#/media/File:Map_of_Hong_Kong_18_Districts_en.svg"
                 },
@@ -176,12 +174,12 @@
                   "year": "1987",
                   "author": "Chien-Min Chao",
                   "content": [
-                   "In order to justify &ldquo;one country, two systems,&rdquo; Communist China cannot avoid taking a step backward and announcing publicly that socialism has not yet been achieved in mainland China. Under these circumstances, a careful examination of &ldquo;one country, two systems&rdquo; will reveal the following characteristic:",
-                   "<br/>Unevenness:",
-                   "<br/>Historicity:<br>",
-                   "<br/>Realism: The single most important reason for &ldquo;one country and two systems&rdquo; is that socialism is not attractive to and Hong Kong. In exchange for sovereignty, Peking is willing to guarantee their present lifestyles and economic prosperity. For Hong Kong to maintain its status as an international financial centre the capitalist system should be retained. If the current system is changed artificially, its superiority and prosperity will be lost...<br>",
-                   "<br/>Transition:<br>",
-                   "<br/>Subordination:<br>"
+                    "In order to justify &ldquo;one country, two systems,&rdquo; Communist China cannot avoid taking a step backward and announcing publicly that socialism has not yet been achieved in mainland China. Under these circumstances, a careful examination of &ldquo;one country, two systems&rdquo; will reveal the following characteristic:",
+                    "<br/>Unevenness:",
+                    "<br/>Historicity:<br>",
+                    "<br/>Realism: The single most important reason for &ldquo;one country and two systems&rdquo; is that socialism is not attractive to and Hong Kong. In exchange for sovereignty, Peking is willing to guarantee their present lifestyles and economic prosperity. For Hong Kong to maintain its status as an international financial centre the capitalist system should be retained. If the current system is changed artificially, its superiority and prosperity will be lost...<br>",
+                    "<br/>Transition:<br>",
+                    "<br/>Subordination:<br>"
                   ],
                   "citation": "Chao, Chien-Min. “One Country, Two Systems.” Asian Affairs: An American Review 14, no. 2 (1987): 109-113.",
                   "linkTo": "https://www.jstor.org/stable/24494641?seq=1"
@@ -263,7 +261,8 @@
                   ],
                   "citation": "Weng, Byron S. “The Hong Kong Model of ‘One Country, Two Systems.” <i>Asian Affairs: An American Review</i> 14, no. 4 (1987): 199.",
                   "linkTo": "https://www.jstor.org/stable/30172082"
-                },                {
+                },
+                {
                   "type": "Journal Excerpt",
                   "shortTitle": "Skepticism of the Basic Law Draft",
                   "bookTitle": "The Hong Kong Model of &ldquo;One Country, Two Systems&rdquo;: Promises and Problems",
@@ -297,7 +296,7 @@
                   "content": [
                     "Pessimists, however, provide constant reminders to the business community of the political realities involved in drafting Hong Kong's Basic Law. If differences in interpretation of the Joint Declaration continue to develop with regard to how the Basic Law will be drafted and what interests will be protected, one can only speculate as to the differences that may arise when implementing the final draft of Hong Kong's new constitution in 1997. The business community must realize that no matter how non-interventionist any government may be, ultimately governments control economies based upon their political doctrines. Thus, it has been stated that if &ldquo;China can barely run one system consistently for any length of time, what hope is there for two?&rdquo;"
                   ],
-                  "citation":"Turkel, Leonard J. “One Country, Two Systems: Hong Kong's Paradox of Politics and Business.” <i>NYLS Journal of International and Comparative Law</i>, 8, no. 6 (1987): 497.",
+                  "citation": "Turkel, Leonard J. “One Country, Two Systems: Hong Kong's Paradox of Politics and Business.” <i>NYLS Journal of International and Comparative Law</i>, 8, no. 6 (1987): 497.",
                   "linkTo": "https://digitalcommons.nyls.edu/journal_of_international_and_comparative_law/vol8/iss3/6/?utm_source=digitalcommons.nyls.edu%2Fjournal_of_international_and_comparative_law%2Fvol8%2Fiss3%2F6&utm_medium=PDF&utm_campaign=PDFCoverPages"
                 }
               ]
@@ -349,15 +348,15 @@
                     "The students regarded Hu Yaobang not only as a champion of liberalisation but also as one of the few top government leaders not tainted by official corruption. Within hours of the death of this beloved figure, before official announcements had been made, students on campuses had begun posting elegies. One of the most frequently quoted poems began with the haunting couplet:<br />",
                     "Those who should have died live<br />Those who should have lived have died.<br />"
                   ],
-                  "citation": "Wagner, Marsha, and Winston Yang, eds. “Tiananmen: China&rsquo;s Struggle for Democracy, Its Prelude, Development, Aftermath, and Impact. .” The China Quarterly 130 (1992): 48.",
-                  "linkTo": ""
+                  "citation": "Wagner, Marsha, and Winston Yang, eds. “Tiananmen: China&rsquo;s Struggle for Democracy, Its Prelude, Development, Aftermath, and Impact.” <i>The China Quarterly</i> 130 (1992): 48.",
+                  "linkTo": "https://digitalcommons.law.umaryland.edu/cgi/viewcontent.cgi?article=1096&context=mscas"
                 },
                 {
                   "type": "Book Excerpt",
                   "shortTitle": "The Death of Hu Yaobang",
-                  "bookTitle": "Tiananmen Papers",
-                  "year": "2001",
-                  "author": "Liang Zhang, Andrew J. Nathan, Perry Link, Orville Schell",
+                  "bookTitle": "The Tiananmen Papers",
+                  "year": "2002",
+                  "author": "Liang Zhang, Andrew J. Nathan, Perry E. Link, Orville Schell",
                   "content": [
                     "During this briefing, Hu Yaobang sat with a pinched look. Minister of Defense Qin Jiwei later recalled, &ldquo;I sensed something wrong about Comrade Yaobang from the time the meeting opened. His face was ashen. But he was straining to keep up appearances.&rdquo; About three quarters of an hour into the meeting, as Li Tieying was reviewing the education budgets of recent years, Hu appeared to be fading. He rose to request permission to leave. But as soon as he rose to his feet, he collapsed back into his chair.<br />",
                     "&ldquo;Comrade Ziyang ...&rdquo; His voice broke off as his hand faltered in the air, describing a semicircle. Everyone present, caught by surprise, stood up and stared at the ashen-faced Hu.<br />",
@@ -365,35 +364,37 @@
                     "&ldquo;Anyone have nitroglycerin?&rdquo; Zhao Ziyang asked urgently<br />",
                     "&ldquo;I do!&rdquo; It was Qin Jiwei, who also had a heart condition. He took two pills from his briefcase and put them into Hu Yaobang&rsquo;s mouth. Then to Hu Qili, who came rushing over, he said, &ldquo;Hurry and lay Comrade Yaobang on the floor.&rdquo;"
                   ],
-                  "citation": "Wagner, Marsha, and Winston Yang, eds. “Tiananmen: China&rsquo;s Struggle for Democracy, Its Prelude, Development, Aftermath, and Impact. .” The China Quarterly 130 (1992): 48.",
-                  "linkTo": ""
+                  "citation": "Zhang, Liang, Andrew J. Nathan, and E. Perry Link. Essay. <i>In The Tiananmen Papers</i>. New York, NY: Public Affairs, 2002.",
+                  "linkTo": "https://archive.nytimes.com/www.nytimes.com/books/first/l/liang-tiananmen.html"
                 },
                 {
                   "type": "Book Excerpt",
                   "shortTitle": "The Mourning of Hu Yaobang",
-                  "bookTitle": "Tiananmen Papers",
-                  "year": "2001",
-                  "author": "Liang Zhang, Andrew J. Nathan, Perry Link, Orville Schell",
+                  "bookTitle": "The Tiananmen Papers",
+                  "year": "2002",
+                  "author": "Liang Zhang, Andrew J. Nathan, Perry E. Link, Orville Schell",
                   "content": [
                     "On April 17 student mourning activities began to spread from the Beijing campuses into the nation&rsquo;s symbolic central space, Tiananmen Square. The Square lies at the geographic center of the capital city and just southeast of Zhongnanhai, where the last dynasty&rsquo;s emperors had their hunting park and where the top Communist leaders now work. Beginning with the May Fourth Movement in 1919, Tiananmen has also become a traditional site for popular protests. These protests have often been led by university students, who are especially numerous here because Beijing is the country&rsquo;s preeminent center of higher education.<br />",
                     "At People&rsquo;s University a &ldquo;Democracy Wall&rdquo; appeared on the evening of April 17. Spontaneous memorial activities took place on other campuses that until now had been quiet. In addition to pasting up eulogies, memorial couplets, and posters, students made speeches, set up symbolic biers, and delivered wreaths to the Square. Some even demanded to attend the funeral. In a single day, ninety-three handwritten memorial couplets appeared at the Beijing University of Science and Engineering."
                   ],
-                  "citation": "Wagner, Marsha, and Winston Yang, eds. “Tiananmen: China&rsquo;s Struggle for Democracy, Its Prelude, Development, Aftermath, and Impact. .” The China Quarterly 130 (1992): 48.",
-                  "linkTo": ""
+                  "citation": "Zhang, Liang, Andrew J. Nathan, and E. Perry Link. Essay. <i>In The Tiananmen Papers</i>. New York, NY: Public Affairs, 2002.",
+                  "linkTo": "https://archive.nytimes.com/www.nytimes.com/books/first/l/liang-tiananmen.html"
                 },
                 {
                   "type": "Article Excerpt",
                   "shortTitle": "Beijing Hints on Crackdown",
-                  "publication": "New York Times",
+                  "publication": "The New York Times",
                   "year": "1989",
                   "articleTitle": "Beijing Hints on Crackdown For Students",
                   "author": "Nicholas Kristof",
                   "content": [
-                    "On April 17 student mourning activities began to spread from the Beijing campuses into the nation&rsquo;s symbolic central space, Tiananmen Square. The Square lies at the geographic center of the capital city and just southeast of Zhongnanhai, where the last dynasty&rsquo;s emperors had their hunting park and where the top Communist leaders now work. Beginning with the May Fourth Movement in 1919, Tiananmen has also become a traditional site for popular protests. These protests have often been led by university students, who are especially numerous here because Beijing is the country&rsquo;s preeminent center of higher education.<br />",
-                    "At People&rsquo;s University a &ldquo;Democracy Wall&rdquo; appeared on the evening of April 17. Spontaneous memorial activities took place on other campuses that until now had been quiet. In addition to pasting up eulogies, memorial couplets, and posters, students made speeches, set up symbolic biers, and delivered wreaths to the Square. Some even demanded to attend the funeral. In a single day, ninety-three handwritten memorial couplets appeared at the Beijing University of Science and Engineering."
+                    "In its strongest public comment so far on the pro-democracy student demonstrations of the last 10 days, the Communist Party called tonight for &ldquo;a grave political struggle&rdquo; against student unrest.",
+                    "&ldquo;All the comrades of the party and the whole nation must understand clearly,&rdquo; a solemn television newscaster announced, &ldquo;that if we do not resolutely stop this unrest, our state will have no calm days. Our reform and modernization will depend on this struggle, and the future of our state and nation will depend on it.&rdquo;",
+                    "The longer, televised version of tonight's statement said that the party initially had been tolerant, but that after the funeral service: ",
+                    "&ldquo;A very small number of people with ulterior motives continue to make use of the desire of young students to mourn Comrade Hu Yaobang. [...] They fabricate various rumours to poison people's minds. They make use of posters to libel and slander and attack the leaders of the Communist Party and the Government. They even undisguisedly violate the Constitution, incite people to negate the party's leadership and the socialist system. In some universities, they have set up illegal organizations and taken power from official student associations. In some universities, they have seized school broadcasting systems and incited students and teachers to boycott class.&rdquo;"
                   ],
-                  "citation": "Nicholas D. Kristof, “Beijing Hints at Crackdown on Students,” New York Times, April 26, 1989",
-                  "linkTo": ""
+                  "citation": "Kristof, Nicholas D. “Beijing Hints at Crackdown on Students.” New York Times, April 26, 1989.",
+                  "linkTo": "https://www.nytimes.com/1989/04/26/world/beijing-hints-at-crackdown-on-students.html"
                 }
               ]
             },
@@ -406,6 +407,7 @@
                   "caption": "Some two hundred thousand pro-democracy students staged an unauthorized demonstration in Tiananmen Square during the funeral ceremony of the Chinese Communist Party leader and liberal reformer Hu Yaobang, on April 22, 1989.  Photograph by Catherine Henriette/AFP/Getty."
                 },
                 {
+                  "title": "Reflection",
                   "source": "car",
                   "caption": "A weary protester pleads with a PLA officer sitting in his truck to not crackdown on the student demonstrators in Tiananmen Square. (Photo by Peter Turnley/Getty Images)"
                 }
@@ -413,7 +415,6 @@
             },
             {
               "type": "reflection",
-              "title": "Reflection",
               "paragraphs": [
                 [
                   "After Hu Yaobang&rsquo;s death, there was an emerging vitality to China&rsquo;s pro-democracy movement. Overseas, Hong Kong citizens contributed to the movement by providing moral and material support; in the hopes that the reunification process would be smoother if liberal reforms could be achieved in China before the handover."
@@ -441,10 +442,13 @@
                   "shortTitle": "&ldquo;Staying&rdquo;",
                   "bookTitle": "The People&rsquo;s Republic of Amnesia",
                   "year": "2014",
-                  "author": "Author",
-                  "content": [],
+                  "author": "Louisa Lim",
+                  "content": [
+                    "In the square that night, the loudspeakers were broadcasting a warning, over and over, that &ldquo;a severe counterrevolutionary riot&rdquo; had broken out, the first time the government was using these terms. The warning stated that rioters had savagely attacked soldiers of the PLA and had burned vehicles in an attempt to subvert the People’s Republic and to overthrow the Socialist system, and it warned citizens to evacuate the square, “We cannot guarantee the safety of violators, who will be solely responsible for any consequences.” The threats of violence were no longer implicit. At the time, Zhang Ming was huddled with the other students around the Monument to the People’s Heroes as tracer bullets arced through the air, marking the steady progress of troops approaching along Chang’an Avenue.<br>",
+                    "</br>Zhang watched the advance of the troops, moving through a hail of bricks and paving stones hurled by disbelieving and irate crowds. Some 25 years later, he is still moved to tears at the memory of what he saw, such as the sight of one young man being carried to an ambulance just outside the square, a red blossom spreading across his chest. “I had thought death would be terrifying, but he looked as though he were sleeping.” Zhang remembers the tense wait while negotiations were underway for safe passage for the remaining students from Tiananmen Square. As the students straggled out of the square hand in hand, singing the “Internationale” and the Chinese national anthem, tears poured down their cheeks."
+                  ],
                   "citation": "",
-                  "linkTo": ""
+                  "linkTo": "https://www.chinafile.com/library/excerpts/staying-excerpt-peoples-republic-amnesia"
                 },
                 {
                   "type": "Poem",
@@ -498,29 +502,29 @@
                     "Freedom and Democracy,",
                     "that bright flag, will higher and higher wave."
                   ],
-                  "citation": "",
-                  "linkTo": ""
+                  "citation": "O'Connor, Mike, and Anonymous. “Poems from Tiananmen Square.” <i>Chicago Review</i> 39, no. 3 (1993): 284–87.",
+                  "linkTo": "https://www.jstor.org/stable/25305772"
                 },
                 {
-                  "type": "Book Excerpt",
+                  "type": "Article Excerpt",
                   "shortTitle": "Capturing Tank Man",
-                  "bookTitle": "The Documentary Impulse",
-                  "articleTitle": "",
+                  "articleTitle": "How Stuart Franklin Took His Take Man Photograph",
+                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
                   "year": "2016",
-                  "author": "Author",
-                  "content": [],
-                  "citation": "",
-                  "linkTo": ""
+                  "author": "Phaidon",
+                  "content": [
+                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                  ],
+                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
+                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
                 },
                 {
                   "type": "Imagery",
                   "shortTitle": "Eyewitness Accounts of Massacre",
                   "articleTitle": "Eyewitness Accounts of Massacre",
                   "publication": "Asian Cha",
-                  "year": "1989",
-                  "author": "Scott Savitt",
-                  "preamble": "&ldquo;Tonight Marshall Law was Imposed&rdquo; was one of a collection of anonymously written poems posted around Tiananmen Square in the lead up to the military crackdown. These poems were later gathered from the Square, faxed to Hong Kong, and then to Taiwan, where they were published in the China Times and translated into multiple foreign languages.",
-                  "content": ["tanks", "car"],
+                  "year": "",
+                  "author": "",
                   "citation": "",
                   "linkTo": ""
                 }
@@ -989,9 +993,13 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["Pro-Beijing advocates suggested that other countries operating under democratic systems had similar sedition bills implemented. However, opponents felt that the bill was unprincipled, particularly because Hong Kong did not have other democratic qualities such as &ldquo;regular elections, a powerful free press, or vibrant civil society&rdquo; (Sansani, 2003) to counteract any arbitrary application of Article 23. Implementing the sedition law without these democratic qualities could lead to draconian consequences, since the ambiguous language of the bill could be legally misinterpreted to suppress pro-democratic activities."],
-                ["&ldquo;Opponents to the implementation of a broad Article 23 argue that the aforementioned countries balance comparable legislation with democratic attributes including, inter alia, regular elections, a vibrant civil society, and a powerful, free press, each of which Hong Kong lacks. In theory, therefore, any arbitrary application of anti- sedition or subversion laws in those countries would be subject to plausible counter-pressures by one or all of the available democratic elements.&rdquo;",
-                "&ldquo;Opponents criticize the glaring ambiguities in the Consultation Document and argue that in the context of treason, secession, sedition, subversion, theft of state secrets, and increased police powers, the smallest errors in legal drafting or in the legal definitions provided by the new laws can easily have draconian consequences.&rdquo;"]
+                [
+                  "Pro-Beijing advocates suggested that other countries operating under democratic systems had similar sedition bills implemented. However, opponents felt that the bill was unprincipled, particularly because Hong Kong did not have other democratic qualities such as &ldquo;regular elections, a powerful free press, or vibrant civil society&rdquo; (Sansani, 2003) to counteract any arbitrary application of Article 23. Implementing the sedition law without these democratic qualities could lead to draconian consequences, since the ambiguous language of the bill could be legally misinterpreted to suppress pro-democratic activities."
+                ],
+                [
+                  "&ldquo;Opponents to the implementation of a broad Article 23 argue that the aforementioned countries balance comparable legislation with democratic attributes including, inter alia, regular elections, a vibrant civil society, and a powerful, free press, each of which Hong Kong lacks. In theory, therefore, any arbitrary application of anti- sedition or subversion laws in those countries would be subject to plausible counter-pressures by one or all of the available democratic elements.&rdquo;",
+                  "&ldquo;Opponents criticize the glaring ambiguities in the Consultation Document and argue that in the context of treason, secession, sedition, subversion, theft of state secrets, and increased police powers, the smallest errors in legal drafting or in the legal definitions provided by the new laws can easily have draconian consequences.&rdquo;"
+                ]
               ]
             }
           ]
@@ -1002,7 +1010,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["Appointed as Secretary for Security under Chief Executive Tung Chee-hwa&rsquo;s administration, Regina Ip became a controversial political figure for her fervent support for Article 23. Widely criticised for her aggressive approach to codifying the bill, Ip was deeply unpopular and perceived as pushing Beijing&rsquo;s agenda in the Hong Kong legislature.", "In addition to the widespread concern on the proposed bill was a growing dissatisfaction with the administration&rsquo;s response to the financial crisis and the SARS pandemic. Underlying this rising frustration felt by the Hong Kong people was an economic malaise that remained unresolved."],
+              "paragraphs": [
+                "Appointed as Secretary for Security under Chief Executive Tung Chee-hwa&rsquo;s administration, Regina Ip became a controversial political figure for her fervent support for Article 23. Widely criticised for her aggressive approach to codifying the bill, Ip was deeply unpopular and perceived as pushing Beijing&rsquo;s agenda in the Hong Kong legislature.",
+                "In addition to the widespread concern on the proposed bill was a growing dissatisfaction with the administration&rsquo;s response to the financial crisis and the SARS pandemic. Underlying this rising frustration felt by the Hong Kong people was an economic malaise that remained unresolved."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1034,8 +1045,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["Frustrations directed towards a growing pandemic, diminishing economy, and inept government reached a boiling point with the proposed implementation of Article 23. The convergence of these events forced Hong Kong people to re-evaluate their relationship with Beijing for the first time since the handover, inevitably leading to the largest demonstration in the region to-date."],
-                ["&ldquo;A confluence of factors contributed to the eruption of political discontent this summer in Hong Kong, long described as generally apolitical. Conventional wisdom has attributed the public’s disaffection to economic malaise. The economic crisis that hit the region in 1997-98 certainly affected the livelihoods and mood of Hong Kong’s population.&rdquo;"]
+                [
+                  "Frustrations directed towards a growing pandemic, diminishing economy, and inept government reached a boiling point with the proposed implementation of Article 23. The convergence of these events forced Hong Kong people to re-evaluate their relationship with Beijing for the first time since the handover, inevitably leading to the largest demonstration in the region to-date."
+                ],
+                [
+                  "&ldquo;A confluence of factors contributed to the eruption of political discontent this summer in Hong Kong, long described as generally apolitical. Conventional wisdom has attributed the public’s disaffection to economic malaise. The economic crisis that hit the region in 1997-98 certainly affected the livelihoods and mood of Hong Kong’s population.&rdquo;"
+                ]
               ]
             }
           ]
@@ -1043,11 +1058,13 @@
         {
           "title": "A Historic Demonstration",
           "pages": [
-
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["The re-emergence of Article 23 in the proposed National Security Bill was highly criticised and ignited a massive demonstration. On July 1, 2003, over 500,000 people poured onto the streets of Hong Kong to protest the government&rsquo;s attempt to implement the ambiguously defined security law.", "This historical protest was the largest to be conducted in Hong Kong since the Tiananmen Square Massacre, and the most visible demonstration of Hong Kong people exercising their right to protest since the 1997 handover."],
+              "paragraphs": [
+                "The re-emergence of Article 23 in the proposed National Security Bill was highly criticised and ignited a massive demonstration. On July 1, 2003, over 500,000 people poured onto the streets of Hong Kong to protest the government&rsquo;s attempt to implement the ambiguously defined security law.",
+                "This historical protest was the largest to be conducted in Hong Kong since the Tiananmen Square Massacre, and the most visible demonstration of Hong Kong people exercising their right to protest since the 1997 handover."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1079,8 +1096,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["The overwhelming criticism directed towards the implementation of Article 23 was a sign of the Hong Kong people keeping Beijing accountable to the idea of &ldquo;one country, two systems&rdquo;, and the promise that their rights and freedoms would remain unchanged for fifty years. As a result, the historic nature of the protests was a symbolic reminder that Hong Kong people could not be characterised as apolitical, and would not tolerate the erosion of their democratic values."],
-                ["&ldquo;The events triggered by July 1 have &ldquo;mainstreamed&rdquo; what was formerly seen to be an activist agenda. At the same time that Hong Kong is experiencing a renewed interest in democratic governance, China is exploring its own political development. The full impact of Hong Kong&rsquo;s &ldquo;summer of discontent&rdquo; continues to unfold. One thing, though, is certain: Hong Kong&rsquo;s residents can no longer be characterised as &ldquo;apolitical&rdquo;.&rdquo;"]
+                [
+                  "The overwhelming criticism directed towards the implementation of Article 23 was a sign of the Hong Kong people keeping Beijing accountable to the idea of &ldquo;one country, two systems&rdquo;, and the promise that their rights and freedoms would remain unchanged for fifty years. As a result, the historic nature of the protests was a symbolic reminder that Hong Kong people could not be characterised as apolitical, and would not tolerate the erosion of their democratic values."
+                ],
+                [
+                  "&ldquo;The events triggered by July 1 have &ldquo;mainstreamed&rdquo; what was formerly seen to be an activist agenda. At the same time that Hong Kong is experiencing a renewed interest in democratic governance, China is exploring its own political development. The full impact of Hong Kong&rsquo;s &ldquo;summer of discontent&rdquo; continues to unfold. One thing, though, is certain: Hong Kong&rsquo;s residents can no longer be characterised as &ldquo;apolitical&rdquo;.&rdquo;"
+                ]
               ]
             }
           ]
@@ -1091,7 +1112,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["In the wake of the mass demonstrations, several principal Hong Kong officials announced their resignation. On July 16, 2003, Regina Ip formally stated her decision to step down, citing personal reasons for her departure.", "The abrupt resignation of several key officials further amplified the administration&rsquo;s inadequacy, and its continued struggle to manage the political state of Hong Kong. Without enough votes to move the bill forward, Tung was forced to defer the legislation."],
+              "paragraphs": [
+                "In the wake of the mass demonstrations, several principal Hong Kong officials announced their resignation. On July 16, 2003, Regina Ip formally stated her decision to step down, citing personal reasons for her departure.",
+                "The abrupt resignation of several key officials further amplified the administration&rsquo;s inadequacy, and its continued struggle to manage the political state of Hong Kong. Without enough votes to move the bill forward, Tung was forced to defer the legislation."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1123,8 +1147,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["The resignation of two key officials was a moral victory for the historic demonstration and a signal to Beijing that Hong Kong&rsquo;s collective identity was still grounded in democratic values and a vibrant civil society. As the protests gained momentum, Beijing closely monitored the political situation, and began revisiting a familiar question — whether to suppress or concede to an emerging democratic movement."],
-                ["&ldquo;Despite the crisis of confidence that the Hong Kong government faced, the central government remained relatively quiet after the protests. In the immediate aftermath of the July protest, and even after the Hong Kong government was forced to formally withdraw its Article 23 proposals in early September, the central government continued to assess the situation and largely kept its own counsel, largely refraining from public comment on the situation in Hong Kong.&rdquo;"]
+                [
+                  "The resignation of two key officials was a moral victory for the historic demonstration and a signal to Beijing that Hong Kong&rsquo;s collective identity was still grounded in democratic values and a vibrant civil society. As the protests gained momentum, Beijing closely monitored the political situation, and began revisiting a familiar question — whether to suppress or concede to an emerging democratic movement."
+                ],
+                [
+                  "&ldquo;Despite the crisis of confidence that the Hong Kong government faced, the central government remained relatively quiet after the protests. In the immediate aftermath of the July protest, and even after the Hong Kong government was forced to formally withdraw its Article 23 proposals in early September, the central government continued to assess the situation and largely kept its own counsel, largely refraining from public comment on the situation in Hong Kong.&rdquo;"
+                ]
               ]
             }
           ]
@@ -1135,7 +1163,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["On September 5, 2003, the Hong Kong administration announced the indefinite withdrawal of the Article 23 legislation. The administration attempted to keep a low-profile by making concessions with the Hong Kong people through economic support.","Despite the economic assistance from Beijing, the record voter turnout for the District Council elections in November, 2003, proved that people remained dissatisfied with the Tung administration and repeated their demands for democratisation."],
+              "paragraphs": [
+                "On September 5, 2003, the Hong Kong administration announced the indefinite withdrawal of the Article 23 legislation. The administration attempted to keep a low-profile by making concessions with the Hong Kong people through economic support.",
+                "Despite the economic assistance from Beijing, the record voter turnout for the District Council elections in November, 2003, proved that people remained dissatisfied with the Tung administration and repeated their demands for democratisation."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1167,8 +1198,13 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["The indefinite withdrawal of Article 23 was a victory for the pro-democracy movement, and proved that political protests, inspired by mass activism, could have a major influence on legislation.","Beijing&rsquo;s attempt to establish political harmony by providing economic assistance—instead of safeguarding the rights of Hong Kong—showed how heavily the Pro-Beijing conservative Party had underestimated what Hong Kong people genuinely desired. The overwhelming response to the district elections was a rebuke of Beijing&rsquo;s emerging influence, and further cemented the region&rsquo;s democratic identity."],
-                ["&ldquo;The record voter turnout rate was the most important feature of the 2003 District Council elections (see Tables 3 and 4). After the July 1 massive protest rally, Hong Kong people came out to vote in the local elections to express their dissatisfaction with the government and to repeat their demands for democratization. While the pro-Beijing united front had tried to explain the participation in the protest rally as an expression of concern over current economic difficulties, noting that people had various types of grievances, the record voter turnout rate was a clear indication that people remained dissatisfied with the Tung administration, even though Beijing strongly backed Tung and had provided economic assistance for Hong Kong.&rdquo;"]
+                [
+                  "The indefinite withdrawal of Article 23 was a victory for the pro-democracy movement, and proved that political protests, inspired by mass activism, could have a major influence on legislation.",
+                  "Beijing&rsquo;s attempt to establish political harmony by providing economic assistance—instead of safeguarding the rights of Hong Kong—showed how heavily the Pro-Beijing conservative Party had underestimated what Hong Kong people genuinely desired. The overwhelming response to the district elections was a rebuke of Beijing&rsquo;s emerging influence, and further cemented the region&rsquo;s democratic identity."
+                ],
+                [
+                  "&ldquo;The record voter turnout rate was the most important feature of the 2003 District Council elections (see Tables 3 and 4). After the July 1 massive protest rally, Hong Kong people came out to vote in the local elections to express their dissatisfaction with the government and to repeat their demands for democratization. While the pro-Beijing united front had tried to explain the participation in the protest rally as an expression of concern over current economic difficulties, noting that people had various types of grievances, the record voter turnout rate was a clear indication that people remained dissatisfied with the Tung administration, even though Beijing strongly backed Tung and had provided economic assistance for Hong Kong.&rdquo;"
+                ]
               ]
             }
           ]
@@ -1179,7 +1215,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["The National Security Bill&rsquo;s successful withdrawal led political activists to return to the ongoing debate regarding Hong Kong&rsquo;s pace of democratisation. With newfound political momentum, pro-democracy advocates shifted their focus away from Article 23 and revisited the &ldquo;ultimate aim&rdquo; of embracing universal suffrage as defined in Basic Law&rsquo;s Article 45 and 68.","Achieving universal suffrage would primarily depend on Beijing adhering to its promised pace of democratisation for two upcoming political milestones—the 2004 Legislative Council election and the 2007 Chief Executive election."],
+              "paragraphs": [
+                "The National Security Bill&rsquo;s successful withdrawal led political activists to return to the ongoing debate regarding Hong Kong&rsquo;s pace of democratisation. With newfound political momentum, pro-democracy advocates shifted their focus away from Article 23 and revisited the &ldquo;ultimate aim&rdquo; of embracing universal suffrage as defined in Basic Law&rsquo;s Article 45 and 68.",
+                "Achieving universal suffrage would primarily depend on Beijing adhering to its promised pace of democratisation for two upcoming political milestones—the 2004 Legislative Council election and the 2007 Chief Executive election."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1211,8 +1250,13 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["After the historic demonstrations in 2003, the most debated political dilemma was whether Hong Kong would be able to elect their Chief Executive in 2007 through universal suffrage. This particular political milestone marked the 10 year anniversary of the handover and represented the earliest date that Basic Law promised universal suffrage could be achieved in Hong Kong.","Despite being considered as constitutional reform by certain observers, a pathway to universal suffrage is actually built into Basic Law, and therefore, is a right that Hong Kong citizens are entitled to. In order to keep Beijing accountable to this promise, Hong Kong would need to ensure that the pace of democratization would remain unobstructed as it enters into the 2007 Chief Executive Election."],
-                ["&ldquo;Whether Hong Kong will go ahead and embrace fully democratic elections is the first and perhaps the most important question on the HKSAR’s political agenda. Although this is certainly within the ambit of what Hong Kong political leaders and observers mean when they refer to “constitutional reform”, the election of the Chief Executive and Legislative Council through universal suffrage is fully consistent with the Basic Law as it currently exists and, therefore, is not, strictly speaking, a question of constitutional reform.&rdquo;"]
+                [
+                  "After the historic demonstrations in 2003, the most debated political dilemma was whether Hong Kong would be able to elect their Chief Executive in 2007 through universal suffrage. This particular political milestone marked the 10 year anniversary of the handover and represented the earliest date that Basic Law promised universal suffrage could be achieved in Hong Kong.",
+                  "Despite being considered as constitutional reform by certain observers, a pathway to universal suffrage is actually built into Basic Law, and therefore, is a right that Hong Kong citizens are entitled to. In order to keep Beijing accountable to this promise, Hong Kong would need to ensure that the pace of democratization would remain unobstructed as it enters into the 2007 Chief Executive Election."
+                ],
+                [
+                  "&ldquo;Whether Hong Kong will go ahead and embrace fully democratic elections is the first and perhaps the most important question on the HKSAR’s political agenda. Although this is certainly within the ambit of what Hong Kong political leaders and observers mean when they refer to “constitutional reform”, the election of the Chief Executive and Legislative Council through universal suffrage is fully consistent with the Basic Law as it currently exists and, therefore, is not, strictly speaking, a question of constitutional reform.&rdquo;"
+                ]
               ]
             }
           ]
@@ -1230,7 +1274,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["In 2007, the Standing Committee of the National People’s Congress (NPCSC) suggested a timetable to implement steps towards universal suffrage beginning with the nomination process for Chief Executive candidates in 2017.","In anticipation, professors Benny Tai, Chan Kin-man, and reverend Chu Yiu-ming organised a movement called Occupy Central Love and Peace—the goal was to achieve &ldquo;genuine universal suffrage&rdquo; by mobilising people to participate in a civil referendum and, if necessary, through civil disobedience."],
+              "paragraphs": [
+                "In 2007, the Standing Committee of the National People’s Congress (NPCSC) suggested a timetable to implement steps towards universal suffrage beginning with the nomination process for Chief Executive candidates in 2017.",
+                "In anticipation, professors Benny Tai, Chan Kin-man, and reverend Chu Yiu-ming organised a movement called Occupy Central Love and Peace—the goal was to achieve &ldquo;genuine universal suffrage&rdquo; by mobilising people to participate in a civil referendum and, if necessary, through civil disobedience."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1262,8 +1309,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["If the demands of Occupy Central were not met, the plan was to resort to civil disobedience by staging a peaceful sit-in at the heart of Hong Kong's financial district. Initially, the idea of Occupy Central was praised by pro-democracy advocates for its ingenuity, spirit, and novelty. But over time, criticism began to emerge. Moderates feared that a peaceful occupation was an impractical course of action, while student protestors desired a more radical response to the government."],
-                ["&ldquo;According to its final plan, protesters would stage a peaceful sit-in on a major road in Central, Hong Kong’s financial heart, for two to three days until their orderly removal and arrest by the police – hence the name “Occupy Central with Love and Peace”[...] to mark the rational and non-violent nature of civil disobedience. Tai’s proposal was at first welcomed by democracy supporters for its spirit and novelty, only to gain lukewarm support after it was criticised for being too radical and impractical on the one hand, and too docile, self-limiting, and distant from the youth on the other.&ldquo;"]
+                [
+                  "If the demands of Occupy Central were not met, the plan was to resort to civil disobedience by staging a peaceful sit-in at the heart of Hong Kong's financial district. Initially, the idea of Occupy Central was praised by pro-democracy advocates for its ingenuity, spirit, and novelty. But over time, criticism began to emerge. Moderates feared that a peaceful occupation was an impractical course of action, while student protestors desired a more radical response to the government."
+                ],
+                [
+                  "&ldquo;According to its final plan, protesters would stage a peaceful sit-in on a major road in Central, Hong Kong’s financial heart, for two to three days until their orderly removal and arrest by the police – hence the name “Occupy Central with Love and Peace”[...] to mark the rational and non-violent nature of civil disobedience. Tai’s proposal was at first welcomed by democracy supporters for its spirit and novelty, only to gain lukewarm support after it was criticised for being too radical and impractical on the one hand, and too docile, self-limiting, and distant from the youth on the other.&ldquo;"
+                ]
               ]
             }
           ]
@@ -1274,7 +1325,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["As promised, Hong Kong opened a consultation period to discuss the possibility of implementing a new Chief Executive electoral process for 2017. In response, pro-democracy lawmakers provided different electoral recommendations to the Hong Kong government, in an attempt to formally implement a form of  &ldquo;genuine universal suffrage.&rdquo;", "At the same time, Beijing released a White Paper laying out their re-interpretation of the &ldquo;one country, two systems&rdquo; model, specifically identifying that the Hong Kong courts will not be the &ldquo;guardians of the rule of law&rdquo;. Rather, the NPCSC will have the final say on how the &ldquo;one country, two systems&rdquo; model will be exercised in the region."],
+              "paragraphs": [
+                "As promised, Hong Kong opened a consultation period to discuss the possibility of implementing a new Chief Executive electoral process for 2017. In response, pro-democracy lawmakers provided different electoral recommendations to the Hong Kong government, in an attempt to formally implement a form of  &ldquo;genuine universal suffrage.&rdquo;",
+                "At the same time, Beijing released a White Paper laying out their re-interpretation of the &ldquo;one country, two systems&rdquo; model, specifically identifying that the Hong Kong courts will not be the &ldquo;guardians of the rule of law&rdquo;. Rather, the NPCSC will have the final say on how the &ldquo;one country, two systems&rdquo; model will be exercised in the region."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1306,8 +1360,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["The release of the White Paper was intentionally timed to coincide with the ongoing universal suffrage debate in 2017. Beijing made it clear that the NPC Standing Committee had full authority to not only interpret the definition of universal suffrage, but also define when “one country” takes precedence over “two systems”. The sharp change of tone signaled Beijing’s tighter grip on the semi-autonomous region,  making the path towards achieving a greater degree of democracy more difficult."],
-                ["&ldquo;In a sharp change of tone, Hong Kong people were now being told in the White Paper that all authority for the Hong Kong model comes from Beijing. Some Hong Kong people were said to have “confused and lopsided” views. The White Paper appears to nearly dismiss the continued importance of the Sino-British Joint Declaration, claiming Beijing as the sole authority for the “one country, two systems” policy. As the sole source of this policy, Beijing was said to have the authority to interpret or amend the Basic Law as it chooses.&ldquo;"]
+                [
+                  "The release of the White Paper was intentionally timed to coincide with the ongoing universal suffrage debate in 2017. Beijing made it clear that the NPC Standing Committee had full authority to not only interpret the definition of universal suffrage, but also define when “one country” takes precedence over “two systems”. The sharp change of tone signaled Beijing’s tighter grip on the semi-autonomous region,  making the path towards achieving a greater degree of democracy more difficult."
+                ],
+                [
+                  "&ldquo;In a sharp change of tone, Hong Kong people were now being told in the White Paper that all authority for the Hong Kong model comes from Beijing. Some Hong Kong people were said to have “confused and lopsided” views. The White Paper appears to nearly dismiss the continued importance of the Sino-British Joint Declaration, claiming Beijing as the sole authority for the “one country, two systems” policy. As the sole source of this policy, Beijing was said to have the authority to interpret or amend the Basic Law as it chooses.&ldquo;"
+                ]
               ]
             }
           ]
@@ -1318,7 +1376,9 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["From June 20 to 29, an unofficial pro-democracy referendum organised by Occupy Central Love and Peace (OCLP) opened in Hong Kong attracting an overwhelming turnout. The referendum offered voters three reform proposals for selecting candidates for the Chief Executive election in 2017, all of which included an element of civic nomination that Beijing was opposed to. Nearly 800,000 people turned out for the unofficial referendum, and voted for their preferred election process for filling the Chief Executive&rsquo;s office."],
+              "paragraphs": [
+                "From June 20 to 29, an unofficial pro-democracy referendum organised by Occupy Central Love and Peace (OCLP) opened in Hong Kong attracting an overwhelming turnout. The referendum offered voters three reform proposals for selecting candidates for the Chief Executive election in 2017, all of which included an element of civic nomination that Beijing was opposed to. Nearly 800,000 people turned out for the unofficial referendum, and voted for their preferred election process for filling the Chief Executive&rsquo;s office."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1350,8 +1410,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["The civic referendum by the OCLP generated a mixture of responses and indicated that Hong Kong people had varying perceptions of what electoral reform should look like. Despite the varying opinions, voters overwhelmingly agreed that “genuine” universal suffrage meant that anyone should be able to run as a candidate, and that political screening from Beijing at the nomination stage would contradict the purpose of having an open election."],
-                ["The result indicates that although Hong Kong people may have diverse views on the electoral reform proposals, they have a clear bottom line – other than one person, one vote, universal suffrage should allow people from different backgrounds to enter into the election thus providing truly meaningful choices for the voters. Those who claim that even a non-genuine universal suffrage should be “accepted temporarily” have been defeated by the poll results."]
+                [
+                  "The civic referendum by the OCLP generated a mixture of responses and indicated that Hong Kong people had varying perceptions of what electoral reform should look like. Despite the varying opinions, voters overwhelmingly agreed that “genuine” universal suffrage meant that anyone should be able to run as a candidate, and that political screening from Beijing at the nomination stage would contradict the purpose of having an open election."
+                ],
+                [
+                  "The result indicates that although Hong Kong people may have diverse views on the electoral reform proposals, they have a clear bottom line – other than one person, one vote, universal suffrage should allow people from different backgrounds to enter into the election thus providing truly meaningful choices for the voters. Those who claim that even a non-genuine universal suffrage should be “accepted temporarily” have been defeated by the poll results."
+                ]
               ]
             }
           ]
@@ -1362,7 +1426,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["On August 31, The NPC Standing Committee announced a decision that would allow all Hong Kong permanent residents to vote in the upcoming Chief Executive election. However, the election committee—composed primarily of Beijing loyalists—would pre-select the candidates as a part of the nomination process.","At the same time, the NPC Standing Committee suggested drastically increasing the nomination endorsement threshold from 12.5% to 50%, making it nearly impossible for any opposition democrats to be considered a candidate. This conservative decision would provide the Beijing government even more control over Hong Kong's leadership and democratic affairs."],
+              "paragraphs": [
+                "On August 31, The NPC Standing Committee announced a decision that would allow all Hong Kong permanent residents to vote in the upcoming Chief Executive election. However, the election committee—composed primarily of Beijing loyalists—would pre-select the candidates as a part of the nomination process.",
+                "At the same time, the NPC Standing Committee suggested drastically increasing the nomination endorsement threshold from 12.5% to 50%, making it nearly impossible for any opposition democrats to be considered a candidate. This conservative decision would provide the Beijing government even more control over Hong Kong's leadership and democratic affairs."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1394,8 +1461,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["By imposing tighter restrictions on the nomination process, Beijing’s interpretation of democracy diminishes the role of “universal suffrage” in order to “safeguard” civic opinion. However, this is diametrically opposed to Hong Kong’s general consensus that genuine universal suffrage ensures an open election that enables anyone to vote and run for office. The diverging interpretation of the definition of “democracy” could only be reconciled by determining Beijing’s degree of control—or if any at all— on Hong Kong’s elections."],
-                ["&ldquo;In blocking opposition candidates, Beijing dismisses the widely recognized international view that universal suffrage requires not only that everyone can vote, but also that they be given a free choice of candidates, without discrimination for political opinion or otherwise.&rdquo;"]
+                [
+                  "By imposing tighter restrictions on the nomination process, Beijing’s interpretation of democracy diminishes the role of “universal suffrage” in order to “safeguard” civic opinion. However, this is diametrically opposed to Hong Kong’s general consensus that genuine universal suffrage ensures an open election that enables anyone to vote and run for office. The diverging interpretation of the definition of “democracy” could only be reconciled by determining Beijing’s degree of control—or if any at all— on Hong Kong’s elections."
+                ],
+                [
+                  "&ldquo;In blocking opposition candidates, Beijing dismisses the widely recognized international view that universal suffrage requires not only that everyone can vote, but also that they be given a free choice of candidates, without discrimination for political opinion or otherwise.&rdquo;"
+                ]
               ]
             }
           ]
@@ -1406,7 +1477,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["In late September, an emerging student-led movement, conducted by Joshua Wong, Nathan Law, and others, protested the NPC Standing Committee’s decision to rule out an open nomination for the 2017 election. To capitalize on this momentum, the Occupy Central organizers accelerated the start date of their long-awaited civil disobedience campaign. Mobilizing supporters, pro-democracy protesters started to occupy major arteries within commercial centres, such as Central, Causeway Bay, Admiralty, and Mong Kok.","The movement escalated on September 28, with police firing tear gas and launching baton charges at peaceful protesters who used multi-coloured umbrellas to shield against these heavy-handed tactics. In the following days, demonstrations led by both students and Occupy Central organizers coalesced into a fragmented resistance otherwise known as the Umbrella Movement."],
+              "paragraphs": [
+                "In late September, an emerging student-led movement, conducted by Joshua Wong, Nathan Law, and others, protested the NPC Standing Committee’s decision to rule out an open nomination for the 2017 election. To capitalize on this momentum, the Occupy Central organizers accelerated the start date of their long-awaited civil disobedience campaign. Mobilizing supporters, pro-democracy protesters started to occupy major arteries within commercial centres, such as Central, Causeway Bay, Admiralty, and Mong Kok.",
+                "The movement escalated on September 28, with police firing tear gas and launching baton charges at peaceful protesters who used multi-coloured umbrellas to shield against these heavy-handed tactics. In the following days, demonstrations led by both students and Occupy Central organizers coalesced into a fragmented resistance otherwise known as the Umbrella Movement."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1438,8 +1512,13 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["Unlike Occupy Central, the Umbrella Movement was not a pre-orchestrated campaign. Instead, it was guided by a new generation of pro-democracy advocates born in the threshold of the 1997 handover, who had “no memories of a British Hong Kong and no attachment to mainland China”. With the emergence of a new generation of advocates, the pro-democracy movement’s spirit was evolving, from its non-confrontational beginnings into a more disruptive resistance embodied by the new Umbrella Movement."],
-                ["&ldquo;While all walks of life are involved in the protests, those most deeply invested are students. These are the twenty-somethings whom Financial Times correspondent Ben Bland labeled “Generation HK” in his book of the same title: the citizens with no memories of a British Hong Kong and no attachment to mainland China, born in the confused threshold around the time of the handover. It is this generation, the people who will be in their 50s when Hong Kong loses its status as a Special Administrative Region, that have the most to lose.&rdquo;","&ldquo;But, from Hong Kong’s most recent protest, a rallying cry has emerged. It is a unified shout to safeguard Hong Kong’s unique identity and position in the modern world, to not let forces beyond its borders shape its destiny anymore. As the noose tightens around Hong Kong, what is at stake is more than anything politics can define. The people are fighting to preserve the essence of what it means to be a “Hongkonger.”&rdquo;"]
+                [
+                  "Unlike Occupy Central, the Umbrella Movement was not a pre-orchestrated campaign. Instead, it was guided by a new generation of pro-democracy advocates born in the threshold of the 1997 handover, who had “no memories of a British Hong Kong and no attachment to mainland China”. With the emergence of a new generation of advocates, the pro-democracy movement’s spirit was evolving, from its non-confrontational beginnings into a more disruptive resistance embodied by the new Umbrella Movement."
+                ],
+                [
+                  "&ldquo;While all walks of life are involved in the protests, those most deeply invested are students. These are the twenty-somethings whom Financial Times correspondent Ben Bland labeled “Generation HK” in his book of the same title: the citizens with no memories of a British Hong Kong and no attachment to mainland China, born in the confused threshold around the time of the handover. It is this generation, the people who will be in their 50s when Hong Kong loses its status as a Special Administrative Region, that have the most to lose.&rdquo;",
+                  "&ldquo;But, from Hong Kong’s most recent protest, a rallying cry has emerged. It is a unified shout to safeguard Hong Kong’s unique identity and position in the modern world, to not let forces beyond its borders shape its destiny anymore. As the noose tightens around Hong Kong, what is at stake is more than anything politics can define. The people are fighting to preserve the essence of what it means to be a “Hongkonger.”&rdquo;"
+                ]
               ]
             }
           ]
@@ -1450,7 +1529,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["In the following two months, the &ldquo;Umbrella Generation&rdquo; increasingly became at the forefront of the movement for genuine universal suffrage. Formed predominantly by young people, the Umbrella Generation was leaderless, more radical, and more tolerant of employing disruptive methods to vocalize their demands.","Episodes of conflict transpired on the streets between pro-democracy protesters, riot police officers, and anti-protest supporters resulting in injuries, assaults, and arrests. The original mandate of &ldquo;nonviolent civil disobedience&rdquo; issued by Occupy Central was shifting into a new form of political awakening led by younger protesters prepared to resist through physical confrontation."],
+              "paragraphs": [
+                "In the following two months, the &ldquo;Umbrella Generation&rdquo; increasingly became at the forefront of the movement for genuine universal suffrage. Formed predominantly by young people, the Umbrella Generation was leaderless, more radical, and more tolerant of employing disruptive methods to vocalize their demands.",
+                "Episodes of conflict transpired on the streets between pro-democracy protesters, riot police officers, and anti-protest supporters resulting in injuries, assaults, and arrests. The original mandate of &ldquo;nonviolent civil disobedience&rdquo; issued by Occupy Central was shifting into a new form of political awakening led by younger protesters prepared to resist through physical confrontation."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1482,8 +1564,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["In retrospect, the Umbrella Movement was considered a pivotal “coming-of-age” moment for the younger generation of Hong Kong people and awakened a newfound sense of political consciousness. Previously perceived as politically indifferent, the younger generation were now at the center of the movement eclipsing the original mandate set out by the OCLP leaders."],
-                ["&ldquo;In sum, the Umbrella Movement could be seen as a people’s movement in terms of its extent of participation. Yet, adult leaders of the Occupy Central Movement have surprisingly played a minor role; they mainly offered consultation to the student leaders and helped with management affairs. The students have played the major role and have veered the course of the movement all along. They negotiated with officials of the HKSAR government; they proposed terms of negotiation, and they asked for a direct dialogue with Beijing. It is from this perspective that we can define the Umbrella Movement essentially as a student movement.&rdquo;"]
+                [
+                  "In retrospect, the Umbrella Movement was considered a pivotal “coming-of-age” moment for the younger generation of Hong Kong people and awakened a newfound sense of political consciousness. Previously perceived as politically indifferent, the younger generation were now at the center of the movement eclipsing the original mandate set out by the OCLP leaders."
+                ],
+                [
+                  "&ldquo;In sum, the Umbrella Movement could be seen as a people’s movement in terms of its extent of participation. Yet, adult leaders of the Occupy Central Movement have surprisingly played a minor role; they mainly offered consultation to the student leaders and helped with management affairs. The students have played the major role and have veered the course of the movement all along. They negotiated with officials of the HKSAR government; they proposed terms of negotiation, and they asked for a direct dialogue with Beijing. It is from this perspective that we can define the Umbrella Movement essentially as a student movement.&rdquo;"
+                ]
               ]
             }
           ]
@@ -1494,7 +1580,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["By the end of 2014, the Umbrella Movement&rsquo;s fragmented resistance led to a stalemate. With the Beijing government unwilling to accept civil nominations, and the Hong Kong government unable to end the protests, the public was growing weary of the occupation causing disruption to daily life in the city. With no substantial concessions in sight, the Umbrella Movement was losing its momentum and public support.","On December 3rd, the organizers of Occupy Central with Love and Peace surrendered to the police with the intention of persuading the Umbrella Movement to end. Benny Tai expressed to supporters that &ldquo;surrendering is not an act of cowardice, it is the courage to act on a promise. To surrender is to not fail, it is a silent denunciation of a heartless government.&rdquo;"],
+              "paragraphs": [
+                "By the end of 2014, the Umbrella Movement&rsquo;s fragmented resistance led to a stalemate. With the Beijing government unwilling to accept civil nominations, and the Hong Kong government unable to end the protests, the public was growing weary of the occupation causing disruption to daily life in the city. With no substantial concessions in sight, the Umbrella Movement was losing its momentum and public support.",
+                "On December 3rd, the organizers of Occupy Central with Love and Peace surrendered to the police with the intention of persuading the Umbrella Movement to end. Benny Tai expressed to supporters that &ldquo;surrendering is not an act of cowardice, it is the courage to act on a promise. To surrender is to not fail, it is a silent denunciation of a heartless government.&rdquo;"
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1526,8 +1615,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["On December 15, the Umbrella Movement came to a quiet conclusion when police officers dismantled the last remnants of the occupation. Although the 79-day stand still did not achieve its stated goals, the Umbrella Movement had brought to the forefront the political concern that “freedom without democracy” would eventually erode the region’s autonomy. This lasting sentiment would shape the region’s ongoing struggle for democratic values, as Hong Kong returned once again to the underlying question of whether freedom can endure in the absence of democracy."],
-                ["&ldquo;Those skeptical of the Umbrella Movement often ask: &ldquo;Why the fuss about democracy or genuine universal suffrage? Has not Hong Kong preserved all its freedoms even without democracy?&rdquo; This sentiment sums up the political debate in Hong Kong: Can freedom survive without democracy? Hong Kong people, however they view the occupy movement, are one when it comes to the paramount importance of freedom, or what they call &ldquo;Hong Kong&rsquo;s core values.&rdquo; Hong Kong people cherish the rule of law, independent courts, impartial policing, press freedom, and a corruption-free civil service. Many who grew up in a free but undemocratic Hong Kong believe that they can continue to enjoy freedom in the absence of democracy. Umbrella Movement supporters, by contrast, are convinced that the &ldquo;freedom without democracy&rdquo; model is broken. Since 1997, successive chief executives unchecked by democratic accountability have eroded Hong Kong&rsquo;s autonomy and its core values."]
+                [
+                  "On December 15, the Umbrella Movement came to a quiet conclusion when police officers dismantled the last remnants of the occupation. Although the 79-day stand still did not achieve its stated goals, the Umbrella Movement had brought to the forefront the political concern that “freedom without democracy” would eventually erode the region’s autonomy. This lasting sentiment would shape the region’s ongoing struggle for democratic values, as Hong Kong returned once again to the underlying question of whether freedom can endure in the absence of democracy."
+                ],
+                [
+                  "&ldquo;Those skeptical of the Umbrella Movement often ask: &ldquo;Why the fuss about democracy or genuine universal suffrage? Has not Hong Kong preserved all its freedoms even without democracy?&rdquo; This sentiment sums up the political debate in Hong Kong: Can freedom survive without democracy? Hong Kong people, however they view the occupy movement, are one when it comes to the paramount importance of freedom, or what they call &ldquo;Hong Kong&rsquo;s core values.&rdquo; Hong Kong people cherish the rule of law, independent courts, impartial policing, press freedom, and a corruption-free civil service. Many who grew up in a free but undemocratic Hong Kong believe that they can continue to enjoy freedom in the absence of democracy. Umbrella Movement supporters, by contrast, are convinced that the &ldquo;freedom without democracy&rdquo; model is broken. Since 1997, successive chief executives unchecked by democratic accountability have eroded Hong Kong&rsquo;s autonomy and its core values."
+                ]
               ]
             }
           ]
@@ -1545,7 +1638,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["In February 2018 a Hong Kong resident, Chan Tong-kai, murdered his pregnant girlfriend, Poon Hiu-wing, while on vacation in Taiwan and then attempted to evade arrest by returning home.","Despite confessing to the murder, the Hong Kong authorities were unable to charge Chan Tong-kai because the crime had occurred beyond the region’s jurisdiction. To further complicate the case, the Hong Kong authorities were blocked from extraditing him to Taiwan because there was no formal extradition agreement for transferring fugitives between the two regions."],
+              "paragraphs": [
+                "In February 2018 a Hong Kong resident, Chan Tong-kai, murdered his pregnant girlfriend, Poon Hiu-wing, while on vacation in Taiwan and then attempted to evade arrest by returning home.",
+                "Despite confessing to the murder, the Hong Kong authorities were unable to charge Chan Tong-kai because the crime had occurred beyond the region’s jurisdiction. To further complicate the case, the Hong Kong authorities were blocked from extraditing him to Taiwan because there was no formal extradition agreement for transferring fugitives between the two regions."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1577,8 +1673,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["The two governments never had an existing extradition treaty because Taiwan was hesitant to establish a formal process with Hong Kong due to its own complicated history with China.The inability to charge Chan Tong-kai with murder in Hong Kong raised questions about how the region should handle extraditing fugitives to other countries, and led politicians to describe the issue as a legal “loophole” that need to be plugged."],
-                ["“Taiwan’s government would refuse to sign an extradition deal with Hong Kong if asked, Cabinet spokeswoman Kolas Yotaka said Wednesday. A deal could include pro-Beijing language implying that the two sides both belong to China, which goes against the Taiwanese government’s stance that the island is autonomous.” […] “We won’t sign, because Hong Kong’s extradition law hurts Taiwan sovereignty,” Yotaka said.”"]
+                [
+                  "The two governments never had an existing extradition treaty because Taiwan was hesitant to establish a formal process with Hong Kong due to its own complicated history with China.The inability to charge Chan Tong-kai with murder in Hong Kong raised questions about how the region should handle extraditing fugitives to other countries, and led politicians to describe the issue as a legal “loophole” that need to be plugged."
+                ],
+                [
+                  "“Taiwan’s government would refuse to sign an extradition deal with Hong Kong if asked, Cabinet spokeswoman Kolas Yotaka said Wednesday. A deal could include pro-Beijing language implying that the two sides both belong to China, which goes against the Taiwanese government’s stance that the island is autonomous.” […] “We won’t sign, because Hong Kong’s extradition law hurts Taiwan sovereignty,” Yotaka said.”"
+                ]
               ]
             }
           ]
@@ -1589,7 +1689,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["In February 2018, the pro-Beijing political party proposed an extradition bill on amendments to criminal legislation in an attempt to resolve the extradition “loophole” problem. These amendments broadened the scope of the transfer of fugitives to include locations that Hong Kong did not have existing extradition treaties with, which would include Taiwan but inadvertently cover Mainland China as well.","In the specific murder case of Poon Hiu-wing, these amendments would allow Hong Kong authorities to extradite Chan Tong-kai to stand trial in Taiwan’s courts. However, such changes would also create an opening for suspected offenders in Hong Kong to be handed over to mainland China as well."],
+              "paragraphs": [
+                "In February 2018, the pro-Beijing political party proposed an extradition bill on amendments to criminal legislation in an attempt to resolve the extradition “loophole” problem. These amendments broadened the scope of the transfer of fugitives to include locations that Hong Kong did not have existing extradition treaties with, which would include Taiwan but inadvertently cover Mainland China as well.",
+                "In the specific murder case of Poon Hiu-wing, these amendments would allow Hong Kong authorities to extradite Chan Tong-kai to stand trial in Taiwan’s courts. However, such changes would also create an opening for suspected offenders in Hong Kong to be handed over to mainland China as well."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1621,8 +1724,13 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["Critics feared that this new bill was another calculated attempt to undermine the civil liberties of Hong Kong residents, as under these new amendments, anyone in the region could be exposed to arbitrary detention and extradited to China's judicial system for trial.","Despite being portrayed as a legal loophole, the absence of an extradition treaty with China was—in reality—an intentional omission when Basic Law was drafted. It ensured that a “legal firewall” safeguarded Hong Kong’s judicial independence from China’s, and ensured that citizens would not fall victim to a completely different legal system notorious for human rights abuse."],
-                ["“The handover agreement, the Sino-British Joint Declaration, states that the rights and freedoms of Hong Kong’s people should remain unchanged. The central problem with the proposals is that they make it possible for the Hong Kong government to extradite people to a jurisdiction which does not guarantee a fair trial or have reasonable human rights safeguards, thereby undermining this commitment.”"]
+                [
+                  "Critics feared that this new bill was another calculated attempt to undermine the civil liberties of Hong Kong residents, as under these new amendments, anyone in the region could be exposed to arbitrary detention and extradited to China's judicial system for trial.",
+                  "Despite being portrayed as a legal loophole, the absence of an extradition treaty with China was—in reality—an intentional omission when Basic Law was drafted. It ensured that a “legal firewall” safeguarded Hong Kong’s judicial independence from China’s, and ensured that citizens would not fall victim to a completely different legal system notorious for human rights abuse."
+                ],
+                [
+                  "“The handover agreement, the Sino-British Joint Declaration, states that the rights and freedoms of Hong Kong’s people should remain unchanged. The central problem with the proposals is that they make it possible for the Hong Kong government to extradite people to a jurisdiction which does not guarantee a fair trial or have reasonable human rights safeguards, thereby undermining this commitment.”"
+                ]
               ]
             }
           ]
@@ -1633,7 +1741,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["On June 9, 2019, thousands of people showed up to march across the city in protest of the proposed extradition amendments. Protests organisers estimated that approximately 1.03 million people participated in the peaceful demonstration—equivalent to one seventh of Hong Kong&rsquo;s population.","Despite the widespread public outcry, Hong Kong Chief Executive Carrie Lam, adamantly defended the bill, insisting its legislation would help uphold justice and reinforce the region's commitment to transnational crimes."],
+              "paragraphs": [
+                "On June 9, 2019, thousands of people showed up to march across the city in protest of the proposed extradition amendments. Protests organisers estimated that approximately 1.03 million people participated in the peaceful demonstration—equivalent to one seventh of Hong Kong&rsquo;s population.",
+                "Despite the widespread public outcry, Hong Kong Chief Executive Carrie Lam, adamantly defended the bill, insisting its legislation would help uphold justice and reinforce the region's commitment to transnational crimes."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1665,8 +1776,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["Protestors were skeptical of the Hong Kong government’s intentions behind proposing amendments to begin with, and perceived these measures to be another tool that authorities could use to silence the growing pro-democracy movement. Protestors believed that the Hong Kong government was using the murder case as a facade to pass amendments that would allow Beijing to extradite vocal dissidents to face trial in China. Since the historic protests in 2003, Beijing has continued to influence new legislation to silence pro-democracy activists, dissidents, and protestors, who they deem to be a growing threat to the stability of China."],
-                ["“The last time residents of Hong Kong turned out in such large numbers over a single issue was in 2003, when half a million marchers expressed their opposition to proposed national security legislation prohibiting sedition, subversion and treason against the Chinese government.”"]
+                [
+                  "Protestors were skeptical of the Hong Kong government’s intentions behind proposing amendments to begin with, and perceived these measures to be another tool that authorities could use to silence the growing pro-democracy movement. Protestors believed that the Hong Kong government was using the murder case as a facade to pass amendments that would allow Beijing to extradite vocal dissidents to face trial in China. Since the historic protests in 2003, Beijing has continued to influence new legislation to silence pro-democracy activists, dissidents, and protestors, who they deem to be a growing threat to the stability of China."
+                ],
+                [
+                  "“The last time residents of Hong Kong turned out in such large numbers over a single issue was in 2003, when half a million marchers expressed their opposition to proposed national security legislation prohibiting sedition, subversion and treason against the Chinese government.”"
+                ]
               ]
             }
           ]
@@ -1677,7 +1792,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["After days of refusing to back down, Lam&rsquo;s senior advisors recommended her to delay the bill&rsquo;s legislative approval due to escalating conflicts involving police officers and protestors. On June 15,  Chief Executive Carrie Lam announced the indefinite suspension of the extradition bill and issued a brief apology for the chaos that the legislation instigated, but was one step short of fully withdrawing the amendments.","Unsatisfied with Lam&rsquo;s apology and the excessive use of force by the police, two million people poured their discontent onto the streets on June 16th, in what would eventually become the largest demonstration in Hong Kong&rsquo;s history. The historic protest remained peaceful throughout, as demonstrators collectively wore black in a sign of defiance towards Lam&rsquo;s latest attempt to erode the right&rsquo;s of Hong Kong citizens."],
+              "paragraphs": [
+                "After days of refusing to back down, Lam&rsquo;s senior advisors recommended her to delay the bill&rsquo;s legislative approval due to escalating conflicts involving police officers and protestors. On June 15,  Chief Executive Carrie Lam announced the indefinite suspension of the extradition bill and issued a brief apology for the chaos that the legislation instigated, but was one step short of fully withdrawing the amendments.",
+                "Unsatisfied with Lam&rsquo;s apology and the excessive use of force by the police, two million people poured their discontent onto the streets on June 16th, in what would eventually become the largest demonstration in Hong Kong&rsquo;s history. The historic protest remained peaceful throughout, as demonstrators collectively wore black in a sign of defiance towards Lam&rsquo;s latest attempt to erode the right&rsquo;s of Hong Kong citizens."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1709,8 +1827,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["The historic turnout for the June 16th protest was the largest demonstration of Hong Kong’s collective resistance and solidarity against Beijing’s encroaching presence. United by a common shade, Hong Kong people wore black—in mourning for the region’s eroding rights and freedom."],
-                ["“But the fact is, it’s not the color (black or otherwise) that defines protest clothing. It is the fact that a group of people, united in common cause, are united in a common shade. It’s the joint identity that stands out: the visual expression of a voluminous force.”"]
+                [
+                  "The historic turnout for the June 16th protest was the largest demonstration of Hong Kong’s collective resistance and solidarity against Beijing’s encroaching presence. United by a common shade, Hong Kong people wore black—in mourning for the region’s eroding rights and freedom."
+                ],
+                [
+                  "“But the fact is, it’s not the color (black or otherwise) that defines protest clothing. It is the fact that a group of people, united in common cause, are united in a common shade. It’s the joint identity that stands out: the visual expression of a voluminous force.”"
+                ]
               ]
             }
           ]
@@ -1721,7 +1843,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["Despite being a leaderless movement, the pro-democracy protests were unified by guiding principles that took form in five key demands — withdrawing the bill, implementing universal suffrage, providing amnesty for arrested demonstrators, conducting an independent inquiry into police brutality, and retracting the characterisation that the protest was a &ldquo;riot&rdquo;","As the summer of discontent unfolded, escalating tensions with Carrie Lam’s administration surrounding the five demands would lead to the most contentious series of protests in Hong Kong’s history. Tension would reach an all-time high as protesters took unprecedented measures by breaking into the legislative council complex, conducting a planned sit-in at Hong Kong International Airport, and clashing with authorities in the streets."],
+              "paragraphs": [
+                "Despite being a leaderless movement, the pro-democracy protests were unified by guiding principles that took form in five key demands — withdrawing the bill, implementing universal suffrage, providing amnesty for arrested demonstrators, conducting an independent inquiry into police brutality, and retracting the characterisation that the protest was a &ldquo;riot&rdquo;",
+                "As the summer of discontent unfolded, escalating tensions with Carrie Lam’s administration surrounding the five demands would lead to the most contentious series of protests in Hong Kong’s history. Tension would reach an all-time high as protesters took unprecedented measures by breaking into the legislative council complex, conducting a planned sit-in at Hong Kong International Airport, and clashing with authorities in the streets."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1753,8 +1878,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["Distinctly different from the Occupy Central protests of 2014, the people of “Generation HK” were at the forefront of the movement. Armed with a self-protective mentality, this upcoming generation was formed with neither the recollection of Hong Kong’s colonial past nor any loyalty towards China. This emerging identity was rooted in a new preconception of what it means to be a “Hongkonger”."],
-                ["&ldquo;In the 24 years since 1997, Hong Kong has seen a series of peaks and troughs in mass political mobilization, with people again and again using the streets as their stage for protest. While victories have been rare, these movements have shaped the cycles of optimism and anguish that have been integral to the crystallization of the Hongkonger identity that emerged from this undemocratic yet open society. I am part of what Financial Times correspondent Benjamin Bland has labeled Generation HK in his book of the same title: the children raised to adulthood in the SAR, the babies born in the blurry threshold of pre-and-post 1997, the teenagers and 20-somethings who laid their lives on the line in the heat of 2019. With no memories of a British Hong Kong, and no attachment to China, mine is the generation that most adamantly regards itself as “Hongkongers”— a term added to the Oxford English Dictionary after the pro-democracy Umbrella Movement brought the city to a 79-day standstill in 2014.&rdquo;"]
+                [
+                  "Distinctly different from the Occupy Central protests of 2014, the people of “Generation HK” were at the forefront of the movement. Armed with a self-protective mentality, this upcoming generation was formed with neither the recollection of Hong Kong’s colonial past nor any loyalty towards China. This emerging identity was rooted in a new preconception of what it means to be a “Hongkonger”."
+                ],
+                [
+                  "&ldquo;In the 24 years since 1997, Hong Kong has seen a series of peaks and troughs in mass political mobilization, with people again and again using the streets as their stage for protest. While victories have been rare, these movements have shaped the cycles of optimism and anguish that have been integral to the crystallization of the Hongkonger identity that emerged from this undemocratic yet open society. I am part of what Financial Times correspondent Benjamin Bland has labeled Generation HK in his book of the same title: the children raised to adulthood in the SAR, the babies born in the blurry threshold of pre-and-post 1997, the teenagers and 20-somethings who laid their lives on the line in the heat of 2019. With no memories of a British Hong Kong, and no attachment to China, mine is the generation that most adamantly regards itself as “Hongkongers”— a term added to the Oxford English Dictionary after the pro-democracy Umbrella Movement brought the city to a 79-day standstill in 2014.&rdquo;"
+                ]
               ]
             }
           ]
@@ -1765,7 +1894,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["On September 4, Carrie Lam announced plans to fully withdraw the bill in order to “allay public concerns”. Despite the withdrawal,  this concession was not enough to &ldquo;quell the movement&rdquo; as protesters demanded that all five demands be addressed, and not one less.","As the world watched the season of discontent transpire into the fall, a fresh wave of protests heightened the tensions between demonstrators and authorities: a schoolboy was shot with a live bullet, Lam’s administration enforced a face mask ban in public assemblies, and confrontations between protesters and the authorities continued to persist across central areas of the city in parallel to peaceful rallies."],
+              "paragraphs": [
+                "On September 4, Carrie Lam announced plans to fully withdraw the bill in order to “allay public concerns”. Despite the withdrawal,  this concession was not enough to &ldquo;quell the movement&rdquo; as protesters demanded that all five demands be addressed, and not one less.",
+                "As the world watched the season of discontent transpire into the fall, a fresh wave of protests heightened the tensions between demonstrators and authorities: a schoolboy was shot with a live bullet, Lam’s administration enforced a face mask ban in public assemblies, and confrontations between protesters and the authorities continued to persist across central areas of the city in parallel to peaceful rallies."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1797,8 +1929,14 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["Despite the formal withdrawal of the Bill on October 23, demonstrators were unwilling to surrender. The movement had evolved beyond the particular concerns on the Bill to encompass the protection of larger democratic ideas such as human dignity, freedom, and democracy.","Amidst the protests, a new generation of Hong Kongers were beginning to cement their identity. To be a Hong Konger was not solely about being distinct from the mainland, it meant preserving it’s collective memory, demonstrating resilience, and rejecting injustices."],
-                ["&ldquo;Like many other protest movements, ours is built on the empathy we have for one another. Those who are in power and obsessed with power can never comprehend that.&rdquo;","&ldquo;The values we uphold — freedom, democracy, human rights and the rule of law among them — are universal. They have been the cornerstones of Hong Kong’s success in the past, enabling its rise to the status of global city. But as the local government’s credibility and legitimacy plummet to a low point, nothing short of fundamental and structural reform can save it. The opposition doesn’t lack the ability to rule, only an opportunity.&rdquo;"]
+                [
+                  "Despite the formal withdrawal of the Bill on October 23, demonstrators were unwilling to surrender. The movement had evolved beyond the particular concerns on the Bill to encompass the protection of larger democratic ideas such as human dignity, freedom, and democracy.",
+                  "Amidst the protests, a new generation of Hong Kongers were beginning to cement their identity. To be a Hong Konger was not solely about being distinct from the mainland, it meant preserving it’s collective memory, demonstrating resilience, and rejecting injustices."
+                ],
+                [
+                  "&ldquo;Like many other protest movements, ours is built on the empathy we have for one another. Those who are in power and obsessed with power can never comprehend that.&rdquo;",
+                  "&ldquo;The values we uphold — freedom, democracy, human rights and the rule of law among them — are universal. They have been the cornerstones of Hong Kong’s success in the past, enabling its rise to the status of global city. But as the local government’s credibility and legitimacy plummet to a low point, nothing short of fundamental and structural reform can save it. The opposition doesn’t lack the ability to rule, only an opportunity.&rdquo;"
+                ]
               ]
             }
           ]
@@ -1809,7 +1947,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["In November, the fatal fall of university student Chow Tsz-lok would erupt widespread outrage as protesters were suspicious of the cause of his death. In retaliation, students held general strikes known as “Operation Dawn” to obstruct traffic around universities during rush hour.","Violence would erupt on school campuses as universities became the latest battleground in the pro-democracy movement. Police authorities conducted sieges at the Chinese University of Hong Kong and the Polytechnic University where students were barricaded within campus grounds. Fierce fiery stand-offs persisted for several days to even weeks. To defend their actions, police authorities claimed the universities were used as “weapon factories” fueling the movement with munitions."],
+              "paragraphs": [
+                "In November, the fatal fall of university student Chow Tsz-lok would erupt widespread outrage as protesters were suspicious of the cause of his death. In retaliation, students held general strikes known as “Operation Dawn” to obstruct traffic around universities during rush hour.",
+                "Violence would erupt on school campuses as universities became the latest battleground in the pro-democracy movement. Police authorities conducted sieges at the Chinese University of Hong Kong and the Polytechnic University where students were barricaded within campus grounds. Fierce fiery stand-offs persisted for several days to even weeks. To defend their actions, police authorities claimed the universities were used as “weapon factories” fueling the movement with munitions."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1841,8 +1982,12 @@
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
-                ["The university sieges symbolize the breach of academic safe-havens, where democratic discourse has been historically protected and held. These heightened hostilities that played out on school campuses, displayed the fundamental power imbalance between the authorities and demonstrators. Openly defiant, Hong Konger’s were met with excessive force that was intended to isolate and make arrests possible. By crossing into academic institutions, it revealed that Hong Kong authorities were willing to take unprecedented measures to stop any form of dissent."],
-                ["The university’s oldest college was founded as a free-thinking haven by anti-communist Confucian scholars fleeing the Maoist revolution on the mainland in 1949. And now, this place that once protected student protesters had summoned the police against the anti-communist campus protesters. As the values that make Hong Kong distinct from China have come under threat, being from Hong Kong stands in opposition to being from the mainland. It took the despair of watching our values erode, the feeling of being stripped of all that it means to be a Hongkonger for this new anxiety to emerge."]
+                [
+                  "The university sieges symbolize the breach of academic safe-havens, where democratic discourse has been historically protected and held. These heightened hostilities that played out on school campuses, displayed the fundamental power imbalance between the authorities and demonstrators. Openly defiant, Hong Konger’s were met with excessive force that was intended to isolate and make arrests possible. By crossing into academic institutions, it revealed that Hong Kong authorities were willing to take unprecedented measures to stop any form of dissent."
+                ],
+                [
+                  "The university’s oldest college was founded as a free-thinking haven by anti-communist Confucian scholars fleeing the Maoist revolution on the mainland in 1949. And now, this place that once protected student protesters had summoned the police against the anti-communist campus protesters. As the values that make Hong Kong distinct from China have come under threat, being from Hong Kong stands in opposition to being from the mainland. It took the despair of watching our values erode, the feeling of being stripped of all that it means to be a Hongkonger for this new anxiety to emerge."
+                ]
               ]
             }
           ]
@@ -1853,7 +1998,10 @@
             {
               "type": "event",
               "title": "Event",
-              "paragraphs": ["The end of November gave a moment of alleviation as local elections started to begin, even as protests and clashes entered into the winter months. Attracting three million voters, with mostly young people leading the surge in votes, the results of the November 24 District Council elections saw the pro-democracy camp win by a landslide.","With the pro-Beijing camp suffering their largest district electoral defeat in Hong Kong’s history, the win clearly signified a formal expression of rebuke against the Hong Kong authorities and Beijing. Although the District Councils held minimal political power, it did provide a small opportunity to shape the committee that elects the Chief Executive in the future."],
+              "paragraphs": [
+                "The end of November gave a moment of alleviation as local elections started to begin, even as protests and clashes entered into the winter months. Attracting three million voters, with mostly young people leading the surge in votes, the results of the November 24 District Council elections saw the pro-democracy camp win by a landslide.",
+                "With the pro-Beijing camp suffering their largest district electoral defeat in Hong Kong’s history, the win clearly signified a formal expression of rebuke against the Hong Kong authorities and Beijing. Although the District Councils held minimal political power, it did provide a small opportunity to shape the committee that elects the Chief Executive in the future."
+              ],
               "resources": [
                 {
                   "title": "",
@@ -1886,7 +2034,9 @@
               "title": "Reflection",
               "paragraphs": [
                 ["Missing reflection summary"],
-                ["&ldquo;It is heartwarming that Hongkongers remain hopeful in these dark hours. For many, the story of Hong Kong and its people is still being written. So far, we may be grounded by immense disappointment and fear, but Hongkongers are known for their undying resilience. As the once-boisterous streets of Hong Kong fall silent, Hongkongers are taking their plight to the world, rallying around the idea that anyone who has faced injustice, anyone who shares the values of human dignity, freedom, and democracy, can be a Hongkonger.&rdquo;"]
+                [
+                  "&ldquo;It is heartwarming that Hongkongers remain hopeful in these dark hours. For many, the story of Hong Kong and its people is still being written. So far, we may be grounded by immense disappointment and fear, but Hongkongers are known for their undying resilience. As the once-boisterous streets of Hong Kong fall silent, Hongkongers are taking their plight to the world, rallying around the idea that anyone who has faced injustice, anyone who shares the values of human dignity, freedom, and democracy, can be a Hongkonger.&rdquo;"
+                ]
               ]
             }
           ]
