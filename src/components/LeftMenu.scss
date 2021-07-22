@@ -99,17 +99,17 @@ $xxl-minus-1: 1799px;
 
   &__list {
     // transform down
-    transition: transform 1s;
+    transition: margin-top 1s;
 
     &.transform {
       // transform up
-      transition: transform 1s;
+      transition: margin-top 1s;
     }
   }
 
   &__year {
     // fade in non-selected years
-    opacity: 100;
+    opacity: 1;
     transition: opacity 0.5s 1s;
 
     &.fade-out-content {
@@ -121,8 +121,11 @@ $xxl-minus-1: 1799px;
 
   &__scenes {
     // fade in blurb/scenes
-    opacity: 100;
-    transition: opacity 0.5s 1s;
+
+    &.fade-in-content {
+      opacity: 1;
+      transition: opacity 0.5s 1s;
+    }
 
     &.fade-out-content {
       // fade out blurb/scenes
