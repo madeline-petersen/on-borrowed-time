@@ -99,10 +99,10 @@ const LeftMenu = ({
                     selectedYear !== null ? 'transform' : ''
                   }`}
                   style={{
-                    marginTop: `${
+                    paddingTop: `${
                       selectedYear !== null
-                        ? `calc(152px - ${(selectedYear.index + 1) * 33}px)`
-                        : '152px'
+                        ? `calc(264px - ${(selectedYear.index + 1) * 33}px)`
+                        : '264px'
                     }`
                   }}
                 >
@@ -143,9 +143,6 @@ const LeftMenu = ({
                   {selectedYear !== null && (
                     <span
                       className={`left-menu__scenes absolute scenes-fade-in`}
-                      style={{
-                        top: `calc(${(selectedYear.index + 1.5) * 33}px)`
-                      }}
                     >
                       <Row className={`small-body text-white`}>
                         <Col lg={3} md={3} sm={2} xs={2} />

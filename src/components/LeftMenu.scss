@@ -99,11 +99,11 @@ $xxl-minus-1: 1799px;
 
   &__list {
     // transform down
-    transition: margin-top 1s;
+    transition: padding-top 1s;
 
     &.transform {
       // transform up
-      transition: margin-top 1s;
+      transition: padding-top 1s;
     }
   }
 
@@ -121,6 +121,8 @@ $xxl-minus-1: 1799px;
 
   &__scenes {
     // fade in blurb/scenes
+    top: calc(264px + 12px);
+
     @keyframes scenes-fade-in {
       0% {
         opacity: 0;
