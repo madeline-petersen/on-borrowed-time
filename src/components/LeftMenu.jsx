@@ -1,10 +1,9 @@
 import './LeftMenu.scss';
 
-import { ArrowLeft16, Calculation16 } from '@carbon/icons-react';
 import { Col, Container, Row, Visible } from 'react-grid-system';
-import React, { useState } from 'react';
 
 import PropTypes from 'prop-types';
+import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import { roman } from '@sguest/roman-js';
 
@@ -14,9 +13,10 @@ const LeftMenu = ({
   years,
   navigateTo,
   setNextBackground,
-  setIsTransitioning
+  setIsTransitioning,
+  selectedYear,
+  setSelectedYear
 }) => {
-  const [selectedYear, setSelectedYear] = useState(null);
   const menu = document.getElementById('menu-card');
   const menuBackground = document.getElementById('menu-background-filler');
   const overlay = document.getElementById('menu-overlay');
@@ -86,14 +86,6 @@ const LeftMenu = ({
                 xs={12}
                 className="h-screen overflow-y-auto overflow-x-hidden"
               >
-                {selectedYear !== null && (
-                  <span
-                    className={`text-white absolute top-24 z-40 cursor-pointer`}
-                    onClick={() => setSelectedYear(null)}
-                  >
-                    <ArrowLeft16 />
-                  </span>
-                )}
                 <div
                   className={`left-menu__list flex-col h-full ${
                     selectedYear !== null ? 'transform' : ''
@@ -201,7 +193,9 @@ LeftMenu.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
   navigateTo: PropTypes.func,
   setNextBackground: PropTypes.func,
-  setIsTransitioning: PropTypes.func
+  setIsTransitioning: PropTypes.func,
+  selectedYear: PropTypes.shape(),
+  setSelectedYear: PropTypes.func
 };
 
 export default LeftMenu;
