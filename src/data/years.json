@@ -132,8 +132,8 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "Signed in 1984, the Sino-British Joint Declaration<sup>1</sup> between Britain and China defined the conditions in which Hong Kong would fall back under China&rsquo;s authority. Hong Kong would become a &ldquo;Special Administrative Region&rdquo; of China as outlined in the Declaration, where its autonomy, capitalistic economy, and partial democratic political system were to remain largely unchanged for 50 years.",
-                "To codify the Declaration, China and Hong Kong would continue to negotiate the details of a constitutional document known as Basic Law<sup>2</sup>, which would help protect the rights of Hong Kong citizens from Beijing oversight and build a path to achieving universal suffrage during the 50 year transition period."
+                "Signed in 1984, the <span>Sino-British Joint Declaration<sup>1</sup></span> between Britain and China defined the conditions in which Hong Kong would fall back under China&rsquo;s authority. Hong Kong would become a &ldquo;Special Administrative Region&rdquo; of China as outlined in the Declaration, where its autonomy, capitalistic economy, and partial democratic political system were to remain largely unchanged for 50 years.",
+                "To codify the Declaration, China and Hong Kong would continue to negotiate the details of a constitutional document known as <span>Basic Law<sup>2</sup></span>, which would help protect the rights of Hong Kong citizens from Beijing oversight and build a path to achieving universal suffrage during the 50 year transition period."
               ],
               "resources": [
                 {
@@ -221,8 +221,8 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "The ambiguous language<sup>1</sup> of the Sino-British Joint Declaration and the drafts of Basic Law reflected opposing political philosophies and opened different interpretations on the meaning of &ldquo;one country, two systems&rdquo;.",
-                "A discourse on semantics unfolded between reformists and leftists<sup>2</sup>, where contrasting perspectives<sup>3</sup> on the Declaration&rsquo;s language inferred competing priorities on how Hong Kong would operate under Beijing&rsquo;s control. The contradictory nature<sup>4</sup> of a communist regime overseeing Hong Kong&rsquo;s democratic rights and freedoms also fostered skepticism on Beijing&rsquo;s intentions and ability to honour the agreement."
+                "The <span>ambiguous language<sup>1</sup></span> of the Sino-British Joint Declaration and the drafts of Basic Law reflected opposing political philosophies and opened different interpretations on the meaning of &ldquo;one country, two systems&rdquo;.",
+                "A discourse on semantics unfolded between <span>reformists and leftists<sup>2</sup></span>, where <span>contrasting perspectives<sup>3</sup></span> on the Declaration&rsquo;s language inferred competing priorities on how Hong Kong would operate under Beijing&rsquo;s control. The <span>contradictory nature<sup>4</sup></span> of a communist regime overseeing Hong Kong&rsquo;s democratic rights and freedoms also fostered skepticism on Beijing&rsquo;s intentions and ability to honour the agreement."
               ],
               "resources": [
                 {
@@ -334,8 +334,8 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "A high ranking official of the Chinese Communist Party, Hu was an icon<sup>1</sup> for political reform and democratic change. His critique on Mao&rsquo;s cult-like ideology differed from other political figures, and made Hu a beloved leader.",
-                "The death of Hu Yaobang on April 15 1989, ignited public outcry—mourning<sup>2</sup>, grief, and anger quickly developed into a series of student-led pro-democracy demonstrations and hunger strikes across China."
+                "A high ranking official of the Chinese Communist Party, Hu was an <span>icon<sup>1</sup></span> for political reform and democratic change. His critique on Mao&rsquo;s cult-like ideology differed from other political figures, and made Hu a beloved leader.",
+                "The death of <span>Hu Yaobang<sup>2</sup></span> on April 15 1989, ignited public outcry—<span>mourning<sup>3</sup></span>, grief, and anger quickly developed into a series of student-led pro-democracy demonstrations and hunger strikes across China."
               ],
               "resources": [
                 {
@@ -564,34 +564,73 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "The political suppression of the student movement in mainland China led to the redrafting of Hong Kong&rsquo;s Basic Law, specifically the provision of Article 23 that pertained to national security.",
-                "Before the Tiananmen Massacre, a public consultation in April 1988 suggested that Article 23 was too ambiguous in definition, and critics wanted more clarity on the terms &ldquo;national unity&rdquo; and &ldquo;subversion&rdquo;. In an effort to reach a compromise, China and Hong Kong initially agreed to replace these terms with a clause that clearly prohibited &ldquo;any act of treason, secession, sedition or theft of state secrets.&rdquo; in February 1989.",
-                "After the bloodshed at Tiananmen Square, China felt it had made too many concessions in its previous public consultations about Article 23. China feared that Hong Kong could become a base to overthrow CCP rule in the mainland through the influence of oversea interests."
+                "The political suppression of the student movement in mainland China led to the redrafting of Hong Kong&rsquo;s <span>Basic Law<sup>1</sup></span>, specifically the provision of <span>Article 23<sup>2</sup></span> that pertained to national security.",
+                "Before the Tiananmen Massacre, a public consultation in April 1988 suggested that Article 23 was too ambiguous in definition, and <span>critics wanted more clarity<sup>3</sup></span> on the terms &ldquo;national unity&rdquo; and &ldquo;subversion&rdquo;. In an effort to reach a compromise<sup>4</sup>, China and Hong Kong initially agreed to replace these terms with a clause that clearly prohibited <span>&ldquo;any act of treason, secession, sedition or theft of state secrets.&rdquo;<sup>5</sup></span> in <span>February 1989.<sup>6</sup></span>",
+                "After the bloodshed at Tiananmen Square, China felt it had made too many concessions in its previous public consultations about Article 23. China feared that Hong Kong could become a base to <span>overthrow CCP rule<sup>7</sup></span> in the mainland through the influence of oversea interests."
               ],
               "resources": [
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Journal Excerpt",
+                  "shortTitle": "A Consitutional Instrument",
+                  "publication": "National Security Law in Hong Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong Kong",
+                  "author": "Richard Cullen",
+                  "content": [
+                    "The Basic Law seeks to ensure individual freedoms. It contains wide-ranging guarantees of individual rights.' 2 These rights have recently been given real substance in the first major constitutional cases to come before the CFA.13 It is broadly recognized by most commentators, however, that the lack of a full representative democracy in Hong Kong leaves a fundamental weakness in the underpinnings of these rights. It is around these two related issues, democratization and individual rights, that the greatest controversies arose in the time leading up to the change of sovereignty and afterwards. The role of Article 23 of the Basic Law has been intertwined with these controversies."
+                  ],
+                  "citation": "Cullen, Richard, and H.L. Fu. “National Security Law in Hong Kong: Quo Vadis - A Study of Article 23 of the Basic Law of Hong Kong.” <em>UCLA Pacific Basin Law Journal</em> 19, no. 2 (2002): 192. ",
+                  "linkTo": "https://escholarship.org/content/qt4kh840h4/qt4kh840h4.pdf?t=n4ox1x"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Article Excerpt",
+                  "shortTitle": "Capturing Tank Man",
+                  "publication": "How Stuart Franklin Took His Take Man Photograph",
+                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
+                  "year": "2016",
+                  "author": "Phaidon",
+                  "content": [
+                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                  ],
+                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
+                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Article Excerpt",
+                  "shortTitle": "Capturing Tank Man",
+                  "publication": "How Stuart Franklin Took His Take Man Photograph",
+                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
+                  "year": "2016",
+                  "author": "Phaidon",
+                  "content": [
+                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                  ],
+                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
+                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Article Excerpt",
+                  "shortTitle": "Capturing Tank Man",
+                  "publication": "How Stuart Franklin Took His Take Man Photograph",
+                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
+                  "year": "2016",
+                  "author": "Phaidon",
+                  "content": [
+                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                  ],
+                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
+                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
+                },
+                {
+                  "type": "Article Excerpt",
+                  "shortTitle": "Capturing Tank Man",
+                  "publication": "How Stuart Franklin Took His Take Man Photograph",
+                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
+                  "year": "2016",
+                  "author": "Phaidon",
+                  "content": [
+                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                  ],
+                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
+                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
                 }
               ]
             },
@@ -632,33 +671,72 @@
             {
               "type": "event",
               "paragraphs": [
-                "After the Tiananmen Square Massacre, Beijing drastically shifted its policy by taking a tougher stance on how Hong Kong would be governed after 1997. Thus, China&rsquo;s tighter grip on Hong Kong made citizens fear that the mantra, &ldquo;Today&rsquo;s Tiananmen, Tomorrow Hong Kong&rdquo; would become a reality.",
-                "At the same time, in the months following the Communist repression of the pro-democracy movement in China, Britain reaffirmed its decision not to give Hong Kong&rsquo;s 3.25 million citizens who hold British passports the right to live in Britain after the handover in 1997."
+                "After the Tiananmen Square Massacre, Beijing drastically shifted its policy by taking a tougher stance on how Hong Kong would be governed after 1997. Thus, China&rsquo;s tighter grip on Hong Kong made citizens fear that the mantra, <span>&ldquo;Today&rsquo;s Tiananmen, Tomorrow Hong Kong&rdquo;<sup>1</sup></span> would become a <span>reality.<sup>2</sup></span>",
+                "At the same time, in the months following the Communist repression of the pro-democracy movement in China, Britain reaffirmed its decision not to give Hong Kong&rsquo;s 3.25 million citizens who hold British passports the <span>right to live<sup>3</sup></span> in Britain after the handover in 1997."
               ],
               "resources": [
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Article Excerpt",
+                  "shortTitle": "A Consitutional Instrument",
+                  "articleTitle": "National Security Law in Hong Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong Kong",
+                  "author": "Richard Cullen",
+                  "content": [
+                    "The Basic Law seeks to ensure individual freedoms. It contains wide-ranging guarantees of individual rights.' 2 These rights have recently been given real substance in the first major constitutional cases to come before the CFA.13 It is broadly recognized by most commentators, however, that the lack of a full representative democracy in Hong Kong leaves a fundamental weakness in the underpinnings of these rights. It is around these two related issues, democratization and individual rights, that the greatest controversies arose in the time leading up to the change of sovereignty and afterwards. The role of Article 23 of the Basic Law has been intertwined with these controversies."
+                  ],
+                  "citation": "Cullen, Richard, and H.L. Fu. “National Security Law in Hong Kong: Quo Vadis - A Study of Article 23 of the Basic Law of Hong Kong.” <em>UCLA Pacific Basin Law Journal</em> 19, no. 2 (2002): 192. ",
+                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Article Excerpt",
+                  "shortTitle": "Capturing Tank Man",
+                  "articleTitle": "How Stuart Franklin Took His Take Man Photograph",
+                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
+                  "year": "2016",
+                  "author": "Phaidon",
+                  "content": [
+                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                  ],
+                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
+                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Article Excerpt",
+                  "shortTitle": "Capturing Tank Man",
+                  "articleTitle": "How Stuart Franklin Took His Take Man Photograph",
+                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
+                  "year": "2016",
+                  "author": "Phaidon",
+                  "content": [
+                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                  ],
+                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
+                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Article Excerpt",
+                  "shortTitle": "Capturing Tank Man",
+                  "articleTitle": "How Stuart Franklin Took His Take Man Photograph",
+                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
+                  "year": "2016",
+                  "author": "Phaidon",
+                  "content": [
+                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                  ],
+                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
+                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
+                },
+                {
+                  "type": "Article Excerpt",
+                  "shortTitle": "Capturing Tank Man",
+                  "articleTitle": "How Stuart Franklin Took His Take Man Photograph",
+                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
+                  "year": "2016",
+                  "author": "Phaidon",
+                  "content": [
+                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                  ],
+                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
+                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
                 }
               ]
             },
@@ -699,8 +777,8 @@
             {
               "type": "event",
               "paragraphs": [
-                "In the years following the massacre, China began interrogating the memory of Tiananmen Square by censoring the events that occurred on June 4th, 1989. The deadly suppression of protesters became an unspoken moment in China&rsquo;s past, purged from its history books.",
-                "Meanwhile, Hong Kong became a safe haven for democratic activists to commemorate the tragedy of the massacre, as China continued to use insidious tactics to contest the memory of Tiananmen Square."
+                "In the years following the massacre, China began interrogating the memory of Tiananmen Square by censoring the events that occurred on June 4th, 1989. The <span>deadly suppression of protesters<sup>1</sup></span> became an unspoken moment in China&rsquo;s past, purged from its history books.",
+                "Meanwhile, Hong Kong became a safe haven for democratic activists to commemorate the tragedy of the massacre, as China continued to use insidious tactics to <span>contest the memory of Tiananmen Square.<sup>2</sup></span>"
               ],
               "resources": [
                 {
@@ -757,7 +835,7 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "Leading to the handover, the Tiananmen Square Massacre provoked a mass emigration of Hong Kong people in the early 1990&rsquo;s. Uncertain of what the future would hold for their homeland, thousands of citizens decided to emigrate overseas to Western countries such as Canada, The United States, Australia, and Britain. In the ten years leading up to the handover, approximately 504,000 Hong Kong residents left the region."
+                "<span>Leading to the handover<sup>1</sup></span>, the Tiananmen Square Massacre provoked a <span>mass emigration<sup>2</sup></span> of Hong Kong people in the early 1990&rsquo;s. Uncertain of what the future would hold for their homeland, thousands of citizens decided to emigrate overseas to Western countries such as Canada, The United States, Australia, and Britain. In the ten years leading up to the handover, approximately <span>503,800<sup>3</sup></span> Hong Kong residents left the region."
               ],
               "resources": [
                 {
@@ -822,10 +900,10 @@
               "title": "Event",
               "paragraphs": [
                 [
-                  "The transformation of Hong Kong&rsquo;s identity occurred immediately in tangible ways, and symbolically over time. In the lead up to the handover, subtle British colonial emblems that had existed for all of living memory, such as the Union Jack, would disappear overnight and were replaced with Chinese national symbols."
+                  "The transformation of Hong Kong&rsquo;s identity occurred immediately in tangible ways, and symbolically over time. In the lead up to the handover, subtle British colonial emblems that had existed for all of living memory, such as the Union Jack, would <span>disappear<sup>1</sup></span> overnight and were replaced with Chinese national symbols."
                 ],
                 [
-                  "The handover also represented the symbolic moment where the freedoms and civil liberties that came with the British colonial rule would transition into a communist system. Inevitably, the return to Chinese sovereignty ultimately meant a loss in democratic values because Hong Kong political leaders would be beholden to orders from China."
+                  "The handover also represented the symbolic moment where the freedoms and civil liberties that came with the British colonial rule would <span>transition<sup>2</sup></span> into a communist system. Inevitably, the return to Chinese sovereignty ultimately meant a loss in democratic values because Hong Kong political leaders would be beholden to orders from China."
                 ]
               ],
               "resources": [
@@ -886,8 +964,8 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "July 1, 1997 formalised the transfer of sovereignty over Hong Kong from Britain to China. In the first moments past midnight, the handover ceremony concluded the 156 years of British colonial rule in Hong Kong, announcing the region&rsquo;s new identity as a Special Administrative Region (HKSAR) of the People&rsquo;s Republic of China (PRC).  For the next 50 years, Hong Kong was promised that it could retain its capitalistic economy, civil liberties, and judicial system before fully returning back to China’s sovereignty in 2047.",
-                "A highly anticipated event to witness, Hong Kong people celebrated with a mix of excitement and apprehension—saying farewell to the departure of Britain and cautiously welcoming the arrival of the motherland. "
+                "July 1, 1997 formalised the <span>transfer of sovereignty<sup>1</sup></span> over Hong Kong from Britain to China. In the first moments past midnight, the <span>handover ceremony<sup>2</sup></span> concluded the 156 years of British colonial rule in Hong Kong, announcing the region&rsquo;s <span>new identity<sup>3</sup></span> as a Special Administrative Region (HKSAR) of the People&rsquo;s Republic of China (PRC).  For the next 50 years, Hong Kong was promised that it could retain its capitalistic economy, civil liberties, and judicial system before fully returning back to China’s sovereignty in 2047.",
+                "A highly anticipated <span>event to witness<sup>4</sup></span>, <span>Hong Kong people celebrated<sup>5</sup></span> with a <span>mix of excitement and apprehension<sup>6</sup></span>—saying farewell to the departure of Britain and cautiously welcoming the arrival of the motherland. "
               ],
               "resources": [
                 {
@@ -950,7 +1028,7 @@
     {
       "id": "2003",
       "title": "A Question of Patriotism",
-      "blurb": "Etiam at facilisis dolor. Suspendisse eget interdum ipsum. Vivamus suscipit urna eget fringilla gravida. Sed eros lectus, consequat eget tempor vitae, pharetra vel augue. In eget iaculis erat.",
+      "blurb": "Six years after the handover, the first imminent signs of Beijing&rsquo;s tighter grip would begin to emerge. Hong Kong would erupt into a historical demonstration in protest of implementing a security law that would undermine the existing rights, freedoms, and liberties of its citizens. ",
       "scenes": [
         {
           "title": "Implementing Article 23",
@@ -1266,7 +1344,7 @@
     {
       "id": "2014",
       "title": "An Impossible Dream",
-      "blurb": "Ut pellentesque laoreet arcu, vel ultrices ligula ullamcorper non. Aenean sit amet viverra nisl.",
+      "blurb": "Despite the momentum from the 2003 demonstrations, political turmoil in the intervening years slowed down the pace of democratization, and the legislature took no practical steps towards implementing universal suffrage.<br></br><br>The Occupy Movement in 2014 was created in an attempt to fight for achieving genuine universal suffrage. A year of political awakening for Hong Kong’s younger generation, contentious protest methods rooted in civil disobedience introduced a more disruptive form of advocating for democratic freedoms.</br>",
       "scenes": [
         {
           "title": "Occupy Central Love and Peace",
@@ -1630,7 +1708,7 @@
     {
       "id": "2019",
       "title": "A Summer of Discontent",
-      "blurb": "Vivamus rhoncus, ipsum in bibendum fringilla, arcu nulla semper elit, eu finibus elit ante ut est. Sed congue pharetra dolor nec aliquet.",
+      "blurb": "The 2014 Umbrella Movement&rsquo;s quiet conclusion had Hong Kong people disillusioned about their intermediary position between two polarising regimes. However, beneath the feelings of discontentment and fatigue, remained a lingering sense of hope that Hong Kong could one day create a path towards genuine democracy. <br></br><br>In 2019 a controversial extradition bill —in response to an unresolved murder—would provide an ideal moment to reignite the spirit of the pro-democracy movement. A re-kindled sense of solidarity would unite two million people in one last effort to save the region’s unique identity, leading to the most consequential sequence of protests in Hong Kong’s history.</br>",
       "scenes": [
         {
           "title": "A Sensational Crime",
