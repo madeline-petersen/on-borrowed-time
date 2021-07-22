@@ -13,7 +13,7 @@
               "title": "Event",
               "paragraphs": [
                 "Over the course of the 99 year lease to Britain, Hong Kong developed a unique in-between identity rooted in two competing cultures. These clashing influences created a unique <span>diasporic condition<sup>1</sup></span>, where Hong Kong maintained its Chinese heritage while embracing Western political ideals.",
-                "As the ending of the 99 year lease approached, Britain and China began negotiating the &ldquo;Joint Declaration on the Question of Hong Kong&rdquo;<sup>2</sup>, which outlined the parameters of the colony&rsquo;s future. The concept of &ldquo;one country, two systems&rdquo;<sup>3</sup> was introduced as a model to reunify<sup>4</sup> the region with China, while preserving Hong Kong&rsquo;s socioeconomic system and way of life for a fifty year period before being fully integrated back with the motherland."
+                "As the ending of the 99 year lease approached, Britain and China began negotiating the <span>&ldquo;Joint Declaration on the Question of Hong Kong&rdquo;<sup>2</sup></span>, which outlined the parameters of the colony&rsquo;s future. The concept of <span>&ldquo;one country, two systems&rdquo;<sup>3</sup></span> was introduced as a <span>model to reunify<sup>4</sup></span> the region with China, while preserving Hong Kong&rsquo;s socioeconomic system and way of life for a fifty year period before being fully integrated back with the motherland."
               ],
               "resources": [
                 {
@@ -76,7 +76,7 @@
                   "bookTitle": "Geography of Hong Kong",
                   "year": "—",
                   "author": "",
-                  "content": [""],
+                  "content": null,
                   "citation": "",
                   "linkTo": "https://en.wikipedia.org/wiki/Geography_of_Hong_Kong#/media/File:Map_of_Hong_Kong_18_Districts_en.svg"
                 },
@@ -388,10 +388,10 @@
                   "articleTitle": "Beijing Hints on Crackdown For Students",
                   "author": "Nicholas Kristof",
                   "content": [
-                    "In its strongest public comment so far on the pro-democracy student demonstrations of the last 10 days, the Communist Party called tonight for &ldquo;a grave political struggle&rdquo; against student unrest.",
-                    "&ldquo;All the comrades of the party and the whole nation must understand clearly,&rdquo; a solemn television newscaster announced, &ldquo;that if we do not resolutely stop this unrest, our state will have no calm days. Our reform and modernization will depend on this struggle, and the future of our state and nation will depend on it.&rdquo;",
-                    "The longer, televised version of tonight's statement said that the party initially had been tolerant, but that after the funeral service: ",
-                    "&ldquo;A very small number of people with ulterior motives continue to make use of the desire of young students to mourn Comrade Hu Yaobang. [...] They fabricate various rumours to poison people's minds. They make use of posters to libel and slander and attack the leaders of the Communist Party and the Government. They even undisguisedly violate the Constitution, incite people to negate the party's leadership and the socialist system. In some universities, they have set up illegal organizations and taken power from official student associations. In some universities, they have seized school broadcasting systems and incited students and teachers to boycott class.&rdquo;"
+                    "In its strongest public comment so far on the pro-democracy student demonstrations of the last 10 days, the Communist Party called tonight for &ldquo;a grave political struggle&rdquo; against student unrest.<br>",
+                    "</br>&ldquo;All the comrades of the party and the whole nation must understand clearly,&rdquo; a solemn television newscaster announced, &ldquo;that if we do not resolutely stop this unrest, our state will have no calm days. Our reform and modernization will depend on this struggle, and the future of our state and nation will depend on it.&rdquo;<br>",
+                    "</br>The longer, televised version of tonight's statement said that the party initially had been tolerant, but that after the funeral service:<br>",
+                    "</br>&ldquo;A very small number of people with ulterior motives continue to make use of the desire of young students to mourn Comrade Hu Yaobang. [...] They fabricate various rumours to poison people's minds. They make use of posters to libel and slander and attack the leaders of the Communist Party and the Government. They even undisguisedly violate the Constitution, incite people to negate the party's leadership and the socialist system. In some universities, they have set up illegal organizations and taken power from official student associations. In some universities, they have seized school broadcasting systems and incited students and teachers to boycott class.&rdquo;"
                   ],
                   "citation": "Kristof, Nicholas D. “Beijing Hints at Crackdown on Students.” New York Times, April 26, 1989.",
                   "linkTo": "https://www.nytimes.com/1989/04/26/world/beijing-hints-at-crackdown-on-students.html"
@@ -508,7 +508,7 @@
                 {
                   "type": "Article Excerpt",
                   "shortTitle": "Capturing Tank Man",
-                  "articleTitle": "How Stuart Franklin Took His Take Man Photograph",
+                  "publication": "How Stuart Franklin Took His Take Man Photograph",
                   "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
                   "year": "2016",
                   "author": "Phaidon",
@@ -523,10 +523,8 @@
                   "shortTitle": "Eyewitness Accounts of Massacre",
                   "articleTitle": "Eyewitness Accounts of Massacre",
                   "publication": "Asian Cha",
-                  "year": "",
-                  "author": "",
-                  "citation": "",
-                  "linkTo": ""
+                  "year": "1989",
+                  "content": null
                 }
               ]
             },
@@ -565,86 +563,82 @@
               "title": "Event",
               "paragraphs": [
                 "The political suppression of the student movement in mainland China led to the redrafting of Hong Kong&rsquo;s <span>Basic Law<sup>1</sup></span>, specifically the provision of <span>Article 23<sup>2</sup></span> that pertained to national security.",
-                "Before the Tiananmen Massacre, a public consultation in April 1988 suggested that Article 23 was too ambiguous in definition, and <span>critics wanted more clarity<sup>3</sup></span> on the terms &ldquo;national unity&rdquo; and &ldquo;subversion&rdquo;. In an effort to reach a compromise<sup>4</sup>, China and Hong Kong initially agreed to replace these terms with a clause that clearly prohibited <span>&ldquo;any act of treason, secession, sedition or theft of state secrets.&rdquo;<sup>5</sup></span> in <span>February 1989.<sup>6</sup></span>",
+                "Before the Tiananmen Massacre, a public consultation in April 1988 suggested that Article 23 was too ambiguous in definition, and <span>critics wanted more clarity<sup>3</sup></span> on the terms &ldquo;national unity&rdquo; and &ldquo;subversion&rdquo;. In an effort to reach a <span>compromise<sup>4</sup></span>, China and Hong Kong initially agreed to replace these terms with a clause that clearly prohibited <span>&ldquo;any act of treason, secession, sedition or theft of state secrets.&rdquo;<sup>5</sup></span> in <span>February 1989.<sup>6</sup></span>",
                 "After the bloodshed at Tiananmen Square, China felt it had made too many concessions in its previous public consultations about Article 23. China feared that Hong Kong could become a base to <span>overthrow CCP rule<sup>7</sup></span> in the mainland through the influence of oversea interests."
               ],
               "resources": [
                 {
                   "type": "Journal Excerpt",
                   "shortTitle": "A Consitutional Instrument",
-                  "publication": "National Security Law in Hong Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong Kong",
+                  "bookTitle": "National Security Law in Hong Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong Kong",
+                  "year": "2002",
                   "author": "Richard Cullen",
                   "content": [
-                    "The Basic Law seeks to ensure individual freedoms. It contains wide-ranging guarantees of individual rights.' 2 These rights have recently been given real substance in the first major constitutional cases to come before the CFA.13 It is broadly recognized by most commentators, however, that the lack of a full representative democracy in Hong Kong leaves a fundamental weakness in the underpinnings of these rights. It is around these two related issues, democratization and individual rights, that the greatest controversies arose in the time leading up to the change of sovereignty and afterwards. The role of Article 23 of the Basic Law has been intertwined with these controversies."
+                    "The Basic Law seeks to ensure individual freedoms. It contains wide-ranging guarantees of individual rights.' These rights have recently been given real substance in the first major constitutional cases to come before the CFA. It is broadly recognized by most commentators, however, that the lack of a full representative democracy in Hong Kong leaves a fundamental weakness in the underpinnings of these rights. It is around these two related issues, democratization and individual rights, that the greatest controversies arose in the time leading up to the change of sovereignty and afterwards. The role of Article 23 of the Basic Law has been intertwined with these controversies."
                   ],
                   "citation": "Cullen, Richard, and H.L. Fu. “National Security Law in Hong Kong: Quo Vadis - A Study of Article 23 of the Basic Law of Hong Kong.” <em>UCLA Pacific Basin Law Journal</em> 19, no. 2 (2002): 192. ",
                   "linkTo": "https://escholarship.org/content/qt4kh840h4/qt4kh840h4.pdf?t=n4ox1x"
                 },
                 {
-                  "type": "Article Excerpt",
-                  "shortTitle": "Capturing Tank Man",
-                  "publication": "How Stuart Franklin Took His Take Man Photograph",
-                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
-                  "year": "2016",
-                  "author": "Phaidon",
+                  "type": "Journal Excerpt",
+                  "shortTitle": "Final Draft of Article 23 (Article 22)",
+                  "bookTitle": "National Security Law in Hong Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong Kong",
+                  "year": "2002",
+                  "author": "Richard Cullen",
                   "content": [
-                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                    "&ldquo;The Hong Kong Special Administrative Region shall prohibit by law any act designed to undermine national unity or subvert the Central People&rsquo;s Government.&rdquo;"
                   ],
-                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
-                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
+                  "citation": "Cullen, Richard, and H.L. Fu. “National Security Law in Hong Kong: Quo Vadis - A Study of Article 23 of the Basic Law of Hong Kong.” <em>UCLA Pacific Basin Law Journal</em> 19, no. 2 (2002): 194.",
+                  "linkTo": "https://escholarship.org/content/qt4kh840h4/qt4kh840h4.pdf?t=n4ox1x"
                 },
                 {
-                  "type": "Article Excerpt",
-                  "shortTitle": "Capturing Tank Man",
-                  "publication": "How Stuart Franklin Took His Take Man Photograph",
-                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
-                  "year": "2016",
-                  "author": "Phaidon",
+                  "type": "Journal Excerpt",
+                  "shortTitle": "&ldquo;Subversion&rdquo; and &ldquo;National Unity&rdquo;",
+                  "bookTitle": "National Security Law in Hong Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong Kong",
+                  "year": "2002",
+                  "author": "Richard Cullen",
                   "content": [
-                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                    "On April 28, 1988, the BLDC published the draft Basic Law for public consultation. The community response to Article 22 varied. Some regarded it as necessary to ensure the stability and prosperity of Hong Kong. Others rejected it on the grounds that it was not referred to in the Joint Declaration; that it was unnecessary because Hong Kong had similar laws; or that it might infringe the rights and freedoms of the Hong Kong people. In particular it was said that subversion was an offense not known to &ldquo;democratic countries&rdquo; and therefore, should not be introduced into Hong Kong. Another major concern expressed in the consultation process was the uncertain nature of the terms &ldquo;undermining national unity.&rdquo;&lsquo;23 Undermining national unity was a criminal offense unknown to both Chinese and Hong Kong law. Hong Kong's reunification was all about national unity, however, and China was not prepared to soften its position on this issue."
                   ],
-                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
-                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
+                  "citation": "Cullen, Richard, and H.L. Fu. “National Security Law in Hong Kong: Quo Vadis - A Study of Article 23 of the Basic Law of Hong Kong.” <em>UCLA Pacific Basin Law Journal</em> 19, no. 2 (2002): 195.",
+                  "linkTo": "https://escholarship.org/content/qt4kh840h4/qt4kh840h4.pdf?t=n4ox1x"
                 },
                 {
-                  "type": "Article Excerpt",
-                  "shortTitle": "Capturing Tank Man",
-                  "publication": "How Stuart Franklin Took His Take Man Photograph",
-                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
-                  "year": "2016",
-                  "author": "Phaidon",
+                  "type": "Journal Excerpt",
+                  "shortTitle": "An Acceptable Compromise",
+                  "bookTitle": "National Security Law in Hong Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong Kong",
+                  "year": "2002",
+                  "author": "Richard Cullen",
                   "content": [
-                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                    "The draft Article 22 was amended after this consultation. The amendments were made on the basis of the principle that, &ldquo;The wording of [Article 22] may be amended, but its fundamental spirit should not be changed. The amendments were as follows: 1) The clause &ldquo;subvert the Central People's Government&rdquo; was replaced by &ldquo;treason&rdquo;; and 2) The clause &ldquo;any act of treason, secession, sedition or theft of state secrets&rdquo; was inserted to replace &ldquo;any act designated to undermine national unity.&rdquo; Article 23, (the previous Article 22), was drafted as follows: The Hong Kong Special Administrative Region shall enact laws on its own to prohibit any act of treason, secession, sedition or theft of state secrets. 26 There was no explanation offered as to why these particular offenses were included in Article 23, although it was clear that the amendment took into consideration both the existing Hong Kong and Mainland Chinese laws and China's political concerns. It was a compromise that seemed to satisfy both sides. China was satisfied because both treason and subversion were offenses in its criminal laws, and treason at common law was broad enough to absorb much &ldquo;subversive&rdquo; behavior. China's national security was sufficiently protected by these additional three offenses. The compromise was also acceptable to Hong Kong because subversion and undermining national unity were replaced by treason and other offenses, which were defined with some sort of clarity and also had a long history at common law."
                   ],
-                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
-                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
+                  "citation": "Cullen, Richard, and H.L. Fu. “National Security Law in Hong Kong: Quo Vadis - A Study of Article 23 of the Basic Law of Hong Kong.” <em>UCLA Pacific Basin Law Journal</em> 19, no. 2 (2002): 195.",
+                  "linkTo": "https://escholarship.org/content/qt4kh840h4/qt4kh840h4.pdf?t=n4ox1x"
                 },
                 {
-                  "type": "Article Excerpt",
-                  "shortTitle": "Capturing Tank Man",
-                  "publication": "How Stuart Franklin Took His Take Man Photograph",
-                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
-                  "year": "2016",
-                  "author": "Phaidon",
+                  "type": "Journal Excerpt",
+                  "shortTitle": "Second Draft of Article 23",
+                  "bookTitle": "National Security Law in Hong Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong Kong",
+                  "year": "2002",
+                  "author": "Richard Cullen",
                   "content": [
-                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                    "&ldquo;The Hong Kong Special Administrative Region shall enact laws on its own to prohibit any act of treason, secession, sedition or theft of state secrets.&rdquo;"
                   ],
-                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
-                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
-                }
-              ]
-            },
-            {
-              "type": "artifacts",
-              "title": "Artifacts",
-              "images": [
-                {
-                  "source": "candles",
-                  "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong Kong, Hong Kong. Held to mark the crackdown on the pro-democracy movement in Beijing&rsquo;s Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"
+                  "citation": "Cullen, Richard, and H.L. Fu. “National Security Law in Hong Kong: Quo Vadis - A Study of Article 23 of the Basic Law of Hong Kong.” <em>UCLA Pacific Basin Law Journal</em> 19, no. 2 (2002): 195.",
+                  "linkTo": "https://escholarship.org/content/qt4kh840h4/qt4kh840h4.pdf?t=n4ox1x"
                 },
                 {
-                  "source": "crowd",
-                  "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"
+                  "type": "Journal Excerpt",
+                  "shortTitle": "Subversion-phobia",
+                  "bookTitle": "National Security Law in Hong Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong Kong",
+                  "year": "2002",
+                  "author": "Richard Cullen",
+                  "content": [
+                    "There was a fundamental change in the negotiations over the reunification of Hong Kong and Mainland China in 1989. Having witnessed the reaction from Hong Kong to the tiananmen bloodshed, the CPG was deeply concerned that Hong Kong might be used as a base for the overthrow of CCP rule in Mainland China by domestic and overseas hostile forces. The previous concessions made by the CPG in the negotiations on Article 23 were now regarded as dangerous to China's national interest.<br>",
+                    "</br>The CPG insisted that further amendments were needed to reflect the new political reality. Enough about &ldquo;two systems,&rdquo; it was said, more emphasis should be placed on &ldquo;one country.&rdquo; China proposed to insert two new clauses in Article 23. One was to restore the offense of subversion against the CPG. The other was to insert a clause to prohibit foreign political organizations or bodies from conducting political activities in Hong Kong and to prohibit political organizations or bodies in Hong Kong from establishing ties with foreign political organizations or bodies."
+                  ],
+                  "citation": "Cullen, Richard, and H.L. Fu. “National Security Law in Hong Kong: Quo Vadis - A Study of Article 23 of the Basic Law of Hong Kong.” <em>UCLA Pacific Basin Law Journal</em> 19, no. 2 (2002): 195.",
+                  "linkTo": "https://escholarship.org/content/qt4kh840h4/qt4kh840h4.pdf?t=n4ox1x"
                 }
               ]
             },
@@ -677,66 +671,105 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
-                  "shortTitle": "A Consitutional Instrument",
-                  "articleTitle": "National Security Law in Hong Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong Kong",
-                  "author": "Richard Cullen",
+                  "shortTitle": "&ldquo;Today Tiananmen, Tomorrow's Hong Kong&rdquo;",
+                  "bookTitle": "Analysis—20 years ago, China promised Hong Kong; &rsquo;1 country, 2 systems&rsquo;; So much for promises.",
+                  "author": "Victoria Hui",
                   "content": [
-                    "The Basic Law seeks to ensure individual freedoms. It contains wide-ranging guarantees of individual rights.' 2 These rights have recently been given real substance in the first major constitutional cases to come before the CFA.13 It is broadly recognized by most commentators, however, that the lack of a full representative democracy in Hong Kong leaves a fundamental weakness in the underpinnings of these rights. It is around these two related issues, democratization and individual rights, that the greatest controversies arose in the time leading up to the change of sovereignty and afterwards. The role of Article 23 of the Basic Law has been intertwined with these controversies."
+                    "In 1989, the fear of “today’s Tiananmen, tomorrow’s Hong Kong” drove many in Hong Kong to provide moral and material support for student demonstrations across China. After the Tiananmen Square protests, Beijing shifted its Hong Kong policy sharply, taking a much tougher stand on how Hong Kong would be governed after 1997...<br>",
+                    "</br>[...]<br>",
+                    "The Basic Law, Hong Kong’s mini-constitution, was promulgated in this tense environment in 1990...<br>",
+                    "</br>[...]<br>",
+                    "</br>The Basic Law was supposed to codify the Joint Declaration’s guarantees of autonomy and the rule of law. Instead, it reflected Beijing’s tighter grip. Rather than direct elections, Hong Kong’s chief executive would be selected by a 900-member Election Committee (later expanded to 1200 members) dominated by pro-regime representatives. This has effectively turned the promise of “Hong Kong people ruling Hong Kong” into “Beijing appointees ruling Hong Kong."
                   ],
-                  "citation": "Cullen, Richard, and H.L. Fu. “National Security Law in Hong Kong: Quo Vadis - A Study of Article 23 of the Basic Law of Hong Kong.” <em>UCLA Pacific Basin Law Journal</em> 19, no. 2 (2002): 192. ",
-                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
+                  "citation": "Hui, Victoria Tin-bor. “Analysis | 20 Years Ago, China Promised Hong Kong '1 Country, 2 Systems.' So Much for Promises.” The Washington Post. WP Company, April 18, 2019. ",
+                  "linkTo": "https://www.washingtonpost.com/news/monkey-cage/wp/2017/06/29/20-years-ago-china-promised-a-1-country-2-systems-deal-for-hong-kong-that-wasnt-to-be/"
+                },
+                {
+                  "type": "Journal Excerpt",
+                  "shortTitle": "A Vivid Expression of Hong Kong Identity",
+                  "bookTitle": "Hongkongese or Chinese: The Problem of Identity on the Eve of Resumption of Chinese Sovereignty over Hong Kong",
+                  "year": "1997",
+                  "author": "Siu-kai Lau",
+                  "content": [
+                    "Hong Kong Chinese, particularly those with the Hongkongese identity, were jolted by the June 4 Incident in such a way that they were fully aware of their common political fate, which was perceived to be uncertain and miserable. They were disillusioned with the Chinese government and its promises to Hong Kong by the sudden twists and turns of events on the mainland. The sudden outpouring of emotions and political activism among the Hong Kong Chinese, especially the Hongkongese, can be interpreted as a vivid expression of the Hong Kong identity, which in this case was also shared to a substantial degree by those who identi- fied themselves as Chinese. The year 1989 can thus be considered as a milestone in the formation of the local identity among the Hong Kong Chinese."
+                  ],
+                  "citation": "Lau, Siu-kai. Hongkongese or Chinese: The Problem of Identity on the Eve of Resumption of Chinese Sovereignty over Hong Kong. Hong Kong: Hong Kong Institute of Asia-Pacific Studies, 1997. 21.",
+                  "linkTo": "https://ia802705.us.archive.org/29/items/hongkongeseorchi00hong/hongkongeseorchi00hong.pdf"
+                },
+                {
+                  "type": "Journal Excerpt", 
+                  "shortTitle": "A Key to a Prison TRANSCRIPT",
+                  "bookTitle": "Transcript of UK Parliament the debate of Hong Kong",
+                  "preamble": "The Official Reports of debates in UK Parliment—Transcript exercepts from the debate on June 1989.",
+                  "year": "1989",
+                  "author": "UK Parliament",
+                  "content": [
+                    "2:58 p.m.<br>",
+                    "</br>Baroness Ewart-Biggs rose to call attention to the problems facing the government and people of Hong Kong and to the responsibilities of Her Majesty's Government in this matter; and to move for Papers.<br>",
+                    "</br>Lord Willoughby de Broke My Lords, I am fully aware of the great privilege accorded to me in making my maiden speech in this historic House. I trust that I shall not overstep the boundaries of convention which bind maiden speakers, but I share with the noble Baroness her concern for the future of the people and territory of Hong Kong.<br>",
+                    "</br>In December 1984, during the debate on the joint agreement with China, my great friend Lord Birkenhead made his maiden speech. Sadly, Robin Birkenhead is now dead but I should like to remind your Lordships of his words. On that occasion he said: &ldquo;we do not have to live, except in our consciences, with the consequences of this agreement; the people of Hong Kong do. Many of them have risked their lives and abandoned everything to escape from Communism. One cannot possibly expect enthusiasm at the prospect of being handed back to a Communist power, however many safeguards are built into their return&rdquo;.—[Official Report, 10/12/84; col. 32.] That was four and a half years ago and today we must address ourselves urgently to the same question.<br>",
+                    "</br>Appalling as were the recent events in Peking, they should not have come as a surprise. There had already been a dress rehearsal in Tibet for the brutalities committed in Tiananmen Square. On at least four separate occasions during the past three years—and most recently in March of this year—Chinese troops and police opened fire on and killed unarmed demonstrators. That happened in spite of the fact that freedom of speech, freedom of assembly and freedom of demonstration are protected under Article 35 of the Constitution of the People's Republic of China. But to its shame the world ignored the warnings from Tibet until minds were wonderfully concentrated by the events on 3rd and 4th June. If the mask had slipped in Tibet, it has now been ripped away and the face of totalitarian China has been exposed.<br>",
+                    "</br>That is the power to which we are to hand over Hong Kong and with no more guarantee than the hope that China will abide by the joint agreement. gut after the experience of the past three weeks the people of Hong Kong need more than hope to persuade them that they are not to be delivered defenceless to the mercies of the People's Liberation Army. They need the assurance that if the worst comes to the worst they have in the last resort somewhere to go; an alternative to the bullet and the confession.",
+                    "</br>Whereas under the process of decolonisation other Crown colonies were led to or took the path to independence, as the noble Baroness has said, that option was denied to Hong Kong. The right of domicile in the United Kingdom was progressively removed between 1962 and 1981 under the Commonwealth Immigration Act and its subsequent amendments.<br>",
+                    "</br>Over the past three weeks the people of Hong Kong have experienced kaleidoscopic emotions: first, of pride and happiness for their fellow countrymen in China as the prospect of greater freedom rose before them; then of anger, shock and compassion; and, finally, of apprehension and fear that what happened in China and Tibet today would happen tomorrow in Hong Kong.<br>",
+                    "</br>What is now needed to restore the confidence of Hong Kong is the recognition that we have certain inescapable obligations and that the necessary steps will be taken to meet them. Speedier progress to democratic government, yes; a Bill of Rights, yes. However, they are the icing and what is needed is the cake. They can be no substitute for the fundamental need for an ultimate sanctuary.<br>",
+                    "</br>The course advocated by the present Governor, Sir David Wilson, is that we should grant full British passports to the 1.25 million people who currently hold British National (Overseas) passports and to the further 2 million people who are eligible to hold them. I do not believe that such a generous step would mean an unmanageable influx of immigrants from Hong Kong. Their lives are in Hong Kong and they would wish to continue to live there. Paradoxically, the assurance that people could leave would have the effect of encouraging them to stay, for a prison to which you have the key is no longer a prison.<br>",
+                    "</br>For my part, I do not believe it quite necessary to go so far as to give immediate right of abode to those 3.25 million who are potentialy eligible in Hong Kong. Certainly those most at risk should have that right and I urge the Government substantially to increase the degree of flexibility in awarding full British passports.<br>",
+                    "</br>If Portugal with its smaller population can give to over 100,000 of the citizens of Macao the right of abode in the EC, we can surely give several hundred thousand passports to the people of Hong Kong. I mention the EC because of course by 1992 a British passport will also be a passport to Europe and not all the Hong Kong people will wish to make their home here in the United Kingdom.<br>",
+                    "</br>The numbers may seem daunting but this Government have never shirked a challenge. If France has absorbed nearly 2 million immigrants from its overseas territories, we can surely do no less for our subjects in far more deserving circumstances. If Europe's population is increased by a maximum of 1 per cent., that is a tiny price to pay for saving a brave nation from the worst horrors of communism.<br>",
+                    "</br>I do not say that Armageddon is coming. However, I say that if it does come we should be prepared. I urge the Government to take the decisions which will satisfy both our honour and our responsibility.<br>",
+                    "</br>3.34pm<br>",
+                    "</br>Baroness Young—My Lords, I start by thanking the noble Baroness, Lady Ewart-Biggs, for introducing this important debate today and also by congratulating my noble friend Lord Willoughby de Broke on his maiden speech.<br>",
+                    "</br>This debate comes almost exactly one year since we last debated Hong Kong and it is difficult to overstate the change in the situation since that occasion. We have all been appalled by the actions of the Chinese Government over the treatment of the peaceful protesters in Tiananmen Square, and no one can ever forget the spectacle on our television screens of the Chinese army literally crushing students who were peacefully trying to express their point of view. We are horrified at the death penalties 233carried out, with more unquestionably to come. Those actions have shocked and appalled the entire world. I express for everyone, I am sure, our deepest sympathy and understanding for the very real concerns of the people of Hong Kong.<br>",
+                    "</br>Arising from that dreadful background it is all the more important to consider carefully what the reaction of Her Majesty's Government should be to this issue of Hong Kong. I start by placing on record my support for my right honourable and learned friend the Foreign Secretary and the measures that he has already taken against China: a ban on arms sales; a suspension of all scheduled exchanges between Britain and China; a suspension of the visit by the Prince and Princess of Wales; and suspension of all high-level military contacts. I also think that we greatly benefit from my right honourable friend's wise counsel on the situation in Hong Kong and his unwillingness, in my view quite properly, to be pushed precipitously into actions which in many cases have not been fully thought through.<br>",
+                    "</br>I am glad that my right honourable and learned friend is to visit Hong Kong shortly. He can then judge for himself the situation on the ground and, above all, can assure the people of Hong Kong that we shall fulfil our obligations and responsibility for the administration of Hong Kong up to 1997. I also place on record my support for the governor, Sir David Wilson, in these difficult times and for the excellent job that he is doing.<br>",
+                    "</br>What, then, should we do? The fact is that the historic and geographical realities of the situation of Hong Kong remain. Any viable future for Hong Kong must be dependent upon its co-operation and coexistence with China. Nothing can alter those facts, disagreeable though they may be. Under the lease, 92 per cent. of Hong Kong reverts to China in 1997. I recall, as a Foreign Office Minister, commending to your Lordships the Hong Kong agreement—the Sino-British Agreement on Hong Kong. I believe it to be a good agreement. Some people have suggested that we should either scrap it or try to renogotiate it. I believe that that would be a great mistake. We want to see it implemented. Nor is there any evidence that if we did reopen negotiations we would get a better agreement.<br>",
+                    "</br>One further positive point remains. It is in China's long-term interests to maintain the prosperity and stability of Hong Kong. As all speakers have said, we must try to keep up that confidence in Hong Kong. I welcome the proposals that have been made for an increase in democracy. I also welcome the fact that the Hong Kong police force has been strengthened under the control of the Hong Kong Government. I hope that on the tragic situation of the Vietnamese refugees there will be some improvement arising from the discussions at Geneva. That seems to be the case.<br>",
+                    "</br>Attention has focused on the question of whether, given the changed situation, we should give an undertaking of the right of abode to some 3.25 million people from Hong Kong. It is a matter of much regret to me that I have not been able to speak, before this debate, to Dame Lydia Dunn, who I 234know is in London, and to hear, first hand, her concerns. Of course we all understand their fears. Who could not? I shall therefore listen with great interest to what my noble friend the Minister has to say this afternoon on the point raised about a further examination, particularly under the nationality Acts, of the position of Crown servants and key business people. I was also interested to read what my right honourable friend the Prime Minister said in another place yesterday, when she referred to increased flexibility under the nationality Acts. Both statements I welcome, and I hope that my noble friend can say something further on this matter.<br>",
+                    "</br>On the wider issue of whether or not we should give a right of abode to the 3.25 million people in Hong Kong I would like to expand further, but time does not allow. But I say this: it is an immensely difficult issue. The British Parliament must not only consider its obligations to the people of Hong Kong, real and important as those are, but also its obligations to the people of the United Kingdom. Indeed, as the representatives in another place are elected to represent the people of the United Kingdom, their first duty must be to the people whom they represent. In answering this question I believe it must be clear that Britain could not guarantee a right of abode to all these people.<br>",
+                    "</br>I believe there is a danger as regards the insurance argument because no government could make that commitment without being prepared to make arrangements to receive for right of abode 3.25 million people. It really would not be fair to the people of Hong Kong, let alone to the people in this country, to pretend otherwise. Those who have to take responsibility often have to say things that they would rather not say and that are very painful and disagreeable. I believe that this is one instance of them. That said, we have all referred to what is called the Armageddon situation. We must profoundly hope and pray that it does not happen. From what my right honourable friends the Prime Minister and the Foreign Secretary said yesterday, I recognise that should that situation arise we shall seek the help of the rest of the world in trying to resolve what will be not only a desperately tragic situation for Hong Kong, but a tragedy for the whole world.<br>"
+                  ],
+                  "citation": "“Hong Kong.” Hong Kong (Hansard, 21 June 1989). UK Parliament, June 21, 1989.",
+                  "linkTo": "https://api.parliament.uk/historic-hansard/lords/1989/jun/21/hong-kong"
                 },
                 {
                   "type": "Article Excerpt",
-                  "shortTitle": "Capturing Tank Man",
-                  "articleTitle": "How Stuart Franklin Took His Take Man Photograph",
-                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
-                  "year": "2016",
-                  "author": "Phaidon",
+                  "shortTitle": "An Impossible Dream",
+                  "bookTitle": "Hong Kong On Borrowed Time",
+                  "year": "1989",
+                  "author": "Margaret Scott",
                   "content": [
-                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                    "Another immigrant from across the border, Poon, a burly man of 45, has worked in a textile factory for 20 years; he has watched his two children grow up and Mong Kok evolve from a maze of squatter's huts to tenements to high-rises. Before June 4 he never thought about emigrating; now he calls it his impossible dream. "
                   ],
-                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
-                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
+                  "citation": "Scott, Margaret. “Hong Kong on Borrowed Time.” The New York Times. The New York Times, October 22, 1989.",
+                  "linkTo": "https://www.nytimes.com/1989/10/22/magazine/hong-kong-on-borrowed-time.html"
+                },
+                {
+                  "type": "Journal Excerpt",
+                  "shortTitle": "Caught Between Two Cultures",
+                  "bookTitle": "Diasporic Memories and Conceptual Geography in Post-Colonial Hong Kong",
+                  "year": "2014",
+                  "author": "Angelina Y. Chin",
+                  "content": [
+                    "Rey Chow writes:<br>",
+
+                    "</br>&ldquo;What I retain from these memories is not a history of personal or collective victimization but the sense of immediacy of a particular Diaspora reality— of Hong Kong caught, as it always has been since the end of the Second World War, between two dominant cultures, British colonial and Chinese Communist, neither of which takes the welfare of Hong Kong people into account even though both would turn to Hong Kong for financial and other forms of assistance when they needed it. This marginalized position, which is not one chosen by those from Hong Kong but one constructed by history, brings with it a certain privilege of observation and an unwillingness to idealize oppression&rdquo;."
+                  ],
+                  "citation": "Chin, Angelina Y. &ldquo;Diasporic Memories and Conceptual Geography in Post-Colonial Hong Kong.&rdquo; <em>Modern Asian Studies</em> 48, no. 6 (2014): 1566–67.",
+                  "linkTo": "https://www.jstor.org/stable/24494641?seq=1"
                 },
                 {
                   "type": "Article Excerpt",
-                  "shortTitle": "Capturing Tank Man",
-                  "articleTitle": "How Stuart Franklin Took His Take Man Photograph",
-                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
-                  "year": "2016",
-                  "author": "Phaidon",
+                  "shortTitle": "Hong Kong&lsquo;s Identity Begins to Crystallize ",
+                  "bookTitle": "Communism: Fear And Anger in Hong Kong",
+                  "year": "1989",
+                  "author": "William Stewart",
                   "content": [
-                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                    "Meanwhile, many in Hong Kong weren’t much happier with the U.K. than they were with China: even as it began to seem that Beijing’s grasp on Hong Kong might be tighter than expected, Westminster also made it harder for residents of the colony to settle in the U.K., a move that left many Hong Kong residents feeling stranded between two cultures. After the Tiananmen Square massacre that summer, the modern Hongkonger identity began to crystallize. According to TIME’s reporter in Hong Kong at the time, Hong Kong residents were both firmly pro-democracy and firmly Chinese:",
+                    "The glittering glass-and-steel Bank of China, Southeast Asia’s tallest building and a prominent addition to Hong Kong’s spectacular skyline, was to embody the faith that both Hong Kong and China placed in a common future, a visible symbol of the ”one country, two systems” promised when the British crown colony reverts to China in 1997. Last week two enormous black-and-white banners drooped across the tower’s facade bearing a grim message in Chinese characters: BLOOD MUST BE PAID WITH BLOOD."
                   ],
-                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
-                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
-                },
-                {
-                  "type": "Article Excerpt",
-                  "shortTitle": "Capturing Tank Man",
-                  "articleTitle": "How Stuart Franklin Took His Take Man Photograph",
-                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
-                  "year": "2016",
-                  "author": "Phaidon",
-                  "content": [
-                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
-                  ],
-                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
-                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
-                },
-                {
-                  "type": "Article Excerpt",
-                  "shortTitle": "Capturing Tank Man",
-                  "articleTitle": "How Stuart Franklin Took His Take Man Photograph",
-                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
-                  "year": "2016",
-                  "author": "Phaidon",
-                  "content": [
-                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
-                  ],
-                  "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
-                  "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
+                  "citation": "Stewart, William. “Communism: Fear And Anger in Hong Kong.” Time. Time Inc., June 19, 1989.",
+                  "linkTo": "http://content.time.com/time/subscriber/article/0,33009,957965,00.html"
                 }
               ]
             },
