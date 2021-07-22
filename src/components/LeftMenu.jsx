@@ -142,11 +142,9 @@ const LeftMenu = ({
 
                   {selectedYear !== null && (
                     <span
-                      className={`left-menu__scenes absolute ${selectedYear ===
-                        null && 'fade-out-content'}`}
+                      className={`left-menu__scenes absolute scenes-fade-in`}
                       style={{
-                        // top: `calc(152px - ${(selectedYear.index + 1) * 33}px)`
-                        top: `calc(${(selectedYear.index + 1) * 33}px)`
+                        top: `calc(${(selectedYear.index + 1.5) * 33}px)`
                       }}
                     >
                       <Row className={`small-body text-white`}>
