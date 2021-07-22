@@ -1,9 +1,9 @@
 import './UIShell.scss';
 
+import { ArrowLeft20, Close20 } from '@carbon/icons-react';
 import React, { useState } from 'react';
 
 import Artifacts from './Artifacts.jsx';
-import { Close20 } from '@carbon/icons-react';
 import Event from './Event.jsx';
 import Header from '../components/Header';
 import Home from './Home.jsx';
@@ -21,6 +21,7 @@ const UIShell = props => {
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [nextBackground, setNextBackground] = useState(null);
+  const [selectedYear, setSelectedYear] = useState(null);
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
@@ -157,6 +158,8 @@ const UIShell = props => {
         navigateTo={navigateTo}
         setNextBackground={setNextBackground}
         setIsTransitioning={setIsTransitioning}
+        selectedYear={selectedYear}
+        setSelectedYear={setSelectedYear}
       />
       <span
         className={`absolute text-3xl cursor-pointer z-40 left-menu-bullet ${
@@ -170,13 +173,19 @@ const UIShell = props => {
         className={`absolute text-3xl cursor-pointer z-40 left-menu-close ${
           isMenuActive ? 'fade-in' : 'fade-out'
         } ${timelineClasses}`}
-        onClick={toggleLeftMenu}
+        onClick={
+          selectedYear !== null ? () => setSelectedYear(null) : toggleLeftMenu
+        }
       >
-        <Close20 />
+        {selectedYear !== null ? <ArrowLeft20 /> : <Close20 />}
       </span>
       <Link
         to="/home" // to do: change to "/" when homepage moves
-        className={`absolute cursor-pointer z-40 medium-caption page-title ${timelineClasses}`}
+        className={`absolute z-40 medium-caption page-title ${timelineClasses} ${
+          selectedYear === null
+            ? 'opacity-100 cursor-pointer'
+            : 'opacity-0 pointer-events-none'
+        }`}
       >
         On{' '}
         <Visible sm xs>
@@ -214,7 +223,7 @@ UIShell.propTypes = {
   pageId: PropTypes.string,
   year: PropTypes.shape(),
   scene: PropTypes.shape(),
-  sceneIndex: PropTypes.string,
+  sceneIndex: PropTypes.number,
   romanSceneNumber: PropTypes.string,
   isLastScene: PropTypes.bool,
   isLastPage: PropTypes.bool,

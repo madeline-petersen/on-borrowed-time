@@ -23,6 +23,19 @@ const Event = ({
 }) => {
   const [isClicked, setClicked] = useState(false);
   const screenClass = useScreenClass();
+  const container = document.querySelector('#event-paragraphs');
+  let matches = [];
+  if (container) {
+    matches = container.querySelectorAll('span');
+    console.log('it a match!', matches);
+  }
+
+  if (matches.length) {
+    console.log('many matches');
+    matches[0].onclick = function() {
+      alert('bla bla');
+    };
+  }
 
   useEffect(() => {
     setClicked(isTransitioning);
@@ -71,7 +84,10 @@ const Event = ({
               id="overflow-container"
               className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
             >
-              <Row className={`grid__row intro-paragraph pb-24`}>
+              <Row
+                className={`grid__row intro-paragraph pb-24`}
+                id="event-paragraphs"
+              >
                 {event.paragraphs.map((paragraph, index) => {
                   return (
                     <div key={`paragraph-${index}`} className="contents">

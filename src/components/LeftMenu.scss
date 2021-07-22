@@ -99,17 +99,17 @@ $xxl-minus-1: 1799px;
 
   &__list {
     // transform down
-    transition: transform 1s;
+    transition: padding-top 1s;
 
     &.transform {
       // transform up
-      transition: transform 1s;
+      transition: padding-top 1s;
     }
   }
 
   &__year {
     // fade in non-selected years
-    opacity: 100;
+    opacity: 1;
     transition: opacity 0.5s 1s;
 
     &.fade-out-content {
@@ -121,13 +121,23 @@ $xxl-minus-1: 1799px;
 
   &__scenes {
     // fade in blurb/scenes
-    opacity: 100;
-    transition: opacity 0.5s 1s;
+    top: calc(264px + 12px);
 
-    &.fade-out-content {
-      // fade out blurb/scenes
+    @keyframes scenes-fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    &.scenes-fade-in {
       opacity: 0;
-      transition: opacity 0.5s;
+      animation-name: foreground-fade-in;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
     }
   }
 }

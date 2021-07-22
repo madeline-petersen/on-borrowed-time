@@ -1,10 +1,10 @@
 import './LeftMenu.scss';
 
 import { Col, Container, Row, Visible } from 'react-grid-system';
-import React, { useState } from 'react';
 
-import { ArrowLeft16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
 import { roman } from '@sguest/roman-js';
 
 const LeftMenu = ({
@@ -13,9 +13,10 @@ const LeftMenu = ({
   years,
   navigateTo,
   setNextBackground,
-  setIsTransitioning
+  setIsTransitioning,
+  selectedYear,
+  setSelectedYear
 }) => {
-  const [selectedYear, setSelectedYear] = useState(null);
   const menu = document.getElementById('menu-card');
   const menuBackground = document.getElementById('menu-background-filler');
   const overlay = document.getElementById('menu-overlay');
@@ -85,99 +86,95 @@ const LeftMenu = ({
                 xs={12}
                 className="h-screen overflow-y-auto overflow-x-hidden"
               >
-                {selectedYear !== null && (
-                  <span
-                    className={`text-white absolute top-24 z-40 cursor-pointer`}
-                    onClick={() => setSelectedYear(null)}
-                  >
-                    <ArrowLeft16 />
-                  </span>
-                )}
                 <div
-                  className={`left-menu__list flex flex-col h-full justify-end ${
+                  className={`left-menu__list flex-col h-full ${
                     selectedYear !== null ? 'transform' : ''
                   }`}
                   style={{
-                    paddingBottom: '52px',
-                    transform: `${
+                    paddingTop: `${
                       selectedYear !== null
-                        ? `translate(0%, calc(-40% - ${selectedYear.index *
-                            33}px))`
-                        : ''
+                        ? `calc(264px - ${(selectedYear.index + 1) * 33}px)`
+                        : '264px'
                     }`
                   }}
                 >
                   {years.map((year, index) => (
-                    <span key={year.id}>
-                      <Row
-                        className={`left-menu__year mb-2 cursor-pointer ${selectedYear &&
-                          selectedYear.id !== year.id &&
-                          'fade-out-content'}`}
-                        onClick={() =>
-                          selectedYear === null
-                            ? setSelectedYear({
-                                id: year.id,
-                                index: index,
-                                ...year
-                              })
-                            : onClickYear(year.id)
-                        }
-                      >
-                        {/* 1/4 of 4 columns */}
-                        <Col lg={3} md={3} sm={2} xs={2}>
-                          <div className="medium-body text-white">
-                            {year.id}
-                          </div>
-                        </Col>
-                        {/* 3/4 of 4 columns */}
-                        <Col lg={9} md={9} sm={10} xs={10}>
-                          <div className="medium-body text-white">
-                            {year.title}
-                          </div>
-                        </Col>
-                      </Row>
-                    </span>
-                  ))}
-                </div>
-                <span
-                  className={`left-menu__scenes absolute ${selectedYear ===
-                    null && 'fade-out-content'}`}
-                  style={{ top: '26%' }}
-                >
-                  <Row className={`small-body text-white`}>
-                    <Col lg={3} md={3} sm={2} xs={2} />
-                    <Col lg={9} md={9} sm={10} xs={10}>
-                      <div className="pb-10 pr-12">
-                        {selectedYear && selectedYear.blurb}
-                      </div>
-                    </Col>
-                    {selectedYear &&
-                      selectedYear.scenes.map((scene, index) => (
-                        <span
-                          key={index}
-                          className="contents cursor-pointer"
-                          onClick={() => onClickScene(selectedYear.id, index)}
+                    <>
+                      <span key={year.id}>
+                        <Row
+                          className={`left-menu__year mb-2 cursor-pointer ${selectedYear &&
+                            selectedYear.id !== year.id &&
+                            'fade-out-content'}`}
+                          onClick={() =>
+                            selectedYear === null
+                              ? setSelectedYear({
+                                  id: year.id,
+                                  index: index,
+                                  ...year
+                                })
+                              : onClickYear(year.id)
+                          }
                         >
-                          <Col lg={11} md={11} sm={11} xs={11}>
-                            <p className="border-t border-white border-opacity-20 pt-4" />
-                          </Col>
+                          {/* 1/4 of 4 columns */}
                           <Col lg={3} md={3} sm={2} xs={2}>
-                            <div
-                              className={`small-body text-white text-opacity-50`}
-                            >
-                              Scene {roman.toRoman(index + 1)}
+                            <div className="medium-body text-white">
+                              {year.id}
                             </div>
                           </Col>
+                          {/* 3/4 of 4 columns */}
                           <Col lg={9} md={9} sm={10} xs={10}>
-                            <div>{scene.title}</div>
+                            <div className="medium-body text-white">
+                              {year.title}
+                            </div>
                           </Col>
-                          <Col lg={11} md={11} sm={11} xs={11}>
-                            <p className="pb-8" />
-                          </Col>
-                        </span>
-                      ))}
-                  </Row>
-                </span>
+                        </Row>
+                      </span>
+                    </>
+                  ))}
+
+                  {selectedYear !== null && (
+                    <span
+                      className={`left-menu__scenes absolute scenes-fade-in`}
+                    >
+                      <Row className={`small-body text-white`}>
+                        <Col lg={3} md={3} sm={2} xs={2} />
+                        <Col lg={9} md={9} sm={10} xs={10}>
+                          <div className="pb-10 pr-12">
+                            {selectedYear &&
+                              ReactHtmlParser(selectedYear.blurb)}
+                          </div>
+                        </Col>
+                        {selectedYear &&
+                          selectedYear.scenes.map((scene, index) => (
+                            <span
+                              key={index}
+                              className="contents cursor-pointer"
+                              onClick={() =>
+                                onClickScene(selectedYear.id, index)
+                              }
+                            >
+                              <Col lg={11} md={11} sm={11} xs={11}>
+                                <p className="border-t border-white border-opacity-20 pt-4" />
+                              </Col>
+                              <Col lg={3} md={3} sm={2} xs={2}>
+                                <div
+                                  className={`small-body text-white text-opacity-50`}
+                                >
+                                  Scene {roman.toRoman(index + 1)}
+                                </div>
+                              </Col>
+                              <Col lg={9} md={9} sm={10} xs={10}>
+                                <div>{scene.title}</div>
+                              </Col>
+                              <Col lg={11} md={11} sm={11} xs={11}>
+                                <p className="pb-8" />
+                              </Col>
+                            </span>
+                          ))}
+                      </Row>
+                    </span>
+                  )}
+                </div>
               </Col>
               <Visible xxl xl lg md>
                 <Col xxl={8} xl={8} lg={8} md={4} onClick={closeModal} />
@@ -196,7 +193,9 @@ LeftMenu.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
   navigateTo: PropTypes.func,
   setNextBackground: PropTypes.func,
-  setIsTransitioning: PropTypes.func
+  setIsTransitioning: PropTypes.func,
+  selectedYear: PropTypes.shape(),
+  setSelectedYear: PropTypes.func
 };
 
 export default LeftMenu;

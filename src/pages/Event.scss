@@ -80,3 +80,14 @@ $quarterHeight: calc(30vh - #{$a});
 .intro-paragraph {
   padding-top: calc(#{$quarterHeight} - 20px);
 }
+
+#event-paragraphs {
+  span {
+    transition: opacity 0.5s;
+  }
+
+  span:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
