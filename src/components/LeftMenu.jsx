@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 
 import { ArrowLeft16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
+import ReactHtmlParser from 'react-html-parser';
 import { roman } from '@sguest/roman-js';
 
 const LeftMenu = ({
@@ -148,10 +149,10 @@ const LeftMenu = ({
                     <Col lg={3} md={3} sm={2} xs={2} />
                     <Col lg={9} md={9} sm={10} xs={10}>
                       <div className="pb-10 pr-12">
-                        {selectedYear && selectedYear.blurb}
+                        {selectedYear && ReactHtmlParser(selectedYear.blurb)}
                       </div>
                     </Col>
-                    {selectedYear &&
+                    {/* {selectedYear &&
                       selectedYear.scenes.map((scene, index) => (
                         <span
                           key={index}
@@ -175,7 +176,7 @@ const LeftMenu = ({
                             <p className="pb-8" />
                           </Col>
                         </span>
-                      ))}
+                      ))} */}
                   </Row>
                 </span>
               </Col>
