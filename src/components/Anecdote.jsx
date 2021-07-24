@@ -77,9 +77,9 @@ const Anecdote = ({
             type === 'Article Excerpt' ||
             type === 'Book Excerpt' ||
             type === 'Journal Excerpt' ||
-            type === 'Diary Excerpt'
+            type === 'Diary'
               ? 'type-excerpt'
-              : type === 'Poem'
+              : type === 'Poem' || type === 'Lyrics'
               ? 'type-poem'
               : type === 'Imagery'
               ? 'type-imagery'
@@ -98,7 +98,7 @@ const Anecdote = ({
               {(type === 'Article Excerpt' ||
                 type === 'Book Excerpt' ||
                 type === 'Journal Excerpt' ||
-                type === 'Diary Excerpt') && (
+                type === 'Diary') && (
                 <>
                   <Col lg={2} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
@@ -225,59 +225,66 @@ const Anecdote = ({
                 </>
               )}
 
-              {type === 'Poem' && (
-                <>
-                  <Col lg={6} md={2} sm={1} xs={1} onClick={onClickSpan} />
-                  <Col lg={1} md={2} sm={1} xs={1} />
-                  <Col lg={5} md={7} sm={9} xs={9}>
-                    <div className="bg-white z-30 pt-5 anecdote-fixed-header">
-                      <div className="small-body mb-1">
-                        {shortTitle !== title
-                          ? ReactHtmlParser(shortTitle)
-                          : ''}
+              {type === 'Poem' ||
+                (type === 'Lyrics' && (
+                  <>
+                    <Col lg={6} md={2} sm={1} xs={1} onClick={onClickSpan} />
+                    <Col lg={1} md={2} sm={1} xs={1} />
+                    <Col lg={5} md={7} sm={9} xs={9}>
+                      <div className="bg-white z-30 pt-5 anecdote-fixed-header">
+                        <div className="small-body mb-1">
+                          {shortTitle !== title
+                            ? ReactHtmlParser(shortTitle)
+                            : ''}
+                        </div>
+                        <div className="small-body mb-5">{type}</div>
                       </div>
-                      <div className="small-body mb-5">{type}</div>
-                    </div>
-                  </Col>
-                  <Visible md sm xs>
-                    <Col md={1} sm={1} xs={1} />
-                  </Visible>
+                    </Col>
+                    <Visible md sm xs>
+                      <Col md={1} sm={1} xs={1} />
+                    </Visible>
 
-                  <Col lg={6} md={2} sm={1} xs={1} onClick={onClickSpan} />
-                  <Col lg={1} md={2} sm={1} xs={1} />
-                  <Col lg={5} md={7} sm={9} xs={9} className="anecdote-content">
-                    <div className="large-headline-static mb-6">
-                      {ReactHtmlParser(title)}
-                    </div>
-                    <div className="small-headline mb-20 md:mb-10 sm:mb-10">
-                      {author}
-                      {publication && `, ${publication}`}
-                      {year && `, ${year}`}
-                    </div>
-                    {content &&
-                      content.map((paragraph, index) => {
-                        return (
-                          <div
-                            className="medium-body"
-                            key={`paragraph-${index}`}
-                          >
-                            {ReactHtmlParser(paragraph)}
-                            <br />
-                          </div>
-                        );
-                      })}
-                    <Link to="">
-                      <div className="h-12" />
-                      <p className="border-t border-black border-opacity-10 pb-5" />
-                      <p className="small-body text-black text-opacity-60">
-                        {ReactHtmlParser(citation)}
-                      </p>
-                    </Link>
-                    <div className="bottom-spacer" />
-                  </Col>
-                  <Col lg={0} md={1} sm={1} xs={1} />
-                </>
-              )}
+                    <Col lg={6} md={2} sm={1} xs={1} onClick={onClickSpan} />
+                    <Col lg={1} md={2} sm={1} xs={1} />
+                    <Col
+                      lg={5}
+                      md={7}
+                      sm={9}
+                      xs={9}
+                      className="anecdote-content"
+                    >
+                      <div className="large-headline-static mb-6">
+                        {ReactHtmlParser(title)}
+                      </div>
+                      <div className="small-headline mb-20 md:mb-10 sm:mb-10">
+                        {author}
+                        {publication && `, ${publication}`}
+                        {year && `, ${year}`}
+                      </div>
+                      {content &&
+                        content.map((paragraph, index) => {
+                          return (
+                            <div
+                              className="medium-body"
+                              key={`paragraph-${index}`}
+                            >
+                              {ReactHtmlParser(paragraph)}
+                              <br />
+                            </div>
+                          );
+                        })}
+                      <Link to="">
+                        <div className="h-12" />
+                        <p className="border-t border-black border-opacity-10 pb-5" />
+                        <p className="small-body text-black text-opacity-60">
+                          {ReactHtmlParser(citation)}
+                        </p>
+                      </Link>
+                      <div className="bottom-spacer" />
+                    </Col>
+                    <Col lg={0} md={1} sm={1} xs={1} />
+                  </>
+                ))}
             </Row>
           </Container>
         </div>
