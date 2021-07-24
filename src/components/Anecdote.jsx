@@ -77,6 +77,7 @@ const Anecdote = ({
             type === 'Article Excerpt' ||
             type === 'Book Excerpt' ||
             type === 'Journal Excerpt' ||
+            type === 'Report Excerpt' ||
             type === 'Diary'
               ? 'type-excerpt'
               : type === 'Poem' || type === 'Lyrics'
@@ -98,6 +99,7 @@ const Anecdote = ({
               {(type === 'Article Excerpt' ||
                 type === 'Book Excerpt' ||
                 type === 'Journal Excerpt' ||
+                type === 'Report Excerpt' ||
                 type === 'Diary') && (
                 <>
                   <Col lg={2} md={2} sm={1} xs={1} onClick={onClickSpan} />
