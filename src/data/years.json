@@ -1611,9 +1611,9 @@
                   "year": "2003",
                   "author": "Keith Bradsher",
                   "content": [
-                    "The demonstrators wore mostly black, to show mourning for what they portrayed as Hong Kong's coming loss of civil liberties, and many carried umbrellas as shade from the bright sunshine and unusually sweltering heat. So many people showed up that the entire route of the march, nearly three miles long, became clogged with people, with throngs still waiting at Victoria Park, where the protest began, for their chance to join the procession.<br></br>",
-                    "A police spokesman said late tonight that 350,000 people had demonstrated, out of Hong Kong's population of 6.8 million. The Civil Human Rights Front, which organised the march, had planned for 100,000 to attend but estimated that more than 500,000 people actually participated.<br></br>",
-                    "It was the largest demonstration here since hundreds of thousands of people marched in 1989 to protest the Tiananmen Square killings in Beijing, and the largest protest ever directed against the Hong Kong government itself. With Hong Kong under Chinese rule ever since Britain handed it over in 1997, today's demonstration also appeared to be the largest anywhere on Chinese soil since Tiananmen Square."
+                    "The demonstrators wore mostly black, to show mourning for what they portrayed as Hong Kong&rsquo;s coming loss of civil liberties, and many carried umbrellas as shade from the bright sunshine and unusually sweltering heat. So many people showed up that the entire route of the march, nearly three miles long, became clogged with people, with throngs still waiting at Victoria Park, where the protest began, for their chance to join the procession.<br></br>",
+                    "A police spokesman said late tonight that 350,000 people had demonstrated, out of Hong Kong&rsquo;s population of 6.8 million. The Civil Human Rights Front, which organised the march, had planned for 100,000 to attend but estimated that more than 500,000 people actually participated.<br></br>",
+                    "It was the largest demonstration here since hundreds of thousands of people marched in 1989 to protest the Tiananmen Square killings in Beijing, and the largest protest ever directed against the Hong Kong government itself. With Hong Kong under Chinese rule ever since Britain handed it over in 1997, today&rsquo;s demonstration also appeared to be the largest anywhere on Chinese soil since Tiananmen Square."
                   ],
                   "citation": "Bradsher, Keith. “Hundreds of Thousands in Hong Kong Protest Security Laws.” The New York Times. The New York Times, July 1, 2003.",
                   "linkTo": "https://www.nytimes.com/2003/07/01/international/asia/hundreds-of-thousands-in-hong-kong-protest-security-laws.html"
@@ -1669,57 +1669,84 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "In the wake of the mass demonstrations, several principal Hong Kong officials announced their resignation. On July 16, 2003, Regina Ip formally stated her decision to step down, citing personal reasons for her departure.",
-                "The abrupt resignation of several key officials further amplified the administration&rsquo;s inadequacy, and its continued struggle to manage the political state of Hong Kong. Without enough votes to move the bill forward, Tung was forced to defer the legislation."
+                "In the wake of the mass demonstrations, several principal Hong Kong officials announced their <span>resignation<sup>1</sup></span>. On July 16, 2003, Regina Ip formally stated her decision to step down, citing personal reasons for her departure.",
+                "The abrupt resignation of several key officials further amplified the <span>administration&rsquo;s inadequacy<sup>2</sup></span>, and its continued struggle to manage the political state of Hong Kong. Without enough votes to move the bill forward, <span>Tung<sup>3</sup></span> was forced to defer the legislation."
               ],
               "resources": [
                 {
-                  "type": "Journal Excerpt",
-                  "shortTitle": "",
-                  "bookTitle": "",
-                  "year": "",
-                  "author": "",
+                  "type": "Article Excerpt",
+                  "shortTitle": "The Resignations of Regina Ip and Antony Leung",
+                  "bookTitle": "2 Top Officials in Hong Kong Resign in Wake of Protests",
+                  "year": "2003",
+                  "author": "Keith Bradsher",
                   "content": [
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>"
+                    "The resignations of Regina Ip, the secretary of security, and Antony Leung, the financial secretary, represent a very public humiliation for Beijing because the two had the reputation of enjoying particularly close ties to top Communist officials.<br></br>",
+                    "[...]<br></br>",
+                    "Mrs. Ip and Mr. Tung said in separate statements this evening that she had actually submitted her resignation on June 25, and that Mr. Tung had tried to talk her out of it before finally accepting it.<br></br>",
+                    "The government&rsquo;s insistence that Mrs. Ip gave her resignation three weeks ago but that nobody found out about it until now struck political experts. &rsquo;&rsquo;The government obviously doesn&rsquo;t want it to look like she&rsquo;s resigning under pressure from the demonstrations,&rsquo;&rsquo; said Michael Davis, a professor of law and public affairs at the Chinese University of Hong Kong.<br></br>",
+                    "Mr. Leung is the third-ranking official in the government, after Mr. Tung and Donald Tsang, the chief secretary. But he has kept a very low public profile since he saved himself $24,000 by buying a Lexus LS430 luxury sedan a month before he raised luxury car taxes steeply in March as part of an unpopular series of tax increases.<br></br>"
                   ],
-                  "citation": "",
-                  "linkTo": ""
+                  "citation": "Bradsher, Keith. “2 Top Officials in Hong Kong Resign in Wake of Protests.” The New York Times. The New York Times, July 17, 2003.",
+                  "linkTo": "https://www.nytimes.com/2003/07/17/world/2-top-officials-in-hong-kong-resign-in-wake-of-protests.html"
+                },
+                {
+                  "type": "Artcle Excerpt",
+                  "shortTitle": "Leaving Post",
+                  "bookTitle": "Regina Ip Resigns",
+                  "year": "2003",
+                  "author": "Hong Kong Government",
+                  "content": [
+                    "Chief Executive Tung Chee Hwa has accepted the resignation of Secretary for Security Regina Ip.<br></br>",
+                    "Mrs Ip tendered her resignation on June 25, citing personal reasons. She will leave her post with effect from July 25.<br></br>",
+                    "Mr Tung said today that he tried to persuade her to stay, and suggested she consider taking long leave to get some rest and sort out her personal matters before making up her mind. However, he said her decision could not be changed.<br></br>",
+                    "&ldquo;After careful consideration, I have decided to respect her wish and accept her resignation. I have recommended to the Central People&rsquo;s Government the removal of Mrs Ip from the post of Secretary for Security, in accordance with Article 48(5) of the Basic Law.&rdquo;<br></br>",
+                    "Praising Mrs Ip&rsquo;s performance during her service, Mr Tung said she has exceptional abilities and great wisdom. She has resolved many thorny issues, and has earned the esteem of colleagues in the service.<br></br>",
+                    "Appreciating her immense abilities and enthusiasm in serving Hong Kong, Mr Tung said she will be missed by her colleagues and himself. He wishes her great success and happiness in the years to come. <br></br>",
+                    "Chief Secretary for Administration Donald Tsang said he respected Mrs Ip&rsquo;s decision, and hailed her devotion, hard work, leadership skills and ability to take on a challenge.<br></br>",
+                    "Mrs Ip thanked Mr Tung and her civil service colleagues for their support during her five-year tenure as secretary.<br></br>",
+                    "She said she deeply regrets the legislative work to implement Basic Law Article 23 has not been completed as scheduled. <br></br>",
+                    "&ldquo;As a Chinese national and the Secretary for Security, I sincerely believe I have a responsibility to actively promote this highly important legislative task. I feel deeply honoured that I have had an opportunity to take part in this historic legislative work during my tenure,&rdquo; Mrs Ip said.<br></br>",
+                    "&ldquo;In formulating the proposals, we have tried our best to strike a balance between protecting national security and safeguarding Hong Kong people&rsquo;s rights and freedoms.&rdquo;<br></br>",
+                    "With the various amendments proposed by the Government, Mrs Ip firmly believes the bill will achieve this goal.<br></br>",
+                    "She said efforts made in the past 10 months will lay a good foundation for the eventual passage of the bill and she is confident that her successor will be able to accomplish the task in good time.<br></br>"
+                  ],
+                  "citation": "“Regina Ip Resigns.” news.gov.hk. news.gov.hk, July 16, 2003.",
+                  "linkTo": "https://www.news.gov.hk/isd/ebulletin/en/category/administration/030716/html/030716en01005.htm"
+                },
+                {
+                  "type": "Article Excerpt",
+                  "shortTitle": "Uncharted Waters",
+                  "bookTitle": "Hong Kong Cabinet Faces Political Crisis",
+                  "year": "2003",
+                  "author": "Jane Karen Ho",
+                  "content": [
+                    "Tung Chee-Hwa&rsquo;s popularity rating dropped to an all-time low of 35% after the July 1 demonstration, a poll by the University of Hong Kong revealed earlier this month. Commentators say that to some extent, Leung and Ip took the direct hit for Tung, who was the real target of the criticism. In particular, Ip, who was not a lawyer by profession, was made responsible for the Article 23 bill and was left to defend it point by point.<br></br>",
+                    "[...]<br></br>",
+                    "The unfolding political crisis leaves Hong Kong and China in unchartered waters. There are mounting calls for Tung to step down, but commentators doubt that will happen any time soon. Tung has admitted that he has made mistakes and asked for a second chance. In response to the rally of July 1, he said that &ldquo;I was left sleepless the whole night, the public reminded me to adopt a more humble, sincere attitude to address their demands&rdquo;.<br></br>",
+                    "Hong Kong cannot fire a chief executive, so Tung is theoretically only removable if he falls ill or dies, and Beijing would be reluctant to intervene in such a high profile way. &ldquo;It&rsquo;s a problem for Hong Kong and Beijing,&rdquo; Loh told the Associated Press. &ldquo;Neither of us can move.&rdquo; Temperature may cool a few degrees with the departure of the two unpopular ministers, and there are no new scandals that yet warrant the removal of Tung. Most people accept that Tung&rsquo;s removal will be hard for Beijing to accept after the amount of support that has been given to him in the past."
+                  ],
+                  "citation": "Ho, Jane Karen. “Hong Kong Cabinet Faces Political Crisis.” The Guardian. Guardian News and Media, July 17, 2003.",
+                  "linkTo": "https://www.theguardian.com/world/2003/jul/17/china"
+                },
+                {
+                  "type": "Video",
+                  "shortTitle": "The Public Responds",
+                  "bookTitle": "Reactions to Resignation of Two Prominent Government Minister",
+                  "year": "2003",
+                  "content": null,
+                  "linkTo": "https://www.youtube.com/watch?v=In1ggWKRw1w"
                 },
                 {
                   "type": "Journal Excerpt",
-                  "shortTitle": "",
-                  "bookTitle": "",
-                  "year": "",
-                  "author": "",
+                  "shortTitle": "Forced Withdrawal",
+                  "bookTitle": "Hong Kong’s Political Autonomy and Its Continuing Struggle For Universal Suffrage",
+                  "author": "Phil C.W. Chan",
+                  "year": "2006",
                   "content": [
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>"
+                    "A joint series of mass demonstrations in which more than half a million people took part eventually ensued in July 2003. Whilst initially insistent on the National Security Bill&rsquo;s passage as scheduled, the Hong Kong goverment changed its course when on 7 July 2003 the traditionally pro-government Liberal Party chairman James Tien resigned his membership of the Executive Council consultation and supported calls for further consultation. As it realised that without the support of the Liberal Party the National Security Bill would no longer generate sufficient votes for passage, the government was forced to withdraw it. Plans for the enactment of Article 23 legislation have since been shelved indefinitely."
                   ],
-                  "citation": "",
-                  "linkTo": ""
+                  "citation": "Chan, Phil C.W. “Hong Kong’s Political Autonomy and Its Continuing Struggle For Universal Suffrage.” <em>Singapore Journal of Legal Studies</em>, December 2006, 297–98.",
+                  "linkTo": "https://www.jstor.org/stable/24869081?seq=1"
                 }
               ]
             },
@@ -1744,33 +1771,30 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "On September 5, 2003, the Hong Kong administration announced the indefinite withdrawal of the Article 23 legislation. The administration attempted to keep a low-profile by making concessions with the Hong Kong people through economic support.",
+                "On September 5, 2003, the Hong Kong administration announced the indefinite withdrawal of the Article 23 legislation. The administration attempted to keep a low-profile by making concessions with the Hong Kong people through <span>economic support.<sup>1</sup></span>",
                 "Despite the economic assistance from Beijing, the record voter turnout for the District Council elections in November, 2003, proved that people remained dissatisfied with the Tung administration and repeated their demands for democratisation."
               ],
               "resources": [
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Report Excerpt",
+                  "shortTitle": "Beijing&rsquo;s Conclusion",
+                  "bookTitle": "A Question of Patriotism: Human Rights and Democratization in Hong Kong",
+                  "author": "Human Rights Watch",
+                  "year": "2004",
+                  "content": [
+                    "Soon after the protest, Beijing came to the conclusion that Hong Kong’s problems stemmed from the sluggish economy. Fix the economy, the argument went, and political passions would cool, and support for Tung’s government and the pro-Beijing political parties would begin to revive. This analysis reflected the traditional view of Hong Kong as a money city, one in which political issues were, by and large, the province of economic elites.<br></br>",
+                    "The primary vehicle for executing this policy of economic engagement was the so-called Closer Economic Partnership Agreement, or CEPA. Under CEPA, which was drawn up before the protests but not finalized until after July 1, Hong Kong companies are allowed greater access to China, and tariffs on a wide range of Hong Kong goods and services imported into China were eliminated. The central government also significantly eased travel restrictions to Hong Kong, thus increasing tourism revenues for the city."
+                  ],
+                  "citation": "Rep. <em>A Question of Patriotism: Human Rights and Democratization in Hong Kong</em>. New York, NY: Human Rights Watch, 2004. 8.",
+                  "linkTo": "https://www.youtube.com/watch?v=In1ggWKRw1w"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                },
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                },
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Article Excerpt",
+                  "shortTitle": "A Golden &ldquo;Gift&rdquo;",
+                  "bookTitle": "Golden gift to make HK shine (HK Edition)",
+                  "year": "2003",
+                  "content": null,
+                  "linkTo": "http://www.chinadaily.com.cn/en/doc/2003-06/30/content_241988.htm"
                 }
               ]
             },
@@ -1796,33 +1820,89 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "The National Security Bill&rsquo;s successful withdrawal led political activists to return to the ongoing debate regarding Hong Kong&rsquo;s pace of democratisation. With newfound political momentum, pro-democracy advocates shifted their focus away from Article 23 and revisited the &ldquo;ultimate aim&rdquo; of embracing universal suffrage as defined in Basic Law&rsquo;s Article 45 and 68.",
-                "Achieving universal suffrage would primarily depend on Beijing adhering to its promised pace of democratisation for two upcoming political milestones—the 2004 Legislative Council election and the 2007 Chief Executive election."
+                "The National Security Bill&rsquo;s successful withdrawal led political activists to return to the ongoing debate regarding <span>Hong Kong&rsquo;s pace of democratisation<sup>1</sup></span>. With newfound political momentum, pro-democracy advocates shifted their focus away from Article 23 and revisited the <span>&ldquo;ultimate aim&rdquo;<sup>2</sup></span> of embracing universal suffrage as defined in <span>Basic Law&rsquo;s Article 45 and 68.<sup>3</sup></span>",
+                "<span>Achieving universal suffrage<sup>4</sup></span> would primarily depend on Beijing adhering to its promised pace of democratisation for two upcoming political milestones—the 2004 Legislative Council election and the 2007 <span>Chief Executive election.<sup>5</sup></span>"
               ],
               "resources": [
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Journal Excerpt",
+                  "shortTitle": "The Pace of Democratization",
+                  "bookTitle": "The Basic Law and Democratization in Hong Kong",
+                  "author": "Michael C. Davis",
+                  "year": "2006",
+                  "content": [
+                    "In the 2004-2005 debate over political reform, Hong Kong arrived at a critical juncture in its now decades-long constitutional development. The Basic Law specifies that full democracy can be embraced, after 2007, with elections of both the Chief Executive and the Legislative Council (&ldquo;Legco&rdquo;). Beijing&rsquo;s April 2004 interpretation of the relevant provisions of the Basic Law first accepted that the Basic Law language &ldquo;subsequent to the year 2007&rdquo; and &ldquo;after 2007&rdquo; encompassed the election of the Chief Executive in 2007, and of the Legco in 2008. But the text of this same interpretation seized for Beijing the power to decide unilaterally the pace of democratization."
+                  ],
+                  "citation": "Davis, Michael C. “The Basic Law and Democratization in Hong Kong.” <em>Loyola University Chicago International Law Review</em> 3, no. 2 (2006): 166.",
+                  "linkTo": "https://lawecommons.luc.edu/lucilr/vol3/iss2/5/?utm_source=lawecommons.luc.edu/lucilr/vol3/iss2/5&utm_medium=PDF&utm_campaign=PDFCoverPages"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Journal Excerpt",
+                  "shortTitle": "Erosion of Autonomy",
+                  "bookTitle": "Hong Kong&rsquo;s Political Autonomy and Its Continuing Struggle For Universal Suffrage",
+                  "author": "Phil C.W.",
+                  "year": "2006",
+                  "content": [
+                    "Hong Kong has faced tremendous transitions in the past two decades, as the United Kingdom and the People&rsquo;s Republic of China between 1982 and 1984 negotiated the political future of Hong Kong without the consent or consultation of the people of Hong Kong, which culminated in the Sino-British Joint Declaration entered into between the two sovereign States in 1984 which provided for China’s resumption of sovereignty over Hong Kong on 1 July 1997. Whilst massive human rights violations in Hong Kong under Chinese (communist) rule which Hong Kong during the 1990s feared have not materialised after 1997, the autonomy as has repeatedly been promised to the people of Hong Kong by the British and Chinese governments as well  as in the Sino-British Joint Declaration and ultimately the Basic Law of Hong Kong, promulgated by China’s National People’s Congress in 1990 as the prospective mini-constitution of post-colonial Hong Kong, has nonetheless been eroded. The erosion of autonomy has particularly been caused by and manifested in the existence and use of the mechanism laid down in Article 158 of the Basic Law of Hong Kong which vests the power of interpretation of the Basic Law of Hong Kong ultimately in the Standing Committee of the National People’s Congress, a legislative body of China. Universal suffrage, the cornerstone and ultimate indication of every developed society, continues to be denied the people of Hong Kong, even though it was explicitly promised by the Joint Declaration and which the Basic Law of Hong Kong reiterates as the ultimate aim of governance of Hong Kong."
+                  ],
+                  "citation": "Chan, Phil C.W. “Hong Kong’s Political Autonomy and Its Continuing Struggle For Universal Suffrage.” <em>Singapore Journal of Legal Studies</em>, December 2006, 297–98.",
+                  "linkTo": "https://www.jstor.org/stable/24869081?seq=1"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Article Excerpt",
+                  "shortTitle": "Article 45, Article 68",
+                  "bookTitle": "Chapter IV—Political Structure: Section 1, The Chief Executive; Section 3, The Legislature",
+                  "author": "Hong Kong Government",
+                  "year": "2021",
+                  "content": [
+                    "Article 45<br></br>",
+                    "The Chief Executive of the Hong Kong Special Administrative Region shall be selected by election or through consultations held locally and be appointed by the Central People&rsquo;s Government.<br></br>",
+                    "The method for selecting the Chief Executive shall be specified in the light of the actual situation in the Hong Kong Special Administrative Region and in accordance with the principle of gradual and orderly progress. <br></br>",
+                    "The ultimate aim is the selection of the Chief Executive by universal suffrage upon nomination by a broadly representative nominating committee in accordance with democratic procedures.<br></br>",
+                    "The specific method for selecting the Chief Executive is prescribed in Annex I: &ldquo;Method for the Selection of the Chief Executive of the Hong Kong Special Administrative Region&rdquo;.<br></br><br></br>",
+                    "Article 68<br></br>",
+                    "The Legislative Council of the Hong Kong Special Administrative Region shall be constituted by election.<br></br>",
+                    "The method for forming the Legislative Council shall be specified in the light of the actual situation in the Hong Kong Special Administrative Region and in accordance with the principle of gradual and orderly progress. The ultimate aim is the election of all the members of the Legislative Council by universal suffrage.<br></br>",
+                    "The specific method for forming the Legislative Council and its procedures for voting on bills and motions are prescribed in Annex II: &ldquo;Method for the Formation of the Legislative Council of the Hong Kong Special Administrative Region and Its Voting Procedures&rdquo;.<br></br>"
+                  ],
+                  "citation": "Basic Law 45, Basic Law 68.",
+                  "linkTo": "https://www.basiclaw.gov.hk/en/basiclaw/chapter4.html"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Report Excerpt",
+                  "shortTitle": "It Is All Very Clear",
+                  "bookTitle": "A Question of Patriotism: Human Rights and Democratization in Hong Kong",
+                  "author": "Human Rights Watch",
+                  "year": "2004",
+                  "content": [
+                    "Tung made perhaps his most extensive comments on democracy in Hong Kong during his U.S. sojourn in an interview with the journalist Jim Lehrer on the PBS newsmagazine Newshour:<br></br>",
+                    "...the important thing I think, Jim, for us to remember is that we have a constitution—we have what we call a basic law, which is our constitution, which, among other things, maps out for the next 10 years the evolution of our political institution—how the legislature will be elected every few years until the about 10th year and how the chief executive would be elected every time... (The Basic Law) also says very clearly that at the end of that time we are going to move into universal suffrage if it is at that time the wish of the Hong Kong people. So the ultimate aim is universal suffrage. It is all very clear."
+                  ],
+                  "citation": "Rep.<em>A Question of Patriotism: Human Rights and Democratization in Hong Kong</em>. New York, NY: Human Rights Watch, 2004. 2.",
+                  "linkTo": "https://www.hrw.org/report/2004/09/09/question-patriotism/human-rights-and-democratization-hong-kong"
+                },
+                {
+                  "type": "Video",
+                  "shortTitle": "Chief Executive Election Process",
+                  "bookTitle": "How to Elect a Leader in Hong Kong",
+                  "content": null,
+                  "linkTo": "https://www.youtube.com/watch?v=EKsp4T0TWHw"
+                },
+                {
+                  "type": "Journal Excerpt",
+                  "shortTitle": "A Mirror Cabinet",
+                  "bookTitle": "Discourse, Democracy and Diplomacy: a Pragmatic Analysis of the Occupy Central Movement in Hong Kong",
+                  "author": "Jacob L. Mey and Hans J. Ladegaard",
+                  "year": "2015",
+                  "content": [
+                    "Former PRC President Hu Jintao has talked and written extensively about democracy, as it is viewed and practiced in China. Here is what he said in a speech celebrating the 50th anniversary of the founding of the NPC, in Beijing:<br></br>",
+                    "The people’s congress is responsible to the people and is under the supervision of the people. Through universal democratic elections, it produces the people’s own representa- tives. The people’s congress effectively ensures that people of all ethnic groups in China have democratic elections, democratic decisions, democratic management and democratic supervision, and that they enjoy extensive democracy, freedom and rights under the con- stitution and the law. (Hu Jintao, 15 September 2004)<br></br>",
+                    "In this short segment, President Hu mentions ‘democracy’ no less than six times, thereby highlighting the importance of this concept for his audience and for the occasion. It is almost tantamount to a declaration of principle, a constitutive docu- ment defining the liabilities and responsibilities of the People’s Congress. However, what is really meant by ‘democracy’ is not explicitly spelled out here. To discover the real meaning (in practice) of the concept, one has to go to another passage in the same speech by Hu Jintao:<br></br>",
+                    "We must promote democracy and ensure that the people are the masters. To have the Chinese Communist Party in power is to lead, to support and to ensure that the people become the masters, to safeguard and to realize the fundamental interests of the majority of the people ... [to ensure this] we must strengthen the party’s governing ability. (Hu Jintao, 15 September 2004)<br></br>",
+                    "In other words, to vary an often quoted, but probably apocryphal quip by Lenin, ‘democracy is good, but control is better’. In the Chinese vision of democracy, one can only allow for ‘democratic’ procedures as long as they are guided and kept in check by the real governing instance, the ‘locus’ of power, the Party. Clearly, there is a lack of harmony between the two concepts: ‘freedom’, as ensured by democracy and democratic procedures, and ‘power’, as instituted by, and embodied in, a minority of people who have the obligation to ‘lead’ the people to become ‘masters’ – but of what? The people can only exercise their ‘mastership’ under the guidance of, and in subservience to, the views and dictates of the Party, which itself is controlled by a small number of people in the Central Committee (not even by the 1400 members of the People’s Congress, which itself is under the control of the Party). It is a bit as if one were in a mirror cabinet, where the pictures are reflected, and reflect themselves, everywhere and infinitely, such that it is impossible to localize the ‘original’ and ‘leading’ picture, the one that is the mother and origin of the rest.<br></br>"
+                  ],
+                  "citation": "Mey, Jacob L., and Hans J. Ladegaard. “Discourse, Democracy and Diplomacy: a Pragmatic Analysis of the Occupy Central Movement in Hong Kong.” <em>WORD</em> 61, no. 4 (2015): 325. ",
+                  "linkTo": "https://www.tandfonline.com/doi/full/10.1080/00437956.2015.1112949"
                 }
               ]
             },
@@ -1860,28 +1940,28 @@
               ],
               "resources": [
                 {
-                  "title": "",
-                  "source": "",
                   "type": "",
-                  "year": ""
-                },
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                },
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                },
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "shortTitle": "",
+                  "bookTitle": "",
+                  "author": "",
+                  "year": "",
+                  "content": [
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>"
+                  ],
+                  "citation": "",
+                  "linkTo": ""
                 }
               ]
             },
