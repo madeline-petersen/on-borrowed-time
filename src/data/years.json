@@ -842,8 +842,8 @@
                   "linkTo": "https://meridian.allenpress.com/mobilization"
                 },
                 {
-                  "type": "Poem Excerpt",
-                  "shortTitle": "The Wound of History - SONG LYRICS",
+                  "type": "Lyrics",
+                  "shortTitle": "The Wound of History",
                   "bookTitle": "The Wound of History",
                   "year": "—",
                   "author": "Translated by Ron Zhang, Xiao Tong",
@@ -863,7 +863,7 @@
                   "linkTo": "http://archives.cnd.org/June4th/song/wound.html"
                 },
                 {
-                  "type": "Poem",
+                  "type": "Lyrics",
                   "shortTitle": "Blood Is On The Square - SONG LYRICS",
                   "bookTitle": "Blood Is On The Square",
                   "year": "—",
@@ -986,15 +986,16 @@
                   "citation": "Murphy, Cait N. A Culture of Emigration. The Atlantic, April 1991. Archived."
                 },
                 {
-                  "type": "Journal Excerpt",
+                  "type": "Report",
                   "shortTitle": "Hong Kong Emigration",
                   "bookTitle": "—",
                   "year": "—",
-                  "content": null
+                  "content": null,
+                  "linkTo": "https://www.info.gov.hk/info/population/eng/pdf/report_eng.pdf"
                 },
                 {
-                  "type": "Journal Excerpt",
-                  "shortTitle": "Distancing of Communities — DIARY",
+                  "type": "Diary",
+                  "shortTitle": "Distancing of Communities",
                   "bookTitle": "Distancing of Communities",
                   "year": "1997",
                   "author": "Amy Wang",
@@ -1010,8 +1011,8 @@
                   "citation": "“Distancing of Communities.” Hong Kong &rsquo;97: Lives in Transition. Public Broadcasting Service, 1997. Archived."
                 },
                 {
-                  "type": "Journal Excerpt",
-                  "shortTitle": "July 1st Is Approaching So Quickly—DIARY",
+                  "type": "Diary",
+                  "shortTitle": "July 1st Is Approaching So Quickly",
                   "bookTitle": "July 1st Is Approaching So Quickly",
                   "year": "1997",
                   "author": "Amy Wang",
@@ -1026,8 +1027,8 @@
                   "citation": "“Distancing of Communities.” Hong Kong &rsquo;97: Lives in Transition. Public Broadcasting Service, 1997. Archived."
                 },
                 {
-                  "type": "Journal Excerpt",
-                  "shortTitle": "There Are Doubts—DIARY",
+                  "type": "Diary",
+                  "shortTitle": "There Are Doubts",
                   "bookTitle": "There Are Doubts",
                   "year": "1996",
                   "preamble": "*Author&rsquo;s name has been changed to protect their identity.<br></br><br></br>",
@@ -1044,8 +1045,8 @@
                   "citation": "“There Are Doubts” Hong Kong &rsquo;97: Lives in Transition. Public Broadcasting Service, 1997. Archived."
                 },
                 {
-                  "type": "Journal Excerpt",
-                  "shortTitle": "The City Is Buzzing—DIARY",
+                  "type": "Diary",
+                  "shortTitle": "The City Is Buzzing",
                   "bookTitle": "The City Is Buzzing",
                   "year": "1997",
                   "author": "Amy Wang",
@@ -1118,8 +1119,8 @@
               ],
               "resources": [
                 {
-                  "type": "Journal Excerpt",
-                  "shortTitle": "Signs of Britishness—DIARY",
+                  "type": "Diary",
+                  "shortTitle": "Signs of Britishness",
                   "bookTitle": "Signs of Britishness",
                   "year": "1997",
                   "author": "Robert Taylor",
@@ -1130,8 +1131,8 @@
                   "citation": "&ldquo;Signs of Britishness.&rdquo; Hong Kong &rsquo;97: Lives in Transition. Public Broadcasting Service, 1997. Archived."
                 },
                 {
-                  "type": "Journal Excerpt",
-                  "shortTitle": "A Sigh Or Smile—DIARY",
+                  "type": "Diary",
+                  "shortTitle": "A Sigh Or SmileY",
                   "bookTitle": "A Sigh Or Smile",
                   "year": "1997",
                   "author": "Vivian Lai",
@@ -1155,8 +1156,8 @@
                   "linkTo": "https://www.nytimes.com/1997/02/16/arts/flowering-in-the-face-of-a-giant-unknown.html"
                 },
                 {
-                  "type": "Journal Excerpt",
-                  "shortTitle": "Pearl Of China—DIARY",
+                  "type": "Diary",
+                  "shortTitle": "Pearl Of China",
                   "bookTitle": "Pearl Of China",
                   "year": "1997",
                   "author": "Einna",
@@ -1230,7 +1231,7 @@
                     "The two hegemons held on to every second that they owned Hong Kong, and yet history played a practical joke on everyone. In the end, Britain lowered the Union Jack at 11:59:5 3 on June 30, 1997—7 seconds early. Even so, the conductor of the Chinese military orchestra only raised the baton at the 58th second and the music only began to play on July 1. And so, from 11:59:53 to 11:59:58 on June 30, 1997, there was a “five-second vacuum”.<br></br>",
                     "A writer once wrote: in those five seconds, he truly felt the existence of “Hong Kong.”<br></br>"
                   ],
-                  "citation": "Chan, Jacky Man Hei. “Can Our 'Global City' Offer Transnational Solidarity?” Lausan. Lausan, January 25, 2021.",
+                  "citation": "Chan, Jacky Man Hei. “Can Our &rsquo;Global City&rsquo; Offer Transnational Solidarity?” Lausan. Lausan, January 25, 2021.",
                   "linkTo": "https://lausan.hk/2019/can-our-global-city-offer-international-solidarity/"
                 },
                 {
@@ -1254,55 +1255,121 @@
                   "year": "1997",
                   "author": "Edward A. Gargan",
                   "content": [
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>"
+                    "The drizzle turned to showers and then to a downpour that washed the harbor front in sheets of monsoon-borne rains. Still, the British farewell ceremony began sharply at 6:15 P.M. as a gray sky melted into hues of gold and rose. Two dragon dance teams rose and fell across a tarmac ground that once was the main British naval base here.<br></br>",
+                    "A succession of performances by choirs and orchestras, and arias sung by Dame Gwyneth Jones and Warren Mok followed.<br></br>",
+                    "With rain pelting down on him, Mr. Patten delivered his final speech as Governor, a short piece of oratory that remained as robustly defiant as any he has given, a declaration of his own principles as Governor and a public challenge to much of Chief Executive Tung&rsquo;s philosophy of governance.<br></br>",
+                    "&ldquo;Our own nation&rsquo;s contribution here,&rdquo; he said, &ldquo;was to provide the scaffolding that enabled the people of Hong Kong to ascend: the rule of law, clean and light-handed government, the values of a free society. The beginnings of representative government and democratic accountability.&rdquo;<br></br>",
+                    "&ldquo;Hong Kong&rsquo;s values are decent values,&rdquo; he continued. &ldquo;They are universal values. They are the values of the future in Asia as elsewhere, a future in which the happiest and the richest communities, and the most confident and the most stable too, will be those that best combine political liberty and economic freedom as we do today.&rdquo;"
                   ],
                   "citation": "Gargan, Edward A. “China Resumes Control of Hong Kong, Concluding 156 Years of British Rule.” The New York Times, July 1, 1997, sec. A. Archived.",
                   "linkTo": "https://timesmachine.nytimes.com/timesmachine/1997/07/01/912735.html?pageNumber=1" 
                 },
                 {
-                  "type": "Journal Excerpt",
-                  "shortTitle": "Monsoon-borne Rain",
-                  "bookTitle": "Pearl Of China",
+                  "type": "Article Excerpt",
+                  "shortTitle": "A Kaleidoscope of Emotions",
+                  "bookTitle": "A Complex of Moods, a Kaleidoscope of Emotions",
                   "year": "1997",
-                  "author": "Einna",
+                  "author": "Edward A. Gargan",
                   "content": [
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>",
-                    "<br></br>"
+                    "Nevertheless, Hong Kong&rsquo;s many pro-Beijing tycoons are planning a spectacular fireworks display, with lasers and music, in Victoria Harbor to mark the handover. Organizers say it is intended to create &ldquo;a feeling of warmth and togetherness.&rdquo; The two million expected to witness the show along the waterfront will also be invited to join in a giant session of Cantopop karaoke.<br></br>",
+                    "Already, souvenirs are spilling from workshops, factories and silk screen studios. Tee-shirts, mugs and hats, flags, sculptures and People&rsquo;s Liberation Army dolls commemorating the return to &ldquo;the motherland&rdquo; are flooding stores."
                   ],
-                  "citation": "&ldquo;Pearl Of China.&rdquo; Hong Kong &rsquo;97: Lives in Transition. Public Broadcasting Service, 1997. Archived."
-                }
-              ]
-            },
-            {
-              "type": "artifacts",
-              "title": "Artifacts",
-              "images": [
-                {
-                  "source": "candles",
-                  "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong Kong, Hong Kong. Held to mark the crackdown on the pro-democracy movement in Beijing&rsquo;s Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"
+                  "citation": "Gargan, Edward A. &ldquo;A Complex of Moods, a Kaleidoscope of Emotions.&rdquo; The New York Times, June 1, 1997. Archived.",
+                  "linkTo": "https://archive.nytimes.com/www.nytimes.com/specials/hongkong/060197letter.html"
                 },
                 {
-                  "source": "crowd",
-                  "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"
+                  "type": "Diary",
+                  "shortTitle": "Tears of God",
+                  "bookTitle": "Tears of God",
+                  "year": "1997",
+                  "author": "James Ng",
+                  "content": [
+                    "In early April, we celebrate the Ching Ming Festival. On that day, Chinese people go to the graves of their ancestors with flowers as a memorial to those who have gone before us. In my memories of Ching Ming, it always seems to be raining on this day. Grandma would tell me that these were no mere raindrops; they were the tears of God.<br></br>",
+                    "&ldquo;Why would God cry?&rdquo; I once asked her.<br></br>",
+                    "“God is moved by the filial piety of these people,” she replied.<br></br>",
+                    "Today she remains as superstitious as many traditional Chinese people. Of course, the rainfall that often graces this festival is due to the season, which takes place in the spring. But in the minds of many people, the raindrops are still the tears of God.<br></br>",
+                    "In the past few days, Hong Kong was soaked by heavy rains. I don&rsquo;t know whether these were the farewell tears for our last Colonial Governor, Chris Patten, or for the touching moment of the handover. I say this because of a very funny story that Mama just told me.<br></br>",
+                    "The other day morning, Mama went to restaurant with her friends to have Chinese tea. After she sat down and gave her order, she heard a woman saying, “What a heavy rain! Of course, even our God is crying for our Governor. We will miss him. Ah...What will be Hong Kong like under the Chinese Communist Party?….” Another woman interrupted, “What ails you? What&rsquo;s wrong with the restoration of the sovereignty by our motherland? I feel good…..” They insisted on their own views and kept on arguing.<br></br>",
+                    "The dialogue that took place between these two women in some way demonstrated the two different sensibilities of Hong Kong people. Some are very enthusiastic about the re-unification, while some are doubtful. Most of them, however, are puzzled. I hope the rain will stop soon, so we may walk in brilliant sunshine."
+                  ],
+                  "citation": "&ldquo;Tears of God.&edquo; Hong Kong &rsquo;97: Lives in Transition. Public Broadcasting Service, 1997. Archived."
+                },
+                {
+                  "type": "Article Excerpt",
+                  "shortTitle": "Buds of Political Pluralism",
+                  "bookTitle": "The Year of the Trojan Horse",
+                  "year": "1997",
+                  "author": "Nicholas D. Kristof",
+                  "content": [
+                    "The notion that tiny Hong Kong could reshape China is conceivable only because Hong Kong arguably has always been more important as an idea than as a place. For decades it has served as an example of prosperity and a model of economic and political laissez-faire, a catalyst for troubling reflections.",
+                    "&ldquo;Still, not everyone thinks that Hong Kong will have much impact on China&rsquo;s political system, in part because the Chinese leadership is so adamant about stopping the buds of political pluralism before they even sprout.<br></br>",
+                    "[...]<br></br>",
+                    "Still, not everyone thinks that Hong Kong will have much impact on China&rsquo;s political system, in part because the Chinese leadership is so adamant about stopping the buds of political pluralism before they even sprout.<br></br>",
+                    "&ldquo;Hong Kong will change China,&rdquo; said Robin Munro, the head of the Hong Kong office of Human Rights Watch. &ldquo;I&rsquo;m sure we&rsquo;ll see more venality and appetite for money-making. But I doubt that this means more democracy and liberalism. My biggest anxiety is that I believe that China will probably change some of the assumptions of political science in the West.&rdquo; The theory that economic liberalization leads to political pluralism may be valid in much of the world, Mr. Munro said, but perhaps not in Asia.<br></br>",
+                    "[...]<br></br>",
+                    "&ldquo;Hong Kong can project to the world a very different kind of China,&rdquo; Professor Goldstein said, &ldquo;a China that is willing to tolerate different groups of Chinese, a China that is willing to keep its word, a China that is willing to allow the people of Hong Kong, within limits, to carve out their own lives. If a vibrant, pluralist kind of society begins to emerge, I think that that&rsquo;s going to change people&rsquo;s views of what China is.&rdquo;"
+                  ],
+                  "citation": "Kristof, Nicholas D. “Year of the Trojan Horse.” The New York Times, July 1, 1997. 1, 9. Archived.",
+                  "linkTo": "https://timesmachine.nytimes.com/timesmachine/1997/07/01/910597.html?pageNumber=1"
+                },
+                {
+                  "type": "Journal Excerpt",
+                  "shortTitle": "A Sense of the Unreal",
+                  "bookTitle": "Letters from Hong Kong: Amid Changing Symbols, a Sense of the Unreal",
+                  "year": "1997",
+                  "author": "Edward A. Gargan",
+                  "content": [
+                    "HONG KONG—This is a strange place these days, after almost a week of Chinese rule. For some, there is a sense of Kafkaesque unreality, of waking up as a cockroach with one&rsquo;s self and the world suddenly changed. For others there is the inevitable metaphor, the sense of a new dawn breaking across the territory. Perhaps there is a bit of both.<br></br>",
+                    "The signs and badges and crowns of colonial rule have vanished overnight, pried away, pulled off, painted over. At the former home of the colonial governor, till called Government House even though Hong Kong&rsquo;s new leader lives elsewhere, the gates where the emblem of Queen Elizabeth hung are now empty. Over the central government offices, gone is the elaborate colonial crest of the lion and unicorn, replaced by China&rsquo;s seal: five stars over a silhouette of the Forbidden City&rsquo;s Gate of Heavenly Peace. And in all the places where, for all of living memory, the Union Jack flew, now flies the flag of the People&rsquo;s Republic.<br></br>",
+                    "[...]<br></br>",
+                    "In the end, of course, any efforts by the British to rewrite history will not matter. Hong Kong is in China&rsquo;s hands.<br></br>"
+                  ],
+                  "citation": "Gargan, Edward A. &ldquo;Amid Changing Symbols, a Sense of the Unreal.&rdquo; The New York Times, July 8, 1997. Archived.",
+                  "linkTo": "https://archive.nytimes.com/www.nytimes.com/specials/hongkong/letter.html"
+                },
+                {
+                  "type": "Lyrics",
+                  "shortTitle": "God Save The Queen",
+                  "bookTitle": "God Save The Queen",
+                  "year": "1745",
+                  "author": "British National Anthem",
+                  "content": [
+                    "God save our gracious Queen!",
+                    "Long live our noble Queen!",
+                    "God save the Queen!",
+                    "Send her victorious,",
+                    "Happy and glorious,",
+                    "Long to reign over us,",
+                    "God save the Queen.<br></br>",
+                    "Thy choicest gifts in store",
+                    "On her be pleased to pour,",
+                    "Long may she reign.",
+                    "May she defend our laws,",
+                    "<And ever give us cause,",
+                    "To sing with heart and voice,",
+                    "God save the Queen."
+                  ],
+                  "citation": "&ldquo;God Save the Queen&rdquo;. 1745, British National Anthem. ",
+                  "linkTo": "https://www.royal.uk/national-anthem"
+                },                {
+                  "type": "Lyrics",
+                  "shortTitle": "March of the Volunteers",
+                  "bookTitle": "March of the Volunteers",
+                  "year": "—",
+                  "author": "Nie Er, lyrics by Tian Han",
+                  "content": [
+                    "Arise, ye who refuse to be slaves!",
+                    "Let us amount our flesh and blood towards our new Great Wall!",
+                    "The Chinese nation faces its greatest peril,",
+                    "The thundering roar of our peoples will be heard!",
+                    "Arise! Arise! Arise!",
+                    "We are many, but our hearts beat as one!",
+                    "Selflessly braving the enemy&rsquo;s gunfire, march on!",
+                    "Selflessly braving the enemy&rsquo;s gunfire, march on!",
+                    "March on! March on! on!"
+                  ],
+                  "citation": "Nie Er, lyrics by Tian Han. &ldquo;March of the Volunteers&rdquo;. 1949, Chinese National Anthem.",
+                  "linkTo": "http://english1.english.gov.cn/2005-08/16/content_23523.htm#:~:text=National%20anthem&text=National%20anthem%3AMarch%20of%20the,northeast%20China%20in%20the%201930s"
                 }
               ]
             },
@@ -1335,33 +1402,66 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "With increasing pressure from China, a National Security Bill was proposed to implement Article 23 in Hong Kong&rsquo;s Basic Law. The final iteration of Article 23 was promulgated in 1990 as a response to the Tiananmen Square Massacre, even though it was not immediately put into effect.",
-                "The final version of Article 23 that the legislature was proposing to implement stated that &ldquo;[t]he Hong Kong Special Administrative Region shall prohibit any act of treason, secession, sedition, subversion against the Central People&rsquo;s Government, or theft of state secrets, to prohibit foreign political organisations or bodies from conducting political activities in the Region…&rdquo;"
+                "<span>With increasing pressure from China<sup>1</sup></span>, a National Security Bill was proposed to implement Article 23 in Hong Kong&rsquo;s Basic Law. The final iteration of Article 23 was promulgated in 1990 as a <span>response to the Tiananmen Square Massacre<sup>2</sup></span>, even though it was not immediately put into effect.",
+                "<span>The final version of Article 23<sup>3</sup></span> that the legislature was proposing to implement stated that &ldquo;[t]he Hong Kong Special Administrative Region shall prohibit any act of treason, secession, sedition, subversion against the Central People&rsquo;s Government, or theft of state secrets, to prohibit foreign political organisations or bodies from conducting political activities in the Region…&rdquo;"
               ],
               "resources": [
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Journal Excerpt",
+                  "shortTitle": "A Pivotal Visit",
+                  "bookTitle": "Hong Kong, 1 July 2003—Half a Million Protestors: The Security Law, Identity Politics, Democracy, and China.",
+                  "year": "2003",
+                  "author": "Sonny Lo",
+                  "content": [
+                    "In September 2002, PRC officials suddenly raised the issue of the HKSAR&rsquo;s obligation to implement Article 23. Rumours had been rife since the PRC president, Jiang Zemin, had visited Hong Kong in July 2002 and been confronted by a group of Falun Gong protestors. Jiang demanded that the Hong Kong government under the leadership of Chief Executive Tung Chee-hwa speed up the process of bringing in legislation under Article 23.<br></br>",
+                    "[...]<br></br>",
+                    "This demand from the PRC did not recognize the difficulties and realities of Hong Kong politics, whose pluralistic nature and opposing political forces mean that any legislation must be carefully prepared, lobbied and presented. The Tung administration in turn floated the idea that legislation pursuant to Article 23 should be passed by the LegCo and enacted by the summer of 2003. As a result, a timetable was decided between the PRC and the HKSAR, with the public remaining ignorant of these confidential arrangements and decisions.<br></br>"
+                  ],
+                  "citation": "Lo, Sonny. “Hong Kong, 1 July 2003—Half a Million Protestors: The Security Law, Identity Politics, Democracy, and China.” <em>Canadian Institute of International Affair</em>s 60, no. 4 (2004): 2. ",
+                  "linkTo": "https://3mea0n49d5363860yn4ri4go-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/BTH-60-4-2004.pdf"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Report Excerpt",
+                  "shortTitle": "Historical Revisions to Article 23",
+                  "bookTitle": "The Threat of Article 23 to Civil Liberties in the Hong Kong Special Adminstrative Region",
+                  "year": "2003",
+                  "author": "Inbal Sansani",
+                  "content": [
+                    "The Chinese government seems to have introduced Article 23, at least in part, to avoid future anti-Chinese demonstrations by the people of Hong Kong. Although the original 1988 draft of Article 23 merely requested that Hong Kong enact laws by February 1989 against “any act designed to undermine national unity or subvert the Central People’s Government,” the draft of Article 23 had evolved to include both concepts familiar to Hong Kong’s common law system and the constitutional requirement to implement national security legislation—laws that “prohibit any act of treason, secession, sedition, or theft of state secrets.”",
+                    "<br></br>",
+                    "The final draft of Article 23, published in April 1990, nonetheless, stipulates that the HKSAR “enact laws on its own to prohibit any act of treason, secession, sedition, and subversion against the Central People’s Government, or theft of state secrets, to prohibit foreign political organizations or bodies from conducting political activities in the Region, and to prohibit political organizations or bodies of the Region from establishing ties with foreign political organizations or bodies.”"
+                  ],
+                  "citation": "Sansani, Inbal. “The Threat of Article 23 to Civil Liberties in the Hong Kong Special Administrative Region.” <em>Human Rights Brief</em>, 7, 10, no. 3 (2003): 28–29.",
+                  "linkTo": "https://digitalcommons.wcl.american.edu/hrbrief/vol10/iss3/7/"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Law",
+                  "shortTitle": "Article 23",
+                  "bookTitle": "Basic Law Chapter 2",
+                  "year": "2021",
+                  "author": "Hong Kong Government",
+                  "content": null,
+                  "linkTo": "https://www.basiclaw.gov.hk/en/basiclaw/chapter2.html"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Report Excerpt",
+                  "shortTitle": "An Empty Promise",
+                  "bookTitle": "The Promise of Democratization in Hong Kong: The Impact of July’s Protest Demonstrations on the November 23 District Council Elections A Pre-Election Report",
+                  "year": "2003",
+                  "author": "Christine Chung and Eric Bjornlund",
+                  "content": [
+                    "Not only were the content of the proposed legislation and the timing of its introduction objectionable to many in Hong Kong, but the government failed to live up to its promise to conduct a genuine process of public consultation in order to consider public sentiment on this important matter. The government refused to acquiesce to demands for a “white bill” (that is, a version with draft provisions that can be amended before the actual legislative process, while the later version, known as the “blue bill,” is the actual draft legislation submitted to the legislature for passage) and instead laid out general principles in a consultation paper that most critics complained was inadequate for serious analysis and discussion. The government then compiled and categorized opinions as in favor, against or unclear, but its evaluation of public opinion submissions were widely viewed as disingenuous. The government reported that many of the most vocal opponents of the legislation, such as the Bar Association and the Hong Kong Human Rights Monitor, had submitted “unclear” opinions neither in favor nor against the Article 23 legislation."
+                  ],
+                  "citation": "Chung, Christine, and Eric Bjornlund. Rep. <em>The Promise of Democratization in Hong Kong: The Impact of July’s Protest Demonstrations on the November 23 District Council Elections A Pre-Election Report</em>. Washington, DC: National Democratic Institute, 2003. 4.",
+                  "linkTo": "https://www.ndi.org/sites/default/files/1669_hk_rpt8_0.pdf"
+                },
+                {
+                  "type": "Bill Amendments",
+                  "shortTitle": "Recorded Amendments to Article 23",
+                  "bookTitle": "C007-e01",
+                  "year": "2003",
+                  "content": null,
+                  "linkTo": "https://www.legco.gov.hk/yr02-03/english/bills/c007-e.pdf"
                 }
               ]
             },
@@ -1387,34 +1487,83 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "Appointed as Secretary for Security under Chief Executive Tung Chee-hwa&rsquo;s administration, Regina Ip became a controversial political figure for her fervent support for Article 23. Widely criticised for her aggressive approach to codifying the bill, Ip was deeply unpopular and perceived as pushing Beijing&rsquo;s agenda in the Hong Kong legislature.",
-                "In addition to the widespread concern on the proposed bill was a growing dissatisfaction with the administration&rsquo;s response to the financial crisis and the SARS pandemic. Underlying this rising frustration felt by the Hong Kong people was an economic malaise that remained unresolved."
+                "Appointed as Secretary for Security under Chief Executive Tung Chee-hwa&rsquo;s administration, <span>Regina Ip<sup>1</sup></span> became a controversial political figure for her fervent support for Article 23. Widely criticised for her aggressive approach to codifying the bill, Ip was deeply unpopular and perceived as pushing Beijing&rsquo;s agenda in the Hong Kong legislature.",
+                "In addition to the widespread concern on the proposed bill was a <span>growing dissatisfaction<sup>2</sup></span> with the administration&rsquo;s response to the <span>financial crisis<sup>3</sup></span> and the <span>SARS pandemic<sup>4</sup></span>. Underlying this rising frustration felt by the Hong Kong people was an economic malaise that remained unresolved."
               ],
               "resources": [
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                },
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                },
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                },
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                }
+              {
+                "type": "Report Excerpt",
+                "shortTitle": "&ldquo;Regina, we have better things to do&rdquo;",
+                "bookTitle": "The Promise of Democratization in Hong Kong: The Impact of July’s Protest Demonstrations on the November 23 District Council Elections A Pre-Election Report.",
+                "year": "2003",
+                "author": "Christine Chung and Eric Bjornlund",
+                "content": [
+                  "Before July 1, the government dismissed the significance of the planned demonstration. Secretary for Security Regina Ip remarked notoriously that if people participated it was because they did not have better things to do with their time on a public holiday (the anniversary of Hong Kong’s reversion to Chinese sovereignty). In response, numerous protestors chanted, &ldquo;Regina, we have better things to do.&rdquo;"
+                ],
+                "citation": "Chung, Christine, and Eric Bjornlund. Rep. <em>The Promise of Democratization in Hong Kong: The Impact of July’s Protest Demonstrations on the November 23 District Council Elections A Pre-Election Report</em>. Washington, DC: National Democratic Institute, 2003. 5.",
+                "linkTo": "https://www.ndi.org/sites/default/files/1669_hk_rpt8_0.pdf"
+              },
+              {
+                "type": "Report Excerpt",
+                "shortTitle": "Economic Crisis and SARS Pandemic",
+                "bookTitle": "The Promise of Democratization in Hong Kong: The Impact of July’s Protest Demonstrations on the November 23 District Council Elections A Pre-Election Report.",
+                "year": "2003",
+                "author": "Christine Chung and Eric Bjornlund",
+                "content": [
+                  "While economic problems certainly have contributed to the public’s dissatisfaction with the administration, the state of the economy cannot by itself explain the depth of concern about the proposed handling of security legislation and the future of democracy in Hong Kong. The demonstrations reflect a reaction to a series of unpopular government actions—not only the government’s handling of the public consultation over Article 23 but also other issues, particularly its management of the public health crisis of Severe Acute Respiratory Syndrome (SARS).<br></br>",
+                  "The SARS crisis from March to July brought Hong Kong’s tourist economy practically to a standstill and seriously disrupted professional and social life throughout the HKSAR. Schools were closed for six weeks. Restaurants, shopping malls, theaters and other public venues remained eerily empty throughout this period. People donned surgical masks to go out in public; waiters in upscale restaurants wore rubber gloves. Pervasive fear made normal life in Hong Kong impossible. While the SARS crisis was principally a public health phenomenon, many Hong Kong people felt immense frustration with the government’s slow response to the situation."
+                ],
+                "citation": "Chung, Christine, and Eric Bjornlund. Rep. <em>The Promise of Democratization in Hong Kong: The Impact of July’s Protest Demonstrations on the November 23 District Council Elections A Pre-Election Report</em>. Washington, DC: National Democratic Institute, 2003. 8.",
+                "linkTo": "https://www.ndi.org/sites/default/files/1669_hk_rpt8_0.pdf"
+              },
+              {
+                "type": "Journal Excerpt",
+                "shortTitle": "Doom and Gloom",
+                "bookTitle": "Economic Impact of SARS: The Case of Hong Kong",
+                "year": "2004",
+                "author": "Alan Siu and Richard Y.C. Wong",
+                "content": [
+                  "Since the onset of the Asian financial crisis, Hong Kong’s economy has faced an unfavorable external environment. Financial liquidity in Asia drained away in the crisis and its aftermath. Hong Kong’s link to the U.S. dollar through a currency board arrangement did not improve matters. The Hong Kong dollar appreciated in value along with the strengthening U.S. dollar during 1999–2002. Investment demand for housing collapsed at the same time that the housing supply began to soar. Although nominal mortgage interest rates were kept low in a globally low-interest-rate envi- ronment, the true borrowing cost was high in real terms, with deoation plodding along at 2–4 percent per year (table 3). Households were struggling to pay down their mortgage debts after the housing-market bubble burst. Domestic consumption was shrinking, and the economy was contracting. Hong Kong’s unemployment rate hit record levels, exceeding 7 percent by the end of 2002. The unemployment problem was made worse by the continuous inoow of low-skilled immigrants from mainland China.<br></br>",
+                  "Beginning in 2003, signs of economic recovery had appeared. Real GDP in Hong Kong grew at 3.4 percent in 2002:Q3 and at 5.1 percent in 2002:Q4. In late spring of 2003, exports from China picked up very strongly, and cargo movement in Hong Kong ports and airports showed good growth. Thus, the outbreak of SARS hit Hong Kong at a very bad time. Domestic demand collapsed before it had an oppor- tunity to recover from the recession in 2001. Alarmed by the outbreak at the Amoy Gardens and by the news that several foreign businessmen might have contracted SARS in Hong Kong and returned with it to their home countries, WHO issued a travel advisory on 2 April 2003, urging people to postpone nonessential trips to Hong Kong and Guangdong. WHO’s travel warning and the reluctance to travel by air devastated travel and tourism in the Asian region, particularly in Hong Kong. Many companies worldwide banned business travel to infected areas. Restrictions on travelers from infected areas aggravated the situation.<br></br>",
+                  "As the SARS outbreak raged on in China, the economic environment in the region darkened as the prospects of the fastest-growing economy in Asia became cloudy. The uncertain outlook prompted the World Bank to predict that output growth in East Asia would fall by almost 1 percentage point in 2003, to 5 percent (World Bank 2003). Analysts and rating agencies also revised their forecasts downward (table 4). On average, private sector analysts estimated that Hong Kong’s output growth in 2003 would be 1.2 percentage points lower than previously expected, which trans- lated to a drop of around HK$15 billion in spending on anal goods and services in the domestic economy. On 9 April 2003, the government announced that the original forecast of a 3 percent real growth rate in GDP would not be met. Doom and gloom hit the region and Hong Kong (pg. 67-68).<br></br>",
+                  "[...]<br></br>",
+                  "The SARS outbreak was an unexpected negative shock to Hong Kong’s economy. The most signiacant negative effects were on the demand side. Local consumption and the export of services related to tourism and air travel were severely affected in the short run. Early anecdotal evidence reported in the press indicated that restau- rants and retail outlets were hit hard, with sales dropping by 10 to 50 percent. Land transport declined by 10–20 percent because people stayed home. There was also a 50 percent drop in the use of the Airport Express Line,1 which indi- cated a reduction in air travel. Fortunately, the supply side of Hong Kong’s econ- omy was unaffected. Even though SARS raged through the province of Guangdong, the cross-border manufacturing base was not disrupted. The production and cross- border movement of goods continued to function smoothly, and the global supply chains remained intact (pg. 70).<br></br>"
+                ],
+                "citation": "Siu, Alan, and Richard Y.C. Wong. “Economic Impact of SARS: The Case of Hong Kong.” <em>Asian Economic Papers</em> 3, no. 1 (2004): 67–68, 70.",
+                "linkTo": "http://www.mitpressjournals.org/doi/pdf/10.1162/1535351041747996"
+              },
+              {
+                "type": "Article Excerpt",
+                "shortTitle": "Fever Dream",
+                "bookTitle": "When SARS Ended",
+                "year": "2020",
+                "author": "Karl Taro Greenfeld",
+                "content": [
+                  "Hong Kong had been in crisis even before sars. In 1997, Great Britain had handed the city over to China, in an agreement known as One Country, Two Systems. After reunification, Shanghai threatened to become China’s new financial capital, and people in Hong Kong worried that they would soon be living in “just another Chinese city”; its real-estate markets began a precipitous decline, and restrictions on civil liberties threatened its nominal sovereignty. sars felt like a knockout blow to a city already reeling.<br></br>",
+                  "I was in Hong Kong because I edited Time Asia, an international edition of the newsweekly with a staff of sixty-two and bureaus around the region. When sars broke out, we couldn’t work from home—the Internet wasn’t good enough. Instead, we watched from our offices as the green-and-white-roofed Star Ferry boats travelled, empty, across Victoria Harbor. Each afternoon, we waited for the Hong Kong Department of Health to release its numbers. We kept a betting pool, guessing how many new cases there would be. The idea was to get close but not go over; an optimist, I always lowballed.<br></br>",
+                  "…The Hang Seng Index, which tracks stocks listed on Hong Kong’s exchange, shed fifteen per cent of its value between January and April. After a prankster falsely suggested that the city was going to be sealed off, some A.T.M.s briefly ran out of cash. Then, as if things couldn’t get any worse, on the first of April, Leslie Cheung, the openly bisexual Cantopop crooner and actor who had starred in “Happy Together” and “Farewell My Concubine,” leapt from the twenty-fourth floor of the Mandarin Oriental Hotel. Cheung had always felt like a lucky charm for Hong Kong—a beloved and approachable celebrity we could see drinking in Lan Kwai Fong on any given night. Cheung’s death—he had suffered from depression—darkened our already dour moods.<br></br>",
+                  "We didn’t know it yet, but that week—the week of Leslie Cheung’s death—was the point of maximum hysteria and fear. In early April, while we were betting on the number of new cases and wondering about the extent of the coverup, Hong Kong passed its inflection point, with the number of new infections sinking below that of cleared cases. As April turned to May, and warmer days commenced, we looked around and realized that we were still alive.<br></br>"
+                ],
+                "citation": "Greenfeld, Karl Taro. “When SARS Ended.” The New Yorker. The New Yorker, April 17, 2020. ",
+                "linkTo": "https://www.newyorker.com/culture/personal-history/when-sars-ended"
+              },
+              {
+                "type": "Article Excerpt",
+                "shortTitle": "The &ldquo;Iron Lady&rdquo; of the East",
+                "bookTitle": "Defiant Regina Ip Stands by Her Handling of Article 23.",
+                "year": "2003",
+                "author": "Cliff Buddle",
+                "content": [
+                  "Regina Ip Lau Suk-yee stood by comments about Adolf Hitler&rsquo;s rise to power, as well as remarks that taxi drivers and restaurant waiters would not be interested in details of the bill.<br></br>",
+                  "&rsquo;I think looking back, of course one could always say there are ways in which we could have done better. But I can&rsquo;t really say that some genuine mistakes were made,&rsquo; she said in an interview with the South China Morning Post.<br></br>",
+                  "Mrs Ip said she regretted using Hitler&rsquo;s name during a heated public forum over the proposals for legislation under Article 23 of the Basic Law. But she added: &rsquo;I don&rsquo;t feel my remarks are entirely without justification.&rsquo;<br></br>",
+                  "The security chief came under fire in November for her comment during a debate at City University: &rsquo;Don&rsquo;t believe democracy will be a panacea. Adolf Hitler was returned by universal suffrage and he killed seven million Jews.<br></br>",
+                  "Mrs Ip has also been criticised for her remarks about taxi drivers and waiters. She said: &rsquo;It is really incredible that people could make mountains out of this molehill. I was talking about interest in the bill.<br></br>",
+                  "&rsquo;From my experience of government, whenever we have issued a white or blue bill, rarely have we received specific comments from general members of the public other than professional or interest groups. That is a fact.&rsquo;<br></br>"
+                ],
+                "citation": "Buddle, Cliff. “Defiant Regina Ip Stands by Her Handling of Article 23.” South China Morning Post. South China Morning Post, March 11, 2003.",
+                "linkTo": "https://www.scmp.com/article/409027/defiant-regina-ip-stands-her-handling-article-23"
+              }
               ]
             },
             {
@@ -1438,33 +1587,64 @@
               "type": "event",
               "title": "Event",
               "paragraphs": [
-                "The re-emergence of Article 23 in the proposed National Security Bill was highly criticised and ignited a massive demonstration. On July 1, 2003, over 500,000 people poured onto the streets of Hong Kong to protest the government&rsquo;s attempt to implement the ambiguously defined security law.",
-                "This historical protest was the largest to be conducted in Hong Kong since the Tiananmen Square Massacre, and the most visible demonstration of Hong Kong people exercising their right to protest since the 1997 handover."
+                "The re-emergence of Article 23 in the proposed National Security Bill was <span>highly criticised<sup>1</sup></span> and ignited a massive demonstration. On <span>July 1, 2003<sup>2</sup></span>, over 500,000 people poured onto the streets of Hong Kong to protest the government&rsquo;s attempt to implement the ambiguously defined security law.",
+                "This <span>historical protest<sup>3</sup></span> was the largest to be conducted in Hong Kong since the Tiananmen Square Massacre, and the most <span>visible demonstration<sup>4</sup></span> of Hong Kong people exercising their right to protest since the 1997 handover."
               ],
               "resources": [
+
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Journal Excerpt",
+                  "shortTitle": "Government&rsquo;s defence of Article 23",
+                  "bookTitle": "The Threat of Article 23 to Civil Liberties in the Hong Kong Special Adminstrative Region",
+                  "year": "2003",
+                  "author": "Inbal Sasani",
+                  "content": [
+                    "The government explains that implementing Article 23 would not compromise either the region’s liberal features or laissez-faire economy. It argues that since Britain, Canada, and the United States have legislation similar to Article 23, then Hong Kong, as a part of China, should also have it. Opponents to the implementation of a broad Article 23 argue that the aforementioned countries balance comparable legislation with democratic attributes including, inter alia, regular elections, a vibrant civil society, and a powerful, free press, each of which Hong Kong lacks."
+                  ],
+                  "citation": "Sansani, Inbal. “The Threat of Article 23 to Civil Liberties in the Hong Kong Special Administrative Region.” <em>Human Rights Brief</em>, 7, 10, no. 3 (2003): 29.",
+                  "linkTo": "https://digitalcommons.wcl.american.edu/hrbrief/vol10/iss3/7/"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Article Excerpt",
+                  "shortTitle": "The Largest Demonstration Since 1989",
+                  "bookTitle": "Hundreds of Thousands in Hong Kong Protest Security Laws",
+                  "year": "2003",
+                  "author": "Keith Bradsher",
+                  "content": [
+                    "The demonstrators wore mostly black, to show mourning for what they portrayed as Hong Kong's coming loss of civil liberties, and many carried umbrellas as shade from the bright sunshine and unusually sweltering heat. So many people showed up that the entire route of the march, nearly three miles long, became clogged with people, with throngs still waiting at Victoria Park, where the protest began, for their chance to join the procession.<br></br>",
+                    "A police spokesman said late tonight that 350,000 people had demonstrated, out of Hong Kong's population of 6.8 million. The Civil Human Rights Front, which organised the march, had planned for 100,000 to attend but estimated that more than 500,000 people actually participated.<br></br>",
+                    "It was the largest demonstration here since hundreds of thousands of people marched in 1989 to protest the Tiananmen Square killings in Beijing, and the largest protest ever directed against the Hong Kong government itself. With Hong Kong under Chinese rule ever since Britain handed it over in 1997, today's demonstration also appeared to be the largest anywhere on Chinese soil since Tiananmen Square."
+                  ],
+                  "citation": "Bradsher, Keith. “Hundreds of Thousands in Hong Kong Protest Security Laws.” The New York Times. The New York Times, July 1, 2003.",
+                  "linkTo": "https://www.nytimes.com/2003/07/01/international/asia/hundreds-of-thousands-in-hong-kong-protest-security-laws.html"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Article Excerpt",
+                  "shortTitle": "Protests Against National Security Reform",
+                  "bookTitle": "A Brief History of Protest in Post-Handover Hong Kong",
+                  "year": "2019",
+                  "author": "Amy Gunia",
+                  "content": [
+                    "An attempt to introduce anti-subversion legislation drew fierce criticism from Hong Kongers worried that it would infringe on their freedoms. Commonly referred to as Article 23 after the constitutional clause requiring its introduction, the legislation prohibited treason, secession, sedition and subversion against the Chinese government, and outlawed theft of state secrets.<br></br>",
+                    "It is believed that more than 500,000 people turned out for a march on July 1, 2003 to oppose it. Following the protest, Michael Tien, chairman of the Liberal Party, abruptly resigned from the government’s Executive Council after his calls to delay a vote on the bill were rejected. Without enough support to pass it, the bill was shelved indefinitely.<br></br>",
+                    "“The huge number of protesters compelled a major government party to reverse its support for the bill,” Sing, of HKUST, told TIME. “It’s party chief was apprehensive of the subsequent political instability if the government did not withdraw it.”<br></br>"
+                  ],
+                  "citation": "Gunia, Amy. “A Brief History of Protest in Post-Handover Hong Kong.” Time. Time, June 20, 2019.",
+                  "linkTo": "https://time.com/5606212/hong-kong-history-mass-demonstrations-protest/"
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Report Excerpt",
+                  "shortTitle": "A Porous Border",
+                  "bookTitle": "A Question of Patriotism: Human Rights and Democratization in Hong Kong",
+                  "year": "2004",
+                  "author": "Human Rights Watch",
+                  "content": [
+                    "Both the Hong Kong government and the central leadership in Beijing were caught off guard by the size of the demonstration, and, in the days following the July 1 protest, the Hong Kong government was plunged into crisis.<br></br>",
+                    "Behind the central government’s displeasure over the latest turn of events was the fact that it was taken by surprise by the march. Beijing was given extremely inaccurate information about the extent of local opposition to the government’s Article 23 proposals, and was told that far fewer protestors would turn out for the July 1 march. One political analyst told Human Rights Watch, &ldquo;No one expected that there would be more than 500,000 people on the streets. Many people told China that (the turnout) would be less than 50,000. They were surprised and they thought that Hong Kong was out of control.&rdquo;<br></br>",
+                    "Ma Lik, head of the pro-Beijing Democratic Alliance for the Betterment of Hong Kong (DAB), was open about the central government’s chagrin over being taken by surprise by recent events: “The situation was very far from what Beijing had initially expected,” Ma told reporters. “I believe it is shocked and displeased.”<br></br>"
+                  ],
+                  "citation": "Rep.<em>A Question of Patriotism: Human Rights and Democratization in Hong Kong</em>. New York, NY: Human Rights Watch, 2004. 7.",
+                  "linkTo": "https://www.hrw.org/report/2004/09/09/question-patriotism/human-rights-and-democratization-hong-kong"
                 }
               ]
             },
@@ -1494,28 +1674,52 @@
               ],
               "resources": [
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Journal Excerpt",
+                  "shortTitle": "",
+                  "bookTitle": "",
+                  "year": "",
+                  "author": "",
+                  "content": [
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>"
+                  ],
+                  "citation": "",
+                  "linkTo": ""
                 },
                 {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                },
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
-                },
-                {
-                  "title": "",
-                  "source": "",
-                  "type": "",
-                  "year": ""
+                  "type": "Journal Excerpt",
+                  "shortTitle": "",
+                  "bookTitle": "",
+                  "year": "",
+                  "author": "",
+                  "content": [
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>",
+                    "<br></br>"
+                  ],
+                  "citation": "",
+                  "linkTo": ""
                 }
               ]
             },
