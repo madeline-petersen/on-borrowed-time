@@ -105,7 +105,7 @@ const Timeline = props => {
                     : 'inactive'
                 } ${year.id === props.currentYear.id &&
                   props.pageId === 'event' &&
-                  props.colourBackgroundClass}
+                  colourBackgroundClasses[year.id]}
                 `}
               >
                 {year.id}
@@ -180,8 +180,7 @@ Timeline.propTypes = {
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   isYearEnd: PropTypes.bool,
-  setNextBackground: PropTypes.func,
-  colourBackgroundClass: PropTypes.string
+  setNextBackground: PropTypes.func
 };
 
 export default Timeline;
