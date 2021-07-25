@@ -71,7 +71,7 @@ const Header = ({
               <p
                 key={`${currentYear}-${romanSceneNumber}-scene`}
                 className={`medium-caption scene-animation absolute top-0 pt-2 ${textClasses} ${isTransitioning &&
-                  'fade-out hidden'}`} // fade-out not applying, using hidden as a backup
+                  'fade-out'}`}
               >
                 Scene {romanSceneNumber}
               </p>
@@ -80,8 +80,7 @@ const Header = ({
               key={`${currentYear}-${romanSceneNumber}-title`}
               className={`small-body ${
                 pageId === 'event' ? 'title-animation' : 'cursor-pointer'
-              } ${isTransitioning &&
-                'fade-out hidden'} pt-2 pb-5 ${textClasses}`} // fade-out not applying, using hidden as a backup
+              } ${isTransitioning && 'fade-out'} pt-2 pb-5 ${textClasses}`}
               onClick={onClickScene}
             >
               {title}
