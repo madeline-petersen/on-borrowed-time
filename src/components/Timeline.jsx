@@ -100,8 +100,8 @@ const Timeline = props => {
                 } ${
                   (year.id === props.currentYear.id && numScenes !== 0) ||
                   (props.pageId === 'home' && props.previewedYear === year.id)
-                    ? 'active contrast-text'
-                    : 'inactive contrast-text'
+                    ? 'active'
+                    : 'inactive'
                 } ${year.id === props.currentYear.id &&
                   props.pageId === 'event' &&
                   `${colourClasses[year.id]} ${props.colourBackgroundClass}`}
