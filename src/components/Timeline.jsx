@@ -97,14 +97,27 @@ const Timeline = props => {
                   year.id !== props.currentYear.id || props.pageId !== 'intro'
                     ? 'cursor-pointer hover:text-gray-50'
                     : 'cursor-default'
-                } ${
-                  (year.id === props.currentYear.id && numScenes !== 0) ||
-                  (props.pageId === 'home' && props.previewedYear === year.id)
-                    ? 'active'
-                    : 'inactive'
-                } ${year.id === props.currentYear.id &&
-                  props.pageId === 'event' &&
-                  `${colourClasses[year.id]} ${props.colourBackgroundClass}`}
+                } 
+                ${
+                  props.pageId === 'home'
+                    ? year.id === props.previewedYear
+                      ? `active contrast-text`
+                      : 'inactive'
+                    : year.id === props.currentYear.id
+                    ? numScenes !== 0
+                      ? 'active contrast-text'
+                      : 'inactive contrast-text'
+                    : 'inactive contrast-text'
+                }
+                 ${
+                   year.id === props.currentYear.id
+                     ? `${colourClasses[year.id]} ${
+                         props.colourBackgroundClass
+                       }`
+                     : year.id === props.previewedYear
+                     ? `${props.colourBackgroundClasses[year.id]}`
+                     : 'nope'
+                 }
                 `}
               >
                 {year.id}
@@ -180,7 +193,8 @@ Timeline.propTypes = {
   setIsTransitioning: PropTypes.func,
   isYearEnd: PropTypes.bool,
   setNextBackground: PropTypes.func,
-  colourBackgroundClass: PropTypes.string
+  colourBackgroundClass: PropTypes.string,
+  colourBackgroundClasses: PropTypes.shape()
 };
 
 export default Timeline;
