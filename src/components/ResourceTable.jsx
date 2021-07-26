@@ -1,19 +1,17 @@
 import { Col, Row } from 'react-grid-system';
-import React, { useState } from 'react';
 
 import Anecdote from './Anecdote';
 import PropTypes from 'prop-types';
+import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 
-const ResourceTable = ({ data }) => {
-  const [anecdoteData, setAnecdoteData] = useState({});
-  const [isModalActive, setIsModalActive] = useState(false);
-
-  const openModal = entry => {
-    setAnecdoteData(entry);
-    setIsModalActive(true);
-  };
-
+const ResourceTable = ({
+  data,
+  isModalActive,
+  setIsModalActive,
+  anecdoteData,
+  openModal
+}) => {
   const onCloseModal = () => {
     setIsModalActive(false);
   };
@@ -97,7 +95,11 @@ const ResourceTable = ({ data }) => {
 };
 
 ResourceTable.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.shape())
+  data: PropTypes.arrayOf(PropTypes.shape()),
+  isModalActive: PropTypes.bool,
+  setIsModalActive: PropTypes.func,
+  anecdoteData: PropTypes.arrayOf(PropTypes.shape()),
+  openModal: PropTypes.func
 };
 
 export default ResourceTable;

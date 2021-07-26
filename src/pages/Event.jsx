@@ -11,7 +11,6 @@ import ResourceTable from '../components/ResourceTable';
 import { useScreenClass } from 'react-grid-system';
 
 const Event = ({
-  year,
   event,
   nextParams,
   changingParam,
@@ -24,19 +23,28 @@ const Event = ({
   colourBackgroundClass
 }) => {
   const [isClicked, setClicked] = useState(false);
+  const [isModalActive, setIsModalActive] = useState(false);
+  const [anecdoteData, setAnecdoteData] = useState({});
+
+  const openModal = entry => {
+    setAnecdoteData(entry);
+    setIsModalActive(true);
+  };
+
   const screenClass = useScreenClass();
   const container = document.querySelector('#event-paragraphs');
   let matches = [];
   if (container) {
     matches = container.querySelectorAll('span');
-    // console.log('it a match!', matches);
   }
 
   if (matches.length) {
-    // console.log('many matches');
-    matches[0].onclick = function() {
-      alert('bla bla');
-    };
+    matches.forEach((match, index) => {
+      match.onclick = function() {
+        openModal(event.resources[index]);
+        setIsModalActive(true);
+      };
+    });
   }
 
   useEffect(() => {
@@ -104,7 +112,13 @@ const Event = ({
                   );
                 })}
               </Row>
-              <ResourceTable data={event.resources} />
+              <ResourceTable
+                data={event.resources}
+                isModalActive={isModalActive}
+                setIsModalActive={setIsModalActive}
+                anecdoteData={anecdoteData}
+                openModal={openModal}
+              />
 
               <Footer
                 pageId="event"
@@ -125,7 +139,6 @@ const Event = ({
 };
 
 Event.propTypes = {
-  year: PropTypes.shape(),
   years: PropTypes.arrayOf(PropTypes.shape()),
   event: PropTypes.shape(),
   next: PropTypes.shape(),

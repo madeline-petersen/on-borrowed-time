@@ -63,14 +63,11 @@ const UIShell = props => {
   const setNextBackground = (year, pageId = 'intro') => {
     if (pageId === 'intro') {
       setNextBackgroundClass(imageBackgroundClasses[year]);
-      console.log(imageBackgroundClasses[year]);
     } else if (pageId === 'event') {
       setNextBackgroundClass(colourBackgroundClasses[year]);
-      console.log(colourBackgroundClasses[year]);
     } else {
       // artifacts, reflection
       setNextBackgroundClass('bg-black');
-      console.log('bg-black');
     }
   };
 
