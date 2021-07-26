@@ -13,7 +13,7 @@ const Header = ({
   setNextBackground,
   setIsTransitioning,
   navigateTo,
-  textClasses
+  colourBackgroundClass
 }) => {
   const onClickYear = () => {
     if (pageId !== 'intro') {
@@ -40,16 +40,14 @@ const Header = ({
   };
 
   return (
-    <span
-      className={`absolute w-full top-0 z-10 medium-caption ${textClasses}`}
-    >
+    <span className={`absolute w-full top-0 z-10 medium-caption contrast-text`}>
       <Container className="grid__container">
         <Row className={`grid__row pt-5`}>
           <Col lg={3} md={4} sm={4} xs={4} />
           <Col lg={9} md={8} sm={8} xs={8}>
             <p
               className={`${pageId !== 'intro' &&
-                'cursor-pointer'} ${textClasses}`}
+                'cursor-pointer'} contrast-text ${colourBackgroundClass}`}
               onClick={onClickYear}
             >
               {label}
@@ -70,7 +68,7 @@ const Header = ({
             {pageId === 'event' && (
               <p
                 key={`${currentYear}-${romanSceneNumber}-scene`}
-                className={`medium-caption scene-animation absolute top-0 pt-2 ${textClasses} ${isTransitioning &&
+                className={`medium-caption scene-animation absolute top-0 pt-2 contrast-text ${colourBackgroundClass} ${isTransitioning &&
                   'fade-out'}`}
               >
                 Scene {romanSceneNumber}
@@ -80,7 +78,8 @@ const Header = ({
               key={`${currentYear}-${romanSceneNumber}-title`}
               className={`small-body ${
                 pageId === 'event' ? 'title-animation' : 'cursor-pointer'
-              } ${isTransitioning && 'fade-out'} pt-2 pb-5 ${textClasses}`}
+              } ${isTransitioning &&
+                'fade-out'} pt-2 pb-5 contrast-text ${colourBackgroundClass}`}
               onClick={onClickScene}
             >
               {title}
@@ -106,7 +105,7 @@ Header.propTypes = {
   setNextBackground: PropTypes.func,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
-  textClasses: PropTypes.string
+  colourBackgroundClass: PropTypes.string
 };
 
 export default Header;
