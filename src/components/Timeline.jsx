@@ -9,7 +9,7 @@ const Timeline = props => {
   const [numScenes, setNumScenes] = useState(0);
   const [currentSceneIndex, setSceneIndex] = useState(props.sceneIndex);
 
-  let colourBackgroundClasses = {
+  let colourClasses = {
     '1984': 'gray-30',
     '1989': 'red',
     '1997': 'blue',
@@ -86,8 +86,7 @@ const Timeline = props => {
                       numScenes === 0
                         ? 'collapsed'
                         : `expanded num-scenes-${numScenes}`
-                    } ${props.pageId === 'event' &&
-                      colourBackgroundClasses[year.id]}`
+                    } ${props.pageId === 'event' && colourClasses[year.id]}`
                   : `pl-4 mb-2.5`
               }`}
             >
@@ -105,9 +104,7 @@ const Timeline = props => {
                     : 'inactive contrast-text'
                 } ${year.id === props.currentYear.id &&
                   props.pageId === 'event' &&
-                  `${colourBackgroundClasses[year.id]} ${
-                    props.colourBackgroundClass
-                  }`}
+                  `${colourClasses[year.id]} ${props.colourBackgroundClass}`}
                 `}
               >
                 {year.id}
@@ -118,7 +115,7 @@ const Timeline = props => {
                 key="intro"
                 className={`circle cursor-pointer ${currentSceneIndex ===
                   'intro' && 'current-scene'} ${props.pageId === 'event' &&
-                  colourBackgroundClasses[year.id]}
+                  colourClasses[year.id]}
                   ${
                     year.id === props.currentYear.id && numScenes > 0
                       ? 'show'
@@ -128,7 +125,7 @@ const Timeline = props => {
               >
                 <span
                   className={`dot mt-1 left-1 ${props.pageId === 'event' &&
-                    colourBackgroundClasses[year.id]}`}
+                    colourClasses[year.id]}`}
                 />
               </span>
 
@@ -138,7 +135,7 @@ const Timeline = props => {
                   key={`scene-${index}`}
                   className={`circle cursor-pointer ${currentSceneIndex ===
                     index && 'current-scene'} ${props.pageId === 'event' &&
-                    colourBackgroundClasses[year.id]}
+                    colourClasses[year.id]}
                     ${
                       year.id === props.currentYear.id && numScenes > 0
                         ? 'show'
@@ -155,7 +152,7 @@ const Timeline = props => {
                 >
                   <span
                     className={`dot mt-1 left-1 ${props.pageId === 'event' &&
-                      colourBackgroundClasses[year.id]}`}
+                      colourClasses[year.id]}`}
                   />
                 </span>
               ))}
