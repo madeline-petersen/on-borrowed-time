@@ -73,7 +73,7 @@ const Timeline = props => {
 
   return (
     <span
-      className={`year-timeline medium-caption pb-5 h-screen ${props.timelineClasses}`}
+      className={`year-timeline medium-caption pb-5 h-screen contrast-text`}
     >
       <span className={`absolute bottom-0 ${props.timelineClasses}`}>
         {props.years.map(year => {
@@ -86,39 +86,23 @@ const Timeline = props => {
                       numScenes === 0
                         ? 'collapsed'
                         : `expanded num-scenes-${numScenes}`
-                    } ${props.pageId === 'event' && colourClasses[year.id]}`
+                    } contrast-text ${props.colourBackgroundClass} ${
+                      props.pageId === 'event' ? colourClasses[year.id] : ''
+                    }`
                   : `pl-4 mb-2.5`
               }`}
             >
               {/* year */}
               <span
                 onClick={() => onClickYear(year.id)}
-                className={`year-label ${
-                  year.id !== props.currentYear.id || props.pageId !== 'intro'
-                    ? 'cursor-pointer hover:text-gray-50'
-                    : 'cursor-default'
-                } 
-                ${
-                  props.pageId === 'home'
-                    ? year.id === props.previewedYear
-                      ? `active contrast-text`
-                      : 'inactive'
-                    : year.id === props.currentYear.id
-                    ? numScenes !== 0
-                      ? 'active contrast-text'
-                      : 'inactive contrast-text'
-                    : 'inactive contrast-text'
+                className={`year-label contrast-text ${
+                  props.pageId === 'event' ? props.colourBackgroundClass : ''
                 }
-                 ${
-                   year.id === props.currentYear.id
-                     ? `${colourClasses[year.id]} ${
-                         props.colourBackgroundClass
-                       }`
-                     : year.id === props.previewedYear
-                     ? `${props.colourBackgroundClasses[year.id]}`
-                     : 'nope'
-                 }
-                `}
+                ${
+                  year.id !== props.currentYear.id
+                    ? 'cursor-pointer opacity-50 hover:opacity-100'
+                    : 'cursor-default'
+                }`}
               >
                 {year.id}
               </span>

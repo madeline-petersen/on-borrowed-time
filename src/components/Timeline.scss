@@ -66,32 +66,32 @@
 
         &.gray {
           border-color: #bfbfbf;
-          transition: border-color 0.5s 0.5s;
+          transition: border-color 1s;
         }
 
         &.red {
           border-color: #c6573e;
-          transition: border-color 0.5s 0.5s;
+          transition: border-color 1s;
         }
 
         &.blue {
           border-color: #8693ac;
-          transition: border-color 0.5s 0.5s;
+          transition: border-color 1s;
         }
 
         &.yellow {
           border-color: #f8f2bf;
-          transition: border-color 0.5s 0.5s;
+          transition: border-color 1s;
         }
 
         &.purple {
           border-color: #aea4be;
-          transition: border-color 0.5s 0.5s;
+          transition: border-color 1s;
         }
 
         &.brown {
           border-color: #9e9081;
-          transition: border-color 0.5s 0.5s;
+          transition: border-color 1s;
         }
       }
 
@@ -175,18 +175,6 @@
       &.num-scenes-8 {
         padding-bottom: calc(8 * 24px);
       }
-    }
-  }
-
-  .year-label {
-    &.active {
-      opacity: 1;
-      transition: opacity 1s;
-    }
-
-    &.inactive {
-      opacity: 0.3;
-      transition: opacity 1s;
     }
   }
 

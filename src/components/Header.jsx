@@ -47,7 +47,9 @@ const Header = ({
           <Col lg={9} md={8} sm={8} xs={8}>
             <p
               className={`${pageId !== 'intro' &&
-                'cursor-pointer'} contrast-text ${colourBackgroundClass}`}
+                'cursor-pointer'} contrast-text ${
+                pageId === 'event' ? colourBackgroundClass : ''
+              }`}
               onClick={onClickYear}
             >
               {label}
@@ -68,8 +70,9 @@ const Header = ({
             {pageId === 'event' && (
               <p
                 key={`${currentYear}-${romanSceneNumber}-scene`}
-                className={`medium-caption scene-animation absolute top-0 pt-2 contrast-text ${colourBackgroundClass} ${isTransitioning &&
-                  'fade-out'}`}
+                className={`medium-caption scene-animation absolute top-0 pt-2 contrast-text ${
+                  pageId === 'event' ? colourBackgroundClass : ''
+                } ${isTransitioning && 'fade-out'}`}
               >
                 Scene {romanSceneNumber}
               </p>
@@ -78,8 +81,9 @@ const Header = ({
               key={`${currentYear}-${romanSceneNumber}-title`}
               className={`small-body ${
                 pageId === 'event' ? 'title-animation' : 'cursor-pointer'
-              } ${isTransitioning &&
-                'fade-out'} pt-2 pb-5 contrast-text ${colourBackgroundClass}`}
+              } ${isTransitioning && 'fade-out'} pt-2 pb-5 contrast-text ${
+                pageId === 'event' ? colourBackgroundClass : ''
+              }`}
               onClick={onClickScene}
             >
               {title}
