@@ -156,7 +156,7 @@ const UIShell = props => {
   let timelineClasses = isMenuActive
     ? 'contrast-text'
     : props.pageId === 'home'
-    ? 'text-white'
+    ? `contrast-text`
     : props.pageId === 'event'
     ? `contrast-text ${colourBackgroundClasses[props.year.id]}`
     : 'contrast-text';
@@ -239,6 +239,7 @@ const UIShell = props => {
         navigateTo={navigateTo}
         setNextBackground={setNextBackground}
         colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+        colourBackgroundClasses={colourBackgroundClasses}
       />
       {pageComponent}
     </>
