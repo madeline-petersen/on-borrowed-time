@@ -27,8 +27,12 @@ const Event = ({
   const [anecdoteData, setAnecdoteData] = useState({});
 
   const openModal = entry => {
-    setAnecdoteData(entry);
-    setIsModalActive(true);
+    if (entry.content) {
+      setAnecdoteData(entry);
+      setIsModalActive(true);
+    } else if (entry.linkTo) {
+      window.open(entry.linkTo);
+    }
   };
 
   const screenClass = useScreenClass();
