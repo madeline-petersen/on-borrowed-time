@@ -39,7 +39,7 @@ module.exports = {
       gray: {
         '10': '#F4F4F4',
         '20': '#E0E0E0',
-        '30': '#BFBFBF', // untitled sans site
+        '30': '#BCB9B6', // untitled sans site
         '40': '#A8A8A8',
         '50': '#8D8D8D',
         '60': '#6F6F6F',
@@ -49,11 +49,11 @@ module.exports = {
         '100': '#161616'
       },
       black: '#000008',
-      yellow: '#F8F2BF',
-      blue: '#8693AC',
-      red: '#C6573E',
-      brown: '#9E9081',
-      purple: '#AEA4BE'
+      yellow: '#E8E5D2',
+      blue: '#1E5BA2',
+      red: '#981F1F',
+      green: '#9FBDAE', //the new green
+      purple: '#D0B9F6'
     },
     screens: {
       sm: '375px',

@@ -13,7 +13,7 @@ const Timeline = props => {
     '1984': 'gray-30',
     '1989': 'red',
     '1997': 'blue',
-    '2003': 'brown',
+    '2003': 'green',
     '2014': 'yellow',
     '2019': 'purple',
     '2020': 'black'

@@ -54,7 +54,7 @@ const UIShell = props => {
     '1984': 'bg-gray-30',
     '1989': 'bg-red',
     '1997': 'bg-blue',
-    '2003': 'bg-brown',
+    '2003': 'bg-green',
     '2014': 'bg-yellow',
     '2019': 'bg-purple',
     '2020': 'bg-black'
