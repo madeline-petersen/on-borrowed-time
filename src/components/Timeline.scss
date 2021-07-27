@@ -24,32 +24,26 @@
 
     &.gray {
       border-color: #bcb9b6;
-      transition: border-color 0.5s;
     }
 
     &.red {
       border-color: #981f1f;
-      transition: border-color 0.5s;
     }
 
     &.blue {
       border-color: #1e5ba2;
-      transition: border-color 0.5s;
     }
 
     &.yellow {
       border-color: #e8e5d2;
-      transition: border-color 0.5s;
     }
 
     &.purple {
       border-color: #d0b9f6;
-      transition: border-color 0.5s;
     }
 
     &.green {
       border-color: #9fbdae;
-      transition: border-color 0.5s;
     }
 
     .circle {
@@ -66,32 +60,26 @@
 
         &.gray {
           border-color: #bcb9b6;
-          transition: border-color 0.5s;
         }
 
         &.red {
           border-color: #981f1f;
-          transition: border-color 0.5s;
         }
 
         &.blue {
           border-color: #1e5ba2;
-          transition: border-color 0.5s;
         }
 
         &.yellow {
           border-color: #e8e5d2;
-          transition: border-color 0.5s;
         }
 
         &.purple {
           border-color: #d0b9f6;
-          transition: border-color 0.5s;
         }
 
         &.green {
           border-color: #9fbdae;
-          transition: border-color 0.5s;
         }
       }
 
@@ -104,32 +92,26 @@
 
         &.gray {
           background-color: #bcb9b6;
-          transition: background-color 0.5s;
         }
 
         &.red {
           background-color: #981f1f;
-          transition: background-color 0.5s;
         }
 
         &.blue {
           background-color: #1e5ba2;
-          transition: background-color 0.5s;
         }
 
         &.yellow {
           background-color: #e8e5d2;
-          transition: background-color 0.5s;
         }
 
         &.purple {
           background-color: #d0b9f6;
-          transition: background-color 0.5s;
         }
 
         &.green {
           background-color: #9fbdae;
-          transition: background-color 0.5s;
         }
       }
     }
@@ -137,7 +119,8 @@
     &.collapsed {
       padding-bottom: 0;
       border-color: rgba(255, 255, 255, 0); // transparent left border
-      transition: padding-bottom 1s, border-color 1s; // collapse timeline and fade out
+      transition: padding-bottom 1s, border-color 1s, color 0.5s,
+        background-color 0.5s; // collapse timeline and fade out
 
       .circle {
         border-color: rgba(255, 255, 255, 0); // white, transparent
@@ -149,7 +132,8 @@
     }
 
     &.expanded {
-      transition: padding-bottom 1s; // expand timeline animation
+      transition: padding-bottom 1s, border-color 0.5s, color 0.5s,
+        background-color 0.5s; // expand timeline animation
 
       &.num-scenes-1 {
         padding-bottom: calc(1 * 24px);
@@ -181,7 +165,8 @@
   .circle {
     &.show {
       opacity: 1;
-      transition: opacity 0s 1s, border-color 1s; // delay appearance of circle, dots, fade circle in
+      transition: opacity 0s 1s, border-color 1s, color 0.5s,
+        background-color 0.5s; // delay appearance of circle, dots, fade circle in
     }
 
     &.hide {
