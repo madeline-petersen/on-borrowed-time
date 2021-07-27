@@ -58,7 +58,7 @@ const Reflection = ({
             id="overflow-container"
             className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
           >
-            <Row className="grid__row pt- pb-40" style={{ paddingTop: '20vh' }}>
+            <Row className="grid__row pb-5" style={{ paddingTop: '20vh' }}>
               {reflection.paragraphs[0] &&
                 reflection.paragraphs[0].map((paragraph, index) => {
                   return (
@@ -68,6 +68,7 @@ const Reflection = ({
                         <p className={`medium-headline text-white`}>
                           {ReactHtmlParser(paragraph)}
                         </p>
+                        <br />
                         <br />
                       </Col>
                     </span>
@@ -79,7 +80,7 @@ const Reflection = ({
                     <span key={`paragraph-${index}`} className="contents">
                       <Col lg={3} />
                       <Col lg={6} md={12}>
-                        <p className={`medium-body text-white`}>
+                        <p className={`medium-body text-white text-opacity-70`}>
                           {ReactHtmlParser(paragraph)}
                           <br />
                           <br />
@@ -90,22 +91,27 @@ const Reflection = ({
                   );
                 })}
             </Row>
-            {reflection.citations.map(({ text, linkTo }) => {
-              return (
-                <Row key={linkTo} className="grid__row">
-                  <Col lg={3} />
-                  <Col lg={6} md={12}>
-                    <a target="_blank" rel="noopener noreferrer" href={linkTo}>
-                      <p className="border-t border-white border-opacity-20 pb-5" />
-                      <p className="small-body text-white text-opacity-90">
-                        {ReactHtmlParser(text)}
-                      </p>
-                    </a>
-                  </Col>
-                  <Col lg={3} />
-                </Row>
-              );
-            })}
+            {reflection.citations &&
+              reflection.citations.map(({ text, linkTo }) => {
+                return (
+                  <Row key={linkTo} className="grid__row">
+                    <Col lg={3} />
+                    <Col lg={6} md={12}>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={linkTo}
+                      >
+                        <p className="border-t border-white border-opacity-20 pb-5" />
+                        <p className="small-body text-white text-opacity-50">
+                          {ReactHtmlParser(text)}
+                        </p>
+                      </a>
+                    </Col>
+                    <Col lg={3} />
+                  </Row>
+                );
+              })}
 
             {next && (
               <Footer
