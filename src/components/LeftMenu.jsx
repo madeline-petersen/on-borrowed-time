@@ -141,7 +141,7 @@ const LeftMenu = ({
                         <Col lg={9} md={9} sm={10} xs={10}>
                           <div className="pb-10 pr-12">
                             {selectedYear &&
-                              ReactHtmlParser(selectedYear.blurb)}
+                              ReactHtmlParser(selectedYear.description)}
                           </div>
                         </Col>
                         {selectedYear &&

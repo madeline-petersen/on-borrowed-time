@@ -54,7 +54,7 @@ const Anecdote = ({
     modal.style.transform = 'translateX(0%)';
     overlay.style.transform = 'translateX(0%)';
     overlay.style.opacity = '1';
-    document.getElementById('scroll_container').scrollTo(0, 0);
+    document.getElementById('scroll-container').scrollTo(0, 0);
   }
 
   const onClickSpan = () => {
@@ -89,7 +89,7 @@ const Anecdote = ({
           }`}
         >
           <Container className="grid__container">
-            <Row id="scroll_container" className="grid__row modal-height">
+            <Row id="scroll-container" className="grid__row modal-height">
               <span
                 className="close absolute top-5 right-6 z-40"
                 onClick={onClickSpan}
