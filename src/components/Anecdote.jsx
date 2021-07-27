@@ -3,7 +3,6 @@ import './Anecdote.scss';
 import { Col, Container, Row, Visible } from 'react-grid-system';
 
 import { Close20 } from '@carbon/icons-react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
@@ -31,6 +30,7 @@ const Anecdote = ({
   content,
   citation,
   isActive,
+  linkTo,
   onCloseModal
 }) => {
   const modal = document.getElementById('modal-card');
@@ -151,13 +151,17 @@ const Anecdote = ({
                             </div>
                           );
                         })}
-                      <Link to="">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={linkTo}
+                      >
                         <div className="h-12" />
                         <p className="border-t border-black border-opacity-10 pb-5" />
                         <p className="small-body text-black text-opacity-60">
                           {ReactHtmlParser(citation)}
                         </p>
-                      </Link>
+                      </a>
                       <div className="bottom-spacer" />
                     </>
                   </Col>
@@ -214,13 +218,13 @@ const Anecdote = ({
                           </div>
                         );
                       })}
-                    <Link to="">
+                    <a target="_blank" rel="noopener noreferrer" href={linkTo}>
                       <div className="h-12" />
                       <p className="border-t border-black border-opacity-10 pb-5" />
                       <p className="small-body text-black text-opacity-60">
                         {ReactHtmlParser(citation)}
                       </p>
-                    </Link>
+                    </a>
                     <div className="bottom-spacer" />
                   </Col>
                   <Col lg={0} md={1} sm={1} xs={1} />
@@ -275,13 +279,17 @@ const Anecdote = ({
                             </div>
                           );
                         })}
-                      <Link to="">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={linkTo}
+                      >
                         <div className="h-12" />
                         <p className="border-t border-black border-opacity-10 pb-5" />
                         <p className="small-body text-black text-opacity-60">
                           {ReactHtmlParser(citation)}
                         </p>
-                      </Link>
+                      </a>
                       <div className="bottom-spacer" />
                     </Col>
                     <Col lg={0} md={1} sm={1} xs={1} />
@@ -306,6 +314,7 @@ Anecdote.propTypes = {
   content: PropTypes.arrayOf(PropTypes.string),
   citation: PropTypes.string,
   isActive: PropTypes.bool,
+  linkTo: PropTypes.string,
   onCloseModal: PropTypes.func
 };
 
