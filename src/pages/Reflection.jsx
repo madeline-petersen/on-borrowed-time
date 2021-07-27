@@ -91,27 +91,28 @@ const Reflection = ({
                   );
                 })}
             </Row>
-            {reflection.citations &&
-              reflection.citations.map(({ text, linkTo }) => {
-                return (
-                  <Row key={linkTo} className="grid__row">
-                    <Col lg={3} />
-                    <Col lg={6} md={12}>
+            {reflection.citations && (
+              <Row className="grid__row">
+                <Col lg={3} />
+                <Col lg={6} md={12}>
+                  <p className="border-t border-white border-opacity-20 pb-5" />
+                  {reflection.citations.map(({ text, linkTo }) => {
+                    return (
                       <a
+                        key={linkTo}
                         target="_blank"
                         rel="noopener noreferrer"
                         href={linkTo}
+                        className="small-body text-white text-opacity-50"
                       >
-                        <p className="border-t border-white border-opacity-20 pb-5" />
-                        <p className="small-body text-white text-opacity-50">
-                          {ReactHtmlParser(text)}
-                        </p>
+                        <p className="mb-4">{ReactHtmlParser(text)}</p>
                       </a>
-                    </Col>
-                    <Col lg={3} />
-                  </Row>
-                );
-              })}
+                    );
+                  })}
+                </Col>
+                <Col lg={3} />
+              </Row>
+            )}
 
             {next && (
               <Footer
