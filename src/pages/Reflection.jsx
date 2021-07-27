@@ -58,7 +58,7 @@ const Reflection = ({
             id="overflow-container"
             className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
           >
-            <Row className="grid__row pt-64 pb-40">
+            <Row className="grid__row pt- pb-40" style={{ paddingTop: '20vh' }}>
               {reflection.paragraphs[0] &&
                 reflection.paragraphs[0].map((paragraph, index) => {
                   return (
