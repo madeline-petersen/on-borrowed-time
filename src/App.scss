@@ -162,33 +162,33 @@ a {
   mix-blend-mode: difference;
   transition: color 0.5s;
 
-  &.bg-gray {
-    color: #bfbfbf;
+  &.bg-gray-30 {
+    color: #bcb9b6;
     transition: color 0.5s;
   }
 
   &.bg-red {
-    color: #c6573e;
+    color: #981f1f;
     transition: color 0.5s;
   }
 
   &.bg-blue {
-    color: #8693ac;
+    color: #1e5ba2;
     transition: color 0.5s;
   }
 
   &.bg-yellow {
-    color: #f8f2bf;
+    color: #e8e5d2;
     transition: color 0.5s;
   }
 
   &.bg-purple {
-    color: #aea4be;
+    color: #d0b9f6;
     transition: color 0.5s;
   }
 
   &.bg-green {
-    color: #9e9081;
+    color: #9fbdae;
     transition: color 0.5s;
   }
 }

@@ -23,32 +23,32 @@
     border-color: rgba(255, 255, 255, 1); // white, opaque
 
     &.gray {
-      border-color: #bfbfbf;
+      border-color: #bcb9b6;
       transition: border-color 0.5s;
     }
 
     &.red {
-      border-color: #c6573e;
+      border-color: #981f1f;
       transition: border-color 0.5s;
     }
 
     &.blue {
-      border-color: #8693ac;
+      border-color: #1e5ba2;
       transition: border-color 0.5s;
     }
 
     &.yellow {
-      border-color: #f8f2bf;
+      border-color: #e8e5d2;
       transition: border-color 0.5s;
     }
 
     &.purple {
-      border-color: #aea4be;
+      border-color: #d0b9f6;
       transition: border-color 0.5s;
     }
 
     &.green {
-      border-color: #9e9081;
+      border-color: #9fbdae;
       transition: border-color 0.5s;
     }
 
@@ -65,32 +65,32 @@
         border-color: rgba(255, 255, 255, 1); // opaque
 
         &.gray {
-          border-color: #bfbfbf;
+          border-color: #bcb9b6;
           transition: border-color 1s;
         }
 
         &.red {
-          border-color: #c6573e;
+          border-color: #981f1f;
           transition: border-color 1s;
         }
 
         &.blue {
-          border-color: #8693ac;
+          border-color: #1e5ba2;
           transition: border-color 1s;
         }
 
         &.yellow {
-          border-color: #f8f2bf;
+          border-color: #e8e5d2;
           transition: border-color 1s;
         }
 
         &.purple {
-          border-color: #aea4be;
+          border-color: #d0b9f6;
           transition: border-color 1s;
         }
 
         &.green {
-          border-color: #9e9081;
+          border-color: #9fbdae;
           transition: border-color 1s;
         }
       }
@@ -103,32 +103,32 @@
         border-radius: 50%;
 
         &.gray {
-          background-color: #bfbfbf;
+          background-color: #bcb9b6;
           transition: background-color 0.5s;
         }
 
         &.red {
-          background-color: #c6573e;
+          background-color: #981f1f;
           transition: background-color 0.5s;
         }
 
         &.blue {
-          background-color: #8693ac;
+          background-color: #1e5ba2;
           transition: background-color 0.5s;
         }
 
         &.yellow {
-          background-color: #f8f2bf;
+          background-color: #e8e5d2;
           transition: background-color 0.5s;
         }
 
         &.purple {
-          background-color: #aea4be;
+          background-color: #d0b9f6;
           transition: background-color 0.5s;
         }
 
         &.green {
-          background-color: #9e9081;
+          background-color: #9fbdae;
           transition: background-color 0.5s;
         }
       }
