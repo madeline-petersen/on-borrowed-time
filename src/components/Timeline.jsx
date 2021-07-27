@@ -100,13 +100,13 @@ const Timeline = props => {
                 }
                 ${
                   year.id !== props.currentYear.id
-                    ? 'cursor-pointer opacity-50 hover:opacity-100'
+                    ? 'cursor-pointer opacity-70 hover:opacity-100'
                     : 'cursor-default'
                 }
                 ${
                   props.pageId === 'home'
                     ? year.id !== props.previewedYear
-                      ? 'cursor-pointer opacity-50 hover:opacity-100'
+                      ? 'cursor-pointer opacity-70 hover:opacity-100'
                       : 'opacity-100'
                     : ''
                 }
