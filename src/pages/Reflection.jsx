@@ -96,8 +96,8 @@ const Reflection = ({
                   <Col lg={3} />
                   <Col lg={6} md={12}>
                     <a target="_blank" rel="noopener noreferrer" href={linkTo}>
-                      <p className="border-t border-black border-opacity-10 pb-5" />
-                      <p className="small-body text-black text-opacity-60">
+                      <p className="border-t border-white border-opacity-20 pb-5" />
+                      <p className="small-body text-white text-opacity-90">
                         {ReactHtmlParser(text)}
                       </p>
                     </a>
