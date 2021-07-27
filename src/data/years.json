@@ -3,7 +3,7 @@
     {
       "id": "1984",
       "title": "The Prelude",
-      "description": "lorem ipsum blah blah",
+      "description": "China's defeat in the Opium Wars to Britain resulted in the signing of the Treaty of Nanjing 1842, where Hong Kong was ceded to British colonial rule. Further territory was added in 1898 when Britain obtained the New Territories on a 99 year lease, which formed the present-day makeup of Hong Kong. A borrowed place on borrowed time, Hong Kong began developing an in-between identity rooted in two conflicting cultures.",
       "blurb": "Known in Cantonese as the Fragrant Harbour, Hong Kong predominantly served as an intermediary trading post between Britain and China in the late 18th century, with its harbour utilised for the exchange of silver, silk, porcelain, and tea.<br/><br/>China&rsquo;s defeat in the Opium Wars to Britain resulted in the signing of the Treaty of Nanjing 1842, where Hong Kong was ceded to British colonial rule. Further territory was added in 1898 when Britain obtained the New Territories on a 99 year lease, which formed the present-day makeup of Hong Kong. A borrowed place on borrowed time, Hong Kong began developing an in-between identity rooted in two conflicting cultures.",
       "scenes": [
         {
@@ -73,9 +73,9 @@
                 },
                 {
                   "type": "Map",
-                  "shortTitle": "Geography of Hong Kong",
+                  "shortTitle": "Geography of Hong Kong ",
                   "bookTitle": "Geography of Hong Kong",
-                  "year": "—",
+                  "year": "n.d.",
                   "author": "",
                   "content": null,
                   "citation": "",
@@ -328,6 +328,7 @@
       "id": "1989",
       "title": "The June Fourth “Incident”",
       "blurb": "On the night of June 4th 1989, pro-democracy protesters were violently massacred in Tiananmen Square, permanently re-shaping Hong Kong&rsquo;s perception of its eventual handover. As a crescendo of trembling anxiety and fear continued to build, Hong Kong&rsquo;s optimism and hope for a democratic future dimmed.",
+      "description": "On the night of June 4th 1989, pro-democracy protesters were violently massacred in Tiananmen Square, permanently re-shaping Hong Kong’s perception of its eventual handover. As a sense of anxiety and fear continued to build, Hong Kong’s optimism and hope for a democratic future began to dim.",
       "intro": {
         "paragraphs": [
           "Observers feared that the violent crackdown of the 1989 pro-democracy movement in China foreshadowed Hong Kong&rsquo;s inevitable future. Caught in a new diasporic reality, Hong Kong began to witness the contradicting realities of living between two competing cultures."
@@ -441,6 +442,7 @@
             {
               "type": "event",
               "title": "Event",
+              "description": "On the night of June 4th 1989, pro-democracy protesters were violently massacred in Tiananmen Square, permanently re-shaping Hong Kong’s perception of its eventual handover. As a sense of anxiety and fear continued to build, Hong Kong’s optimism and hope for a democratic future began to dim.",
               "paragraphs": [
                 "On the night of June 3-4, 1989, a series of peaceful demonstrations led by pro-democracy protesters in Beijing were violently suppressed by Chinese authorities. Known as &ldquo;The June Fourth Incident&rdquo;, thousands of unarmed protestors were massacred at Tiananmen Square with thousands more arrested across cities in China."
               ],
@@ -873,7 +875,7 @@
                   "type": "Lyrics",
                   "shortTitle": "Blood Is On The Square - SONG LYRICS",
                   "bookTitle": "Blood Is On The Square",
-                  "year": "—",
+                  "year": "n.d.",
                   "author": "Philip and Teresa Morgan",
                   "content": [
                     "A song was heard in China",
@@ -954,6 +956,7 @@
     {
       "id": "1997",
       "title": "A New Disorientation",
+      "description": "At midnight on July 1, 1997, the crown colony of Hong Kong officially reverted to Chinese sovereignty, ending 156 years of British rule. The handover divided Hong Kong's history into two halves — a colonial past that it struggled to reconcile, and an impending authoritarian future that it could not predict.",
       "blurb": "The 1997 handover of Hong Kong marked the beginning of a new disorientation. A sense of uncertainty clouded Hong Kong&rsquo;s future, as the country began its gradual process of transforming from a liberal colony to a communist regime.",
       "scenes": [
         {
@@ -1363,7 +1366,7 @@
                   "type": "Lyrics",
                   "shortTitle": "March of the Volunteers",
                   "bookTitle": "March of the Volunteers",
-                  "year": "—",
+                  "year": "n.d.",
                   "author": "Nie Er, lyrics by Tian Han",
                   "content": [
                     "Arise, ye who refuse to be slaves!",
@@ -1401,6 +1404,7 @@
     {
       "id": "2003",
       "title": "A Question of Patriotism",
+      "description": "As Hong Kong settled into its new diasporic reality, tensions would erupt when a confluence of political events emerged in 2003. In its most visible act of defiance yet, Hong Kong people exercised their right to protest for the first time to preserve the promise of the region's sovereignty.",
       "blurb": "Six years after the handover, the first imminent signs of Beijing&rsquo;s tighter grip would begin to emerge. Hong Kong would erupt into a historical demonstration in protest of implementing a security law that would undermine the existing rights, freedoms, and liberties of its citizens. ",
       "scenes": [
         {
@@ -1933,6 +1937,7 @@
     {
       "id": "2014",
       "title": "An Impossible Dream",
+      "description": "Hong Kong's autonomy would continue to erode as Beijing began exerting more power over the region. Seeking to achieve political reform, Hong Kong would take more disruptive measures in fighting for it’s dream of genuine universal suffrage by embracing new methods of civil disobedience.",
       "blurb": "Despite the momentum from the 2003 demonstrations, political turmoil in the intervening years slowed down the pace of democratization, and the legislature took no practical steps towards implementing universal suffrage.<br></br><br>The Occupy Movement in 2014 was created in an attempt to fight for achieving genuine universal suffrage. A year of political awakening for Hong Kong’s younger generation, contentious protest methods rooted in civil disobedience introduced a more disruptive form of advocating for democratic freedoms.</br>",
       "scenes": [
         {
@@ -2764,7 +2769,7 @@
                   "shortTitle": "Letter to the Hong Kong People—LETTER",
                   "bookTitle": "Occupy Central Trio’s Letter to the Hong Kong People [ We will bear the legal consequences and hope the students will retreat to advance ]",
                   "author": "",
-                  "year": "",
+                  "year": "n.d.",
                   "content": [
                     "On December 2nd, 2014, the organizers of Occupy Central with Love and Peace released a statement announcing their withdrawal from the occupation. <br></br>",
                     "The civil disobedience of the Occupy Central with Love and Peace (OCLP) movement is a response to the government’s turning a blind eye and wanton suppression of lawful protests and rallies. Civil disobedience is about breaking the law in a limited way through peaceful, non-violent means to fight for justice. As it is not the goal of civil disobedience to damage the rule of law, those engaging in it must have the courage to bear the legal consequences. The three initiators of OCLP and some of our supporters have decided to surrender to police tomorrow (3rd December) to demonstrate the spirit of this kind of commitment and responsibility.<br></br>",
@@ -2821,6 +2826,7 @@
     {
       "id": "2019",
       "title": "A Summer of Discontent",
+      "description": "Commonly known as the season of discontent, the accumulation of years of fighting for genuine democracy would reach a tipping point in 2019. The introduction of a controversial extradition bill would trigger an unprecedented sequence of protests that would permanently re-shape Hong Kong’s political landscape.",
       "blurb": "The 2014 Umbrella Movement&rsquo;s quiet conclusion had Hong Kong people disillusioned about their intermediary position between two polarising regimes. However, beneath the feelings of discontentment and fatigue, remained a lingering sense of hope that Hong Kong could one day create a path towards genuine democracy. <br></br><br>In 2019 a controversial extradition bill —in response to an unresolved murder—would provide an ideal moment to reignite the spirit of the pro-democracy movement. A re-kindled sense of solidarity would unite two million people in one last effort to save the region’s unique identity, leading to the most consequential sequence of protests in Hong Kong’s history.</br>",
       "scenes": [
         {
@@ -4582,6 +4588,7 @@
     {
       "id": "2020",
       "title": "A Silent Resistance",
+      "description": "",
       "blurb": "Fusce non urna quis erat rhoncus pharetra auctor mattis risus. Nulla convallis, tortor commodo tempus tincidunt, libero tellus pretium quam, a placerat nisl nisl quis velit.",
       "scenes": [
         {
