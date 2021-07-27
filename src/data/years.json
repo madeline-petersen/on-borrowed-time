@@ -121,7 +121,14 @@
                 [
                   "&ldquo;Since its inception as a colonial trading post, Hong Kong’s defining characteristic has been its in-betweenness. China’s euphemism for Hong Kong’s postcolonial status—one country, two systems—points to its raison d’être: to be an interface for capital between China and the West. The territory has never been allowed to derive stability from its own resources or interests but rather from the intersections of multiple others’. Hong Kong’s place in the world depends on its ability to mediate between external powers. Its existential struggle is likewise a symptom of a larger collapse.&rdquo;"
                 ]
-              ]
+              ],
+              "citations": [
+                {
+                  "text": "Chan, Wilfred. “The Infinite Heartbreak of Loving Hong Kong.” The Nation. The Nation, January 6, 2021. ",
+                  "linkTo": "https://www.thenation.com/article/world/hong-kong-china-national-security-law/"
+                  }
+                ]  
+  
             }
           ]
         },
@@ -448,16 +455,15 @@
                     "In the square that night, the loudspeakers were broadcasting a warning, over and over, that &ldquo;a severe counterrevolutionary riot&rdquo; had broken out, the first time the government was using these terms. The warning stated that rioters had savagely attacked soldiers of the PLA and had burned vehicles in an attempt to subvert the People’s Republic and to overthrow the Socialist system, and it warned citizens to evacuate the square, “We cannot guarantee the safety of violators, who will be solely responsible for any consequences.” The threats of violence were no longer implicit. At the time, Zhang Ming was huddled with the other students around the Monument to the People’s Heroes as tracer bullets arced through the air, marking the steady progress of troops approaching along Chang’an Avenue.<br>",
                     "</br>Zhang watched the advance of the troops, moving through a hail of bricks and paving stones hurled by disbelieving and irate crowds. Some 25 years later, he is still moved to tears at the memory of what he saw, such as the sight of one young man being carried to an ambulance just outside the square, a red blossom spreading across his chest. “I had thought death would be terrifying, but he looked as though he were sleeping.” Zhang remembers the tense wait while negotiations were underway for safe passage for the remaining students from Tiananmen Square. As the students straggled out of the square hand in hand, singing the “Internationale” and the Chinese national anthem, tears poured down their cheeks."
                   ],
-                  "citation": "",
+                  "citation": "Lim, Louisa. “'Staying'-An Excerpt from 'People's Republic of Amnesia'.” China File. China File, March 7, 2016.",
                   "linkTo": "https://www.chinafile.com/library/excerpts/staying-excerpt-peoples-republic-amnesia"
                 },
                 {
                   "type": "Poem",
                   "shortTitle": "Tonight Marshall Law was Imposed",
-                  "poemTitle": "Tonight Marshall Law was Imposed",
-                  "publication": "Poems from Tiananmen Square",
+                  "bookTitle": "Poems From Tiananmen Square",
                   "year": "1989",
-                  "author": "Written anomously",
+                  "author": "Written Anomously",
                   "preamble": "&ldquo;Tonight Marshall Law was Imposed&rdquo; was one of a collection of anonymously written poems posted around Tiananmen Square in the lead up to the military crackdown. These poems were later gathered from the Square, faxed to Hong Kong, and then to Taiwan, where they were published in the China Times and translated into multiple foreign languages.",
                   "content": [
                     "Under the republican sky",
@@ -509,7 +515,7 @@
                 {
                   "type": "Article Excerpt",
                   "shortTitle": "Capturing Tank Man",
-                  "publication": "How Stuart Franklin Took His Take Man Photograph",
+                  "bookTitle": "How Stuart Franklin Took His Take Man Photograph",
                   "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
                   "year": "2016",
                   "author": "Phaidon",
