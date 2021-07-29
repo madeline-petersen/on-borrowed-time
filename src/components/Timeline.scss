@@ -16,6 +16,10 @@
     display: none; // do not display timeline below large breakpoint
   }
 
+  &__container {
+    bottom: 6px;
+  }
+
   &__scene-timeline {
     // scene timeline
     margin-left: -1px; // move scene timeline onto year timeline

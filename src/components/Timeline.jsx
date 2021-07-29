@@ -75,7 +75,9 @@ const Timeline = props => {
     <span
       className={`year-timeline medium-caption pb-5 h-screen contrast-text`}
     >
-      <span className={`absolute bottom-0 ${props.timelineClasses}`}>
+      <span
+        className={`year-timeline__container absolute ${props.timelineClasses}`}
+      >
         {props.years.map(year => {
           return (
             <div
