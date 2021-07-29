@@ -54,12 +54,12 @@ const Intro = ({
           key={`${year.id}-gradient-transition`}
           className={`gradient-transition`}
         >
-          <div className="small-headline text-white absolute w-full scene-name">
+          <div className="small-headline text-white absolute w-full blurb-content">
             <Container className="grid__container">
               <Row className="grid__row">
                 <Col lg={5} />
                 <Col lg={7}>
-                  <p>{ReactHtmlParser(year.blurb)}</p>
+                  <div>{ReactHtmlParser(year.blurb)}</div>
                 </Col>
               </Row>
             </Container>
