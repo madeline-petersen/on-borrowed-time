@@ -535,11 +535,11 @@
                   "type": "Article Excerpt",
                   "shortTitle": "Capturing Tank Man",
                   "bookTitle": "How Stuart Franklin Took His Take Man Photograph",
-                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;",
+                  "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;<br></br>",
                   "year": "2016",
                   "author": "Phaidon",
                   "content": [
-                    "&ldquo;I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel.&rdquo;"
+                    "I remember lying prone on a balcony on the sixth floor of the Beijing Hotel with the Newsweek photographer Charlie Cole, photographing the event around noon on 4 June,” Franklin recalls. “Earlier that day Tiananmen Square had been cleared by the Chinese Army. However, a group of civilians lined up to face a double row of soldiers who themselves stood in firing positions in front of a column of tanks. These civilians were shot at repeatedly, leaving at least twenty casualties. As the bodies were carried away the standoff died down and a column of tanks broke through, moving slowly eastwards. Waiting for them a few hundred metres down the road was a man in a white shirt and dark trousers, carrying two shopping bags. Alone he blocked the path of the tanks, watched by groups of nervous bystanders and perhaps fifty journalists, camera crews and photographers on balconies on almost every floor of the hotel."
                   ],
                   "citation": "Phaidon. “How Stuart Franklin Took His Tank Man Photograph.” Phaidon. Phaidon, 2016.",
                   "linkTo": "https://www.phaidon.com/agenda/photography/articles/2016/april/05/how-stuart-franklin-took-his-tank-man-photograph/"
@@ -550,7 +550,8 @@
                   "articleTitle": "Eyewitness Accounts of Massacre",
                   "publication": "Asian Cha",
                   "year": "1989",
-                  "content": null
+                  "content": null,
+                  "linkTo": "https://www.asiancha.com/wp/article/scott-savitt/" 
                 }
               ]
             },
@@ -1194,7 +1195,7 @@
                 },
                 {
                   "type": "Diary",
-                  "shortTitle": "A Sigh Or SmileY",
+                  "shortTitle": "A Sigh Or Smile",
                   "bookTitle": "A Sigh Or Smile",
                   "year": "1997",
                   "author": "Vivian Lai",
@@ -1390,10 +1391,23 @@
                     "HONG KONG—This is a strange place these days, after almost a week of Chinese rule. For some, there is a sense of Kafkaesque unreality, of waking up as a cockroach with one&rsquo;s self and the world suddenly changed. For others there is the inevitable metaphor, the sense of a new dawn breaking across the territory. Perhaps there is a bit of both.<br></br>",
                     "The signs and badges and crowns of colonial rule have vanished overnight, pried away, pulled off, painted over. At the former home of the colonial governor, till called Government House even though Hong Kong&rsquo;s new leader lives elsewhere, the gates where the emblem of Queen Elizabeth hung are now empty. Over the central government offices, gone is the elaborate colonial crest of the lion and unicorn, replaced by China&rsquo;s seal: five stars over a silhouette of the Forbidden City&rsquo;s Gate of Heavenly Peace. And in all the places where, for all of living memory, the Union Jack flew, now flies the flag of the People&rsquo;s Republic.<br></br>",
                     "[...]<br></br>",
-                    "In the end, of course, any efforts by the British to rewrite history will not matter. Hong Kong is in China&rsquo;s hands.<br></br>"
+                    "In the end, of course, any efforts by the British to rewrite history will not matter. Hong Kong is in China&rsquo;s hands."
                   ],
                   "citation": "Gargan, Edward A. &ldquo;Amid Changing Symbols, a Sense of the Unreal.&rdquo; The New York Times, July 8, 1997. Archived.",
                   "linkTo": "https://archive.nytimes.com/www.nytimes.com/specials/hongkong/letter.html"
+                },
+                {
+                  "type": "Article Excerpt",
+                  "shortTitle": "Culture and the Politics of Disappearance ",
+                  "bookTitle": "Hong Kong: Culture and the Politics of Disappearance",
+                  "year": "2011",
+                  "author": "Book description by University of Minnesota Press",
+                  "content": [
+                    "On June 30, 1997, Hong Kong as we know it will disappear, ceasing its singular and ambiguous existence as a colonial holdover and becoming part of the People’s Republic of China. In an intriguing and provocative exploration of its cinema, architecture, photography, and literature, Ackbar Abbas considers what Hong Kong, with its unique relations to decolonization and disappearance, can teach us about the future of both the colonial city and the global city.<br></br>",
+                    "The culture of Hong Kong encompasses Jackie Chan and John Woo, British colonial architecture and postmodern skyscrapers. Ironically, it was not until they were faced with the imposition of Mainland power—with the signing of the Sino-British Joint Agreement in 1984—that the denizens of the colony began the search for a Hong Kong identity. According to Abbas, Hong Kong’s peculiar lack of identity is due to its status as “not so much a place as a space of transit,” whose residents think of themselves as transients and migrants on their way from China to somewhere else."
+                  ],
+                  "citation": "“Hong Kong: Culture and the Politics of Disappearance.” University of Minnesota Press. University of Minnesota Press, October 13, 2011.",
+                  "linkTo": "https://www.upress.umn.edu/book-division/books/hong-kong"
                 },
                 {
                   "type": "Lyrics",
