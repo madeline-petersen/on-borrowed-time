@@ -45,11 +45,15 @@ const Intro = ({
       </div>
 
       <div
+        key={`${year.id}-hero-image`}
         className={`intro hero-image ${backgroundClass} ${
           isClicked ? 'fade-out' : 'foreground-fade-in'
         }`}
       >
-        <div key={year.id} className={`gradient-transition`}>
+        <div
+          key={`${year.id}-gradient-transition`}
+          className={`gradient-transition`}
+        >
           <div className="small-headline text-white absolute w-full scene-name">
             <Container className="grid__container">
               <Row className="grid__row">

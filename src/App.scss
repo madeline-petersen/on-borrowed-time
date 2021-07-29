@@ -264,6 +264,11 @@ a {
   }
 }
 
+.footer-spacer {
+  // screen height - header height - footer height
+  min-height: calc(100vh - 80px - 231px);
+}
+
 // Transitions
 .fade-out {
   opacity: 0;
