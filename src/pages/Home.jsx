@@ -3,7 +3,9 @@ import './Home.scss';
 import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect, useState } from 'react';
 
+import { ArrowDown20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
+import ReactHtmlParser from 'react-html-parser';
 
 const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
   const [year, setYear] = useState(years[0]);
@@ -67,9 +69,12 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
             <Container className="grid__container">
               <Row className="grid__row">
                 <Col lg={2} />
-                <Col lg={6}>{year.title}</Col>
-                <Col lg={1}>{year.id}</Col>
-                <Col lg={3} />
+                <Col lg={3}>{ReactHtmlParser(year.title)}</Col>
+                <Col lg={3} className="chinese-characters">
+                  {year.chineseTitle}
+                </Col>
+                <Col lg={2}>{year.id}</Col>
+                <Col lg={1} />
               </Row>
             </Container>
           </div>
@@ -86,6 +91,9 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
             />
           );
         })}
+      </div>
+      <div className="arrow-down">
+        <ArrowDown20 />
       </div>
     </>
   );

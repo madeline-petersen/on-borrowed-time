@@ -2,6 +2,7 @@ import { Col, Container, Row } from 'react-grid-system';
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
 
 const Header = ({
   currentYear,
@@ -52,7 +53,7 @@ const Header = ({
               }`}
               onClick={onClickYear}
             >
-              {label}
+              {ReactHtmlParser(label)}
             </p>
           </Col>
         </Row>
@@ -86,7 +87,7 @@ const Header = ({
               }`}
               onClick={onClickScene}
             >
-              {title}
+              {ReactHtmlParser(title)}
             </p>
           </Col>
         </Row>

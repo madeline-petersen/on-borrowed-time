@@ -29,8 +29,20 @@ $xxl-minus-1: 1799px;
 }
 
 @font-face {
-  font-family: NotoSerifJP-Regular;
-  src: url('./NotoSerifJP-Regular.otf') format('opentype');
+  font-family: NotoSerifTC-Regular;
+  src: url('./NotoSerifTC-Regular.otf') format('opentype');
+  font-display: block;
+}
+
+@font-face {
+  font-family: NotoSerifTC-Medium;
+  src: url('./NotoSerifTC-Medium.otf') format('opentype');
+  font-display: block;
+}
+
+@font-face {
+  font-family: NotoSerifTC-SemiBold;
+  src: url('./NotoSerifTC-SemiBold.otf') format('opentype');
   font-display: block;
 }
 
@@ -99,17 +111,22 @@ a {
 }
 
 .headline-characters {
-  font-family: NotoSerifJP-Regular;
+  font-family: NotoSerifTC-Regular;
   font-style: normal;
   font-size: 24px;
   line-height: 120%;
 }
 
 .mobile-characters {
-  font-family: NotoSerifJP-Regular;
+  font-family: NotoSerifTC-Regular;
   font-style: normal;
   font-size: 20px;
   line-height: 120%;
+}
+
+.chinese-characters {
+  font-family: NotoSerifTC-SemiBold;
+  margin-bottom: 2px;
 }
 
 .medium-body {

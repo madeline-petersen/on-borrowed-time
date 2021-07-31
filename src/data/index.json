@@ -1,94 +1,168 @@
 {
-    "themes": [
-      {
-        "id": "all",
-        "title": "All",
-        "description": { 
-            "paragraphs": [
-                { "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum."}
-            ]
-        }
-      },
-      {
-        "id": "language",
-        "title": "Language",
-        "description": { 
-            "paragraphs": [
-                { "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum."}
-            ]
-        }
-      },
-      {
-        "id": "censorship",
-        "title": "Censorship",
-        "description": { 
-            "paragraphs": [
-                { "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum."}
-            ]
-        }
-      },
-      {
-        "id": "collective_memory",
-        "title": "Collective Memory",
-        "description": { 
-            "paragraphs": [
-                { "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum."}
-            ]
-        }
-      },
-      {
-        "id": "diaspora",
-        "title": "Diaspora",
-        "description": { 
-            "paragraphs": [
-                { "text": "The modern Hong Kong diaspora was defined by a fear of Beijing. In the years before it was handed back to China from Britain in 1997, an estimated 800,000 people left for the United Kingdom, Canada, Australia, the United States, and elsewhere, with emigration rising sharply after the 1989 Tiananmen Square massacre." }
-            ]
-        }
-      },
-      {
-        "id": "in_betweeness",
-        "title": "In-Betweeness",
-        "description": { 
-            "paragraphs": [
-                { "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum."}
-            ]
-        }
-      },
-      {
-        "id": "national_identity",
-        "title": "National Identity",
-        "description": { 
-            "paragraphs": [
-                { "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum."}
-            ]
-        }
+  "themes": [
+    {
+      "id": "all",
+      "title": "All",
+      "description": {
+        "paragraphs": [
+          {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum."
+          }
+        ]
       }
-    ],
-    "events": [
+    },
+    {
+      "id": "language",
+      "title": "Language",
+      "description": {
+        "paragraphs": [
+          {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum."
+          }
+        ]
+      }
+    },
+    {
+      "id": "censorship",
+      "title": "Censorship",
+      "description": {
+        "paragraphs": [
+          {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum."
+          }
+        ]
+      }
+    },
+    {
+      "id": "collective_memory",
+      "title": "Collective Memory",
+      "description": {
+        "paragraphs": [
+          {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum."
+          }
+        ]
+      }
+    },
+    {
+      "id": "diaspora",
+      "title": "Diaspora",
+      "description": {
+        "paragraphs": [
+          {
+            "text": "The modern Hong&nbsp;Kong diaspora was defined by a fear of Beijing. In the years before it was handed back to China from Britain in 1997, an estimated 800,000 people left for the United Kingdom, Canada, Australia, the United States, and elsewhere, with emigration rising sharply after the 1989 Tiananmen Square massacre."
+          }
+        ]
+      }
+    },
+    {
+      "id": "in_betweeness",
+      "title": "In-Betweeness",
+      "description": {
+        "paragraphs": [
+          {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum."
+          }
+        ]
+      }
+    },
+    {
+      "id": "national_identity",
+      "title": "National Identity",
+      "description": {
+        "paragraphs": [
+          {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue euismod lorem consequat vehicula. Integer eu bibendum nisl, sed ultrices dolor. Nullam dapibus, nunc vitae tempor scelerisque, mi elit rhoncus purus, quis euismod mauris sapien quis ipsum."
+          }
+        ]
+      }
+    }
+  ],
+  "events": [
+    {
+      "title": "The June Fourth “Incident”",
+      "subEvents": [
         {
-            "title": "The June Fourth “Incident”",
-            "subEvents": [
-                {"title": "Death of an Icon", "entries": [
-                    {"anecdote": "Champion for Liberalisation","source": "China’s Struggle for Democracy, Its Prelude", "type": "Excerpt (Book) 1989"},
-                    {"anecdote": "Death of Hu Yaobang","source": "Tiananmen Papers", "type": "Excerpt (Book) 1989"},
-                    {"anecdote": "Mourning of Hu Yaobang","source": "Tiananmen Papers", "type": "Excerpt (Journal) 1989"},
-                    {"anecdote": "Beijing Hints at Crackdown on Students","source": "New York Times", "type": "Excerpt (Article) 1989", "theme": "diaspora"}
-                ]},
-                {"title": "Tiananmen Square Massacre", "entries": [
-                    {"anecdote": "“Staying”","source": "In the People’s Republic of Amnesia", "type": "Excerpt (Book) 2015"},
-                    {"anecdote": "Tonight Marshall was Imposed","source": "Written Anonymously", "type": "Written Anonymously"},
-                    {"anecdote": "Capturing Tank Man","source": "Phaidon", "type": "Excerpt (Article) 2016"},
-                    {"anecdote": "Eyewitness Accounts of Massacre","source": "Asian Cha", "type": "Excerpt (Article) 1989"}
-
-                ]},
-                {"title": "A New Diasporic Reality", "entries": [
-                    {"anecdote": "An Impossible Dream","source": "New York Times", "type": "Excerpt (Article) 1989", "theme": "diaspora"},
-                    {"anecdote": "Today Tiananmen, Tomorrow's Hong Kong","source": "Washington Post", "type": "Excerpt (Article) 2017", "theme": "diaspora"},
-                    {"anecdote": "Writing Diaspora","source": "Writing Diaspora; Tactics of Intervention in…", "type": "Excerpt (Journal) 1993", "theme": "diaspora"},
-                    {"anecdote": "Hong Kong's Identity Begins to Crystallize ","source": "Time", "type": "Excerpt (Article) 1989", "theme": "diaspora"}
-
-                ]}
-            ]
+          "title": "Death of an Icon",
+          "entries": [
+            {
+              "anecdote": "Champion for Liberalisation",
+              "source": "China’s Struggle for Democracy, Its Prelude",
+              "type": "Excerpt (Book) 1989"
+            },
+            {
+              "anecdote": "Death of Hu Yaobang",
+              "source": "Tiananmen Papers",
+              "type": "Excerpt (Book) 1989"
+            },
+            {
+              "anecdote": "Mourning of Hu Yaobang",
+              "source": "Tiananmen Papers",
+              "type": "Excerpt (Journal) 1989"
+            },
+            {
+              "anecdote": "Beijing Hints at Crackdown on Students",
+              "source": "New York Times",
+              "type": "Excerpt (Article) 1989",
+              "theme": "diaspora"
+            }
+          ]
+        },
+        {
+          "title": "Tiananmen Square Massacre",
+          "entries": [
+            {
+              "anecdote": "“Staying”",
+              "source": "In the People’s Republic of Amnesia",
+              "type": "Excerpt (Book) 2015"
+            },
+            {
+              "anecdote": "Tonight Marshall was Imposed",
+              "source": "Written Anonymously",
+              "type": "Written Anonymously"
+            },
+            {
+              "anecdote": "Capturing Tank Man",
+              "source": "Phaidon",
+              "type": "Excerpt (Article) 2016"
+            },
+            {
+              "anecdote": "Eyewitness Accounts of Massacre",
+              "source": "Asian Cha",
+              "type": "Excerpt (Article) 1989"
+            }
+          ]
+        },
+        {
+          "title": "A New Diasporic Reality",
+          "entries": [
+            {
+              "anecdote": "An Impossible Dream",
+              "source": "New York Times",
+              "type": "Excerpt (Article) 1989",
+              "theme": "diaspora"
+            },
+            {
+              "anecdote": "Today Tiananmen, Tomorrow's Hong&nbsp;Kong",
+              "source": "Washington Post",
+              "type": "Excerpt (Article) 2017",
+              "theme": "diaspora"
+            },
+            {
+              "anecdote": "Writing Diaspora",
+              "source": "Writing Diaspora; Tactics of Intervention in…",
+              "type": "Excerpt (Journal) 1993",
+              "theme": "diaspora"
+            },
+            {
+              "anecdote": "Hong&nbsp;Kong's Identity Begins to Crystallize ",
+              "source": "Time",
+              "type": "Excerpt (Article) 1989",
+              "theme": "diaspora"
+            }
+          ]
         }
-    ]
-  }
+      ]
+    }
+  ]
+}
