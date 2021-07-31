@@ -80,7 +80,7 @@ const Header = ({
             )}
             <p
               key={`${currentYear}-${romanSceneNumber}-title`}
-              className={`small-body ${
+              className={`medium-caption ${
                 pageId === 'event' ? 'title-animation' : 'cursor-pointer'
               } ${
                 isTransitioning
