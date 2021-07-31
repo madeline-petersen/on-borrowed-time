@@ -124,7 +124,7 @@ const LeftMenu = ({
                           {/* 3/4 of 4 columns */}
                           <Col lg={9} md={9} sm={10} xs={10}>
                             <div className="medium-body text-white">
-                              {year.title}
+                              {ReactHtmlParser(year.title)}
                             </div>
                           </Col>
                         </Row>
@@ -164,7 +164,7 @@ const LeftMenu = ({
                                 </div>
                               </Col>
                               <Col lg={9} md={9} sm={10} xs={10}>
-                                <div>{scene.title}</div>
+                                <div>{ReactHtmlParser(scene.title)}</div>
                               </Col>
                               <Col lg={11} md={11} sm={11} xs={11}>
                                 <p className="pb-8" />
