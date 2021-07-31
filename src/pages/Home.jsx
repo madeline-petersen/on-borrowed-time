@@ -91,9 +91,9 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
             />
           );
         })}
-      </div>
-      <div className="arrow-down">
-        <ArrowDown20 />
+        <div className="arrow-down">
+          <ArrowDown20 />
+        </div>
       </div>
     </>
   );
