@@ -28,7 +28,7 @@ const LeftMenu = ({
   });
 
   const onClickScene = (year, sceneIndex) => {
-    setNextBackground('gray-30');
+    setNextBackground(year, 'event');
     setIsTransitioning(true);
     closeModal();
     let romanSceneNumber = roman.toRoman(sceneIndex + 1).toUpperCase();
