@@ -33,6 +33,7 @@ const Intro = ({
       {/* Backgrounds for page transition */}
       <div className={`absolute top-0 w-full`}>
         <div
+          // fades to black before transitioning
           className={`h-screen bg-black w-full ${
             isClicked ? 'screen-shrink' : ''
           }`}
@@ -46,28 +47,33 @@ const Intro = ({
 
       <div className={`intro ${isClicked ? 'fade-out' : 'foreground-fade-in'}`}>
         <div className={`hero-image ${backgroundClass}`}>
-          <div className="small-headline text-white absolute w-full blurb-content">
-            <Container className="grid__container">
-              <Row className="grid__row">
-                <Col lg={5} />
-                <Col lg={7}>
-                  <p className="fade-first">{ReactHtmlParser(year.blurb)}</p>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-          <div className="absolute w-full bottom-0">
-            <Container className="grid__container">
-              <Footer
-                pageId="intro"
-                nextParams={{ year: year.id, scene: 'I', page: 'event' }}
-                next={year.scenes[0]}
-                changingParam="scene"
-                setClicked={setClicked}
-                setIsTransitioning={setIsTransitioning}
-                navigateTo={navigateTo}
-              />
-            </Container>
+          <div
+            key={`gradient-transition-${year.id}`}
+            className="gradient-transition"
+          >
+            <div className="small-headline text-white absolute w-full blurb-content">
+              <Container className="grid__container">
+                <Row className="grid__row">
+                  <Col lg={5} />
+                  <Col lg={7}>
+                    <p className="fade-first">{ReactHtmlParser(year.blurb)}</p>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
+            <div className="absolute w-full bottom-0">
+              <Container className="grid__container">
+                <Footer
+                  pageId="intro"
+                  nextParams={{ year: year.id, scene: 'I', page: 'event' }}
+                  next={year.scenes[0]}
+                  changingParam="scene"
+                  setClicked={setClicked}
+                  setIsTransitioning={setIsTransitioning}
+                  navigateTo={navigateTo}
+                />
+              </Container>
+            </div>
           </div>
         </div>
       </div>
