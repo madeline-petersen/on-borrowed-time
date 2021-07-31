@@ -59,7 +59,7 @@ const Intro = ({
               <Row className="grid__row">
                 <Col lg={5} />
                 <Col lg={7}>
-                  <div>{ReactHtmlParser(year.blurb)}</div>
+                  <p className="fade-first">{ReactHtmlParser(year.blurb)}</p>
                 </Col>
               </Row>
             </Container>

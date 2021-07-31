@@ -34,7 +34,7 @@ const ResourceTable = ({
         <Col lg={3} md={2} />
         <Col lg={9} md={10}>
           <p
-            className={`border-t border-black border-opacity-10 pb-4 fade-in-element`}
+            className={`border-t border-black border-opacity-10 pb-4 fade-second`}
           />
         </Col>
       </Row>
@@ -46,7 +46,7 @@ const ResourceTable = ({
                 <Col lg={3} md={2} />
                 <Col lg={9} md={10}>
                   <p
-                    className={`border-t border-black border-opacity-10 pt-4 fade-in-element`}
+                    className={`border-t border-black border-opacity-10 pt-4 fade-second`}
                   />
                 </Col>
               </>
@@ -58,13 +58,13 @@ const ResourceTable = ({
               className="contents cursor-pointer"
             >
               <Col lg={4} md={4} sm={4} xs={12} className="small-body">
-                <p className={`text-black text-opacity-100 fade-in-element`}>
+                <p className={`text-black text-opacity-100 fade-second`}>
                   {ReactHtmlParser(entry.shortTitle)}
                 </p>
               </Col>
               <Col lg={3} md={3} sm={4} xs={12} className="small-body">
                 <p
-                  className={`text-black text-opacity-80 fade-in-element`}
+                  className={`text-black text-opacity-80 fade-second`}
                   style={{ paddingRight: 'calc(100%/6)' }}
                 >
                   {ReactHtmlParser(
@@ -80,10 +80,10 @@ const ResourceTable = ({
                 className={`small-body`}
                 style={{ display: 'flex', justifyContent: 'space-between' }}
               >
-                <p className="text-black text-opacity-80 fade-in-element">
+                <p className="text-black text-opacity-80 fade-second">
                   {entry.type}
                 </p>
-                <p className="text-black text-opacity-80 fade-in-element">
+                <p className="text-black text-opacity-80 fade-second">
                   {entry.year}
                 </p>
               </Col>

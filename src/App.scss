@@ -173,7 +173,7 @@ a {
   }
 
   &.bg-blue {
-    color: #25528E;
+    color: #25528e;
     transition: color 0.5s;
   }
 
@@ -183,7 +183,7 @@ a {
   }
 
   &.bg-purple {
-    color: #9C8CB5;
+    color: #9c8cb5;
     transition: color 0.5s;
   }
 
@@ -298,13 +298,37 @@ a {
   }
 }
 
+@keyframes foreground-fade-in-and-translate {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .foreground-fade-in {
-  img,
-  p {
+  .fade-in-element {
     opacity: 0;
     animation-name: foreground-fade-in;
-    animation-duration: 0.5s;
-    animation-delay: 0.5s;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+  }
+  .fade-first {
+    opacity: 0;
+    animation-name: foreground-fade-in-and-translate;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+  }
+  .fade-second {
+    opacity: 0;
+    animation-name: foreground-fade-in-and-translate;
+    animation-duration: 3s;
+    animation-delay: 0.25s;
     animation-fill-mode: forwards;
   }
 }
