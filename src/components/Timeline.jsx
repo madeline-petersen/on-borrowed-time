@@ -49,7 +49,9 @@ const Timeline = props => {
 
   useEffect(() => {
     if (props.isTransitioning) {
-      setSceneIndex(null); // fade out circle immediately
+      if (props.pageId === 'reflection' || props.pageId === 'intro') {
+        setSceneIndex(null); // fade out circle immediately
+      }
 
       if (props.isYearEnd) {
         setNumScenes(0); // collapse timeline

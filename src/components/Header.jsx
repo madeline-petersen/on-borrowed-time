@@ -82,7 +82,13 @@ const Header = ({
               key={`${currentYear}-${romanSceneNumber}-title`}
               className={`small-body ${
                 pageId === 'event' ? 'title-animation' : 'cursor-pointer'
-              } ${isTransitioning && 'fade-out'} pt-2 pb-5 contrast-text ${
+              } ${
+                isTransitioning
+                  ? pageId === 'reflection'
+                    ? 'fade-out'
+                    : ''
+                  : ''
+              } pt-2 pb-5 contrast-text ${
                 pageId === 'event' ? colourBackgroundClass : ''
               }`}
               onClick={onClickScene}
