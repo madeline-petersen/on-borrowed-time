@@ -162,7 +162,19 @@ const Timeline = props => {
                   <span
                     className={`dot mt-1 left-1 ${props.pageId === 'event' &&
                       colourClasses[year.id]}`}
-                  />
+                  >
+                    {year.id === props.currentYear.id && (
+                      <span
+                        className={`absolute left-4 w-max contrast-text scene-title ${
+                          props.pageId === 'event'
+                            ? props.colourBackgroundClass
+                            : ''
+                        }`}
+                      >
+                        {scene.title}
+                      </span>
+                    )}
+                  </span>
                 </span>
               ))}
             </div>

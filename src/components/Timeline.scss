@@ -59,6 +59,20 @@
       border-radius: 50%;
       border-color: rgba(255, 255, 255, 0); // transparent
 
+      .scene-title {
+        opacity: 0;
+        transition: opacity 0.5s;
+        pointer-events: none;
+        top: -5px;
+      }
+
+      &:hover {
+        .scene-title {
+          opacity: 1;
+          transition: opacity 0.5s;
+        }
+      }
+
       &.current-scene {
         border-color: rgba(255, 255, 255, 1); // opaque
 
