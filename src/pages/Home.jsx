@@ -61,51 +61,26 @@ const Home = ({ years, hash, setHash, setIsTransitioning }) => {
         }}
       >
         {year && (
-          <>
-            <div className="medium-caption text-white z-10 absolute w-full blurb">
-              <Container className="grid__container">
-                <Row className="grid__row">
-                  <Col lg={2} md={2} xs={2} />
-                  <div
-                    className="contents cursor-pointer"
-                    onClick={() => onClickYear(year.id)}
-                  >
-                    <Col
-                      lg={3}
-                      md={5}
-                      xs={10}
-                      class={isClicked ? 'fade-out' : ''}
-                    >
-                      {ReactHtmlParser(year.blurb)}
-                    </Col>
-                  </div>
-                  <Col lg={7} md={5} />
-                </Row>
-              </Container>
-            </div>
-            <div className="small-headline text-white z-10 absolute w-full scene-name">
-              <Container className="grid__container">
-                <Row className="grid__row">
-                  <Col lg={2} />
-                  <div
-                    className="contents cursor-pointer"
-                    onClick={() => onClickYear(year.id)}
-                  >
-                    <Col lg={6}>{year.title}</Col>
-                    <Col lg={1}>{year.id}</Col>
-                  </div>
-                  <Col lg={3} />
-                </Row>
-              </Container>
-            </div>
-          </>
+          <div className="small-headline text-white z-10 absolute w-full scene-name">
+            <Container className="grid__container">
+              <Row className="grid__row">
+                <Col lg={2} />
+                <Col lg={6}>{year.title}</Col>
+                <Col lg={1}>{year.id}</Col>
+                <Col lg={3} />
+              </Row>
+            </Container>
+          </div>
         )}
         {years.map(year => {
           return (
             <div
-              className={`hero-image ${transitionBackgroundClasses[year.id]}`}
+              className={`hero-image cursor-pointer ${
+                transitionBackgroundClasses[year.id]
+              }`}
               key={year.id}
               id={year.id}
+              onClick={() => onClickYear(year.id)}
             />
           );
         })}
