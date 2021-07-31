@@ -69,11 +69,27 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
             <Container className="grid__container">
               <Row className="grid__row">
                 <Col lg={2} />
-                <Col lg={3}>{ReactHtmlParser(year.title)}</Col>
-                <Col lg={3} className="chinese-characters">
+                <Col
+                  lg={3}
+                  className="title title__english"
+                  key={`english-${year.id}`}
+                >
+                  {ReactHtmlParser(year.title)}
+                </Col>
+                <Col
+                  lg={3}
+                  className="title title__chinese"
+                  key={`chinese-${year.id}`}
+                >
                   {year.chineseTitle}
                 </Col>
-                <Col lg={2}>{year.id}</Col>
+                <Col
+                  lg={2}
+                  className="title title__year"
+                  key={`year-${year.id}`}
+                >
+                  {year.id}
+                </Col>
                 <Col lg={1} />
               </Row>
             </Container>

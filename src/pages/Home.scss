@@ -29,4 +29,21 @@
       fill: white;
     }
   }
+
+  .title {
+    opacity: 0;
+    animation-name: foreground-fade-in-and-translate;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+
+    &__english,
+    &__chinese {
+      animation-delay: 0s;
+    }
+
+    &__year {
+      animation-delay: 0.25s;
+    }
+  }
 }
