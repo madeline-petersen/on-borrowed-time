@@ -63,7 +63,10 @@ const ResourceTable = ({
                 </p>
               </Col>
               <Col lg={3} md={3} sm={4} xs={12} className="small-body">
-                <p className={`text-black text-opacity-80 fade-in-element`}>
+                <p
+                  className={`text-black text-opacity-80 fade-in-element`}
+                  style={{ paddingRight: 'calc(100%/6)' }}
+                >
                   {ReactHtmlParser(
                     `${entry.bookTitle ? entry.bookTitle : entry.publication}`
                   )}
