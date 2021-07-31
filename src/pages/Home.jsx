@@ -61,7 +61,10 @@ const Home = ({ years, hash, setHash, setIsTransitioning }) => {
         }}
       >
         {year && (
-          <div className="small-headline text-white z-10 absolute w-full scene-name">
+          <div
+            className="small-headline text-white z-10 absolute w-full scene-name cursor-pointer"
+            onClick={() => onClickYear(year.id)}
+          >
             <Container className="grid__container">
               <Row className="grid__row">
                 <Col lg={2} />
