@@ -4,11 +4,8 @@ import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect, useState } from 'react';
 
 import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
-import { useHistory } from 'react-router-dom';
 
-const Home = ({ years, hash, setHash, setIsTransitioning }) => {
-  let myHistory = useHistory();
+const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
   const [year, setYear] = useState(years[0]);
   const [isClicked, setClicked] = useState(false);
 
@@ -29,7 +26,7 @@ const Home = ({ years, hash, setHash, setIsTransitioning }) => {
   const onClickYear = year => {
     setClicked(true);
     setIsTransitioning(true);
-    myHistory.push(`/${year}`);
+    navigateTo(year);
   };
 
   let transitionBackgroundClasses = {
@@ -62,7 +59,9 @@ const Home = ({ years, hash, setHash, setIsTransitioning }) => {
       >
         {year && (
           <div
-            className="small-headline text-white z-10 absolute w-full scene-name cursor-pointer"
+            className={`small-headline text-white z-10 absolute w-full scene-name cursor-pointer ${
+              isClicked ? 'fade-out' : ''
+            }`}
             onClick={() => onClickYear(year.id)}
           >
             <Container className="grid__container">
@@ -96,7 +95,8 @@ Home.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
   hash: PropTypes.string,
   setHash: PropTypes.func,
-  setIsTransitioning: PropTypes.func
+  setIsTransitioning: PropTypes.func,
+  navigateTo: PropTypes.func
 };
 
 export default Home;
