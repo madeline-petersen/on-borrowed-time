@@ -66,7 +66,9 @@ const Reflection = ({
                       <span key={`paragraph-${index}`} className="contents">
                         <Col lg={1} />
                         <Col lg={11} md={12}>
-                          <p className={`medium-headline text-white`}>
+                          <p
+                            className={`medium-headline text-white fade-first`}
+                          >
                             {ReactHtmlParser(paragraph)}
                           </p>
                           <br />
@@ -82,7 +84,7 @@ const Reflection = ({
                         <Col lg={3} />
                         <Col lg={6} md={12}>
                           <p
-                            className={`medium-body text-white text-opacity-70`}
+                            className={`medium-body text-white text-opacity-70 fade-second`}
                           >
                             {ReactHtmlParser(paragraph)}
                             <br />
@@ -98,7 +100,7 @@ const Reflection = ({
                 <Row className="grid__row">
                   <Col lg={3} />
                   <Col lg={6} md={12}>
-                    <p className="border-t border-white border-opacity-20 pb-5" />
+                    <p className="border-t border-white border-opacity-20 pb-5 fade-second" />
                     {reflection.citations.map(({ text, linkTo }) => {
                       return (
                         <a
@@ -108,7 +110,9 @@ const Reflection = ({
                           href={linkTo}
                           className="small-body text-white text-opacity-50"
                         >
-                          <p className="mb-4">{ReactHtmlParser(text)}</p>
+                          <p className="mb-4 fade-second">
+                            {ReactHtmlParser(text)}
+                          </p>
                         </a>
                       );
                     })}

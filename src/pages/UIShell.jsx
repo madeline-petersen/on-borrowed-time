@@ -95,6 +95,7 @@ const UIShell = props => {
           hash={hash}
           setHash={setHash}
           setIsTransitioning={setIsTransitioning}
+          navigateTo={navigateTo}
         />
       );
       break;
@@ -155,6 +156,7 @@ const UIShell = props => {
           hash={hash}
           setHash={setHash}
           setIsTransitioning={setIsMenuActive}
+          navigateTo={navigateTo}
         />
       );
   }

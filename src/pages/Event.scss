@@ -69,12 +69,39 @@ $quarterHeight: calc(30vh - #{$a});
   }
 }
 
-.delayed-fade-in .fade-in-element {
-  opacity: 0;
-  animation-name: delayed-fade-in;
-  animation-duration: 1s;
-  animation-delay: 4s;
-  animation-fill-mode: forwards;
+@keyframes delayed-fade-and-translate {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.delayed-fade-in {
+  .fade-in-element {
+    opacity: 0;
+    animation-name: delayed-fade-in;
+    animation-duration: 3s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+  }
+  .fade-first {
+    opacity: 0;
+    animation-name: delayed-fade-and-translate;
+    animation-duration: 3s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+  }
+  .fade-second {
+    opacity: 0;
+    animation-name: delayed-fade-and-translate;
+    animation-duration: 3s;
+    animation-delay: 4.25s;
+    animation-fill-mode: forwards;
+  }
 }
 
 .intro-paragraph {
