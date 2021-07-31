@@ -48,12 +48,12 @@ module.exports = {
         '90': '#262626',
         '100': '#161616'
       },
-      black: '#000008',
+      black: '#000000',
       yellow: '#E8E5D2',
-      blue: '#1E5BA2',
-      red: '#981F1F',
-      green: '#9FBDAE', //the new green
-      purple: '#D0B9F6'
+      blue: '#25528E',
+      red: '#6e0e0e',
+      brown: '#936753',
+      purple: '#9C8CB5'
     },
     screens: {
       sm: '375px',
