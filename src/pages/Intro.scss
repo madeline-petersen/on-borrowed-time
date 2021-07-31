@@ -3,13 +3,15 @@
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 
-  &.hero-image {
+  .hero-image {
+    background-color: #000008;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     position: relative;
-    animation: hero-image-zoom 1.5s ease-out;
-    animation-fill-mode: forwards;
+    // animation: hero-image-zoom 1.5s ease-out;
+    // animation-fill-mode: forwards;
   }
 
   .gradient-transition {

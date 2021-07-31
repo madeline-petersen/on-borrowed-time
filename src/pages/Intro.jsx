@@ -44,16 +44,8 @@ const Intro = ({
         )}
       </div>
 
-      <div
-        key={`${year.id}-hero-image`}
-        className={`intro hero-image ${backgroundClass} ${
-          isClicked ? 'fade-out' : 'foreground-fade-in'
-        }`}
-      >
-        <div
-          key={`${year.id}-gradient-transition`}
-          className={`gradient-transition`}
-        >
+      <div className={`intro ${isClicked ? 'fade-out' : 'foreground-fade-in'}`}>
+        <div className={`hero-image ${backgroundClass}`}>
           <div className="small-headline text-white absolute w-full blurb-content">
             <Container className="grid__container">
               <Row className="grid__row">
