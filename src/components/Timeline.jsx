@@ -75,14 +75,11 @@ const Timeline = props => {
 
   return (
     <span
-      className={`year-timeline medium-caption pb-5 h-screen contrast-text ${
-        props.pageId === 'event' ? colourClasses[props.currentYear.id] : ''
-      }
-      ${props.pageId === 'intro' ? 'image-background' : ''}
-      ${props.pageId === 'home' ? 'image-background' : ''}
-      `}
+      className={`year-timeline medium-caption pb-5 h-screen contrast-text`}
     >
-      <span className="absolute" style={{ bottom: '6px' }}>
+      <span
+        className={`year-timeline__container absolute ${props.timelineClasses}`}
+      >
         {props.years.map(year => {
           return (
             <div
@@ -93,14 +90,13 @@ const Timeline = props => {
                       numScenes === 0
                         ? 'collapsed'
                         : `expanded num-scenes-${numScenes}`
-                    } contrast-text ${
-                      props.pageId === 'event'
-                        ? colourClasses[props.currentYear.id]
-                        : ''
+                    } contrast-text ${props.colourBackgroundClass} ${
+                      props.pageId === 'event' ? colourClasses[year.id] : ''
                     }`
                   : `pl-4 mb-2.5`
               }`}
             >
+              {/* year */}
               <span
                 onClick={() => onClickYear(year.id)}
                 className={`year-label contrast-text ${
@@ -123,6 +119,7 @@ const Timeline = props => {
                 {year.id}
               </span>
 
+              {/* first circle */}
               <span
                 key="intro"
                 className={`circle cursor-pointer ${currentSceneIndex ===
@@ -141,6 +138,7 @@ const Timeline = props => {
                 />
               </span>
 
+              {/* other circles */}
               {year.scenes.map((scene, index) => (
                 <span
                   key={`scene-${index}`}
