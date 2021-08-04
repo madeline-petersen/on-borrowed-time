@@ -2,11 +2,46 @@
 
 .year-timeline {
   border-left-width: 1px;
-  border-color: rgba(255, 255, 255, 0.15); // white, opacity 0.15
   position: absolute;
   top: 0;
   left: 3.75rem; // margin-left: 3rem + padding-left: 12px
   z-index: 10;
+  transition: border-color 1s;
+
+  &.contrast-text {
+    // black pages
+    border-color: rgba(160, 65, 65, 0.15); // white, opacity 0.15
+
+    // year pages
+    &.image-background {
+      border-color: rgba(255, 255, 255, 0.3); // white, opacity 0.3
+    }
+
+    // event pages
+    &.gray-30 {
+      border-color: rgba(188, 185, 182, 0.15);
+    }
+
+    &.red {
+      border-color: rgba(110, 14, 14, 0.15);
+    }
+
+    &.blue {
+      border-color: rgba(37, 82, 142, 0.15);
+    }
+
+    &.yellow {
+      border-color: rgba(232, 229, 210, 0.15);
+    }
+
+    &.purple {
+      border-color: rgba(156, 140, 181, 0.15);
+    }
+
+    &.brown {
+      border-color: rgba(147, 103, 83, 0.15);
+    }
+  }
 
   @media screen and (max-width: $xl-minus-1) {
     left: 70px; // margin-left: 58px + padding-left: 12px
@@ -16,38 +51,34 @@
     display: none; // do not display timeline below large breakpoint
   }
 
-  &__container {
-    bottom: 6px;
-  }
-
   &__scene-timeline {
     // scene timeline
     margin-left: -1px; // move scene timeline onto year timeline
     border-left-width: 1px;
-    border-color: rgba(255, 255, 255, 1); // white, opaque
+    color: rgba(255, 255, 255, 1); // white, opaque
 
-    &.gray {
-      border-color: #bcb9b6;
+    &.gray-30 {
+      border-color: rgba(188, 185, 182, 1);
     }
 
     &.red {
-      border-color: #6e0e0e;
+      border-color: rgba(110, 14, 14, 1);
     }
 
     &.blue {
-      border-color: #25528e;
+      border-color: rgba(37, 82, 142, 1);
     }
 
     &.yellow {
-      border-color: #e8e5d2;
+      border-color: rgba(232, 229, 210, 1);
     }
 
     &.purple {
-      border-color: #9c8cb5;
+      border-color: rgba(156, 140, 181, 1);
     }
 
     &.brown {
-      border-color: #936753;
+      border-color: rgba(147, 103, 83, 1);
     }
 
     .circle {
@@ -57,7 +88,7 @@
       height: 13px;
       border: 1px solid;
       border-radius: 50%;
-      border-color: rgba(255, 255, 255, 0); // transparent
+      color: rgba(255, 255, 255, 0); // transparent
 
       .scene-title {
         opacity: 0;
@@ -74,7 +105,7 @@
       }
 
       &.current-scene {
-        border-color: rgba(255, 255, 255, 1); // opaque
+        color: rgba(255, 255, 255, 1); // opaque
 
         &.gray {
           border-color: #bcb9b6;
@@ -136,12 +167,12 @@
 
     &.collapsed {
       padding-bottom: 0;
-      border-color: rgba(255, 255, 255, 0); // transparent left border
+      color: rgba(255, 255, 255, 0); // transparent left border
       transition: padding-bottom 1s, border-color 1s, color 0.5s,
         background-color 0.5s; // collapse timeline and fade out
 
       .circle {
-        border-color: rgba(255, 255, 255, 0); // white, transparent
+        color: rgba(255, 255, 255, 0); // white, transparent
       }
 
       .dot {
