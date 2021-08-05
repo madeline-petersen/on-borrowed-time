@@ -59,42 +59,6 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
           }
         }}
       >
-        {year && (
-          <div
-            className={`small-headline text-white z-10 absolute w-full scene-name cursor-pointer ${
-              isClicked ? 'fade-out' : ''
-            }`}
-            onClick={() => onClickYear(year.id)}
-          >
-            <Container className="grid__container">
-              <Row className="grid__row">
-                <Col lg={2} />
-                <Col
-                  lg={3}
-                  className="title title__english"
-                  key={`english-${year.id}`}
-                >
-                  {ReactHtmlParser(year.title)}
-                </Col>
-                <Col
-                  lg={3}
-                  className="title title__chinese"
-                  key={`chinese-${year.id}`}
-                >
-                  {year.chineseTitle}
-                </Col>
-                <Col
-                  lg={2}
-                  className="title title__year"
-                  key={`year-${year.id}`}
-                >
-                  {year.id}
-                </Col>
-                <Col lg={1} />
-              </Row>
-            </Container>
-          </div>
-        )}
         {years.map(year => {
           return (
             <div
@@ -104,7 +68,42 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
               key={year.id}
               id={year.id}
               onClick={() => onClickYear(year.id)}
-            />
+            >
+              <div
+                className={`small-headline text-white z-10 absolute w-full scene-name cursor-pointer ${
+                  isClicked ? 'fade-out' : ''
+                }`}
+                onClick={() => onClickYear(year.id)}
+              >
+                <Container className="grid__container">
+                  <Row className="grid__row">
+                    <Col lg={2} />
+                    <Col
+                      lg={3}
+                      className="title title__english"
+                      key={`english-${year.id}`}
+                    >
+                      {ReactHtmlParser(year.title)}
+                    </Col>
+                    <Col
+                      lg={3}
+                      className="title title__chinese"
+                      key={`chinese-${year.id}`}
+                    >
+                      {year.chineseTitle}
+                    </Col>
+                    <Col
+                      lg={2}
+                      className="title title__year"
+                      key={`year-${year.id}`}
+                    >
+                      {year.id}
+                    </Col>
+                    <Col lg={1} />
+                  </Row>
+                </Container>
+              </div>
+            </div>
           );
         })}
         <div className="arrow-down">
