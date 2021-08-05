@@ -64,7 +64,7 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
             <div
               className={`hero-image cursor-pointer ${
                 transitionBackgroundClasses[year.id]
-              }`}
+              } ${hash === year.id ? 'current' : ''}`}
               key={year.id}
               id={year.id}
               onClick={() => onClickYear(year.id)}

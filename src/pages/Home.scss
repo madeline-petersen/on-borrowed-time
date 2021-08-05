@@ -13,6 +13,29 @@
     background-size: cover;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+
+    &.current {
+      .title {
+        opacity: 0;
+        animation-name: foreground-fade-in-and-translate;
+        animation-duration: 3s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+
+        &__english,
+        &__chinese {
+          animation-delay: 0s;
+        }
+
+        &__year {
+          animation-delay: 0.25s;
+        }
+      }
+    }
+  }
+
+  .title {
+    opacity: 0;
   }
 
   .scene-name {
@@ -28,23 +51,6 @@
       width: 20px;
       height: 20px;
       fill: white;
-    }
-  }
-
-  .title {
-    opacity: 0;
-    animation-name: foreground-fade-in-and-translate;
-    animation-duration: 3s;
-    animation-delay: 0s;
-    animation-fill-mode: forwards;
-
-    &__english,
-    &__chinese {
-      animation-delay: 0s;
-    }
-
-    &__year {
-      animation-delay: 0.25s;
     }
   }
 }
