@@ -4,6 +4,8 @@
   scroll-snap-type: y mandatory;
 
   .hero-image {
+    position: sticky;
+    top: 0;
     background-color: #000000;
     height: 100vh;
     background-position: center;
@@ -11,7 +13,6 @@
     background-size: cover;
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    position: relative;
   }
 
   .scene-name {
