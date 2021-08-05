@@ -46,7 +46,6 @@ const Event = ({
     matches.forEach((match, index) => {
       match.onclick = function() {
         openModal(event.resources[index]);
-        setIsModalActive(true);
       };
     });
   }

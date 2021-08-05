@@ -75,10 +75,16 @@ const Timeline = props => {
 
   return (
     <span
-      className={`year-timeline medium-caption pb-5 h-screen contrast-text`}
+      className={`timeline medium-caption pb-5 h-screen contrast-text ${
+        props.pageId === 'event' ? colourClasses[props.currentYear.id] : ''
+      } ${props.pageId === 'intro' ? 'image-background' : ''} ${
+        props.pageId === 'home' ? 'image-background' : ''
+      }
+      `}
     >
       <span
-        className={`year-timeline__container absolute ${props.timelineClasses}`}
+        className={`absolute ${props.timelineClasses}`}
+        style={{ bottom: '6px' }}
       >
         {props.years.map(year => {
           return (
@@ -86,17 +92,16 @@ const Timeline = props => {
               key={year.id}
               className={`${
                 year.id === props.currentYear.id
-                  ? `year-timeline__scene-timeline pl-4 mb-2.5 ${
+                  ? `timeline__scenes pl-4 mb-2.5 ${
                       numScenes === 0
                         ? 'collapsed'
                         : `expanded num-scenes-${numScenes}`
-                    } contrast-text ${props.colourBackgroundClass} ${
+                    } contrast-text ${
                       props.pageId === 'event' ? colourClasses[year.id] : ''
                     }`
                   : `pl-4 mb-2.5`
               }`}
             >
-              {/* year */}
               <span
                 onClick={() => onClickYear(year.id)}
                 className={`year-label contrast-text ${
@@ -119,7 +124,6 @@ const Timeline = props => {
                 {year.id}
               </span>
 
-              {/* first circle */}
               <span
                 key="intro"
                 className={`circle cursor-pointer ${currentSceneIndex ===
@@ -138,7 +142,6 @@ const Timeline = props => {
                 />
               </span>
 
-              {/* other circles */}
               {year.scenes.map((scene, index) => (
                 <span
                   key={`scene-${index}`}
@@ -162,7 +165,19 @@ const Timeline = props => {
                   <span
                     className={`dot mt-1 left-1 ${props.pageId === 'event' &&
                       colourClasses[year.id]}`}
-                  />
+                  >
+                    {year.id === props.currentYear.id && (
+                      <span
+                        className={`absolute left-4 w-max contrast-text scene-title ${
+                          props.pageId === 'event'
+                            ? props.colourBackgroundClass
+                            : ''
+                        }`}
+                      >
+                        {scene.title}
+                      </span>
+                    )}
+                  </span>
                 </span>
               ))}
             </div>
