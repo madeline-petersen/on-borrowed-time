@@ -1,8 +1,6 @@
 @import '../variables/breakpoints';
 
-.year-timeline {
-  border-left-width: 1px;
-  border-color: rgba(255, 255, 255, 0.15); // white, opacity 0.15
+.timeline {
   position: absolute;
   top: 0;
   left: 3.75rem; // margin-left: 3rem + padding-left: 12px
@@ -16,39 +14,9 @@
     display: none; // do not display timeline below large breakpoint
   }
 
-  &__container {
-    bottom: 6px;
-  }
-
-  &__scene-timeline {
+  &__scenes {
     // scene timeline
     margin-left: -1px; // move scene timeline onto year timeline
-    border-left-width: 1px;
-    border-color: rgba(255, 255, 255, 1); // white, opaque
-
-    &.gray {
-      border-color: #bcb9b6;
-    }
-
-    &.red {
-      border-color: #6e0e0e;
-    }
-
-    &.blue {
-      border-color: #25528e;
-    }
-
-    &.yellow {
-      border-color: #e8e5d2;
-    }
-
-    &.purple {
-      border-color: #9c8cb5;
-    }
-
-    &.brown {
-      border-color: #936753;
-    }
 
     .circle {
       position: absolute;
@@ -76,7 +44,7 @@
       &.current-scene {
         border-color: rgba(255, 255, 255, 1); // opaque
 
-        &.gray {
+        &.gray-30 {
           border-color: #bcb9b6;
         }
 
@@ -108,7 +76,7 @@
         background-color: white;
         border-radius: 50%;
 
-        &.gray {
+        &.gray-30 {
           background-color: #bcb9b6;
         }
 
@@ -190,5 +158,68 @@
     &.hide {
       opacity: 0;
     }
+  }
+}
+
+.timeline {
+  border-left-width: 1px;
+  border-color: rgba(255, 255, 255, 0.15); // white, opacity 0.15
+  transition: border-color 0.5s;
+
+  &.image-background {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  &.gray-30 {
+    border-color: rgba(188, 185, 182, 0.15);
+  }
+
+  &.red {
+    border-color: rgba(110, 14, 14, 0.15);
+  }
+
+  &.blue {
+    border-color: rgba(37, 82, 142, 0.15);
+  }
+
+  &.yellow {
+    border-color: rgba(232, 229, 210, 0.15);
+  }
+
+  &.purple {
+    border-color: rgba(156, 140, 181, 0.15);
+  }
+
+  &.brown {
+    border-color: rgba(147, 103, 83, 0.15);
+  }
+}
+
+.timeline__scenes {
+  border-left-width: 1px;
+  border-color: rgba(255, 255, 255, 1); // white, opaque
+
+  &.gray-30 {
+    border-color: rgba(188, 185, 182, 1);
+  }
+
+  &.red {
+    border-color: rgba(110, 14, 14, 1);
+  }
+
+  &.blue {
+    border-color: rgba(37, 82, 142, 1);
+  }
+
+  &.yellow {
+    border-color: rgba(232, 229, 210, 1);
+  }
+
+  &.purple {
+    border-color: rgba(156, 140, 181, 1);
+  }
+
+  &.brown {
+    border-color: rgba(147, 103, 83, 1);
   }
 }
