@@ -121,6 +121,7 @@ const Event = ({
                 setIsModalActive={setIsModalActive}
                 anecdoteData={anecdoteData}
                 openModal={openModal}
+                matchesLength={matches.length}
               />
 
               <Footer
