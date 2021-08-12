@@ -65,7 +65,7 @@ const Intro = ({
               <Container className="grid__container">
                 <Footer
                   pageId="intro"
-                  nextParams={{ year: year.id, scene: 'I', page: 'event' }}
+                  nextParams={nextParams}
                   next={year.scenes[0]}
                   changingParam="scene"
                   setClicked={setClicked}

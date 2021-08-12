@@ -4431,8 +4431,110 @@
       "blurb": "Fusce non urna quis erat rhoncus pharetra auctor mattis risus. Nulla convallis, tortor commodo tempus tincidunt, libero tellus pretium quam, a placerat nisl nisl quis velit.",
       "scenes": [
         {
-          "title": "Death of an Icon",
-          "pages": []
+          "title": "",
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": [
+                "The novelist Han Suyin described the people of Hong Kong as living “on borrowed time in a borrowed place.” As the year 2047 approaches, there is a sense that its promise is receding. Hong Kongers fear that everything distinctive about their city—its legal system, its democratic freedoms, its cha chaan teng diners, and its local dialect—is disappearing.",
+                "The novelist Han Suyin described the people of Hong Kong as living “on borrowed time in a borrowed place.” As the year 2047 approaches, there is a sense that its promise is receding. Hong Kongers fear that everything distinctive about their city—its legal system, its democratic freedoms, its cha chaan teng diners, and its local dialect—is disappearing."
+              ],
+              "resources": [
+                {
+                  "type": "Journal Excerpt",
+                  "shortTitle": "The Welfare of Hong&nbsp;Kong People",
+                  "bookTitle": "Diasporic Memories and Conceptual Geography in Post-Colonial Hong&nbsp;Kong",
+                  "year": "2014",
+                  "author": "Angelina Y. Chin",
+                  "content": [
+                    "What I retain from these memories is not a history of personal or collective victimization but the sense of immediacy of a particular diasporic reality— of Hong&nbsp;Kong caught, as it always has been since the end of the Second World War, between two dominant cultures, British colonial and Chinese Communist, neither of which takes the welfare of Hong&nbsp;Kong people into account even though both would turn to Hong&nbsp;Kong for financial and other forms of assistance when they needed it. This marginalized position, which is not one chosen by those from Hong&nbsp;Kong but one constructed by history, brings with it a certain privilege of observation and an unwillingness to idealize oppression."
+                  ],
+                  "citation": "Chin, Angelina Y. “Diasporic Memories and Conceptual Geography in Post-Colonial Hong&nbsp;Kong.” <em>Modern Asian Studies</em> 48, no. 6 (November 2014): 1566–67. ",
+                  "linkTo": "https://www.jstor.org/stable/24494641?seq=1"
+                },
+                {
+                  "type": "Journal Excerpt",
+                  "shortTitle": "An Expiring Lease",
+                  "bookTitle": "The Sino-British Agreement and Nationality: Hong&nbsp;Kong&rsquo;s Future in the Hands of the People&rsquo;s Republic of China",
+                  "year": "1990",
+                  "author": "Christine Chua",
+                  "content": [
+                    "As the 1997 expiration of the lease grew nearer, uncertainty surrounding the Colony&rsquo;s political future translated into economic insecurity, threatening the stability of the world&rsquo;s third most important banking and financial center. This anxiety prompted the 1982 Sino-British negotiations on the future of Hong&nbsp;Kong. After two years of discussion, the United Kingdom and PRC governments produced the Joint Declaration. Focusing on the paramount goal of &ldquo;maint[aining] the prosperity and stability of Hong&nbsp;Kong,&ldquo; both sides made important concessions during the negotiations. Britain forfeited its legal rights (pursuant to the post-Opium War treaties) to Hong&nbsp;Kong Island and the Kowloon Peninsula. In return, the PRC agreed that Hong&nbsp;Kong would be exempt from the &ldquo;socialist system and socialist politicies&rdquo; governing the mainland.<br>",
+                    "<br/>[...]<br>",
+                    "<br/>Thus the Joint Declaration begins with a non-compromising statement by each side, one declaring its resignation, the other its resumption of sovereignty."
+                  ],
+                  "citation": "Chua, Christine. “The Sino-British Agreement and Nationality: Hong&nbsp;Kong&rsquo;s Future in the Hands of the People&rsquo;s Republic of China.” Pacific Basin Law Journal 8, no. 1 (1990): 165–66.",
+                  "linkTo": "https://escholarship.org/content/qt9j3546s0/qt9j3546s0.pdf?t=n4ov53"
+                },
+                {
+                  "type": "Journal Excerpt",
+                  "shortTitle": "An Arms-Length Approach",
+                  "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises",
+                  "year": "2015",
+                  "author": "Michael C. Davis",
+                  "content": [
+                    "The Joint Declaration aimed to carry out the “one country, two systems” policy, which was originally outlined in Article 31 of the PRC’s 1982 Constitution. The Declaration was the product of several difficult years of Sino-British negotiations in the early 1980s.<br>",
+                    "<br/>These talks followed on the heels of PRC leader Deng Xiaoping’s famous 1979 statement that those investing in (or thinking of investing in) the booming commercial and industrial metropolis of Hong&nbsp;Kong should “put their hearts at ease.” Amid the give-and-take of the negotiations, Deng had come to grasp that the preservation of Hong&nbsp;Kong’s distinctive capitalist system—and hence its ability to boost China’s economic development—would depend on a rocklike commitment to the “one country, two systems” model.<br>",
+                    "<br/>That model, in turn, aimed to protect Hong&nbsp;Kong from the intrusion of China’s socialist system. The PRC was then in the early stages of reform after the chaos of the 1960s and 1970s, years of turbulence that had culminated in a high-level power struggle following the death of Mao Zedong in 1976. Deng’s aim was for Hong&nbsp;Kong to be returned to China in a way that would preserve prosperity and social order and enable the city’s remarkably industrious and enterprising people to contribute to China’s modernization and economic development.<br>",
+                    "<br/>He no doubt hoped that this respectful, arms-length approach would kindle Hong&nbsp;Kong’s loyalty in return. In order to work, the model had to win the confidence of Hong&nbsp;Kong’s people. The city’s liberal, free-spirited, capitalistic populace was not going to be reassured by mere pronouncements from a regime that many of them justifiably distrusted. Similarly, the international acceptance needed for foreign governments and enterprises to treat Hong&nbsp;Kong as a distinct entity in their financial and commercial dealings would require more than vague promises.<br>"
+                  ],
+                  "citation": "Davis, Michael C. “Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises.” <em>Journal of Democracy</em> 26, no. 2 (April 17, 2015): 102. ",
+                  "linkTo": ""
+                },
+                {
+                  "type": "Journal Excerpt",
+                  "shortTitle": "The Price of Peace",
+                  "bookTitle": "Need to find this one",
+                  "year": "0000",
+                  "author": "First Name, Last Name",
+                  "content": [
+                    "Great Britain acquired Hong&nbsp;Kong Island in 1842 through the Treaty of Nanking. After China&rsquo;s defeat in the Opium Wars, it ceded the Island of Hong&nbsp;Kong to Britain in perpetuity, as part of the price paid for cessation of hostilities. After eighteen additional years of conflict with Britain, China ceded additional territory to Britain as the price of peace. The Kowloon peninsula and nearby Stonecutters Island were ceded to Britain in perpetuity through the Convention of Peking. &ldquo;The Convention of 1898 leased the New Territories&rdquo; to Britain for ninety-nine years. These areas together are a whole, and constitute present-day Hong&nbsp;Kong.<br>",
+                    "<br/>The reunification agreement was the result of British negotiations with China beginning in 1982. The need for negotiation at that time was due in part to threatened economic disruption in Hong&nbsp;Kong. Britain&rsquo;s ninety-nine year lease, acquired through the Convention of 1898, technically applied to only the New Territories. While the expiration of the lease in1997 relates only to this portion of present-day Hong&nbsp;Kong, the interdependence of the areas comprising the colony makes partition unlikely."
+                  ],
+                  "citation": "",
+                  "linkTo": ""
+                },
+                {
+                  "type": "Map",
+                  "shortTitle": "Geography of Hong&nbsp;Kong ",
+                  "bookTitle": "Geography of Hong&nbsp;Kong",
+                  "year": "n.d.",
+                  "content": null,
+                  "linkTo": "https://en.wikipedia.org/wiki/Geography_of_Hong_Kong#/media/File:Map_of_Hong_Kong_18_Districts_en.svg"
+                },
+                {
+                  "type": "Journal Excerpt",
+                  "shortTitle": "The Locus of Loyalty",
+                  "bookTitle": "The Hong&nbsp;Kong Model of &lsquo;One Country, Two Systems&rsquo;",
+                  "year": "1987",
+                  "author": "Bryon S. Weng",
+                  "content": [
+                    "In the beginning, many observers discovered that few Beijing leaders had a realistic and accurate understanding of Hong&nbsp;Kong. Those accustomed to viewing the world from the perspectives of a Chinese middle kingdom or Marxist philosophy seemed to be equally ignorant and self-righteous in their opinions about how a capitalist colony like Hong&nbsp;Kong could best be governed. This worried quite a number of the Hong&nbsp;Kong elite. There was much anxiety, and remedial lobbying (educating) efforts were undertaken by leading figures in the early stage of the negotiations. Fortunately, the leaders in Beijing were wise enough to put those in the know in key positions to deal with the British and Hong&nbsp;Kong representatives so that the damage was not too great.<br>",
+                    "<br/>Next, the Hong&nbsp;Kong people were also frustrated because they could not take part in the negotiations affecting their own fate. Both the British and the Chinese claimed that they represented the interests of the Hong&nbsp;Kong people, but in fact they were overrepresented in some areas and inadequately represented in others. Throughout the whole process, they could only traverse the halls in Beijing and London to lobby the two negotiating parties. This they did to their own potential peril, since such actions implied their locus of loyalty and could affect future careers. Had Hong&nbsp;Kong been negotiating for postcolonial arrangements on its own, as many former British colonies have done, the situation would certainly have been different."
+                  ],
+                  "citation": "Weng, Byron S. “The Hong&nbsp;Kong Model of ‘One Country, Two Systems.” Asian Affairs: An American Review 14, no. 4 (1987): 195–96.",
+                  "linkTo": "https://www.jstor.org/stable/30172082"
+                },
+                {
+                  "type": "Article Excerpt",
+                  "shortTitle": "Hearts At Ease",
+                  "bookTitle": "Business: Hong&nbsp;Kong&rsquo;s Golden Link",
+                  "year": "1979",
+                  "author": "Time",
+                  "content": [
+                    "Opening up shop in China, where space is big and pay is small.<br>",
+                    "<br/>&ldquo;A barren island with hardly a house upon it.&rdquo; Such was British Foreign Secretary Lord Palmerston&rsquo;s contemptuous description of Hong&nbsp;Kong before it was ceded to the British by a weak Chinese regime at the close of the Opium War in 1842. As a fruit of war, it was not considered a peach. But over the past 137 years, the once blighted island has developed into a bustling seaport colony that boasts a thriving economy. Though Britain&rsquo;s lease on 90% of the 400-sq.-mi. area expires in only 18 years, residents expect a glowing future of political stability and more prosperity.<br>",
+                    "<br/>Last month Sir Murray MacLehose became the first Hong&nbsp;Kong Governor ever to pay an official visit to Peking. His warm reception by Chinese Vice Premier Deng Xiaoping (Teng Hsiao-p&rsquo;ing) was a signal of Peking&rsquo;s intent to allow the colony to maintain its traditional status and increasingly to involve it in the push to modernization. On his return, MacLehose quoted Deng as saying that investors in Hong&nbsp;Kong should &ldquo;put their hearts at ease.&rdquo; In short, China&rsquo;s pragmatic post-Mao leaders value Hong&nbsp;Kong as a window on the world and a source of foreign exchange, investment capital and expertise.&rdquo;<br>",
+                    "<br/>[...]<br>",
+                    "<br/>&ldquo;Other Hong&nbsp;Kong leaders respond that the colony&rsquo;s enterprises are much more efficient, innovative and market-oriented than those of the Chinese. A leading Hong&nbsp;Kong businessman, having returned from a tour of mainland factories, estimates that a Chinese factory as a whole is only one-seventh as efficient as one in Hong&nbsp;Kong. The general bullishness is summed up by Sir Lawrence Kadoorie, 79, a Hong&nbsp;Kong-born multimillionaire, who is negotiating to buy large amounts of Chinese coal for a new Hong&nbsp;Kong generating station that will supply electricity to neighboring Guangdong (Kwangtung) province. As he gazes out at Hong&nbsp;Kong&rsquo;s beautiful harbor, he asks: &ldquo;Is there any place on earth where the future looks brighter than here?&rdquo;"
+                  ],
+                  "citation": "“Business: Hong&nbsp;Kong&rsquo;s Golden Link.” Time. Time Inc., April 30, 1979.",
+                  "linkTo": "http://content.time.com/time/subscriber/article/0,33009,723932-1,00.html"
+                }
+              ]
+            }
+          ]
         }
       ]
     }

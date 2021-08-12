@@ -6,6 +6,7 @@ import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 
 const ResourceTable = ({
+  theme,
   data,
   isModalActive,
   setIsModalActive,
@@ -16,6 +17,14 @@ const ResourceTable = ({
   const onCloseModal = () => {
     setIsModalActive(false);
   };
+
+  let themeTextClass = 'text-black';
+  let themeBorderClass = '${themeBorderClass}';
+
+  if (theme === 'white') {
+    themeTextClass = 'text-white';
+    themeBorderClass = 'border-white';
+  }
 
   return (
     <>
@@ -35,7 +44,7 @@ const ResourceTable = ({
         <Col lg={3} md={2} />
         <Col lg={9} md={10}>
           <p
-            className={`border-t border-black border-opacity-10 pb-4 fade-second`}
+            className={`border-t ${themeBorderClass} border-opacity-10 pb-4 fade-second`}
           />
         </Col>
       </Row>
@@ -47,7 +56,7 @@ const ResourceTable = ({
                 <Col lg={3} md={2} />
                 <Col lg={9} md={10}>
                   <p
-                    className={`border-t border-black border-opacity-10 pt-4 fade-second`}
+                    className={`border-t ${themeBorderClass} border-opacity-10 pt-4 fade-second`}
                   />
                 </Col>
               </>
@@ -59,7 +68,7 @@ const ResourceTable = ({
               className="contents cursor-pointer"
             >
               <Col lg={4} md={4} sm={4} xs={12} className="small-body">
-                <p className={`text-black text-opacity-100 fade-second`}>
+                <p className={`${themeTextClass} text-opacity-100 fade-second`}>
                   {index < matchesLength && (
                     <span className="-ml-8 pr-6">{index + 1}</span>
                   )}
@@ -68,7 +77,7 @@ const ResourceTable = ({
               </Col>
               <Col lg={3} md={3} sm={4} xs={12} className="small-body">
                 <p
-                  className={`text-black text-opacity-70 fade-second`}
+                  className={`${themeTextClass} text-opacity-70 fade-second`}
                   style={{ paddingRight: 'calc(100%/6)' }}
                 >
                   {ReactHtmlParser(
@@ -84,10 +93,10 @@ const ResourceTable = ({
                 className={`small-body`}
                 style={{ display: 'flex', justifyContent: 'space-between' }}
               >
-                <p className="text-black text-opacity-70 fade-second">
+                <p className={`${themeTextClass} text-opacity-70 fade-second`}>
                   {entry.type}
                 </p>
-                <p className="text-black text-opacity-70 fade-second">
+                <p className={`${themeTextClass} text-opacity-70 fade-second`}>
                   {entry.year}
                 </p>
               </Col>
@@ -101,7 +110,12 @@ const ResourceTable = ({
   );
 };
 
+ResourceTable.defaultProps = {
+  theme: 'black'
+};
+
 ResourceTable.propTypes = {
+  theme: PropTypes.string,
   data: PropTypes.arrayOf(PropTypes.shape()),
   isModalActive: PropTypes.bool,
   setIsModalActive: PropTypes.func,
