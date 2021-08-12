@@ -62,144 +62,79 @@ const Event = ({
     }
   }, [event]);
 
+  let themeTextClass = 'text-black';
+
   if (year.id === '2020') {
-    return (
-      <>
-        {/* Backgrounds for page transition */}
-        <div className={`absolute top-0 w-full`}>
+    themeTextClass = 'text-white';
+  }
+
+  return (
+    <>
+      {/* Backgrounds for page transition */}
+      <div className={`absolute top-0 w-full`}>
+        <div
+          className={`h-screen ${colourBackgroundClass} w-full ${
+            isClicked ? 'screen-shrink' : ''
+          }`}
+        />
+        {isTransitioning && (
           <div
-            className={`h-screen ${colourBackgroundClass} w-full ${
-              isClicked ? 'screen-shrink' : ''
-            }`}
+            className={`h-screen ${nextBackgroundClass} bg-center bg-no-repeat bg-cover w-full`}
           />
-          {isTransitioning && (
+        )}
+      </div>
+
+      <div className={`h-auto ${colourBackgroundClass}`}>
+        <Container className="grid__container min-h-screen">
+          <HeaderSpacer />
+
+          {/* Event */}
+          {event && (
             <div
-              className={`h-screen ${nextBackgroundClass} bg-center bg-no-repeat bg-cover w-full`}
-            />
-          )}
-        </div>
-
-        <div className={`h-auto ${colourBackgroundClass}`}>
-          <Container className="grid__container min-h-screen">
-            <HeaderSpacer />
-
-            {/* Event */}
-            {event && (
-              <div
-                id="overflow-container"
-                className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
+              id="overflow-container"
+              className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
+            >
+              <Row
+                className={`grid__row intro-paragraph pb-24`}
+                id="event-paragraphs"
               >
-                <Row
-                  className={`grid__row intro-paragraph pb-24`}
-                  id="event-paragraphs"
-                >
-                  {event.paragraphs.map((paragraph, index) => {
-                    return (
-                      <div key={`paragraph-${index}`} className="contents">
-                        <Col lg={1} md={2} />
-                        <Col lg={11} md={10} sm={12} xs={12}>
-                          <p
-                            className={`large-headline-dynamic text-white fade-first`}
-                            style={{
-                              textIndent: ['lg', 'xl', 'xxl'].includes(
-                                screenClass
-                              )
-                                ? `calc(200%/11)` // indent 2/11 columns for large
-                                : ['md'].includes(screenClass)
-                                ? `calc(200%/10)` // indent 2/10 columns for medium
-                                : '0' // indent 0 for small, x-small
-                            }}
-                          >
-                            {ReactHtmlParser(paragraph)}
-                            <br />
-                            <br />
-                          </p>
-                        </Col>
-                      </div>
-                    );
-                  })}
-                </Row>
-                <ResourceTable
-                  theme="white"
-                  data={event.resources}
-                  isModalActive={isModalActive}
-                  setIsModalActive={setIsModalActive}
-                  anecdoteData={anecdoteData}
-                  openModal={openModal}
-                  matchesLength={matches.length}
-                />
-              </div>
-            )}
-          </Container>
-        </div>
-      </>
-    );
-  } else {
-    return (
-      <>
-        {/* Backgrounds for page transition */}
-        <div className={`absolute top-0 w-full`}>
-          <div
-            className={`h-screen ${colourBackgroundClass} w-full ${
-              isClicked ? 'screen-shrink' : ''
-            }`}
-          />
-          {isTransitioning && (
-            <div
-              className={`h-screen ${nextBackgroundClass} bg-center bg-no-repeat bg-cover w-full`}
-            />
-          )}
-        </div>
+                {event.paragraphs.map((paragraph, index) => {
+                  return (
+                    <div key={`paragraph-${index}`} className="contents">
+                      <Col lg={1} md={2} />
+                      <Col lg={11} md={10} sm={12} xs={12}>
+                        <p
+                          className={`large-headline-dynamic ${themeTextClass} fade-first`}
+                          style={{
+                            textIndent: ['lg', 'xl', 'xxl'].includes(
+                              screenClass
+                            )
+                              ? `calc(200%/11)` // indent 2/11 columns for large
+                              : ['md'].includes(screenClass)
+                              ? `calc(200%/10)` // indent 2/10 columns for medium
+                              : '0' // indent 0 for small, x-small
+                          }}
+                        >
+                          {ReactHtmlParser(paragraph)}
+                          <br />
+                          <br />
+                        </p>
+                      </Col>
+                    </div>
+                  );
+                })}
+              </Row>
+              <ResourceTable
+                theme={year.id === '2020' ? 'white' : 'black'}
+                data={event.resources}
+                isModalActive={isModalActive}
+                setIsModalActive={setIsModalActive}
+                anecdoteData={anecdoteData}
+                openModal={openModal}
+                matchesLength={matches.length}
+              />
 
-        <div className={`h-auto ${colourBackgroundClass}`}>
-          <Container className="grid__container min-h-screen">
-            <HeaderSpacer />
-
-            {/* Event */}
-            {event && (
-              <div
-                id="overflow-container"
-                className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
-              >
-                <Row
-                  className={`grid__row intro-paragraph pb-24`}
-                  id="event-paragraphs"
-                >
-                  {event.paragraphs.map((paragraph, index) => {
-                    return (
-                      <div key={`paragraph-${index}`} className="contents">
-                        <Col lg={1} md={2} />
-                        <Col lg={11} md={10} sm={12} xs={12}>
-                          <p
-                            className={`large-headline-dynamic text-black fade-first`}
-                            style={{
-                              textIndent: ['lg', 'xl', 'xxl'].includes(
-                                screenClass
-                              )
-                                ? `calc(200%/11)` // indent 2/11 columns for large
-                                : ['md'].includes(screenClass)
-                                ? `calc(200%/10)` // indent 2/10 columns for medium
-                                : '0' // indent 0 for small, x-small
-                            }}
-                          >
-                            {ReactHtmlParser(paragraph)}
-                            <br />
-                            <br />
-                          </p>
-                        </Col>
-                      </div>
-                    );
-                  })}
-                </Row>
-                <ResourceTable
-                  data={event.resources}
-                  isModalActive={isModalActive}
-                  setIsModalActive={setIsModalActive}
-                  anecdoteData={anecdoteData}
-                  openModal={openModal}
-                  matchesLength={matches.length}
-                />
-
+              {year.id !== '2020' && (
                 <Footer
                   pageId="event"
                   nextParams={nextParams}
@@ -210,13 +145,13 @@ const Event = ({
                   navigateTo={navigateTo}
                   setIsTransitioning={setIsTransitioning}
                 />
-              </div>
-            )}
-          </Container>
-        </div>
-      </>
-    );
-  }
+              )}
+            </div>
+          )}
+        </Container>
+      </div>
+    </>
+  );
 };
 
 Event.propTypes = {

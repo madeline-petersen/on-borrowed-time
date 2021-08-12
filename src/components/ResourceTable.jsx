@@ -19,7 +19,7 @@ const ResourceTable = ({
   };
 
   let themeTextClass = 'text-black';
-  let themeBorderClass = '${themeBorderClass}';
+  let themeBorderClass = 'border-black';
 
   if (theme === 'white') {
     themeTextClass = 'text-white';
