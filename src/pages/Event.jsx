@@ -66,6 +66,10 @@ const Event = ({
     }
   }, [event]);
 
+  let themeLookup = event.themes.map(theme => {
+    return `#${theme.replace(/\s+/g, '-').toLowerCase()}`;
+  });
+
   if (year.id === '2020') {
     return (
       <>
@@ -104,6 +108,15 @@ const Event = ({
                         <Col lg={11} md={10} sm={12} xs={12}>
                           <p
                             className={`large-headline-dynamic text-white fade-first`}
+                            style={{
+                              textIndent: ['lg', 'xl', 'xxl'].includes(
+                                screenClass
+                              )
+                                ? `calc(200%/11)` // indent 2/11 columns for large
+                                : ['md'].includes(screenClass)
+                                ? `calc(200%/10)` // indent 2/10 columns for medium
+                                : '0' // indent 0 for small, x-small
+                            }}
                           >
                             {ReactHtmlParser(paragraph)}
                             <br />
@@ -116,38 +129,53 @@ const Event = ({
                   <div className="contents">
                     <Col lg={1} md={2} />
                     <Col lg={11} md={10} sm={12} xs={12}>
-                      {event.themes.map((theme, index) => {
-                        return (
-                          <>
-                            {index === 0 ? (
-                              ''
-                            ) : (
-                              <span
-                                className={`large-headline-dynamic text-white fade-first`}
+                      <p
+                        className="border-b border-white border-opacity-20"
+                        style={{
+                          paddingBottom: '43px',
+                          textIndent: ['lg', 'xl', 'xxl'].includes(screenClass)
+                            ? `calc(200%/11)` // indent 2/11 columns for large
+                            : ['md'].includes(screenClass)
+                            ? `calc(200%/10)` // indent 2/10 columns for medium
+                            : '0' // indent 0 for small, x-small
+                        }}
+                      >
+                        {event.themes.map((theme, index) => {
+                          return (
+                            <>
+                              {index === 0 ? (
+                                ''
+                              ) : (
+                                <span
+                                  className={`large-headline-dynamic text-white fade-first`}
+                                >
+                                  {' '}
+                                  /{' '}
+                                </span>
+                              )}
+                              <a
+                                key={`theme-${index}`}
+                                className={`large-headline-dynamic text-white cursor-pointer fade-first hover:text-opacity-20`}
+                                href={themeLookup[index]}
                               >
-                                {' '}
-                                /{' '}
-                              </span>
-                            )}
-                            <span
-                              key={`theme-${index}`}
-                              className={`large-headline-dynamic text-white fade-first`}
-                            >
-                              {ReactHtmlParser(theme)}
-                            </span>
-                          </>
-                        );
-                      })}
+                                {ReactHtmlParser(theme)}
+                              </a>
+                            </>
+                          );
+                        })}
+                      </p>
                     </Col>
                   </div>
                 </Row>
                 {event.sections.map((section, index) => {
                   return (
-                    <>
-                      <Row
-                        className={`grid__row intro-paragraph pb-24`}
-                        id="event-paragraphs"
-                      >
+                    <section
+                      key={`section-${index}`}
+                      id={event.themes[index]
+                        .replace(/\s+/g, '-')
+                        .toLowerCase()}
+                    >
+                      <Row className={`grid__row intro-paragraph pb-24`}>
                         {section.paragraphs.map((paragraph, index) => {
                           return index === 0 ? (
                             <div
@@ -195,7 +223,7 @@ const Event = ({
                         openModal={openModal}
                         matchesLength={filteredMatches.length}
                       />
-                    </>
+                    </section>
                   );
                 })}
               </div>
