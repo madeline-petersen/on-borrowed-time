@@ -126,46 +126,46 @@ const Event = ({
                       </div>
                     );
                   })}
-                  <div className="contents">
-                    <Col lg={1} md={2} />
-                    <Col lg={11} md={10} sm={12} xs={12}>
-                      <p
-                        className="border-b border-white border-opacity-20"
-                        style={{
-                          paddingBottom: '43px',
-                          textIndent: ['lg', 'xl', 'xxl'].includes(screenClass)
-                            ? `calc(200%/11)` // indent 2/11 columns for large
-                            : ['md'].includes(screenClass)
-                            ? `calc(200%/10)` // indent 2/10 columns for medium
-                            : '0' // indent 0 for small, x-small
-                        }}
-                      >
-                        {event.themes.map((theme, index) => {
-                          return (
-                            <>
-                              {index === 0 ? (
-                                ''
-                              ) : (
-                                <span
-                                  className={`large-headline-dynamic text-white fade-first`}
-                                >
-                                  {' '}
-                                  /{' '}
-                                </span>
-                              )}
-                              <a
-                                key={`theme-${index}`}
-                                className={`large-headline-dynamic text-white cursor-pointer fade-first hover:text-opacity-20`}
-                                href={themeLookup[index]}
+                </Row>
+                <Row className={`grid__row sticky top-0`}>
+                  <Col lg={1} md={2} />
+                  <Col lg={11} md={10} sm={12} xs={12}>
+                    <p
+                      className="border-b border-white border-opacity-20 bg-black"
+                      style={{
+                        paddingBottom: '43px',
+                        textIndent: ['lg', 'xl', 'xxl'].includes(screenClass)
+                          ? `calc(200%/11)` // indent 2/11 columns for large
+                          : ['md'].includes(screenClass)
+                          ? `calc(200%/10)` // indent 2/10 columns for medium
+                          : '0' // indent 0 for small, x-small
+                      }}
+                    >
+                      {event.themes.map((theme, index) => {
+                        return (
+                          <>
+                            {index === 0 ? (
+                              ''
+                            ) : (
+                              <span
+                                className={`large-headline-dynamic text-white fade-first`}
                               >
-                                {ReactHtmlParser(theme)}
-                              </a>
-                            </>
-                          );
-                        })}
-                      </p>
-                    </Col>
-                  </div>
+                                {' '}
+                                /{' '}
+                              </span>
+                            )}
+                            <a
+                              key={`theme-${index}`}
+                              className={`large-headline-dynamic text-white cursor-pointer fade-first hover:text-opacity-20`}
+                              href={themeLookup[index]}
+                            >
+                              {ReactHtmlParser(theme)}
+                            </a>
+                          </>
+                        );
+                      })}
+                    </p>
+                  </Col>
                 </Row>
                 {event.sections.map((section, index) => {
                   return (
