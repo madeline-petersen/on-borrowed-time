@@ -118,3 +118,9 @@ $quarterHeight: calc(30vh - #{$a});
     opacity: 0.5;
   }
 }
+
+.theme-nav-container {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+}

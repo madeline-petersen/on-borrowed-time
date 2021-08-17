@@ -135,7 +135,9 @@ const Event = ({
                     );
                   })}
                 </Row>
-                <Row className={`grid__row sticky top-0 bg-black`}>
+                <Row
+                  className={`grid__row bg-black theme-nav-container fade-first`}
+                >
                   <Col lg={3} md={2} />
                   <Col lg={6} md={10} sm={12} xs={12}>
                     <p className="pb-5">
