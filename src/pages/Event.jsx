@@ -38,13 +38,17 @@ const Event = ({
 
   const screenClass = useScreenClass();
   const container = document.querySelector('#event-paragraphs');
-  let matches = [];
+  let filteredMatches = [];
   if (container) {
-    matches = container.querySelectorAll('span');
+    let matches = container.querySelectorAll('span');
+    let matchesArray = Array.prototype.slice.call(matches);
+    filteredMatches = matchesArray.filter(
+      element => element.classList.length === 0
+    );
   }
 
-  if (matches.length) {
-    matches.forEach((match, index) => {
+  if (filteredMatches.length) {
+    filteredMatches.forEach((match, index) => {
       match.onclick = function() {
         openModal(event.resources[index]);
       };
@@ -100,15 +104,6 @@ const Event = ({
                         <Col lg={11} md={10} sm={12} xs={12}>
                           <p
                             className={`large-headline-dynamic text-white fade-first`}
-                            style={{
-                              textIndent: ['lg', 'xl', 'xxl'].includes(
-                                screenClass
-                              )
-                                ? `calc(200%/11)` // indent 2/11 columns for large
-                                : ['md'].includes(screenClass)
-                                ? `calc(200%/10)` // indent 2/10 columns for medium
-                                : '0' // indent 0 for small, x-small
-                            }}
                           >
                             {ReactHtmlParser(paragraph)}
                             <br />
@@ -118,16 +113,91 @@ const Event = ({
                       </div>
                     );
                   })}
+                  <div className="contents">
+                    <Col lg={1} md={2} />
+                    <Col lg={11} md={10} sm={12} xs={12}>
+                      {event.themes.map((theme, index) => {
+                        return (
+                          <>
+                            {index === 0 ? (
+                              ''
+                            ) : (
+                              <span
+                                className={`large-headline-dynamic text-white fade-first`}
+                              >
+                                {' '}
+                                /{' '}
+                              </span>
+                            )}
+                            <span
+                              key={`theme-${index}`}
+                              className={`large-headline-dynamic text-white fade-first`}
+                            >
+                              {ReactHtmlParser(theme)}
+                            </span>
+                          </>
+                        );
+                      })}
+                    </Col>
+                  </div>
                 </Row>
-                <ResourceTable
-                  theme="white"
-                  data={event.resources}
-                  isModalActive={isModalActive}
-                  setIsModalActive={setIsModalActive}
-                  anecdoteData={anecdoteData}
-                  openModal={openModal}
-                  matchesLength={matches.length}
-                />
+                {event.sections.map((section, index) => {
+                  return (
+                    <>
+                      <Row
+                        className={`grid__row intro-paragraph pb-24`}
+                        id="event-paragraphs"
+                      >
+                        {section.paragraphs.map((paragraph, index) => {
+                          return index === 0 ? (
+                            <div
+                              key={`paragraph-${index}`}
+                              className="contents"
+                            >
+                              <Col lg={3} md={2} />
+                              <Col lg={6} md={10} sm={12} xs={12}>
+                                <p
+                                  className={`small-headline text-white fade-first`}
+                                >
+                                  {ReactHtmlParser(paragraph)}
+                                  <br />
+                                  <br />
+                                </p>
+                              </Col>
+                              <Col lg={3} md={10} sm={12} xs={12} />
+                            </div>
+                          ) : (
+                            <div
+                              key={`paragraph-${index}`}
+                              className="contents"
+                            >
+                              <Col lg={3} md={2} />
+                              <Col lg={4} md={10} sm={12} xs={12}>
+                                <p
+                                  className={`small-body text-white fade-first`}
+                                >
+                                  {ReactHtmlParser(paragraph)}
+                                  <br />
+                                  <br />
+                                </p>
+                              </Col>
+                              <Col lg={5} md={10} sm={12} xs={12} />
+                            </div>
+                          );
+                        })}
+                      </Row>
+                      <ResourceTable
+                        theme="white"
+                        data={section.resources}
+                        isModalActive={isModalActive}
+                        setIsModalActive={setIsModalActive}
+                        anecdoteData={anecdoteData}
+                        openModal={openModal}
+                        matchesLength={filteredMatches.length}
+                      />
+                    </>
+                  );
+                })}
               </div>
             )}
           </Container>
@@ -197,7 +267,7 @@ const Event = ({
                   setIsModalActive={setIsModalActive}
                   anecdoteData={anecdoteData}
                   openModal={openModal}
-                  matchesLength={matches.length}
+                  matchesLength={filteredMatches.length}
                 />
 
                 <Footer
