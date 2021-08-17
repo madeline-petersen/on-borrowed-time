@@ -2767,6 +2767,18 @@
                   "bookTitle": "Umbrella Movement Art Preservation",
                   "content": null,
                   "linkTo": "https://umbrellaartpreserv.wixsite.com/umap/artists"
+                },
+                {
+                  "type": "Article Excerpt",
+                  "shortTitle": "Two Forms of Nationalism",
+                  "bookTitle": "The 2014 Hong Kong Protests: A History of Youth Identity",
+                  "author": "Thomas Elias Siddall",
+                  "year": "2020",
+                  "content": [
+                    "Throughout this paper, I have posited that the history of the Umbrella Movement is an international history that formed the identities of youth in Hong Kong. Two forms of nationalism have intersected in the development of a national identity of the Hong Kong people, owing itself to international contexts. Youth have then built their own political movements which have become accepted through outlets such as the Victoria Park Vigil. These new political movements have cemented themselves through grassroots support, yet the medium they use to communicate their message actually ended up splintering localism as a movement. The days leading up to September 27th, 2014 saw conflict between a pan-Democratic movement and localist movements that further fractured the Umbrella Movement’s legitimacy. The world saw tear gas sprayed onto a sea of umbrellas, but that moment in contemporary history is still not over. The rise of groups such as Hong Kong Indigenous, and events such as the “Fishball Revolution,”[53] highlight the power of youth identity in Hong Kong in shaping a new nationalism. Hong Kong is not a passive city, and its values are rooted in a history of identity contestation."
+                  ],
+                  "citation": "Siddall, Thomas  Elias. “The 2014 Hong Kong Protests: A History of Youth Identity.” Synergy: The Journal of Contemporary Asian Studies. University of Toronto, January 1, 2021. ",
+                  "linkTo": "https://utsynergyjournal.org/2020/01/01/the-2014-hong-kong-protests-a-history-of-youth-identity/"
                 }
               ]
             },
@@ -3914,6 +3926,7 @@
                   "type": "Article Excerpt",
                   "shortTitle": "The Infinite Heartbreak of Loving Hong&nbsp;Kong",
                   "bookTitle": "The Infinite Heartbreak of Loving Hong&nbsp;Kong",
+                  "author": "Wilfred Chan",
                   "year": "2019",
                   "content": [
                     "It bears repeating that the protest movement’s central five demands are astonishingly humble. Its participants first mobilized around a single ask: that the local government withdraw an ill-conceived extradition bill that would have exposed Hong&nbsp;Kongers to China’s opaque legal system. When Hong&nbsp;Kong’s Chief Executive Carrie Lam responded with a police crackdown, protesters cohered into a movement: They began to demand an investigation into police violence, that the government stop calling the protests “riots” (which exposes protesters to rioting charges, punishable by up to 10 years in prison), amnesty for detainees, and the free elections long promised by Beijing.<br></br>",
@@ -3921,6 +3934,30 @@
                   ],
                   "citation": "Chan, Wilfred. “The Infinite Heartbreak of Loving Hong&nbsp;Kong.” The Nation. The Nation, January 6, 2021.",
                   "linkTo": "https://www.thenation.com/article/world/hong-kong-china-national-security-law/"
+                },
+                {
+                  "type": "Article Excerpt",
+                  "shortTitle": "Young Hong Kong",
+                  "bookTitle": "Young Hong Kong",
+                  "author": "Lee Yee",
+                  "year": "2019",
+                  "content": [
+                    "The June-July Anti-Extradition Bill Protest Movement of 2019 has been led by young people — Young Hong Kong. It has challenged and overturned many of our preconceived notions. Previously, many pan-democracy activists clung to a range of views about just what was and was not possible, as well as what should and should not be done. All of that has been shown up as being meaningless. Now, Young Hong Kong has done many things that we previously had thought to be impossible, including using crowd funding to publish advertisements about the movement in the international media. And they have accomplished all of it without setting up large stages or podiums during the mass rallies; they have done it without identifiable leaders or at the behest of a political party. Regardless, they have been successful in mass mobilisation undertaken with seamless co-ordination; and, what’s more, they have done so without rancour, free of internal wrangling and with remarkable efficiency.<br></br>",
+                    "They have also engaged in actions that the older generations regard as being beyond the pale, or that certainly would be seen as being be injurious to efforts to win over average Hong Kong residents. Then, on top of all of that, they have launched actions that everyone believed were off limits, such as surrounding Central Police Headquarters or storming the Legislative Council chambers. Yet, by their very nature and daring, the actions of Young Hong Kong have elicited sympathy and support from the majority of Hong Kong people. They have made people question the right of the government to respond to such overt challenges with violence. One oft-repeated slogan of the movement is eloquent in its simplicity:<br></br>",
+                    "‘We are not violent rioters; you are a violent government’.<br></br>",
+                    "[...]<br></br>",
+                    "The two most important things that I have learned are:<br></br>",
+                    "First, older people like me need to cast off the shackles of past experience. I need to realise that, even if one’s efforts may be doomed, by not acting you are simply giving in to failure; and,<br></br>",
+                    "Secondly, I need to overcome my fears. Virtually all of the young people who launched that assault on LegCo, as well as those who got inside, said that they had been ‘terrified’. They were right to feel afraid, that’s because they were confronting a superior force that was armed to the teeth. They also knew that they were also facing a legal system the could well sentence them to anything from eight to ten years in prison for their actions. But being ‘terrified’ did not stop them from doing what they felt was right. The more social experience you have the harder it is to act.<br></br>",
+                    "[...]<br></br>",
+                    "I was unprepared for the dawning realisation that so many members of Young Hong Kong would not be intimidated despite the fear they felt; they were determined to ‘err on the side of freedom’. Their actions were a vivid expression of a sentiment that, in my own youth, I notionally supported even if I was never called upon to act on it. That is the credo: ‘Give me Liberty, or Give me death’. On the night of 1 July, tears of shame ran down my cheeks.<br></br>",
+                    "People whose spirits are enslaved become inured to their benighted state; they crave personal wellbeing rather than daring to resist. Despite all of that, one Mainlander offered the following observation online:<br></br>",
+                    "‘This generation of Hong Kong young people will be remembered by history. They are confronting an impossible situation and they are facing down a pitiless foe. They have endured the indifference both of the Mainland and of Taiwan, as well as that of the international community. Yet they have continued their lonely struggle regardless; theirs is a kind of courage that choses to be ‘like shattered jade rather than merely surviving as an undamaged adornment of coarser stuff’.<br></br>",
+                    "‘Our reactions as Chinese to their acts of resistance are fraught with contradiction. No one doubts that the Communists want to transform the people of Hong Kong in such a fashion that they end up being just like any other group of commonplace Chinese. But the people of Hong Kong demonstrate that they would rather be defeated in clamorous and glorious struggle than herded like pliant swine. Each time they go into the streets to protest, the people of Hong Kong relentlessly humiliate every single Chinese person — all 1.4 billion of us.’<br></br>",
+                    "While such a sentiment is worthy of serious reflection, it won’t necessarily inspire pride in Young Hong Kong: they know all too well that ultimate success is indeed far from being assured.<br></br>"
+                  ],
+                  "citation": "Yee, Lee. &ldquo;Young Hong Kong.&rdquo; China Heritage. July 15, 2019.",
+                  "linkTo": "https://chinaheritage.net/journal/young-hong-kong/"
                 }
               ]
             },
