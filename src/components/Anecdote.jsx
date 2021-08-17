@@ -89,7 +89,7 @@ const Anecdote = ({
   return (
     <div className="anecdote">
       <div id="modal-overlay" className="modal-overlay z-20" />
-      <div id="modal-card" className="modal-card z-30">
+      <div id="modal-card" className="modal-card">
         <div
           id="anecdote-background-filler"
           className={`absolute anecdote-background-filler right-0 ${

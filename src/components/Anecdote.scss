@@ -12,6 +12,7 @@ $xxl-minus-1: 1799px;
 
 .anecdote {
   .modal-card {
+    z-index: 999;
     position: fixed; /* Stay in place */
     right: 0;
     top: 0;
