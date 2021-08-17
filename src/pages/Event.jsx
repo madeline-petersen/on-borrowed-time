@@ -130,13 +130,10 @@ const Event = ({
                     );
                   })}
                 </Row>
-                <Row className={`grid__row sticky top-0`}>
-                  <Col lg={1} md={2} />
-                  <Col lg={11} md={10} sm={12} xs={12}>
-                    <p
-                      className="border-b border-white border-opacity-20 bg-black fade-first"
-                      style={{ paddingBottom: '43px' }}
-                    >
+                <Row className={`grid__row sticky top-0 bg-black`}>
+                  <Col lg={3} md={2} />
+                  <Col lg={6} md={10} sm={12} xs={12}>
+                    <p style={{ paddingBottom: '43px' }}>
                       {event.themes.map((theme, index) => {
                         return (
                           <>
@@ -144,7 +141,7 @@ const Event = ({
                               ''
                             ) : (
                               <span
-                                className={`large-headline-dynamic text-white fade-first`}
+                                className={`small-headline text-white fade-first`}
                               >
                                 {' '}
                                 /{' '}
@@ -152,7 +149,7 @@ const Event = ({
                             )}
                             <a
                               key={`theme-${index}`}
-                              className={`large-headline-dynamic text-white cursor-pointer fade-first hover:text-opacity-20`}
+                              className={`small-headline text-white cursor-pointer fade-first hover:text-opacity-20`}
                               href={themeLookup[index]}
                             >
                               {ReactHtmlParser(theme)}
@@ -161,6 +158,11 @@ const Event = ({
                         );
                       })}
                     </p>
+                  </Col>
+                  <Col lg={3} />
+                  <Col lg={3} md={2} />
+                  <Col lg={9} md={10} sm={12} xs={12}>
+                    <p className="border-b border-white border-opacity-20 fade-first" />
                   </Col>
                 </Row>
                 {event.sections.map((section, index) => {
