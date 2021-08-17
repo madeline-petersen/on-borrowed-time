@@ -26,6 +26,7 @@ const Event = ({
   const [isClicked, setClicked] = useState(false);
   const [isModalActive, setIsModalActive] = useState(false);
   const [anecdoteData, setAnecdoteData] = useState({});
+  const [selectedTheme, setSelectedTheme] = useState(null);
 
   const openModal = entry => {
     if (entry.content) {
@@ -72,6 +73,10 @@ const Event = ({
       return `#${theme.replace(/\s+/g, '-').toLowerCase()}`;
     });
   }
+
+  const isSelectedTheme = theme => {
+    return theme === selectedTheme;
+  };
 
   if (year.id === '2020') {
     return (
@@ -141,7 +146,12 @@ const Event = ({
                               ''
                             ) : (
                               <span
-                                className={`small-headline text-white fade-first`}
+                                className={`small-headline text-white fade-first ${
+                                  selectedTheme === null
+                                    ? 'text-opacity-100'
+                                    : 'text-opacity-20'
+                                }
+                                 `}
                               >
                                 {' '}
                                 /{' '}
@@ -149,8 +159,21 @@ const Event = ({
                             )}
                             <a
                               key={`theme-${index}`}
-                              className={`small-headline text-white cursor-pointer fade-first hover:text-opacity-20`}
+                              className={`small-headline text-white cursor-pointer fade-first ${
+                                selectedTheme === null
+                                  ? 'text-opacity-100 hover:text-opacity-20'
+                                  : isSelectedTheme(
+                                      themeLookup[index].substring(1)
+                                    ) // remove hash
+                                  ? 'text-opacity-100'
+                                  : 'text-opacity-20 hover:text-opacity-50'
+                              } `}
                               href={themeLookup[index]}
+                              onClick={() =>
+                                setSelectedTheme(
+                                  themeLookup[index].substring(1)
+                                )
+                              }
                             >
                               {ReactHtmlParser(theme)}
                             </a>
