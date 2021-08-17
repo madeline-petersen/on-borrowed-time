@@ -133,7 +133,7 @@ const Event = ({
                 <Row className={`grid__row sticky top-0 bg-black`}>
                   <Col lg={3} md={2} />
                   <Col lg={6} md={10} sm={12} xs={12}>
-                    <p style={{ paddingBottom: '43px' }}>
+                    <p className="pb-5">
                       {event.themes.map((theme, index) => {
                         return (
                           <>
@@ -160,8 +160,8 @@ const Event = ({
                     </p>
                   </Col>
                   <Col lg={3} />
-                  <Col lg={3} md={2} />
-                  <Col lg={9} md={10} sm={12} xs={12}>
+                  <Col lg={1} md={2} />
+                  <Col lg={11} md={10} sm={12} xs={12}>
                     <p className="border-b border-white border-opacity-20 fade-first" />
                   </Col>
                 </Row>
