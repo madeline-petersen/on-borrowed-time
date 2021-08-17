@@ -131,7 +131,7 @@ const Event = ({
                   <Col lg={1} md={2} />
                   <Col lg={11} md={10} sm={12} xs={12}>
                     <p
-                      className="border-b border-white border-opacity-20 bg-black"
+                      className="border-b border-white border-opacity-20 bg-black fade-first"
                       style={{
                         paddingBottom: '43px',
                         textIndent: ['lg', 'xl', 'xxl'].includes(screenClass)
@@ -186,6 +186,7 @@ const Event = ({
                               <Col lg={6} md={10} sm={12} xs={12}>
                                 <p
                                   className={`small-headline text-white fade-first`}
+                                  style={{ paddingTop: '197.431px' }}
                                 >
                                   {ReactHtmlParser(paragraph)}
                                   <br />
