@@ -66,9 +66,12 @@ const Event = ({
     }
   }, [event]);
 
-  let themeLookup = event.themes.map(theme => {
-    return `#${theme.replace(/\s+/g, '-').toLowerCase()}`;
-  });
+  let themeLookup = [];
+  if (event.themes) {
+    themeLookup = event.themes.map(theme => {
+      return `#${theme.replace(/\s+/g, '-').toLowerCase()}`;
+    });
+  }
 
   if (year.id === '2020') {
     return (
@@ -186,7 +189,7 @@ const Event = ({
                                   <br />
                                 </p>
                               </Col>
-                              <Col lg={3} md={10} sm={12} xs={12} />
+                              <Col lg={3} />
                             </div>
                           ) : (
                             <div
@@ -203,7 +206,7 @@ const Event = ({
                                   <br />
                                 </p>
                               </Col>
-                              <Col lg={5} md={10} sm={12} xs={12} />
+                              <Col lg={5} />
                             </div>
                           );
                         })}
