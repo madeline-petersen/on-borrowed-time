@@ -132,14 +132,7 @@ const Event = ({
                   <Col lg={11} md={10} sm={12} xs={12}>
                     <p
                       className="border-b border-white border-opacity-20 bg-black fade-first"
-                      style={{
-                        paddingBottom: '43px',
-                        textIndent: ['lg', 'xl', 'xxl'].includes(screenClass)
-                          ? `calc(200%/11)` // indent 2/11 columns for large
-                          : ['md'].includes(screenClass)
-                          ? `calc(200%/10)` // indent 2/10 columns for medium
-                          : '0' // indent 0 for small, x-small
-                      }}
+                      style={{ paddingBottom: '43px' }}
                     >
                       {event.themes.map((theme, index) => {
                         return (
@@ -186,7 +179,7 @@ const Event = ({
                               <Col lg={6} md={10} sm={12} xs={12}>
                                 <p
                                   className={`small-headline text-white fade-first`}
-                                  style={{ paddingTop: '197.431px' }}
+                                  style={{ paddingTop: '43px' }}
                                 >
                                   {ReactHtmlParser(paragraph)}
                                   <br />
