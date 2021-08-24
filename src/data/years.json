@@ -3645,7 +3645,7 @@
           ]
         },
         {
-          "title": "Five Demands, Not One Less",
+          "title": "Dream State",
           "pages": [
             {
               "type": "event",
@@ -3958,6 +3958,19 @@
                   ],
                   "citation": "Yee, Lee. &ldquo;Young Hong Kong.&rdquo; China Heritage. July 15, 2019.",
                   "linkTo": "https://chinaheritage.net/journal/young-hong-kong/"
+                },
+                {
+                  "type": "Article Excerpt",
+                  "shortTitle": "A Leader-full Movement",
+                  "bookTitle": "What the Hong Kong Protests Can Teach the World about Enduring Social Movements",
+                  "author": "Mary Hui",
+                  "year": "2019",
+                  "content": [
+                    "For months throughout the summer, Hong Kong’s protesters held a dizzying array of demonstrations across the city, in what began as opposition to an extradition bill that would have allowed the city to send suspects to mainland China to face charges. Millions have attended traditional marches, sit-ins, and large rallies at parks. There have also been urban guerrilla-style battles with the police, a laser-beam rave party that doubled as a protest, and giant Lennon Walls plastered with Post-It notes across the city. The government finally withdrew the bill in early September, but to many, it’s too little, too late—a concession that should have come in June after millions marched peacefully, and before public anger coalesced around widespread allegations of police brutality. And so the protests continue.<br></br>",
+                    "“The very nature of the movement has been described as leaderless, although I think rather it’s a leader-full movement” said Johnson Yeung, a human rights activist who was arrested for his participation in a protest in late July. “A decentralized, leader-full movement is resilient against an authoritarian regime,” he added. “When you have a leader-full movement it’s very hard to pick a target… the movement will survive because everyone will take ownership of the movement.”"
+                  ],
+                  "citation": "Hui, Mary. “What the Hong Kong Protests Can Teach the World about Enduring Social Movements.” Quartz. Quartz, November 19, 2019. ",
+                  "linkTo": "https://qz.com/1695788/the-hong-kong-protests-epitomize-a-resilient-social-movement/"
                 }
               ]
             },
