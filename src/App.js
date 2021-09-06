@@ -19,6 +19,7 @@ import UIShell from './pages/UIShell.jsx';
 import data from './data/years.json';
 import { roman } from '@sguest/roman-js';
 import { setConfiguration } from 'react-grid-system';
+import { useScreenClass } from 'react-grid-system';
 
 setConfiguration({
   // The breakpoints (minimum width) of devices in screen class sm, md, lg, xl, and xxl.
@@ -183,6 +184,9 @@ function Page() {
 }
 
 function App() {
+  const screenClass = useScreenClass();
+  console.log('Screen class: ', screenClass);
+
   return (
     <Router>
       <ScreenClassProvider>
