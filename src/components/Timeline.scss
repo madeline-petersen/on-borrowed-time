@@ -4,7 +4,7 @@
   position: absolute;
   top: 0;
   left: 3.75rem; // margin-left: 3rem + padding-left: 12px
-  z-index: 999;
+  z-index: 20;
 
   @media screen and (max-width: $xl-minus-1) {
     left: 70px; // margin-left: 58px + padding-left: 12px
