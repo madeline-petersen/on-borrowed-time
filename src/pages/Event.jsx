@@ -9,6 +9,17 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import ResourceTable from '../components/ResourceTable';
 import { useScreenClass } from 'react-grid-system';
+import candles from '../images/candles.png';
+import car from '../images/car.png';
+import crowd from '../images/crowd.png';
+import tanks from '../images/tanks.png';
+
+const imageLookup = {
+  car: car,
+  crowd: crowd,
+  tanks: tanks,
+  candles: candles
+};
 
 const Event = ({
   year,
@@ -240,6 +251,27 @@ const Event = ({
                           );
                         })}
                       </Row>
+                      {section.image && (
+                        <Row className="grid__row pb-16">
+                          <Col lg={3} md={2} />
+                          <Col lg={9} md={10} sm={12} xs={12}>
+                            <img
+                              className="fade-first"
+                              src={imageLookup[section.image.source]}
+                              alt=""
+                            />
+                          </Col>
+
+                          <Col lg={3} md={2} />
+                          <Col lg={4} md={4}>
+                            <p
+                              className={`small-body text-white mt-8 fade-first`}
+                            >
+                              {ReactHtmlParser(section.image.caption)}
+                            </p>
+                          </Col>
+                        </Row>
+                      )}
                       <ResourceTable
                         theme="white"
                         data={section.resources}
