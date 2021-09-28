@@ -186,12 +186,16 @@ const UIShell = props => {
 
   let isYearEnd = props.isLastScene && props.isLastPage;
   let timelineClasses = isMenuActive
-    ? 'contrast-text'
+    ? 'contrast-text mix-blend-difference'
     : props.pageId === 'home'
-    ? `contrast-text`
+    ? `contrast-text mix-blend-difference`
     : props.pageId === 'event'
-    ? `contrast-text ${colourBackgroundClasses[props.year.id]}`
-    : 'contrast-text';
+    ? `contrast-text ${colourBackgroundClasses[props.year.id]} ${
+        ['1989', '1997'].includes(props.year.id)
+          ? 'mix-blend-screen'
+          : 'mix-blend-difference'
+      }`
+    : 'contrast-text mix-blend-difference';
 
   return (
     <>

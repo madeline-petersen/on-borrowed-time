@@ -43,7 +43,13 @@ const Header = ({
   };
 
   return (
-    <span className={`absolute w-full top-0 z-10 medium-caption contrast-text`}>
+    <span
+      className={`absolute w-full top-0 z-10 medium-caption contrast-text ${
+        ['1989', '1997'].includes(currentYear)
+          ? 'mix-blend-screen'
+          : 'mix-blend-difference'
+      }`}
+    >
       <Container className="grid__container">
         <Row className={`grid__row pt-5`}>
           <Col lg={3} md={4} sm={4} xs={4} />

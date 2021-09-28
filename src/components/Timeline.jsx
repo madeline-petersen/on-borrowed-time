@@ -79,6 +79,10 @@ const Timeline = props => {
         props.pageId === 'event' ? colourClasses[props.currentYear.id] : ''
       } ${props.pageId === 'intro' ? 'image-background' : ''} ${
         props.pageId === 'home' ? 'image-background' : ''
+      } ${
+        ['1989', '1997'].includes(props.currentYear.id)
+          ? 'mix-blend-screen'
+          : 'mix-blend-difference'
       }
       `}
     >
