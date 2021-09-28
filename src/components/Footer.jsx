@@ -55,8 +55,9 @@ const Footer = ({
   if (textColourClass) {
     textClasses = textColourClass;
   }
+
   if (borderColourClass) {
-    borderClasses = borderColourClass;
+    borderClasses = `${borderColourClass} border-opacity-20`;
   }
 
   return (
