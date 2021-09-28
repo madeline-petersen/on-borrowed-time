@@ -49,11 +49,11 @@
         }
 
         &.red {
-          border-color: #6e0e0e;
+          border-color: #68120c;
         }
 
-        &.blue {
-          border-color: #25528e;
+        &.blue-50 {
+          border-color: #003778;
         }
 
         &.yellow {
@@ -81,11 +81,11 @@
         }
 
         &.red {
-          background-color: #6e0e0e;
+          background-color: #68120c;
         }
 
-        &.blue {
-          background-color: #25528e;
+        &.blue-50 {
+          background-color: #003778;
         }
 
         &.yellow {
@@ -178,7 +178,7 @@
     border-color: rgba(110, 14, 14, 0.15);
   }
 
-  &.blue {
+  &.blue-50 {
     border-color: rgba(37, 82, 142, 0.15);
   }
 
@@ -207,7 +207,7 @@
     border-color: rgba(110, 14, 14, 1);
   }
 
-  &.blue {
+  &.blue-50 {
     border-color: rgba(37, 82, 142, 1);
   }
 

@@ -12,7 +12,9 @@ const ResourceTable = ({
   setIsModalActive,
   anecdoteData,
   openModal,
-  matchesLength
+  matchesLength,
+  textColourClass,
+  borderColourClass
 }) => {
   const onCloseModal = () => {
     setIsModalActive(false);
@@ -24,6 +26,14 @@ const ResourceTable = ({
   if (theme === 'white') {
     themeTextClass = 'text-white';
     themeBorderClass = 'border-white';
+  }
+
+  if (textColourClass) {
+    themeTextClass = textColourClass;
+  }
+
+  if (borderColourClass) {
+    themeBorderClass = borderColourClass;
   }
 
   return (
@@ -121,7 +131,9 @@ ResourceTable.propTypes = {
   setIsModalActive: PropTypes.func,
   anecdoteData: PropTypes.arrayOf(PropTypes.shape()),
   openModal: PropTypes.func,
-  matchesLength: PropTypes.number
+  matchesLength: PropTypes.number,
+  textColourClass: PropTypes.string,
+  borderColourClass: PropTypes.string
 };
 
 export default ResourceTable;

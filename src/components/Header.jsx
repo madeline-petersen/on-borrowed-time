@@ -14,7 +14,9 @@ const Header = ({
   setNextBackground,
   setIsTransitioning,
   navigateTo,
-  colourBackgroundClass
+  colourBackgroundClass,
+  textColourClass,
+  borderColourClass
 }) => {
   const onClickYear = () => {
     if (pageId !== 'intro') {
@@ -116,7 +118,9 @@ Header.propTypes = {
   setNextBackground: PropTypes.func,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
-  colourBackgroundClass: PropTypes.string
+  colourBackgroundClass: PropTypes.string,
+  textColourClass: PropTypes.string,
+  borderColourClass: PropTypes.string
 };
 
 export default Header;

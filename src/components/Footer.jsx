@@ -19,7 +19,11 @@ const Footer = ({
   next,
 
   // current page id (intro, event, artifacts, reflection)
-  pageId
+  pageId,
+
+  // colours
+  textColourClass,
+  borderColourClass
 }) => {
   const handleOnClick = () => {
     setClicked(true);
@@ -47,6 +51,13 @@ const Footer = ({
     pageId === 'event'
       ? 'border-black border-opacity-20'
       : 'border-white border-opacity-20';
+
+  if (textColourClass) {
+    textClasses = textColourClass;
+  }
+  if (borderColourClass) {
+    borderClasses = borderColourClass;
+  }
 
   return (
     <>
@@ -106,7 +117,9 @@ Footer.propTypes = {
   nextParams: PropTypes.shape(),
   navigateTo: PropTypes.func,
   next: PropTypes.shape(),
-  pageId: PropTypes.string
+  pageId: PropTypes.string,
+  textColourClass: PropTypes.string,
+  borderColourClass: PropTypes.string
 };
 
 export default Footer;

@@ -21,7 +21,9 @@ const Event = ({
   isTransitioning,
   setIsTransitioning,
   setNextBackground,
-  colourBackgroundClass
+  colourBackgroundClass,
+  textColourClass,
+  borderColourClass
 }) => {
   const [isClicked, setClicked] = useState(false);
   const [isModalActive, setIsModalActive] = useState(false);
@@ -246,6 +248,8 @@ const Event = ({
                         anecdoteData={anecdoteData}
                         openModal={openModal}
                         matchesLength={filteredMatches.length}
+                        textColourClass={textColourClass}
+                        borderColourClass={borderColourClass}
                       />
                     </section>
                   );
@@ -293,7 +297,7 @@ const Event = ({
                         <Col lg={1} md={2} />
                         <Col lg={11} md={10} sm={12} xs={12}>
                           <p
-                            className={`large-headline-dynamic text-black fade-first`}
+                            className={`large-headline-dynamic ${textColourClass} fade-first`}
                             style={{
                               textIndent: ['lg', 'xl', 'xxl'].includes(
                                 screenClass
@@ -320,6 +324,8 @@ const Event = ({
                   anecdoteData={anecdoteData}
                   openModal={openModal}
                   matchesLength={filteredMatches.length}
+                  textColourClass={textColourClass}
+                  borderColourClass={borderColourClass}
                 />
 
                 <Footer
@@ -331,6 +337,8 @@ const Event = ({
                   isClicked={isClicked}
                   navigateTo={navigateTo}
                   setIsTransitioning={setIsTransitioning}
+                  textColourClass={textColourClass}
+                  borderColourClass={borderColourClass}
                 />
               </div>
             )}

@@ -60,11 +60,31 @@ const UIShell = props => {
   let colourBackgroundClasses = {
     '1984': 'bg-gray-30',
     '1989': 'bg-red',
-    '1997': 'bg-blue',
+    '1997': 'bg-blue-50',
     '2003': 'bg-brown',
     '2014': 'bg-yellow',
     '2019': 'bg-purple',
     '2020': 'bg-black'
+  };
+
+  let textColourClass = {
+    '1984': 'text-black',
+    '1989': 'text-gray-10',
+    '1997': 'text-blue-10',
+    '2003': 'text-black',
+    '2014': 'text-black',
+    '2019': 'text-black',
+    '2020': 'text-black'
+  };
+
+  let borderColourClass = {
+    '1984': 'border-black',
+    '1989': 'border-gray-10',
+    '1997': 'border-blue-10',
+    '2003': 'border-black',
+    '2014': 'border-black',
+    '2019': 'border-black',
+    '2020': 'border-black'
   };
 
   const setNextBackground = (year, pageId = 'intro') => {
@@ -123,6 +143,8 @@ const UIShell = props => {
           isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+          textColourClass={textColourClass[props.year.id]}
+          borderColourClass={borderColourClass[props.year.id]}
         />
       );
       break;
@@ -187,8 +209,9 @@ const UIShell = props => {
         setNextBackground={setNextBackground}
         setIsTransitioning={setIsTransitioning}
         navigateTo={navigateTo}
-        textClasses={timelineClasses}
         colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+        textColourClass={textColourClass[props.year.id]}
+        borderColourClass={borderColourClass[props.year.id]}
       />
       <LeftMenu
         isActive={isMenuActive}
