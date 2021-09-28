@@ -74,7 +74,7 @@ const UIShell = props => {
     '2003': 'text-black',
     '2014': 'text-black',
     '2019': 'text-black',
-    '2020': 'text-black'
+    '2020': 'text-white'
   };
 
   let borderColourClass = {
@@ -84,7 +84,7 @@ const UIShell = props => {
     '2003': 'border-black',
     '2014': 'border-black',
     '2019': 'border-black',
-    '2020': 'border-black'
+    '2020': 'border-white'
   };
 
   const setNextBackground = (year, pageId = 'intro') => {
