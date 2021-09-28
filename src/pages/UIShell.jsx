@@ -214,8 +214,6 @@ const UIShell = props => {
         setIsTransitioning={setIsTransitioning}
         navigateTo={navigateTo}
         colourBackgroundClass={colourBackgroundClasses[props.year.id]}
-        textColourClass={textColourClass[props.year.id]}
-        borderColourClass={borderColourClass[props.year.id]}
       />
       <LeftMenu
         isActive={isMenuActive}
