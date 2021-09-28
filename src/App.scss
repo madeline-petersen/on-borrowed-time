@@ -187,10 +187,9 @@ a {
   }
 
   &.bg-red {
-    color: #68120c;
+    // color: #68120c;
     transition: color 0.5s;
-    mix-blend-mode: difference;
-    // mix-blend-mode: screen;
+    mix-blend-mode: screen;
   }
 
   &.bg-blue-50 {
