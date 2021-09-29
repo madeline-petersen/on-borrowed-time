@@ -9,11 +9,19 @@ import candles from '../images/candles.png';
 import car from '../images/car.png';
 import crowd from '../images/crowd.png';
 import tanks from '../images/tanks.png';
+import one from '../images/1997-01.jpeg';
+import two from '../images/1997-02.jpeg';
+import three from '../images/1997-03.jpeg';
+import four from '../images/1997-04.jpeg';
 
 const imageLookup = {
   car: car,
   crowd: crowd,
   tanks: tanks,
+  one: one,
+  two: two,
+  three: three,
+  four: four,
   candles: candles
 };
 

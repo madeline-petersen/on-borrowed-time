@@ -1138,12 +1138,20 @@
               "title": "Artifacts",
               "images": [
                 {
-                  "source": "crowd",
-                  "caption": "Some two hundred thousand pro-democracy students staged an unauthorized demonstration in Tiananmen Square during the funeral ceremony of the Chinese Communist Party leader and liberal reformer Hu Yaobang, on April 22, 1989.  Photograph by Catherine Henriette/AFP/Getty."
+                  "source": "one",
+                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
                 },
                 {
-                  "source": "car",
-                  "caption": "A weary protester pleads with a PLA officer sitting in his truck to not crackdown on the student demonstrators in Tiananmen Square. (Photo by Peter Turnley/Getty Images)"
+                  "source": "two",
+                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
+                },
+                {
+                  "source": "three",
+                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
+                },
+                {
+                  "source": "four",
+                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
                 }
               ]
             },
