@@ -72,42 +72,43 @@ const Artifacts = ({
             id="overflow-container"
             className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
           >
-            {artifacts.images.length > 0 && (
-              <Row className="grid__row pt-64 pb-20">
-                <Col lg={1} />
-                <Col lg={11} md={12}>
-                  <img
-                    className="fade-first"
-                    src={imageLookup[artifacts.images[0].source]}
-                    alt=""
-                  />
-                </Col>
-                <Col lg={3} />
-                <Col lg={4} md={4}>
-                  <p className={`small-body text-white mt-8 fade-first`}>
-                    {ReactHtmlParser(artifacts.images[0].caption)}
-                  </p>
-                </Col>
-              </Row>
-            )}
-            {artifacts.length > 1 && (
-              <Row className="grid__row pt-20 pb-24">
-                <Col lg={3} />
-                <Col lg={7} md={12}>
-                  <img
-                    className="fade-second"
-                    src={imageLookup[artifacts[1].source]}
-                    alt=""
-                  />
-                </Col>
-                <Col lg={3} />
-                <Col lg={4} md={4}>
-                  <p className={`small-body text-white mt-5 fade-second`}>
-                    {ReactHtmlParser(artifacts.images[1].caption)}
-                  </p>
-                </Col>
-              </Row>
-            )}
+            {artifacts.images.map((image, index) => {
+              return index % 2 === 0 ? (
+                <Row key={`image-${index}`} className="grid__row pt-64 pb-20">
+                  <Col lg={1} />
+                  <Col lg={11} md={12}>
+                    <img
+                      className="fade-first"
+                      src={imageLookup[image.source]}
+                      alt=""
+                    />
+                  </Col>
+                  <Col lg={3} />
+                  <Col lg={4} md={4}>
+                    <p className={`small-body text-white mt-8 fade-first`}>
+                      {ReactHtmlParser(image.caption)}
+                    </p>
+                  </Col>
+                </Row>
+              ) : (
+                <Row key={`image-${index}`} className="grid__row pt-20 pb-24">
+                  <Col lg={3} />
+                  <Col lg={7} md={12}>
+                    <img
+                      className="fade-second"
+                      src={imageLookup[image.source]}
+                      alt=""
+                    />
+                  </Col>
+                  <Col lg={3} />
+                  <Col lg={4} md={4}>
+                    <p className={`small-body text-white mt-5 fade-second`}>
+                      {ReactHtmlParser(image.caption)}
+                    </p>
+                  </Col>
+                </Row>
+              );
+            })}
 
             <Footer
               pageId="artifacts"
