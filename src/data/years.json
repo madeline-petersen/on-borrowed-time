@@ -4623,7 +4623,7 @@
                     },
                     {
                       "type": "Article Excerpt",
-                      "shortTitle": "Taiwan-Hong Kong Diaspora: Nancy",
+                      "shortTitle": "Taiwan-Hong Kong Diaspora: Gam",
                       "bookTitle": "Is Taiwan Next?",
                       "year": "2021",
                       "author": "Sarah A. Topol",
@@ -4645,7 +4645,7 @@
                     "Since the handover, the encroaching influence of Beijing has presented Hongkongers with no other choice but to protect their identity through more disruptive forms of civil disobedience. The threat to Hong Kong’s existence has inspired the impassioned resistance of the protest movement which has irreversibly reshaped a <span>new generation’s sense of identity, purpose, and belonging<sup>5</sup></span>. Although the implementation of the National Security Law attempts to stifle the region’s unique status, the essence of what it means to be a Hongkonger is not bound by geographical borders. Rather, this identity perseveres through those who continue to believe in the unwavering idea that freedom can not survive in the absence of democracy."
                   ],
                   "image": {
-                    "source": "car",
+                    "source": "hkIdentity",
                     "caption": "Hong Kong democracy activist Agnes Chow (C) speaks with the media outside Tai Po police station in Hong Kong on September 2, 2020, after reporting to police to extend her bail following her recent arrest under Beijings new security law. (Photo by ISAAC LAWRENCE / AFP) (Photo by ISAAC LAWRENCE/AFP via Getty Images)"
                   },
                   "resources": [
@@ -4800,7 +4800,7 @@
                     "<span>Passed in secrecy<sup>1</sup></span>, the <span>National Security Law’s<sup>2</sup></span> defining purpose is to <span>silence<sup>3</sup></span> the pro-democracy movement, <span>eliminating any space<sup>4</sup></span> for Hong Kong people to advocate for genuine democracy in the foreseeable future. The ambiguous provisions were <span>broadly written<sup>5</sup></span> so that they can be interpreted to suppress <span>freedom of expression<sup>6</sup></span> and any act of dissent against the Hong Kong government and, by extension, the Mainland. Many people view this turning point as an end to Hong Kong’s long storied history of fighting for genuine democracy. The oppressive legislation has officially diminished the <span>hope<sup>7</sup></span> that Hong Kong will ever achieve full autonomy, or even gain other fundamental democratic qualities such as a <span>powerful free press<sup>8</sup></span>, fair open elections, and respect for fundamental human rights."
                   ],
                   "image": {
-                    "source": "car",
+                    "source": "geniuneDemocracy",
                     "caption": "A general view shows the main chamber of the Legislative Council in Hong Kong on November 12, 2020. - Hong Kong's legislature sat empty of pro-democracy lawmakers on November 12 after the bloc announced it would resign in protest at Beijing, turning the semi-autonomous city's once-feisty legislature into a gathering of Chinese loyalists. (Photo by Anthony WALLACE / AFP) (Photo by ANTHONY WALLACE/AFP via Getty Images)"
                   },
                   "resources": [
@@ -5079,7 +5079,7 @@
                     "People overseas watched in <span>dismay<sup>4</sup></span> as the protest movement shifted from a fiery confrontation to a subdued struggle—Hong Kong activist groups disbanded their operations, long-time pro-democracy newspapers <span>folded<sup>5</sup></span>, and well-respected political leaders were <span>arrested one-by-one<sup>6</sup></span>. Supporters beyond the region’s borders have continued to <span>exercise their freedom of expression<sup>7</sup></span> in order to show a sense of solidarity with those who can no longer speak in Hong Kong. This international display of solidarity and new form of subtle resistance is how all Hongkongers have continued to preserve the spirit of the pro-democracy movement in the face of <span>authoritative oppression.<sup>8</sup></span>"
                   ],
                   "image": {
-                    "source": "car",
+                    "source": "solidarityAndResistance",
                     "caption": "HONG KONG, CHINA - JUNE 30: A woman wearing a protective mask walks past a government-sponsored advertisement promoting a new national security law on June 30, 2020 in Hong Kong, China. (Photo by Billy H.C. Kwok/Getty Images)"
                   },
                   "resources": [
@@ -5248,126 +5248,224 @@
                 {
                   "paragraphs": [
                     "“Collective memory—a body of symbols, representations, and narratives about the past shared by a group of people—is a powerful resource that gives people a sense of who they are, shapes their social and political preferences, and mobilizes them to take action.”",
-                    "Memory bears a way for people to recall and partially to relive collective trauma and loss. In Hong Kong, public memory serves an important role in shaping the region’s distinct identity by preserving its unique history and culture. As the pro-democracy movement built momentum, China began to perceive any form of commemoration as a threat—thereby acknowledging the influence that public memory has on mobilizing people to resist.",
-                    "In 2020, the imposment of the National Security Law was a deliberate effort to suppress and rewrite the collective memory of Hong Kong’s history, with the aim of forcing people to forget their unique identity and culture. From banning the Tiananmen Square Massacre candle-lit vigils, to criminalising protest statements in spoken or written form, Hong Kong has witnessed the censoring of both broad and subtle acts of remembrance. Under the sweeping legislation, books written by pro-democracy activists have been pulled from library shelves, academic discourse critiquing China’s influence has been prohibited, and a patriotic education program has been enforced, all in the attempt to impose a national sense of  amnesia.",
-                    "Hong Kongers are reminded again of the importance of preserving its collective memory, history, and identity in the wake of these new measures. As the pressure to self-censor continues to grow, participating in subtle acts of remembrance have helped Hong Kongers to continue to uphold and defend a common truth."
+                    "Memory bears a way for people to recall and partially to relive collective trauma and loss. In Hong Kong, public memory serves an important role in shaping the region’s distinct identity by preserving its unique history and culture. As the pro-democracy movement built momentum, China began to perceive any <span>form of commemoration<sup>1</sup></span> as a threat—thereby <span>acknowledging<sup>2</sup></span> the influence that public memory has on mobilizing people to resist.",
+                    "In 2020, the imposment of the National Security Law was a deliberate effort to <span>suppress and rewrite<sup>3</sup></span> the collective memory of Hong Kong’s history, with the aim of forcing people to forget their unique identity and culture. From <span>banning the Tiananmen Square Massacre candle-lit vigils<sup>4</sup></span>, to criminalising protest statements in spoken or written form, Hong Kong has witnessed the censoring of both broad and subtle acts of remembrance. Under the sweeping legislation, books written by pro-democracy activists have been <span>pulled from library shelves<sup>5</sup></span>, <span>academic discourse<sup>6</sup></span> critiquing China’s influence has been prohibited, and a <span>patriotic education program<sup>7</sup></span> has been enforced, all in the attempt to impose a national sense of amnesia.",
+                    "Hong Kongers are reminded again of the importance of <span>preserving its collective memory<sup>8</sup></span>, history, and identity in the wake of these new measures. As the <span>pressure to self-censor<sup>9</sup></span> continues to grow, participating in subtle acts of remembrance have helped Hong Kongers to continue to uphold and defend a common truth."
                   ],
                   "image": {
-                    "source": "car",
+                    "source": "nationalAmnesia",
                     "caption": "HONG KONG, HONG KONG - JUNE 04: People hold candles as they take part in a candlelight vigil at Victoria Park on June 4, 2019 in Hong Kong, China. As many as 180,000 people were expected to attend a candlelight vigil in Hong Kong on Tuesday on the 30th anniversary of the Tiananmen Square massacre. Commemorations took place in cities around the world on June 4 to remember those who died when Chinese troops cracked down on pro-democracy protesters. Thirty years ago, the People's Liberation Army opened fire and killed from hundreds to thousands of protesters in Beijing after hundreds of thousands of students and workers gathered in Tiananmen Square for weeks to call for greater political freedom. No-one knows for sure how many people were killed as China continues to censor any coverage or discussion of the event that takes place during the anniversary. (Photo by Anthony Kwan/Getty Images)"
                   },
                   "resources": [
                     {
-                      "type": "",
-                      "shortTitle": "",
-                      "bookTitle": "",
-                      "year": "",
-                      "author": "",
+                      "type": "Article Excerpt",
+                      "shortTitle": "Between Memory and Forgetting",
+                      "bookTitle": "Between Memory and Forgetting",
+                      "year": "2020",
+                      "author": "Yi Ling Liu",
                       "content": [
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        ""
+                       "I attended several vigils over the years. I learned more about June 4, struggling to make sense of a history that I was too young to bear witness to. I learned about Deng Xiaoping’s Opening Up and Reform movement in the 1980s, a moment of sudden and exhilarating change: as a market economy was introduced, state control over culture was loosened, and for the first time, foreign ideas flowed freely into the country—from KFC to Sartre to rock n’ roll. I learned how those very reforms brought rampant corruption, widespread inequality, and the desire for political change that eventually drove the students to Tiananmen Square. I read about rival student groups: those who wanted democratic reform without challenging the Party and those who wanted the Party overthrown. I read about the factions within the Party itself: the reformists urging for compromise and the hardliners calling for crackdown. I looked elsewhere, studying democracies (what was it that birthed and sustained them?) and autocracies (why did some change while others remained stubbornly in place?). I learned the theories of intellectuals and activists, from Vaclav Havel to Martin Luther King Jr. I picked up compound nouns like civil society and grassroots mobilization and incremental reform. I wanted to understand what had gone wrong at Tiananmen Square. I wanted to know what could’ve been changed then, what could still be changed now, and who had the power to do the changing.<br></br>",
+                       "There was no sign that a massacre had once taken place in the city just thirty years ago.<br></br>",
+                       "The more I read, the fewer answers I found. No book felt as certain as the warmth of the gathering in Victoria Park. No work of theory gave me that feeling that had driven me to seek it out in the first place. In time, I came to learn that there was actually a noun for that feeling. Common sense, Hannah Arendt called it—the shared reality that allows us to know ourselves, to know how we are connected to others, and to know how we belong to a common truth. It was common sense that taught us Hong Kongers to remember, uphold, and defend a truth that everybody else had chosen to forget. It was common sense that moved me and so many others to show up to the vigil, year after year, to gather and sing and pray. Vigil: the word derives from the Latin vigilia, or “awake.” Our vigils were as much an act of mourning as one of deliberate, collective wakefulness.<br></br>",
+                       "[...]<br></br>",
+                       "Two weeks ago, China’s legislature imposed a new national security law in Hong Kong, outlawing secession, subversion, terrorism, and interference by “foreign forces.” This means that future vigils in the city could be banned, and their organizers arrested. In the case of this year’s event, the Chinese government didn’t need to take recourse to the new law; the pandemic gave it an excuse to formally cancel this year’s vigil in the name of public health.<br></br>",
+                       "When I heard the news, I felt nothing. In truth, I had no words to give. For the last few months, I had stared into a screen, body sinking deeper into a chair, scrolling through newsfeeds, swiping through headlines, peering into story after story playing like a surreal tragicomedy on loop. Cut off from the outside world—a place of sirens and teargas and viruses—I only wanted to withdraw. It turns out that Arendt had a word for this feeling too: loneliness. Loneliness, she argues, is the loss of our common sense, the shared reality that allows us to know ourselves, and how we are connected to others. Loneliness makes us sad and stupid, forces us to let go, withdraw, forget.<br></br>",
+                       "Others were surely feeling lonely too. The presence of three thousand riot officers stationed around the city, in preparation for the anniversary, would have likely further dissuaded them from attempting to meet. And yet thousands of people did show up to the vigil on June 4. When I arrived at Victoria Park, just before eight, the streets were filled. Volunteers were handing out flyers, politicians were chanting slogans. People had pushed over the metal barriers lining the perimeter of the football pitches and streamed into the park. This year, there was no stage, no organizers, no mass prayer or song. People simply came, candles in hand, moved by common sense. The vigil represents common sense in its purest, physical form. So, too, do the protests that have broken out on American streets in the wake of George Floyd’s murder. These are occasions on which common sense is embodied, en masse. At these events, people gather to send a message: when the state peddles a lie, we will continue to live in truth, and when it isolates us from one another, we will live within it, together."
                       ],
-                      "citation": "",
-                      "linkTo": ""
+                      "citation": "Liu, Yi-Ling. “Between Memory And Forgetting: Yi-Ling Liu.” The Baffler. The Baffler, June 17, 2020. ",
+                      "linkTo": "https://thebaffler.com/latest/between-memory-and-forgetting-liu"
                     },
                     {
-                      "type": "",
-                      "shortTitle": "",
-                      "bookTitle": "",
-                      "year": "",
-                      "author": "",
+                      "type": "Article Excerpt",
+                      "shortTitle": "The Power of Public Memory",
+                      "bookTitle": "Opinion | This Is How Much China's Communist Party Fears the Power of Public Memory",
+                      "year": "2021",
+                      "author": "Louisa Lim",
                       "content": [
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        "<br></br>",
-                        ""
+                        "Wearing black clothes. Writing 6.4 on light switches. Shining mobile phone lights. Sending smoke signals from a jail cell using a cigarette. These are all ideas suggested by Hong Kongers as ways to mark Friday’s anniversary of the June 4, 1989, killings in Beijing and elsewhere in China, including the massacre in and around Tiananmen Square. The modesty of these tiny gestures reflects one of the most dramatic deteriorations of freedom in the modern era.<br></br>",
+                        "Just two years ago, 180,000 Hong Kongers crowded into Victoria Park for the annual candlelit vigil remembering those killings. This year, a ring of security will surround the park with 7,000 police officers deployed around the city to prevent people from gathering, bolstered by threats of five-year sentences for illegal assembly for anyone caught near the park wearing black clothes or with a candle. These dynamics underline just how much China’s Communist Party fears the power of public memory.<br></br>",
+                        "[…]<br></br>",
+                        "The irony is that enforcing amnesia requires an inordinate amount of personnel and resourcing. The result is that no one commemorates the June 4 anniversary more faithfully than the Communist Party itself. Its chosen methods — an uptick in censorship, the detention of dissidents, a security blanket around sensitive locations — neatly highlight the coercive force of a party that came to power through violence.<br></br>",
+                        "Now, Beijing is clearly hoping to turn its Special Administrative Region of Hong Kong into a Special Amnesiac Region in its own image. First on the list is rewriting its recent history, in particular that of the massive pro-democracy movement that convulsed the city in 2019. Beijing is using draconian national security legislation, imposed on the territory last June, to criminalize a generation of politicians and reframe the protests. A case in point is the 47 politicians and activists who have been charged with subversion and accused of a “vicious plot” to paralyze the government. Their crime was holding unofficial primary polls to select their election candidates.<br></br>",
+                        "But the assault on history will not stop there. This week, I learned that my own book can no longer be borrowed from Hong Kong’s public libraries. Along with other material newly classified as sensitive, it has been placed in the reference section. This means it can be consulted only in the building, as if removing it might let dangerous ideas run amok in the community.<br></br>",
+                        "[…<br></br>",
+                        "Yet Beijing’s dilemma is that in Hong Kong, it is dealing with a highly networked population that has received a Western-style education prioritizing critical thinking and intellectual inquiry. Crude attempts to brainwash or gaslight Hong Kongers are causing another brain drain, which will likely be larger than that seen before the 1997 transition to Chinese sovereignty. Hong Kong’s brightest and best are flocking overseas, taking with them their capital and their penchant for hard work.<br></br>",
+                        "At the height of the 2019 protest movement, Hong Kong poet Tammy Ho Lai-Ming wrote, “At this moment, everyone is a revolution.” Now, in the face of an unpredictable and highly punitive legal system, that revolution has shrunk from massive public civil disobedience to small personal acts of resistance."
                       ],
-                      "citation": "",
-                      "linkTo": ""
+                      "citation": "Lim, Louisa. “Opinion | This Is How Much China's Communist Party Fears the Power of Public Memory.” The Washington Post. WP Company, June 4, 2021.",
+                      "linkTo": "https://hkprotesting.com/2020/09/01/disappearances/"
                     },
                     {
-                      "type": "",
-                      "shortTitle": "",
-                      "bookTitle": "",
-                      "year": "",
-                      "author": "",
+                      "type": "Article Excerpt",
+                      "shortTitle": "The Erasure of Collective Memories",
+                      "bookTitle": "“Hong Kong: A City of Disappearances”",
+                      "year": "2020",
+                      "author": "Sharon Yam",
                       "content": [
-                        ""
+                        "…Hongkongers astutely understand the significance of memories, especially memories that bear collective trauma and loss. 6.12, 7.21, 8.31, 9.28, 10.1. To Hongkongers, each of these dates is an occasion for commemoration and mourning. Even before the enactment of the National Security Law, and before the widespread disappearances of protest symbols, Hongkongers had developed the habit of commemorating these dates every month. On 8 and 15 June, Hongkongers gathered at Sheung Tak Estate and Pacific Place respectively to pay tribute to student Chow Tse-Lok and “raincoat man” Leung Ling-Kit—each of whom died during the 2019 anti-extradition protests. With bouquet of white flowers, Hongkongers create makeshift shrines to commemorate those who have lost their lives or were victimised by police in the past year.>",
+                        "On the first anniversary of the 8.31 Prince Edward police attack, Hongkongers gathered in Mong Kok and at Prince Edward MTR station to commemorate victims who were brutalised. About a dozen people including pensioners and children, were arrested for paying tribute to victims of police brutality. As people continued to gather and began chanting protest slogans that have been made illegal by the new law, the police threatened to use force to disperse the crowd.<br></br>",
+                        "[…]<br></br>",
+                        "In Hong Kong, the erasure of collective memories is enforced partly through overt suppression, and partly through blatant rewriting of history. A year after the 7.21 Yuen Long attack, in which hundreds of white-clad thugs indiscriminately attacked protesters, commuters, bystanders and journalists with metal rods and rattan sticks, the Hong Kong police announced that the incident was “a gang fight…involving participants from both sides”. Despite ample video footage from journalists and civilians that proved the contrary, the police denied the incident was an organised mob attack against unsuspecting victims. As Gwyneth Ho, who was present as a journalist that night, writes:<br></br>",
+                        "“It is not possible for the authority to distort the facts of the 721 incident unless the government of Hong Kong shut down Facebook and YouTube in Hong Kong. As long as all the video clips of that day are still accessible to the public, their attempts will always be futile.”<br></br>",
+                        "—Gwyneth Ho<br></br>",
+                        "[…]<br></br>",
+                        "Memories are elusive and fluid, just like the ethos of the 2019 movement where protesters are encouraged to “be like water”. As collective memories of the protest continue to percolate, they are grafted onto digital and material artefacts that circulate both locally and transnationally outside of Hong Kong. While to remember is to recall, and partially to relive, the trauma, the cost is far too high for us to forget."
                       ],
-                      "citation": "",
-                      "linkTo": ""
+                      "citation": "Yam, Sharon.“‘Hong Kong: A City of Disappearances’ by Sharon Yam.” Hong Kong Protesting, September 1, 2020.",
+                      "linkTo": "https://hkprotesting.com/2020/09/01/disappearances/"
                     },
                     {
-                      "type": "",
-                      "shortTitle": "",
-                      "bookTitle": "",
-                      "year": "",
-                      "author": "",
+                      "type": "Article Excerpt",
+                      "shortTitle": "Coersive Amnesia",
+                      "bookTitle": "By Banning Tiananmen Vigils in Hong Kong, China Is Trying to Rewrite History",
+                      "year": "2021",
+                      "author": "Louisa Lim",
                       "content": [
-                        ""
+                        "This year the Hong Kong vigil has been banned. Anyone gathering at the vigil site in Victoria Park on Friday could face five years in prison. Even publicising the event could lead to one year in jail under Hong Kong’s draconian National Security law, imposed sight unseen at the end of last June following a year of massive pro-democracy demonstrations. Public commemoration has become so risky that one Hong Kong newspaper even suggested writing the digits “64”, to commemorate the date of the protest, on light switches, so that flipping the switch became an act of remembrance. These moves underline the dangerous power of public memory, and how the events of 32 years ago still represent a suppurating sore at the moral heart of China’s Communist party.<br></br>",
+                        "[...]<br></br>",
+                        "At Tiananmen vigils round the world last year, the events of Beijing 1989 and Hong Kong 2019 were yoked together. In Melbourne where I live, alternating footage from the two suppressions flickered across large outdoor screens to create a flashing montage of state violence, as those present shouted popular rallying cries including “Liberate Hong Kong, revolution of our times!” That’s one of the protest slogans outlawed by the National Security Legislation, whose global reach is allowing Beijing to export its coercive amnesia far beyond its borders. This year, anyone – Hongkonger or not – shouting a forbidden protest slogan at a Tiananmen vigil anywhere in the world could find themselves in violation of the legislation.<br></br>",
+                        "This has dramatically heightened the cost of public remembrance of 4 June, especially given the tendency of security officials from China’s diplomatic missions to monitor such gatherings. Even if the law is not easily enforceable overseas, it has a paralysing effect, leaving Hongkongers in other countries weighing up a stark calculation: whether attending a vigil might prevent them from returning home. Through its actions, Beijing has weaponised historical memory to the detriment of global freedoms of speech and expression.<br></br>",
+                        "Open discussion of Hong Kong politics in global university classrooms has now become fraught, for students from Hong Kong or China, and for lecturers themselves. One friend at an American university told me they’d stopped teaching classes on Chinese politics, instead taking only one-on-one tutorials to ensure student safety. This immediately brought to mind a meeting I once had with a Chinese dissident, who’d asked me to come to an open pavilion on a hilltop in a park so we could see anyone approaching. Back then, some topics were too dangerous to broach in groups of more than two on the Chinese mainland. Now the same dynamics are beginning to apply in classrooms around the world. Using fear as a cudgel, China’s Communist party has succeeded in transplanting its closed discursive spaces into western academic institutions.<br></br>",
+                        "Beijing’s epistemological campaign will not be content with choking off public commemorations of 4 June. Following the pattern laid down three decades before, another target is the reframing of the 2019 Hong Kong protest movement as a violent insurgency driven by hostile foreign forces. So long as western countries continue to act like Hong Kong is not their problem, Beijing will be empowered not just to excise the past, but also to rewrite the history of the present."
                       ],
-                      "citation": "",
-                      "linkTo": ""
+                      "citation": "Lim, Louisa. “By Banning Tiananmen Vigils in Hong Kong, China Is Trying to Rewrite History .” The Guardian. Guardian News and Media, June 3, 2021.",
+                      "linkTo": "https://www.theguardian.com/commentisfree/2021/jun/04/banning-tiananmen-vigils-hong-kong-china-communist-party"
+                    },
+                    {
+                      "type": "Article Excerpt",
+                      "shortTitle": "Missing Books",
+                      "bookTitle": "National Security Law: Hong Kong Libraries Pull Books by Some Localist and Democracy Activists for Review",
+                      "year": "2020",
+                      "author": "Laura Westbrook",
+                      "content": [
+                        "Hong Kong libraries have taken at least nine titles written by localist or democracy advocates out of circulation pending a review of whether the books run afoul of the new national security law.<br></br>",
+                        "“A new law has come into effect … so the Hong Kong authorities are reviewing these books to see if they stick to the new law or not, and under this situation the books cannot be checked out for readers now,” the employee said. “After our review, then we will update the situation of the books to see if you can borrow it or not.”<br></br>",
+                        "[…] <br></br>",
+                        "Chan, a lawyer, said she was also puzzled why her book, My Journeys for Food and Justice, which was published in June 2014, was under review, as the government had said the law would not be retroactive. She had not been notified and asked the department for clarity on its policy for making such decisions.<br></br>",
+                        "“It [the law] does not just affect a small number of people,” Chan said. “It affects the public as the way they can access these books is being taken away.”<br></br>",
+                        "[…]<br></br>",
+                        "While the law made no mention of banning books, it was also expected “everyone to help preserve territorial integrity and security of the nation”.<br></br>",
+                        "<b>List of books under review:</b><br></br>",
+                        "<b>Joshua Wong</b>",
+                        "I am not a hero",
+                        "I am not a child: Before and after turning 18 years old<br></br>",
+                        "<b>Tanya Chan</b>",
+                        "My journeys for food and justice<br></br>",
+                        "<b>Horace Chin Wan-kan</b>",
+                        "Hong Kong City-State Theory*",
+                        "Hong Kong City-State Theory 2*",
+                        "City-State Sovereignty Theory*",
+                        "Hong Kong Defence War*",
+                        "Hong Kong Adherents*",
+                        "Body and Soul*<br></br>",
+                        "*No official translation available"
+                      ],
+                      "citation": "Westbrook, Laura. “Hong Kong Libraries Pull Democracy Actii' Books for National Security Review.” South China Morning Post, October 21, 2020.",
+                      "linkTo": "https://www.scmp.com/news/hong-kong/politics/article/3091842/national-security-law-hong-libraries-pull-books-some"
+                    },
+                    {
+                      "type": "Article Excerpt",
+                      "shortTitle": "Invisible Red Lines",
+                      "bookTitle": "Security Law: Hong Kong Scholars Fear for Academic Freedom.",
+                      "year": "2020",
+                      "author": "Jerome Taylor",
+                      "content": [
+                       "China’s new security law has sent a chill through Hong Kong’s schools and universities with many teachers fearful the city’s reputation for academic freedom and excellence is now at risk.br></br>",
+                       "Just a week after the sweeping legislation was imposed on the territory, staff at some institutions have already been warned by their administrators to be careful how they teach.<br></br>",
+                       "“Remain neutral in your teaching and be mindful of the language you use,” read one email to staff of HKU SPACE, a college attached to the prestigious University of Hong Kong (HKU).<br></br>",
+                       "[…]<br></br>",
+                       "Hong Kong has some of Asia’s best schools and universities and – compared with China’s party-controlled education system – boasts an open campus culture of critical analysis and tackling subjects that are unapproachable on the mainland.<br></br>",
+                       "But all that could be changing.<br></br>",
+                       "China’s leaders have made it clear they view Hong Kong’s education system as one of the driving factors behind last year’s huge and often violent pro-democracy protests.<br></br>",
+                       "They have ordered the city to instil more “patriotic” education and ensure the new security laws are obeyed.<br></br>",
+                       "[…]<br></br>",
+                       "As a result, some teachers say they already fear overstepping invisible red lines – even mistakenly.<br></br>",
+                       "“Should we uphold the critical thinking approach or should we toe the official line for better safety,” said Benson Wong, a lecturer at the Education University of Hong Kong.<br></br>",
+                       "[…]<br></br>",
+                       "“A true education in history and social studies is not about remembering a story or being able to regurgitate a national myth.”<br></br>",
+                       "Jean-Pierre Cabestan, a prominent scholar of Chinese politics, said Hong Kong’s universities were already struggling to attract the best global talent.<br></br>",
+                       "“People are getting more hesitant to come,” he told AFP, noting that it had become all but impossible in recent years to arrange conferences in Hong Kong on taboo topics such as Taiwan, Xinjiang and Tibet.<br></br>",
+                       "Others said they would consider leaving if the situation deteriorates further.",
+                       "“I haven’t yet determined where my line is,” one lecturer at CUHK told AFP, asking to remain anonymous.<br></br>",
+                       "“I suspect I’ll know it when it’s crossed, and at that moment I hope I’ll have the courage of my convictions.”"
+                      ],
+                      "citation": "Taylor, Jerome, and Xinqi Su. “Security Law: Hong Kong Scholars Fear for Academic Freedom.” Hong Kong Free Press. Hong Kong Free Press, July 15, 2020.",
+                      "linkTo": "https://hongkongfp.com/2020/07/15/security-law-hong-kong-scholars-fear-for-academic-freedom/."
+                    },
+                    {
+                      "type": "Article Excerpt",
+                      "shortTitle": "A New Addition to Primary Education",
+                      "bookTitle": "The Education Bureau Informs All Schools in Hong Kong, Including Kindergartens and Special Schools, to Teach National Security Laws",
+                      "year": "2021",
+                      "content": null,
+                      "linkTo": "https://www.thestandnews.com/politics/%E6%95%99%E8%82%B2%E5%B1%80%E9%80%9A%E7%9F%A5%E5%85%A8%E6%B8%AF%E5%AD%B8%E6%A0%A1-%E5%8C%85%E6%8B%AC%E5%B9%BC%E7%A8%9A%E5%9C%92%E7%89%B9%E6%AE%8A%E5%AD%B8%E6%A0%A1-%E5%9D%87%E9%A0%88%E6%95%99%E5%9C%8B%E5%AE%89%E6%B3%95"
+                    },
+                    {
+                      "type": "Journal Excerpt",
+                      "shortTitle": "Visual Movements",
+                      "bookTitle": "The 2014 Hong Kong Protests: A History of Youth Identity",
+                      "year": "2021",
+                      "author": "Thomas Elias Siddall",
+                      "content": [
+                       "Hong Kong youth, through their contested position, have an identity based in contestation, negotiation, individualism and choice, which is being challenged by Chinese hegemony.<br></br>",
+                       "[...]<br></br>",
+                       "The youth identity developments that I have explored are anchored by conflicts in cultural identity. A significant crisis that spurred the reverence for democratic ideals in Hong Kong youth, continually counter to Beijing’s anti-democratic propaganda in schools, is the 1989 Tiananmen Square Massacre. Immediately after the massacre, vigils were organized all around Hong Kong by the Hong Kong Federation of Students, and to this day this event occurs every June 4thin Victoria Park; a large park in the middle of Causeway Bay, the busiest and most economically productive area of the city which would later become a site of the UR. Every year, a candlelit vigil is held in solidarity for those killed. The actions of Hong Kong students in the organization of these vigils have given rise to the role of collective memory in framing a set of ideals and superimposing them on “our Hong Kong”. The creation of a geographic location that is a site for the outlet of political expression legitimizes and accepts youth identity as a form of political mobilization.<br></br>",
+                       "The important role of the Hong Kong Federation of Students – as the dominant organizers of the vigil – in shaping collective memory and contemporary youth identity cannot be overstated. As China wants to tear down physical borders with Hong Kong, this vigil is one way in which the people of Hong Kong are constructing social borders. Therefore, “[c]ollective memory should be understood as those representations that serve as the basis of a group’s identity and sense of community.”[30] Images of Tank Man, along with journalists and arrested authors, are hung in Victoria Park and have become icons that Hong Kong collectively remembers as symbols of the democratic rights they are entitled to but which have not been respected. These vigils have taken on power in recent years wherein:<br></br>",
+                       "the vigil in Hong Kong is a stark departure from the situation in China, where protests are banned and the mentions of the Tiananmen crackdown, in which hundreds if not thousands of protestors died, are scrubbed from social media.[31]<br></br>",
+                       "They have become a way to create and contest memories, and by extension history, as a form of political mobilization that foils Hong Kong against China. China has responded to the growing power of these vigils through contesting this political memory. Donald Tsang, a former pro-Beijing Chief Executive of Hong Kong, stated in 2008 in regards to a question posed to him regarding the public release of information regarding the June 4th massacre that “China had achieved great development in various area” and that “people should look at the past more objectively.”[32] These comments were viewed as a departure of democratic representation of Hong Kong society and led to the pan-Democratic and Localist coalition boycotting Hong Kong SAR government meetings.[33] Thus students’ role in shaping collective memory politicizes history, and also contests memories by shaping and spreading local values through visual movements like the Victoria Park vigil."
+                      ],
+                      "citation": "Siddall, Thomas Elias. “The 2014 Hong Kong Protests: A History of Youth Identity.” Synergy: The Journal of Contemporary Asian Studies. University of Toronto, January 1, 2021.",
+                      "linkTo": "https://utsynergyjournal.org/2020/01/01/the-2014-hong-kong-protests-a-history-of-youth-identity/"
+                    },
+                    {
+                      "type": "Article Excerpt",
+                      "shortTitle": "Self-Censorship Begins",
+                      "bookTitle": "Hongkongers Scrub Social Media after Security Law",
+                      "year": "2020",
+                      "author": "Yan Zhao and Su Xinqi",
+                      "content": [
+                       "Hong Kongers are scrubbing their social media accounts, deleting chat histories and mugging up on cyber privacy as China’s newly imposed security law blankets the traditionally outspoken city in fear and self-censorship.<br></br>",
+                       "[…]<br></br>",
+                       "Certain political views such as wanting independence became outlawed overnight and legal analysts and rights groups warn the broad wording of the law – which bans subversion, secession, terrorism and colluding with foreign forces – will choke civil liberties and free speech.<br></br>",
+                       "Despite assurances from Beijing that political freedoms would not be hindered, many Hong Kongers moved to delete digital references of their opposition to China’s ruling Communist Party, which uses similar laws on the mainland to crush dissent.<br></br>",
+                       "[…]<br></br>",
+                       "After the law came in, many Hong Kongers took to Twitter and other social media platforms such as Telegram and Signal to either announce their departure or share tips on internet safety.<br></br>",
+                       "Beijing has said some serious cases will be prosecuted on the mainland, dismantling the legal firewall that has existed between Hong Kong’s judiciary and China’s Communist Party-controlled courts since the 1997 handover from Britain.<br></br>",
+                       "Local police have been granted wider surveillance powers to monitor suspects, including wiretapping and accessing digital communications, without a judge’s approval.<br></br>",
+                       "[…]<br></br>",
+                       "Billie, a 24-year-old assistant to a district councilor, said he started using a VPN in May when China announced plans for the new law.<br></br>",
+                       "He culled many of his social media followers and removed some “sensitive” posts – even though Beijing’s new law is not supposed to be retroactive. <br></br>",
+                       "“I feel very ashamed and embarrassed. I never wanted to do so, but I felt I have to, in order to survive,” he said, also asking for anonymity. “A part of me is gone.”<br></br>",
+                       "[…]<br></br>",
+                       "Others vowed to avoid censoring themselves.<br></br>",
+                       "“It’s not that I am not at all worried,” Chow Po-chung, an associate professor at the Chinese University of Hong Kong, wrote on Facebook.<br></br>",
+                       "“I just don’t want to be overly worried and live in fear all the time. Because once fear takes root in our minds, we can’t live up to what we want for ourselves.”"
+                      ],
+                      "citation": "Zhao, Yan, and Su Xinqi. “Hongkongers Scrub Social Media after Security Law.” Asia Times. Asia Times, July 3, 2020",
+                      "linkTo": "https://asiatimes.com/2020/07/hongkongers-scrub-social-media-after-security-law/"
+                    },{
+                      "type": "Video",
+                      "shortTitle": "National Security Law Explained to Children",
+                      "bookTitle": "Hong Kong Education Bureau Publishes National Security Video for Primary Children",
+                      "year": "2021",
+                      "content": null,
+                      "linkTo": "https://www.youtube.com/watch?v=H9levCxOULM"
+                    },
+                    {
+                      "type": "Article Excerpt",
+                      "shortTitle": "A New Political Climate",
+                      "bookTitle": "How Academic Freedom Ends",
+                      "year": "2021",
+                      "author": "Timothy McLaughlin",
+                      "content": [
+                       "Five university heads last year signed a letter endorsing the national-security law, throwing their support behind the legislation before it was even made public. This move highlighted one of the more troubling aspects of the threats on campus, and within academia more broadly: The marching orders to suppress freedoms are being dutifully carried out not by police or the authorities, but by fellow colleagues, and even students. One postgraduate student at HKU has reported at least two faculty members to the tip line, according to multiple people familiar with the matter.<br></br>",
+                       "“I think it is a very, very peculiar and an interesting thing, because it is not as if the body that is eroding academic freedom is outside the university. It is not a foreign body,” Peter Baehr, a research professor in social theory who has spent 21 years at Lingnan University, a liberal-arts college in Hong Kong, told me. Oftentimes, he said, “the most repressive actors are themselves professors.”<br></br>",
+                       "Universities were established in Hong Kong during British colonial rule “as part of a grand plan to extend Britain’s imperial influence in China and the Far East,” John P. Burns, an honorary professor of politics and public administration at HKU, wrote in a paper published last year examining higher education in the city. After Hong Kong was returned to China, in 1997, Beijing appeared to conceive of universities’ function, Burns wrote, primarily in terms of their “contribution to national development, their stabilizing role in Hong Kong and the mainland, and as institutions to transfer patriotic education to Hong Kong’s elite.” But the universities’ colonial legacy has led to tension with Beijing’s vision. (Hong Kong’s chief executive, Carrie Lam, serves as the chancellor of each of the eight publicly funded universities. The government also appoints members of each university’s council, a body similar to a board of trustees.)<br></br>",
+                       "While mainland officials and their loyalists in Hong Kong have long targeted the city’s education sector as an area for reform, aiming to create a more patriotic population less likely to push back on Beijing’s growing influence and interference, their previous efforts were met with fierce resistance from students and parents. Protests broke out in 2012 over proposals to bring more nationalist teaching into classrooms. The idea was eventually shelved, but not before giving rise to a number of student leaders, some of whom would spend the better part of a decade proving to be formidable dissidents before being jailed or driven into exile in recent months. Notable among them was Joshua Wong, who two years after rallying the education-reform protests would rise to global recognition as one of the leaders of the Umbrella Movement.<br></br>",
+                       "But in Hong Kong’s new political climate, resistance to Beijing is far more difficult. Wong is now in jail and facing charges under the national-security law. The overhaul of primary and secondary education he helped keep at bay is well under way, targeting students as young as 6 years old. Benny Tai, a legal scholar and former HKU professor targeted for years by Beijing, was sacked last year after being found guilty for his role in the 2014 Umbrella Movement demonstrations. Like Wong, he is now in jail and charged with violating the national-security law."
+                      ],
+                      "citation": "McLaughlin, Timothy. “How Academic Freedom Ends” The Atlantic. Atlantic Media Company, June 6, 2021.",
+                      "linkTo": "https://www.theatlantic.com/international/archive/2021/06/china-hong-kong-freedom/619088/"
                     }
                   ]
                 }

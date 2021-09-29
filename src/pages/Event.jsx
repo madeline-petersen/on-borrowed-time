@@ -13,8 +13,16 @@ import candles from '../images/candles.png';
 import car from '../images/car.png';
 import crowd from '../images/crowd.png';
 import tanks from '../images/tanks.png';
+import hkIdentity from '../images/02_2020_HKIdentity.jpeg';
+import geniuneDemocracy from '../images/03_2020_GeniuneDemocracy.jpeg';
+import solidarityAndResistance from '../images/04_2020_SolidarityAndResistance.jpeg';
+import nationalAmnesia from '../images/05_2020_NationalAmnesia.jpeg';
 
 const imageLookup = {
+  hkIdentity: hkIdentity,
+  geniuneDemocracy: geniuneDemocracy,
+  solidarityAndResistance: solidarityAndResistance,
+  nationalAmnesia: nationalAmnesia,
   car: car,
   crowd: crowd,
   tanks: tanks,
