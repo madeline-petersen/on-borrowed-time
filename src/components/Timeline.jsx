@@ -123,7 +123,7 @@ const Timeline = props => {
                 ${
                   year.id !== props.currentYear.id
                     ? 'cursor-pointer opacity-60 hover:opacity-100'
-                    : 'cursor-default'
+                    : 'cursor-pointer'
                 }
                 ${
                   props.pageId === 'home'
