@@ -20,6 +20,7 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Welfare of Hong&nbsp;Kong People",
                   "bookTitle": "Diasporic Memories and Conceptual Geography in Post-Colonial Hong&nbsp;Kong",
                   "year": "2014",
@@ -32,6 +33,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "An Expiring Lease",
                   "bookTitle": "The Sino-British Agreement and Nationality: Hong&nbsp;Kong&rsquo;s Future in the Hands of the People&rsquo;s Republic of China",
                   "year": "1990",
@@ -46,6 +48,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "An Arms-Length Approach",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises",
                   "year": "2015",
@@ -61,6 +64,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Price of Peace",
                   "bookTitle": "Need to find this one",
                   "year": "0000",
@@ -82,6 +86,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Locus of Loyalty",
                   "bookTitle": "The Hong&nbsp;Kong Model of &lsquo;One Country, Two Systems&rsquo;",
                   "year": "1987",
@@ -161,6 +166,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Basic Law",
                   "bookTitle": "The Basic Law of the Hong&nbsp;Kong Special Adminstration Region of the People&rsquo;s Republic of China",
                   "year": "2021",
@@ -175,6 +181,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Characteristics of One Country, Two Systems",
                   "bookTitle": "One Country, Two Systems: A Theoretical Analysis",
                   "year": "1987",
@@ -192,6 +199,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Uncharted Sea",
                   "bookTitle": "Basic Law and Constitutional Review: The First Decade",
                   "year": "2007",
@@ -239,6 +247,7 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Ambiguous Language",
                   "bookTitle": "One Country, Two Systems: Hong&nbsp;Kong&rsquo;s Paradox of Politics and Business",
                   "year": "1987",
@@ -251,6 +260,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Fostering Skepticism",
                   "bookTitle": "Chinese and Western Treaty Practice: An Application to the Joint Declaration Between the People&rsquo;s Republic of China and Great Britain Concerning the Question of Hong&nbsp;Kong",
                   "year": "1986",
@@ -264,6 +274,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Is it &ldquo;One Country&rdquo; or &ldquo;Two Systems&rdquo;?",
                   "bookTitle": "The Hong&nbsp;Kong Model of &ldquo;One Country, Two Systems&rdquo;: Promises and Problems",
                   "year": "1987",
@@ -276,6 +287,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Skepticism of the Basic Law Draft",
                   "bookTitle": "The Hong&nbsp;Kong Model of &ldquo;One Country, Two Systems&rdquo;: Promises and Problems",
                   "year": "1987",
@@ -302,6 +314,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Pessimism About the Declaration",
                   "bookTitle": "One Country, Two Systems: Hong&nbsp;Kong&rdquo;s Paradox of Politics and Business",
                   "year": "1987",
@@ -605,6 +618,7 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Constitutional Instrument",
                   "bookTitle": "National Security Law in Hong&nbsp;Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong&nbsp;Kong",
                   "year": "2002",
@@ -617,6 +631,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Final Draft of Article 23 (Article 22)",
                   "bookTitle": "National Security Law in Hong&nbsp;Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong&nbsp;Kong",
                   "year": "2002",
@@ -629,6 +644,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "&ldquo;Subversion&rdquo; and &ldquo;National Unity&rdquo;",
                   "bookTitle": "National Security Law in Hong&nbsp;Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong&nbsp;Kong",
                   "year": "2002",
@@ -641,6 +657,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "An Acceptable Compromise",
                   "bookTitle": "National Security Law in Hong&nbsp;Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong&nbsp;Kong",
                   "year": "2002",
@@ -653,6 +670,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Second Draft of Article 23",
                   "bookTitle": "National Security Law in Hong&nbsp;Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong&nbsp;Kong",
                   "year": "2002",
@@ -665,6 +683,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Subversion-phobia",
                   "bookTitle": "National Security Law in Hong&nbsp;Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong&nbsp;Kong",
                   "year": "2002",
@@ -728,6 +747,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Vivid Expression of Hong&nbsp;Kong Identity",
                   "bookTitle": "Hongkongese or Chinese: The Problem of Identity on the Eve of Resumption of Chinese Sovereignty over Hong&nbsp;Kong",
                   "year": "1997",
@@ -788,6 +808,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Caught Between Two Cultures",
                   "bookTitle": "Diasporic Memories and Conceptual Geography in Post-Colonial Hong&nbsp;Kong",
                   "year": "2014",
@@ -881,6 +902,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Commemorating Tiananmen Square in Hong&nbsp;Kong",
                   "bookTitle": "Memory in Movement: Collective Identity and Memory Contestation in Hong&nbsp;Kong&rsquo;s Tiananmen Vigils",
                   "year": "2019",
@@ -1019,6 +1041,7 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Emigration Scramble",
                   "bookTitle": "International Reaction to Hong&nbsp;Kong&rsquo;s Countdown to 1997: Doors Open to Hong&nbsp;Kong&rsquo;s Emigrants",
                   "year": "1995",
@@ -1326,6 +1349,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Concept of &lsquo;China&rsquo;",
                   "bookTitle": "Diasporic Memories and Conceptual Geography in Post-colonial Hong&nbsp;Kong",
                   "year": "2014",
@@ -1404,6 +1428,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Sense of the Unreal",
                   "bookTitle": "Letters from Hong&nbsp;Kong: Amid Changing Symbols, a Sense of the Unreal",
                   "year": "1997",
@@ -1543,6 +1568,7 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Pivotal Visit",
                   "bookTitle": "Hong&nbsp;Kong, 1 July 2003—Half a Million Protestors: The Security Law, Identity Politics, Democracy, and China.",
                   "year": "2003",
@@ -1659,6 +1685,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Doom and Gloom",
                   "bookTitle": "Economic Impact of SARS: The Case of Hong&nbsp;Kong",
                   "year": "2004",
@@ -1740,6 +1767,7 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Government&rsquo;s defence of Article 23",
                   "bookTitle": "The Threat of Article 23 to Civil Liberties in the Hong&nbsp;Kong Special Adminstrative Region",
                   "year": "2003",
@@ -1890,6 +1918,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Forced Withdrawal",
                   "bookTitle": "Hong&nbsp;Kong’s Political Autonomy and Its Continuing Struggle For Universal Suffrage",
                   "author": "Phil C.W. Chan",
@@ -1990,6 +2019,7 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Pace of Democratization",
                   "bookTitle": "The Basic Law and Democratization in Hong&nbsp;Kong",
                   "author": "Michael C. Davis",
@@ -2002,6 +2032,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Erosion of Autonomy",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Political Autonomy and Its Continuing Struggle For Universal Suffrage",
                   "author": "Phil C.W.",
@@ -2054,6 +2085,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Mirror Cabinet",
                   "bookTitle": "Discourse, Democracy and Diplomacy: a Pragmatic Analysis of the Occupy Central Movement in Hong&nbsp;Kong",
                   "author": "Jacob L. Mey and Hans J. Ladegaard",
@@ -2241,6 +2273,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Electoral Recommendations",
                   "bookTitle": "Hong&nbsp;Kong’s Umbrella Movement",
                   "author": "Johannes Chan",
@@ -2255,6 +2288,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "An Inherent Conflict of Interpretation",
                   "bookTitle": "Hong&nbsp;Kong after the Umbrella Movement: An uncertain future for &ldquo;One Country Two Systems&rdquo;",
                   "author": "Samson Yuen",
@@ -2269,6 +2303,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Beijing the sole author of &ldquo;One Country Two Systems&rdquo;",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement and Beijing&rsquo;s Failure to Honor the Basic Law",
                   "author": "Michael C. Davis",
@@ -2281,6 +2316,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Drawn Lines",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises",
                   "author": "Michael C. Davis",
@@ -2294,6 +2330,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Prerequiste of Patriotism",
                   "bookTitle": "Discourse, democracy and diplomacy: A pragmatic analysis of the Occupy Central movement in Hong&nbsp;Kong",
                   "author": "Jacob L. Mey and Hans J. Ladegaard",
@@ -2556,6 +2593,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Misrepresentation of Public Opinion",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises",
                   "author": "Michael C. Davis",
@@ -2570,6 +2608,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The NPCSC Decision",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement",
                   "author": "Johannes Chan",
@@ -2597,6 +2636,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Democratic Centralism",
                   "bookTitle": "Discourse, Democracy and Diplomacy: a Pragmatic Analysis of the Occupy Central Movement in Hong&nbsp;Kong",
                   "author": "Jacob L. Mey, and Hans J. Ladegaard",
@@ -2860,6 +2900,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Awakening Political Consciousness",
                   "bookTitle": "The Hong&nbsp;Kong Umbrella Movement: A Students’ or a People’s Movement?",
                   "author": "Che-po Chan",
@@ -2904,6 +2945,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Creation Of A Collective Memory",
                   "bookTitle": "Art And Culture: Hong&nbsp;Kong Or The Creation Of A Collective Memory",
                   "author": "Gérard Henry",
@@ -2962,6 +3004,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Committed and Uncommitted",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement: The Protest and Beyond",
                   "author": "Victoria Tin-bor",
@@ -3003,6 +3046,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Coming of Age",
                   "bookTitle": "Discourse, Democracy and Diplomacy: a Pragmatic Analysis of the Occupy Central Movement in Hong&nbsp;Kong",
                   "author": "Jacob L. Mey and Hans J. Ladegaard",
@@ -3899,6 +3943,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Hong&nbsp;Kong Localism",
                   "bookTitle": "The Growth of “Localism” in Hong&nbsp;Kong",
                   "author": "Ying-ho Kwong",
@@ -5410,6 +5455,7 @@
                     },
                     {
                       "type": "Journal Excerpt",
+                  "publication": "Publication name",
                       "shortTitle": "Visual Movements",
                       "bookTitle": "The 2014 Hong Kong Protests: A History of Youth Identity",
                       "year": "2021",

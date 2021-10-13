@@ -104,7 +104,9 @@ const ResourceTable = ({
                 style={{ display: 'flex', justifyContent: 'space-between' }}
               >
                 <p className={`${themeTextClass} text-opacity-70 fade-second`}>
-                  {entry.type}
+                  {entry.type === 'Journal Excerpt'
+                    ? entry.publication
+                    : entry.type}
                 </p>
                 <p className={`${themeTextClass} text-opacity-70 fade-second`}>
                   {entry.year}
