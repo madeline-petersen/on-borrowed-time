@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-grid-system';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import './Header.scss';
 
 const Header = ({
   currentYear,
@@ -74,6 +75,12 @@ const Header = ({
         <Row className={`grid__row`}>
           <Col lg={3} md={4} sm={4} xs={4} />
           <Col lg={9} md={8} sm={8} xs={8}>
+            {pageId === 'thematic-threads' && (
+              <label className="switch">
+                <input type="checkbox" />
+                <span className="slider round"></span>
+              </label>
+            )}
             {pageId === 'event' && (
               <p
                 key={`${currentYear}-${romanSceneNumber}-scene`}
