@@ -45,6 +45,10 @@ function HomeWrapper() {
   return <UIShell pageId="home" years={data.years} />;
 }
 
+function ThematicThreadsWrapper() {
+  return <UIShell pageId="thematic-threads" years={data.years} />;
+}
+
 function Page() {
   let { yearId } = useParams();
   let { sceneId } = useParams();
@@ -201,6 +205,9 @@ function App() {
             </Route>
             <Route path="/index">
               <Index />
+            </Route>
+            <Route path="/thematic-threads">
+              <ThematicThreadsWrapper />
             </Route>
             <Route exact path="/:yearId">
               <Page />

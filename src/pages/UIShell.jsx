@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 
 import Artifacts from './Artifacts.jsx';
 import Event from './Event.jsx';
+import ThematicThreads from './ThematicThreads.jsx';
 import Header from '../components/Header';
 import Home from './Home.jsx';
 import Intro from './Intro.jsx';
@@ -108,6 +109,7 @@ const UIShell = props => {
   };
 
   let pageComponent;
+  console.log('page id ', props.pageId);
   switch (props.pageId) {
     case 'home':
       pageComponent = (
@@ -171,6 +173,9 @@ const UIShell = props => {
           setIsTransitioning={setIsTransitioning}
         />
       );
+      break;
+    case 'thematic-threads':
+      pageComponent = <ThematicThreads />;
       break;
     default:
       pageComponent = (
@@ -261,21 +266,23 @@ const UIShell = props => {
         </Visible>
         Time
       </Link>
-      <Timeline
-        timelineClasses={timelineClasses}
-        pageId={props.pageId}
-        sceneIndex={props.sceneIndex}
-        previewedYear={hash}
-        years={props.years}
-        currentYear={props.year} // expands timeline
-        setIsTransitioning={setIsTransitioning}
-        isTransitioning={isTransitioning}
-        isYearEnd={isYearEnd}
-        navigateTo={navigateTo}
-        setNextBackground={setNextBackground}
-        colourBackgroundClass={colourBackgroundClasses[props.year.id]}
-        colourBackgroundClasses={colourBackgroundClasses}
-      />
+      {props.pageId !== 'thematic-threads' && (
+        <Timeline
+          timelineClasses={timelineClasses}
+          pageId={props.pageId}
+          sceneIndex={props.sceneIndex}
+          previewedYear={hash}
+          years={props.years}
+          currentYear={props.year} // expands timeline
+          setIsTransitioning={setIsTransitioning}
+          isTransitioning={isTransitioning}
+          isYearEnd={isYearEnd}
+          navigateTo={navigateTo}
+          setNextBackground={setNextBackground}
+          colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+          colourBackgroundClasses={colourBackgroundClasses}
+        />
+      )}
       {pageComponent}
     </>
   );
