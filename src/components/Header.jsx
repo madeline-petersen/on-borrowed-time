@@ -1,9 +1,9 @@
 import { Col, Container, Row } from 'react-grid-system';
 
 import PropTypes from 'prop-types';
-import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import './Header.scss';
+import React from 'react';
 
 const Header = ({
   currentYear,
@@ -15,7 +15,9 @@ const Header = ({
   setNextBackground,
   setIsTransitioning,
   navigateTo,
-  colourBackgroundClass
+  colourBackgroundClass,
+  setBackgroundColor,
+  isWhite
 }) => {
   const onClickYear = () => {
     if (pageId !== 'intro') {
@@ -78,7 +80,10 @@ const Header = ({
             {pageId === 'thematic-threads' && (
               <label className="switch">
                 <input type="checkbox" />
-                <span className="slider round"></span>
+                <span
+                  className="slider round"
+                  onClick={() => setBackgroundColor(!isWhite)}
+                />
               </label>
             )}
             {pageId === 'event' && (
@@ -129,7 +134,9 @@ Header.propTypes = {
   setNextBackground: PropTypes.func,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
-  colourBackgroundClass: PropTypes.string
+  colourBackgroundClass: PropTypes.string,
+  setBackgroundColor: PropTypes.func,
+  isWhite: PropTypes.bool
 };
 
 export default Header;

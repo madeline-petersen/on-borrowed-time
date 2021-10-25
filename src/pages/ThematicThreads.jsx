@@ -1,8 +1,9 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
+import PropTypes from 'prop-types';
 
-const ThematicThreads = () => {
+const ThematicThreads = ({ backgroundColor }) => {
   const thematicThreads = [
     'Fear of Ambiguity',
     'In-between Identity',
@@ -10,8 +11,13 @@ const ThematicThreads = () => {
     'Geographical Diaspora'
   ];
 
+  let backgroundColourClasses = {
+    black: 'bg-black',
+    white: 'bg-white'
+  };
+
   return (
-    <div className="h-auto bg-white">
+    <div className={`h-auto ${backgroundColourClasses[backgroundColor]}`}>
       <Container className="grid__container min-h-screen">
         <Row className="grid__row pt-64 pb-20">
           {thematicThreads.map((thread, index) => {
@@ -42,6 +48,10 @@ const ThematicThreads = () => {
       </Container>
     </div>
   );
+};
+
+ThematicThreads.propTypes = {
+  backgroundColor: PropTypes.string
 };
 
 export default ThematicThreads;

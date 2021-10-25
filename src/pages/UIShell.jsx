@@ -23,6 +23,8 @@ const UIShell = props => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [nextBackgroundClass, setNextBackgroundClass] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
+  const [isWhite, setIsWhite] = useState(true);
+
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
@@ -109,7 +111,6 @@ const UIShell = props => {
   };
 
   let pageComponent;
-  console.log('page id ', props.pageId);
   switch (props.pageId) {
     case 'home':
       pageComponent = (
@@ -175,7 +176,9 @@ const UIShell = props => {
       );
       break;
     case 'thematic-threads':
-      pageComponent = <ThematicThreads />;
+      pageComponent = (
+        <ThematicThreads backgroundColor={isWhite ? 'white' : 'black'} />
+      );
       break;
     default:
       pageComponent = (
@@ -219,6 +222,8 @@ const UIShell = props => {
         setIsTransitioning={setIsTransitioning}
         navigateTo={navigateTo}
         colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+        setBackgroundColor={() => setIsWhite(!isWhite)}
+        isWhite={isWhite}
       />
       <LeftMenu
         isActive={isMenuActive}
