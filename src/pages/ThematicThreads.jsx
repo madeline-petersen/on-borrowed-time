@@ -26,7 +26,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                 {index % 2 === 0 ? (
                   <>
                     <Col key={thread} lg={12} md={12}>
-                      <div className="thematic-thread-headline">
+                      <div className="thematic-thread-headline mix-blend-difference text-white">
                         {ReactHtmlParser(thread)}
                       </div>
                     </Col>
@@ -35,7 +35,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                   <>
                     <Col lg={3} />
                     <Col key={thread} lg={9} md={12}>
-                      <div className="thematic-thread-headline">
+                      <div className="thematic-thread-headline mix-blend-difference text-white">
                         {ReactHtmlParser(thread)}
                       </div>
                     </Col>
