@@ -30,7 +30,7 @@ const ThematicThreads = ({ backgroundColor }) => {
       className={`thematic-threads h-auto black-white-background ${backgroundColor}`}
     >
       <Container className="grid__container min-h-screen">
-        <Row className={`grid__row pt-64 pb-20 ${backgroundColor}`}>
+        <Row className={`grid__row pt-64 pb-20 ${backgroundColor} absolute`}>
           {thematicThreads1.map((thread, index) => {
             if (index % 2 === 0) {
               return (
