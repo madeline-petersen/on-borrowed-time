@@ -26,7 +26,7 @@ const ThematicThreads = ({ backgroundColor }) => {
       <Container className="grid__container min-h-screen">
         <Row
           key={`threads-1`}
-          className={`grid__row pt-64 absolute ${
+          className={`grid__row pt-32 absolute ${
             backgroundColor === 'white' ? 'show' : 'hide'
           }`}
         >
@@ -55,7 +55,7 @@ const ThematicThreads = ({ backgroundColor }) => {
         </Row>
         <Row
           key={`threads-2`}
-          className={`grid__row pt-64 ${
+          className={`grid__row pt-32 ${
             backgroundColor === 'white' ? 'hide' : 'show'
           }`}
         >
