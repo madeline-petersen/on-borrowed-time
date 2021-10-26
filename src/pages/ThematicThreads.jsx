@@ -19,18 +19,13 @@ const ThematicThreads = ({ backgroundColor }) => {
     'Cultural Diaspora'
   ];
 
-  let backgroundColourClasses = {
-    black: 'bg-black',
-    white: 'bg-white'
-  };
-
   return (
     <div
       key={`black-white-background-${Math.random}`}
       className={`thematic-threads h-auto black-white-background ${backgroundColor}`}
     >
       <Container className="grid__container min-h-screen">
-        <Row className={`grid__row pt-64 pb-20 ${backgroundColor} absolute`}>
+        <Row className={`grid__row pt-64 pb-20 absolute`}>
           {thematicThreads1.map((thread, index) => {
             if (index % 2 === 0) {
               return (
@@ -54,7 +49,7 @@ const ThematicThreads = ({ backgroundColor }) => {
             }
           })}
         </Row>
-        <Row className={`grid__row pt-64 pb-20 ${backgroundColor}`}>
+        <Row className={`grid__row pt-64 pb-20`}>
           {thematicThreads2.map((thread, index) => {
             if (index % 2 === 0) {
               return (
