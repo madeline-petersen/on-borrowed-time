@@ -21,16 +21,20 @@ const ThematicThreads = ({ backgroundColor }) => {
 
   return (
     <div
-      key={`black-white-background-${Math.random}`}
       className={`thematic-threads h-auto black-white-background ${backgroundColor}`}
     >
       <Container className="grid__container min-h-screen">
-        <Row className={`grid__row pt-64 pb-20 absolute`}>
+        <Row
+          key={`threads-1`}
+          className={`grid__row pt-64 absolute ${
+            backgroundColor === 'white' ? 'show' : 'hide'
+          }`}
+        >
           {thematicThreads1.map((thread, index) => {
             if (index % 2 === 0) {
               return (
                 <Col key={thread} lg={12} md={12}>
-                  <div className="thematic-thread-headline mix-blend-difference text-white">
+                  <div className="thematic-thread-headline text-black">
                     {ReactHtmlParser(thread)}
                   </div>
                 </Col>
@@ -40,7 +44,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                 <>
                   <Col key={thread} lg={4} />
                   <Col key={thread} lg={8} md={12}>
-                    <div className="thematic-thread-headline mix-blend-difference text-white">
+                    <div className="thematic-thread-headline text-black">
                       {ReactHtmlParser(thread)}
                     </div>
                   </Col>
@@ -49,12 +53,17 @@ const ThematicThreads = ({ backgroundColor }) => {
             }
           })}
         </Row>
-        <Row className={`grid__row pt-64 pb-20`}>
+        <Row
+          key={`threads-2`}
+          className={`grid__row pt-64 ${
+            backgroundColor === 'white' ? 'hide' : 'show'
+          }`}
+        >
           {thematicThreads2.map((thread, index) => {
             if (index % 2 === 0) {
               return (
                 <Col key={thread} lg={12} md={12}>
-                  <div className="thematic-thread-headline mix-blend-difference text-white">
+                  <div className="thematic-thread-headline text-white">
                     {ReactHtmlParser(thread)}
                   </div>
                 </Col>
@@ -64,7 +73,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                 <>
                   <Col key={thread} lg={4} />
                   <Col key={thread} lg={8} md={12}>
-                    <div className="thematic-thread-headline mix-blend-difference text-white">
+                    <div className="thematic-thread-headline text-white">
                       {ReactHtmlParser(thread)}
                     </div>
                   </Col>

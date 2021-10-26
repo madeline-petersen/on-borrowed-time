@@ -7,29 +7,23 @@
     &.white {
       transition: background-position 1s 1s;
       background-position: left;
-
-      .grid__row:nth-of-type(1) {
-        transition: opacity 0s 0s; // disappear immediately
-        opacity: 0;
-      }
-      .grid__row:nth-of-type(2) {
-        transition: opacity 0s 2s; // reappear after background transition
-        opacity: 1;
-      }
     }
-    
+
     &.black {
       transition: background-position 1s 1s;
       background-position: right;
+    }
 
-      .grid__row:nth-of-type(1) {
-        transition: opacity 0s 2s; // reappear after background transition
-        opacity: 1;
-      }
-      .grid__row:nth-of-type(2) {
-        transition: opacity 0s 0s; // disappear immediately
-        opacity: 0;
-      }
+    .grid__row.hide {
+      transition: all 1s 0s; // disappear immediately
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+
+    .grid__row.show {
+      transition: all 1s 2s; // reappear after background transition
+      opacity: 1;
+      transform: translateX(0px);
     }
   }
 }
