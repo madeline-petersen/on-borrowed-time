@@ -1,0 +1,32 @@
+.thematic-threads {
+  &.black-white-background {
+    height: 100vh;
+    background: linear-gradient(to right, white 50%, black 50%);
+    background-size: 200% 100%;
+
+    &.white {
+      transition: background-position 1s 1s;
+      background-position: left;
+    }
+    &.black {
+      transition: background-position 1s 1s;
+      background-position: right;
+    }
+  }
+
+  .grid__row {
+    transition: opacity 0s 1s;
+  }
+  .grid__row:nth-of-type(1).white {
+    opacity: 0;
+  }
+  .grid__row:nth-of-type(2).white {
+    opacity: 1;
+  }
+  .grid__row:nth-of-type(1).black {
+    opacity: 1;
+  }
+  .grid__row:nth-of-type(2).black {
+    opacity: 0;
+  }
+}

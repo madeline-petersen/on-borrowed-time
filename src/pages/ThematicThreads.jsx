@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
 import PropTypes from 'prop-types';
+import './ThematicThreads.scss';
 
 const ThematicThreads = ({ backgroundColor }) => {
-  const thematicThreads = [
+  const thematicThreads1 = [
     'Fear of Ambiguity',
     'In-between Identity',
     'Seeking to Preserve Democratic Rights &amp; Freedoms',
     'Geographical Diaspora'
+  ];
+
+  const thematicThreads2 = [
+    'Solidarity & Resistance',
+    'Hong Kong Identity',
+    'Advocating for Genuine Democracy in the midst of Eroding Rights & Freedoms',
+    'Cultural Diaspora'
   ];
 
   let backgroundColourClasses = {
@@ -17,35 +25,11 @@ const ThematicThreads = ({ backgroundColor }) => {
   };
 
   return (
-    <div className={`h-auto ${backgroundColourClasses[backgroundColor]}`}>
-      <Container className="grid__container min-h-screen">
-        <Row className="grid__row pt-64 pb-20">
-          {thematicThreads.map((thread, index) => {
-            return (
-              <>
-                {index % 2 === 0 ? (
-                  <>
-                    <Col key={thread} lg={12} md={12}>
-                      <div className="thematic-thread-headline mix-blend-difference text-white">
-                        {ReactHtmlParser(thread)}
-                      </div>
-                    </Col>
-                  </>
-                ) : (
-                  <>
-                    <Col lg={3} />
-                    <Col key={thread} lg={9} md={12}>
-                      <div className="thematic-thread-headline mix-blend-difference text-white">
-                        {ReactHtmlParser(thread)}
-                      </div>
-                    </Col>
-                  </>
-                )}
-              </>
-            );
-          })}
-        </Row>
-      </Container>
+    <div
+      key={`black-white-background-${Math.random}`}
+      className={`thematic-threads h-auto black-white-background ${backgroundColor}`}
+    >
+      <Container className="grid__container min-h-screen"></Container>
     </div>
   );
 };
