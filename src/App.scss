@@ -51,6 +51,27 @@ a {
   text-decoration: none;
 }
 
+.thematic-thread-headline {
+  font-family: LyonText;
+  font-size: 100px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  max-width: fit-content;
+
+  // md
+  @media screen and (max-width: $lg-minus-1) {
+    font-size: 36px;
+  }
+
+  // sm, xs
+  @media screen and (max-width: $md-minus-1) {
+    font-size: 26px;
+  }
+}
+
 .large-headline-static {
   font-family: LyonText;
   font-size: 3rem;
