@@ -59,6 +59,7 @@ a {
   font-style: normal;
   line-height: 1.2;
   letter-spacing: -0.03em;
+  max-width: fit-content;
 
   // md
   @media screen and (max-width: $lg-minus-1) {

@@ -34,7 +34,7 @@ const ThematicThreads = ({ backgroundColor }) => {
             if (index % 2 === 0) {
               return (
                 <Col key={thread} lg={12} md={12}>
-                  <div className="thematic-thread-headline text-black">
+                  <div className="thematic-thread-headline text-black cursor-pointer hover:opacity-60">
                     {ReactHtmlParser(thread)}
                   </div>
                 </Col>
@@ -44,7 +44,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                 <>
                   <Col key={thread} lg={4} />
                   <Col key={thread} lg={8} md={12}>
-                    <div className="thematic-thread-headline text-black">
+                    <div className="thematic-thread-headline text-black cursor-pointer hover:opacity-60">
                       {ReactHtmlParser(thread)}
                     </div>
                   </Col>
@@ -63,7 +63,7 @@ const ThematicThreads = ({ backgroundColor }) => {
             if (index % 2 === 0) {
               return (
                 <Col key={thread} lg={12} md={12}>
-                  <div className="thematic-thread-headline text-white">
+                  <div className="thematic-thread-headline text-white cursor-pointer hover:opacity-60">
                     {ReactHtmlParser(thread)}
                   </div>
                 </Col>
@@ -73,7 +73,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                 <>
                   <Col key={thread} lg={4} />
                   <Col key={thread} lg={8} md={12}>
-                    <div className="thematic-thread-headline text-white">
+                    <div className="thematic-thread-headline text-white cursor-pointer hover:opacity-60">
                       {ReactHtmlParser(thread)}
                     </div>
                   </Col>

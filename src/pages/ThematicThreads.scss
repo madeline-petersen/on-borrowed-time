@@ -15,6 +15,7 @@
     }
 
     .grid__row.hide {
+      z-index: 0;
       transition: all 1s 0s; // disappear immediately
       opacity: 0;
       transform: translateX(-20px);
@@ -24,6 +25,7 @@
     }
 
     .grid__row.show {
+      z-index: 1;
       transition: all 1s 2s; // reappear after background transition
       opacity: 1;
       transform: translateX(0px);
