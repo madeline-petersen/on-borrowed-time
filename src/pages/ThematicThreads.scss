@@ -18,12 +18,38 @@
       transition: all 1s 0s; // disappear immediately
       opacity: 0;
       transform: translateX(-20px);
+      animation-name: shift-out;
+      animation-duration: 1s;
+      animation-delay: 0s;
+      animation-fill-mode: forwards;
     }
 
     .grid__row.show {
       transition: all 1s 2s; // reappear after background transition
       opacity: 1;
       transform: translateX(0px);
+      animation-name: shift-in;
+      animation-duration: 1s;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
     }
+  }
+}
+
+@keyframes shift-in {
+  0% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes shift-out {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-20px);
   }
 }
