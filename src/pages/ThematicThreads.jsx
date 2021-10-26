@@ -29,7 +29,56 @@ const ThematicThreads = ({ backgroundColor }) => {
       key={`black-white-background-${Math.random}`}
       className={`thematic-threads h-auto black-white-background ${backgroundColor}`}
     >
-      <Container className="grid__container min-h-screen"></Container>
+      <Container className="grid__container min-h-screen">
+        <Row className={`grid__row pt-64 pb-20 ${backgroundColor}`}>
+          {thematicThreads1.map((thread, index) => {
+            if (index % 2 === 0) {
+              return (
+                <Col key={thread} lg={12} md={12}>
+                  <div className="thematic-thread-headline mix-blend-difference text-white">
+                    {ReactHtmlParser(thread)}
+                  </div>
+                </Col>
+              );
+            } else {
+              return (
+                <>
+                  <Col key={thread} lg={4} />
+                  <Col key={thread} lg={8} md={12}>
+                    <div className="thematic-thread-headline mix-blend-difference text-white">
+                      {ReactHtmlParser(thread)}
+                    </div>
+                  </Col>
+                </>
+              );
+            }
+          })}
+        </Row>
+        <Row className={`grid__row pt-64 pb-20 ${backgroundColor}`}>
+          {thematicThreads2.map((thread, index) => {
+            if (index % 2 === 0) {
+              return (
+                <Col key={thread} lg={12} md={12}>
+                  <div className="thematic-thread-headline mix-blend-difference text-white">
+                    {ReactHtmlParser(thread)}
+                  </div>
+                </Col>
+              );
+            } else {
+              return (
+                <>
+                  <Col key={thread} lg={4} />
+                  <Col key={thread} lg={8} md={12}>
+                    <div className="thematic-thread-headline mix-blend-difference text-white">
+                      {ReactHtmlParser(thread)}
+                    </div>
+                  </Col>
+                </>
+              );
+            }
+          })}
+        </Row>
+      </Container>
     </div>
   );
 };
