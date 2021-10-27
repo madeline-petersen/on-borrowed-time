@@ -1,5 +1,6 @@
 import { Col, Row } from 'react-grid-system';
 
+import { ArrowUpRight16 } from '@carbon/icons-react';
 import Anecdote from './Anecdote';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -83,6 +84,9 @@ const ResourceTable = ({
                     <span className="-ml-8 pr-6">{index + 1}</span>
                   )}
                   {ReactHtmlParser(entry.shortTitle)}
+                  {!entry.content && (
+                    <ArrowUpRight16 className="inline-block ml-1" />
+                  )}
                 </p>
               </Col>
               <Col lg={3} md={3} sm={4} xs={12} className="small-body">
