@@ -83,8 +83,8 @@ const Header = ({
                 onClick={() => setBackgroundColor(!isWhite)}
               >
                 <div className={`${isWhite ? 'white' : 'black'}`}>
-                  <span className="slider round" />
-                  <span className="slider round" />
+                  <span className="slider round max-w-min" />
+                  <span className="slider round max-w-min" />
                 </div>
                 <div className="pl-4">
                   {isWhite ? `1984-2003` : `2003—2020`}
