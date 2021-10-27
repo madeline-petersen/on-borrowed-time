@@ -1,6 +1,7 @@
 import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect, useState } from 'react';
 
+import { ArrowUpRight16 } from '@carbon/icons-react';
 import Footer from '../components/Footer';
 import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
@@ -110,8 +111,11 @@ const Reflection = ({
                           href={linkTo}
                           className="small-body text-white text-opacity-50"
                         >
-                          <p className="mb-4 fade-second">
+                          <p className="mb-4 fade-second flex items-center">
                             {ReactHtmlParser(text)}
+                            {linkTo && (
+                              <ArrowUpRight16 className="inline-block ml-1" />
+                            )}
                           </p>
                         </a>
                       );
