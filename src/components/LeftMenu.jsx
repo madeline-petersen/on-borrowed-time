@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import { roman } from '@sguest/roman-js';
+import { useHistory } from 'react-router-dom';
 
 const LeftMenu = ({
   isActive,
@@ -20,6 +21,7 @@ const LeftMenu = ({
   const menu = document.getElementById('menu-card');
   const menuBackground = document.getElementById('menu-background-filler');
   const overlay = document.getElementById('menu-overlay');
+  let history = useHistory();
 
   window.addEventListener('click', function(event) {
     if (event.target === menuBackground) {
@@ -44,6 +46,15 @@ const LeftMenu = ({
     closeModal();
     setTimeout(function() {
       navigateTo(year);
+      setSelectedYear(null);
+    }, 500);
+  };
+
+  const onClickLink = url => {
+    setIsTransitioning(true);
+    closeModal();
+    setTimeout(function() {
+      navigateTo(url);
       setSelectedYear(null);
     }, 500);
   };
@@ -131,6 +142,40 @@ const LeftMenu = ({
                       </span>
                     </>
                   ))}
+
+                  <span key="editors-note">
+                    <Row
+                      className={`left-menu__year mb-2 cursor-pointer ${selectedYear &&
+                        'fade-out-content'}`}
+                      onClick={() => onClickLink('editors-note')}
+                    >
+                      {/* 1/4 of 4 columns */}
+                      <Col lg={3} md={3} sm={2} xs={2} />
+                      {/* 3/4 of 4 columns */}
+                      <Col lg={9} md={9} sm={10} xs={10}>
+                        <div className="medium-body text-white">
+                          Editor&apos;s Note
+                        </div>
+                      </Col>
+                    </Row>
+                  </span>
+
+                  <span key="thematic-threads">
+                    <Row
+                      className={`left-menu__year mb-2 cursor-pointer ${selectedYear &&
+                        'fade-out-content'}`}
+                      onClick={() => onClickLink('thematic-threads')}
+                    >
+                      {/* 1/4 of 4 columns */}
+                      <Col lg={3} md={3} sm={2} xs={2} />
+                      {/* 3/4 of 4 columns */}
+                      <Col lg={9} md={9} sm={10} xs={10}>
+                        <div className="medium-body text-white">
+                          Thematic Threads
+                        </div>
+                      </Col>
+                    </Row>
+                  </span>
 
                   {selectedYear !== null && (
                     <span
