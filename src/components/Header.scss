@@ -13,7 +13,6 @@
   content: '';
   height: 16px;
   width: 16px;
-  outline: 1px solid;
   transition: margin 0.5s;
 }
 
@@ -48,4 +47,5 @@
 
 .slider.round:before {
   border-radius: 50%;
+  border: 1px solid white;
 }
