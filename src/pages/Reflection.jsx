@@ -111,11 +111,16 @@ const Reflection = ({
                           href={linkTo}
                           className="small-body text-white text-opacity-50"
                         >
-                          <p className="mb-4 fade-second flex items-center">
-                            <span>{ReactHtmlParser(text)}</span>
-                            {linkTo && (
-                              <ArrowUpRight16 className="inline-block ml-1" />
-                            )}
+                          <p className="mb-4 fade-second flex flex-start">
+                            <span>
+                              {ReactHtmlParser(text)}
+                              {linkTo && (
+                                <ArrowUpRight16
+                                  className="ml-1 inline-block"
+                                  style={{ minWidth: '16px' }}
+                                />
+                              )}
+                            </span>
                           </p>
                         </a>
                       );
