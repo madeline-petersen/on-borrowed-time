@@ -79,11 +79,11 @@ const Header = ({
           <Col lg={9} md={8} sm={8} xs={8}>
             {pageId === 'thematic-threads' && (
               <div
-                className="flex items-center"
+                className={`flex items-center`}
                 onClick={() => setBackgroundColor(!isWhite)}
               >
-                <div>
-                  <span className="slider round -ml-2" />
+                <div className={`${isWhite ? 'white' : 'black'}`}>
+                  <span className="slider round" />
                   <span className="slider round" />
                 </div>
                 <div className="pl-4">
