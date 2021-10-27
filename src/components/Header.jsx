@@ -78,14 +78,14 @@ const Header = ({
           <Col lg={3} md={4} sm={4} xs={4} />
           <Col lg={9} md={8} sm={8} xs={8}>
             {pageId === 'thematic-threads' && (
-              <div className="flex items-center -mt-1.5">
-                <label className="switch">
-                  <input type="checkbox" />
-                  <span
-                    className="slider round"
-                    onClick={() => setBackgroundColor(!isWhite)}
-                  />
-                </label>
+              <div
+                className="flex items-center"
+                onClick={() => setBackgroundColor(!isWhite)}
+              >
+                <div>
+                  <span className="slider round -ml-2" />
+                  <span className="slider round" />
+                </div>
                 <div className="pl-4">
                   {isWhite ? `1984-2003` : `2003—2020`}
                 </div>
