@@ -281,7 +281,7 @@ const Event = ({
                           <Col lg={3} md={2} />
                           <Col lg={4} md={4}>
                             <p
-                              className={`small-body text-white mt-8 fade-first`}
+                              className={`small-body text-white mt-8 fade-first text-opacity-70`}
                             >
                               {ReactHtmlParser(section.image.caption)}
                             </p>
