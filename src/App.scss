@@ -178,6 +178,20 @@ a {
   }
 }
 
+.small-body-2 {
+  font-family: Graphik-Regular;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+
+  @media screen and (max-width: $md-minus-1) {
+    font-size: 11px;
+  }
+}
+
 .medium-caption {
   font-family: Graphik-Regular;
   font-size: 13px;

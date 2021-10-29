@@ -255,7 +255,7 @@ const Event = ({
                               <Col lg={3} md={2} />
                               <Col lg={4} md={10} sm={12} xs={12}>
                                 <p
-                                  className={`small-body text-white fade-first`}
+                                  className={`small-body-2 text-white fade-first`}
                                 >
                                   {ReactHtmlParser(paragraph)}
                                   <br />
