@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Col, Container, Row } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
 import PropTypes from 'prop-types';
@@ -6,17 +6,17 @@ import './ThematicThreads.scss';
 
 const ThematicThreads = ({ backgroundColor }) => {
   const thematicThreads1 = [
-    'Fear of Ambiguity',
+    'Fear o<span>f</span> Ambiguity',
     'In-between Identity',
-    'Seeking to Preserve Democratic Rights &amp; Freedoms',
+    'Seeking to Preserve Democratic Rights <span>&amp;</span> Freedoms',
     'Geographical Diaspora'
   ];
 
   const thematicThreads2 = [
-    'Solidarity & Resistance',
+    'Solidarity <span>&amp;</span> Resistance',
     'Hong Kong Identity',
-    'Advocating for Genuine Democracy in the midst of Eroding Rights & Freedoms',
-    'Cultural Diaspora'
+    'Advocating <span>f</span>or Genuine Democracy in the midst o<span>f</span> Eroding Rights <span>&amp;</span> Freedoms',
+    '<span>Cultural</span> Diaspora'
   ];
 
   return (

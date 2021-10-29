@@ -14,6 +14,38 @@ $xxl: 1800px;
 $xxl-minus-1: 1799px;
 
 @font-face {
+  font-family: 'Lyon Display Web';
+  src: url('LyonDisplay-LightItalic-Web.woff2') format('woff2'),
+       url('LyonDisplay-LightItalic-Web.woff') format('woff');
+  font-weight:  300;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+.LyonDisplay-LightItalic-Web {
+  font-family: 'Lyon Display Web';
+  font-weight:  300;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Lyon Display Web';
+  src: url('LyonDisplay-Light-Web.woff2') format('woff2'),
+       url('LyonDisplay-Light-Web.woff') format('woff');
+  font-weight:  300;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.LyonDisplay-Light-Web {
+  font-family: 'Lyon Display Web';
+  font-weight:  300;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
   font-family: LyonText;
   src: url('./LyonText-Regular.otf') format('opentype');
 }
@@ -52,14 +84,15 @@ a {
 }
 
 .thematic-thread-headline {
-  font-family: LyonText;
+  @extend .LyonDisplay-Light-Web;
   font-size: 100px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.2;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   max-width: fit-content;
+
+  span {
+    @extend .LyonDisplay-LightItalic-Web;
+  }
 
   // md
   @media screen and (max-width: $lg-minus-1) {
