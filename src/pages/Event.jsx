@@ -17,20 +17,12 @@ import hkIdentity from '../images/02_2020_HKIdentity.jpeg';
 import geniuneDemocracy from '../images/03_2020_GeniuneDemocracy.jpeg';
 import solidarityAndResistance from '../images/04_2020_SolidarityAndResistance.jpeg';
 import nationalAmnesia from '../images/05_2020_NationalAmnesia.jpeg';
-import one from '../images/1997-01.jpeg';
-import two from '../images/1997-02.jpeg';
-import three from '../images/1997-03.jpeg';
-import four from '../images/1997-04.jpeg';
 
 const imageLookup = {
   hkIdentity: hkIdentity,
   geniuneDemocracy: geniuneDemocracy,
   solidarityAndResistance: solidarityAndResistance,
   nationalAmnesia: nationalAmnesia,
-  one: one,
-  two: two,
-  three: three,
-  four: four,
   car: car,
   crowd: crowd,
   tanks: tanks,
