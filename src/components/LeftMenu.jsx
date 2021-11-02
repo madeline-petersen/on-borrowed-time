@@ -145,15 +145,19 @@ const LeftMenu = ({
 
                   <span key="editors-note">
                     <Row
-                      className={`left-menu__year mb-2 cursor-pointer ${selectedYear &&
-                        'fade-out-content'}`}
+                      className={`left-menu__year mb-2 ${selectedYear &&
+                        'fade-out-content'} pt-6`}
                       onClick={() => onClickLink('editors-note')}
                     >
+                      <Col lg={12} md={12} sm={12} xs={12}>
+                        {/* dividing line */}
+                        <p className="border-t border-white border-opacity-20 pt-8" />
+                      </Col>
                       {/* 1/4 of 4 columns */}
                       <Col lg={3} md={3} sm={2} xs={2} />
                       {/* 3/4 of 4 columns */}
                       <Col lg={9} md={9} sm={10} xs={10}>
-                        <div className="medium-body text-white">
+                        <div className="medium-body text-white cursor-pointer fit-content">
                           Editor&apos;s Note
                         </div>
                       </Col>
@@ -162,7 +166,7 @@ const LeftMenu = ({
 
                   <span key="thematic-threads">
                     <Row
-                      className={`left-menu__year mb-2 cursor-pointer ${selectedYear &&
+                      className={`left-menu__year mb-2 ${selectedYear &&
                         'fade-out-content'}`}
                       onClick={() => onClickLink('thematic-threads')}
                     >
@@ -170,7 +174,7 @@ const LeftMenu = ({
                       <Col lg={3} md={3} sm={2} xs={2} />
                       {/* 3/4 of 4 columns */}
                       <Col lg={9} md={9} sm={10} xs={10}>
-                        <div className="medium-body text-white">
+                        <div className="medium-body text-white cursor-pointer fit-content">
                           Thematic Threads
                         </div>
                       </Col>

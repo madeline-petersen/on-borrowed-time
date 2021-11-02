@@ -119,6 +119,10 @@ $xxl-minus-1: 1799px;
     }
   }
 
+  .fit-content {
+    max-width: fit-content;
+  }
+
   &__scenes {
     // fade in blurb/scenes
     top: calc(264px + 12px);
