@@ -149,7 +149,7 @@ const LeftMenu = ({
                         'fade-out-content'} pt-6`}
                       onClick={() => onClickLink('editors-note')}
                     >
-                      <Col lg={12} md={12} sm={12} xs={12}>
+                      <Col lg={11} md={11} sm={11} xs={11}>
                         {/* dividing line */}
                         <p className="border-t border-white border-opacity-20 pt-8" />
                       </Col>
