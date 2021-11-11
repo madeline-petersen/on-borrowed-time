@@ -95,7 +95,7 @@ $quarterHeight: calc(30vh - #{$a});
     opacity: 0;
     animation-name: delayed-fade-and-translate;
     animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     animation-delay: 4s;
     animation-fill-mode: forwards;
   }
@@ -103,7 +103,7 @@ $quarterHeight: calc(30vh - #{$a});
     opacity: 0;
     animation-name: delayed-fade-and-translate;
     animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     animation-delay: 4.25s;
     animation-fill-mode: forwards;
   }
