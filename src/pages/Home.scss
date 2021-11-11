@@ -24,15 +24,15 @@
     animation-fill-mode: forwards;
 
     &__english {
-      animation-delay: 1s;
+      animation-delay: 0.5s;
     }
 
     &__chinese {
-      animation-delay: 1.125s;
+      animation-delay: 0.625s;
     }
 
     &__year {
-      animation-delay: 1.25s;
+      animation-delay: 0.75s;
     }
   }
 }
