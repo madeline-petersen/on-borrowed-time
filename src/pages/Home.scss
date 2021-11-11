@@ -19,6 +19,7 @@
   .title {
     opacity: 0;
     animation-name: foreground-fade-in-and-translate;
+    animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
     animation-duration: 1.5s;
     animation-delay: 0s;
     animation-fill-mode: forwards;
