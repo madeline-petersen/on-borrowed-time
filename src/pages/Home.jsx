@@ -9,7 +9,7 @@ import ReactHtmlParser from 'react-html-parser';
 import ReactFullpage from '@fullpage/react-fullpage';
 
 const pluginWrapper = () => {
-  require('./fullpage.parallax.min.js');
+  require('./static/fullpage.parallax.min.js');
 };
 
 const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
@@ -70,6 +70,11 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
         pluginWrapper={pluginWrapper}
         scrollingSpeed={1000} /* Options here */
         parallax={true} /* Because we are using the extension */
+        parallaxOptions={{
+          type: 'cover',
+          percentage: 30,
+          property: 'translate'
+        }}
         parallaxKey={'aGstb25ib3Jyb3dlZHRpbWUuY29tX1dmR2NHRnlZV3hzWVhnPUV0cg=='}
         render={({ state, fullpageApi }) => {
           return (
