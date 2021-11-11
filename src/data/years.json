@@ -20,7 +20,7 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Modern Asian Studies",
                   "shortTitle": "The Welfare of Hong&nbsp;Kong People",
                   "bookTitle": "Diasporic Memories and Conceptual Geography in Post-Colonial Hong&nbsp;Kong",
                   "year": "2014",
@@ -33,7 +33,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Pacific Basin Law Journal",
                   "shortTitle": "An Expiring Lease",
                   "bookTitle": "The Sino-British Agreement and Nationality: Hong&nbsp;Kong&rsquo;s Future in the Hands of the People&rsquo;s Republic of China",
                   "year": "1990",
@@ -48,7 +48,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Journal of Democracy",
                   "shortTitle": "An Arms-Length Approach",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises",
                   "year": "2015",
@@ -86,7 +86,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Asian Affairs: An American Review",
                   "shortTitle": "The Locus of Loyalty",
                   "bookTitle": "The Hong&nbsp;Kong Model of &lsquo;One Country, Two Systems&rsquo;",
                   "year": "1987",
@@ -100,6 +100,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Time",
                   "shortTitle": "Hearts At Ease",
                   "bookTitle": "Business: Hong&nbsp;Kong&rsquo;s Golden Link",
                   "year": "1979",
@@ -148,7 +149,8 @@
               ],
               "resources": [
                 {
-                  "type": "Book Excerpt",
+                  "type": "Journal Excerpt",
+                  "publication": "United Nations Treaty",
                   "shortTitle": "The Sino-British Joint Declaration",
                   "bookTitle": "The Sino-British Joint Declaration",
                   "year": "1985",
@@ -166,7 +168,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Modern Asian Studies",
                   "shortTitle": "Basic Law",
                   "bookTitle": "The Basic Law of the Hong Kong Special Adminstration Region of the People&rsquo;s Republic of China",
                   "year": "2021",
@@ -181,7 +183,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "An American Review",
                   "shortTitle": "Characteristics of One Country, Two Systems",
                   "bookTitle": "One Country, Two Systems: A Theoretical Analysis",
                   "year": "1987",
@@ -199,7 +201,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Hong Kong Law Journal",
                   "shortTitle": "Uncharted Sea",
                   "bookTitle": "Basic Law and Constitutional Review: The First Decade",
                   "year": "2007",
@@ -247,7 +249,7 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "NYLS Journal of International and Comparative Law",
                   "shortTitle": "Ambiguous Language",
                   "bookTitle": "One Country, Two Systems: Hong&nbsp;Kong&rsquo;s Paradox of Politics and Business",
                   "year": "1987",
@@ -260,7 +262,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "American University International Law Review",
                   "shortTitle": "Fostering Skepticism",
                   "bookTitle": "Chinese and Western Treaty Practice: An Application to the Joint Declaration Between the People&rsquo;s Republic of China and Great Britain Concerning the Question of Hong&nbsp;Kong",
                   "year": "1986",
@@ -274,7 +276,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Asian Affairs: An American Review",
                   "shortTitle": "Is it &ldquo;One Country&rdquo; or &ldquo;Two Systems&rdquo;?",
                   "bookTitle": "The Hong&nbsp;Kong Model of &ldquo;One Country, Two Systems&rdquo;: Promises and Problems",
                   "year": "1987",
@@ -287,7 +289,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Asian Affairs: An American Review",
                   "shortTitle": "Skepticism of the Basic Law Draft",
                   "bookTitle": "The Hong&nbsp;Kong Model of &ldquo;One Country, Two Systems&rdquo;: Promises and Problems",
                   "year": "1987",
@@ -314,7 +316,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "NYLS Journal of International and Comparative Law",
                   "shortTitle": "Pessimism About the Declaration",
                   "bookTitle": "One Country, Two Systems: Hong&nbsp;Kong&rdquo;s Paradox of Politics and Business",
                   "year": "1987",
@@ -340,7 +342,7 @@
               ],
               "citations": [
                 {
-                  "text": "Jay, Goldstein R. “Chinese and Western Treaty Practice: An Application to the Joint Declaration Between the People&rsquo;s Republic of China and Great Britain Concerning the Question of Hong&nbsp;Kong.” <em>American University International Law Revie</em> 1, no. 1 (1986): 169.",
+                  "text": "Jay, Goldstein R. “Chinese and Western Treaty Practice: An Application to the Joint Declaration Between the People&rsquo;s Republic of China and Great Britain Concerning the Question of Hong&nbsp;Kong.” <em>American University International Law Review</em> 1, no. 1 (1986): 169.",
                   "linkTo": "https://digitalcommons.wcl.american.edu/cgi/viewcontent.cgi?article=1650&context=auilr"
                 }
               ]
@@ -374,6 +376,7 @@
               "resources": [
                 {
                   "type": "Book Excerpt",
+                  "publication": "Book Excerpts",
                   "shortTitle": "A Champion of Liberalisation",
                   "bookTitle": "China&rsquo;s Struggle for Democracy, its Prelude, Development, Aftermath, and Impact",
                   "year": "1990",
@@ -387,6 +390,7 @@
                 },
                 {
                   "type": "Book Excerpt",
+                  "publication": "Book Excerpts",
                   "shortTitle": "The Death of Hu Yaobang",
                   "bookTitle": "The Tiananmen Papers",
                   "year": "2002",
@@ -403,6 +407,7 @@
                 },
                 {
                   "type": "Book Excerpt",
+                  "publication": "Book Excerpts",
                   "shortTitle": "The Mourning of Hu Yaobang",
                   "bookTitle": "The Tiananmen Papers",
                   "year": "2002",
@@ -481,6 +486,7 @@
               "resources": [
                 {
                   "type": "Book Excerpt",
+                  "publication": "Book Excerpts",
                   "shortTitle": "&ldquo;Staying&rdquo;",
                   "bookTitle": "The People&rsquo;s Republic of Amnesia",
                   "year": "2014",
@@ -548,6 +554,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Capturing Tank Man",
                   "bookTitle": "How Stuart Franklin Took His Tank Man Photograph",
                   "preamble": "To learn more about photographer Stuart Franklin and his work through his book &ldquo;The Documentary Impulse&rdquo;<br></br>",
@@ -618,7 +625,7 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "UCLA Pacific Basin Law Journal",
                   "shortTitle": "A Constitutional Instrument",
                   "bookTitle": "National Security Law in Hong&nbsp;Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong&nbsp;Kong",
                   "year": "2002",
@@ -631,7 +638,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "UCLA Pacific Basin Law Journal",
                   "shortTitle": "Final Draft of Article 23 (Article 22)",
                   "bookTitle": "National Security Law in Hong&nbsp;Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong&nbsp;Kong",
                   "year": "2002",
@@ -644,7 +651,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "UCLA Pacific Basin Law Journal",
                   "shortTitle": "&ldquo;Subversion&rdquo; and &ldquo;National Unity&rdquo;",
                   "bookTitle": "National Security Law in Hong&nbsp;Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong&nbsp;Kong",
                   "year": "2002",
@@ -657,7 +664,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "UCLA Pacific Basin Law Journal",
                   "shortTitle": "An Acceptable Compromise",
                   "bookTitle": "National Security Law in Hong&nbsp;Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong&nbsp;Kong",
                   "year": "2002",
@@ -670,7 +677,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "UCLA Pacific Basin Law Journal",
                   "shortTitle": "Second Draft of Article 23",
                   "bookTitle": "National Security Law in Hong&nbsp;Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong&nbsp;Kong",
                   "year": "2002",
@@ -683,7 +690,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "UCLA Pacific Basin Law Journal",
                   "shortTitle": "Subversion-phobia",
                   "bookTitle": "National Security Law in Hong&nbsp;Kong: Quo Vadis a Study of Article 23 of the Basic Law of Hong&nbsp;Kong",
                   "year": "2002",
@@ -732,6 +739,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "&ldquo;Today Tiananmen, Tomorrow&rsquo;s Hong&nbsp;Kong&rdquo;",
                   "bookTitle": "Analysis—20 years ago, China promised Hong&nbsp;Kong; &rsquo;1 country, 2 systems&rsquo;; So much for promises.",
                   "author": "Victoria Hui",
@@ -748,7 +756,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Hong Kong Institute of Asia-Pacific Studies",
                   "shortTitle": "A Vivid Expression of Hong&nbsp;Kong Identity",
                   "bookTitle": "Hongkongese or Chinese: The Problem of Identity on the Eve of Resumption of Chinese Sovereignty over Hong&nbsp;Kong",
                   "year": "1997",
@@ -797,6 +805,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "An Impossible Dream",
                   "bookTitle": "Hong&nbsp;Kong On Borrowed Time",
                   "year": "1989",
@@ -809,7 +818,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Modern Asian Studies",
                   "shortTitle": "Caught Between Two Cultures",
                   "bookTitle": "Diasporic Memories and Conceptual Geography in Post-Colonial Hong&nbsp;Kong",
                   "year": "2014",
@@ -824,6 +833,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Hong&nbsp;Kong&lsquo;s Identity Begins to Crystallize ",
                   "bookT": "Communism: Fear And Anger in Hong&nbsp;Kong",
                   "year": "1989",
@@ -888,6 +898,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Debt of Memory",
                   "bookTitle": "The People&rsquo;s Republic of Amnesia",
                   "year": "2015",
@@ -903,7 +914,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "An International Quarterly",
                   "shortTitle": "Commemorating Tiananmen Square in Hong&nbsp;Kong",
                   "bookTitle": "Memory in Movement: Collective Identity and Memory Contestation in Hong&nbsp;Kong&rsquo;s Tiananmen Vigils",
                   "year": "2019",
@@ -1042,14 +1053,14 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Indiana Journal of Global Legal Studies",
                   "shortTitle": "The Emigration Scramble",
                   "bookTitle": "International Reaction to Hong&nbsp;Kong&rsquo;s Countdown to 1997: Doors Open to Hong&nbsp;Kong&rsquo;s Emigrants",
                   "year": "1995",
                   "author": "Susan Goldammer",
                   "content": [
                     "In 1997, the United Kingdom&rsquo;s ninety-nine year lease with China will expire, and sovereignty of Hong&nbsp;Kong and the governing of its six million people will transfer to the People&rsquo;s Republic of China (PRC). Because Hong&nbsp;Kong has become a highly developed economic center, the economic and social implications of this transfer are far-reaching. Business is the soul of Hong&nbsp;Kong; the colony&rsquo;s survival will depend on China&rsquo;s tolerance of a &ldquo;capitalist enclave on its socialist soil.&rdquo; British and Chinese officials entered into talks relating to the transfer in 1982. These talks concluded with the Joint Declaration on the Question of Hong&nbsp;Kong (Joint Declaration) in 1984. The Joint Declaration states that Hong&nbsp;Kong will become a Special Administrative Region (SAR) of the PRC and retain a high degree of autonomy as a capitalist system for at least fifty years after 1997.<br></br>",
-                    "The Tiananmen Square massacre on June 4, 1989, however, dissolved Hong&nbsp;Kong residents&rsquo; confidence in the Joint Declaration, and many began to doubt whether their personal liberties and lifestyles would truly remain protected after the takeover date of July 1, 1997. In 1990, the Basic Law-the law which will govern Hong&nbsp;Kong for the fifty years after the takeover-was promulgated after debate and numerous objections by the members of the drafting committee from Hong&nbsp;Kong. In many respects, the Basic Law is inconsistent with the Joint Declaration and the PRC constitution.&rsquo; Furthermore, in 1997, the Basic Law, as well as future Hong&nbsp;Kong legislation will be subordinate to the PRC constitution, and China will ultimately be in charge.&rsquo; <br></br>",
+                    "The Tiananmen Square massacre on June 4, 1989, however, dissolved Hong&nbsp;Kong residents&rsquo; confidence in the Joint Declaration, and many began to doubt whether their personal liberties and lifestyles would truly remain protected after the takeover date of July 1, 1997. In 1990, the Basic Law-the law which will govern Hong&nbsp;Kong for the fifty years after the takeover-was promulgated after debate and numerous objections by the members of the drafting committee from Hong&nbsp;Kong. In many respects, the Basic Law is inconsistent with the Joint Declaration and the PRC constitution.&lsquo;Furthermore, in 1997, the Basic Law, as well as future Hong&nbsp;Kong legislation will be subordinate to the PRC constitution, and China will ultimately be in charge.&rsquo; <br></br>",
                     "[...]<br></br>",
                     "Although emigration from Hong&nbsp;Kong has steadily increased since 1984, the mixed messages residents of Hong&nbsp;Kong received from the PRC in 1989 and 1990 caused a flood of residents to look for a country to move to before the 1997 takeover. The United States, Canada, and Australia began to receive large numbers of requests for immigration from Hong&nbsp;Kong residents. Some Hong&nbsp;Kong companies even set up overseas offices to satisfy their employees&rsquo; demands for foreign passports. Approximately one in ten Hong&nbsp;KongChinese will have acquired foreign nationality by 1997.&ldquo; Approximately 1.04 percent of Hong&nbsp;Kong&rsquo;s workforce emigrated in 1994 alone.&rdquo;"
                   ],
@@ -1058,19 +1069,21 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Culture of Emigration",
                   "bookTitle": "Culture of Emigration",
                   "year": "1997",
                   "author": "Cait Murphy",
                   "content": [
-                    "Although not everyone who says he will leave will do so, the idea of emigration is pervasive. There have been two Chinese-language comedies on television — Priceless Adventure and Uncle Bill and Aunt Lydia -- that draw on emigration for a theme. In my middle-class neighborhood Chu&rsquo;s Photo Shop displays a poster demonstrating that it can take pictures of the exact style and quality required for Canadian and U.S. visas. At a newsstand nearby I can buy the Hong&nbsp;Kong Standard, which regularly publishes a separate section on Canada. If I buy the South China Morning Post instead, I may come across an ad for fur-lined raincoats, clearly aimed at the Canada-bound. Or I can buy The Emigrant, a glossy Chinese-English magazine, circulation 25,000, which offers tips and background information for would-be emigrants. The pages are filled with display ads from moving companies, a pet transport service, and emigration consultants, who seek out business opportunities and help with the paperwork. A short walk beyond the newsstand, a real-estate office advertises mock-Tudor houses in Britain and a tour agency books flights on Canadian Airlines International, which offers more than twice as many flights to Canada as it did five years ago. At the airport one can buy books like Successful Migrating to Australia and New Zealand -- An Ideal Destination for Migrants and even picture books of Belize, which, until it stopped the program in late 1989 had sold citizenship to several hundred worried Hong&nbsp;Kong residents for a bargain price of $23,800."
+                    "Although not everyone who says he will leave will do so, the idea of emigration is pervasive. There have been two Chinese-language comedies on television — Priceless Adventure and Uncle Bill and Aunt Lydia — that draw on emigration for a theme. In my middle-class neighborhood Chu&rsquo;s Photo Shop displays a poster demonstrating that it can take pictures of the exact style and quality required for Canadian and U.S. visas. At a newsstand nearby I can buy the Hong&nbsp;Kong Standard, which regularly publishes a separate section on Canada. If I buy the South China Morning Post instead, I may come across an ad for fur-lined raincoats, clearly aimed at the Canada-bound. Or I can buy The Emigrant, a glossy Chinese-English magazine, circulation 25,000, which offers tips and background information for would-be emigrants. The pages are filled with display ads from moving companies, a pet transport service, and emigration consultants, who seek out business opportunities and help with the paperwork. A short walk beyond the newsstand, a real-estate office advertises mock-Tudor houses in Britain and a tour agency books flights on Canadian Airlines International, which offers more than twice as many flights to Canada as it did five years ago. At the airport one can buy books like Successful Migrating to Australia and New Zealand — An Ideal Destination for Migrants and even picture books of Belize, which, until it stopped the program in late 1989 had sold citizenship to several hundred worried Hong&nbsp;Kong residents for a bargain price of $23,800."
                   ],
                   "citation": "Murphy, Cait N. A Culture of Emigration. The Atlantic, April 1991. Archived."
                 },
                 {
                   "type": "Report Excerpt",
+                  "publication": "Hong Kong Government",
                   "shortTitle": "Hong&nbsp;Kong Emigration",
-                  "bookTitle": "—",
+                  "bookTitle": "Hong Kong's Population: Characteristics and Trends",
                   "year": "—",
                   "content": null,
                   "linkTo": "https://www.info.gov.hk/info/population/eng/pdf/report_eng.pdf"
@@ -1087,7 +1100,7 @@
                     "I&rsquo;d say that the community I live in is quite different, and maybe even a little removed, from what people would call &ldquo;Hong&nbsp;Kong society&rdquo;. My school is pretty much a community in and of itself, rather remotely located in the south side of the island, which is sort of like a suburb of Hong&nbsp;Kong. Many of the students live in this area, as well. A large part of the student body is made up of expatriates from the US. Of course, if you took a sampling of our student population, you&rsquo;d find among them a number of locals, ABCs (American-born Chinese) such as myself, Canadians, and many others from various countries all over the world. Oftentimes I feel that we at the Hong&nbsp;Kong International School live in a world almost separate from that of the rest of the people in Hong&nbsp;Kong, not really being able to know how the locals think and feel. My school has a reputation for affluence, and this contributes to furthering the distance between the greater community and our own. Even so, my community is strongly impacted by what goes on in Hong&nbsp;Kong, especially by the changes taking place regarding the handover that will take place in about two months.<br></br>",
                     "When I was younger, the year 1997, which has carried much significance to the people here for the past decades, always seemed far away. I never expected it to come so soon; I always thought my family would have moved back to the States by the time it arrived. So, I was taken a bit by surprise when, during my recent visit to the US for the Christmas holidays, I found myself feeling solemn among the noise-makers and streamers of the cheerful revelers who welcomed in the New Year. To my ears, their shouts of &ldquo;1997!&rdquo; had a rather ominous ring.<br></br>",
                     "Personally, I&rsquo;m sorry to see Britain go after having established a very successful system in a prospering city. At the same time, I have mixed feelings about China taking over again. On the one hand, as a Chinese person, I should be proud that my &ldquo;mother country,&rdquo; so to speak, is regaining control of something that is rightfully hers. I also have some faith that China will be sensible enough to leave the freedom and autonomy of Hong&nbsp;Kong&rsquo;s people alone. On the other hand, I fear that the plays for power going on right now between locals, Chinese leaders, and a few remaining figures of British authority may contribute to a possible downfall of our flourishing colony. Ultimately, I hope that China will respect the &ldquo;one country, two systems&rdquo; agreement and will make decisions that will ensure the stability and continuation of Hong&nbsp;Kong&rsquo;s success.<br></br>",
-                    "As the British move out and the Chinese come back in, many people&rsquo;s lives are going to be dramatically affected. There are locals who have emigrated to other countries--mostly to the US, Canada and Australia--and are staying there. There are also many who have recently come back from these countries to live in Hong&nbsp;Kong for the meantime; they had initially left so that a door would be open for them just in case something should happen here that might threaten their safety. However, there are locals who can&rsquo;t afford to leave Hong&nbsp;Kong, who just have to stay here and see what happens.<br></br>",
+                    "As the British move out and the Chinese come back in, many people&rsquo;s lives are going to be dramatically affected. There are locals who have emigrated to other countries—mostly to the US, Canada and Australia—and are staying there. There are also many who have recently come back from these countries to live in Hong&nbsp;Kong for the meantime; they had initially left so that a door would be open for them just in case something should happen here that might threaten their safety. However, there are locals who can&rsquo;t afford to leave Hong&nbsp;Kong, who just have to stay here and see what happens.<br></br>",
                     "My situation is a bit different. Having originally come to Hong&nbsp;Kong from the States as an American citizen, I don&rsquo;t have as much to worry about. I can basically leave any time I want to, and I don&rsquo;t plan to remain here permanently, anyway. I&rsquo;m staying here for another year to finish my senior year of high school, and then going back to the US for college. My parents, also US citizens, can leave if they feel the need to. They are both working here, however, and are unsure about their future. At the moment,they are looking at possibly staying for a few more years and then returning to the US, or maybe somewhere else in Asia where business opportunities exist. Like most others in Hong&nbsp;Kong, my family faces an uncertain future, but I hope things will remain stable here when the Chinese take over so that nothing drastic comes to pass."
                   ],
                   "citation": "“Distancing of Communities.” Hong&nbsp;Kong &rsquo;97: Lives in Transition. Public Broadcasting Service, 1997. Archived."
@@ -1138,13 +1151,14 @@
                     "The whole atmosphere of Hong&nbsp;Kong is changing, and one can almost sense a different feeling in the air. What I am most impressed with, however, is the attention the international media are giving to Hong&nbsp;Kong. Before the approach of this prodigious event, most people had no idea where Hong&nbsp;Kong was and probably didn&rsquo;t even care that much. Now, the world is being given the opportunity to focus its attention here and learn to a little about a place they never knew much about before.<br></br>",
                     "The whole city is pretty much buzzing right now. The upcoming event is all many people can talk about, and local newspapers just can&rsquo;t print enough material concerning the handover. There has been so much fuss about it that many people have acquired what has jokingly been labelled as &ldquo;handover fatigue&rdquo;. Nevertheless, I have been enjoying the excitement.<br></br>",
                     "The stately skyline has been set ablaze with the colorful lights that decorate the buildings; the streets are adorned with banners. There have been countless special events, shows, concerts, exhibitions, parties, etc., going on every day for the two months that preceded the transition. Some of these mark the sad farewell Britain is bidding the crown colony it fostered for so long. Others joyously proclaim China&rsquo;s proud reunification with its long-lost entity. In either case, strong nationalism exudes from both sides.<br></br>",
-                    "Just the other night, I attended a concert given by the English military marching bands, who are due to set sail back to the UK in a couple of days. As the familiar strains of &ldquo;Auld Lang Syne&rdquo; reached my ears, I saw the governor Chris Patten as well as many other British proudly singing to the tune. It was a sentimental moment, and I could feel the dignified sadness they were experiencing . These British people are concluding a prosperous rule here, and many are preparing to return to their homes. On the other hand, the glimpses of Chinese performances I&rsquo;ve caught on the news have all been very bright--and a little overly-optimistic in my opinion.<br></br>",
+                    "Just the other night, I attended a concert given by the English military marching bands, who are due to set sail back to the UK in a couple of days. As the familiar strains of &ldquo;Auld Lang Syne&rdquo; reached my ears, I saw the governor Chris Patten as well as many other British proudly singing to the tune. It was a sentimental moment, and I could feel the dignified sadness they were experiencing . These British people are concluding a prosperous rule here, and many are preparing to return to their homes. On the other hand, the glimpses of Chinese performances I&rsquo;ve caught on the news have all been very bright—and a little overly-optimistic in my opinion.<br></br>",
                     "Within my own group of relatives and close friends, &ldquo;celebrations&rdquo; are also being planned. On the night of June 30th, I will be getting together with my mother&rsquo;s side of the family at a relative&rsquo;s house for a big dinner. We&rsquo;ll be watching the fireworks from her balcony and witnessing the handover ceremony on TV. On July 1st, I&rsquo;m eating another big dinner with my dad&rsquo;s side of the family as well as some friends, several of whom have flown over from the States. Many of my friends are doing something similar, while some whom I&rsquo;ve talked to still haven&rsquo;t planned anything yet. I anticipate a smooth transition and hope that nothing very drastic will occur to disrupt Hong&nbsp;Kong&rsquo;s normal peaceful atmosphere. It&rsquo;s only a matter of days until the world will be able to witness this century-long awaited event!<br></br>"
                   ],
                   "citation": "“The City Is Buzzing” Hong&nbsp;Kong &rsquo;97: Lives in Transition. Public Broadcasting Service, 1997. Archived."
                 },
                 {
-                  "type": "Book Excerpt",
+                  "type": "Journal Excerpt",
+                  "publication": "Hong Kong Institute of Asia-Pacific Studies",
                   "shortTitle": "Hongkongnese or Chinese",
                   "bookTitle": "Hongkongese or Chinese: The Problem of Identity on the Eve of Resumption of Chinese Sovereignty over Hong&nbsp;Kong",
                   "year": "1997",
@@ -1239,13 +1253,14 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "Flowering In the Face Of a Giant Unknown",
                   "bookTitle": "Flowering In the Face Of a Giant Unknown",
                   "year": "1997",
                   "author": "Edward A. Gargan",
                   "content": [
                     "Over the last 150 years, Hong&nbsp;Kong has been ruled mostly by plumed, beribboned and brocaded emissaries from London who, over the decades, were buttressed by legions of mostly second-rate British bureaucrats (Filth, as they&rsquo;ve been known: Failed in London, Try Hong&nbsp;Kong), all in the service of the great British trading houses. Nowhere in their thinking was there much room for Hong&nbsp;Kong&rsquo;s local population, whom until recent memory were barred from the clubs, management suites and halls of government. British colonial culture here consisted largely of Chinese seascapes by British artists, and portraits, traveling string quartets and the Christmas pantomime, which more often than not poked fun at local ways.<br></br>",
-                    "To the colonialists, and the foreign traders and bankers who followed them, this was Hong&nbsp;Kong&rsquo;s culture. But here, as Hong&nbsp;Kong grew from a cluster of villages to one of the world&rsquo;s foremost economies, the territory&rsquo;s culture evolved in ways neither completely Chinese nor mimetically British -- in ways that were distinctly Hong&nbsp;Kong, suffused by the transient nature of life here and by the influx of millions of refugees fleeing Communism, and epitomized by a language that emerged at some distance from that spoken just over the fence in China."
+                    "To the colonialists, and the foreign traders and bankers who followed them, this was Hong&nbsp;Kong&rsquo;s culture. But here, as Hong&nbsp;Kong grew from a cluster of villages to one of the world&rsquo;s foremost economies, the territory&rsquo;s culture evolved in ways neither completely Chinese nor mimetically British — in ways that were distinctly Hong&nbsp;Kong, suffused by the transient nature of life here and by the influx of millions of refugees fleeing Communism, and epitomized by a language that emerged at some distance from that spoken just over the fence in China."
                   ],
                   "citation": "Gargan, Edward A. “Flowering In the Face Of a Giant Unknown.” The New York Times, February 16, 1997, sec. 2.",
                   "linkTo": "https://www.nytimes.com/1997/02/16/arts/flowering-in-the-face-of-a-giant-unknown.html"
@@ -1264,7 +1279,8 @@
                   "citation": "&ldquo;Pearl Of China.&rdquo; Hong&nbsp;Kong &rsquo;97: Lives in Transition. Public Broadcasting Service, 1997. Archived."
                 },
                 {
-                  "type": "Article",
+                  "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Death of Hong Kong",
                   "bookTitle": "The Death of Hong Kong",
                   "year": "1995",
@@ -1321,6 +1337,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Words of a Prince and a President",
                   "bookTitle": "Words of a Prince and a President: Continuity, Change and Assurances",
                   "year": "1997",
@@ -1335,6 +1352,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Lausen",
                   "shortTitle": "Five-second Vacuum",
                   "bookTitle": "Can our &lsquo;global city&rsquo; offer transnational solidarity?",
                   "year": "2021",
@@ -1350,7 +1368,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Modern Asian Studies",
                   "shortTitle": "The Concept of &lsquo;China&rsquo;",
                   "bookTitle": "Diasporic Memories and Conceptual Geography in Post-colonial Hong&nbsp;Kong",
                   "year": "2014",
@@ -1365,6 +1383,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "Monsoon-borne Rain",
                   "bookTitle": "China Resumes Control of Hong&nbsp;Kong, Concluding 156 Years of British Rule",
                   "year": "1997",
@@ -1381,6 +1400,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "A Kaleidoscope of Emotions",
                   "bookTitle": "A Complex of Moods, a Kaleidoscope of Emotions",
                   "year": "1997",
@@ -1411,6 +1431,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "Buds of Political Pluralism",
                   "bookTitle": "The Year of the Trojan Horse",
                   "year": "1997",
@@ -1428,8 +1449,8 @@
                   "linkTo": "https://timesmachine.nytimes.com/timesmachine/1997/07/01/910597.html?pageNumber=1"
                 },
                 {
-                  "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "type": "Article Excerpt",
+                  "publication": "New York Times",
                   "shortTitle": "A Sense of the Unreal",
                   "bookTitle": "Letters from Hong&nbsp;Kong: Amid Changing Symbols, a Sense of the Unreal",
                   "year": "1997",
@@ -1445,6 +1466,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Challenge Ahead—SPEECH",
                   "bookTitle": "Inaugural Speech by the Honourable Tung Chee Hwa Chief Executive of the Hong Kong Special Administrative Region of the People&rsquo;s Republic of China on July 1, 1997",
                   "year": "1997",
@@ -1464,6 +1486,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Culture and the Politics of Disappearance",
                   "bookTitle": "Hong&nbsp;Kong: Culture and the Politics of Disappearance",
                   "year": "2011",
@@ -1569,7 +1592,7 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Canadian Institute of International Affairs",
                   "shortTitle": "A Pivotal Visit",
                   "bookTitle": "Hong&nbsp;Kong, 1 July 2003—Half a Million Protestors: The Security Law, Identity Politics, Democracy, and China.",
                   "year": "2003",
@@ -1579,11 +1602,12 @@
                     "[...]<br></br>",
                     "This demand from the PRC did not recognize the difficulties and realities of Hong&nbsp;Kong politics, whose pluralistic nature and opposing political forces mean that any legislation must be carefully prepared, lobbied and presented. The Tung administration in turn floated the idea that legislation pursuant to Article 23 should be passed by the LegCo and enacted by the summer of 2003. As a result, a timetable was decided between the PRC and the HKSAR, with the public remaining ignorant of these confidential arrangements and decisions.<br></br>"
                   ],
-                  "citation": "Lo, Sonny. “Hong&nbsp;Kong, 1 July 2003—Half a Million Protestors: The Security Law, Identity Politics, Democracy, and China.” <em>Canadian Institute of International Affair</em>s 60, no. 4 (2004): 2. ",
+                  "citation": "Lo, Sonny. “Hong&nbsp;Kong, 1 July 2003—Half a Million Protestors: The Security Law, Identity Politics, Democracy, and China.” <em>Canadian Institute of International Affairs</em>s 60, no. 4 (2004): 2. ",
                   "linkTo": "https://3mea0n49d5363860yn4ri4go-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/BTH-60-4-2004.pdf"
                 },
                 {
                   "type": "Report Excerpt",
+                  "publication": "Human Rights Brief",
                   "shortTitle": "Historical Revisions to Article 23",
                   "bookTitle": "The Threat of Article 23 to Civil Liberties in the Hong&nbsp;Kong Special Adminstrative Region",
                   "year": "2003",
@@ -1607,6 +1631,7 @@
                 },
                 {
                   "type": "Report Excerpt",
+                  "publication": "National Democractic Institute",
                   "shortTitle": "An Empty Promise",
                   "bookTitle": "The Promise of Democratization in Hong&nbsp;Kong: The Impact of July’s Protest Demonstrations on the November 23 District Council Elections A Pre-Election Report",
                   "year": "2003",
@@ -1661,6 +1686,7 @@
               "resources": [
                 {
                   "type": "Report Excerpt",
+                  "publication": "National Democractic Institute",
                   "shortTitle": "&ldquo;Regina, we have better things to do&rdquo;",
                   "bookTitle": "The Promise of Democratization in Hong&nbsp;Kong: The Impact of July’s Protest Demonstrations on the November 23 District Council Elections A Pre-Election Report.",
                   "year": "2003",
@@ -1673,6 +1699,7 @@
                 },
                 {
                   "type": "Report Excerpt",
+                  "publication": "National Democratic Institute",
                   "shortTitle": "Economic Crisis and SARS Pandemic",
                   "bookTitle": "The Promise of Democratization in Hong&nbsp;Kong: The Impact of July’s Protest Demonstrations on the November 23 District Council Elections A Pre-Election Report.",
                   "year": "2003",
@@ -1686,7 +1713,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Asian Economic Papers",
                   "shortTitle": "Doom and Gloom",
                   "bookTitle": "Economic Impact of SARS: The Case of Hong&nbsp;Kong",
                   "year": "2004",
@@ -1703,6 +1730,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Fever Dream",
                   "bookTitle": "When SARS Ended",
                   "year": "2020",
@@ -1718,6 +1746,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The &ldquo;Iron Lady&rdquo; of the East",
                   "bookTitle": "Defiant Regina Ip Stands by Her Handling of Article 23.",
                   "year": "2003",
@@ -1725,10 +1754,10 @@
                   "content": [
                     "Regina Ip Lau Suk-yee stood by comments about Adolf Hitler&rsquo;s rise to power, as well as remarks that taxi drivers and restaurant waiters would not be interested in details of the bill.<br></br>",
                     "&lsquo;I think looking back, of course one could always say there are ways in which we could have done better. But I can&rsquo;t really say that some genuine mistakes were made,&rsquo; she said in an interview with the South China Morning Post.<br></br>",
-                    "Mrs Ip said she regretted using Hitler&rsquo;s name during a heated public forum over the proposals for legislation under Article 23 of the Basic Law. But she added: &rsquo;I don&rsquo;t feel my remarks are entirely without justification.&rsquo;<br></br>",
-                    "The security chief came under fire in November for her comment during a debate at City University: &rsquo;Don&rsquo;t believe democracy will be a panacea. Adolf Hitler was returned by universal suffrage and he killed seven million Jews.<br></br>",
-                    "Mrs Ip has also been criticised for her remarks about taxi drivers and waiters. She said: &rsquo;It is really incredible that people could make mountains out of this molehill. I was talking about interest in the bill.<br></br>",
-                    "&rsquo;From my experience of government, whenever we have issued a white or blue bill, rarely have we received specific comments from general members of the public other than professional or interest groups. That is a fact.&rsquo;<br></br>"
+                    "Mrs Ip said she regretted using Hitler&rsquo;s name during a heated public forum over the proposals for legislation under Article 23 of the Basic Law. But she added: &lsquo;I don&rsquo;t feel my remarks are entirely without justification.&rsquo;<br></br>",
+                    "The security chief came under fire in November for her comment during a debate at City University: &lsquo;Don&rsquo;t believe democracy will be a panacea. Adolf Hitler was returned by universal suffrage and he killed seven million Jews.<br></br>",
+                    "Mrs Ip has also been criticised for her remarks about taxi drivers and waiters. She said: &lsquo;It is really incredible that people could make mountains out of this molehill. I was talking about interest in the bill.<br></br>",
+                    "&lsquo;From my experience of government, whenever we have issued a white or blue bill, rarely have we received specific comments from general members of the public other than professional or interest groups. That is a fact.&rsquo;<br></br>"
                   ],
                   "citation": "Buddle, Cliff. “Defiant Regina Ip Stands by Her Handling of Article 23.” South China Morning Post. South China Morning Post, March 11, 2003.",
                   "linkTo": "https://www.scmp.com/article/409027/defiant-regina-ip-stands-her-handling-article-23"
@@ -1768,7 +1797,7 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Human Rights Brief",
                   "shortTitle": "Government&rsquo;s defence of Article 23",
                   "bookTitle": "The Threat of Article 23 to Civil Liberties in the Hong&nbsp;Kong Special Adminstrative Region",
                   "year": "2003",
@@ -1781,6 +1810,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "The Largest Demonstration Since 1989",
                   "bookTitle": "Hundreds of Thousands in Hong&nbsp;Kong Protest Security Laws",
                   "year": "2003",
@@ -1795,6 +1825,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Protests Against National Security Reform",
                   "bookTitle": "A Brief History of Protest in Post-Handover Hong&nbsp;Kong",
                   "year": "2019",
@@ -1809,6 +1840,7 @@
                 },
                 {
                   "type": "Report Excerpt",
+                  "publication": "Human Rights Watch",
                   "shortTitle": "A Porous Border",
                   "bookTitle": "A Question of Patriotism: Human Rights and Democratization in Hong&nbsp;Kong",
                   "year": "2004",
@@ -1856,6 +1888,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "The Resignations of Regina Ip and Antony Leung",
                   "bookTitle": "2 Top Officials in Hong&nbsp;Kong Resign in Wake of Protests",
                   "year": "2003",
@@ -1864,7 +1897,7 @@
                     "The resignations of Regina Ip, the secretary of security, and Antony Leung, the financial secretary, represent a very public humiliation for Beijing because the two had the reputation of enjoying particularly close ties to top Communist officials.<br></br>",
                     "[...]<br></br>",
                     "Mrs. Ip and Mr. Tung said in separate statements this evening that she had actually submitted her resignation on June 25, and that Mr. Tung had tried to talk her out of it before finally accepting it.<br></br>",
-                    "The government&rsquo;s insistence that Mrs. Ip gave her resignation three weeks ago but that nobody found out about it until now struck political experts. &rsquo;&rsquo;The government obviously doesn&rsquo;t want it to look like she&rsquo;s resigning under pressure from the demonstrations,&rsquo;&rsquo; said Michael Davis, a professor of law and public affairs at the Chinese University of Hong&nbsp;Kong.<br></br>",
+                    "The government&rsquo;s insistence that Mrs. Ip gave her resignation three weeks ago but that nobody found out about it until now struck political experts. &ldquo;The government obviously doesn&rsquo;t want it to look like she&rsquo;s resigning under pressure from the demonstrations,&rdquo; said Michael Davis, a professor of law and public affairs at the Chinese University of Hong&nbsp;Kong.<br></br>",
                     "Mr. Leung is the third-ranking official in the government, after Mr. Tung and Donald Tsang, the chief secretary. But he has kept a very low public profile since he saved himself $24,000 by buying a Lexus LS430 luxury sedan a month before he raised luxury car taxes steeply in March as part of an unpopular series of tax increases.<br></br>"
                   ],
                   "citation": "Bradsher, Keith. “2 Top Officials in Hong&nbsp;Kong Resign in Wake of Protests.” The New York Times. The New York Times, July 17, 2003.",
@@ -1896,6 +1929,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Uncharted Waters",
                   "bookTitle": "Hong&nbsp;Kong Cabinet Faces Political Crisis",
                   "year": "2003",
@@ -1919,7 +1953,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Singapore Journal of Legal Studies",
                   "shortTitle": "Forced Withdrawal",
                   "bookTitle": "Hong&nbsp;Kong’s Political Autonomy and Its Continuing Struggle For Universal Suffrage",
                   "author": "Phil C.W. Chan",
@@ -1965,6 +1999,7 @@
               "resources": [
                 {
                   "type": "Report Excerpt",
+                  "publication": "Human Rights Watch",
                   "shortTitle": "Beijing&rsquo;s Conclusion",
                   "bookTitle": "A Question of Patriotism: Human Rights and Democratization in Hong&nbsp;Kong",
                   "author": "Human Rights Watch",
@@ -1978,6 +2013,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Golden &ldquo;Gift&rdquo;",
                   "bookTitle": "Golden gift to make HK shine (HK Edition)",
                   "year": "2003",
@@ -2020,8 +2056,8 @@
               "resources": [
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
-                  "shortTitle": "The Pace of Democratization",
+                  "publication": "Loyola University Chicago International Law Review",
+                  "shortTitle": "The Pace of Democratisation",
                   "bookTitle": "The Basic Law and Democratization in Hong&nbsp;Kong",
                   "author": "Michael C. Davis",
                   "year": "2006",
@@ -2033,7 +2069,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Singapore Journal of Legal Studies",
                   "shortTitle": "Erosion of Autonomy",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Political Autonomy and Its Continuing Struggle For Universal Suffrage",
                   "author": "Phil C.W.",
@@ -2046,6 +2082,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Article 45, Article 68",
                   "bookTitle": "Chapter IV—Political Structure: Section 1, The Chief Executive; Section 3, The Legislature",
                   "author": "Hong&nbsp;Kong Government",
@@ -2066,6 +2103,7 @@
                 },
                 {
                   "type": "Report Excerpt",
+                  "publication": "Human Rights Watch",
                   "shortTitle": "It Is All Very Clear",
                   "bookTitle": "A Question of Patriotism: Human Rights and Democratization in Hong&nbsp;Kong",
                   "author": "Human Rights Watch",
@@ -2086,7 +2124,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "WORD",
                   "shortTitle": "A Mirror Cabinet",
                   "bookTitle": "Discourse, Democracy and Diplomacy: a Pragmatic Analysis of the Occupy Central Movement in Hong&nbsp;Kong",
                   "author": "Jacob L. Mey and Hans J. Ladegaard",
@@ -2146,6 +2184,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Spirit of Disobedience",
                   "bookTitle": "The Spirit of Civil Disobedience",
                   "author": "Luke Cooper",
@@ -2159,6 +2198,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Operation Yellowbird",
                   "bookTitle": "‘Without Justice, There Is No Peace’: Tiananmen Memories Spark Resistance In Hong&nbsp;Kong",
                   "author": "Alice Su",
@@ -2173,6 +2213,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Civil Disobedience as a Lethal Weapon",
                   "bookTitle": "The Most Lethal Weapon of Civil Disobedience",
                   "author": "Benny Tai",
@@ -2185,6 +2226,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Manual of Civil Disobedience",
                   "bookTitle": "Manual of Civil Disobedience",
                   "author": "Occupy Central with Love and Peace",
@@ -2198,6 +2240,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Fire Disrupting Dreams",
                   "bookTitle": "The Principle Of Occupy Central Is To Pursue Justice",
                   "author": "Yaoting Dai",
@@ -2274,7 +2317,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The Round Table: The Commonwealth Journal of International Affairs",
                   "shortTitle": "Electoral Recommendations",
                   "bookTitle": "Hong&nbsp;Kong’s Umbrella Movement",
                   "author": "Johannes Chan",
@@ -2288,7 +2331,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "China Perspectives",
                   "shortTitle": "An Inherent Conflict of Interpretation",
                   "bookTitle": "Hong&nbsp;Kong after the Umbrella Movement: An uncertain future for &ldquo;One Country Two Systems&rdquo;",
                   "author": "Samson Yuen",
@@ -2303,7 +2346,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "E-International Relations",
                   "shortTitle": "Beijing the sole author of &ldquo;One Country Two Systems&rdquo;",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement and Beijing&rsquo;s Failure to Honor the Basic Law",
                   "author": "Michael C. Davis",
@@ -2316,7 +2359,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Journal of Democracy",
                   "shortTitle": "Drawn Lines",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises",
                   "author": "Michael C. Davis",
@@ -2330,7 +2373,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "WORD",
                   "shortTitle": "A Prerequiste of Patriotism",
                   "bookTitle": "Discourse, democracy and diplomacy: A pragmatic analysis of the Occupy Central movement in Hong&nbsp;Kong",
                   "author": "Jacob L. Mey and Hans J. Ladegaard",
@@ -2347,6 +2390,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "Redefining a &ldquo;High Degree of Autonomy&rdquo;",
                   "bookTitle": "Beijing&rsquo;s &ldquo;White Paper&rdquo; Sets Off a Firestorm in Hong&nbsp;Kong",
                   "author": "Alan Wong",
@@ -2418,6 +2462,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "In Hong&nbsp;Kong, an Unofficial Election Draws Beijing’s Ire",
                   "bookTitle": "In Hong&nbsp;Kong, an Unofficial Election Draws Beijing’s Ire",
                   "author": "Michael Forsythe, Chris Buckley, and Alan Wong",
@@ -2461,6 +2506,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Civic Nomination",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement",
                   "author": "Anthony Kuhn",
@@ -2565,6 +2611,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Speak Up, Take Action",
                   "bookTitle": "Speak Up, Take Action",
                   "author": "Oclphkenglish",
@@ -2593,7 +2640,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Journal of Democracy",
                   "shortTitle": "A Misrepresentation of Public Opinion",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises",
                   "author": "Michael C. Davis",
@@ -2608,7 +2655,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The Round Table: The Commonwealth Journal of International Affairs",
                   "shortTitle": "The NPCSC Decision",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement",
                   "author": "Johannes Chan",
@@ -2636,7 +2683,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "WORD",
                   "shortTitle": "Democratic Centralism",
                   "bookTitle": "Discourse, Democracy and Diplomacy: a Pragmatic Analysis of the Occupy Central Movement in Hong&nbsp;Kong",
                   "author": "Jacob L. Mey, and Hans J. Ladegaard",
@@ -2685,6 +2732,7 @@
               "resources": [
                 {
                   "type": "Book Excerpt",
+                  "publication": "Book Excerpts",
                   "shortTitle": "Young Leading Figures—BOOK",
                   "bookTitle": "For The Love Of Hong&nbsp;Kong: A Memoir From My City Under Siege",
                   "author": "Hana Meihan Davis",
@@ -2697,6 +2745,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "September 26: Boycotting Class ",
                   "bookTitle": "Hong&nbsp;Kong students storm government HQ in challenge to Beijing",
                   "author": "James Pomfret",
@@ -2713,6 +2762,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Occupy Central Supports Students",
                   "bookTitle": "Benny Tai: Hong&nbsp;Kong Protests ‘Beyond What I Imagined’",
                   "author": "Grace Tsoi",
@@ -2741,6 +2791,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Everday Object",
                   "bookTitle": "How Umbrellas Became The Symbol Of The Hong&nbsp;Kong Protests",
                   "author": "Zack Beauchamp",
@@ -2762,6 +2813,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Language of Revolt",
                   "bookTitle": "Don&rsquo;t Call Hong&nbsp;Kong&rsquo;s Protests an &lsquo;Umbrella Revolution&rsquo;",
                   "author": "Chris Yeung",
@@ -2818,6 +2870,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Two Forms of Nationalism",
                   "bookTitle": "The 2014 Hong Kong Protests: A History of Youth Identity",
                   "author": "Thomas Elias Siddall",
@@ -2864,6 +2917,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "People of the Umbrella Generation",
                   "bookTitle": "What&rsquo;s Next For Hong&nbsp;Kong?",
                   "author": "Benny Yiu-ting Tai",
@@ -2900,7 +2954,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "E-International",
                   "shortTitle": "Awakening Political Consciousness",
                   "bookTitle": "The Hong&nbsp;Kong Umbrella Movement: A Students’ or a People’s Movement?",
                   "author": "Che-po Chan",
@@ -2914,6 +2968,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Tear Gas and the Betrayal of Hong&nbsp;Kong",
                   "bookTitle": "Tear Gas and the Betrayal of Hong&nbsp;Kong",
                   "author": "Bon Cheng and Yvonne Chiu",
@@ -2927,6 +2982,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Messages from Hong&nbsp;Kong: When We Felt Threatened, We Opened Umbrellas and Raised Our Hands",
                   "bookTitle": "&lsquo;When We Felt Threatened, We Opened Umbrellas and Raised Our Hands&rsquo;",
                   "author": "James Fallow",
@@ -2945,7 +3001,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "China Perspectives",
                   "shortTitle": "The Creation Of A Collective Memory",
                   "bookTitle": "Art And Culture: Hong&nbsp;Kong Or The Creation Of A Collective Memory",
                   "author": "Gérard Henry",
@@ -2991,6 +3047,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Fragmented Leadership",
                   "bookTitle": "Hong&nbsp;Kong: Examining the Impact of the “Umbrella Movement”",
                   "author": "Richard C. Bush",
@@ -3004,7 +3061,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Journal of Democracy",
                   "shortTitle": "The Committed and Uncommitted",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement: The Protest and Beyond",
                   "author": "Victoria Tin-bor",
@@ -3030,6 +3087,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Shake the Economy",
                   "bookTitle": "Why Did Hong&nbsp;Kong’s Umbrella Movement Fail?",
                   "author": "Tyler Y. Headley and Cole Tanigawa-Lau",
@@ -3046,7 +3104,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "WORD",
                   "shortTitle": "Coming of Age",
                   "bookTitle": "Discourse, Democracy and Diplomacy: a Pragmatic Analysis of the Occupy Central Movement in Hong&nbsp;Kong",
                   "author": "Jacob L. Mey and Hans J. Ladegaard",
@@ -3101,6 +3159,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Suspected of Murder",
                   "bookTitle": "Taiwan Issues Arrest Warrant for HK Youth Suspected of Murder",
                   "author": "EJINSIGHT",
@@ -3118,6 +3177,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Charges for Money Laundering",
                   "bookTitle": "‘Body folded in suitcase’: gruesome details emerge of Hong&nbsp;Kong man’s killing of pregnant girlfriend in Taiwan",
                   "author": "Jasmine Siu",
@@ -3135,6 +3195,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Taiwan&rsquo;s Dilemma",
                   "bookTitle": "Hong&nbsp;Kong’s Extradition Bill and Taiwan’s Sovereignty Dilemma",
                   "author": "Ming-Sung Kuo",
@@ -3147,6 +3208,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Under the Shadow of the Regime",
                   "bookTitle": "How an Obscure Taiwan Murder Case Led to Hong&nbsp;Kong&rsquo;s Mega-Protests",
                   "author": "Ralph Jennings",
@@ -3205,6 +3267,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "—",
                   "bookTitle": "Fugitive Offenders and Mutual Legal Assistance in Criminal Matters Legislation (Amendment) Bill 2019—BILL",
                   "author": "Hong&nbsp;Kong Government",
@@ -3230,6 +3293,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Necessary Firewall",
                   "bookTitle": "There Is No ‘Loophole’ in Hong&nbsp;Kong’s Current Extradition Law. Rather, It Provides a Necessary Firewall to Protect the Legal System",
                   "author": "Malcolm Rifkind",
@@ -3257,6 +3321,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "Political Opportunism",
                   "bookTitle": "The Murder Case That Lit the Fuse in Hong&nbsp;Kong",
                   "author": "Tiffany May and Daniel Victor",
@@ -3317,6 +3382,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "One Million Participants",
                   "bookTitle": "Hundreds of Thousands Attend Protest in Hong&nbsp;Kong over Extradition Bill",
                   "author": "Eric Kleefeld",
@@ -3351,6 +3417,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Babysitter",
                   "bookTitle": "Carrie Lam: A ‘Good Fighter’ in the Crisis Over the Hong&nbsp;Kong Extradition Bill",
                   "author": "Keith Bradsher",
@@ -3365,6 +3432,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "Sign of Growing Unhappiness",
                   "bookTitle": "Hong&nbsp;Kong Leader, Carrie Lam, Says She Won’t Back Down on Extradition Bill",
                   "author": "Austin Ramzy",
@@ -3440,6 +3508,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "First Use of Tear Gas",
                   "bookTitle": "Hong&nbsp;Kong Protest: Police Fire Teargas at Demonstrators – as It Happened",
                   "author": "Damien Gayle, Kate Lyons, Verna Yu, Helen Davidson, and Lily Kuo",
@@ -3461,6 +3530,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "&ldquo;A Good Fighter&rddquo;",
                   "bookTitle": "Carrie Lam: A ‘Good Fighter’ in the Crisis Over the Hong&nbsp;Kong Extradition Bill",
                   "author": "Keith Bradsher",
@@ -3497,6 +3567,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "Too Little, Too Late",
                   "bookTitle": "Hong&nbsp;Kong Protesters Return to the Streets, Rejecting Leader’s Apology",
                   "author": "Keith Bradsher and Daniel Victor",
@@ -3515,6 +3586,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Suspended, But Not Withdrawn",
                   "bookTitle": "When Suspending Hong&nbsp;Kong’s Extradition Bill versus Withdrawing It Has a Different Meaning Politically and Legally but the Same Outcome: Death of the Legislation",
                   "author": "Tony Cheung and Kang-chung Ng",
@@ -3529,6 +3601,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "Delaying The Pain",
                   "bookTitle": "Hong&nbsp;Kong’s Leader, Yielding to Protests, Suspends Extradition Bill",
                   "author": "Keith Bradsher and Alexandra Stevenson",
@@ -3559,6 +3632,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "The New York Times",
                   "shortTitle": "A Visual Expression of Defiance",
                   "bookTitle": "The Color of Protest",
                   "author": "Vanessa Friedman",
@@ -3578,6 +3652,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "&ldquo;Struck A Chord In My Heart&rdquo;",
                   "bookTitle": "The Hong&nbsp;Kong Protests: Two Years Later",
                   "author": "Lara Prakash",
@@ -3664,6 +3739,7 @@
                 },
                 {
                   "type": "Book Excerpt",
+                  "publication": "Book Excerpts",
                   "shortTitle": "Voices As One",
                   "bookTitle": "For The Love Of Hong&nbsp;Kong: A Memoir From My City Under Seige",
                   "author": "Hana Meihan Davis",
@@ -3709,6 +3785,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Be Water",
                   "bookTitle": "Dream State: The Radical Imagination of the Hong&nbsp;Kong Protest Movement",
                   "author": "Yi-Ling Liu",
@@ -3725,6 +3802,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Five Demands, Not One Less",
                   "bookTitle": "What Do the Hong&nbsp;Kong Protesters Want?",
                   "author": "Alison Rourke",
@@ -3741,6 +3819,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Inquiry into Police Brutality",
                   "bookTitle": "Hong&nbsp;Kong: Arbitrary Arrests, Brutal Beatings and Torture in Police Detention Revealed",
                   "author": "Amnesty International",
@@ -3761,6 +3840,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "831 Prince Edward Station",
                   "bookTitle": "‘I Thought I Was About to Die’: Eyewitnesses Describe Brutal Beatings by Hong&nbsp;Kong Police",
                   "author": "Ryan Ho Kilpatrick and Robyn Dixon",
@@ -3785,6 +3865,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Storming Into LegCo",
                   "bookTitle": "Photos: Hong&nbsp;Kong Protesters Break Into Legislative Council Building",
                   "author": "Alan Taylor",
@@ -3813,6 +3894,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A City on Edge",
                   "bookTitle": "City on Edge: Photographs From Hong&nbsp;Kong’s Summer of Protest",
                   "year": "2019",
@@ -3821,6 +3903,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Beijing&rsquo;s Reaction",
                   "bookTitle": "A Guide To What&rsquo;s Happening In Hong&nbsp;Kong",
                   "author": "Colin Dwyer",
@@ -3837,6 +3920,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "721 Incident",
                   "bookTitle": "2019 Yuen Long attack",
                   "author": "Wikipedia",
@@ -3851,6 +3935,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "&ldquo;A Color Revolution&rdquo;",
                   "bookTitle": "In Hong&nbsp;Kong, What Happens Now That Beijing Has Called the Protests a ‘Color Revolution’?",
                   "author": "Victoria Tin-bor Hui and Michael C. Davis",
@@ -3871,6 +3956,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Hong&nbsp;Kong Way",
                   "bookTitle": "Hong&nbsp;Kong Protesters Join Hands in 30-Mile Human Chain",
                   "author": "Erin Hale and Emma Graham-Harrison",
@@ -3888,6 +3974,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Language of Loss",
                   "bookTitle": "Hong&nbsp;Kong&rsquo;s Protestors Have Their Own Special Slang. Here&rsquo;s a Glossary of Some Common Terms",
                   "author": "Hillary Leung",
@@ -3907,6 +3994,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Insurgent Tongues",
                   "bookTitle": "Insurgent Tongues: How Loose Cantonese Romanisation Became Hong&nbsp;Kong’s Patois of Protest",
                   "author": "Rachel Ka-yin Leung",
@@ -3924,6 +4012,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Unity As A Guiding Principle",
                   "bookTitle": "“We Are All Hongkongers”",
                   "author": "Sarah Tung",
@@ -3943,7 +4032,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "China Perspectives",
                   "shortTitle": "Hong&nbsp;Kong Localism",
                   "bookTitle": "The Growth of “Localism” in Hong&nbsp;Kong",
                   "author": "Ying-ho Kwong",
@@ -3977,6 +4066,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "The Infinite Heartbreak of Loving Hong&nbsp;Kong",
                   "bookTitle": "The Infinite Heartbreak of Loving Hong&nbsp;Kong",
                   "author": "Wilfred Chan",
@@ -3990,6 +4080,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Young Hong Kong",
                   "bookTitle": "Young Hong Kong",
                   "author": "Lee Yee",
@@ -4014,6 +4105,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Leader-full Movement",
                   "bookTitle": "What the Hong Kong Protests Can Teach the World about Enduring Social Movements",
                   "author": "Mary Hui",
@@ -4093,6 +4185,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Live Bullet",
                   "bookTitle": "Hong&nbsp;Kong Protester Shot in Clash with Police as China’s Communist Party Marks 70th Anniversary",
                   "author": "Canadian Broadcasting Corporation",
@@ -4121,6 +4214,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Face Mask Ban",
                   "bookTitle": "Hong&nbsp;Kong: Face Mask Ban Violates Assembly Rights",
                   "author": "HUman Rights Watch",
@@ -4231,6 +4325,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Mutally Exclusive Identities",
                   "bookTitle": "Dream State: The Radical Imagination of the Hong&nbsp;Kong Protest Movement",
                   "author": "Yi-Ling Liu",
@@ -4243,6 +4338,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A &rsquo;entity",
                   "bookTitle": "Hong&nbsp;Kong’s Protests Have Cemented Its Identity",
                   "author": "Timothy McLaughlin",
@@ -4330,6 +4426,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Rioters &lsquo;U&rsquo;",
                   "bookTitle": "Inside &lsquo;Rioters&rsquo; U,&rsquo; the University That Has Seen Some of the Worst Clashes in Hong&nbsp;Kong",
                   "author": "Laignee Barron",
@@ -4416,6 +4513,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "Local Power",
                   "bookTitle": "Analysis | Hong&nbsp;Kong’s District Council Elections Take Place on Nov. 24. Or Not.",
                   "author": "Maggie Shum",
@@ -4431,6 +4529,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "A Landslide Victory",
                   "bookTitle": "Pro-democracy Candidates Dominate Hong&nbsp;Kong’s Local Elections in a Rebuke to China",
                   "author": "Jen Kirby",
@@ -4463,6 +4562,7 @@
                 },
                 {
                   "type": "Article Excerpt",
+                  "publication": "Publication name",
                   "shortTitle": "An Alternate Narrative",
                   "bookTitle": "Beijing Finally Responds to Hong&nbsp;Kong Election Results after Big Win for Democrats",
                   "author": "Hui-leng Tan",
@@ -4565,6 +4665,7 @@
                   "resources": [
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "The Tightening of Freedom",
                       "bookTitle": "Hong Kong Exodus Gathers Pace as Thousands Vote with Their Feet",
                       "year": "2021",
@@ -4586,6 +4687,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "British-Hong Kong Diaspora",
                       "bookTitle": "Hong Kongers, Don’t Idolize the U.K.",
                       "year": "2020",
@@ -4601,6 +4703,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "The New York Times",
                       "shortTitle": "Seeds Blossoming In Cement",
                       "bookTitle": "Opinion | Life in Hong Kong Has Always Been Impossible",
                       "year": "2020",
@@ -4619,6 +4722,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Sik Teng, Mm Sik Gong (Pardon My Chinese)",
                       "bookTitle": "Sik Teng, Mm Sik Gong (Pardon My Chinese)",
                       "year": "2020",
@@ -4628,6 +4732,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "A Polarized City, Mirrored in Its Diaspora",
                       "bookTitle": "A Polarized City, Mirrored in Its Diaspora",
                       "year": "2019",
@@ -4662,6 +4767,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "The New York Times",
                       "shortTitle": "Taiwan-Hong Kong Diaspora: Nancy",
                       "bookTitle": "Is Taiwan Next?",
                       "year": "2021",
@@ -4676,6 +4782,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "The New York Times",
                       "shortTitle": "Taiwan-Hong Kong Diaspora: Gam",
                       "bookTitle": "Is Taiwan Next?",
                       "year": "2021",
@@ -4704,6 +4811,7 @@
                   "resources": [
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Hong Kong’s Protests Have Cemented Its Identity",
                       "bookTitle": "Hong Kong’s Protests Have Cemented Its Identity",
                       "year": "2019",
@@ -4721,6 +4829,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "The Hong Kong Identity",
                       "bookTitle": "A New, Uniquely Hong Kong-Based Identity Is behind the Protests",
                       "year": "n.d.",
@@ -4733,6 +4842,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "The New York Times",
                       "shortTitle": "One Country, Two Nationalism",
                       "bookTitle": "‘One Country, Two Nationalisms’: The Identity Crisis Behind Hong Kong’s Turmoil‘One Country, Two Nationalisms’: The Identity Crisis Behind Hong Kong’s Turmoil",
                       "year": "2019",
@@ -4766,6 +4876,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "The Revolution of Our Times",
                       "bookTitle": "The Revolution of Our Times",
                       "year": "2020",
@@ -4785,6 +4896,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Resistence and Collective Identity",
                       "bookTitle": "What the Hong Kong protests can teach the world about enduring social movements",
                       "year": "2019",
@@ -4800,6 +4912,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Policing Imagination",
                       "bookTitle": "Amid the Pandemic, Is Hong Kong Facing a Different Kind of Death?",
                       "year": "2020",
@@ -4821,6 +4934,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Democracy Will Reach Every Shore",
                       "bookTitle": "Democracy Darkens: For Hong Kong Activist, Year of Despair and Dread",
                       "year": "2020",
@@ -4859,6 +4973,7 @@
                   "resources": [
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Shrouded in Secrecy",
                       "bookTitle": "Hong Kong is a Colony Once More",
                       "year": "2020",
@@ -4874,6 +4989,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Hong Kong National Security Law",
                       "bookTitle": "The Law of the People’s Republic of China on Safeguarding National Security in the Hong Kong Special Administrative Region",
                       "year": "2020",
@@ -4924,6 +5040,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Mass Arrest of Opposition Figures",
                       "bookTitle": "The Mass Arrest of Hong Kong’s Opposition Figures",
                       "year": "2020",
@@ -4932,6 +5049,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Illegalizing Hong Kong Primaries",
                       "bookTitle": "Hong Kong Primaries: China Declares Pro-democracy Polls ‘Illegal’",
                       "year": "2020",
@@ -4951,6 +5069,7 @@
 
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Endangering National Security",
                       "bookTitle": "Hong Kong's National Security Law: 10 Things You Need to Know",
                       "year": "2020",
@@ -4969,6 +5088,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "The End of Free Speech in Hong Kong",
                       "bookTitle": "The End of Free Speech in Hong Kong",
                       "year": "2021",
@@ -4985,6 +5105,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "The Death of Hong Kong",
                       "bookTitle": "Amid the Pandemic, Is Hong Kong Facing a Different Kind of Death?",
                       "year": "2020",
@@ -5079,6 +5200,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Letters From Hong Kong's Jails",
                       "bookTitle": "Letters From Hong Kong's Jails",
                       "year": "2020",
@@ -5087,6 +5209,7 @@
                     },              
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "“Black Hands” of Foreign Forces",
                       "bookTitle": "Hong Kong Democracy Activist Group Led by Joshua Wong Disbands",
                       "year": "2020",
@@ -5138,6 +5261,7 @@
                   "resources": [
                     {
                       "type": "Article Excerpt",
+                      "publication": "The New York Times",
                       "shortTitle": "An Endgame",
                       "bookTitle": "Opinion | Life in Hong Kong Has Always Been Impossible",
                       "year": "2020",
@@ -5164,6 +5288,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "The New York Times",
                       "shortTitle": "A “Yellow Economic Circle”",
                       "bookTitle": "Give Hong Kong the Autonomy It Was Promised",
                       "year": "2020",
@@ -5182,6 +5307,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "The Pursuit of Objectivity",
                       "bookTitle": "Telling the Stories of the Protests Here and in Hong Kong",
                       "year": "2020",
@@ -5199,6 +5325,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Until We Meet Again",
                       "bookTitle": "‘I Could Hardly Hold Back the Tears’: A Diary of Apple Daily’s Last Week",
                       "year": "2021",
@@ -5214,6 +5341,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "The New York Times",
                       "shortTitle": "Necessary Resistance, Unlikely Victory",
                       "bookTitle": "Crossing the Red Line: Behind China's Takeover of Hong Kong",
                       "year": "2021",
@@ -5236,6 +5364,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "A Heavy Cost In Resisting",
                       "bookTitle": "Democracy Darkens: For Hong Kong Activist, Year of Despair and Dread",
                       "year": "2020",
@@ -5258,6 +5387,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "An Alternate Narrative",
                       "bookTitle": "How History Gets Rewritten",
                       "year": "2020",
@@ -5276,6 +5406,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Happy New Year",
                       "bookTitle": "Hong Kong Braces for Huge New Year’s Day March after Night of Unrest",
                       "year": "2020",
@@ -5312,6 +5443,7 @@
                   "resources": [
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Between Memory and Forgetting",
                       "bookTitle": "Between Memory and Forgetting",
                       "year": "2020",
@@ -5330,6 +5462,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "The Power of Public Memory",
                       "bookTitle": "Opinion | This Is How Much China's Communist Party Fears the Power of Public Memory",
                       "year": "2021",
@@ -5350,6 +5483,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "The Erasure of Collective Memories",
                       "bookTitle": "“Hong Kong: A City of Disappearances”",
                       "year": "2020",
@@ -5369,6 +5503,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Coersive Amnesia",
                       "bookTitle": "By Banning Tiananmen Vigils in Hong Kong, China Is Trying to Rewrite History",
                       "year": "2021",
@@ -5386,6 +5521,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Missing Books",
                       "bookTitle": "National Security Law: Hong Kong Libraries Pull Books by Some Localist and Democracy Activists for Review",
                       "year": "2020",
@@ -5418,6 +5554,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Invisible Red Lines",
                       "bookTitle": "Security Law: Hong Kong Scholars Fear for Academic Freedom.",
                       "year": "2020",
@@ -5447,6 +5584,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "A New Addition to Primary Education",
                       "bookTitle": "The Education Bureau Informs All Schools in Hong Kong, Including Kindergartens and Special Schools, to Teach National Security Laws",
                       "year": "2021",
@@ -5455,7 +5593,7 @@
                     },
                     {
                       "type": "Journal Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Synergy: The Journal of Contemporary Asian Studies",
                       "shortTitle": "Visual Movements",
                       "bookTitle": "The 2014 Hong Kong Protests: A History of Youth Identity",
                       "year": "2021",
@@ -5473,6 +5611,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "Self-Censorship Begins",
                       "bookTitle": "Hongkongers Scrub Social Media after Security Law",
                       "year": "2020",
@@ -5507,6 +5646,7 @@
                     },
                     {
                       "type": "Article Excerpt",
+                      "publication": "Publication name",
                       "shortTitle": "A New Political Climate",
                       "bookTitle": "How Academic Freedom Ends",
                       "year": "2021",
