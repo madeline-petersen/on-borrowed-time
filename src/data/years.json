@@ -100,7 +100,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "RAHHHHH",
+                  "publication": "Time",
                   "shortTitle": "Hearts At Ease",
                   "bookTitle": "Business: Hong&nbsp;Kong&rsquo;s Golden Link",
                   "year": "1979",
@@ -150,6 +150,7 @@
               "resources": [
                 {
                   "type": "Book Excerpt",
+                  "publication": "United Nations Treaty",
                   "shortTitle": "The Sino-British Joint Declaration",
                   "bookTitle": "The Sino-British Joint Declaration",
                   "year": "1985",
@@ -417,7 +418,6 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
                   "shortTitle": "Beijing Hints on Crackdown",
                   "publication": "The New York Times",
                   "year": "1989",
@@ -801,7 +801,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "An Impossible Dream",
                   "bookTitle": "Hong&nbsp;Kong On Borrowed Time",
                   "year": "1989",
@@ -1247,7 +1247,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "Flowering In the Face Of a Giant Unknown",
                   "bookTitle": "Flowering In the Face Of a Giant Unknown",
                   "year": "1997",
@@ -1346,7 +1346,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "Lausen",
                   "shortTitle": "Five-second Vacuum",
                   "bookTitle": "Can our &lsquo;global city&rsquo; offer transnational solidarity?",
                   "year": "2021",
@@ -1377,7 +1377,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "Monsoon-borne Rain",
                   "bookTitle": "China Resumes Control of Hong&nbsp;Kong, Concluding 156 Years of British Rule",
                   "year": "1997",
@@ -1394,7 +1394,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "A Kaleidoscope of Emotions",
                   "bookTitle": "A Complex of Moods, a Kaleidoscope of Emotions",
                   "year": "1997",
@@ -1425,7 +1425,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "Buds of Political Pluralism",
                   "bookTitle": "The Year of the Trojan Horse",
                   "year": "1997",
@@ -1443,7 +1443,7 @@
                   "linkTo": "https://timesmachine.nytimes.com/timesmachine/1997/07/01/910597.html?pageNumber=1"
                 },
                 {
-                  "type": "Journal Excerpt",
+                  "type": "Article Excerpt",
                   "publication": "New York Times",
                   "shortTitle": "A Sense of the Unreal",
                   "bookTitle": "Letters from Hong&nbsp;Kong: Amid Changing Symbols, a Sense of the Unreal",
@@ -1800,7 +1800,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "The Largest Demonstration Since 1989",
                   "bookTitle": "Hundreds of Thousands in Hong&nbsp;Kong Protest Security Laws",
                   "year": "2003",
@@ -1877,7 +1877,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "The Resignations of Regina Ip and Antony Leung",
                   "bookTitle": "2 Top Officials in Hong&nbsp;Kong Resign in Wake of Protests",
                   "year": "2003",
@@ -2377,7 +2377,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "Redefining a &ldquo;High Degree of Autonomy&rdquo;",
                   "bookTitle": "Beijing&rsquo;s &ldquo;White Paper&rdquo; Sets Off a Firestorm in Hong&nbsp;Kong",
                   "author": "Alan Wong",
@@ -2449,7 +2449,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "In Hong&nbsp;Kong, an Unofficial Election Draws Beijing’s Ire",
                   "bookTitle": "In Hong&nbsp;Kong, an Unofficial Election Draws Beijing’s Ire",
                   "author": "Michael Forsythe, Chris Buckley, and Alan Wong",
@@ -2903,7 +2903,7 @@
               "resources": [
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "People of the Umbrella Generation",
                   "bookTitle": "What&rsquo;s Next For Hong&nbsp;Kong?",
                   "author": "Benny Yiu-ting Tai",
@@ -3307,7 +3307,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "Political Opportunism",
                   "bookTitle": "The Murder Case That Lit the Fuse in Hong&nbsp;Kong",
                   "author": "Tiffany May and Daniel Victor",
@@ -3418,7 +3418,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "Sign of Growing Unhappiness",
                   "bookTitle": "Hong&nbsp;Kong Leader, Carrie Lam, Says She Won’t Back Down on Extradition Bill",
                   "author": "Austin Ramzy",
@@ -3516,7 +3516,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "&ldquo;A Good Fighter&rddquo;",
                   "bookTitle": "Carrie Lam: A ‘Good Fighter’ in the Crisis Over the Hong&nbsp;Kong Extradition Bill",
                   "author": "Keith Bradsher",
@@ -3553,7 +3553,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "Too Little, Too Late",
                   "bookTitle": "Hong&nbsp;Kong Protesters Return to the Streets, Rejecting Leader’s Apology",
                   "author": "Keith Bradsher and Daniel Victor",
@@ -3587,7 +3587,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "Delaying The Pain",
                   "bookTitle": "Hong&nbsp;Kong’s Leader, Yielding to Protests, Suspends Extradition Bill",
                   "author": "Keith Bradsher and Alexandra Stevenson",
@@ -3618,7 +3618,7 @@
                 },
                 {
                   "type": "Article Excerpt",
-                  "publication": "Publication name",
+                  "publication": "The New York Times",
                   "shortTitle": "A Visual Expression of Defiance",
                   "bookTitle": "The Color of Protest",
                   "author": "Vanessa Friedman",
@@ -4688,7 +4688,7 @@
                     },
                     {
                       "type": "Article Excerpt",
-                      "publication": "Publication name",
+                      "publication": "The New York Times",
                       "shortTitle": "Seeds Blossoming In Cement",
                       "bookTitle": "Opinion | Life in Hong Kong Has Always Been Impossible",
                       "year": "2020",
@@ -4752,7 +4752,7 @@
                     },
                     {
                       "type": "Article Excerpt",
-                      "publication": "Publication name",
+                      "publication": "The New York Times",
                       "shortTitle": "Taiwan-Hong Kong Diaspora: Nancy",
                       "bookTitle": "Is Taiwan Next?",
                       "year": "2021",
@@ -4767,7 +4767,7 @@
                     },
                     {
                       "type": "Article Excerpt",
-                      "publication": "Publication name",
+                      "publication": "The New York Times",
                       "shortTitle": "Taiwan-Hong Kong Diaspora: Gam",
                       "bookTitle": "Is Taiwan Next?",
                       "year": "2021",
@@ -4827,7 +4827,7 @@
                     },
                     {
                       "type": "Article Excerpt",
-                      "publication": "Publication name",
+                      "publication": "The New York Times",
                       "shortTitle": "One Country, Two Nationalism",
                       "bookTitle": "‘One Country, Two Nationalisms’: The Identity Crisis Behind Hong Kong’s Turmoil‘One Country, Two Nationalisms’: The Identity Crisis Behind Hong Kong’s Turmoil",
                       "year": "2019",
@@ -5246,7 +5246,7 @@
                   "resources": [
                     {
                       "type": "Article Excerpt",
-                      "publication": "Publication name",
+                      "publication": "The New York Times",
                       "shortTitle": "An Endgame",
                       "bookTitle": "Opinion | Life in Hong Kong Has Always Been Impossible",
                       "year": "2020",
@@ -5273,7 +5273,7 @@
                     },
                     {
                       "type": "Article Excerpt",
-                      "publication": "Publication name",
+                      "publication": "The New York Times",
                       "shortTitle": "A “Yellow Economic Circle”",
                       "bookTitle": "Give Hong Kong the Autonomy It Was Promised",
                       "year": "2020",
@@ -5326,7 +5326,7 @@
                     },
                     {
                       "type": "Article Excerpt",
-                      "publication": "Publication name",
+                      "publication": "The New York Times",
                       "shortTitle": "Necessary Resistance, Unlikely Victory",
                       "bookTitle": "Crossing the Red Line: Behind China's Takeover of Hong Kong",
                       "year": "2021",
