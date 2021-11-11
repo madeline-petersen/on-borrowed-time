@@ -9,7 +9,7 @@ import ReactHtmlParser from 'react-html-parser';
 import ReactFullpage from '@fullpage/react-fullpage';
 
 const pluginWrapper = () => {
-  require('../../node_modules/fullpage.js/dist/fullpage.parallax.min.js');
+  require('./fullpage.parallax.min.js');
 };
 
 const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
