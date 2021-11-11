@@ -6,11 +6,13 @@
 
     &.white {
       transition: background-position 1s 1s;
+      transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
       background-position: left;
     }
 
     &.black {
       transition: background-position 1s 1s;
+      transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
       background-position: right;
     }
 
