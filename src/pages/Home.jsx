@@ -6,6 +6,11 @@ import React, { useEffect, useState } from 'react';
 import { ArrowDown20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
+import ReactFullpage from '@fullpage/react-fullpage';
+
+const pluginWrapper = () => {
+  require('../../node_modules/fullpage.js/dist/fullpage.parallax.min.js');
+};
 
 const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
   const [year, setYear] = useState(years[0]);
@@ -43,7 +48,7 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
 
   return (
     <>
-      <div
+      {/* <div
         className="home"
         id="home"
         // hash is updated as page is scrolled
@@ -58,58 +63,72 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
             window.location.hash = '#!' + year.id;
           }
         }}
-      >
-        {years.map(year => {
+      > */}
+      <ReactFullpage
+        //fullpage options
+        licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+        pluginWrapper={pluginWrapper}
+        scrollingSpeed={1000} /* Options here */
+        parallax={true} /* Because we are using the extension */
+        parallaxKey={'aGstb25ib3Jyb3dlZHRpbWUuY29tX1dmR2NHRnlZV3hzWVhnPUV0cg=='}
+        render={({ state, fullpageApi }) => {
           return (
-            <div
-              className={`hero-image cursor-pointer ${
-                transitionBackgroundClasses[year.id]
-              } ${hash === year.id ? 'current' : ''}`}
-              key={year.id}
-              id={year.id}
-              onClick={() => onClickYear(year.id)}
-            >
-              <div
-                className={`small-headline text-white z-10 absolute w-full scene-name cursor-pointer ${
-                  isClicked ? 'fade-out' : ''
-                }`}
-                onClick={() => onClickYear(year.id)}
-              >
-                <Container className="grid__container">
-                  <Row className="grid__row">
-                    <Col lg={2} />
-                    <Col
-                      lg={3}
-                      className="title title__english"
-                      key={`english-${year.id}`}
+            <ReactFullpage.Wrapper>
+              {years.map(year => {
+                return (
+                  <div
+                    className={`section hero-image cursor-pointer ${
+                      transitionBackgroundClasses[year.id]
+                    } ${hash === year.id ? 'current' : ''}`}
+                    key={year.id}
+                    id={year.id}
+                    onClick={() => onClickYear(year.id)}
+                  >
+                    <div
+                      className={`small-headline text-white z-10 absolute w-full scene-name cursor-pointer ${
+                        isClicked ? 'fade-out' : ''
+                      }`}
+                      onClick={() => onClickYear(year.id)}
                     >
-                      {ReactHtmlParser(year.title)}
-                    </Col>
-                    <Col
-                      lg={3}
-                      className="title title__chinese"
-                      key={`chinese-${year.id}`}
-                    >
-                      {year.chineseTitle}
-                    </Col>
-                    <Col
-                      lg={2}
-                      className="title title__year"
-                      key={`year-${year.id}`}
-                    >
-                      {year.id}
-                    </Col>
-                    <Col lg={1} />
-                  </Row>
-                </Container>
-              </div>
-            </div>
+                      <Container className="grid__container">
+                        <Row className="grid__row">
+                          <Col lg={2} />
+                          <Col
+                            lg={3}
+                            className="title title__english"
+                            key={`english-${year.id}`}
+                          >
+                            {ReactHtmlParser(year.title)}
+                          </Col>
+                          <Col
+                            lg={3}
+                            className="title title__chinese"
+                            key={`chinese-${year.id}`}
+                          >
+                            {year.chineseTitle}
+                          </Col>
+                          <Col
+                            lg={2}
+                            className="title title__year"
+                            key={`year-${year.id}`}
+                          >
+                            {year.id}
+                          </Col>
+                          <Col lg={1} />
+                        </Row>
+                      </Container>
+                    </div>
+                  </div>
+                );
+              })}
+            </ReactFullpage.Wrapper>
           );
-        })}
-        <div className="arrow-down">
-          <ArrowDown20 />
-        </div>
-      </div>
+        }}
+      />
+      {/* <div className="arrow-down">
+        <ArrowDown20 />
+      </div> */}
+      {/* </div> */}
     </>
   );
 };
