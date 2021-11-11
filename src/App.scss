@@ -376,7 +376,7 @@ a {
   height: 0vh;
   transition: height 1s 1s;
   -webkit-transition: height 1s 1s;
-  transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+  transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1); // easeInOutQuint
 }
 
 // Animations
