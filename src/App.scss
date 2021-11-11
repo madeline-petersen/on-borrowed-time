@@ -376,6 +376,7 @@ a {
   height: 0vh;
   transition: height 1s 1s;
   -webkit-transition: height 1s 1s;
+  transition-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
 }
 
 // Animations
