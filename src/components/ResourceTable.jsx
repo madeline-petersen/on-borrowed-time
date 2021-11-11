@@ -108,7 +108,12 @@ const ResourceTable = ({
                 style={{ display: 'flex', justifyContent: 'space-between' }}
               >
                 <p className={`${themeTextClass} text-opacity-70 fade-second`}>
-                  {entry.type === 'Journal Excerpt'
+                  {[
+                    'Journal Excerpt',
+                    'Article Excerpt',
+                    'Book Excerpt',
+                    'Report Excerpt'
+                  ].includes(entry.type)
                     ? entry.publication
                     : entry.type}
                 </p>
