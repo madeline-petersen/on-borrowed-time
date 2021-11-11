@@ -8,6 +8,10 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import ReactFullpage from '@fullpage/react-fullpage';
 
+const pluginWrapper = () => {
+  require('../../node_modules/fullpage.js/dist/fullpage.parallax.min.js');
+};
+
 const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
   const [year, setYear] = useState(years[0]);
   const [isClicked, setClicked] = useState(false);
@@ -63,7 +67,10 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
       <ReactFullpage
         //fullpage options
         licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+        pluginWrapper={pluginWrapper}
         scrollingSpeed={1000} /* Options here */
+        parallax={true} /* Because we are using the extension */
+        parallaxKey={'aGstb25ib3Jyb3dlZHRpbWUuY29tX1dmR2NHRnlZV3hzWVhnPUV0cg=='}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
