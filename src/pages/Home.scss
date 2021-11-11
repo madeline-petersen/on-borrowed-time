@@ -49,6 +49,11 @@
   position: absolute;
   bottom: 1rem;
   right: 1rem;
+  opacity: 0;
+  animation-name: foreground-fade-in-and-translate-down;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
 
   svg {
     width: 20px;
@@ -56,6 +61,5 @@
     fill: white;
   }
 }
-
 
 // }

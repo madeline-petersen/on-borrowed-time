@@ -123,6 +123,11 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
                         </Row>
                       </Container>
                     </div>
+                    {year.id === '1984' && (
+                      <div className="arrow-down">
+                        <ArrowDown20 />
+                      </div>
+                    )}
                   </div>
                 );
               })}
@@ -130,9 +135,6 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
           );
         }}
       />
-      {/* <div className="arrow-down">
-        <ArrowDown20 />
-      </div> */}
       {/* </div> */}
     </>
   );
