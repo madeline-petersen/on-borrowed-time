@@ -149,7 +149,7 @@
               ],
               "resources": [
                 {
-                  "type": "Book Excerpt",
+                  "type": "Journal Excerpt",
                   "publication": "United Nations Treaty",
                   "shortTitle": "The Sino-British Joint Declaration",
                   "bookTitle": "The Sino-British Joint Declaration",
@@ -376,6 +376,7 @@
               "resources": [
                 {
                   "type": "Book Excerpt",
+                  "publication": "Book Excerpts",
                   "shortTitle": "A Champion of Liberalisation",
                   "bookTitle": "China&rsquo;s Struggle for Democracy, its Prelude, Development, Aftermath, and Impact",
                   "year": "1990",
@@ -389,6 +390,7 @@
                 },
                 {
                   "type": "Book Excerpt",
+                  "publication": "Book Excerpts",
                   "shortTitle": "The Death of Hu Yaobang",
                   "bookTitle": "The Tiananmen Papers",
                   "year": "2002",
@@ -405,6 +407,7 @@
                 },
                 {
                   "type": "Book Excerpt",
+                  "publication": "Book Excerpts",
                   "shortTitle": "The Mourning of Hu Yaobang",
                   "bookTitle": "The Tiananmen Papers",
                   "year": "2002",
@@ -483,6 +486,7 @@
               "resources": [
                 {
                   "type": "Book Excerpt",
+                  "publication": "Book Excerpts",
                   "shortTitle": "&ldquo;Staying&rdquo;",
                   "bookTitle": "The People&rsquo;s Republic of Amnesia",
                   "year": "2014",
@@ -1077,8 +1081,9 @@
                 },
                 {
                   "type": "Report Excerpt",
+                  "publication": "Hong Kong Government",
                   "shortTitle": "Hong&nbsp;Kong Emigration",
-                  "bookTitle": "—",
+                  "bookTitle": "Hong Kong's Population: Characteristics and Trends",
                   "year": "—",
                   "content": null,
                   "linkTo": "https://www.info.gov.hk/info/population/eng/pdf/report_eng.pdf"
@@ -1152,7 +1157,8 @@
                   "citation": "“The City Is Buzzing” Hong&nbsp;Kong &rsquo;97: Lives in Transition. Public Broadcasting Service, 1997. Archived."
                 },
                 {
-                  "type": "Book Excerpt",
+                  "type": "Journal Excerpt",
+                  "publication": "Hong Kong Institute of Asia-Pacific Studies",
                   "shortTitle": "Hongkongnese or Chinese",
                   "bookTitle": "Hongkongese or Chinese: The Problem of Identity on the Eve of Resumption of Chinese Sovereignty over Hong&nbsp;Kong",
                   "year": "1997",
@@ -1601,6 +1607,7 @@
                 },
                 {
                   "type": "Report Excerpt",
+                  "publication": "Human Rights Brief",
                   "shortTitle": "Historical Revisions to Article 23",
                   "bookTitle": "The Threat of Article 23 to Civil Liberties in the Hong&nbsp;Kong Special Adminstrative Region",
                   "year": "2003",
@@ -1624,6 +1631,7 @@
                 },
                 {
                   "type": "Report Excerpt",
+                  "publication": "National Democractic Institute",
                   "shortTitle": "An Empty Promise",
                   "bookTitle": "The Promise of Democratization in Hong&nbsp;Kong: The Impact of July’s Protest Demonstrations on the November 23 District Council Elections A Pre-Election Report",
                   "year": "2003",
@@ -1678,6 +1686,7 @@
               "resources": [
                 {
                   "type": "Report Excerpt",
+                  "publication": "National Democractic Institute",
                   "shortTitle": "&ldquo;Regina, we have better things to do&rdquo;",
                   "bookTitle": "The Promise of Democratization in Hong&nbsp;Kong: The Impact of July’s Protest Demonstrations on the November 23 District Council Elections A Pre-Election Report.",
                   "year": "2003",
@@ -1690,6 +1699,7 @@
                 },
                 {
                   "type": "Report Excerpt",
+                  "publication": "National Democratic Institute",
                   "shortTitle": "Economic Crisis and SARS Pandemic",
                   "bookTitle": "The Promise of Democratization in Hong&nbsp;Kong: The Impact of July’s Protest Demonstrations on the November 23 District Council Elections A Pre-Election Report.",
                   "year": "2003",
@@ -1830,6 +1840,7 @@
                 },
                 {
                   "type": "Report Excerpt",
+                  "publication": "Human Rights Watch",
                   "shortTitle": "A Porous Border",
                   "bookTitle": "A Question of Patriotism: Human Rights and Democratization in Hong&nbsp;Kong",
                   "year": "2004",
@@ -1988,6 +1999,7 @@
               "resources": [
                 {
                   "type": "Report Excerpt",
+                  "publication": "Human Rights Watch",
                   "shortTitle": "Beijing&rsquo;s Conclusion",
                   "bookTitle": "A Question of Patriotism: Human Rights and Democratization in Hong&nbsp;Kong",
                   "author": "Human Rights Watch",
@@ -2091,6 +2103,7 @@
                 },
                 {
                   "type": "Report Excerpt",
+                  "publication": "Human Rights Watch",
                   "shortTitle": "It Is All Very Clear",
                   "bookTitle": "A Question of Patriotism: Human Rights and Democratization in Hong&nbsp;Kong",
                   "author": "Human Rights Watch",
@@ -2719,6 +2732,7 @@
               "resources": [
                 {
                   "type": "Book Excerpt",
+                  "publication": "Book Excerpts",
                   "shortTitle": "Young Leading Figures—BOOK",
                   "bookTitle": "For The Love Of Hong&nbsp;Kong: A Memoir From My City Under Siege",
                   "author": "Hana Meihan Davis",
@@ -3725,6 +3739,7 @@
                 },
                 {
                   "type": "Book Excerpt",
+                  "publication": "Book Excerpts",
                   "shortTitle": "Voices As One",
                   "bookTitle": "For The Love Of Hong&nbsp;Kong: A Memoir From My City Under Seige",
                   "author": "Hana Meihan Davis",
