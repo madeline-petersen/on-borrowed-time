@@ -1,4 +1,4 @@
-import { Col, Container, Row } from 'react-grid-system';
+import { Col, Container, Row, Visible } from 'react-grid-system';
 
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
@@ -43,6 +43,12 @@ const Header = ({
     }
   };
 
+  const onClickUrl = url => {
+    // setNextBackground(currentYear, 'event');
+    setIsTransitioning(true);
+    navigateTo(url);
+  };
+
   return (
     <span
       className={`absolute w-full top-0 z-10 medium-caption contrast-text ${
@@ -54,7 +60,7 @@ const Header = ({
       <Container className="grid__container">
         <Row className={`grid__row pt-5`}>
           <Col lg={3} md={4} sm={4} xs={4} />
-          <Col lg={9} md={8} sm={8} xs={8}>
+          <Col lg={7} md={6} sm={8} xs={8}>
             <p
               className={`${pageId !== 'intro' &&
                 'cursor-pointer'} contrast-text ${
@@ -64,19 +70,6 @@ const Header = ({
             >
               {ReactHtmlParser(label)}
             </p>
-          </Col>
-        </Row>
-        {pageId === 'event' && (
-          <Row
-            key={`${currentYear}-${romanSceneNumber}-spacer`}
-            className="grid__row shrink-animation"
-          >
-            <Col lg={12} md={12} sm={12} xs={12} />
-          </Row>
-        )}
-        <Row className={`grid__row`}>
-          <Col lg={3} md={4} sm={4} xs={4} />
-          <Col lg={9} md={8} sm={8} xs={8}>
             {pageId === 'thematic-threads' && (
               <div
                 className={`flex items-center`}
@@ -91,6 +84,39 @@ const Header = ({
                 </div>
               </div>
             )}
+          </Col>
+          <Visible xxl xl lg>
+            <Col lg={1}>
+              <p
+                className={`cursor-pointer ${pageId === 'thematic-threads' &&
+                  'underline'}`}
+                onClick={() => onClickUrl('thematic-threads')}
+              >
+                Thematic Threads
+              </p>
+            </Col>
+            <Col lg={1}>
+              <p
+                className={`cursor-pointer ${pageId === 'editors-note' &&
+                  'underline'}`}
+                onClick={() => onClickUrl('editors-note')}
+              >
+                Editor&apos;s Note
+              </p>
+            </Col>
+          </Visible>
+        </Row>
+        {pageId === 'event' && (
+          <Row
+            key={`${currentYear}-${romanSceneNumber}-spacer`}
+            className="grid__row shrink-animation"
+          >
+            <Col lg={12} md={12} sm={12} xs={12} />
+          </Row>
+        )}
+        <Row className={`grid__row`}>
+          <Col lg={3} md={4} sm={4} xs={4} />
+          <Col lg={9} md={8} sm={8} xs={8}>
             {pageId === 'event' && (
               <p
                 key={`${currentYear}-${romanSceneNumber}-scene`}
