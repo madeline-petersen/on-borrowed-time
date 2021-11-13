@@ -3,15 +3,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
-import portrait1 from '../../images/2014_Scene01_BennyTai.png';
-import portrait2 from '../../images/2014_Scene01_ChuYiuMing.png';
-import portrait3 from '../../images/2014_Scene01_ChanKinMan.png';
-
-const imageLookup = {
-  portrait1: portrait1,
-  portrait2: portrait2,
-  portrait3: portrait3
-};
+import imageLookup from '../../images';
 
 const Diptych = ({ images, textColourClass }) => {
   return (
