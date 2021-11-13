@@ -88,8 +88,9 @@ const Header = ({
           <Visible xxl xl lg>
             <Col xl={1} lg={2}>
               <p
-                className={`cursor-pointer contrast-text ${pageId ===
-                  'thematic-threads' && 'underline'}`}
+                className={`cursor-pointer contrast-text
+                ${pageId === 'event' ? colourBackgroundClass : ''}
+                ${pageId === 'thematic-threads' && 'underline'}`}
                 onClick={() => onClickUrl('thematic-threads')}
               >
                 Thematic Threads
@@ -97,8 +98,9 @@ const Header = ({
             </Col>
             <Col xl={1} lg={2}>
               <p
-                className={`cursor-pointer contrast-text ${pageId ===
-                  'editors-note' && 'underline'}`}
+                className={`cursor-pointer contrast-text
+                ${pageId === 'event' ? colourBackgroundClass : ''}
+                ${pageId === 'editors-note' && 'underline'}`}
                 onClick={() => onClickUrl('editors-note')}
               >
                 Editor&apos;s Note
