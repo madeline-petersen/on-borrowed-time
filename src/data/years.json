@@ -373,6 +373,17 @@
                 "A high ranking official of the Chinese Communist Party, Hu was an <span>icon<sup>1</sup></span> for political reform and democratic change. His critique on Mao&rsquo;s cult-like ideology differed from other political figures, and made Hu a beloved leader.",
                 "The death of <span>Hu Yaobang<sup>2</sup></span> on April 15 1989, ignited public outcry—<span>mourning<sup>3</sup></span>, grief, and anger quickly developed into a series of student-led pro-democracy demonstrations and hunger strikes across China."
               ],
+              "images": [
+                {
+                  "source": "crowd",
+                  "caption": "Some two hundred thousand pro-democracy students staged an unauthorized demonstration in Tiananmen Square during the funeral ceremony of the Chinese Communist Party leader and liberal reformer Hu Yaobang, on April 22, 1989.  Photograph by Catherine Henriette/AFP/Getty."
+                },
+                {
+                  "title": "Reflection",
+                  "source": "car",
+                  "caption": "A weary protester pleads with a PLA officer sitting in his truck to not crackdown on the student demonstrators in Tiananmen Square. (Photo by Peter Turnley/Getty Images)"
+                }
+              ],
               "resources": [
                 {
                   "type": "Book Excerpt",
@@ -434,21 +445,6 @@
                   ],
                   "citation": "Kristof, Nicholas D. “Beijing Hints at Crackdown on Students.” New York Times, April 26, 1989.",
                   "linkTo": "https://www.nytimes.com/1989/04/26/world/beijing-hints-at-crackdown-on-students.html"
-                }
-              ]
-            },
-            {
-              "type": "artifacts",
-              "title": "Artifacts",
-              "images": [
-                {
-                  "source": "crowd",
-                  "caption": "Some two hundred thousand pro-democracy students staged an unauthorized demonstration in Tiananmen Square during the funeral ceremony of the Chinese Communist Party leader and liberal reformer Hu Yaobang, on April 22, 1989.  Photograph by Catherine Henriette/AFP/Getty."
-                },
-                {
-                  "title": "Reflection",
-                  "source": "car",
-                  "caption": "A weary protester pleads with a PLA officer sitting in his truck to not crackdown on the student demonstrators in Tiananmen Square. (Photo by Peter Turnley/Getty Images)"
                 }
               ]
             },
@@ -574,16 +570,6 @@
                   "year": "1989",
                   "content": null,
                   "linkTo": "https://www.asiancha.com/wp/article/scott-savitt/"
-                }
-              ]
-            },
-            {
-              "type": "artifacts",
-              "title": "Artifacts",
-              "images": [
-                {
-                  "source": "tanks",
-                  "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square, where the Communist Government carried out its final, brutal nighttime crackdown on protestors only hours earlier. Photo by Peter Charlesworth/LightRocket via Getty Images"
                 }
               ]
             },
@@ -845,11 +831,7 @@
                   "citation": "Stewart, William. “Communism: Fear And Anger in Hong&nbsp;Kong.” Time. Time Inc., June 19, 1989.",
                   "linkTo": "http://content.time.com/time/subscriber/article/0,33009,957965,00.html"
                 }
-              ]
-            },
-            {
-              "type": "artifacts",
-              "title": "Artifacts",
+              ],
               "images": [
                 {
                   "source": "candles",
@@ -1050,6 +1032,24 @@
               "paragraphs": [
                 "<span>Leading to the handover<sup>1</sup></span>, the Tiananmen Square Massacre provoked a <span>mass emigration<sup>2</sup></span> of Hong&nbsp;Kong people in the early 1990&rsquo;s. Uncertain of what the future would hold for their homeland, thousands of citizens decided to emigrate overseas to Western countries such as Canada, The United States, Australia, and Britain. In the ten years leading up to the handover, approximately <span>503,800<sup>3</sup></span> Hong&nbsp;Kong residents left the region."
               ],
+              "images": [
+                {
+                  "source": "one",
+                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
+                },
+                {
+                  "source": "two",
+                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
+                },
+                {
+                  "source": "three",
+                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
+                },
+                {
+                  "source": "four",
+                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
+                }
+              ],
               "resources": [
                 {
                   "type": "Journal Excerpt",
@@ -1172,28 +1172,6 @@
               ]
             },
             {
-              "type": "artifacts",
-              "title": "Artifacts",
-              "images": [
-                {
-                  "source": "one",
-                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
-                },
-                {
-                  "source": "two",
-                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
-                },
-                {
-                  "source": "three",
-                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
-                },
-                {
-                  "source": "four",
-                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
-                }
-              ]
-            },
-            {
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
@@ -1225,6 +1203,12 @@
                 [
                   "The handover also represented the symbolic moment where the freedoms and civil liberties that came with the British colonial rule would <span>transition<sup>2</sup></span> into a communist system. Inevitably, the return to Chinese sovereignty ultimately meant a loss in democratic values because Hong&nbsp;Kong political leaders would be beholden to orders from China."
                 ]
+              ],
+              "images": [
+                {
+                  "source": "tanks",
+                  "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier. Photo by Peter Charlesworth/LightRocket via Getty Images"
+                }
               ],
               "resources": [
                 {
@@ -1292,16 +1276,6 @@
                   ],
                   "citation": "Kraar Louis, &ldquo;The Death of Hong Kong&rdquo; June 26, 1995. Archived.",
                   "linkTo": "https://archive.fortune.com/magazines/fortune/fortune_archive/1995/06/26/203948/index.htm"
-                }
-              ]
-            },
-            {
-              "type": "artifacts",
-              "title": "Artifacts",
-              "images": [
-                {
-                  "source": "tanks",
-                  "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier. Photo by Peter Charlesworth/LightRocket via Getty Images"
                 }
               ]
             },
