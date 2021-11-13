@@ -6,18 +6,7 @@ import { Close20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
-
-// import candles from '../images/candles.png';
-// import car from '../images/car.png';
-// import crowd from '../images/crowd.png';
-// import tanks from '../images/tanks.png';
-
-// const imageLookup = {
-//   car: car,
-//   crowd: crowd,
-//   tanks: tanks,
-//   candles: candles
-// };
+import imageLookup from '../images';
 
 const Anecdote = ({
   type,
