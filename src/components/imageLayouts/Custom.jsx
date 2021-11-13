@@ -23,11 +23,11 @@ const imageLookup = {
   candles: candles
 };
 
-const Large = ({ images, textColourClass }) => {
+const Custom = ({ images, textColourClass }) => {
   return (
     <>
       {images.map((image, index) => {
-        return index % 2 === 0 ? (
+        return image.type === 'large' ? (
           <Row key={`image-${index}`} className="grid__row pb-20">
             <Col lg={1} />
             <Col lg={11} md={12}>
@@ -67,9 +67,9 @@ const Large = ({ images, textColourClass }) => {
   );
 };
 
-Large.propTypes = {
+Custom.propTypes = {
   images: PropTypes.shape(),
   textColourClass: PropTypes.string
 };
 
-export default Large;
+export default Custom;
