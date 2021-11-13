@@ -1032,24 +1032,19 @@
               "paragraphs": [
                 "<span>Leading to the handover<sup>1</sup></span>, the Tiananmen Square Massacre provoked a <span>mass emigration<sup>2</sup></span> of Hong&nbsp;Kong people in the early 1990&rsquo;s. Uncertain of what the future would hold for their homeland, thousands of citizens decided to emigrate overseas to Western countries such as Canada, The United States, Australia, and Britain. In the ten years leading up to the handover, approximately <span>503,800<sup>3</sup></span> Hong&nbsp;Kong residents left the region."
               ],
-              "images": [
-                {
-                  "source": "one",
-                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
-                },
-                {
-                  "source": "two",
-                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
-                },
-                {
-                  "source": "three",
-                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
-                },
-                {
-                  "source": "four",
-                  "caption": "7 Street Portraits of Hong Kong immigrants by Pok Chi Lau."
-                }
-              ],
+              "imageLayout": {
+                "type": "large",
+                "images": [
+                  {
+                    "source": "candles",
+                    "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong&nbsp;Kong, Hong&nbsp;Kong. Held to mark the crackdown on the pro-democracy movement in Beijing&rsquo;s Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"
+                  },
+                  {
+                    "source": "crowd",
+                    "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong&nbsp;Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"
+                  }
+                ]
+              },
               "resources": [
                 {
                   "type": "Journal Excerpt",
@@ -2463,6 +2458,19 @@
               "paragraphs": [
                 "From June 20 to 29, an unofficial pro-democracy referendum organised by Occupy Central Love and Peace (OCLP) opened in Hong&nbsp;Kong attracting an overwhelming turnout. The referendum offered voters three reform proposals for selecting candidates for the Chief Executive election in 2017, all of which included an element of civic nomination that Beijing was opposed to. Nearly 800,000 people turned out for the unofficial referendum, and voted for their preferred election process for filling the Chief Executive&rsquo;s office."
               ],
+              "imageLayout": {
+                "type": "large",
+                "images": [
+                  {
+                    "source": "candles",
+                    "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong&nbsp;Kong, Hong&nbsp;Kong. Held to mark the crackdown on the pro-democracy movement in Beijing&rsquo;s Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"
+                  },
+                  {
+                    "source": "crowd",
+                    "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong&nbsp;Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"
+                  }
+                ]
+              },
               "resources": [
                 {
                   "type": "Article Excerpt",

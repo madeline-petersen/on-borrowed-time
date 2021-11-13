@@ -13,7 +13,7 @@ const imageLookup = {
   portrait3: portrait3
 };
 
-const Triptych = ({ images }) => {
+const Triptych = ({ images, textColourClass }) => {
   return (
     <Row className="grid__row pb-20">
       <Col lg={3} />
@@ -28,7 +28,9 @@ const Triptych = ({ images }) => {
               src={imageLookup[image.source]}
               alt={image.alt}
             />
-            <p className={`small-body mt-2.5 mb-9 fade-first`}>
+            <p
+              className={`small-body mt-2.5 mb-9 ${textColourClass} fade-first`}
+            >
               {ReactHtmlParser(image.caption)}
             </p>
           </Col>
@@ -42,7 +44,8 @@ const Triptych = ({ images }) => {
 };
 
 Triptych.propTypes = {
-  images: PropTypes.shape()
+  images: PropTypes.shape(),
+  textColourClass: PropTypes.string
 };
 
 export default Triptych;

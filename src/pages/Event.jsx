@@ -26,6 +26,7 @@ import portrait2 from '../images/2014_Scene01_ChuYiuMing.png';
 import portrait3 from '../images/2014_Scene01_ChanKinMan.png';
 import Triptych from '../components/imageLayouts/Triptych';
 import Diptych from '../components/imageLayouts/Diptych';
+import Large from '../components/imageLayouts/Large';
 
 const imageLookup = {
   portrait1: portrait1,
@@ -373,11 +374,23 @@ const Event = ({
                     );
                   })}
                 </Row>
+                {event.imageLayout && event.imageLayout.type === 'large' && (
+                  <Large
+                    images={event.imageLayout.images}
+                    textColourClass={textColourClass}
+                  />
+                )}
                 {event.imageLayout && event.imageLayout.type === 'triptych' && (
-                  <Triptych images={event.imageLayout.images} />
+                  <Triptych
+                    images={event.imageLayout.images}
+                    textColourClass={textColourClass}
+                  />
                 )}
                 {event.imageLayout && event.imageLayout.type === 'diptych' && (
-                  <Diptych images={event.imageLayout.images} />
+                  <Diptych
+                    images={event.imageLayout.images}
+                    textColourClass={textColourClass}
+                  />
                 )}
                 <ResourceTable
                   data={event.resources}
