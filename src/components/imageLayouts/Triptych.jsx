@@ -22,7 +22,7 @@ const Triptych = ({ images }) => {
           <Visible md sm xs>
             <Col md={4} sm={4} xs={4} />
           </Visible>
-          <Col key={image.source} lg={3} md={3} sm={4}>
+          <Col key={image.source} lg={2} md={3} sm={4}>
             <img
               className="fade-first w-full"
               src={imageLookup[image.source]}

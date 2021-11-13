@@ -59,8 +59,8 @@ const Header = ({
     >
       <Container className="grid__container">
         <Row className={`grid__row pt-5`}>
-          <Col lg={3} md={4} sm={4} xs={4} />
-          <Col lg={7} md={6} sm={8} xs={8}>
+          <Col xl={3} lg={3} md={4} sm={4} xs={4} />
+          <Col xl={7} lg={5} md={6} sm={8} xs={8}>
             <p
               className={`${pageId !== 'intro' &&
                 'cursor-pointer'} contrast-text ${
@@ -86,7 +86,7 @@ const Header = ({
             )}
           </Col>
           <Visible xxl xl lg>
-            <Col lg={1}>
+            <Col xl={1} lg={2}>
               <p
                 className={`cursor-pointer contrast-text ${pageId ===
                   'thematic-threads' && 'underline'}`}
@@ -95,7 +95,7 @@ const Header = ({
                 Thematic Threads
               </p>
             </Col>
-            <Col lg={1}>
+            <Col xl={1} lg={2}>
               <p
                 className={`cursor-pointer contrast-text ${pageId ===
                   'editors-note' && 'underline'}`}
