@@ -21,8 +21,16 @@ import one from '../images/1997-01.jpeg';
 import two from '../images/1997-02.jpeg';
 import three from '../images/1997-03.jpeg';
 import four from '../images/1997-04.jpeg';
+import portrait1 from '../images/2014_Scene01_BennyTai.png';
+import portrait2 from '../images/2014_Scene01_ChuYiuMing.png';
+import portrait3 from '../images/2014_Scene01_ChanKinMan.png';
+import Triptych from '../components/imageLayouts/Triptych';
+import Diptych from '../components/imageLayouts/Diptych';
 
 const imageLookup = {
+  portrait1: portrait1,
+  portrait2: portrait2,
+  portrait3: portrait3,
   hkIdentity: hkIdentity,
   geniuneDemocracy: geniuneDemocracy,
   solidarityAndResistance: solidarityAndResistance,
@@ -365,51 +373,12 @@ const Event = ({
                     );
                   })}
                 </Row>
-                {event.images &&
-                  event.images.map((image, index) => {
-                    return index % 2 === 0 ? (
-                      <Row key={`image-${index}`} className="grid__row pb-20">
-                        <Col lg={1} />
-                        <Col lg={11} md={12}>
-                          <img
-                            className="fade-first"
-                            src={imageLookup[image.source]}
-                            alt=""
-                          />
-                        </Col>
-                        <Col lg={3} />
-                        <Col lg={4} md={4}>
-                          <p
-                            className={`small-body text-white mt-8 fade-first`}
-                          >
-                            {ReactHtmlParser(image.caption)}
-                          </p>
-                        </Col>
-                      </Row>
-                    ) : (
-                      <Row
-                        key={`image-${index}`}
-                        className="grid__row pt-20 pb-24"
-                      >
-                        <Col lg={3} />
-                        <Col lg={7} md={12}>
-                          <img
-                            className="fade-second"
-                            src={imageLookup[image.source]}
-                            alt=""
-                          />
-                        </Col>
-                        <Col lg={3} />
-                        <Col lg={4} md={4}>
-                          <p
-                            className={`small-body text-white mt-5 fade-second`}
-                          >
-                            {ReactHtmlParser(image.caption)}
-                          </p>
-                        </Col>
-                      </Row>
-                    );
-                  })}
+                {event.imageLayout && event.imageLayout.type === 'triptych' && (
+                  <Triptych images={event.imageLayout.images} />
+                )}
+                {event.imageLayout && event.imageLayout.type === 'diptych' && (
+                  <Diptych images={event.imageLayout.images} />
+                )}
                 <ResourceTable
                   data={event.resources}
                   isModalActive={isModalActive}
