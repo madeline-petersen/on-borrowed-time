@@ -6,13 +6,13 @@ import one from './1997-01.jpeg';
 import two from './1997-02.jpeg';
 import three from './1997-03.jpeg';
 import four from './1997-04.jpeg';
-import hkIdentity from '../images/02_2020_HKIdentity.jpeg';
-import geniuneDemocracy from '../images/03_2020_GeniuneDemocracy.jpeg';
-import solidarityAndResistance from '../images/04_2020_SolidarityAndResistance.jpeg';
-import nationalAmnesia from '../images/05_2020_NationalAmnesia.jpeg';
-import portrait1 from '../images/2014_Scene01_BennyTai.png';
-import portrait2 from '../images/2014_Scene01_ChuYiuMing.png';
-import portrait3 from '../images/2014_Scene01_ChanKinMan.png';
+import hkIdentity from './02_2020_HKIdentity.jpeg';
+import geniuneDemocracy from './03_2020_GeniuneDemocracy.jpeg';
+import solidarityAndResistance from './04_2020_SolidarityAndResistance.jpeg';
+import nationalAmnesia from './05_2020_NationalAmnesia.jpeg';
+import portrait1 from './2014_Scene01_BennyTai.png';
+import portrait2 from './2014_Scene01_ChuYiuMing.png';
+import portrait3 from './2014_Scene01_ChanKinMan.png';
 
 const imageLookup = {
   car: car,
