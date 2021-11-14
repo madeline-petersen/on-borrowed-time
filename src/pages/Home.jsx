@@ -60,7 +60,7 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
   };
 
   return (
-    <>
+    <div className="home">
       <ReactFullpage
         licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
         pluginWrapper={pluginWrapper}
@@ -133,7 +133,7 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
           );
         }}
       />
-    </>
+    </div>
   );
 };
 

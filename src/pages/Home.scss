@@ -1,66 +1,56 @@
-// .home {
-//   height: 100vh;
-//   overflow-y: scroll;
-//   scroll-snap-type: y mandatory;
+.home {
+  .hero-image {
+    background-color: #000000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-.hero-image {
-  position: sticky;
-  top: 0;
-  background-color: #000000;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
+  .active {
+    .title {
+      opacity: 0;
+      animation-name: foreground-fade-in-and-translate;
+      animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+      animation-duration: 1.5s;
+      animation-delay: 0s;
+      animation-fill-mode: forwards;
 
-.active {
+      &__english {
+        animation-delay: 0.5s;
+      }
+
+      &__chinese {
+        animation-delay: 0.625s;
+      }
+
+      &__year {
+        animation-delay: 0.75s;
+      }
+    }
+  }
+
   .title {
     opacity: 0;
-    animation-name: foreground-fade-in-and-translate;
-    animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+  }
+
+  .scene-name {
+    top: 50%;
+  }
+
+  .arrow-down {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    opacity: 0;
+    animation-name: foreground-fade-in-and-translate-down;
     animation-duration: 1.5s;
-    animation-delay: 0s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
 
-    &__english {
-      animation-delay: 0.5s;
-    }
-
-    &__chinese {
-      animation-delay: 0.625s;
-    }
-
-    &__year {
-      animation-delay: 0.75s;
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
     }
   }
 }
-
-.title {
-  opacity: 0;
-}
-
-.scene-name {
-  top: 50%;
-}
-
-.arrow-down {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  opacity: 0;
-  animation-name: foreground-fade-in-and-translate-down;
-  animation-duration: 1.5s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-
-  svg {
-    width: 20px;
-    height: 20px;
-    fill: white;
-  }
-}
-
-// }
