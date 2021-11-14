@@ -144,11 +144,11 @@ const LeftMenu = ({
                     </>
                   ))}
 
-                  <span key="editors-note">
+                  <span key="thematic-threads">
                     <Row
                       className={`left-menu__year mb-2 ${selectedYear &&
                         'fade-out-content'} pt-6`}
-                      onClick={() => onClickLink('editors-note')}
+                      onClick={() => onClickLink('thematic-threads')}
                     >
                       <Col lg={11} md={11} sm={11} xs={11}>
                         {/* dividing line */}
@@ -159,24 +159,24 @@ const LeftMenu = ({
                       {/* 3/4 of 4 columns */}
                       <Col lg={9} md={9} sm={10} xs={10}>
                         <div className="medium-body text-white cursor-pointer fit-content">
-                          Editor&apos;s Note
+                          Thematic Threads
                         </div>
                       </Col>
                     </Row>
                   </span>
 
-                  <span key="thematic-threads">
+                  <span key="editors-note">
                     <Row
                       className={`left-menu__year mb-2 ${selectedYear &&
                         'fade-out-content'}`}
-                      onClick={() => onClickLink('thematic-threads')}
+                      onClick={() => onClickLink('editors-note')}
                     >
                       {/* 1/4 of 4 columns */}
                       <Col lg={3} md={3} sm={2} xs={2} />
                       {/* 3/4 of 4 columns */}
                       <Col lg={9} md={9} sm={10} xs={10}>
                         <div className="medium-body text-white cursor-pointer fit-content">
-                          Thematic Threads
+                          Editor&apos;s Note
                         </div>
                       </Col>
                     </Row>
