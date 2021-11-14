@@ -98,7 +98,7 @@ const Header = ({
             </Col>
             <Col xl={1} lg={2}>
               <p
-                className={`cursor-pointer contrast-text
+                className={`cursor-pointer contrast-text float-right
                 ${pageId === 'event' ? colourBackgroundClass : ''}
                 ${pageId === 'editors-note' && 'underline'}`}
                 onClick={() => onClickUrl('editors-note')}
