@@ -1,6 +1,6 @@
 import { Col, Row } from 'react-grid-system';
 
-import { ArrowDown16 } from '@carbon/icons-react';
+import { ArrowRight16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -100,7 +100,7 @@ const Footer = ({
             {next.title}
           </p>
           <p className={`pb-4 pt-4 ${textClasses} fade-in-element`}>
-            <ArrowDown16 />
+            <ArrowRight16 />
           </p>
         </Col>
       </Row>
