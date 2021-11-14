@@ -44,7 +44,7 @@ const Header = ({
   };
 
   const onClickUrl = url => {
-    // setNextBackground(currentYear, 'event');
+    setNextBackground(currentYear, 'thematic-threads');
     setIsTransitioning(true);
     navigateTo(url);
   };

@@ -91,13 +91,14 @@ const UIShell = props => {
   };
 
   const setNextBackground = (year, pageId = 'intro') => {
-    // can we compare pageId and props.pageId here?
     if (pageId === 'intro') {
       setNextBackgroundClass(imageBackgroundClasses[year]);
     } else if (pageId === 'event') {
       setNextBackgroundClass(colourBackgroundClasses[year]);
+    } else if (pageId === 'thematic-threads') {
+      setNextBackgroundClass('bg-white');
     } else {
-      // artifacts, reflection
+      // artifacts, reflection, editors note
       setNextBackgroundClass('bg-black');
     }
   };
