@@ -25,9 +25,14 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
       // IE9, IE8, etc
       window.location.hash = '#!' + destinationYear;
     }
+
+    console.log(destination.item);
+    destination.item.classList.add(direction);
   };
 
-  const afterLoad = (origin, destination, direction) => {};
+  const afterLoad = (origin, destination, direction) => {
+    origin.item.classList.remove(direction);
+  };
 
   useEffect(() => {
     // get year, index from hash

@@ -7,30 +7,28 @@
   }
 
   .active {
-    .title {
-      opacity: 0;
-      animation-name: foreground-fade-in-and-translate;
-      animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
-      animation-duration: 1.5s;
-      animation-delay: 0s;
-      animation-fill-mode: forwards;
+    &.down {
+      .title {
+        opacity: 0;
+        animation-name: foreground-fade-in-and-translate;
+        animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+        animation-duration: 1.5s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
 
-      &__english {
-        animation-delay: 0.5s;
-      }
+        &__english {
+          animation-delay: 0.5s;
+        }
 
-      &__chinese {
-        animation-delay: 0.625s;
-      }
+        &__chinese {
+          animation-delay: 0.625s;
+        }
 
-      &__year {
-        animation-delay: 0.75s;
+        &__year {
+          animation-delay: 0.75s;
+        }
       }
     }
-  }
-
-  .title {
-    opacity: 0;
   }
 
   .scene-name {
