@@ -13,18 +13,31 @@ const pluginWrapper = () => {
 };
 
 const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
-  const [year, setYear] = useState(years[0]);
   const [isClicked, setClicked] = useState(false);
+
+  const onLeave = (origin, destination, direction) => {
+    const destinationYear = years[destination.index].id;
+    setHash(destinationYear);
+    if (history.pushState) {
+      // IE10, Firefox, Chrome, etc.
+      window.history.pushState(null, null, '#' + destinationYear);
+    } else {
+      // IE9, IE8, etc
+      window.location.hash = '#!' + destinationYear;
+    }
+  };
+
+  const afterLoad = (origin, destination, direction) => {};
 
   useEffect(() => {
     // get year, index from hash
     let yearIndex = years.findIndex(year => year.id === hash);
+
+    // set year/section to match hash
     if (yearIndex > -1) {
-      setYear(years[yearIndex]); // year, title
-    } else {
-      setYear(years[0]); // year, title
+      fullpage_api.silentMoveTo(yearIndex + 1);
     }
-  }, [hash]);
+  }, []);
 
   useEffect(() => {
     setIsTransitioning(false);
@@ -48,34 +61,19 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
 
   return (
     <>
-      {/* <div
-        className="home"
-        id="home"
-        // hash is updated as page is scrolled
-        onScroll={e => {
-          let year = years[Math.floor(e.target.scrollTop / window.innerHeight)];
-          setHash(year.id);
-          if (history.pushState) {
-            // IE10, Firefox, Chrome, etc.
-            window.history.pushState(null, null, '#' + year.id);
-          } else {
-            // IE9, IE8, etc
-            window.location.hash = '#!' + year.id;
-          }
-        }}
-      > */}
       <ReactFullpage
-        //fullpage options
         licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
         pluginWrapper={pluginWrapper}
-        scrollingSpeed={1000} /* Options here */
-        parallax={true} /* Because we are using the extension */
+        scrollingSpeed={1000}
+        parallax={true}
         parallaxOptions={{
           type: 'cover',
           percentage: 30,
           property: 'translate'
         }}
         parallaxKey={'aGstb25ib3Jyb3dlZHRpbWUuY29tX1dmR2NHRnlZV3hzWVhnPUV0cg=='}
+        onLeave={onLeave}
+        afterLoad={afterLoad}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
@@ -84,7 +82,7 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
                   <div
                     className={`section hero-image cursor-pointer ${
                       transitionBackgroundClasses[year.id]
-                    } ${hash === year.id ? 'current' : ''}`}
+                    }`}
                     key={year.id}
                     id={year.id}
                     onClick={() => onClickYear(year.id)}
@@ -135,7 +133,6 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
           );
         }}
       />
-      {/* </div> */}
     </>
   );
 };
