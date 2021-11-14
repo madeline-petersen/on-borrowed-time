@@ -107,7 +107,10 @@ const ResourceTable = ({
                 className={`small-body`}
                 style={{ display: 'flex', justifyContent: 'space-between' }}
               >
-                <p className={`${themeTextClass} text-opacity-70 fade-second`}>
+                <p
+                  className={`${themeTextClass} text-opacity-70 fade-second`}
+                  style={{ maxWidth: '70%' }}
+                >
                   {[
                     'Journal Excerpt',
                     'Article Excerpt',
