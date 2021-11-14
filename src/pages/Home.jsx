@@ -77,6 +77,7 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
           property: 'translate'
         }}
         parallaxKey={'aGstb25ib3Jyb3dlZHRpbWUuY29tX1dmR2NHRnlZV3hzWVhnPUV0cg=='}
+        continuousVertical={true}
         onLeave={onLeave}
         afterLoad={afterLoad}
         render={({ state, fullpageApi }) => {
