@@ -279,6 +279,8 @@ const Event = ({
                     </section>
                   );
                 })}
+                {/* padding below last resource table */}
+                <div className="pb-16" />
               </div>
             )}
           </Container>
