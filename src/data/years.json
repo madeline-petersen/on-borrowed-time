@@ -147,6 +147,16 @@
                 "Signed in 1984, the <span>Sino-British Joint Declaration<sup>1</sup></span> between Britain and China defined the conditions in which Hong&nbsp;Kong would fall back under China&rsquo;s authority. Hong&nbsp;Kong would become a &ldquo;Special Administrative Region&rdquo; of China, as outlined in the Declaration, where its autonomy, capitalistic economy, and partial democratic political system were to remain largely unchanged for 50 years.",
                 "To codify the Joint Declaration, China and Hong Kong negotiated a constitutional document known as <span>Basic Law.<sup>2</sup></span> Its intended purpose was to protect the rights of Hong Kong citizens from Beijing oversight and to build a path to achieving universal suffrage during the 50-year transition period."
               ],
+              "imageLayout": {
+                "type": "custom",
+                "images": [
+                  {
+                    "source": "signingJointDeclaration",
+                    "type": "small",
+                    "caption": "Former premiers Margaret Thatcher and Zhao Ziyang sign the Sino-British Joint Declaration on Hong Kong in 1984"
+                  }
+                ]
+              },
               "resources": [
                 {
                   "type": "Journal Excerpt",
@@ -373,17 +383,16 @@
                 "A high ranking official of the Chinese Communist Party, Hu was an <span>icon<sup>1</sup></span> for political reform and democratic change. His critique on Mao&rsquo;s cult-like ideology differed from other political figures, and made Hu a beloved leader.",
                 "The death of <span>Hu Yaobang<sup>2</sup></span> on April 15 1989, ignited public outcry—<span>mourning<sup>3</sup></span>, grief, and anger quickly developed into a series of student-led pro-democracy demonstrations and hunger strikes across China."
               ],
-              "images": [
-                {
-                  "source": "crowd",
-                  "caption": "Some two hundred thousand pro-democracy students staged an unauthorized demonstration in Tiananmen Square during the funeral ceremony of the Chinese Communist Party leader and liberal reformer Hu Yaobang, on April 22, 1989.  Photograph by Catherine Henriette/AFP/Getty."
-                },
-                {
-                  "title": "Reflection",
-                  "source": "car",
-                  "caption": "A weary protester pleads with a PLA officer sitting in his truck to not crackdown on the student demonstrators in Tiananmen Square. (Photo by Peter Turnley/Getty Images)"
-                }
-              ],
+              "imageLayout": {
+                "type": "custom",
+                "images": [
+                  {
+                    "source": "crowd",
+                    "type": "large",
+                    "caption": "BEIJING, CHINA - APRIL 22: Picture dated 22 April 1989 shows several hundred of 200,000 pro-democracy student protesters face to face with policemen outside the Great Hall of the People in Tiananmen Square in Beijing as they take part in the funeral ceremony of former Chinese Communist Party leader and liberal reformer Hu Yaobang during an unauthorized demonstration to mourn his death. Hu Yaobang's death in April trigged an unprecedented wave of pro-democracy demonstrations. The April-June 1989 movement was crushed by Chinese troops in June when army tanks rolled into Tiananmen Square 04 June. AFP PHOTO (Photo credit should read CATHERINE HENRIETTE/AFP via Getty Images)"
+                  }
+                ]
+              },
               "resources": [
                 {
                   "type": "Book Excerpt",
@@ -479,6 +488,22 @@
               "paragraphs": [
                 "On the nights of June 3-4, 1989, a series of peaceful demonstrations led by pro-democracy protesters in Beijing were violently suppressed by Chinese authorities. Known as &ldquo;The June Fourth Incident&rdquo;, thousands of unarmed protestors were massacred at Tiananmen Square, with thousands more arrested across cities in China."
               ],
+
+              "imageLayout": {
+                "type": "custom",
+                "images": [
+                  {
+                    "source": "tiananmenSquareMassacreFight",
+                    "type":"large",
+                    "caption": "People transport a wounded man during the military crackdown in Tiananmen Square in June, 1989. (Photo by David Turnley/Getty Images)"
+                  },
+                  {
+                    "source": "tanks",
+                    "type": "large",
+                    "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier.. (Photo by Peter Charlesworth/LightRocket via Getty Images)"
+                  }
+                ]
+              },
               "resources": [
                 {
                   "type": "Book Excerpt",
@@ -877,6 +902,16 @@
                 "In the years following the massacre, China began interrogating the memory of Tiananmen Square by censoring the events that occurred on June 4th, 1989. The <span>deadly suppression of protesters<sup>1</sup></span> became an unspoken moment in China&rsquo;s past, purged from its history books.",
                 "Meanwhile, Hong&nbsp;Kong became a safe haven for democratic activists to commemorate the tragedy of the massacre, as China continued to use insidious tactics to <span>contest the memory of Tiananmen Square.<sup>2</sup></span>"
               ],
+              "imageLayout": {
+                "type": "custom",
+                "images": [
+                  {
+                    "source": "vigilRememberingCrackdown",
+                    "type": "large",
+                    "caption": "HONG KONG - JUNE 04: Participants take part at the candlelight vigil as they hold candles at Victoria Park on June 4, 2015 in Causeway Bay, Hong Kong. Hong Kong residents held a candlelight vigil as it marks 26th anniversary of 1989 student-led Tiananmen Square protest. (Photo by Anthony Kwan/Getty Images)"
+                  }
+                ]
+              },
               "resources": [
                 {
                   "type": "Article Excerpt",
@@ -1032,19 +1067,6 @@
               "paragraphs": [
                 "<span>Leading to the handover<sup>1</sup></span>, the Tiananmen Square Massacre provoked a <span>mass emigration<sup>2</sup></span> of Hong&nbsp;Kong people in the early 1990&rsquo;s. Uncertain of what the future would hold for their homeland, thousands of citizens decided to emigrate overseas to Western countries such as Canada, The United States, Australia, and Britain. In the ten years leading up to the handover, approximately <span>503,800<sup>3</sup></span> Hong&nbsp;Kong residents left the region."
               ],
-              "imageLayout": {
-                "type": "large",
-                "images": [
-                  {
-                    "source": "candles",
-                    "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong&nbsp;Kong, Hong&nbsp;Kong. Held to mark the crackdown on the pro-democracy movement in Beijing&rsquo;s Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"
-                  },
-                  {
-                    "source": "crowd",
-                    "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong&nbsp;Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"
-                  }
-                ]
-              },
               "resources": [
                 {
                   "type": "Journal Excerpt",

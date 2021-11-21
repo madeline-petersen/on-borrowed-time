@@ -1,7 +1,7 @@
 import candles from './candles.png';
 import car from './car.png';
-import crowd from './crowd.png';
-import tanks from './tanks.png';
+import crowd from './GettyImages-52010887_op.jpg';
+import tanks from './GettyImages-166775260_op.jpg';
 import one from './1997-01.jpeg';
 import two from './1997-02.jpeg';
 import three from './1997-03.jpeg';
@@ -13,6 +13,9 @@ import nationalAmnesia from './05_2020_NationalAmnesia.jpeg';
 import portrait1 from './2014_Scene01_BennyTai.png';
 import portrait2 from './2014_Scene01_ChuYiuMing.png';
 import portrait3 from './2014_Scene01_ChanKinMan.png';
+import signingJointDeclaration from './1984_Scene02.jpeg';
+import vigilRememberingCrackdown from './GettyImages-475837512_op.jpg';
+import tiananmenSquareMassacreFight from './GettyImages-640492299_op.jpg';
 
 const imageLookup = {
   car: car,
@@ -29,6 +32,9 @@ const imageLookup = {
   hkIdentity: hkIdentity,
   geniuneDemocracy: geniuneDemocracy,
   solidarityAndResistance: solidarityAndResistance,
+  signingJointDeclaration: signingJointDeclaration,
+  tiananmenSquareMassacreFight: tiananmenSquareMassacreFight,
+  vigilRememberingCrackdown: vigilRememberingCrackdown,
   nationalAmnesia: nationalAmnesia
 };
 
