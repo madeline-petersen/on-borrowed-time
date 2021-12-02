@@ -1,11 +1,12 @@
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
 import Footer from '../components/Footer';
 import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
+import { useOverscroll } from '../hooks/useOverscroll';
 
 const Reflection = ({
   reflection,
@@ -19,6 +20,25 @@ const Reflection = ({
   setNextBackground
 }) => {
   const [isClicked, setClicked] = useState(false);
+  const scrollRef = useRef();
+  const onScrollEnd = useCallback(() => {
+    setClicked(true);
+    setIsTransitioning(true);
+    if (changingParam === 'year') {
+      // if year end
+      // inter-year
+      navigateTo(nextParams.year);
+    } else {
+      // else
+      // intra-year
+      navigateTo(
+        nextParams.year,
+        nextParams.scene, // should be romanSceneNumber
+        nextParams.page
+      );
+    }
+  }, []);
+  useOverscroll(scrollRef, onScrollEnd);
 
   useEffect(() => {
     setClicked(isTransitioning);
@@ -51,16 +71,17 @@ const Reflection = ({
       </div>
 
       <div className="h-auto bg-black">
-        <Container className="grid__container min-h-screen">
+        <Container className="min-h-screen grid__container">
           <HeaderSpacer />
 
           {/* Final Reflection */}
           <div
             id="overflow-container"
+            ref={scrollRef}
             className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
           >
             <div className="footer-spacer">
-              <Row className="grid__row pb-5" style={{ paddingTop: '20vh' }}>
+              <Row className="pb-5 grid__row" style={{ paddingTop: '20vh' }}>
                 {reflection.paragraphs[0] &&
                   reflection.paragraphs[0].map((paragraph, index) => {
                     return (
@@ -101,7 +122,7 @@ const Reflection = ({
                 <Row className="grid__row">
                   <Col lg={3} />
                   <Col lg={6} md={12}>
-                    <p className="border-t border-white border-opacity-20 pb-5 fade-second" />
+                    <p className="pb-5 border-t border-white border-opacity-20 fade-second" />
                     {reflection.citations.map(({ text, linkTo }) => {
                       return (
                         <a
@@ -109,14 +130,14 @@ const Reflection = ({
                           target="_blank"
                           rel="noopener noreferrer"
                           href={linkTo}
-                          className="small-body text-white text-opacity-50"
+                          className="text-white text-opacity-50 small-body"
                         >
-                          <p className="mb-4 fade-second flex flex-start">
+                          <p className="flex mb-4 fade-second flex-start">
                             <span>
                               {ReactHtmlParser(text)}
                               {linkTo && (
                                 <ArrowUpRight16
-                                  className="ml-1 inline-block"
+                                  className="inline-block ml-1"
                                   style={{ minWidth: '16px' }}
                                 />
                               )}

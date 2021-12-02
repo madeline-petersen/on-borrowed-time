@@ -1,7 +1,7 @@
 import './Event.scss';
 
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import Footer from '../components/Footer';
 import HeaderSpacer from '../components/HeaderSpacer';
@@ -13,6 +13,7 @@ import Triptych from '../components/imageLayouts/Triptych';
 import Diptych from '../components/imageLayouts/Diptych';
 import Custom from '../components/imageLayouts/Custom';
 import imageLookup from '../images';
+import { useOverscroll } from '../hooks/useOverscroll';
 
 const Event = ({
   year,
@@ -33,6 +34,31 @@ const Event = ({
   const [isModalActive, setIsModalActive] = useState(false);
   const [anecdoteData, setAnecdoteData] = useState({});
   const [selectedTheme, setSelectedTheme] = useState(null);
+
+  const scrollRef = useRef();
+  const [previewNextPage, setPreviewNextPage] = useState(false);
+  const onScrollEnd = useCallback(() => {
+    if (previewNextPage) {
+      setClicked(true);
+      setIsTransitioning(true);
+      if (changingParam === 'year') {
+        // if year end
+        // inter-year
+        navigateTo(nextParams.year);
+      } else {
+        // else
+        // intra-year
+        navigateTo(
+          nextParams.year,
+          nextParams.scene, // should be romanSceneNumber
+          nextParams.page
+        );
+      }
+    } else {
+      setPreviewNextPage(true);
+    }
+  }, []);
+  useOverscroll(scrollRef, onScrollEnd, 3);
 
   const openModal = entry => {
     if (entry.content) {
@@ -102,13 +128,14 @@ const Event = ({
         </div>
 
         <div className={`h-auto ${colourBackgroundClass}`}>
-          <Container className="grid__container min-h-screen">
+          <Container className="min-h-screen grid__container">
             <HeaderSpacer />
 
             {/* Event */}
             {event && (
               <div
                 id="overflow-container"
+                ref={scrollRef}
                 className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
               >
                 <Row
@@ -245,7 +272,7 @@ const Event = ({
                         })}
                       </Row>
                       {section.image && (
-                        <Row className="grid__row pb-16">
+                        <Row className="pb-16 grid__row">
                           <Col lg={3} md={2} />
                           <Col lg={9} md={10} sm={12} xs={12}>
                             <img
@@ -304,14 +331,15 @@ const Event = ({
           )}
         </div>
 
-        <div className={`h-auto ${colourBackgroundClass}`}>
-          <Container className="grid__container min-h-screen">
+        <div className={`story-container h-auto ${colourBackgroundClass}`}>
+          <Container className="min-h-screen grid__container">
             <HeaderSpacer />
 
             {/* Event */}
             {event && (
               <div
                 id="overflow-container"
+                ref={scrollRef}
                 className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
               >
                 <Row
