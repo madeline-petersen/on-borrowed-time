@@ -10,12 +10,11 @@ import Header from '../components/Header';
 import Home from './Home.jsx';
 import Intro from './Intro.jsx';
 import LeftMenu from '../components/LeftMenu';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Reflection from './Reflection.jsx';
 import Timeline from '../components/Timeline';
 import { Visible } from 'react-grid-system';
-import { useHistory } from 'react-router-dom';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
