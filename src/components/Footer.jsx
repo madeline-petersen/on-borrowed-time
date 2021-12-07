@@ -3,6 +3,7 @@ import { Col, Row } from 'react-grid-system';
 import { ArrowRight16, ArrowDown16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
 
 const Footer = ({
   // useState variables, used in page component to transition page
@@ -97,7 +98,7 @@ const Footer = ({
         >
           <p className={`small-body pb-4 pt-4 ${textClasses} fade-in-element`}>
             {/* next page, next scene, next year */}
-            {next.title}
+            {ReactHtmlParser(next.title)}
           </p>
           <p className={`pb-4 pt-4 ${textClasses} fade-in-element`}>
             {pageId === 'intro' ? <ArrowRight16 /> : <ArrowDown16 />}
