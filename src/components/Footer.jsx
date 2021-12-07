@@ -1,6 +1,6 @@
 import { Col, Row } from 'react-grid-system';
 
-import { ArrowRight16 } from '@carbon/icons-react';
+import { ArrowRight16, ArrowDown16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React, { useCallback } from 'react';
 import { useOverscroll } from '../hooks/useOverscroll';
@@ -101,7 +101,7 @@ const Footer = ({
             {next.title}
           </p>
           <p className={`pb-4 pt-4 ${textClasses} fade-in-element`}>
-            <ArrowRight16 />
+            {pageId === 'intro' ? <ArrowRight16 /> : <ArrowDown16 />}
           </p>
         </Col>
       </Row>

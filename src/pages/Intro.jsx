@@ -28,6 +28,16 @@ const Intro = ({
     setNextBackground(nextParams.year, nextParams.page);
   }, [year]);
 
+  const onClickYear = year => {
+    setClicked(true);
+    setIsTransitioning(true);
+    navigateTo(
+      nextParams.year,
+      nextParams.scene, // should be romanSceneNumber
+      nextParams.page
+    );
+  };
+
   return (
     <>
       {/* Backgrounds for page transition */}
@@ -45,7 +55,12 @@ const Intro = ({
         )}
       </div>
 
-      <div className={`intro ${isClicked ? 'fade-out' : 'foreground-fade-in'}`}>
+      <div
+        className={`intro cursor-pointer ${
+          isClicked ? 'fade-out' : 'foreground-fade-in'
+        }`}
+        onClick={() => onClickYear(year.id)}
+      >
         <div className={`hero-image ${backgroundClass}`}>
           <div
             key={`gradient-transition-${year.id}`}

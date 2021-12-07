@@ -129,23 +129,25 @@ const Header = ({
                 Scene {romanSceneNumber}
               </p>
             )}
-            <p
-              key={`${currentYear}-${romanSceneNumber}-title`}
-              className={`medium-caption ${
-                pageId === 'event' ? 'title-animation' : 'cursor-pointer'
-              } ${
-                isTransitioning
-                  ? pageId === 'reflection'
-                    ? 'fade-out'
+            {title && (
+              <p
+                key={`${currentYear}-${romanSceneNumber}-title`}
+                className={`medium-caption ${
+                  pageId === 'event' ? 'title-animation' : 'cursor-pointer'
+                } ${
+                  isTransitioning
+                    ? pageId === 'reflection'
+                      ? 'fade-out'
+                      : ''
                     : ''
-                  : ''
-              } pt-2 pb-5 contrast-text ${
-                pageId === 'event' ? colourBackgroundClass : ''
-              }`}
-              onClick={onClickScene}
-            >
-              {ReactHtmlParser(title)}
-            </p>
+                } pt-2 pb-5 contrast-text ${
+                  pageId === 'event' ? colourBackgroundClass : ''
+                }`}
+                onClick={onClickScene}
+              >
+                {ReactHtmlParser(title)}
+              </p>
+            )}
           </Col>
         </Row>
       </Container>

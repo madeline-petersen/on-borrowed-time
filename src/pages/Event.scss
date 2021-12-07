@@ -83,6 +83,7 @@ $quarterHeight: calc(30vh - #{$a});
   100% {
     opacity: 1;
     transform: translateY(0px);
+    line-height: 1.2;
   }
 }
 
@@ -96,6 +97,7 @@ $quarterHeight: calc(30vh - #{$a});
   }
   .fade-first {
     opacity: 0;
+    line-height: 1.25;
     animation-name: delayed-fade-and-translate;
     animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
     animation-duration: 2s;
@@ -104,6 +106,7 @@ $quarterHeight: calc(30vh - #{$a});
   }
   .fade-second {
     opacity: 0;
+    line-height: 1.2;
     animation-name: delayed-fade-and-translate;
     animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
     animation-duration: 2s;
