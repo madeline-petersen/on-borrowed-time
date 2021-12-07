@@ -1,11 +1,12 @@
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import Footer from '../components/Footer';
 import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import imageLookup from '../images';
+import { useOverscroll } from '../hooks/useOverscroll';
 
 const Artifacts = ({
   artifacts,
@@ -19,6 +20,26 @@ const Artifacts = ({
   setNextBackground
 }) => {
   const [isClicked, setClicked] = useState(false);
+  const scrollRef = useRef();
+  const onScrollEnd = useCallback(() => {
+    setClicked(true);
+    setIsTransitioning(true);
+    if (changingParam === 'year') {
+      // if year end
+      // inter-year
+      navigateTo(nextParams.year);
+    } else {
+      // else
+      // intra-year
+      navigateTo(
+        nextParams.year,
+        nextParams.scene, // should be romanSceneNumber
+        nextParams.page
+      );
+    }
+  }, []);
+
+  useOverscroll(scrollRef, onScrollEnd);
 
   useEffect(() => {
     setClicked(isTransitioning);
@@ -46,17 +67,18 @@ const Artifacts = ({
       </div>
 
       <div className="h-auto bg-black">
-        <Container className="grid__container min-h-screen">
+        <Container className="min-h-screen grid__container">
           <HeaderSpacer />
 
           {/* Reflection */}
           <div
             id="overflow-container"
+            ref={scrollRef}
             className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
           >
             {artifacts.images.map((image, index) => {
               return index % 2 === 0 ? (
-                <Row key={`image-${index}`} className="grid__row pt-64 pb-20">
+                <Row key={`image-${index}`} className="pt-64 pb-20 grid__row">
                   <Col lg={1} />
                   <Col lg={11} md={12}>
                     <img
@@ -73,7 +95,7 @@ const Artifacts = ({
                   </Col>
                 </Row>
               ) : (
-                <Row key={`image-${index}`} className="grid__row pt-20 pb-24">
+                <Row key={`image-${index}`} className="pt-20 pb-24 grid__row">
                   <Col lg={3} />
                   <Col lg={7} md={12}>
                     <img
