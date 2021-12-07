@@ -2,8 +2,7 @@ import { Col, Row } from 'react-grid-system';
 
 import { ArrowRight16, ArrowDown16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
-import React, { useCallback } from 'react';
-import { useOverscroll } from '../hooks/useOverscroll';
+import React from 'react';
 
 const Footer = ({
   // useState variables, used in page component to transition page

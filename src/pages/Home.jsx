@@ -26,7 +26,6 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
       window.location.hash = '#!' + destinationYear;
     }
 
-    console.log(destination.item);
     destination.item.classList.add(direction);
   };
 

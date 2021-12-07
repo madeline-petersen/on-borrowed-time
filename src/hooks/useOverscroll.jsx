@@ -2,7 +2,7 @@ import throttle from 'lodash/throttle';
 import { useCallback, useEffect } from 'react';
 import { calcElementHeight } from '../helpers/CalcElementHeight';
 
-export function useOverscroll(ref, callback = () => {}, offset = 0) {
+export function useOverscroll(ref, callback = () => {}, offset = 3) {
   const handleScroll = useCallback(
     event => {
       const node = event.target;

@@ -1,11 +1,12 @@
 import './Intro.scss';
 
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import Footer from '../components/Footer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
+import { useOverscroll } from '../hooks/useOverscroll';
 
 const Intro = ({
   year,
@@ -28,7 +29,7 @@ const Intro = ({
     setNextBackground(nextParams.year, nextParams.page);
   }, [year]);
 
-  const onClickYear = year => {
+  const onClickYear = () => {
     setClicked(true);
     setIsTransitioning(true);
     navigateTo(
@@ -37,6 +38,12 @@ const Intro = ({
       nextParams.page
     );
   };
+
+  const onScrollEnd = useCallback(() => {
+    onClickYear();
+  }, []);
+  const scrollRef = useRef();
+  useOverscroll(scrollRef, onScrollEnd, 3);
 
   return (
     <>
@@ -59,6 +66,7 @@ const Intro = ({
         className={`intro cursor-pointer ${
           isClicked ? 'fade-out' : 'foreground-fade-in'
         }`}
+        ref={scrollRef}
         onClick={() => onClickYear(year.id)}
       >
         <div className={`hero-image ${backgroundClass}`}>

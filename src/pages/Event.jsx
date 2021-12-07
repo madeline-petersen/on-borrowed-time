@@ -36,7 +36,8 @@ const Event = ({
   const [selectedTheme, setSelectedTheme] = useState(null);
 
   const scrollRef = useRef();
-  const [previewNextPage, setPreviewNextPage] = useState(false);
+  // set to false initially if implementing preview
+  const [previewNextPage, setPreviewNextPage] = useState(true);
   const onScrollEnd = useCallback(() => {
     if (previewNextPage) {
       setClicked(true);
@@ -434,7 +435,9 @@ Event.propTypes = {
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
   setNextBackground: PropTypes.func,
-  colourBackgroundClass: PropTypes.string
+  colourBackgroundClass: PropTypes.string,
+  textColourClass: PropTypes.string,
+  borderColourClass: PropTypes.string
 };
 
 export default Event;
