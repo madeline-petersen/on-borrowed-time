@@ -1,6 +1,6 @@
 import './Event.scss';
 
-import { Col, Container, Row } from 'react-grid-system';
+import { Col, Container, Row, useScreenClass } from 'react-grid-system';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import Footer from '../components/Footer';
@@ -8,7 +8,6 @@ import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import ResourceTable from '../components/ResourceTable';
-import { useScreenClass } from 'react-grid-system';
 import Triptych from '../components/imageLayouts/Triptych';
 import Diptych from '../components/imageLayouts/Diptych';
 import Custom from '../components/imageLayouts/Custom';
@@ -110,6 +109,29 @@ const Event = ({
   const isSelectedTheme = theme => {
     return theme === selectedTheme;
   };
+
+  const hexToRGBTable = {
+    'bg-blue-50': [0, 55, 120],
+    'bg-red': [104, 18, 12],
+    'bg-yellow': [232, 229, 210],
+    'bg-purple': [156, 140, 181],
+    'bg-gray-30': [188, 185, 182],
+    'bg-brown': [147, 103, 83]
+  };
+
+  const [red, green, blue] = hexToRGBTable[colourBackgroundClass];
+  const transitionContainer = document.querySelector(
+    '.transition-colour-on-scroll'
+  );
+  const overflow = document.getElementById('overflow-container');
+
+  if (overflow) {
+    overflow.addEventListener('scroll', () => {
+      const y = 1 + overflow.scrollTop / 150;
+      const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
+      transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    });
+  }
 
   if (year.id === '2020') {
     return (
@@ -321,7 +343,7 @@ const Event = ({
         {/* Backgrounds for page transition */}
         <div className={`absolute top-0 w-full`}>
           <div
-            className={`h-screen ${colourBackgroundClass} w-full ${
+            className={`h-screen transition-colour-on-scroll ${colourBackgroundClass} w-full ${
               isClicked ? 'screen-shrink' : ''
             }`}
           />
@@ -332,7 +354,9 @@ const Event = ({
           )}
         </div>
 
-        <div className={`story-container h-auto ${colourBackgroundClass}`}>
+        <div
+          className={`story-container h-auto transition-colour-on-scroll ${colourBackgroundClass}`}
+        >
           <Container className="min-h-screen grid__container">
             <HeaderSpacer />
 
