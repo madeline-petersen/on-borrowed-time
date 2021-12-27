@@ -28,8 +28,7 @@ const Event = ({
   setNextBackground,
   colourBackgroundClass,
   textColourClass,
-  borderColourClass,
-  headerHeight
+  borderColourClass
 }) => {
   const [isClicked, setClicked] = useState(false);
   const [isModalActive, setIsModalActive] = useState(false);
@@ -137,7 +136,6 @@ const Event = ({
             {event && (
               <div
                 id="overflow-container"
-                style={{ height: `calc(100vh - ${headerHeight}px)` }}
                 ref={scrollRef}
                 className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
               >
@@ -342,7 +340,6 @@ const Event = ({
             {event && (
               <div
                 id="overflow-container"
-                style={{ height: `calc(100vh - ${headerHeight}px)` }}
                 ref={scrollRef}
                 className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
               >
@@ -444,8 +441,7 @@ Event.propTypes = {
   setNextBackground: PropTypes.func,
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
-  borderColourClass: PropTypes.string,
-  headerHeight: PropTypes.number
+  borderColourClass: PropTypes.string
 };
 
 export default Event;

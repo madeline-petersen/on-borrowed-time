@@ -25,9 +25,6 @@ const UIShell = props => {
   const [isWhite, setIsWhite] = useState(true);
 
   let history = useHistory();
-  const header = document.getElementById('header-container');
-  const headerHeight = header?.offsetHeight;
-  console.log('hh ', headerHeight);
 
   const navigateTo = (year, romanSceneNumber, page) => {
     let overflowContainer = document.getElementById('overflow-container');
@@ -151,7 +148,6 @@ const UIShell = props => {
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           textColourClass={textColourClass[props.year.id]}
           borderColourClass={borderColourClass[props.year.id]}
-          headerHeight={headerHeight}
         />
       );
       break;
@@ -164,7 +160,6 @@ const UIShell = props => {
           setNextBackground={setNextBackground}
           isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
-          headerHeight={headerHeight}
         />
       );
       break;
@@ -177,7 +172,6 @@ const UIShell = props => {
           navigateTo={navigateTo}
           isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
-          headerHeight={headerHeight}
         />
       );
       break;

@@ -325,6 +325,7 @@ a {
 
 #overflow-container {
   width: 100%;
+  height: calc(100vh - 78px);
   overflow-y: scroll;
   overflow-x: hidden;
   box-sizing: content-box; /* So the width will be 100% + 11px */

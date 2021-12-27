@@ -17,8 +17,7 @@ const Artifacts = ({
   nextBackgroundClass,
   isTransitioning,
   setIsTransitioning,
-  setNextBackground,
-  headerHeight
+  setNextBackground
 }) => {
   const [isClicked, setClicked] = useState(false);
   const scrollRef = useRef();
@@ -74,7 +73,6 @@ const Artifacts = ({
           {/* Reflection */}
           <div
             id="overflow-container"
-            style={{ height: `calc(100vh - ${headerHeight}px)` }}
             ref={scrollRef}
             className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
           >
@@ -155,8 +153,7 @@ Artifacts.propTypes = {
   nextBackgroundClass: PropTypes.string,
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
-  setNextBackground: PropTypes.func,
-  headerHeight: PropTypes.number
+  setNextBackground: PropTypes.func
 };
 
 export default Artifacts;

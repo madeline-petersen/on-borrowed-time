@@ -17,8 +17,7 @@ const Reflection = ({
   isTransitioning,
   setIsTransitioning,
   navigateTo,
-  setNextBackground,
-  headerHeight
+  setNextBackground
 }) => {
   const [isClicked, setClicked] = useState(false);
   const scrollRef = useRef();
@@ -78,7 +77,6 @@ const Reflection = ({
           {/* Final Reflection */}
           <div
             id="overflow-container"
-            style={{ height: `calc(100vh - ${headerHeight}px)` }}
             ref={scrollRef}
             className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
           >
@@ -190,8 +188,7 @@ Reflection.propTypes = {
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
-  setNextBackground: PropTypes.func,
-  headerHeight: PropTypes.number
+  setNextBackground: PropTypes.func
 };
 
 export default Reflection;
