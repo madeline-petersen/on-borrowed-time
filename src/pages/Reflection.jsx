@@ -17,7 +17,8 @@ const Reflection = ({
   isTransitioning,
   setIsTransitioning,
   navigateTo,
-  setNextBackground
+  setNextBackground,
+  headerHeight
 }) => {
   const [isClicked, setClicked] = useState(false);
   const scrollRef = useRef();
@@ -70,8 +71,8 @@ const Reflection = ({
         )}
       </div>
 
-      <div className="h-auto bg-black">
-        <Container className="min-h-screen grid__container">
+      <div className="h-screen bg-black">
+        <Container className="h-screen grid__container">
           <HeaderSpacer />
 
           {/* Final Reflection */}
@@ -189,7 +190,8 @@ Reflection.propTypes = {
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
-  setNextBackground: PropTypes.func
+  setNextBackground: PropTypes.func,
+  headerHeight: PropTypes.number
 };
 
 export default Reflection;

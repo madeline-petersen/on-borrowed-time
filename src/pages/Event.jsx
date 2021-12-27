@@ -129,8 +129,8 @@ const Event = ({
           )}
         </div>
 
-        <div className={`h-auto ${colourBackgroundClass}`}>
-          <Container className="min-h-screen grid__container">
+        <div className={`h-screen ${colourBackgroundClass}`}>
+          <Container className="h-screen grid__container">
             <HeaderSpacer />
 
             {/* Event */}

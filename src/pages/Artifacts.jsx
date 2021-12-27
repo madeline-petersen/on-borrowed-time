@@ -17,7 +17,8 @@ const Artifacts = ({
   nextBackgroundClass,
   isTransitioning,
   setIsTransitioning,
-  setNextBackground
+  setNextBackground,
+  headerHeight
 }) => {
   const [isClicked, setClicked] = useState(false);
   const scrollRef = useRef();
@@ -66,8 +67,8 @@ const Artifacts = ({
         )}
       </div>
 
-      <div className="h-auto bg-black">
-        <Container className="min-h-screen grid__container">
+      <div className="h-screen bg-black">
+        <Container className="h-screen grid__container">
           <HeaderSpacer />
 
           {/* Reflection */}
@@ -154,7 +155,8 @@ Artifacts.propTypes = {
   nextBackgroundClass: PropTypes.string,
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
-  setNextBackground: PropTypes.func
+  setNextBackground: PropTypes.func,
+  headerHeight: PropTypes.number
 };
 
 export default Artifacts;

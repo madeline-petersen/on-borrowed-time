@@ -64,15 +64,17 @@ const Footer = ({
 
   return (
     <>
-      <Row className={`grid__row`}>
-        <Col lg={1} />
-        <Col lg={11} md={12}>
-          <p className={`border-t ${borderClasses} fade-in-element`} />
-        </Col>
-      </Row>
+      {pageId === 'intro' && (
+        <Row className={`grid__row`}>
+          <Col lg={1} />
+          <Col lg={11} md={12}>
+            <p className={`border-t ${borderClasses} fade-in-element`} />
+          </Col>
+        </Row>
+      )}
       <Row
         className={`grid__row ${nextBackgroundClass} ${
-          isClicked ? 'cursor-default' : 'cursor-pointer'
+          isClicked ? 'cursor-default fade-out' : 'cursor-pointer'
         }`}
         onClick={() => handleOnClick()}
       >
