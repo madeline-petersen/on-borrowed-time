@@ -9,7 +9,7 @@ export function useOverscroll(ref, callback = () => {}, offset = 3) {
       const elHeight = calcElementHeight(event.target);
       const limit = elHeight - (node.offsetHeight || node.innerHeight) - offset;
 
-      if (node.scrollTop >= limit) callback?.();
+      // if (node.scrollTop >= limit) callback?.();
     },
     [ref, callback]
   );

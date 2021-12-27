@@ -28,7 +28,8 @@ const Event = ({
   setNextBackground,
   colourBackgroundClass,
   textColourClass,
-  borderColourClass
+  borderColourClass,
+  headerHeight
 }) => {
   const [isClicked, setClicked] = useState(false);
   const [isModalActive, setIsModalActive] = useState(false);
@@ -136,6 +137,7 @@ const Event = ({
             {event && (
               <div
                 id="overflow-container"
+                style={{ height: `calc(100vh - ${headerHeight}px)` }}
                 ref={scrollRef}
                 className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
               >
@@ -340,6 +342,7 @@ const Event = ({
             {event && (
               <div
                 id="overflow-container"
+                style={{ height: `calc(100vh - ${headerHeight}px)` }}
                 ref={scrollRef}
                 className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
               >
@@ -401,21 +404,25 @@ const Event = ({
                   textColourClass={textColourClass}
                   borderColourClass={borderColourClass}
                 />
-
-                <Footer
-                  pageId="event"
-                  nextParams={nextParams}
-                  next={next}
-                  changingParam={changingParam}
-                  setClicked={setClicked}
-                  isClicked={isClicked}
-                  navigateTo={navigateTo}
-                  setIsTransitioning={setIsTransitioning}
-                  textColourClass={textColourClass}
-                  borderColourClass={borderColourClass}
-                />
               </div>
             )}
+          </Container>
+        </div>
+        <div className={`${nextBackgroundClass} translate-y-full`}>
+          <Container className="grid__container">
+            <Footer
+              pageId="event"
+              nextParams={nextParams}
+              next={next}
+              changingParam={changingParam}
+              setClicked={setClicked}
+              isClicked={isClicked}
+              navigateTo={navigateTo}
+              setIsTransitioning={setIsTransitioning}
+              textColourClass={textColourClass}
+              borderColourClass={borderColourClass}
+              nextBackgroundClass={nextBackgroundClass}
+            />
           </Container>
         </div>
       </>
@@ -437,7 +444,8 @@ Event.propTypes = {
   setNextBackground: PropTypes.func,
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
-  borderColourClass: PropTypes.string
+  borderColourClass: PropTypes.string,
+  headerHeight: PropTypes.number
 };
 
 export default Event;

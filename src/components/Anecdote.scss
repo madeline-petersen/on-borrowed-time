@@ -63,9 +63,12 @@ $xxl-minus-1: 1799px;
     ); // easeInOutQuint
   }
 
+  $headerHeight: 78px;
+  $screenMinusHeader: calc(100vh - #{$headerHeight});
+
   .modal-height {
     width: 100%;
-    height: calc(100vh - 78px);
+    height: $screenMinusHeader;
     overflow-y: scroll;
     box-sizing: content-box; /* So the width will be 100% + 13px */
     padding-right: calc(13px + 3rem);

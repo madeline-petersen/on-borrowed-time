@@ -51,6 +51,7 @@ const Header = ({
 
   return (
     <span
+      id="header-container"
       className={`absolute w-full top-0 z-10 medium-caption contrast-text ${
         ['1989', '1997'].includes(currentYear)
           ? 'mix-blend-screen'

@@ -77,6 +77,7 @@ const Reflection = ({
           {/* Final Reflection */}
           <div
             id="overflow-container"
+            style={{ height: `calc(100vh - ${headerHeight}px)` }}
             ref={scrollRef}
             className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
           >
@@ -151,21 +152,25 @@ const Reflection = ({
                 </Row>
               )}
             </div>
-
-            {next && (
-              <Footer
-                pageId="reflection"
-                nextParams={nextParams}
-                next={next}
-                changingParam={changingParam}
-                setClicked={onFooterClick}
-                navigateTo={navigateTo}
-                setIsTransitioning={setIsTransitioning}
-              />
-            )}
           </div>
         </Container>
       </div>
+      {next && (
+        <div className={`${nextBackgroundClass} translate-y-full`}>
+          <Container className="grid__container">
+            <Footer
+              pageId="reflection"
+              nextParams={nextParams}
+              next={next}
+              changingParam={changingParam}
+              setClicked={onFooterClick}
+              navigateTo={navigateTo}
+              setIsTransitioning={setIsTransitioning}
+              nextBackgroundClass={nextBackgroundClass}
+            />
+          </Container>
+        </div>
+      )}
     </>
   );
 };

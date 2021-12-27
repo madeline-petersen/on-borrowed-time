@@ -73,6 +73,7 @@ const Artifacts = ({
           {/* Reflection */}
           <div
             id="overflow-container"
+            style={{ height: `calc(100vh - ${headerHeight}px)` }}
             ref={scrollRef}
             className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
           >
@@ -113,17 +114,31 @@ const Artifacts = ({
                 </Row>
               );
             })}
-
-            <Footer
-              pageId="artifacts"
-              nextParams={nextParams}
-              next={next}
-              changingParam={changingParam}
-              setClicked={setClicked}
-              navigateTo={navigateTo}
-              setIsTransitioning={setIsTransitioning}
-            />
           </div>
+          <Footer
+            pageId="artifacts"
+            nextParams={nextParams}
+            next={next}
+            changingParam={changingParam}
+            setClicked={setClicked}
+            navigateTo={navigateTo}
+            setIsTransitioning={setIsTransitioning}
+            nextBackgroundClass={nextBackgroundClass}
+          />
+        </Container>
+      </div>
+      <div className={`${nextBackgroundClass} translate-y-full`}>
+        <Container className="grid__container">
+          <Footer
+            pageId="artifacts"
+            nextParams={nextParams}
+            next={next}
+            changingParam={changingParam}
+            setClicked={setClicked}
+            navigateTo={navigateTo}
+            setIsTransitioning={setIsTransitioning}
+            nextBackgroundClass={nextBackgroundClass}
+          />
         </Container>
       </div>
     </>

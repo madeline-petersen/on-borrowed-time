@@ -24,7 +24,8 @@ const Footer = ({
 
   // colours
   textColourClass,
-  borderColourClass
+  borderColourClass,
+  nextBackgroundClass
 }) => {
   const handleOnClick = () => {
     setClicked(true);
@@ -66,11 +67,11 @@ const Footer = ({
       <Row className={`grid__row`}>
         <Col lg={1} />
         <Col lg={11} md={12}>
-          <p className={`border-t ${borderClasses} mt-44 fade-in-element`} />
+          <p className={`border-t ${borderClasses} fade-in-element`} />
         </Col>
       </Row>
       <Row
-        className={`grid__row ${
+        className={`grid__row ${nextBackgroundClass} ${
           isClicked ? 'cursor-default' : 'cursor-pointer'
         }`}
         onClick={() => handleOnClick()}
@@ -121,7 +122,8 @@ Footer.propTypes = {
   next: PropTypes.shape(),
   pageId: PropTypes.string,
   textColourClass: PropTypes.string,
-  borderColourClass: PropTypes.string
+  borderColourClass: PropTypes.string,
+  nextBackgroundClass: PropTypes.string
 };
 
 export default Footer;
