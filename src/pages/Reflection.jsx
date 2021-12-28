@@ -130,7 +130,9 @@ const Reflection = ({
                           target="_blank"
                           rel="noopener noreferrer"
                           href={linkTo}
-                          className="text-white text-opacity-50 small-body"
+                          className={`transition-all text-white text-opacity-50 small-body ${
+                            linkTo ? 'hover:text-opacity-100' : ''
+                          }`}
                         >
                           <p className="flex mb-4 fade-second flex-start">
                             <span>

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import imageLookup from '../../images';
 
-const Custom = ({ images, textColourClass }) => {
+const Custom = ({ images }) => {
   return (
     <>
       {images.map((image, index) => {
@@ -21,7 +21,7 @@ const Custom = ({ images, textColourClass }) => {
             </Col>
             <Col lg={3} />
             <Col lg={4} md={4}>
-              <p className={`small-body ${textColourClass} mt-8 fade-first`}>
+              <p className={`small-body text-white mt-8 fade-first`}>
                 {ReactHtmlParser(image.caption)}
               </p>
             </Col>
@@ -38,7 +38,7 @@ const Custom = ({ images, textColourClass }) => {
             </Col>
             <Col lg={3} />
             <Col lg={4} md={4}>
-              <p className={`small-body ${textColourClass} mt-5 fade-second`}>
+              <p className={`small-body text-white mt-5 fade-second`}>
                 {ReactHtmlParser(image.caption)}
               </p>
             </Col>
@@ -50,8 +50,7 @@ const Custom = ({ images, textColourClass }) => {
 };
 
 Custom.propTypes = {
-  images: PropTypes.shape(),
-  textColourClass: PropTypes.string
+  images: PropTypes.shape()
 };
 
 export default Custom;

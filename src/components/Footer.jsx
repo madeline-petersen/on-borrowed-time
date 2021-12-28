@@ -4,6 +4,7 @@ import { ArrowRight16, ArrowDown16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import './Footer.scss';
 
 const Footer = ({
   // useState variables, used in page component to transition page
@@ -73,8 +74,8 @@ const Footer = ({
         </Row>
       )}
       <Row
-        className={`grid__row ${nextBackgroundClass} ${
-          isClicked ? 'cursor-default fade-out' : 'cursor-pointer'
+        className={`grid__row clickable-area ${nextBackgroundClass} ${
+          isClicked ? 'cursor-default' : 'cursor-pointer'
         }`}
         onClick={() => handleOnClick()}
       >
