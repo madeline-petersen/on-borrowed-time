@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import imageLookup from '../../images';
 
-const Triptych = ({ images, textColourClass }) => {
+const Triptych = ({ images }) => {
   return (
     <Row className="grid__row pb-20">
       <Col lg={3} />
@@ -34,8 +34,7 @@ const Triptych = ({ images, textColourClass }) => {
 };
 
 Triptych.propTypes = {
-  images: PropTypes.shape(),
-  textColourClass: PropTypes.string
+  images: PropTypes.shape()
 };
 
 export default Triptych;

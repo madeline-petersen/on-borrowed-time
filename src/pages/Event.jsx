@@ -127,9 +127,11 @@ const Event = ({
 
   if (overflow && transitionContainer && event.imageLayout) {
     overflow.addEventListener('scroll', () => {
-      const y = 1 + overflow.scrollTop / 150;
-      const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
-      transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+      const y = 1 + overflow.scrollTop / 150 - 5;
+      if (y >= 1) {
+        const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
+        transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+      }
     });
   }
 
@@ -410,22 +412,13 @@ const Event = ({
 
                 {event.imageLayout && <div style={{ marginTop: '3000px' }} />}
                 {event.imageLayout && event.imageLayout.type === 'custom' && (
-                  <Custom
-                    images={event.imageLayout.images}
-                    textColourClass={textColourClass}
-                  />
+                  <Custom images={event.imageLayout.images} />
                 )}
                 {event.imageLayout && event.imageLayout.type === 'triptych' && (
-                  <Triptych
-                    images={event.imageLayout.images}
-                    textColourClass={textColourClass}
-                  />
+                  <Triptych images={event.imageLayout.images} />
                 )}
                 {event.imageLayout && event.imageLayout.type === 'diptych' && (
-                  <Diptych
-                    images={event.imageLayout.images}
-                    textColourClass={textColourClass}
-                  />
+                  <Diptych images={event.imageLayout.images} />
                 )}
 
                 <Footer
@@ -437,8 +430,16 @@ const Event = ({
                   isClicked={isClicked}
                   navigateTo={navigateTo}
                   setIsTransitioning={setIsTransitioning}
-                  textColourClass={textColourClass}
-                  borderColourClass={borderColourClass}
+                  textColourClass={
+                    event.imageLayout
+                      ? `text-white text-opacity-90`
+                      : textColourClass
+                  }
+                  borderColourClass={
+                    event.imageLayout
+                      ? `border-white border-opacity-20`
+                      : borderColourClass
+                  }
                 />
               </div>
             )}
