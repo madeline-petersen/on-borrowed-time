@@ -20,9 +20,7 @@ const Triptych = ({ images, textColourClass }) => {
               src={imageLookup[image.source]}
               alt={image.alt}
             />
-            <p
-              className={`small-body mt-2.5 mb-9 ${textColourClass} fade-first`}
-            >
+            <p className={`small-body mt-2.5 mb-9 text-white fade-first`}>
               {ReactHtmlParser(image.caption)}
             </p>
           </Col>
