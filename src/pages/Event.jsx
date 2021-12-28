@@ -116,7 +116,8 @@ const Event = ({
     'bg-yellow': [232, 229, 210],
     'bg-purple': [156, 140, 181],
     'bg-gray-30': [188, 185, 182],
-    'bg-brown': [147, 103, 83]
+    'bg-brown': [147, 103, 83],
+    'bg-black': [0, 0, 0]
   };
 
   const [red, green, blue] = hexToRGBTable[colourBackgroundClass];
