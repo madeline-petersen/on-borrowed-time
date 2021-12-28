@@ -131,6 +131,9 @@ const Event = ({
       if (y >= 1) {
         const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
         transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+      } else {
+        const [r, g, b] = hexToRGBTable[colourBackgroundClass];
+        transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
       }
     });
   }
