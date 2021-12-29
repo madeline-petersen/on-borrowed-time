@@ -210,7 +210,7 @@ const LeftMenu = ({
                                 <div
                                   className={`small-body text-white text-opacity-50`}
                                 >
-                                  Scene {roman.toRoman(index + 1)}
+                                  Scene&nbsp;{roman.toRoman(index + 1)}
                                 </div>
                               </Col>
                               <Col lg={9} md={9} sm={10} xs={10}>

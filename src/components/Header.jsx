@@ -126,7 +126,7 @@ const Header = ({
                   pageId === 'event' ? colourBackgroundClass : ''
                 } ${isTransitioning && 'fade-out'}`}
               >
-                Scene {romanSceneNumber}
+                Scene&nbsp;{romanSceneNumber}
               </p>
             )}
             {title && (

@@ -87,7 +87,7 @@ const Footer = ({
             {/* current scene, next scene, next year */}
             {changingParam === 'year'
               ? nextParams.year
-              : `Scene ${nextParams.scene}`}
+              : ReactHtmlParser(`Scene&nbsp;${nextParams.scene}`)}
           </p>
         </Col>
         <Col
