@@ -282,41 +282,41 @@ a {
 .contrast-text {
   background-color: black;
   color: white;
-  transition: color 0.5s;
+  transition: color 0.5s, opacity 1s;
 
   &.bg-gray-30 {
     color: #bcb9b6;
-    transition: color 0.5s;
+    transition: color 0.5s, opacity 1s;
     mix-blend-mode: difference;
   }
 
   &.bg-red {
     // color: #68120c;
-    transition: color 0.5s;
+    transition: color 0.5s, opacity 1s;
     mix-blend-mode: screen;
   }
 
   &.bg-blue-50 {
     // color: #003778;
-    transition: color 0.5s;
+    transition: color 0.5s, opacity 1s;
     mix-blend-mode: screen;
   }
 
   &.bg-yellow {
     color: #e8e5d2;
-    transition: color 0.5s;
+    transition: color 0.5s, opacity 1s;
     mix-blend-mode: difference;
   }
 
   &.bg-purple {
     color: #9c8cb5;
-    transition: color 0.5s;
+    transition: color 0.5s, opacity 1s;
     mix-blend-mode: difference;
   }
 
   &.bg-brown {
     color: #936753;
-    transition: color 0.5s;
+    transition: color 0.5s, opacity 1s;
     mix-blend-mode: difference;
   }
 }
