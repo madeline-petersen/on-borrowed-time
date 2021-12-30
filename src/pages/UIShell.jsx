@@ -108,6 +108,11 @@ const UIShell = props => {
 
   const onCloseLeftMenu = () => {
     setIsMenuActive(false);
+
+    // show "On Borrowed Time" after menu closes
+    setTimeout(function() {
+      setSelectedYear(null);
+    }, 500);
   };
 
   let pageComponent;
