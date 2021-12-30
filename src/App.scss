@@ -15,66 +15,104 @@ $xxl-minus-1: 1799px;
 
 @font-face {
   font-family: 'Lyon Display Web';
+  // src: url('LyonDisplay-LightItalic-Web.otf') format('opentype'),
   src: url('LyonDisplay-LightItalic-Web.woff2') format('woff2'),
-       url('LyonDisplay-LightItalic-Web.woff') format('woff');
-  font-weight:  300;
-  font-style:   italic;
+    url('LyonDisplay-LightItalic-Web.woff') format('woff'),
+    url('LyonDisplay-LightItalic-Web.eot') format('eot'),
+    url('LyonDisplay-LightItalic-Web.ttf') format('truetype'),
+    url('LyonDisplay-LightItalic-Web.svg') format('svg');
+  font-weight: 300;
+  font-style: italic;
   font-stretch: normal;
 }
 
 .LyonDisplay-LightItalic-Web {
   font-family: 'Lyon Display Web';
-  font-weight:  300;
-  font-style:   italic;
+  font-weight: 300;
+  font-style: italic;
   font-stretch: normal;
 }
 
 @font-face {
   font-family: 'Lyon Display Web';
+  // src: url('LyonDisplay-Light-Web.otf') format('opentype'),
   src: url('LyonDisplay-Light-Web.woff2') format('woff2'),
-       url('LyonDisplay-Light-Web.woff') format('woff');
-  font-weight:  300;
-  font-style:   normal;
+    url('LyonDisplay-Light-Web.woff') format('woff'),
+    url('LyonDisplay-Light-Web.eot') format('eot'),
+    url('LyonDisplay-Light-Web.ttf') format('truetype'),
+    url('LyonDisplay-Light-Web.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
   font-stretch: normal;
 }
 
 .LyonDisplay-Light-Web {
   font-family: 'Lyon Display Web';
-  font-weight:  300;
-  font-style:   normal;
+  font-weight: 300;
+  font-style: normal;
   font-stretch: normal;
 }
 
 @font-face {
   font-family: LyonText;
-  src: url('./LyonText-Regular.otf') format('opentype');
+  // src: url('./LyonText-Regular.otf') format('opentype'),
+  src: url('LyonText-Regular.woff2') format('woff2'),
+    url('LyonText-Regular.woff') format('woff'),
+    url('LyonText-Regular.eot') format('eot'),
+    url('LyonText-Regular.ttf') format('truetype'),
+    url('LyonText-Regular.svg') format('svg');
 }
 
 @font-face {
   font-family: Graphik-Regular;
-  src: url('./Graphik-Regular.otf') format('opentype');
+  src: url('./Graphik-Regular.otf') format('opentype'),
+    url('Graphik-Regular.woff2') format('woff2'),
+    url('Graphik-Regular.woff') format('woff'),
+    url('Graphik-Regular.eot') format('eot'),
+    url('Graphik-Regular.ttf') format('truetype'),
+    url('Graphik-Regular.svg') format('svg');
 }
 
 @font-face {
   font-family: Graphik-Medium;
-  src: url('./Graphik-Medium.otf') format('opentype');
+  src: url('./Graphik-Medium.otf') format('opentype'),
+    url('Graphik-Medium.woff2') format('woff2'),
+    url('Graphik-Medium.woff') format('woff'),
+    url('Graphik-Medium.eot') format('eot'),
+    url('Graphik-Medium.ttf') format('truetype'),
+    url('Graphik-Medium.svg') format('svg');
 }
 
 @font-face {
   font-family: NotoSerifTC-Regular;
-  src: url('./NotoSerifTC-Regular.otf') format('opentype');
+  src: url('./NotoSerifTC-Regular.otf') format('opentype'),
+    url('NotoSerifTC-Regular.woff2') format('woff2'),
+    url('NotoSerifTC-Regular.woff') format('woff'),
+    url('NotoSerifTC-Regular.eot') format('eot'),
+    url('NotoSerifTC-Regular.ttf') format('truetype'),
+    url('NotoSerifTC-Regular.svg') format('svg');
   font-display: block;
 }
 
 @font-face {
   font-family: NotoSerifTC-Medium;
-  src: url('./NotoSerifTC-Medium.otf') format('opentype');
+  src: url('./NotoSerifTC-Medium.otf') format('opentype'),
+    url('NotoSerifTC-Medium.woff2') format('woff2'),
+    url('NotoSerifTC-Medium.woff') format('woff'),
+    url('NotoSerifTC-Medium.eot') format('eot'),
+    url('NotoSerifTC-Medium.ttf') format('truetype'),
+    url('NotoSerifTC-Medium.svg') format('svg');
   font-display: block;
 }
 
 @font-face {
   font-family: NotoSerifTC-SemiBold;
-  src: url('./NotoSerifTC-SemiBold.otf') format('opentype');
+  src: url('./NotoSerifTC-SemiBold.otf') format('opentype'),
+    url('NotoSerifTC-SemiBold.woff2') format('woff2'),
+    url('NotoSerifTC-SemiBold.woff') format('woff'),
+    url('NotoSerifTC-SemiBold.eot') format('eot'),
+    url('NotoSerifTC-SemiBold.ttf') format('truetype'),
+    url('NotoSerifTC-SemiBold.svg') format('svg');
   font-display: block;
 }
 
