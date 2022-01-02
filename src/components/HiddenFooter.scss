@@ -1,0 +1,22 @@
+.clickable-area:hover {
+  .text-blue-10,
+  .text-gray-10,
+  .text-opacity-90 {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.25s;
+    --tw-text-opacity: 0.7 !important;
+  }
+}
+
+.hidden-footer__container {
+  position: fixed;
+  bottom: -51.5px;
+  background-color: black;
+  width: 100vw;
+  transition: bottom 1s;
+
+  &.show {
+    bottom: 0;
+  }
+}

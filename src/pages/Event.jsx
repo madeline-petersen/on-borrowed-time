@@ -3,7 +3,7 @@ import './Event.scss';
 import { Col, Container, Row, useScreenClass } from 'react-grid-system';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
-import Footer from '../components/Footer';
+import HiddenFooter from '../components/HiddenFooter';
 import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
@@ -35,10 +35,12 @@ const Event = ({
   const [selectedTheme, setSelectedTheme] = useState(null);
 
   const scrollRef = useRef();
+
   // set to false initially if implementing preview
-  const [previewNextPage, setPreviewNextPage] = useState(true);
+  const [showPreview, setShowPreview] = useState(false);
+
   const onScrollEnd = useCallback(() => {
-    if (previewNextPage) {
+    if (showPreview) {
       setClicked(true);
       setIsTransitioning(true);
       if (changingParam === 'year') {
@@ -55,10 +57,11 @@ const Event = ({
         );
       }
     } else {
-      setPreviewNextPage(true);
+      setShowPreview(true);
     }
   }, []);
-  useOverscroll(scrollRef, onScrollEnd, 3);
+
+  useOverscroll(scrollRef, onScrollEnd, 0);
 
   const openModal = entry => {
     if (entry.content) {
@@ -425,30 +428,24 @@ const Event = ({
                   <Diptych images={event.imageLayout.images} />
                 )}
 
-                <Footer
-                  pageId="event"
-                  nextParams={nextParams}
-                  next={next}
-                  changingParam={changingParam}
-                  setClicked={setClicked}
-                  isClicked={isClicked}
-                  navigateTo={navigateTo}
-                  setIsTransitioning={setIsTransitioning}
-                  textColourClass={
-                    event.imageLayout
-                      ? `text-white text-opacity-90`
-                      : textColourClass
-                  }
-                  borderColourClass={
-                    event.imageLayout
-                      ? `border-white border-opacity-20`
-                      : borderColourClass
-                  }
-                />
+                {/* padding below last page element */}
+                <div className="pb-44" />
               </div>
             )}
           </Container>
         </div>
+        <HiddenFooter
+          pageId="event"
+          nextParams={nextParams}
+          next={next}
+          changingParam={changingParam}
+          setClicked={setClicked}
+          isClicked={isClicked}
+          navigateTo={navigateTo}
+          setIsTransitioning={setIsTransitioning}
+          textColourClass="text-white text-opacity-90"
+          isShown={showPreview}
+        />
       </>
     );
   }

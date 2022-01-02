@@ -90,7 +90,7 @@ const Header = ({
                 ${pageId === 'thematic-threads' && 'underline'}`}
                 onClick={() => onClickUrl('thematic-threads')}
               >
-                Thematic Threads
+                Thematic&nbsp;Threads
               </p>
             </Col>
             <Col xl={1} lg={2}>
@@ -100,7 +100,7 @@ const Header = ({
                 ${pageId === 'editors-note' && 'underline'}`}
                 onClick={() => onClickUrl('editors-note')}
               >
-                Editor&apos;s Note
+                Editor&apos;s&nbsp;Note
               </p>
             </Col>
           </Visible>
