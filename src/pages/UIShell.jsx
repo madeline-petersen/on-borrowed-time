@@ -116,6 +116,34 @@ const UIShell = props => {
     }, 500);
   };
 
+  let timelineClasses = 'contrast-text mix-blend-difference';
+
+  if (isMenuActive) {
+    timelineClasses = `contrast-text ${
+      ['1989', '1997'].includes(props.year.id)
+        ? 'mix-blend-screen'
+        : 'mix-blend-difference'
+    }`;
+  }
+
+  if (props.pageId === 'home') {
+    timelineClasses = `contrast-text mix-blend-difference`;
+  }
+
+  if (props.pageId === 'event') {
+    timelineClasses = `contrast-text ${
+      colourBackgroundClasses[props.year.id]
+    } ${
+      ['1989', '1997'].includes(props.year.id)
+        ? 'mix-blend-screen'
+        : 'mix-blend-difference'
+    }`;
+  }
+
+  if (props.pageId === 'editors-note') {
+    timelineClasses = `contrast-text bg-blue-70 mix-blend-screen`;
+  }
+
   let pageComponent;
   switch (props.pageId) {
     case 'home':
@@ -187,7 +215,7 @@ const UIShell = props => {
       );
       break;
     case 'editors-note':
-      pageComponent = <EditorsNote />;
+      pageComponent = <EditorsNote timelineClasses={timelineClasses} />;
       break;
     default:
       pageComponent = (
@@ -202,33 +230,6 @@ const UIShell = props => {
   }
 
   let isYearEnd = props.isLastScene && props.isLastPage;
-  let timelineClasses = 'contrast-text mix-blend-difference';
-
-  if (isMenuActive) {
-    timelineClasses = `contrast-text ${
-      ['1989', '1997'].includes(props.year.id)
-        ? 'mix-blend-screen'
-        : 'mix-blend-difference'
-    }`;
-  }
-
-  if (props.pageId === 'home') {
-    timelineClasses = `contrast-text mix-blend-difference`;
-  }
-
-  if (props.pageId === 'event') {
-    timelineClasses = `contrast-text ${
-      colourBackgroundClasses[props.year.id]
-    } ${
-      ['1989', '1997'].includes(props.year.id)
-        ? 'mix-blend-screen'
-        : 'mix-blend-difference'
-    }`;
-  }
-
-  if (props.pageId === 'editors-note') {
-    timelineClasses = `contrast-text bg-blue-50 mix-blend-screen`;
-  }
 
   return (
     <>

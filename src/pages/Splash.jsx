@@ -3,6 +3,7 @@ import './Splash.scss';
 import React from 'react';
 import onborrowedtime from '../images/onborrowedtime.jpg';
 import { useScreenClass } from 'react-grid-system';
+import Countdown from '../components/Countdown';
 
 const Splash = () => {
   const screenClass = useScreenClass();
@@ -113,7 +114,7 @@ const Splash = () => {
 
       {/* bottom container */}
       <h3 className="small-body text-gray-60 text-fade-in">
-        The Expiry — <span id="demo" />
+        The Expiry — <Countdown />
       </h3>
     </div>
   );

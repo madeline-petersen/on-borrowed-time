@@ -302,6 +302,12 @@ a {
     mix-blend-mode: screen;
   }
 
+  &.bg-blue-70 {
+    // color: #00244e;
+    transition: color 0.5s, opacity 1s;
+    mix-blend-mode: screen;
+  }
+
   &.bg-yellow {
     color: #e8e5d2;
     transition: color 0.5s, opacity 1s;
