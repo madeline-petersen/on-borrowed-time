@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'react-grid-system';
 import Countdown from '../components/Countdown';
-import './Splash.scss';
 
 const EditorsNote = () => {
   return (
