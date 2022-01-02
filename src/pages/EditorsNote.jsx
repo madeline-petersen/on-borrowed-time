@@ -33,7 +33,7 @@ const EditorsNote = () => {
               暫借的地方, 暫借的時間
             </h3>
 
-            <h3 className="small-body text-gray-60 fade-in-element">
+            <h3 className="small-body text-white text-opacity-80 fade-in-element">
               Anthology coming soon
             </h3>
           </div>
