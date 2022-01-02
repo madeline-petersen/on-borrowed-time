@@ -61,7 +61,7 @@ const HiddenFooter = ({
       <Container className="grid__container">
         <Row
           className={`grid__row clickable-area ${
-            isClicked ? 'cursor-default' : 'cursor-pointer'
+            isClicked ? 'cursor-default fade-out' : 'cursor-pointer'
           }`}
           onClick={() => handleOnClick()}
         >
@@ -118,7 +118,6 @@ HiddenFooter.propTypes = {
   next: PropTypes.shape(),
   pageId: PropTypes.string,
   textColourClass: PropTypes.string,
-  borderColourClass: PropTypes.string,
   isShown: PropTypes.bool
 };
 

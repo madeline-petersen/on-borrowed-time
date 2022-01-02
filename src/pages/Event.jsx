@@ -444,11 +444,6 @@ const Event = ({
           navigateTo={navigateTo}
           setIsTransitioning={setIsTransitioning}
           textColourClass="text-white text-opacity-90"
-          borderColourClass={
-            event.imageLayout
-              ? `border-white border-opacity-20`
-              : borderColourClass
-          }
           isShown={showPreview}
         />
       </>
