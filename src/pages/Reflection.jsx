@@ -1,12 +1,13 @@
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+// import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
 import Footer from '../components/Footer';
 import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
-import { useOverscroll } from '../hooks/useOverscroll';
+// import { useOverscroll } from '../hooks/useOverscroll';
 
 const Reflection = ({
   reflection,
@@ -21,24 +22,24 @@ const Reflection = ({
 }) => {
   const [isClicked, setClicked] = useState(false);
   const scrollRef = useRef();
-  const onScrollEnd = useCallback(() => {
-    setClicked(true);
-    setIsTransitioning(true);
-    if (changingParam === 'year') {
-      // if year end
-      // inter-year
-      navigateTo(nextParams.year);
-    } else {
-      // else
-      // intra-year
-      navigateTo(
-        nextParams.year,
-        nextParams.scene, // should be romanSceneNumber
-        nextParams.page
-      );
-    }
-  }, []);
-  useOverscroll(scrollRef, onScrollEnd);
+  // const onScrollEnd = useCallback(() => {
+  //   setClicked(true);
+  //   setIsTransitioning(true);
+  //   if (changingParam === 'year') {
+  //     // if year end
+  //     // inter-year
+  //     navigateTo(nextParams.year);
+  //   } else {
+  //     // else
+  //     // intra-year
+  //     navigateTo(
+  //       nextParams.year,
+  //       nextParams.scene, // should be romanSceneNumber
+  //       nextParams.page
+  //     );
+  //   }
+  // }, []);
+  // useOverscroll(scrollRef, onScrollEnd);
 
   useEffect(() => {
     setClicked(isTransitioning);

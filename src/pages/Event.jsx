@@ -41,21 +41,21 @@ const Event = ({
 
   const onScrollEnd = useCallback(() => {
     if (showPreview) {
-      setClicked(true);
-      setIsTransitioning(true);
-      if (changingParam === 'year') {
-        // if year end
-        // inter-year
-        navigateTo(nextParams.year);
-      } else {
-        // else
-        // intra-year
-        navigateTo(
-          nextParams.year,
-          nextParams.scene, // should be romanSceneNumber
-          nextParams.page
-        );
-      }
+      // setClicked(true);
+      // setIsTransitioning(true);
+      // if (changingParam === 'year') {
+      //   // if year end
+      //   // inter-year
+      //   navigateTo(nextParams.year);
+      // } else {
+      //   // else
+      //   // intra-year
+      //   navigateTo(
+      //     nextParams.year,
+      //     nextParams.scene, // should be romanSceneNumber
+      //     nextParams.page
+      //   );
+      // }
     } else {
       setShowPreview(true);
     }

@@ -1,12 +1,13 @@
 import './Intro.scss';
 
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+// import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import Footer from '../components/Footer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
-import { useOverscroll } from '../hooks/useOverscroll';
+// import { useOverscroll } from '../hooks/useOverscroll';
 
 const Intro = ({
   year,
@@ -39,11 +40,11 @@ const Intro = ({
     );
   };
 
-  const onScrollEnd = useCallback(() => {
-    onClickYear();
-  }, []);
-  const scrollRef = useRef();
-  useOverscroll(scrollRef, onScrollEnd, 3);
+  // const onScrollEnd = useCallback(() => {
+  //   onClickYear();
+  // }, []);
+  // const scrollRef = useRef();
+  // useOverscroll(scrollRef, onScrollEnd, 3);
 
   return (
     <>
