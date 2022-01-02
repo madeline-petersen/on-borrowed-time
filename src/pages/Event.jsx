@@ -443,9 +443,7 @@ const Event = ({
           isClicked={isClicked}
           navigateTo={navigateTo}
           setIsTransitioning={setIsTransitioning}
-          textColourClass={
-            event.imageLayout ? `text-white text-opacity-90` : textColourClass
-          }
+          textColourClass="text-white text-opacity-90"
           borderColourClass={
             event.imageLayout
               ? `border-white border-opacity-20`
