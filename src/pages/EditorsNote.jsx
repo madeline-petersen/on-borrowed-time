@@ -13,28 +13,28 @@ const EditorsNote = () => {
           <div className="w-full flex flex-col justify-between p-4 md:p-5">
             <div className="flex justify-between items-center lg:mb-2 md:mb-1">
               <h3
-                className={`hidden md:block small-headline text-white fade-first`}
+                className={`hidden md:block small-headline text-white fade-in-element`}
               >
                 A Borrowed Place, On Borrowed Time
               </h3>
               <h3
-                className={`block md:hidden mobile-headline text-white fade-first mt-3.5 pt-px mb-1`}
+                className={`block md:hidden mobile-headline text-white fade-in-element mt-3.5 pt-px mb-1`}
               >
                 A Borrowed Place, On Borrowed Time
               </h3>
 
               {/* hide below md breakpoint */}
-              <h3 className="headline-characters text-white md:block hidden fade-first">
+              <h3 className="headline-characters text-white md:block hidden fade-in-element">
                 暫借的地方, 暫借的時間
               </h3>
             </div>
 
             {/* show below md breakpoint */}
-            <h3 className="mobile-characters text-white md:hidden mb-3.5 pb-px block fade-first">
+            <h3 className="mobile-characters text-white md:hidden mb-3.5 pb-px block fade-in-element">
               暫借的地方, 暫借的時間
             </h3>
 
-            <h3 className="small-body text-gray-60 fade-first">
+            <h3 className="small-body text-gray-60 fade-in-element">
               Anthology coming soon
             </h3>
           </div>
