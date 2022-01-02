@@ -10,7 +10,7 @@ const EditorsNote = () => {
       <div className={`bg-blue-70 h-auto foreground-fade-in`}>
         <Container className="min-h-screen grid__container">
           {/* top container */}
-          <div className="w-full flex flex-col justify-between p-4 md:p-5">
+          <div className="w-full flex flex-col justify-between py-4 md:p-4 md:py-5">
             <div className="flex justify-between items-center lg:mb-2 md:mb-1">
               <h3
                 className={`hidden md:block small-headline text-white fade-in-element`}
