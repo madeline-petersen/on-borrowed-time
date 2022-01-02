@@ -72,10 +72,10 @@ const EditorsNote = () => {
                 resurface a collection of stories, imagery, and musings of how
                 people felt in a particular moment in time. And at its core, it
                 is an anthology of reflections that attempts to forge meaning
-                from the tragic events that have transpired. It invites
-                questions of what it means to be Hongkonger? Can freedom survive
-                in the absence of democracy? And what role does memory play in
-                cultivating identity?
+                from the tragic events that have transpired. It invites the
+                question, what does it mean to be a Hongkonger? Can freedom
+                survive in the absence of democracy? And what role does memory
+                play in cultivating identity?
               </p>
               <br />
               <p
