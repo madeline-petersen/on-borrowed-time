@@ -6,13 +6,23 @@
 
     &.white {
       transition: background-position 1s 1s;
-      transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1); // easeInOutQuint
+      transition-timing-function: cubic-bezier(
+        0.83,
+        0,
+        0.17,
+        1
+      ); // easeInOutQuint
       background-position: left;
     }
 
     &.black {
       transition: background-position 1s 1s;
-      transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1); // easeInOutQuint
+      transition-timing-function: cubic-bezier(
+        0.83,
+        0,
+        0.17,
+        1
+      ); // easeInOutQuint
       background-position: right;
     }
 
@@ -58,6 +68,7 @@
   }
 }
 
+/*
 @keyframes shift-in-left {
   0% {
     transform: translateX(20px);
@@ -93,3 +104,4 @@
     transform: translateX(20px);
   }
 }
+*/
