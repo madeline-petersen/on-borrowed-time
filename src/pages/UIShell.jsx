@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import Artifacts from './Artifacts.jsx';
 import Event from './Event.jsx';
 import ThematicThreads from './ThematicThreads.jsx';
+import EditorsNote from './EditorsNote';
 import Header from '../components/Header';
 import Home from './Home.jsx';
 import Intro from './Intro.jsx';
@@ -185,6 +186,9 @@ const UIShell = props => {
         <ThematicThreads backgroundColor={isWhite ? 'white' : 'black'} />
       );
       break;
+    case 'editors-note':
+      pageComponent = <EditorsNote />;
+      break;
     default:
       pageComponent = (
         <Home
@@ -198,21 +202,29 @@ const UIShell = props => {
   }
 
   let isYearEnd = props.isLastScene && props.isLastPage;
-  let timelineClasses = isMenuActive
-    ? `contrast-text ${
-        ['1989', '1997'].includes(props.year.id)
-          ? 'mix-blend-screen'
-          : 'mix-blend-difference'
-      }`
-    : props.pageId === 'home'
-    ? `contrast-text mix-blend-difference`
-    : props.pageId === 'event'
-    ? `contrast-text ${colourBackgroundClasses[props.year.id]} ${
-        ['1989', '1997'].includes(props.year.id)
-          ? 'mix-blend-screen'
-          : 'mix-blend-difference'
-      }`
-    : 'contrast-text mix-blend-difference';
+  let timelineClasses = 'contrast-text mix-blend-difference';
+
+  if (isMenuActive) {
+    timelineClasses = `contrast-text ${
+      ['1989', '1997'].includes(props.year.id)
+        ? 'mix-blend-screen'
+        : 'mix-blend-difference'
+    }`;
+  }
+
+  if (props.pageId === 'home') {
+    timelineClasses = `contrast-text mix-blend-difference`;
+  }
+
+  if (props.pageId === 'event') {
+    timelineClasses = `contrast-text ${
+      colourBackgroundClasses[props.year.id]
+    } ${
+      ['1989', '1997'].includes(props.year.id)
+        ? 'mix-blend-screen'
+        : 'mix-blend-difference'
+    }`;
+  }
 
   return (
     <>
@@ -280,7 +292,7 @@ const UIShell = props => {
         </Visible>
         Time
       </Link>
-      {props.pageId !== 'thematic-threads' && (
+      {props.pageId !== 'thematic-threads' && props.pageId !== 'editors-note' && (
         <Timeline
           timelineClasses={timelineClasses}
           pageId={props.pageId}

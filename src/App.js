@@ -45,6 +45,10 @@ function HomeWrapper() {
   return <UIShell pageId="home" years={data.years} />;
 }
 
+function EditorsNoteWrapper() {
+  return <UIShell pageId="editors-note" years={data.years} />;
+}
+
 function ThematicThreadsWrapper() {
   return <UIShell pageId="thematic-threads" years={data.years} />;
 }
@@ -205,6 +209,9 @@ function App() {
             </Route>
             <Route path="/index">
               <Index />
+            </Route>
+            <Route path="/editors-note">
+              <EditorsNoteWrapper />
             </Route>
             <Route path="/thematic-threads">
               <ThematicThreadsWrapper />
