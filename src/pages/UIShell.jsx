@@ -233,77 +233,71 @@ const UIShell = props => {
 
   return (
     <>
-      {props.pageId !== 'editors-note' && (
-        <>
-          <Header
-            currentYear={props.year.id}
-            label={
-              props.pageId === 'home'
-                ? props.year.blurb
-                : `${props.year.id} ${props.year.title}`
-            }
-            pageId={props.pageId}
-            title={props.scene ? props.scene.title : ''}
-            isTransitioning={isTransitioning}
-            romanSceneNumber={props.romanSceneNumber}
-            setNextBackground={setNextBackground}
-            setIsTransitioning={setIsTransitioning}
-            navigateTo={navigateTo}
-            colourBackgroundClass={colourBackgroundClasses[props.year.id]}
-            setBackgroundColor={() => setIsWhite(!isWhite)}
-            isWhite={isWhite}
-            timelineClasses={timelineClasses}
-          />
-          <LeftMenu
-            isActive={isMenuActive}
-            onCloseLeftMenu={onCloseLeftMenu}
-            years={props.years}
-            navigateTo={navigateTo}
-            setNextBackground={setNextBackground}
-            setIsTransitioning={setIsTransitioning}
-            selectedYear={selectedYear}
-            setSelectedYear={setSelectedYear}
-          />
-          <span
-            className={`absolute text-3xl cursor-pointer z-40 left-menu-bullet ${
-              isMenuActive ? 'fade-out' : 'fade-in'
-            } ${timelineClasses}`}
-            onClick={toggleLeftMenu}
-          >
-            &#8226;
-          </span>
-          <span
-            className={`absolute text-3xl cursor-pointer z-40 left-menu-close ${
-              isMenuActive ? 'fade-in' : 'fade-out'
-            } ${timelineClasses}`}
-            onClick={
-              selectedYear !== null
-                ? () => setSelectedYear(null)
-                : toggleLeftMenu
-            }
-          >
-            {selectedYear !== null ? <ArrowLeft20 /> : <Close20 />}
-          </span>
-          <Link
-            to="/home" // to do: change to "/" when homepage moves
-            className={`absolute z-40 medium-caption page-title ${timelineClasses} ${
-              selectedYear === null
-                ? 'opacity-100 cursor-pointer'
-                : 'opacity-0 pointer-events-none'
-            }`}
-          >
-            On{' '}
-            <Visible sm xs>
-              <br />
-            </Visible>
-            Borrowed{' '}
-            <Visible sm xs>
-              <br />
-            </Visible>
-            Time
-          </Link>
-        </>
-      )}
+      <Header
+        currentYear={props.year.id}
+        label={
+          props.pageId === 'home'
+            ? props.year.blurb
+            : `${props.year.id} ${props.year.title}`
+        }
+        pageId={props.pageId}
+        title={props.scene ? props.scene.title : ''}
+        isTransitioning={isTransitioning}
+        romanSceneNumber={props.romanSceneNumber}
+        setNextBackground={setNextBackground}
+        setIsTransitioning={setIsTransitioning}
+        navigateTo={navigateTo}
+        colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+        setBackgroundColor={() => setIsWhite(!isWhite)}
+        isWhite={isWhite}
+        timelineClasses={timelineClasses}
+      />
+      <LeftMenu
+        isActive={isMenuActive}
+        onCloseLeftMenu={onCloseLeftMenu}
+        years={props.years}
+        navigateTo={navigateTo}
+        setNextBackground={setNextBackground}
+        setIsTransitioning={setIsTransitioning}
+        selectedYear={selectedYear}
+        setSelectedYear={setSelectedYear}
+      />
+      <span
+        className={`absolute text-3xl cursor-pointer z-40 left-menu-bullet ${
+          isMenuActive ? 'fade-out' : 'fade-in'
+        } ${timelineClasses}`}
+        onClick={toggleLeftMenu}
+      >
+        &#8226;
+      </span>
+      <span
+        className={`absolute text-3xl cursor-pointer z-40 left-menu-close ${
+          isMenuActive ? 'fade-in' : 'fade-out'
+        } ${timelineClasses}`}
+        onClick={
+          selectedYear !== null ? () => setSelectedYear(null) : toggleLeftMenu
+        }
+      >
+        {selectedYear !== null ? <ArrowLeft20 /> : <Close20 />}
+      </span>
+      <Link
+        to="/home" // to do: change to "/" when homepage moves
+        className={`absolute z-40 medium-caption page-title ${timelineClasses} ${
+          selectedYear === null
+            ? 'opacity-100 cursor-pointer'
+            : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        On{' '}
+        <Visible sm xs>
+          <br />
+        </Visible>
+        Borrowed{' '}
+        <Visible sm xs>
+          <br />
+        </Visible>
+        Time
+      </Link>
       {props.pageId !== 'thematic-threads' && props.pageId !== 'editors-note' && (
         <Timeline
           timelineClasses={timelineClasses}
