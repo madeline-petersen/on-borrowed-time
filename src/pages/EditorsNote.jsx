@@ -30,7 +30,7 @@ const EditorsNote = () => {
         <Row>
           <Col lg={4} md={3} />
           <Col lg={4} md={6} sm={12} xs={12}>
-            <p className={`small-body-2 text-white`}>
+            <p className={`small-body-2 text-white text-opacity-80`}>
               In order to tell the story of Hong Kong with accuracy and care,
               the project is broken down into several layers. At the surface, it
               outlines the historical account of Hong Kong’s handover since the
@@ -44,7 +44,7 @@ const EditorsNote = () => {
               democracy? And what role does memory play in cultivating identity?
             </p>
             <br />
-            <p className={`small-body-2 text-white`}>
+            <p className={`small-body-2 text-white text-opacity-80`}>
               On a more personal note, this project has also provided the
               editors of the work an opportunity to explore our own personal
               history and sense of belonging. It has given us the space to
@@ -60,7 +60,7 @@ const EditorsNote = () => {
               forever reshaped what can be said and fought for in Hong Kong.
             </p>
             <br />
-            <p className={`small-body-2 text-white mb-12`}>
+            <p className={`small-body-2 text-white text-opacity-80 mb-12`}>
               It is within this historical context that On Borrowed Time was
               created. The project contributes to the shared endeavour of
               documenting Hong Kong’s unique status in the face of censorship.
@@ -69,13 +69,17 @@ const EditorsNote = () => {
               common truth—and the spirit of the things we love—may persist.
             </p>
 
-            <p className={`small-body-2 text-white text-center mb-8`}>
+            <p
+              className={`small-body-2 text-white text-opacity-80 text-center mb-8`}
+            >
               A.C., M.L., M.P.
               <br />
               30. 11. 2021
             </p>
 
-            <h3 className="small-body text-gray-60 text-center mb-40">
+            <h3
+              className={`small-body-2 text-white text-opacity-80 text-center mb-40`}
+            >
               The Expiry — <Countdown />
             </h3>
           </Col>
