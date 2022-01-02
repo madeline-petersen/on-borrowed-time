@@ -78,7 +78,7 @@ const EditorsNote = () => {
             </p>
 
             <h3
-              className={`small-body-2 text-white text-opacity-80 text-center mb-40`}
+              className={`small-body-2 text-white text-opacity-80 text-center lg:mb-40 md:mb-20 sm:mb-10`}
             >
               The Expiry — <Countdown />
             </h3>
