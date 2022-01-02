@@ -202,8 +202,8 @@ function App() {
         <ScrollToTop>
           <Switch>
             <Route exact path="/">
-              {/* <Splash /> */}
-              <EditorsNoteWrapper />
+              <Splash />
+              {/* <EditorsNoteWrapper /> */}
             </Route>
             <Route exact path="/home">
               <HomeWrapper />
