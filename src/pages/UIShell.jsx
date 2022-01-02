@@ -226,6 +226,10 @@ const UIShell = props => {
     }`;
   }
 
+  if (props.pageId === 'editors-note') {
+    timelineClasses = `contrast-text bg-blue-50 mix-blend-screen`;
+  }
+
   return (
     <>
       <Header
@@ -245,6 +249,7 @@ const UIShell = props => {
         colourBackgroundClass={colourBackgroundClasses[props.year.id]}
         setBackgroundColor={() => setIsWhite(!isWhite)}
         isWhite={isWhite}
+        timelineClasses={timelineClasses}
       />
       <LeftMenu
         isActive={isMenuActive}

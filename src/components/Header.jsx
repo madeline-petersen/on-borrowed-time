@@ -17,7 +17,8 @@ const Header = ({
   navigateTo,
   colourBackgroundClass,
   setBackgroundColor,
-  isWhite
+  isWhite,
+  timelineClasses
 }) => {
   const onClickYear = () => {
     if (pageId !== 'intro') {
@@ -51,11 +52,7 @@ const Header = ({
 
   return (
     <span
-      className={`absolute w-full top-0 z-10 medium-caption contrast-text ${
-        ['1989', '1997'].includes(currentYear)
-          ? 'mix-blend-screen'
-          : 'mix-blend-difference'
-      }`}
+      className={`absolute w-full top-0 z-10 medium-caption ${timelineClasses}`}
     >
       <Container className="grid__container">
         <Row className={`grid__row pt-5`}>
@@ -171,7 +168,8 @@ Header.propTypes = {
   navigateTo: PropTypes.func,
   colourBackgroundClass: PropTypes.string,
   setBackgroundColor: PropTypes.func,
-  isWhite: PropTypes.bool
+  isWhite: PropTypes.bool,
+  timelineClasses: PropTypes.string
 };
 
 export default Header;
