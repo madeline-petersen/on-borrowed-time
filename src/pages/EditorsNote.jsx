@@ -33,7 +33,7 @@ const EditorsNote = () => {
               暫借的地方, 暫借的時間
             </h3>
 
-            <h3 className="small-body text-white text-opacity-80 fade-in-element">
+            <h3 className="small-body-2 text-white text-opacity-80 text-opacity-80 fade-in-element">
               Anthology coming soon
             </h3>
           </div>
@@ -61,7 +61,9 @@ const EditorsNote = () => {
           <Row>
             <Col lg={4} md={3} />
             <Col lg={4} md={6} sm={12} xs={12}>
-              <p className={`small-body-2 text-white fade-second`}>
+              <p
+                className={`small-body-2 text-white text-opacity-80 fade-second`}
+              >
                 In order to tell the story of Hong&nbsp;Kong with accuracy and
                 care, the project is broken down into several layers. At the
                 surface, it outlines the historical account of
@@ -76,7 +78,9 @@ const EditorsNote = () => {
                 what role does memory play in cultivating identity?
               </p>
               <br />
-              <p className={`small-body-2 text-white fade-second`}>
+              <p
+                className={`small-body-2 text-white text-opacity-80 fade-second`}
+              >
                 On a more personal note, this project has also provided the
                 editors of the work an opportunity to explore our own personal
                 history and sense of belonging. It has given us the space to
@@ -93,7 +97,9 @@ const EditorsNote = () => {
                 reshaped what can be said and fought for in Hong&nbsp;Kong.
               </p>
               <br />
-              <p className={`small-body-2 text-white mb-12 fade-second`}>
+              <p
+                className={`small-body-2 text-white text-opacity-80 mb-12 fade-second`}
+              >
                 It is within this historical context that On Borrowed Time was
                 created. The project contributes to the shared endeavour of
                 documenting Hong&nbsp;Kong&apos;s unique status in the face of
@@ -104,7 +110,7 @@ const EditorsNote = () => {
               </p>
 
               <p
-                className={`small-body-2 text-white text-center mb-8 fade-second`}
+                className={`small-body-2 text-white text-opacity-80 text-center mb-8 fade-second`}
               >
                 A.C., M.L., M.P.
                 <br />
@@ -112,7 +118,7 @@ const EditorsNote = () => {
               </p>
 
               <h3
-                className={`small-body-2 text-white text-center lg:mb-40 md:mb-20 sm:mb-10 fade-second`}
+                className={`small-body-2 text-white text-opacity-80 text-center lg:mb-40 md:mb-20 sm:mb-10 fade-second`}
               >
                 The Expiry — <Countdown />
               </h3>
