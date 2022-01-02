@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Col, Container, Row, useScreenClass } from 'react-grid-system';
+import { Col, Container, Row } from 'react-grid-system';
 import HeaderSpacer from '../components/HeaderSpacer';
 import Countdown from '../components/Countdown';
 
-const EditorsNote = ({ timelineClasses }) => {
-  const screenClass = useScreenClass();
+const EditorsNote = () => {
   return (
     <div className={`bg-blue-70 h-auto`}>
       <Container className="min-h-screen grid__container">

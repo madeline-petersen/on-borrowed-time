@@ -215,7 +215,7 @@ const UIShell = props => {
       );
       break;
     case 'editors-note':
-      pageComponent = <EditorsNote timelineClasses={timelineClasses} />;
+      pageComponent = <EditorsNote />;
       break;
     default:
       pageComponent = (
