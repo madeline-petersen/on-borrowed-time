@@ -2,6 +2,7 @@ import './Event.scss';
 
 import { Col, Container, Row, useScreenClass } from 'react-grid-system';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import throttle from 'lodash/throttle';
 
 import HiddenFooter from '../components/HiddenFooter';
 import HeaderSpacer from '../components/HeaderSpacer';
@@ -39,29 +40,40 @@ const Event = ({
   // set to false initially if implementing preview
   const [showPreview, setShowPreview] = useState(false);
 
-  const onScrollEnd = useCallback(() => {
-    if (showPreview) {
-      // setClicked(true);
-      // setIsTransitioning(true);
-      // if (changingParam === 'year') {
-      //   // if year end
-      //   // inter-year
-      //   navigateTo(nextParams.year);
-      // } else {
-      //   // else
-      //   // intra-year
-      //   navigateTo(
-      //     nextParams.year,
-      //     nextParams.scene, // should be romanSceneNumber
-      //     nextParams.page
-      //   );
-      // }
-    } else {
+  const onScrollEnd = useCallback(
+    throttle(() => {
       setShowPreview(true);
-    }
-  }, []);
+      // if (showPreview) {
+      //   setClicked(true);
+      //   setIsTransitioning(true);
+      //   if (changingParam === 'year') {
+      //     // if year end
+      //     // inter-year
+      //     navigateTo(nextParams.year);
+      //   } else {
+      //     // else
+      //     // intra-year
+      //     navigateTo(
+      //       nextParams.year,
+      //       nextParams.scene, // should be romanSceneNumber
+      //       nextParams.page
+      //     );
+      //   }
+      // } else {
+      // setShowPreview(true);
+      // }
+    }, 1000),
+    []
+  );
 
-  useOverscroll(scrollRef, onScrollEnd, 0);
+  const onScrollUp = useCallback(
+    throttle(() => {
+      setShowPreview(false);
+    }, 1000),
+    []
+  );
+
+  useOverscroll(scrollRef, onScrollEnd, onScrollUp, 0);
 
   const openModal = entry => {
     if (entry.content) {
