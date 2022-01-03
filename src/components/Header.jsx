@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import './Header.scss';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Header = ({
   currentYear,
@@ -20,6 +21,11 @@ const Header = ({
   isWhite,
   timelineClasses
 }) => {
+  let history = useHistory();
+  const navigateToUrl = url => {
+    history.push(`/${url}`);
+  };
+
   const onClickYear = () => {
     if (pageId !== 'intro') {
       setNextBackground(currentYear);
@@ -42,12 +48,6 @@ const Header = ({
       // setSceneIndex(null); // disappear circle
       navigateTo(currentYear, romanSceneNumber, 'event');
     }
-  };
-
-  const onClickUrl = url => {
-    setNextBackground(currentYear, 'thematic-threads');
-    setIsTransitioning(true);
-    navigateTo(url);
   };
 
   return (
@@ -88,7 +88,7 @@ const Header = ({
                 className={`cursor-pointer contrast-text
                 ${pageId === 'event' ? colourBackgroundClass : ''}
                 ${pageId === 'thematic-threads' && 'underline'}`}
-                onClick={() => onClickUrl('thematic-threads')}
+                onClick={() => navigateToUrl('thematic-threads')}
               >
                 Thematic&nbsp;Threads
               </p>
@@ -98,7 +98,7 @@ const Header = ({
                 className={`cursor-pointer contrast-text float-right
                 ${pageId === 'event' ? colourBackgroundClass : ''}
                 ${pageId === 'editors-note' && 'underline'}`}
-                onClick={() => onClickUrl('editors-note')}
+                onClick={() => navigateToUrl('editors-note')}
               >
                 Editor&apos;s&nbsp;Note
               </p>

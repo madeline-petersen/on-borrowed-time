@@ -51,8 +51,6 @@ const LeftMenu = ({
   };
 
   const onClickLink = url => {
-    setNextBackground(null, url);
-    setIsTransitioning(true);
     closeModal();
     setTimeout(function() {
       navigateTo(url);
