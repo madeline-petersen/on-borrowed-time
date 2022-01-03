@@ -3,7 +3,6 @@ import './UIShell.scss';
 import { ArrowLeft20, Close20 } from '@carbon/icons-react';
 import React, { useState } from 'react';
 
-import Artifacts from './Artifacts.jsx';
 import Event from './Event.jsx';
 import ThematicThreads from './ThematicThreads.jsx';
 import EditorsNote from './EditorsNote';
@@ -182,18 +181,6 @@ const UIShell = props => {
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           textColourClass={textColourClass[props.year.id]}
           borderColourClass={borderColourClass[props.year.id]}
-        />
-      );
-      break;
-    case 'artifacts':
-      pageComponent = (
-        <Artifacts
-          {...props}
-          navigateTo={navigateTo}
-          nextBackgroundClass={nextBackgroundClass}
-          setNextBackground={setNextBackground}
-          isTransitioning={isTransitioning}
-          setIsTransitioning={setIsTransitioning}
         />
       );
       break;
