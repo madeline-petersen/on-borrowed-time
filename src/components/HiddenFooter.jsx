@@ -57,7 +57,10 @@ const HiddenFooter = ({
   }
 
   return (
-    <div className={`hidden-footer__container ${isShown ? 'show' : 'hide'}`}>
+    <div
+      className={`hidden-footer__container ${isShown ? 'show' : 'hide'}`}
+      key={`${nextParams.year}-${nextParams.scene}-${nextParams.page}`}
+    >
       <Container className="grid__container">
         <Row
           className={`grid__row clickable-area ${

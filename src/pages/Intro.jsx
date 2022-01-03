@@ -43,7 +43,7 @@ const Intro = ({
   // const onScrollEnd = useCallback(() => {
   //   onClickYear();
   // }, []);
-  // const scrollRef = useRef();
+  const scrollRef = useRef();
   // useOverscroll(scrollRef, onScrollEnd, 3);
 
   return (
