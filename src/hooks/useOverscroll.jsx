@@ -17,11 +17,6 @@ export function useOverscroll(
       // offset lowers limit
       const limit = elHeight - (node.offsetHeight || node.innerHeight) - offset;
 
-      if (node.scrollTop >= limit) {
-        console.log('scroll top ', node.scrollTop);
-        console.log('exceeded limit ', limit);
-      }
-
       newValue = node.scrollTop;
       // if scrolling up
       if (oldValue > newValue) {
