@@ -101,6 +101,7 @@ const Event = ({
   }, [isTransitioning]);
 
   useEffect(() => {
+    setShowPreview(false);
     setIsTransitioning(false);
     if (nextParams) {
       setNextBackground(nextParams.year, nextParams.page);
