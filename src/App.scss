@@ -436,10 +436,7 @@ a {
 @keyframes foreground-fade-in-and-translate {
   0% {
     opacity: 0;
-    transform: translateY(200px);
-  }
-  65% {
-    opacity: 0;
+    transform: translateY(96px);
   }
   100% {
     opacity: 1;
@@ -447,6 +444,7 @@ a {
   }
 }
 
+// arrow down
 @keyframes foreground-fade-in-and-translate-down {
   0% {
     opacity: 0;
