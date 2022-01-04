@@ -57,7 +57,7 @@ $quarterHeight: calc(30vh - #{$a});
 .shrink-animation {
   height: $halfHeight;
   animation-name: shrink-animation;
-  animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
+  animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
   animation-duration: 1s;
   animation-delay: 3s;
   animation-fill-mode: forwards;
