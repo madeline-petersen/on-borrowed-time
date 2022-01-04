@@ -7,12 +7,12 @@ import Footer from '../components/Footer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import { useOverscroll } from '../hooks/useOverscroll';
-import { calcElementHeight } from '../helpers/CalcElementHeight';
 
 const Intro = ({
   year,
   navigateTo,
   backgroundClass,
+  colourBackgroundClass,
   nextBackgroundClass,
   isTransitioning,
   setIsTransitioning,
@@ -99,7 +99,7 @@ const Intro = ({
               </Container>
             </div>
           </div>
-          <div className="w-full bg-gray-30">
+          <div className={`w-full ${colourBackgroundClass}`}>
             <Container className="grid__container">
               <Row className={`grid__row`} style={{ height: '5vh' }}></Row>
             </Container>
@@ -114,6 +114,7 @@ Intro.propTypes = {
   year: PropTypes.shape(),
   navigateTo: PropTypes.func,
   backgroundClass: PropTypes.string,
+  colourBackgroundClass: PropTypes.string,
   nextBackgroundClass: PropTypes.string,
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,

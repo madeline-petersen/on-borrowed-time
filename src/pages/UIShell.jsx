@@ -162,6 +162,7 @@ const UIShell = props => {
           {...props}
           navigateTo={navigateTo}
           backgroundClass={imageBackgroundClasses[props.year.id]}
+          colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           nextBackgroundClass={nextBackgroundClass}
           setNextBackground={setNextBackground}
           isTransitioning={isTransitioning}
