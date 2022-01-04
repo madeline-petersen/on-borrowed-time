@@ -17,15 +17,15 @@
         animation-fill-mode: forwards;
 
         &__english {
-          animation-delay: 0.5s;
+          animation-delay: 0s;
         }
 
         &__chinese {
-          animation-delay: 0.625s;
+          animation-delay: 0.125s;
         }
 
         &__year {
-          animation-delay: 0.75s;
+          animation-delay: 0.25s;
         }
       }
     }
