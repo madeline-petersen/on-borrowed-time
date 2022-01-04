@@ -137,7 +137,7 @@ const Event = ({
 
   if (overflow && transitionContainer && event.imageLayout) {
     overflow.addEventListener('scroll', () => {
-      const y = 1 + overflow.scrollTop / 15 - 100;
+      const y = 1 + overflow.scrollTop / 50 - 20;
       if (y >= 1) {
         const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
         transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
