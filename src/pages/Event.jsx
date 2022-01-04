@@ -423,7 +423,7 @@ const Event = ({
                   borderColourClass={borderColourClass}
                 />
 
-                {event.imageLayout && <div style={{ height: '1000px' }} />}
+                {event.imageLayout && <div style={{ height: '50vh' }} />}
                 {event.imageLayout && event.imageLayout.type === 'custom' && (
                   <Custom images={event.imageLayout.images} />
                 )}
