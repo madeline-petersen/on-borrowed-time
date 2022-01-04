@@ -151,8 +151,9 @@ $xxl-minus-1: 1799px;
     &.scenes-fade-in {
       opacity: 0;
       animation-name: foreground-fade-in;
+      animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
       animation-duration: 1s;
-      animation-delay: 1s;
+      animation-delay: 0.75s;
       animation-fill-mode: forwards;
     }
   }
