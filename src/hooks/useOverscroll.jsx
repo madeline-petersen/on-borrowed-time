@@ -8,7 +8,7 @@ export function useOverscroll(
   ref,
   scrollEndCallback = () => {},
   scrollUpCallback = () => {},
-  offset = 1
+  offset = 0
 ) {
   const handleScroll = useCallback(
     event => {
@@ -20,7 +20,9 @@ export function useOverscroll(
       newValue = node.scrollTop;
       // if scrolling up
       if (oldValue > newValue) {
-        scrollUpCallback?.();
+        if (scrollUpCallback) {
+          scrollUpCallback?.();
+        }
       }
       oldValue = newValue;
 
