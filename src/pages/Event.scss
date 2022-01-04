@@ -75,7 +75,7 @@ $quarterHeight: calc(30vh - #{$a});
 @keyframes delayed-fade-and-translate {
   0% {
     opacity: 0;
-    transform: translateY(64px);
+    transform: translateY(128px);
   }
   50% {
     opacity: 0;
