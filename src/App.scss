@@ -436,7 +436,10 @@ a {
 @keyframes foreground-fade-in-and-translate {
   0% {
     opacity: 0;
-    transform: translateY(96px);
+    transform: translateY(200px);
+  }
+  65% {
+    opacity: 0;
   }
   100% {
     opacity: 1;
@@ -472,7 +475,7 @@ a {
     animation-name: foreground-fade-in-and-translate;
     animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
     animation-duration: 2s;
-    animation-delay: 0s;
+    animation-delay: -1s;
     animation-fill-mode: forwards;
   }
   .fade-second {
@@ -480,7 +483,7 @@ a {
     animation-name: foreground-fade-in-and-translate;
     animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
     animation-duration: 2s;
-    animation-delay: 0.25s;
+    animation-delay: -0.75s;
     animation-fill-mode: forwards;
   }
 }
