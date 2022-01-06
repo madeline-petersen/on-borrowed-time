@@ -150,190 +150,215 @@ const Event = ({
           )}
         </div>
 
-        <div className={`h-auto ${colourBackgroundClass}`}>
-          <Container className="min-h-screen grid__container">
-            <HeaderSpacer />
+        <div className="event" key={`event-2020`}>
+          <ReactFullpage
+            licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+            scrollingSpeed={1000}
+            scrollOverflow={true}
+            render={({ state, fullpageApi }) => {
+              return (
+                <ReactFullpage.Wrapper>
+                  <div
+                    className={`section story-container h-auto ${colourBackgroundClass}`}
+                  >
+                    <Container className="min-h-screen grid__container">
+                      <HeaderSpacer />
 
-            {/* Event */}
-            {event && (
-              <div
-                id="overflow-container"
-                ref={scrollRef}
-                className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
-              >
-                <Row
-                  className={`grid__row intro-paragraph pb-24`}
-                  id="event-paragraphs"
-                >
-                  {event.paragraphs.map((paragraph, index) => {
-                    return (
-                      <div key={`paragraph-${index}`} className="contents">
-                        <Col lg={1} md={2} />
-                        <Col lg={11} md={10} sm={12} xs={12}>
-                          <p
-                            className={`large-headline-dynamic text-white fade-first`}
-                            style={{
-                              textIndent: ['lg', 'xl', 'xxl'].includes(
-                                screenClass
-                              )
-                                ? `calc(200%/11)` // indent 2/11 columns for large
-                                : ['md'].includes(screenClass)
-                                ? `calc(200%/10)` // indent 2/10 columns for medium
-                                : '0' // indent 0 for small, x-small
-                            }}
+                      {/* Event */}
+                      {event && (
+                        <div
+                          id="overflow-container"
+                          className={`${
+                            isClicked ? 'fade-out' : 'delayed-fade-in'
+                          }`}
+                        >
+                          <Row
+                            className={`grid__row intro-paragraph pb-24`}
+                            id="event-paragraphs"
                           >
-                            {ReactHtmlParser(paragraph)}
-                            <br />
-                            <br />
-                          </p>
-                        </Col>
-                      </div>
-                    );
-                  })}
-                </Row>
-                <Row
-                  className={`grid__row bg-black theme-nav-container fade-first`}
-                >
-                  <Col lg={3} md={2} />
-                  <Col lg={6} md={10} sm={12} xs={12}>
-                    <p className="pb-5">
-                      {event.themes.map((theme, index) => {
-                        return (
-                          <>
-                            {index === 0 ? (
-                              ''
-                            ) : (
-                              <span
-                                className={`small-headline text-white fade-first ${
-                                  selectedTheme === null
-                                    ? 'text-opacity-100'
-                                    : 'text-opacity-20'
-                                }
+                            {event.paragraphs.map((paragraph, index) => {
+                              return (
+                                <div
+                                  key={`paragraph-${index}`}
+                                  className="contents"
+                                >
+                                  <Col lg={1} md={2} />
+                                  <Col lg={11} md={10} sm={12} xs={12}>
+                                    <p
+                                      className={`large-headline-dynamic text-white fade-first`}
+                                      style={{
+                                        textIndent: [
+                                          'lg',
+                                          'xl',
+                                          'xxl'
+                                        ].includes(screenClass)
+                                          ? `calc(200%/11)` // indent 2/11 columns for large
+                                          : ['md'].includes(screenClass)
+                                          ? `calc(200%/10)` // indent 2/10 columns for medium
+                                          : '0' // indent 0 for small, x-small
+                                      }}
+                                    >
+                                      {ReactHtmlParser(paragraph)}
+                                      <br />
+                                      <br />
+                                    </p>
+                                  </Col>
+                                </div>
+                              );
+                            })}
+                          </Row>
+                          <Row
+                            className={`grid__row bg-black theme-nav-container fade-first`}
+                          >
+                            <Col lg={3} md={2} />
+                            <Col lg={6} md={10} sm={12} xs={12}>
+                              <p className="pb-5">
+                                {event.themes.map((theme, index) => {
+                                  return (
+                                    <>
+                                      {index === 0 ? (
+                                        ''
+                                      ) : (
+                                        <span
+                                          className={`small-headline text-white fade-first ${
+                                            selectedTheme === null
+                                              ? 'text-opacity-100'
+                                              : 'text-opacity-20'
+                                          }
                                  `}
+                                        >
+                                          {' '}
+                                          /{' '}
+                                        </span>
+                                      )}
+                                      <a
+                                        key={`theme-${index}`}
+                                        className={`small-headline text-white cursor-pointer fade-first ${
+                                          selectedTheme === null
+                                            ? 'text-opacity-100 hover:text-opacity-20'
+                                            : isSelectedTheme(
+                                                themeLookup[index].substring(1)
+                                              ) // remove hash
+                                            ? 'text-opacity-100'
+                                            : 'text-opacity-20 hover:text-opacity-50'
+                                        } `}
+                                        href={themeLookup[index]}
+                                        onClick={() =>
+                                          setSelectedTheme(
+                                            themeLookup[index].substring(1)
+                                          )
+                                        }
+                                      >
+                                        {ReactHtmlParser(theme)}
+                                      </a>
+                                    </>
+                                  );
+                                })}
+                              </p>
+                            </Col>
+                            <Col lg={3} />
+                            <Col lg={1} md={2} />
+                            <Col lg={11} md={10} sm={12} xs={12}>
+                              <p className="border-b border-white border-opacity-20 fade-first" />
+                            </Col>
+                          </Row>
+                          {event.sections.map((section, index) => {
+                            return (
+                              <section
+                                key={`section-${index}`}
+                                id={event.themes[index]
+                                  .replace(/\s+/g, '-')
+                                  .toLowerCase()}
                               >
-                                {' '}
-                                /{' '}
-                              </span>
-                            )}
-                            <a
-                              key={`theme-${index}`}
-                              className={`small-headline text-white cursor-pointer fade-first ${
-                                selectedTheme === null
-                                  ? 'text-opacity-100 hover:text-opacity-20'
-                                  : isSelectedTheme(
-                                      themeLookup[index].substring(1)
-                                    ) // remove hash
-                                  ? 'text-opacity-100'
-                                  : 'text-opacity-20 hover:text-opacity-50'
-                              } `}
-                              href={themeLookup[index]}
-                              onClick={() =>
-                                setSelectedTheme(
-                                  themeLookup[index].substring(1)
-                                )
-                              }
-                            >
-                              {ReactHtmlParser(theme)}
-                            </a>
-                          </>
-                        );
-                      })}
-                    </p>
-                  </Col>
-                  <Col lg={3} />
-                  <Col lg={1} md={2} />
-                  <Col lg={11} md={10} sm={12} xs={12}>
-                    <p className="border-b border-white border-opacity-20 fade-first" />
-                  </Col>
-                </Row>
-                {event.sections.map((section, index) => {
-                  return (
-                    <section
-                      key={`section-${index}`}
-                      id={event.themes[index]
-                        .replace(/\s+/g, '-')
-                        .toLowerCase()}
-                    >
-                      <Row className={`grid__row intro-paragraph pb-24`}>
-                        {section.paragraphs.map((paragraph, index) => {
-                          return index === 0 ? (
-                            <div
-                              key={`paragraph-${index}`}
-                              className="contents"
-                            >
-                              <Col lg={3} md={2} />
-                              <Col lg={6} md={10} sm={12} xs={12}>
-                                <p
-                                  className={`small-headline text-white fade-first`}
-                                  style={{ paddingTop: '43px' }}
+                                <Row
+                                  className={`grid__row intro-paragraph pb-24`}
                                 >
-                                  {ReactHtmlParser(paragraph)}
-                                  <br />
-                                  <br />
-                                </p>
-                              </Col>
-                              <Col lg={3} />
-                            </div>
-                          ) : (
-                            <div
-                              key={`paragraph-${index}`}
-                              className="contents"
-                            >
-                              <Col lg={3} md={2} />
-                              <Col lg={4} md={10} sm={12} xs={12}>
-                                <p
-                                  className={`small-body-2 text-white fade-first`}
-                                >
-                                  {ReactHtmlParser(paragraph)}
-                                  <br />
-                                  <br />
-                                </p>
-                              </Col>
-                              <Col lg={5} />
-                            </div>
-                          );
-                        })}
-                      </Row>
-                      {section.image && (
-                        <Row className="pb-16 grid__row">
-                          <Col lg={3} md={2} />
-                          <Col lg={9} md={10} sm={12} xs={12}>
-                            <img
-                              className="fade-first"
-                              src={imageLookup[section.image.source]}
-                              alt=""
-                            />
-                          </Col>
+                                  {section.paragraphs.map(
+                                    (paragraph, index) => {
+                                      return index === 0 ? (
+                                        <div
+                                          key={`paragraph-${index}`}
+                                          className="contents"
+                                        >
+                                          <Col lg={3} md={2} />
+                                          <Col lg={6} md={10} sm={12} xs={12}>
+                                            <p
+                                              className={`small-headline text-white fade-first`}
+                                              style={{ paddingTop: '43px' }}
+                                            >
+                                              {ReactHtmlParser(paragraph)}
+                                              <br />
+                                              <br />
+                                            </p>
+                                          </Col>
+                                          <Col lg={3} />
+                                        </div>
+                                      ) : (
+                                        <div
+                                          key={`paragraph-${index}`}
+                                          className="contents"
+                                        >
+                                          <Col lg={3} md={2} />
+                                          <Col lg={4} md={10} sm={12} xs={12}>
+                                            <p
+                                              className={`small-body-2 text-white fade-first`}
+                                            >
+                                              {ReactHtmlParser(paragraph)}
+                                              <br />
+                                              <br />
+                                            </p>
+                                          </Col>
+                                          <Col lg={5} />
+                                        </div>
+                                      );
+                                    }
+                                  )}
+                                </Row>
+                                {section.image && (
+                                  <Row className="pb-16 grid__row">
+                                    <Col lg={3} md={2} />
+                                    <Col lg={9} md={10} sm={12} xs={12}>
+                                      <img
+                                        className="fade-first"
+                                        src={imageLookup[section.image.source]}
+                                        alt=""
+                                      />
+                                    </Col>
 
-                          <Col lg={3} md={2} />
-                          <Col lg={4} md={4}>
-                            <p
-                              className={`small-body text-white mt-8 fade-first text-opacity-70`}
-                            >
-                              {ReactHtmlParser(section.image.caption)}
-                            </p>
-                          </Col>
-                        </Row>
+                                    <Col lg={3} md={2} />
+                                    <Col lg={4} md={4}>
+                                      <p
+                                        className={`small-body text-white mt-8 fade-first text-opacity-70`}
+                                      >
+                                        {ReactHtmlParser(section.image.caption)}
+                                      </p>
+                                    </Col>
+                                  </Row>
+                                )}
+                                <ResourceTable
+                                  theme="white"
+                                  data={section.resources}
+                                  isModalActive={isModalActive}
+                                  setIsModalActive={setIsModalActive}
+                                  anecdoteData={anecdoteData}
+                                  openModal={openModal}
+                                  matchesLength={filteredMatches.length}
+                                  textColourClass={textColourClass}
+                                  borderColourClass={borderColourClass}
+                                />
+                              </section>
+                            );
+                          })}
+                          {/* padding below last resource table */}
+                          <div className="pb-16" />
+                        </div>
                       )}
-                      <ResourceTable
-                        theme="white"
-                        data={section.resources}
-                        isModalActive={isModalActive}
-                        setIsModalActive={setIsModalActive}
-                        anecdoteData={anecdoteData}
-                        openModal={openModal}
-                        matchesLength={filteredMatches.length}
-                        textColourClass={textColourClass}
-                        borderColourClass={borderColourClass}
-                      />
-                    </section>
-                  );
-                })}
-                {/* padding below last resource table */}
-                <div className="pb-16" />
-              </div>
-            )}
-          </Container>
+                    </Container>
+                  </div>
+                </ReactFullpage.Wrapper>
+              );
+            }}
+          />
         </div>
       </>
     );
@@ -360,17 +385,7 @@ const Event = ({
         >
           <ReactFullpage
             licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
-            // pluginWrapper={pluginWrapper}
             scrollingSpeed={1000}
-            // parallax={true}
-            // parallaxOptions={{
-            //   type: 'cover',
-            //   percentage: 30,
-            //   property: 'translate'
-            // }}
-            // parallaxKey={'aGstb25ib3Jyb3dlZHRpbWUuY29tX1dmR2NHRnlZV3hzWVhnPUV0cg=='}
-            // continuousVertical={false}
-            // onLeave={onLeave}
             afterLoad={afterLoad}
             scrollOverflow={true}
             render={({ state, fullpageApi }) => {
