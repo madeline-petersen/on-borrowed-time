@@ -85,7 +85,7 @@ const Reflection = ({
             return (
               <ReactFullpage.Wrapper>
                 <div className="section h-auto bg-black">
-                  <Container className="min-h-screen grid__container">
+                  <Container className="grid__container">
                     {/* Final Reflection */}
                     <div
                       className={`${
