@@ -56,10 +56,11 @@ const EditorsNote = () => {
                   的地方, 暫借的時間
                 </span>
                 .&rdquo; A phrase commonly used to describe
-                Hong&nbsp;Kong&apos;s perpetual impermanence. The region&apos;s
-                intertwining history can be understood as the product of two
-                forces — a colonial legacy that it struggles to reconcile itself
-                with, and an authoritarian future fraught with uncertainty.
+                Hong&nbsp;Kong&rsquo;s perpetual impermanence. The
+                region&rsquo;s intertwining history can be understood as the
+                product of two forces — a colonial legacy that it struggles to
+                reconcile itself with, and an authoritarian future fraught with
+                uncertainty.
               </p>
             </Col>
             <Col lg={1} md={2} />
@@ -77,7 +78,7 @@ const EditorsNote = () => {
                 woven into the constitution to &ldquo;ease the hearts&rdquo; of
                 Hong&nbsp;Kong people. The first was the &ldquo;one country, two
                 systems&rdquo; principle, an arrangement that would honour the
-                region&apos;s unique way of life for fifty years, thus easing
+                region&rsquo;s unique way of life for fifty years, thus easing
                 the transition back to the motherland. The second was the
                 &ldquo;ultimate aim&rdquo; of universal suffrage, which would
                 grant Hong&nbsp;Kong people the opportunity to govern their own
@@ -93,7 +94,7 @@ const EditorsNote = () => {
                 Beyond the constitutional details, these two promises held
                 symbolic meaning for a new generation of Hongkongers. They
                 inspired the hope that the region could someday dictate its own
-                future. Throughout Hong&nbsp;Kong&apos;s conflicting history,
+                future. Throughout Hong&nbsp;Kong&rsquo;s conflicting history,
                 the region has never had the opportunity to experience
                 democratic qualities like self-determination, universal
                 suffrage, or genuine democracy. It has always been beholden to
@@ -107,7 +108,7 @@ const EditorsNote = () => {
                 }}
               >
                 The goal of this project is to shed light on
-                Hong&nbsp;Kong&apos;s journey and to document the courageous
+                Hong&nbsp;Kong&rsquo;s journey and to document the courageous
                 measures that Hongkongers have taken in their pursuit of genuine
                 democracy.
               </p>
@@ -120,7 +121,7 @@ const EditorsNote = () => {
               >
                 To tell the story of Hong Kong with accuracy and care, the
                 project is compiled into several layers. On the surface, it
-                provides a historical account of Hong&nbsp;Kong&apos;s handover
+                provides a historical account of Hong&nbsp;Kong&rsquo;s handover
                 since the Sino-Joint Declaration was signed in 1984. Beneath
                 that lies an archive of digital artifacts—a collection of
                 stories, imagery, and musings that capture how people felt as
@@ -154,8 +155,8 @@ const EditorsNote = () => {
               >
                 While Hong&nbsp;Kong is no longer considered &ldquo;a borrowed
                 place&rdquo;, the region is still — in a sense — on borrowed
-                time. As the region&apos;s fifty year period of grace slowly
-                ends, the CCP&apos;s encroaching influence and presence have
+                time. As the region&rsquo;s fifty year period of grace slowly
+                ends, the CCP&rsquo;s encroaching influence and presence have
                 grown larger, and the promises that were once made to
                 Hong&nbsp;Kong are now under threat. New legislation, such as
                 the National Security Law, has been weaponised to silence
@@ -171,8 +172,8 @@ const EditorsNote = () => {
               >
                 It is within this historical context that On Borrowed Time was
                 created. The project contributes to the shared endeavour of
-                documenting Hong&nbsp;Kong&apos;s unique status in the face of
-                censorship. While some may believe that Hong&nbsp;Kong&apos;s
+                documenting Hong&nbsp;Kong&rsquo;s unique status in the face of
+                censorship. While some may believe that Hong&nbsp;Kong&rsquo;s
                 impermanence is inevitable, it is through preserving the
                 collective memory of Hong&nbsp;Kong that a common truth—and the
                 spirit of the things we love—may persist.
