@@ -194,6 +194,7 @@ const UIShell = props => {
           navigateTo={navigateTo}
           isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
+          colourBackgroundClass={colourBackgroundClasses[props.year.id]}
         />
       );
       break;

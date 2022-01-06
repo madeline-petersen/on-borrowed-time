@@ -8,6 +8,7 @@ import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 // import { useOverscroll } from '../hooks/useOverscroll';
+import ReactFullpage from '@fullpage/react-fullpage';
 
 const Reflection = ({
   reflection,
@@ -18,7 +19,8 @@ const Reflection = ({
   isTransitioning,
   setIsTransitioning,
   navigateTo,
-  setNextBackground
+  setNextBackground,
+  colourBackgroundClass
 }) => {
   const [isClicked, setClicked] = useState(false);
   const scrollRef = useRef();
@@ -55,6 +57,26 @@ const Reflection = ({
     setClicked(true);
   };
 
+  const afterLoad = function(origin, destination, direction) {
+    if (destination.isLast) {
+      setClicked(true);
+      setIsTransitioning(true);
+      if (changingParam === 'year') {
+        // if year end
+        // inter-year
+        navigateTo(nextParams.year);
+      } else {
+        // else
+        // intra-year
+        navigateTo(
+          nextParams.year,
+          nextParams.scene, // should be romanSceneNumber
+          nextParams.page
+        );
+      }
+    }
+  };
+
   return (
     <>
       {/* Backgrounds for page transition */}
@@ -71,104 +93,145 @@ const Reflection = ({
         )}
       </div>
 
-      <div className="h-auto bg-black">
-        <Container className="min-h-screen grid__container">
-          <HeaderSpacer />
+      <ReactFullpage
+        licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+        // pluginWrapper={pluginWrapper}
+        scrollingSpeed={1000}
+        // parallax={true}
+        // parallaxOptions={{
+        //   type: 'cover',
+        //   percentage: 30,
+        //   property: 'translate'
+        // }}
+        // parallaxKey={'aGstb25ib3Jyb3dlZHRpbWUuY29tX1dmR2NHRnlZV3hzWVhnPUV0cg=='}
+        // continuousVertical={false}
+        // onLeave={onLeave}
+        afterLoad={afterLoad}
+        scrollOverflow={true}
+        render={({ state, fullpageApi }) => {
+          return (
+            <ReactFullpage.Wrapper>
+              <div className="section h-auto bg-black">
+                <Container className="min-h-screen grid__container">
+                  <HeaderSpacer />
 
-          {/* Final Reflection */}
-          <div
-            id="overflow-container"
-            ref={scrollRef}
-            className={`${isClicked ? 'fade-out' : 'foreground-fade-in'}`}
-          >
-            <div className="footer-spacer">
-              <Row className="pb-5 grid__row" style={{ paddingTop: '20vh' }}>
-                {reflection.paragraphs[0] &&
-                  reflection.paragraphs[0].map((paragraph, index) => {
-                    return (
-                      <span key={`paragraph-${index}`} className="contents">
-                        <Col lg={1} />
-                        <Col lg={11} md={12}>
-                          <p
-                            className={`medium-headline text-white fade-first`}
-                          >
-                            {ReactHtmlParser(paragraph)}
-                          </p>
-                          <br />
-                          <br />
-                        </Col>
-                      </span>
-                    );
-                  })}
-                {reflection.paragraphs[1] &&
-                  reflection.paragraphs[1].map((paragraph, index) => {
-                    return (
-                      <span key={`paragraph-${index}`} className="contents">
-                        <Col lg={3} />
-                        <Col lg={6} md={12}>
-                          <p
-                            className={`medium-body text-white text-opacity-70 fade-second`}
-                          >
-                            {ReactHtmlParser(paragraph)}
-                            <br />
-                            <br />
-                          </p>
-                        </Col>
-                        <Col lg={3} />
-                      </span>
-                    );
-                  })}
-              </Row>
-              {reflection.citations && (
-                <Row className="grid__row">
-                  <Col lg={3} />
-                  <Col lg={6} md={12}>
-                    <p className="pb-5 border-t border-white border-opacity-20 fade-second" />
-                    {reflection.citations.map(({ text, linkTo }) => {
-                      return (
-                        <a
-                          key={linkTo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href={linkTo}
-                          className={`transition-all text-white text-opacity-50 small-body ${
-                            linkTo ? 'hover:text-opacity-100' : ''
-                          }`}
-                        >
-                          <p className="flex mb-4 fade-second flex-start">
-                            <span>
-                              {ReactHtmlParser(text)}
-                              {linkTo && (
-                                <ArrowUpRight16
-                                  className="inline-block ml-1"
-                                  style={{ minWidth: '16px' }}
-                                />
-                              )}
-                            </span>
-                          </p>
-                        </a>
-                      );
-                    })}
-                  </Col>
-                  <Col lg={3} />
-                </Row>
-              )}
-            </div>
+                  {/* Final Reflection */}
+                  <div
+                    id="overflow-container"
+                    ref={scrollRef}
+                    className={`${
+                      isClicked ? 'fade-out' : 'foreground-fade-in'
+                    }`}
+                  >
+                    <div className="footer-spacer">
+                      <Row
+                        className="pb-5 grid__row"
+                        style={{ paddingTop: '20vh' }}
+                      >
+                        {reflection.paragraphs[0] &&
+                          reflection.paragraphs[0].map((paragraph, index) => {
+                            return (
+                              <span
+                                key={`paragraph-${index}`}
+                                className="contents"
+                              >
+                                <Col lg={1} />
+                                <Col lg={11} md={12}>
+                                  <p
+                                    className={`medium-headline text-white fade-first`}
+                                  >
+                                    {ReactHtmlParser(paragraph)}
+                                  </p>
+                                  <br />
+                                  <br />
+                                </Col>
+                              </span>
+                            );
+                          })}
+                        {reflection.paragraphs[1] &&
+                          reflection.paragraphs[1].map((paragraph, index) => {
+                            return (
+                              <span
+                                key={`paragraph-${index}`}
+                                className="contents"
+                              >
+                                <Col lg={3} />
+                                <Col lg={6} md={12}>
+                                  <p
+                                    className={`medium-body text-white text-opacity-70 fade-second`}
+                                  >
+                                    {ReactHtmlParser(paragraph)}
+                                    <br />
+                                    <br />
+                                  </p>
+                                </Col>
+                                <Col lg={3} />
+                              </span>
+                            );
+                          })}
+                      </Row>
+                      {reflection.citations && (
+                        <Row className="grid__row">
+                          <Col lg={3} />
+                          <Col lg={6} md={12}>
+                            <p className="pb-5 border-t border-white border-opacity-20 fade-second" />
+                            {reflection.citations.map(({ text, linkTo }) => {
+                              return (
+                                <a
+                                  key={linkTo}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  href={linkTo}
+                                  className={`transition-all text-white text-opacity-50 small-body ${
+                                    linkTo ? 'hover:text-opacity-100' : ''
+                                  }`}
+                                >
+                                  <p className="flex mb-4 fade-second flex-start">
+                                    <span>
+                                      {ReactHtmlParser(text)}
+                                      {linkTo && (
+                                        <ArrowUpRight16
+                                          className="inline-block ml-1"
+                                          style={{ minWidth: '16px' }}
+                                        />
+                                      )}
+                                    </span>
+                                  </p>
+                                </a>
+                              );
+                            })}
+                          </Col>
+                          <Col lg={3} />
+                        </Row>
+                      )}
+                    </div>
 
-            {next && (
-              <Footer
-                pageId="reflection"
-                nextParams={nextParams}
-                next={next}
-                changingParam={changingParam}
-                setClicked={onFooterClick}
-                navigateTo={navigateTo}
-                setIsTransitioning={setIsTransitioning}
-              />
-            )}
-          </div>
-        </Container>
-      </div>
+                    {next && (
+                      <Footer
+                        pageId="reflection"
+                        nextParams={nextParams}
+                        next={next}
+                        changingParam={changingParam}
+                        setClicked={onFooterClick}
+                        navigateTo={navigateTo}
+                        setIsTransitioning={setIsTransitioning}
+                      />
+                    )}
+                  </div>
+                </Container>
+              </div>
+              <div className={`section w-full ${colourBackgroundClass}`}>
+                <Container className="grid__container">
+                  <Row
+                    className={`grid__row`}
+                    style={{ height: '100vh' }}
+                  ></Row>
+                </Container>
+              </div>
+            </ReactFullpage.Wrapper>
+          );
+        }}
+      />
     </>
   );
 };
@@ -187,7 +250,8 @@ Reflection.propTypes = {
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
-  setNextBackground: PropTypes.func
+  setNextBackground: PropTypes.func,
+  colourBackgroundClass: PropTypes.string
 };
 
 export default Reflection;
