@@ -84,34 +84,34 @@ const Event = ({
     return theme === selectedTheme;
   };
 
-  const hexToRGBTable = {
-    'bg-blue-50': [0, 55, 120],
-    'bg-red': [104, 18, 12],
-    'bg-yellow': [232, 229, 210],
-    'bg-purple': [156, 140, 181],
-    'bg-gray-30': [188, 185, 182],
-    'bg-brown': [147, 103, 83],
-    'bg-black': [0, 0, 0]
-  };
+  // const hexToRGBTable = {
+  //   'bg-blue-50': [0, 55, 120],
+  //   'bg-red': [104, 18, 12],
+  //   'bg-yellow': [232, 229, 210],
+  //   'bg-purple': [156, 140, 181],
+  //   'bg-gray-30': [188, 185, 182],
+  //   'bg-brown': [147, 103, 83],
+  //   'bg-black': [0, 0, 0]
+  // };
 
-  const [red, green, blue] = hexToRGBTable[colourBackgroundClass];
-  const transitionContainer = document.querySelector(
-    '.transition-colour-on-scroll'
-  );
-  const overflow = document.getElementById('overflow-container');
+  // const [red, green, blue] = hexToRGBTable[colourBackgroundClass];
+  // const transitionContainer = document.querySelector(
+  //   '.transition-colour-on-scroll'
+  // );
+  // const overflow = document.getElementById('overflow-container');
 
-  if (overflow && transitionContainer && event.imageLayout) {
-    overflow.addEventListener('scroll', () => {
-      const y = 1 + overflow.scrollTop / 50 - 20;
-      if (y >= 1) {
-        const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
-        transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-      } else {
-        const [r, g, b] = hexToRGBTable[colourBackgroundClass];
-        transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-      }
-    });
-  }
+  // if (overflow && transitionContainer && event.imageLayout) {
+  //   overflow.addEventListener('scroll', () => {
+  //     const y = 1 + overflow.scrollTop / 50 - 20;
+  //     if (y >= 1) {
+  //       const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
+  //       transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  //     } else {
+  //       const [r, g, b] = hexToRGBTable[colourBackgroundClass];
+  //       transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  //     }
+  //   });
+  // }
 
   const afterLoad = function(origin, destination, direction) {
     if (destination.isLast) {
