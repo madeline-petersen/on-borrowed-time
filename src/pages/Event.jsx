@@ -353,115 +353,123 @@ const Event = ({
             />
           )}
         </div>
-        <ReactFullpage
-          licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
-          // pluginWrapper={pluginWrapper}
-          scrollingSpeed={1000}
-          // parallax={true}
-          // parallaxOptions={{
-          //   type: 'cover',
-          //   percentage: 30,
-          //   property: 'translate'
-          // }}
-          // parallaxKey={'aGstb25ib3Jyb3dlZHRpbWUuY29tX1dmR2NHRnlZV3hzWVhnPUV0cg=='}
-          // continuousVertical={false}
-          // onLeave={onLeave}
-          afterLoad={afterLoad}
-          scrollOverflow={true}
-          render={({ state, fullpageApi }) => {
-            return (
-              <ReactFullpage.Wrapper>
-                <div
-                  className={`section story-container h-auto transition-colour-on-scroll ${colourBackgroundClass}`}
-                >
-                  <Container className="min-h-screen grid__container">
-                    <HeaderSpacer />
 
-                    {/* Event */}
-                    {event && (
-                      <div
-                        className={`${
-                          isClicked ? 'fade-out' : 'delayed-fade-in'
-                        }`}
-                      >
-                        <Row
-                          className={`grid__row intro-paragraph pb-24`}
-                          id="event-paragraphs"
+        <div
+          className="event"
+          key={`event-${nextParams.year}-${nextParams.scene}-${nextParams.page}`}
+        >
+          <ReactFullpage
+            licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+            // pluginWrapper={pluginWrapper}
+            scrollingSpeed={1000}
+            // parallax={true}
+            // parallaxOptions={{
+            //   type: 'cover',
+            //   percentage: 30,
+            //   property: 'translate'
+            // }}
+            // parallaxKey={'aGstb25ib3Jyb3dlZHRpbWUuY29tX1dmR2NHRnlZV3hzWVhnPUV0cg=='}
+            // continuousVertical={false}
+            // onLeave={onLeave}
+            afterLoad={afterLoad}
+            scrollOverflow={true}
+            render={({ state, fullpageApi }) => {
+              return (
+                <ReactFullpage.Wrapper>
+                  <div
+                    className={`section story-container h-auto transition-colour-on-scroll ${colourBackgroundClass}`}
+                  >
+                    <Container className="min-h-screen grid__container">
+                      <HeaderSpacer />
+
+                      {/* Event */}
+                      {event && (
+                        <div
+                          className={`${
+                            isClicked ? 'fade-out' : 'delayed-fade-in'
+                          }`}
                         >
-                          {event.paragraphs.map((paragraph, index) => {
-                            return (
-                              <div
-                                key={`paragraph-${index}`}
-                                className="contents"
-                              >
-                                <Col lg={1} md={2} />
-                                <Col lg={11} md={10} sm={12} xs={12}>
-                                  <p
-                                    className={`large-headline-dynamic ${textColourClass} fade-first`}
-                                    style={{
-                                      textIndent: ['lg', 'xl', 'xxl'].includes(
-                                        screenClass
-                                      )
-                                        ? `calc(200%/11)` // indent 2/11 columns for large
-                                        : ['md'].includes(screenClass)
-                                        ? `calc(200%/10)` // indent 2/10 columns for medium
-                                        : '0' // indent 0 for small, x-small
-                                    }}
-                                  >
-                                    {ReactHtmlParser(paragraph)}
-                                    <br />
-                                    <br />
-                                  </p>
-                                </Col>
-                              </div>
-                            );
-                          })}
-                        </Row>
-                        <ResourceTable
-                          data={event.resources}
-                          isModalActive={isModalActive}
-                          setIsModalActive={setIsModalActive}
-                          anecdoteData={anecdoteData}
-                          openModal={openModal}
-                          matchesLength={filteredMatches.length}
-                          textColourClass={textColourClass}
-                          borderColourClass={borderColourClass}
-                        />
+                          <Row
+                            className={`grid__row intro-paragraph pb-24`}
+                            id="event-paragraphs"
+                          >
+                            {event.paragraphs.map((paragraph, index) => {
+                              return (
+                                <div
+                                  key={`paragraph-${index}`}
+                                  className="contents"
+                                >
+                                  <Col lg={1} md={2} />
+                                  <Col lg={11} md={10} sm={12} xs={12}>
+                                    <p
+                                      className={`large-headline-dynamic ${textColourClass} fade-first`}
+                                      style={{
+                                        textIndent: [
+                                          'lg',
+                                          'xl',
+                                          'xxl'
+                                        ].includes(screenClass)
+                                          ? `calc(200%/11)` // indent 2/11 columns for large
+                                          : ['md'].includes(screenClass)
+                                          ? `calc(200%/10)` // indent 2/10 columns for medium
+                                          : '0' // indent 0 for small, x-small
+                                      }}
+                                    >
+                                      {ReactHtmlParser(paragraph)}
+                                      <br />
+                                      <br />
+                                    </p>
+                                  </Col>
+                                </div>
+                              );
+                            })}
+                          </Row>
+                          <ResourceTable
+                            data={event.resources}
+                            isModalActive={isModalActive}
+                            setIsModalActive={setIsModalActive}
+                            anecdoteData={anecdoteData}
+                            openModal={openModal}
+                            matchesLength={filteredMatches.length}
+                            textColourClass={textColourClass}
+                            borderColourClass={borderColourClass}
+                          />
 
-                        {event.imageLayout && (
-                          <div style={{ height: '50vh' }} />
-                        )}
-                        {event.imageLayout &&
-                          event.imageLayout.type === 'custom' && (
-                            <Custom images={event.imageLayout.images} />
+                          {event.imageLayout && (
+                            <div style={{ height: '50vh' }} />
                           )}
-                        {event.imageLayout &&
-                          event.imageLayout.type === 'triptych' && (
-                            <Triptych images={event.imageLayout.images} />
-                          )}
-                        {event.imageLayout &&
-                          event.imageLayout.type === 'diptych' && (
-                            <Diptych images={event.imageLayout.images} />
-                          )}
+                          {event.imageLayout &&
+                            event.imageLayout.type === 'custom' && (
+                              <Custom images={event.imageLayout.images} />
+                            )}
+                          {event.imageLayout &&
+                            event.imageLayout.type === 'triptych' && (
+                              <Triptych images={event.imageLayout.images} />
+                            )}
+                          {event.imageLayout &&
+                            event.imageLayout.type === 'diptych' && (
+                              <Diptych images={event.imageLayout.images} />
+                            )}
 
-                        {/* padding below last page element */}
-                        <div className="pb-44" />
-                      </div>
-                    )}
-                  </Container>
-                </div>
-                <div className={`section w-full bg-black`}>
-                  <Container className="grid__container">
-                    <Row
-                      className={`grid__row`}
-                      style={{ height: '100vh' }}
-                    ></Row>
-                  </Container>
-                </div>
-              </ReactFullpage.Wrapper>
-            );
-          }}
-        />
+                          {/* padding below last page element */}
+                          <div className="pb-44" />
+                        </div>
+                      )}
+                    </Container>
+                  </div>
+                  <div className={`section w-full bg-black`}>
+                    <Container className="grid__container">
+                      <Row
+                        className={`grid__row`}
+                        style={{ height: '100vh' }}
+                      ></Row>
+                    </Container>
+                  </div>
+                </ReactFullpage.Wrapper>
+              );
+            }}
+          />
+        </div>
         {/* <HiddenFooter
           pageId="event"
           nextParams={nextParams}
