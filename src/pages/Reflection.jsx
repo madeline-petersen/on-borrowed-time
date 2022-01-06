@@ -81,6 +81,7 @@ const Reflection = ({
           scrollingSpeed={1000}
           afterLoad={afterLoad}
           scrollOverflow={true}
+          paddingTop="78px"
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>

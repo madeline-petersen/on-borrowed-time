@@ -155,6 +155,7 @@ const Event = ({
             licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
             scrollingSpeed={1000}
             scrollOverflow={true}
+            paddingTop="78px"
             render={({ state, fullpageApi }) => {
               return (
                 <ReactFullpage.Wrapper>
@@ -389,6 +390,7 @@ const Event = ({
             scrollingSpeed={1000}
             afterLoad={afterLoad}
             scrollOverflow={true}
+            paddingTop="78px"
             render={({ state, fullpageApi }) => {
               return (
                 <ReactFullpage.Wrapper>
