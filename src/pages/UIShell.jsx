@@ -28,17 +28,9 @@ const UIShell = props => {
 
   const navigateTo = (year, romanSceneNumber, page) => {
     if (year && romanSceneNumber && page) {
-      setTimeout(function() {
-        history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
-      }, 2000);
+      history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
     } else if (year) {
-      if (props.pageId === 'home') {
-        history.push(`/${year}`); // delaying causes timeline to open abruptly
-      } else {
-        setTimeout(function() {
-          history.push(`/${year}`);
-        }, 2000);
-      }
+      history.push(`/${year}`);
     }
   };
 
