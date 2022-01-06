@@ -900,7 +900,7 @@
               "type": "event",
               "paragraphs": [
                 "In the years following the massacre, China began interrogating the memory of Tiananmen Square by censoring the events that occurred on June 4th, 1989. The <span>deadly suppression of protesters<sup>1</sup></span> became an unspoken moment in China&rsquo;s past, purged from its history books.",
-                "Meanwhile, Hong&nbsp;Kong became a safe haven for democratic activists to commemorate the tragedy of the massacre, as China continued to use insidious tactics to <span>contest the memory of Tiananmen Square.<sup>2</sup></span>"
+                "Meanwhile, Hong&nbsp;Kong became a safe haven<sup>2</sup></span> for democratic activists to commemorate the tragedy of the massacre, as China continued to use insidious tactics to <span>contest the memory of Tiananmen Square.<sup>3</sup></span>"
               ],
               "imageLayout": {
                 "type": "custom",
@@ -928,6 +928,20 @@
                   ],
                   "citation": "Lim, Louisa. “Louisa Lim: &rsquo;I Wanted to Discover How Chinese People Became Complicit in an Act of Mass Amnesia&rsquo;.” The Guardian. Guardian News and Media, July 21, 2015. ",
                   "linkTo": "https://www.theguardian.com/books/booksblog/2015/jul/21/louisa-lim-the-peoples-republic-of-amnesia-tiananmen-revisited-china"
+                },
+                {
+                  "type": "Article Excerpt",
+                  "publication": "The Baffler",
+                  "shortTitle": "Between Memory and Forgetting",
+                  "bookTitle": "Between Memory and Forgetting",
+                  "year": "2020",
+                  "author": "Yi-Ling Liu",
+                  "content": [
+                    "I attended several vigils over the years. I learned more about June 4, struggling to make sense of a history that I was too young to bear witness to. I learned about Deng Xiaoping’s Opening Up and Reform movement in the 1980s, a moment of sudden and exhilarating change: as a market economy was introduced, state control over culture was loosened, and for the first time, foreign ideas flowed freely into the country—from KFC to Sartre to rock n’ roll. I learned how those very reforms brought rampant corruption, widespread inequality, and the desire for political change that eventually drove the students to Tiananmen Square. I read about rival student groups: those who wanted democratic reform without challenging the Party and those who wanted the Party overthrown. I read about the factions within the Party itself: the reformists urging for compromise and the hardliners calling for crackdown. I looked elsewhere, studying democracies (what was it that birthed and sustained them?) and autocracies (why did some change while others remained stubbornly in place?). I learned the theories of intellectuals and activists, from Vaclav Havel to Martin Luther King Jr. I picked up compound nouns like civil society and grassroots mobilization and incremental reform. I wanted to understand what had gone wrong at Tiananmen Square. I wanted to know what could’ve been changed then, what could still be changed now, and who had the power to do the changing.<br>",
+                    "</br>The more I read, the fewer answers I found. No book felt as certain as the warmth of the gathering in Victoria Park. No work of theory gave me that feeling that had driven me to seek it out in the first place. In time, I came to learn that there was actually a noun for that feeling. Common sense, Hannah Arendt called it—the shared reality that allows us to know ourselves, to know how we are connected to others, and to know how we belong to a common truth. It was common sense that taught us Hong Kongers to remember, uphold, and defend a truth that everybody else had chosen to forget. It was common sense that moved me and so many others to show up to the vigil, year after year, to gather and sing and pray. Vigil: the word derives from the Latin vigilia, or &ldquo;awake.&rdquo; Our vigils were as much an act of mourning as one of deliberate, collective wakefulness."
+                  ],
+                  "citation": "Liu, Yi-Ling. &rsquo;Between Memory And Forgetting: Yi-Ling Liu.&rsquo;.” TThe Baffler. The Baffler, June 17, 2020. ",
+                  "linkTo": "https://thebaffler.com/latest/between-memory-and-forgetting-liu"
                 },
                 {
                   "type": "Journal Excerpt",
