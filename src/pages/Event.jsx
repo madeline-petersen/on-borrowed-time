@@ -4,7 +4,6 @@ import { Col, Container, Row, useScreenClass } from 'react-grid-system';
 import React, { useEffect, useState } from 'react';
 
 // import HiddenFooter from '../components/HiddenFooter';
-import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import ResourceTable from '../components/ResourceTable';
@@ -164,12 +163,9 @@ const Event = ({
                     style={{ height: 'max-content' }}
                   >
                     <Container className="min-h-screen grid__container">
-                      <HeaderSpacer />
-
                       {/* Event */}
                       {event && (
                         <div
-                          id="overflow-container"
                           className={`${
                             isClicked ? 'fade-out' : 'delayed-fade-in'
                           }`}
@@ -392,16 +388,12 @@ const Event = ({
             scrollOverflow={true}
             paddingTop="78px"
             render={({ state, fullpageApi }) => {
-              fullpage_api.reBuild();
-
               return (
                 <ReactFullpage.Wrapper>
                   <div
                     className={`section h-auto transition-colour-on-scroll ${colourBackgroundClass}`}
                   >
                     <Container className="min-h-screen grid__container">
-                      <HeaderSpacer />
-
                       {/* Event */}
                       {event && (
                         <div

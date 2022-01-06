@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
 import Footer from '../components/Footer';
-import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import ReactFullpage from '@fullpage/react-fullpage';
@@ -87,11 +86,8 @@ const Reflection = ({
               <ReactFullpage.Wrapper>
                 <div className="section h-auto bg-black">
                   <Container className="min-h-screen grid__container">
-                    <HeaderSpacer />
-
                     {/* Final Reflection */}
                     <div
-                      id="overflow-container"
                       className={`${
                         isClicked ? 'fade-out' : 'foreground-fade-in'
                       }`}
