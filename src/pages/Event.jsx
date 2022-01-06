@@ -1,9 +1,9 @@
 import './Event.scss';
 
 import { Col, Container, Row, useScreenClass } from 'react-grid-system';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import HiddenFooter from '../components/HiddenFooter';
+// import HiddenFooter from '../components/HiddenFooter';
 import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
@@ -12,7 +12,7 @@ import Triptych from '../components/imageLayouts/Triptych';
 import Diptych from '../components/imageLayouts/Diptych';
 import Custom from '../components/imageLayouts/Custom';
 import imageLookup from '../images';
-import { useOverscroll } from '../hooks/useOverscroll';
+import ReactFullpage from '@fullpage/react-fullpage';
 
 const Event = ({
   year,
@@ -33,40 +33,6 @@ const Event = ({
   const [isModalActive, setIsModalActive] = useState(false);
   const [anecdoteData, setAnecdoteData] = useState({});
   const [selectedTheme, setSelectedTheme] = useState(null);
-
-  const scrollRef = useRef();
-
-  // set to false initially if implementing preview
-  const [showPreview, setShowPreview] = useState(false);
-
-  const onScrollEnd = useCallback(() => {
-    setShowPreview(true);
-    // if (showPreview) {
-    //   setClicked(true);
-    //   setIsTransitioning(true);
-    //   if (changingParam === 'year') {
-    //     // if year end
-    //     // inter-year
-    //     navigateTo(nextParams.year);
-    //   } else {
-    //     // else
-    //     // intra-year
-    //     navigateTo(
-    //       nextParams.year,
-    //       nextParams.scene, // should be romanSceneNumber
-    //       nextParams.page
-    //     );
-    //   }
-    // } else {
-    // setShowPreview(true);
-    // }
-  }, []);
-
-  const onScrollUp = useCallback(() => {
-    setShowPreview(false);
-  }, []);
-
-  useOverscroll(scrollRef, onScrollEnd, onScrollUp, 0);
 
   const openModal = entry => {
     if (entry.content) {
@@ -101,7 +67,6 @@ const Event = ({
   }, [isTransitioning]);
 
   useEffect(() => {
-    setShowPreview(false);
     setIsTransitioning(false);
     if (nextParams) {
       setNextBackground(nextParams.year, nextParams.page);
@@ -147,6 +112,26 @@ const Event = ({
       }
     });
   }
+
+  const afterLoad = function(origin, destination, direction) {
+    if (destination.isLast) {
+      setClicked(true);
+      setIsTransitioning(true);
+      if (changingParam === 'year') {
+        // if year end
+        // inter-year
+        navigateTo(nextParams.year);
+      } else {
+        // else
+        // intra-year
+        navigateTo(
+          nextParams.year,
+          nextParams.scene, // should be romanSceneNumber
+          nextParams.page
+        );
+      }
+    }
+  };
 
   if (year.id === '2020') {
     return (
@@ -368,79 +353,116 @@ const Event = ({
             />
           )}
         </div>
-
-        <div
-          className={`story-container h-auto transition-colour-on-scroll ${colourBackgroundClass}`}
-        >
-          <Container className="min-h-screen grid__container">
-            <HeaderSpacer />
-
-            {/* Event */}
-            {event && (
-              <div
-                id="overflow-container"
-                ref={scrollRef}
-                className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
-              >
-                <Row
-                  className={`grid__row intro-paragraph pb-24`}
-                  id="event-paragraphs"
+        <ReactFullpage
+          licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+          // pluginWrapper={pluginWrapper}
+          scrollingSpeed={1000}
+          // parallax={true}
+          // parallaxOptions={{
+          //   type: 'cover',
+          //   percentage: 30,
+          //   property: 'translate'
+          // }}
+          // parallaxKey={'aGstb25ib3Jyb3dlZHRpbWUuY29tX1dmR2NHRnlZV3hzWVhnPUV0cg=='}
+          // continuousVertical={false}
+          // onLeave={onLeave}
+          afterLoad={afterLoad}
+          scrollOverflow={true}
+          render={({ state, fullpageApi }) => {
+            return (
+              <ReactFullpage.Wrapper>
+                <div
+                  className={`section story-container h-auto transition-colour-on-scroll ${colourBackgroundClass}`}
                 >
-                  {event.paragraphs.map((paragraph, index) => {
-                    return (
-                      <div key={`paragraph-${index}`} className="contents">
-                        <Col lg={1} md={2} />
-                        <Col lg={11} md={10} sm={12} xs={12}>
-                          <p
-                            className={`large-headline-dynamic ${textColourClass} fade-first`}
-                            style={{
-                              textIndent: ['lg', 'xl', 'xxl'].includes(
-                                screenClass
-                              )
-                                ? `calc(200%/11)` // indent 2/11 columns for large
-                                : ['md'].includes(screenClass)
-                                ? `calc(200%/10)` // indent 2/10 columns for medium
-                                : '0' // indent 0 for small, x-small
-                            }}
-                          >
-                            {ReactHtmlParser(paragraph)}
-                            <br />
-                            <br />
-                          </p>
-                        </Col>
+                  <Container className="min-h-screen grid__container">
+                    <HeaderSpacer />
+
+                    {/* Event */}
+                    {event && (
+                      <div
+                        className={`${
+                          isClicked ? 'fade-out' : 'delayed-fade-in'
+                        }`}
+                      >
+                        <Row
+                          className={`grid__row intro-paragraph pb-24`}
+                          id="event-paragraphs"
+                        >
+                          {event.paragraphs.map((paragraph, index) => {
+                            return (
+                              <div
+                                key={`paragraph-${index}`}
+                                className="contents"
+                              >
+                                <Col lg={1} md={2} />
+                                <Col lg={11} md={10} sm={12} xs={12}>
+                                  <p
+                                    className={`large-headline-dynamic ${textColourClass} fade-first`}
+                                    style={{
+                                      textIndent: ['lg', 'xl', 'xxl'].includes(
+                                        screenClass
+                                      )
+                                        ? `calc(200%/11)` // indent 2/11 columns for large
+                                        : ['md'].includes(screenClass)
+                                        ? `calc(200%/10)` // indent 2/10 columns for medium
+                                        : '0' // indent 0 for small, x-small
+                                    }}
+                                  >
+                                    {ReactHtmlParser(paragraph)}
+                                    <br />
+                                    <br />
+                                  </p>
+                                </Col>
+                              </div>
+                            );
+                          })}
+                        </Row>
+                        <ResourceTable
+                          data={event.resources}
+                          isModalActive={isModalActive}
+                          setIsModalActive={setIsModalActive}
+                          anecdoteData={anecdoteData}
+                          openModal={openModal}
+                          matchesLength={filteredMatches.length}
+                          textColourClass={textColourClass}
+                          borderColourClass={borderColourClass}
+                        />
+
+                        {event.imageLayout && (
+                          <div style={{ height: '50vh' }} />
+                        )}
+                        {event.imageLayout &&
+                          event.imageLayout.type === 'custom' && (
+                            <Custom images={event.imageLayout.images} />
+                          )}
+                        {event.imageLayout &&
+                          event.imageLayout.type === 'triptych' && (
+                            <Triptych images={event.imageLayout.images} />
+                          )}
+                        {event.imageLayout &&
+                          event.imageLayout.type === 'diptych' && (
+                            <Diptych images={event.imageLayout.images} />
+                          )}
+
+                        {/* padding below last page element */}
+                        <div className="pb-44" />
                       </div>
-                    );
-                  })}
-                </Row>
-                <ResourceTable
-                  data={event.resources}
-                  isModalActive={isModalActive}
-                  setIsModalActive={setIsModalActive}
-                  anecdoteData={anecdoteData}
-                  openModal={openModal}
-                  matchesLength={filteredMatches.length}
-                  textColourClass={textColourClass}
-                  borderColourClass={borderColourClass}
-                />
-
-                {event.imageLayout && <div style={{ height: '50vh' }} />}
-                {event.imageLayout && event.imageLayout.type === 'custom' && (
-                  <Custom images={event.imageLayout.images} />
-                )}
-                {event.imageLayout && event.imageLayout.type === 'triptych' && (
-                  <Triptych images={event.imageLayout.images} />
-                )}
-                {event.imageLayout && event.imageLayout.type === 'diptych' && (
-                  <Diptych images={event.imageLayout.images} />
-                )}
-
-                {/* padding below last page element */}
-                <div className="pb-44" />
-              </div>
-            )}
-          </Container>
-        </div>
-        <HiddenFooter
+                    )}
+                  </Container>
+                </div>
+                <div className={`section w-full bg-black`}>
+                  <Container className="grid__container">
+                    <Row
+                      className={`grid__row`}
+                      style={{ height: '100vh' }}
+                    ></Row>
+                  </Container>
+                </div>
+              </ReactFullpage.Wrapper>
+            );
+          }}
+        />
+        {/* <HiddenFooter
           pageId="event"
           nextParams={nextParams}
           next={next}
@@ -449,9 +471,8 @@ const Event = ({
           isClicked={isClicked}
           navigateTo={navigateTo}
           setIsTransitioning={setIsTransitioning}
-          textColourClass="text-white text-opacity-90"
-          isShown={showPreview}
-        />
+          textColourClass="text-white text-opacity-90" // isShown={showPreview}
+        /> */}
       </>
     );
   }
