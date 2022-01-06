@@ -1,17 +1,9 @@
 .intro {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-
   .hero-image {
-    background-color: #000008;
-    height: 100vh;
+    background-color: #000000;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    // animation: hero-image-zoom 1.5s ease-out;
-    // animation-fill-mode: forwards;
   }
 
   .gradient-transition {

@@ -63,20 +63,20 @@ const Intro = ({
         )}
       </div>
 
-      <ReactFullpage
-        licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
-        scrollingSpeed={1000}
-        afterLoad={afterLoad}
-        render={({ state, fullpageApi }) => {
-          return (
-            <ReactFullpage.Wrapper>
-              <div
-                className={`section intro cursor-pointer ${
-                  isClicked ? 'fade-out' : 'foreground-fade-in'
-                }`}
-                onClick={() => fullpageApi.moveSectionDown()}
-              >
-                <div className={`hero-image ${backgroundClass}`}>
+      <div className="intro">
+        <ReactFullpage
+          licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+          scrollingSpeed={1000}
+          afterLoad={afterLoad}
+          render={({ state, fullpageApi }) => {
+            return (
+              <ReactFullpage.Wrapper>
+                <div
+                  className={`section hero-image cursor-pointer ${backgroundClass}`}
+                  key={year.id}
+                  id={year.id}
+                  onClick={() => fullpageApi.moveSectionDown()}
+                >
                   <div
                     key={`gradient-transition-${year.id}`}
                     className="gradient-transition"
@@ -109,19 +109,19 @@ const Intro = ({
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className={`section w-full ${colourBackgroundClass}`}>
-                <Container className="grid__container">
-                  <Row
-                    className={`grid__row`}
-                    style={{ height: '100vh' }}
-                  ></Row>
-                </Container>
-              </div>
-            </ReactFullpage.Wrapper>
-          );
-        }}
-      />
+                <div className={`section w-full ${colourBackgroundClass}`}>
+                  <Container className="grid__container">
+                    <Row
+                      className={`grid__row`}
+                      style={{ height: '100vh' }}
+                    ></Row>
+                  </Container>
+                </div>
+              </ReactFullpage.Wrapper>
+            );
+          }}
+        />
+      </div>
     </>
   );
 };
