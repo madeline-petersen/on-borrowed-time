@@ -159,7 +159,8 @@ const Event = ({
               return (
                 <ReactFullpage.Wrapper>
                   <div
-                    className={`section story-container h-auto ${colourBackgroundClass}`}
+                    className={`section ${colourBackgroundClass}`}
+                    style={{ height: 'max-content' }}
                   >
                     <Container className="min-h-screen grid__container">
                       <HeaderSpacer />
@@ -392,7 +393,7 @@ const Event = ({
               return (
                 <ReactFullpage.Wrapper>
                   <div
-                    className={`section story-container h-auto transition-colour-on-scroll ${colourBackgroundClass}`}
+                    className={`section h-auto transition-colour-on-scroll ${colourBackgroundClass}`}
                   >
                     <Container className="min-h-screen grid__container">
                       <HeaderSpacer />
