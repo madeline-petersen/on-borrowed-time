@@ -17,7 +17,8 @@ const Reflection = ({
   setIsTransitioning,
   navigateTo,
   setNextBackground,
-  colourBackgroundClass
+  colourBackgroundClass,
+  imageBackgroundClass
 }) => {
   const [isClicked, setClicked] = useState(false);
 
@@ -189,14 +190,25 @@ const Reflection = ({
                     </div>
                   </Container>
                 </div>
-                <div className={`section w-full ${colourBackgroundClass}`}>
-                  <Container className="grid__container">
-                    <Row
-                      className={`grid__row`}
-                      style={{ height: '100vh' }}
-                    ></Row>
-                  </Container>
-                </div>
+                {changingParam === 'year' ? (
+                  <div
+                    className={`section h-screen ${imageBackgroundClass}`}
+                    style={{
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundSize: 'cover'
+                    }}
+                  />
+                ) : (
+                  <div className={`section w-full ${colourBackgroundClass}`}>
+                    <Container className="grid__container">
+                      <Row
+                        className={`grid__row`}
+                        style={{ height: '100vh' }}
+                      ></Row>
+                    </Container>
+                  </div>
+                )}
               </ReactFullpage.Wrapper>
             );
           }}
@@ -221,7 +233,8 @@ Reflection.propTypes = {
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
   setNextBackground: PropTypes.func,
-  colourBackgroundClass: PropTypes.string
+  colourBackgroundClass: PropTypes.string,
+  imageBackgroundClass: PropTypes.string
 };
 
 export default Reflection;

@@ -81,8 +81,6 @@ const UIShell = props => {
       setNextBackgroundClass(imageBackgroundClasses[year]);
     } else if (pageId === 'event') {
       setNextBackgroundClass(colourBackgroundClasses[year]);
-    } else if (pageId === 'thematic-threads') {
-      setNextBackgroundClass('bg-white');
     } else {
       // artifacts, reflection, editors note
       setNextBackgroundClass('bg-black');
@@ -178,6 +176,7 @@ const UIShell = props => {
           {...props}
           nextBackgroundClass={nextBackgroundClass}
           setNextBackground={setNextBackground}
+          imageBackgroundClass={imageBackgroundClasses[props.nextParams.year]}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           navigateTo={navigateTo}
           isTransitioning={isTransitioning}
