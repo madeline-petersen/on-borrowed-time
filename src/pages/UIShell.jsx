@@ -29,12 +29,12 @@ const UIShell = props => {
   const navigateTo = (year, romanSceneNumber, page) => {
     let overflowContainer = document.getElementById('overflow-container');
     if (year && romanSceneNumber && page) {
-      setTimeout(function() {
-        if (overflowContainer) {
-          overflowContainer.scrollTo(0, 0);
-        }
-        history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
-      }, 2000);
+      // setTimeout(function() {
+      if (overflowContainer) {
+        overflowContainer.scrollTo(0, 0);
+      }
+      history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
+      // }, 2000);
     } else if (year) {
       if (props.pageId === 'home') {
         history.push(`/${year}`); // delaying causes timeline to open abruptly

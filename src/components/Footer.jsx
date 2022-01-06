@@ -11,6 +11,7 @@ const Footer = ({
   isClicked,
   setClicked,
   setIsTransitioning,
+  onClick,
 
   // used to determine navigation and labels
   nextParams,
@@ -28,21 +29,22 @@ const Footer = ({
   borderColourClass
 }) => {
   const handleOnClick = () => {
-    setClicked(true);
-    setIsTransitioning(true);
-    if (changingParam === 'year') {
-      // if year end
-      // inter-year
-      navigateTo(nextParams.year);
-    } else {
-      // else
-      // intra-year
-      navigateTo(
-        nextParams.year,
-        nextParams.scene, // should be romanSceneNumber
-        nextParams.page
-      );
-    }
+    onClick();
+    // setClicked(true);
+    // setIsTransitioning(true);
+    // if (changingParam === 'year') {
+    //   // if year end
+    //   // inter-year
+    //   navigateTo(nextParams.year);
+    // } else {
+    //   // else
+    //   // intra-year
+    //   navigateTo(
+    //     nextParams.year,
+    //     nextParams.scene, // should be romanSceneNumber
+    //     nextParams.page
+    //   );
+    // }
   };
 
   let textClasses =
@@ -122,7 +124,8 @@ Footer.propTypes = {
   next: PropTypes.shape(),
   pageId: PropTypes.string,
   textColourClass: PropTypes.string,
-  borderColourClass: PropTypes.string
+  borderColourClass: PropTypes.string,
+  onClick: PropTypes.func
 };
 
 export default Footer;
