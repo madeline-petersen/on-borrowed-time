@@ -15,7 +15,6 @@ const Footer = ({
   // used to determine navigation and labels
   nextParams,
   changingParam,
-  navigateTo,
 
   // object that contains title of next page
   next,
@@ -30,19 +29,6 @@ const Footer = ({
   const handleOnClick = () => {
     setClicked(true);
     setIsTransitioning(true);
-    if (changingParam === 'year') {
-      // if year end
-      // inter-year
-      navigateTo(nextParams.year);
-    } else {
-      // else
-      // intra-year
-      navigateTo(
-        nextParams.year,
-        nextParams.scene, // should be romanSceneNumber
-        nextParams.page
-      );
-    }
   };
 
   let textClasses =

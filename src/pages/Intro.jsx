@@ -94,7 +94,6 @@ const Intro = ({
                   changingParam="scene"
                   setClicked={setClicked}
                   setIsTransitioning={setIsTransitioning}
-                  navigateTo={navigateTo}
                 />
               </Container>
             </div>

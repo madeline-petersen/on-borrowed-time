@@ -162,7 +162,6 @@ const Reflection = ({
                 next={next}
                 changingParam={changingParam}
                 setClicked={onFooterClick}
-                navigateTo={navigateTo}
                 setIsTransitioning={setIsTransitioning}
               />
             )}
