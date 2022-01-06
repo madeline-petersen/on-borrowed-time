@@ -392,6 +392,8 @@ const Event = ({
             scrollOverflow={true}
             paddingTop="78px"
             render={({ state, fullpageApi }) => {
+              fullpage_api.reBuild();
+
               return (
                 <ReactFullpage.Wrapper>
                   <div
