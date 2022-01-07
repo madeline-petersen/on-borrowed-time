@@ -11,6 +11,7 @@ import { throttle } from 'lodash';
 
 const Reflection = ({
   reflection,
+  year,
   nextParams,
   changingParam,
   next,
@@ -234,7 +235,11 @@ const Reflection = ({
             nextParams={nextParams}
             next={next}
             changingParam={changingParam}
-            textColourClass="text-white text-opacity-90"
+            textColourClass={
+              ['1989', '1997'].includes(year.id)
+                ? `text-white text-opacity-90`
+                : `text-black text-opacity-70`
+            }
           />
         </div>
       )}
@@ -243,6 +248,7 @@ const Reflection = ({
 };
 
 Reflection.propTypes = {
+  year: PropTypes.shape(),
   reflection: PropTypes.shape({
     paragraphs: PropTypes.arrayOf(PropTypes.shape(PropTypes.string)),
     citations: PropTypes.arrayOf(
