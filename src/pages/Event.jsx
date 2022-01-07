@@ -3,7 +3,7 @@ import './Event.scss';
 import { Col, Container, Row, useScreenClass } from 'react-grid-system';
 import React, { useEffect, useState } from 'react';
 
-// import HiddenFooter from '../components/HiddenFooter';
+import HiddenFooter from '../components/HiddenFooter';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import ResourceTable from '../components/ResourceTable';
@@ -12,6 +12,7 @@ import Diptych from '../components/imageLayouts/Diptych';
 import Custom from '../components/imageLayouts/Custom';
 import imageLookup from '../images';
 import ReactFullpage from '@fullpage/react-fullpage';
+import { throttle } from 'lodash';
 
 const Event = ({
   year,
@@ -32,6 +33,7 @@ const Event = ({
   const [isModalActive, setIsModalActive] = useState(false);
   const [anecdoteData, setAnecdoteData] = useState({});
   const [selectedTheme, setSelectedTheme] = useState(null);
+  const [showPreview, setShowPreview] = useState(false);
 
   const openModal = entry => {
     if (entry.content) {
@@ -128,6 +130,22 @@ const Event = ({
           nextParams.scene, // should be romanSceneNumber
           nextParams.page
         );
+      }
+    }
+  };
+
+  const onLeave = function(origin, destination, direction) {
+    console.log('onLeave', showPreview);
+    const element = document.getElementsByClassName(
+      'hidden-footer__container'
+    )[0];
+
+    if (element) {
+      if (element.classList.contains('show')) {
+        return true;
+      } else {
+        element.classList.add('show');
+        return false;
       }
     }
   };
@@ -385,6 +403,7 @@ const Event = ({
             licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
             scrollingSpeed={1000}
             afterLoad={afterLoad}
+            onLeave={throttle(onLeave, 1000)}
             scrollOverflow={true}
             paddingTop="78px"
             render={({ state, fullpageApi }) => {
@@ -482,17 +501,19 @@ const Event = ({
             }}
           />
         </div>
-        {/* <HiddenFooter
-          pageId="event"
-          nextParams={nextParams}
-          next={next}
-          changingParam={changingParam}
-          setClicked={setClicked}
-          isClicked={isClicked}
-          navigateTo={navigateTo}
-          setIsTransitioning={setIsTransitioning}
-          textColourClass="text-white text-opacity-90" // isShown={showPreview}
-        /> */}
+        <div className={`hidden-footer__container`}>
+          <HiddenFooter
+            pageId="event"
+            nextParams={nextParams}
+            next={next}
+            changingParam={changingParam}
+            setClicked={setClicked}
+            isClicked={isClicked}
+            navigateTo={navigateTo}
+            setIsTransitioning={setIsTransitioning}
+            textColourClass="text-white text-opacity-90"
+          />
+        </div>
       </>
     );
   }
