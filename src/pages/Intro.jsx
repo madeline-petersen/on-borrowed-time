@@ -63,7 +63,7 @@ const Intro = ({
         )}
       </div>
 
-      <div className="intro" key={`intro-${year.id}`}>
+      <div className="intro foreground-fade-in" key={`intro-${year.id}`}>
         <ReactFullpage
           licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
           scrollingSpeed={1000}
