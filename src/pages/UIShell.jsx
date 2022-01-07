@@ -20,7 +20,6 @@ const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [nextBackgroundClass, setNextBackgroundClass] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
   const [isWhite, setIsWhite] = useState(true);
 
@@ -74,17 +73,6 @@ const UIShell = props => {
     '2014': 'border-black',
     '2019': 'border-black',
     '2020': 'border-white'
-  };
-
-  const setNextBackground = (year, pageId = 'intro') => {
-    if (pageId === 'intro') {
-      setNextBackgroundClass(imageBackgroundClasses[year]);
-    } else if (pageId === 'event') {
-      setNextBackgroundClass(colourBackgroundClasses[year]);
-    } else {
-      // artifacts, reflection, editors note
-      setNextBackgroundClass('bg-black');
-    }
   };
 
   const toggleLeftMenu = () => {
@@ -148,8 +136,6 @@ const UIShell = props => {
           navigateTo={navigateTo}
           backgroundClass={imageBackgroundClasses[props.year.id]}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
-          nextBackgroundClass={nextBackgroundClass}
-          setNextBackground={setNextBackground}
           isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
         />
@@ -160,8 +146,6 @@ const UIShell = props => {
         <Event
           {...props}
           navigateTo={navigateTo}
-          nextBackgroundClass={nextBackgroundClass}
-          setNextBackground={setNextBackground}
           isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
@@ -174,8 +158,6 @@ const UIShell = props => {
       pageComponent = (
         <Reflection
           {...props}
-          nextBackgroundClass={nextBackgroundClass}
-          setNextBackground={setNextBackground}
           imageBackgroundClass={imageBackgroundClasses[props.nextParams.year]}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           navigateTo={navigateTo}
@@ -219,7 +201,6 @@ const UIShell = props => {
         title={props.scene ? props.scene.title : ''}
         isTransitioning={isTransitioning}
         romanSceneNumber={props.romanSceneNumber}
-        setNextBackground={setNextBackground}
         setIsTransitioning={setIsTransitioning}
         navigateTo={navigateTo}
         colourBackgroundClass={colourBackgroundClasses[props.year.id]}
@@ -232,7 +213,6 @@ const UIShell = props => {
         onCloseLeftMenu={onCloseLeftMenu}
         years={props.years}
         navigateTo={navigateTo}
-        setNextBackground={setNextBackground}
         setIsTransitioning={setIsTransitioning}
         selectedYear={selectedYear}
         setSelectedYear={setSelectedYear}
@@ -285,7 +265,6 @@ const UIShell = props => {
           isTransitioning={isTransitioning}
           isYearEnd={isYearEnd}
           navigateTo={navigateTo}
-          setNextBackground={setNextBackground}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           colourBackgroundClasses={colourBackgroundClasses}
         />

@@ -13,15 +13,14 @@ const Intro = ({
   navigateTo,
   backgroundClass,
   colourBackgroundClass,
-  nextBackgroundClass,
+
   isTransitioning,
   setIsTransitioning,
-  setNextBackground,
+
   nextParams
 }) => {
   useEffect(() => {
     setIsTransitioning(false);
-    setNextBackground(nextParams.year, nextParams.page);
   }, [year]);
 
   const onClickYear = () => {
@@ -108,10 +107,10 @@ Intro.propTypes = {
   navigateTo: PropTypes.func,
   backgroundClass: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
-  nextBackgroundClass: PropTypes.string,
+
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
-  setNextBackground: PropTypes.func,
+
   nextParams: PropTypes.shape()
 };
 

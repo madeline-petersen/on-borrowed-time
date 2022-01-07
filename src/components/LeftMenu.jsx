@@ -13,7 +13,7 @@ const LeftMenu = ({
   onCloseLeftMenu,
   years,
   navigateTo,
-  setNextBackground,
+
   setIsTransitioning,
   selectedYear,
   setSelectedYear
@@ -30,7 +30,6 @@ const LeftMenu = ({
   });
 
   const onClickScene = (year, sceneIndex) => {
-    setNextBackground(year, 'event');
     setIsTransitioning(true);
     closeModal();
     let romanSceneNumber = roman.toRoman(sceneIndex + 1).toUpperCase();
@@ -41,7 +40,6 @@ const LeftMenu = ({
   };
 
   const onClickYear = year => {
-    setNextBackground(year);
     setIsTransitioning(true);
     closeModal();
     setTimeout(function() {
@@ -240,7 +238,7 @@ LeftMenu.propTypes = {
   onCloseLeftMenu: PropTypes.func,
   years: PropTypes.arrayOf(PropTypes.shape()),
   navigateTo: PropTypes.func,
-  setNextBackground: PropTypes.func,
+
   setIsTransitioning: PropTypes.func,
   selectedYear: PropTypes.shape(),
   setSelectedYear: PropTypes.func

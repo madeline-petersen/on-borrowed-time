@@ -15,17 +15,16 @@ const Reflection = ({
   nextParams,
   changingParam,
   next,
-  nextBackgroundClass,
+
   isTransitioning,
   setIsTransitioning,
   navigateTo,
-  setNextBackground,
+
   colourBackgroundClass,
   imageBackgroundClass
 }) => {
   useEffect(() => {
     setIsTransitioning(false);
-    setNextBackground(nextParams.year, nextParams.page);
   }, [reflection]);
 
   const onFooterClick = () => {
@@ -236,11 +235,11 @@ Reflection.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  nextBackgroundClass: PropTypes.string,
+
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
-  setNextBackground: PropTypes.func,
+
   colourBackgroundClass: PropTypes.string,
   imageBackgroundClass: PropTypes.string
 };

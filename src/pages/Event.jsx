@@ -21,10 +21,10 @@ const Event = ({
   changingParam,
   next,
   navigateTo,
-  nextBackgroundClass,
+
   isTransitioning,
   setIsTransitioning,
-  setNextBackground,
+
   colourBackgroundClass,
   textColourClass,
   borderColourClass
@@ -64,9 +64,6 @@ const Event = ({
 
   useEffect(() => {
     setIsTransitioning(false);
-    if (nextParams) {
-      setNextBackground(nextParams.year, nextParams.page);
-    }
   }, [event]);
 
   let themeLookup = [];
@@ -480,11 +477,11 @@ Event.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  nextBackgroundClass: PropTypes.string,
+
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
-  setNextBackground: PropTypes.func,
+
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string

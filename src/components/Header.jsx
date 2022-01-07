@@ -13,7 +13,7 @@ const Header = ({
   title,
   isTransitioning,
   romanSceneNumber,
-  setNextBackground,
+
   setIsTransitioning,
   navigateTo,
   colourBackgroundClass,
@@ -28,7 +28,6 @@ const Header = ({
 
   const onClickYear = () => {
     if (pageId !== 'intro') {
-      setNextBackground(currentYear);
       setIsTransitioning(true);
       // setSceneIndex(null); // disappear circle
       // if (pageId !== 'home') {
@@ -43,7 +42,6 @@ const Header = ({
 
   const onClickScene = () => {
     if (pageId !== 'event') {
-      setNextBackground(currentYear, 'event');
       setIsTransitioning(true);
       // setSceneIndex(null); // disappear circle
       navigateTo(currentYear, romanSceneNumber, 'event');
@@ -163,7 +161,7 @@ Header.propTypes = {
   title: PropTypes.string,
   isTransitioning: PropTypes.bool,
   romanSceneNumber: PropTypes.string,
-  setNextBackground: PropTypes.func,
+
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
   colourBackgroundClass: PropTypes.string,
