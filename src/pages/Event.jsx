@@ -135,7 +135,6 @@ const Event = ({
   };
 
   const onLeave = function(origin, destination, direction) {
-    console.log('onLeave', showPreview);
     const element = document.getElementsByClassName(
       'hidden-footer__container'
     )[0];
@@ -501,16 +500,12 @@ const Event = ({
             }}
           />
         </div>
-        <div className={`hidden-footer__container`}>
+        <div className={`hidden-footer__container bg-black`}>
           <HiddenFooter
             pageId="event"
             nextParams={nextParams}
             next={next}
             changingParam={changingParam}
-            setClicked={setClicked}
-            isClicked={isClicked}
-            navigateTo={navigateTo}
-            setIsTransitioning={setIsTransitioning}
             textColourClass="text-white text-opacity-90"
           />
         </div>

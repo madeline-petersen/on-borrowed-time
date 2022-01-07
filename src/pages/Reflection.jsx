@@ -6,6 +6,8 @@ import Footer from '../components/Footer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import ReactFullpage from '@fullpage/react-fullpage';
+import HiddenFooter from '../components/HiddenFooter';
+import { throttle } from 'lodash';
 
 const Reflection = ({
   reflection,
@@ -56,6 +58,21 @@ const Reflection = ({
     }
   };
 
+  const onLeave = function(origin, destination, direction) {
+    const element = document.getElementsByClassName(
+      'hidden-footer__container'
+    )[0];
+
+    if (element) {
+      if (element.classList.contains('show')) {
+        return true;
+      } else {
+        element.classList.add('show');
+        return false;
+      }
+    }
+  };
+
   return (
     <>
       {/* Backgrounds for page transition */}
@@ -80,6 +97,7 @@ const Reflection = ({
           licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
+          onLeave={throttle(onLeave, 1000)}
           scrollOverflow={true}
           paddingTop="78px"
           render={({ state, fullpageApi }) => {
@@ -171,19 +189,6 @@ const Reflection = ({
                           </Row>
                         )}
                       </div>
-
-                      {next && (
-                        <Footer
-                          pageId="reflection"
-                          nextParams={nextParams}
-                          next={next}
-                          changingParam={changingParam}
-                          setClicked={onFooterClick}
-                          navigateTo={navigateTo}
-                          setIsTransitioning={setIsTransitioning}
-                          onClick={() => fullpageApi.moveSectionDown()}
-                        />
-                      )}
                     </div>
                   </Container>
                 </div>
@@ -211,6 +216,23 @@ const Reflection = ({
           }}
         />
       </div>
+      {next && (
+        <div
+          className={`hidden-footer__container ${
+            changingParam === 'year'
+              ? imageBackgroundClass
+              : colourBackgroundClass
+          }`}
+        >
+          <HiddenFooter
+            pageId="reflection"
+            nextParams={nextParams}
+            next={next}
+            changingParam={changingParam}
+            textColourClass="text-white text-opacity-90"
+          />
+        </div>
+      )}
     </>
   );
 };
