@@ -23,12 +23,6 @@ const Reflection = ({
   colourBackgroundClass,
   imageBackgroundClass
 }) => {
-  const [isClicked, setClicked] = useState(false);
-
-  useEffect(() => {
-    setClicked(isTransitioning);
-  }, [isTransitioning]);
-
   useEffect(() => {
     setIsTransitioning(false);
     setNextBackground(nextParams.year, nextParams.page);
@@ -36,12 +30,10 @@ const Reflection = ({
 
   const onFooterClick = () => {
     setIsTransitioning(true);
-    setClicked(true);
   };
 
   const afterLoad = function(origin, destination, direction) {
     if (destination.isLast) {
-      setClicked(true);
       setIsTransitioning(true);
       if (changingParam === 'year') {
         // if year end
@@ -76,20 +68,6 @@ const Reflection = ({
 
   return (
     <>
-      {/* Backgrounds for page transition */}
-      <div className={`absolute top-0 w-full`}>
-        <div
-          className={`h-screen bg-black w-full ${
-            isClicked ? 'screen-shrink' : ''
-          }`}
-        />
-        {isTransitioning && (
-          <div
-            className={`h-screen ${nextBackgroundClass} bg-center bg-no-repeat bg-cover w-full`}
-          />
-        )}
-      </div>
-
       <div
         className="reflection"
         key={`reflection-${nextParams.year}-${nextParams.scene}-${nextParams.page}`}

@@ -7,9 +7,6 @@ import ReactHtmlParser from 'react-html-parser';
 import './Footer.scss';
 
 const Footer = ({
-  // useState variables, used in page component to transition page
-  isClicked,
-  setClicked,
   setIsTransitioning,
   onClick,
 
@@ -29,7 +26,7 @@ const Footer = ({
 }) => {
   const handleOnClick = () => {
     onClick();
-    setClicked(true);
+
     setIsTransitioning(true);
   };
 
@@ -59,9 +56,7 @@ const Footer = ({
         </Col>
       </Row>
       <Row
-        className={`grid__row clickable-area ${
-          isClicked ? 'cursor-default' : 'cursor-pointer'
-        }`}
+        className={`grid__row clickable-area cursor-pointer`}
         onClick={() => handleOnClick()}
       >
         <Col lg={1} className="cursor-default" />
@@ -101,8 +96,6 @@ const Footer = ({
 Footer.defaultProps = {};
 
 Footer.propTypes = {
-  isClicked: PropTypes.bool,
-  setClicked: PropTypes.func,
   setIsTransitioning: PropTypes.func,
   changingParam: PropTypes.string,
   nextParams: PropTypes.shape(),

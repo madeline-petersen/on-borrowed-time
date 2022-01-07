@@ -19,19 +19,12 @@ const Intro = ({
   setNextBackground,
   nextParams
 }) => {
-  const [isClicked, setClicked] = useState(false);
-
-  useEffect(() => {
-    setClicked(isTransitioning);
-  }, [isTransitioning]);
-
   useEffect(() => {
     setIsTransitioning(false);
     setNextBackground(nextParams.year, nextParams.page);
   }, [year]);
 
   const onClickYear = () => {
-    setClicked(true);
     setIsTransitioning(true);
     navigateTo(
       nextParams.year,
@@ -48,21 +41,6 @@ const Intro = ({
 
   return (
     <>
-      {/* Backgrounds for page transition */}
-      <div className={`absolute top-0 w-full`}>
-        <div
-          // fades to black before transitioning
-          className={`bg-black w-full h-screen ${
-            isClicked ? 'screen-shrink' : ''
-          }`}
-        />
-        {isTransitioning && (
-          <div
-            className={`h-screen ${nextBackgroundClass} bg-center bg-no-repeat bg-cover w-full`}
-          />
-        )}
-      </div>
-
       <div className="intro foreground-fade-in" key={`intro-${year.id}`}>
         <ReactFullpage
           licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
@@ -100,7 +78,6 @@ const Intro = ({
                           nextParams={nextParams}
                           next={year.scenes[0]}
                           changingParam="scene"
-                          setClicked={setClicked}
                           setIsTransitioning={setIsTransitioning}
                           navigateTo={navigateTo}
                           onClick={() => fullpageApi.moveSectionDown()}

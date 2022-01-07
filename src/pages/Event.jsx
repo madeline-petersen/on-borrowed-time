@@ -29,7 +29,6 @@ const Event = ({
   textColourClass,
   borderColourClass
 }) => {
-  const [isClicked, setClicked] = useState(false);
   const [isModalActive, setIsModalActive] = useState(false);
   const [anecdoteData, setAnecdoteData] = useState({});
   const [selectedTheme, setSelectedTheme] = useState(null);
@@ -62,10 +61,6 @@ const Event = ({
       };
     });
   }
-
-  useEffect(() => {
-    setClicked(isTransitioning);
-  }, [isTransitioning]);
 
   useEffect(() => {
     setIsTransitioning(false);
@@ -116,7 +111,6 @@ const Event = ({
 
   const afterLoad = function(origin, destination, direction) {
     if (destination.isLast) {
-      setClicked(true);
       setIsTransitioning(true);
       if (changingParam === 'year') {
         // if year end
@@ -152,20 +146,6 @@ const Event = ({
   if (year.id === '2020') {
     return (
       <>
-        {/* Backgrounds for page transition */}
-        <div className={`absolute top-0 w-full`}>
-          <div
-            className={`h-screen ${colourBackgroundClass} w-full ${
-              isClicked ? 'screen-shrink' : ''
-            }`}
-          />
-          {isTransitioning && (
-            <div
-              className={`h-screen ${nextBackgroundClass} bg-center bg-no-repeat bg-cover w-full`}
-            />
-          )}
-        </div>
-
         <div className="event" key={`event-2020`}>
           <ReactFullpage
             licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
@@ -182,11 +162,7 @@ const Event = ({
                     <Container className="min-h-screen grid__container">
                       {/* Event */}
                       {event && (
-                        <div
-                          className={`${
-                            isClicked ? 'fade-out' : 'delayed-fade-in'
-                          }`}
-                        >
+                        <div className="delayed-fade-in">
                           <Row
                             className={`grid__row intro-paragraph pb-24`}
                             id="event-paragraphs"
@@ -380,20 +356,6 @@ const Event = ({
   } else {
     return (
       <>
-        {/* Backgrounds for page transition */}
-        <div className={`absolute top-0 w-full`}>
-          <div
-            className={`h-screen transition-colour-on-scroll ${colourBackgroundClass} w-full ${
-              isClicked ? 'screen-shrink' : ''
-            }`}
-          />
-          {isTransitioning && (
-            <div
-              className={`h-screen ${nextBackgroundClass} bg-center bg-no-repeat bg-cover w-full`}
-            />
-          )}
-        </div>
-
         <div
           className="event"
           key={`event-${nextParams.year}-${nextParams.scene}-${nextParams.page}`}
@@ -415,11 +377,7 @@ const Event = ({
                     <Container className="min-h-screen grid__container">
                       {/* Event */}
                       {event && (
-                        <div
-                          className={`${
-                            isClicked ? 'fade-out' : 'delayed-fade-in'
-                          }`}
-                        >
+                        <div className={`delayed-fade-in`}>
                           <Row
                             className={`grid__row intro-paragraph pb-24`}
                             id="event-paragraphs"

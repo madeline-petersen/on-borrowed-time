@@ -13,8 +13,6 @@ const pluginWrapper = () => {
 };
 
 const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
-  const [isClicked, setClicked] = useState(false);
-
   const onLeave = (origin, destination, direction) => {
     const destinationYear = years[destination.index].id;
     setHash(destinationYear);
@@ -48,7 +46,6 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
   }, []);
 
   const onClickYear = year => {
-    setClicked(true);
     setIsTransitioning(true);
     navigateTo(year);
   };
@@ -93,9 +90,7 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
                     onClick={() => onClickYear(year.id)}
                   >
                     <div
-                      className={`small-headline text-white z-10 absolute w-full scene-name cursor-pointer ${
-                        isClicked ? 'fade-out' : ''
-                      }`}
+                      className={`small-headline text-white z-10 absolute w-full scene-name cursor-pointer`}
                       onClick={() => onClickYear(year.id)}
                     >
                       <Container className="grid__container">
