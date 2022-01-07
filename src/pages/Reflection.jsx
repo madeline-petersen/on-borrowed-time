@@ -88,11 +88,7 @@ const Reflection = ({
                 <div className="section h-auto bg-black">
                   <Container className="grid__container">
                     {/* Final Reflection */}
-                    <div
-                      className={`${
-                        isClicked ? 'fade-out' : 'foreground-fade-in'
-                      }`}
-                    >
+                    <div className="foreground-fade-in">
                       <div className="footer-spacer">
                         <Row
                           className="pb-5 grid__row"
@@ -185,6 +181,7 @@ const Reflection = ({
                           setClicked={onFooterClick}
                           navigateTo={navigateTo}
                           setIsTransitioning={setIsTransitioning}
+                          onClick={() => fullpageApi.moveSectionDown()}
                         />
                       )}
                     </div>
