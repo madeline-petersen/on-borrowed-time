@@ -404,6 +404,7 @@ const Event = ({
             afterLoad={afterLoad}
             onLeave={throttle(onLeave, 1000)}
             scrollOverflow={true}
+            lazyLoading={false}
             paddingTop="78px"
             render={({ state, fullpageApi }) => {
               return (
