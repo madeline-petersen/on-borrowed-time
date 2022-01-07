@@ -14,21 +14,12 @@ const HiddenFooter = ({
   // object that contains title of next page
   next,
 
-  // current page id (intro, event, artifacts, reflection)
+  // current page id (event, reflection)
   pageId,
 
   // colours
-  textColourClass
+  textClasses
 }) => {
-  let textClasses =
-    pageId === 'event'
-      ? 'text-black text-opacity-70'
-      : 'text-white text-opacity-90';
-
-  if (textColourClass) {
-    textClasses = textColourClass;
-  }
-
   return (
     <Container className="grid__container">
       <Row
@@ -76,7 +67,7 @@ HiddenFooter.propTypes = {
   changingParam: PropTypes.string,
   next: PropTypes.shape(),
   pageId: PropTypes.string,
-  textColourClass: PropTypes.string
+  textClasses: PropTypes.string
 };
 
 export default HiddenFooter;

@@ -506,7 +506,7 @@ const Event = ({
             nextParams={nextParams}
             next={next}
             changingParam={changingParam}
-            textColourClass="text-white text-opacity-90"
+            textClasses="text-white text-opacity-90"
           />
         </div>
       </>
