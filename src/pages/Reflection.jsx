@@ -223,6 +223,11 @@ const Reflection = ({
               ? imageBackgroundClass
               : colourBackgroundClass
           }`}
+          style={{
+            backgroundPosition: '0 0',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover'
+          }}
         >
           <HiddenFooter
             pageId="reflection"
