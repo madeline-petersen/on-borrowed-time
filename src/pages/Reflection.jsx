@@ -27,13 +27,8 @@ const Reflection = ({
     setIsTransitioning(false);
   }, [reflection]);
 
-  const onFooterClick = () => {
-    setIsTransitioning(true);
-  };
-
   const afterLoad = function(origin, destination, direction) {
     if (destination.isLast) {
-      setIsTransitioning(true);
       if (changingParam === 'year') {
         // if year end
         // inter-year

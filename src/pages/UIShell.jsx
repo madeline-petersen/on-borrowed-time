@@ -26,6 +26,7 @@ const UIShell = props => {
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
+    setIsTransitioning(true);
     if (year && romanSceneNumber && page) {
       history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
     } else if (year) {

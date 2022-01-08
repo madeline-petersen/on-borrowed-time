@@ -26,8 +26,6 @@ const Footer = ({
 }) => {
   const handleOnClick = () => {
     onClick();
-
-    setIsTransitioning(true);
   };
 
   let textClasses =

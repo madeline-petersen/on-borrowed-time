@@ -46,7 +46,6 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
   }, []);
 
   const onClickYear = year => {
-    setIsTransitioning(true);
     navigateTo(year);
   };
 

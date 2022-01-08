@@ -24,7 +24,6 @@ const Intro = ({
   }, [year]);
 
   const onClickYear = () => {
-    setIsTransitioning(true);
     navigateTo(
       nextParams.year,
       nextParams.scene, // should be romanSceneNumber

@@ -28,22 +28,12 @@ const Header = ({
 
   const onClickYear = () => {
     if (pageId !== 'intro') {
-      setIsTransitioning(true);
-      // setSceneIndex(null); // disappear circle
-      // if (pageId !== 'home') {
-      //   if (year !== currentYear) {
-      //     setNumScenes(0); // collapse timeline (1s duration)
-      //   }
-      // }
       navigateTo(currentYear);
-      // setSceneIndex('intro');
     }
   };
 
   const onClickScene = () => {
     if (pageId !== 'event') {
-      setIsTransitioning(true);
-      // setSceneIndex(null); // disappear circle
       navigateTo(currentYear, romanSceneNumber, 'event');
     }
   };

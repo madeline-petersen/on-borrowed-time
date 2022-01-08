@@ -30,7 +30,6 @@ const LeftMenu = ({
   });
 
   const onClickScene = (year, sceneIndex) => {
-    setIsTransitioning(true);
     closeModal();
     let romanSceneNumber = roman.toRoman(sceneIndex + 1).toUpperCase();
     setTimeout(function() {
@@ -40,7 +39,6 @@ const LeftMenu = ({
   };
 
   const onClickYear = year => {
-    setIsTransitioning(true);
     closeModal();
     setTimeout(function() {
       navigateTo(year);
