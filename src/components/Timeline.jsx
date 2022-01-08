@@ -219,9 +219,7 @@ Timeline.propTypes = {
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   isYearEnd: PropTypes.bool,
-
-  colourBackgroundClass: PropTypes.string,
-  colourBackgroundClasses: PropTypes.shape()
+  colourBackgroundClass: PropTypes.string
 };
 
 export default Timeline;

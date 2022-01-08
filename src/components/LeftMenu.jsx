@@ -6,22 +6,18 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import { roman } from '@sguest/roman-js';
-import { useHistory } from 'react-router-dom';
 
 const LeftMenu = ({
   isActive,
   onCloseLeftMenu,
   years,
   navigateTo,
-
-  setIsTransitioning,
   selectedYear,
   setSelectedYear
 }) => {
   const menu = document.getElementById('menu-card');
   const menuBackground = document.getElementById('menu-background-filler');
   const overlay = document.getElementById('menu-overlay');
-  let history = useHistory();
 
   window.addEventListener('click', function(event) {
     if (event.target === menuBackground) {
@@ -236,8 +232,6 @@ LeftMenu.propTypes = {
   onCloseLeftMenu: PropTypes.func,
   years: PropTypes.arrayOf(PropTypes.shape()),
   navigateTo: PropTypes.func,
-
-  setIsTransitioning: PropTypes.func,
   selectedYear: PropTypes.shape(),
   setSelectedYear: PropTypes.func
 };
