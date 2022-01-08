@@ -61,6 +61,16 @@ const Event = ({
 
   useEffect(() => {
     setIsTransitioning(false);
+
+    // disabling all scrolling while animation plays
+    fullpage_api.setAllowScrolling(false);
+    fullpage_api.setKeyboardScrolling(false);
+
+    setTimeout(() => {
+      // enable scrolling once animation ends (4.25s)
+      fullpage_api.setAllowScrolling(true);
+      fullpage_api.setKeyboardScrolling(true);
+    }, 4250);
   }, [event]);
 
   let themeLookup = [];
