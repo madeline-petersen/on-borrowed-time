@@ -29,7 +29,6 @@ const Event = ({
   const [isModalActive, setIsModalActive] = useState(false);
   const [anecdoteData, setAnecdoteData] = useState({});
   const [selectedTheme, setSelectedTheme] = useState(null);
-  const [showPreview, setShowPreview] = useState(false);
 
   const openModal = entry => {
     if (entry.content) {
@@ -113,7 +112,7 @@ const Event = ({
   //   });
   // }
 
-  const afterLoad = function(origin, destination, direction) {
+  const afterLoad = (origin, destination, direction) => {
     if (destination.isLast) {
       if (changingParam === 'year') {
         // if year end
@@ -131,7 +130,7 @@ const Event = ({
     }
   };
 
-  const onLeave = function(origin, destination, direction) {
+  const onLeave = (origin, destination, direction) => {
     const element = document.getElementsByClassName(
       'hidden-footer__container'
     )[0];
