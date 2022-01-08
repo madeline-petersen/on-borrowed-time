@@ -24,10 +24,10 @@ const Event = ({
   setIsTransitioning,
   colourBackgroundClass,
   textColourClass,
-  borderColourClass
+  borderColourClass,
+  setAnecdoteData,
+  setIsModalActive
 }) => {
-  const [isModalActive, setIsModalActive] = useState(false);
-  const [anecdoteData, setAnecdoteData] = useState({});
   const [selectedTheme, setSelectedTheme] = useState(null);
   const [headerHeight, setHeaderHeight] = useState('78px');
 
@@ -339,9 +339,6 @@ const Event = ({
                                 <ResourceTable
                                   theme="white"
                                   data={section.resources}
-                                  isModalActive={isModalActive}
-                                  setIsModalActive={setIsModalActive}
-                                  anecdoteData={anecdoteData}
                                   openModal={openModal}
                                   matchesLength={filteredMatches.length}
                                   textColourClass={textColourClass}
@@ -425,9 +422,6 @@ const Event = ({
                           </Row>
                           <ResourceTable
                             data={event.resources}
-                            isModalActive={isModalActive}
-                            setIsModalActive={setIsModalActive}
-                            anecdoteData={anecdoteData}
                             openModal={openModal}
                             matchesLength={filteredMatches.length}
                             textColourClass={textColourClass}
@@ -494,7 +488,9 @@ Event.propTypes = {
   navigateTo: PropTypes.func,
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
-  borderColourClass: PropTypes.string
+  borderColourClass: PropTypes.string,
+  setAnecdoteData: PropTypes.func,
+  setIsModalActive: PropTypes.func
 };
 
 export default Event;

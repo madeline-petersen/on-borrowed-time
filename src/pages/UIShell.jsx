@@ -14,6 +14,7 @@ import { Link, useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Reflection from './Reflection.jsx';
 import Timeline from '../components/Timeline';
+import Anecdote from '../components/Anecdote';
 import { Visible } from 'react-grid-system';
 
 const UIShell = props => {
@@ -22,6 +23,8 @@ const UIShell = props => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [selectedYear, setSelectedYear] = useState(null);
   const [isWhite, setIsWhite] = useState(true);
+  const [anecdoteData, setAnecdoteData] = useState({});
+  const [isModalActive, setIsModalActive] = useState(false);
 
   let history = useHistory();
 
@@ -122,7 +125,6 @@ const UIShell = props => {
   if (props.pageId === 'editors-note') {
     timelineClasses = `contrast-text bg-blue-70 mix-blend-screen`;
   }
-
   let pageComponent;
   switch (props.pageId) {
     case 'home':
@@ -156,6 +158,8 @@ const UIShell = props => {
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           textColourClass={textColourClass[props.year.id]}
           borderColourClass={borderColourClass[props.year.id]}
+          setAnecdoteData={setAnecdoteData}
+          setIsModalActive={setIsModalActive}
         />
       );
       break;
@@ -221,6 +225,17 @@ const UIShell = props => {
         selectedYear={selectedYear}
         setSelectedYear={setSelectedYear}
       />
+      <Anecdote
+        {...anecdoteData}
+        title={
+          anecdoteData.articleTitle ||
+          anecdoteData.bookTitle ||
+          anecdoteData.poemTitle
+        }
+        isActive={isModalActive}
+        onCloseModal={() => setIsModalActive(false)}
+      />
+
       <span
         className={`absolute text-3xl cursor-pointer z-40 left-menu-bullet ${
           isMenuActive ? 'fade-out' : 'fade-in'
