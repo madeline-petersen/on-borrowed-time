@@ -1,10 +1,11 @@
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
 import Footer from '../components/Footer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
+import 'fullpage.js/vendors/scrolloverflow';
 import ReactFullpage from '@fullpage/react-fullpage';
 import HiddenFooter from '../components/HiddenFooter';
 import { throttle } from 'lodash';

@@ -11,6 +11,7 @@ import Triptych from '../components/imageLayouts/Triptych';
 import Diptych from '../components/imageLayouts/Diptych';
 import Custom from '../components/imageLayouts/Custom';
 import imageLookup from '../images';
+import 'fullpage.js/vendors/scrolloverflow';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { throttle } from 'lodash';
 
