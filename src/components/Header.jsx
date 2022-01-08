@@ -41,6 +41,7 @@ const Header = ({
   return (
     <span
       className={`absolute w-full top-0 z-10 medium-caption ${timelineClasses}`}
+      id="header"
     >
       <Container className="grid__container">
         <Row className={`grid__row pt-5`}>

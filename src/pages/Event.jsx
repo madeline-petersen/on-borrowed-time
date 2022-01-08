@@ -29,6 +29,7 @@ const Event = ({
   const [isModalActive, setIsModalActive] = useState(false);
   const [anecdoteData, setAnecdoteData] = useState({});
   const [selectedTheme, setSelectedTheme] = useState(null);
+  const [headerHeight, setHeaderHeight] = useState('78px');
 
   const openModal = entry => {
     if (entry.content) {
@@ -145,6 +146,13 @@ const Event = ({
     }
   };
 
+  setTimeout(() => {
+    const header = document.getElementById('header');
+    if (header) {
+      setHeaderHeight(window.getComputedStyle(header).height);
+    }
+  }, 4500);
+
   if (year.id === '2020') {
     return (
       <>
@@ -153,7 +161,7 @@ const Event = ({
             licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
             scrollingSpeed={1000}
             scrollOverflow={true}
-            paddingTop="78px"
+            paddingTop={headerHeight}
             render={({ state, fullpageApi }) => {
               return (
                 <ReactFullpage.Wrapper>
@@ -369,7 +377,7 @@ const Event = ({
             onLeave={throttle(onLeave, 1000)}
             scrollOverflow={true}
             lazyLoading={false}
-            paddingTop="78px"
+            paddingTop={headerHeight}
             render={({ state, fullpageApi }) => {
               return (
                 <ReactFullpage.Wrapper>
