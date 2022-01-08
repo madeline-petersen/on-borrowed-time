@@ -15,11 +15,8 @@ const Reflection = ({
   nextParams,
   changingParam,
   next,
-
-  isTransitioning,
   setIsTransitioning,
   navigateTo,
-
   colourBackgroundClass,
   imageBackgroundClass
 }) => {
@@ -230,11 +227,8 @@ Reflection.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-
-  isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
-
   colourBackgroundClass: PropTypes.string,
   imageBackgroundClass: PropTypes.string
 };

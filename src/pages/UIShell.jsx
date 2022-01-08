@@ -143,7 +143,6 @@ const UIShell = props => {
           navigateTo={navigateTo}
           backgroundClass={imageBackgroundClasses[props.year.id]}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
-          isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
         />
       );
@@ -153,7 +152,6 @@ const UIShell = props => {
         <Event
           {...props}
           navigateTo={navigateTo}
-          isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           textColourClass={textColourClass[props.year.id]}
@@ -168,7 +166,6 @@ const UIShell = props => {
           imageBackgroundClass={imageBackgroundClasses[props.nextParams.year]}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           navigateTo={navigateTo}
-          isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
         />
       );

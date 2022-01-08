@@ -13,10 +13,7 @@ const Intro = ({
   navigateTo,
   backgroundClass,
   colourBackgroundClass,
-
-  isTransitioning,
   setIsTransitioning,
-
   nextParams
 }) => {
   useEffect(() => {
@@ -106,10 +103,7 @@ Intro.propTypes = {
   navigateTo: PropTypes.func,
   backgroundClass: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
-
-  isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
-
   nextParams: PropTypes.shape()
 };
 

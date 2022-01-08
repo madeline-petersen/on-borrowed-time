@@ -21,10 +21,7 @@ const Event = ({
   changingParam,
   next,
   navigateTo,
-
-  isTransitioning,
   setIsTransitioning,
-
   colourBackgroundClass,
   textColourClass,
   borderColourClass
@@ -476,11 +473,8 @@ Event.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-
-  isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
-
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string
