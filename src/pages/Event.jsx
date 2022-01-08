@@ -162,6 +162,7 @@ const Event = ({
             licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
             scrollingSpeed={1000}
             scrollOverflow={true}
+            lazyLoading={false}
             paddingTop={headerHeight}
             render={({ state, fullpageApi }) => {
               return (
