@@ -1,7 +1,6 @@
 import { Col, Row } from 'react-grid-system';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
-import Anecdote from './Anecdote';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
@@ -9,18 +8,11 @@ import ReactHtmlParser from 'react-html-parser';
 const ResourceTable = ({
   theme,
   data,
-  isModalActive,
-  setIsModalActive,
-  anecdoteData,
   openModal,
   matchesLength,
   textColourClass,
   borderColourClass
 }) => {
-  const onCloseModal = () => {
-    setIsModalActive(false);
-  };
-
   let themeTextClass = 'text-black';
   let themeBorderClass = 'border-black';
 
@@ -39,17 +31,6 @@ const ResourceTable = ({
 
   return (
     <>
-      <Anecdote
-        {...anecdoteData}
-        title={
-          anecdoteData.articleTitle ||
-          anecdoteData.bookTitle ||
-          anecdoteData.poemTitle
-        }
-        isActive={isModalActive}
-        onCloseModal={onCloseModal}
-      />
-
       {/* Resource Table */}
       <Row className={`grid__row`}>
         <Col lg={3} md={2} />
@@ -147,9 +128,6 @@ ResourceTable.defaultProps = {
 ResourceTable.propTypes = {
   theme: PropTypes.string,
   data: PropTypes.arrayOf(PropTypes.shape()),
-  isModalActive: PropTypes.bool,
-  setIsModalActive: PropTypes.func,
-  anecdoteData: PropTypes.arrayOf(PropTypes.shape()),
   openModal: PropTypes.func,
   matchesLength: PropTypes.number,
   textColourClass: PropTypes.string,

@@ -14,37 +14,33 @@ import { Link, useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Reflection from './Reflection.jsx';
 import Timeline from '../components/Timeline';
+import Anecdote from '../components/Anecdote';
 import { Visible } from 'react-grid-system';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [nextBackgroundClass, setNextBackgroundClass] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
   const [isWhite, setIsWhite] = useState(true);
+  const [anecdoteData, setAnecdoteData] = useState({});
+  const [isModalActive, setIsModalActive] = useState(false);
 
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
-    let overflowContainer = document.getElementById('overflow-container');
+    setIsTransitioning(true);
     if (year && romanSceneNumber && page) {
-      setTimeout(function() {
-        if (overflowContainer) {
-          overflowContainer.scrollTo(0, 0);
-        }
-        history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
-      }, 2000);
+      history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
     } else if (year) {
-      if (props.pageId === 'home') {
-        history.push(`/${year}`); // delaying causes timeline to open abruptly
-      } else {
-        setTimeout(function() {
-          if (overflowContainer) {
-            overflowContainer.scrollTo(0, 0);
-          }
+      if (year !== props.year.id) {
+        // inter-year
+        setTimeout(() => {
           history.push(`/${year}`);
-        }, 2000);
+        }, 1000);
+      } else {
+        // intra-year
+        history.push(`/${year}`);
       }
     }
   };
@@ -89,19 +85,6 @@ const UIShell = props => {
     '2020': 'border-white'
   };
 
-  const setNextBackground = (year, pageId = 'intro') => {
-    if (pageId === 'intro') {
-      setNextBackgroundClass(imageBackgroundClasses[year]);
-    } else if (pageId === 'event') {
-      setNextBackgroundClass(colourBackgroundClasses[year]);
-    } else if (pageId === 'thematic-threads') {
-      setNextBackgroundClass('bg-white');
-    } else {
-      // artifacts, reflection, editors note
-      setNextBackgroundClass('bg-black');
-    }
-  };
-
   const toggleLeftMenu = () => {
     isMenuActive ? setIsMenuActive(false) : setIsMenuActive(true);
   };
@@ -142,7 +125,6 @@ const UIShell = props => {
   if (props.pageId === 'editors-note') {
     timelineClasses = `contrast-text bg-blue-70 mix-blend-screen`;
   }
-
   let pageComponent;
   switch (props.pageId) {
     case 'home':
@@ -163,9 +145,6 @@ const UIShell = props => {
           navigateTo={navigateTo}
           backgroundClass={imageBackgroundClasses[props.year.id]}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
-          nextBackgroundClass={nextBackgroundClass}
-          setNextBackground={setNextBackground}
-          isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
         />
       );
@@ -175,13 +154,12 @@ const UIShell = props => {
         <Event
           {...props}
           navigateTo={navigateTo}
-          nextBackgroundClass={nextBackgroundClass}
-          setNextBackground={setNextBackground}
-          isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           textColourClass={textColourClass[props.year.id]}
           borderColourClass={borderColourClass[props.year.id]}
+          setAnecdoteData={setAnecdoteData}
+          setIsModalActive={setIsModalActive}
         />
       );
       break;
@@ -189,10 +167,9 @@ const UIShell = props => {
       pageComponent = (
         <Reflection
           {...props}
-          nextBackgroundClass={nextBackgroundClass}
-          setNextBackground={setNextBackground}
+          imageBackgroundClass={imageBackgroundClasses[props.nextParams.year]}
+          colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           navigateTo={navigateTo}
-          isTransitioning={isTransitioning}
           setIsTransitioning={setIsTransitioning}
         />
       );
@@ -232,7 +209,6 @@ const UIShell = props => {
         title={props.scene ? props.scene.title : ''}
         isTransitioning={isTransitioning}
         romanSceneNumber={props.romanSceneNumber}
-        setNextBackground={setNextBackground}
         setIsTransitioning={setIsTransitioning}
         navigateTo={navigateTo}
         colourBackgroundClass={colourBackgroundClasses[props.year.id]}
@@ -245,11 +221,21 @@ const UIShell = props => {
         onCloseLeftMenu={onCloseLeftMenu}
         years={props.years}
         navigateTo={navigateTo}
-        setNextBackground={setNextBackground}
         setIsTransitioning={setIsTransitioning}
         selectedYear={selectedYear}
         setSelectedYear={setSelectedYear}
       />
+      <Anecdote
+        {...anecdoteData}
+        title={
+          anecdoteData.articleTitle ||
+          anecdoteData.bookTitle ||
+          anecdoteData.poemTitle
+        }
+        isActive={isModalActive}
+        onCloseModal={() => setIsModalActive(false)}
+      />
+
       <span
         className={`absolute text-3xl cursor-pointer z-40 left-menu-bullet ${
           isMenuActive ? 'fade-out' : 'fade-in'
@@ -298,7 +284,6 @@ const UIShell = props => {
           isTransitioning={isTransitioning}
           isYearEnd={isYearEnd}
           navigateTo={navigateTo}
-          setNextBackground={setNextBackground}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           colourBackgroundClasses={colourBackgroundClasses}
         />

@@ -24,7 +24,6 @@ const Timeline = props => {
       return;
     }
 
-    props.setNextBackground(year);
     props.setIsTransitioning(true);
     setSceneIndex(null); // disappear circle
     if (props.pageId !== 'home') {
@@ -37,7 +36,6 @@ const Timeline = props => {
   };
 
   const onClickScene = sceneIndex => {
-    props.setNextBackground(props.currentYear.id, 'event');
     props.setIsTransitioning(true);
     setSceneIndex(null); // disappear circle
     props.navigateTo(
@@ -221,9 +219,7 @@ Timeline.propTypes = {
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   isYearEnd: PropTypes.bool,
-  setNextBackground: PropTypes.func,
-  colourBackgroundClass: PropTypes.string,
-  colourBackgroundClasses: PropTypes.shape()
+  colourBackgroundClass: PropTypes.string
 };
 
 export default Timeline;

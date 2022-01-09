@@ -1,10 +1,9 @@
 import './Event.scss';
 
 import { Col, Container, Row, useScreenClass } from 'react-grid-system';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import HiddenFooter from '../components/HiddenFooter';
-import HeaderSpacer from '../components/HeaderSpacer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import ResourceTable from '../components/ResourceTable';
@@ -12,7 +11,9 @@ import Triptych from '../components/imageLayouts/Triptych';
 import Diptych from '../components/imageLayouts/Diptych';
 import Custom from '../components/imageLayouts/Custom';
 import imageLookup from '../images';
-import { useOverscroll } from '../hooks/useOverscroll';
+import 'fullpage.js/vendors/scrolloverflow';
+import ReactFullpage from '@fullpage/react-fullpage';
+import { throttle } from 'lodash';
 
 const Event = ({
   year,
@@ -21,52 +22,15 @@ const Event = ({
   changingParam,
   next,
   navigateTo,
-  nextBackgroundClass,
-  isTransitioning,
   setIsTransitioning,
-  setNextBackground,
   colourBackgroundClass,
   textColourClass,
-  borderColourClass
+  borderColourClass,
+  setAnecdoteData,
+  setIsModalActive
 }) => {
-  const [isClicked, setClicked] = useState(false);
-  const [isModalActive, setIsModalActive] = useState(false);
-  const [anecdoteData, setAnecdoteData] = useState({});
   const [selectedTheme, setSelectedTheme] = useState(null);
-
-  const scrollRef = useRef();
-
-  // set to false initially if implementing preview
-  const [showPreview, setShowPreview] = useState(false);
-
-  const onScrollEnd = useCallback(() => {
-    setShowPreview(true);
-    // if (showPreview) {
-    //   setClicked(true);
-    //   setIsTransitioning(true);
-    //   if (changingParam === 'year') {
-    //     // if year end
-    //     // inter-year
-    //     navigateTo(nextParams.year);
-    //   } else {
-    //     // else
-    //     // intra-year
-    //     navigateTo(
-    //       nextParams.year,
-    //       nextParams.scene, // should be romanSceneNumber
-    //       nextParams.page
-    //     );
-    //   }
-    // } else {
-    // setShowPreview(true);
-    // }
-  }, []);
-
-  const onScrollUp = useCallback(() => {
-    setShowPreview(false);
-  }, []);
-
-  useOverscroll(scrollRef, onScrollEnd, onScrollUp, 0);
+  const [headerHeight, setHeaderHeight] = useState('78px');
 
   const openModal = entry => {
     if (entry.content) {
@@ -97,15 +61,17 @@ const Event = ({
   }
 
   useEffect(() => {
-    setClicked(isTransitioning);
-  }, [isTransitioning]);
-
-  useEffect(() => {
-    setShowPreview(false);
     setIsTransitioning(false);
-    if (nextParams) {
-      setNextBackground(nextParams.year, nextParams.page);
-    }
+
+    // disabling all scrolling while animation plays
+    fullpage_api.setAllowScrolling(false);
+    fullpage_api.setKeyboardScrolling(false);
+
+    setTimeout(() => {
+      // enable scrolling once animation ends (4.25s)
+      fullpage_api.setAllowScrolling(true);
+      fullpage_api.setKeyboardScrolling(true);
+    }, 4250);
   }, [event]);
 
   let themeLookup = [];
@@ -119,339 +85,395 @@ const Event = ({
     return theme === selectedTheme;
   };
 
-  const hexToRGBTable = {
-    'bg-blue-50': [0, 55, 120],
-    'bg-red': [104, 18, 12],
-    'bg-yellow': [232, 229, 210],
-    'bg-purple': [156, 140, 181],
-    'bg-gray-30': [188, 185, 182],
-    'bg-brown': [147, 103, 83],
-    'bg-black': [0, 0, 0]
+  // const hexToRGBTable = {
+  //   'bg-blue-50': [0, 55, 120],
+  //   'bg-red': [104, 18, 12],
+  //   'bg-yellow': [232, 229, 210],
+  //   'bg-purple': [156, 140, 181],
+  //   'bg-gray-30': [188, 185, 182],
+  //   'bg-brown': [147, 103, 83],
+  //   'bg-black': [0, 0, 0]
+  // };
+
+  // const [red, green, blue] = hexToRGBTable[colourBackgroundClass];
+  // const transitionContainer = document.querySelector(
+  //   '.transition-colour-on-scroll'
+  // );
+  // const overflow = document.getElementById('overflow-container');
+
+  // if (overflow && transitionContainer && event.imageLayout) {
+  //   overflow.addEventListener('scroll', () => {
+  //     const y = 1 + overflow.scrollTop / 50 - 20;
+  //     if (y >= 1) {
+  //       const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
+  //       transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  //     } else {
+  //       const [r, g, b] = hexToRGBTable[colourBackgroundClass];
+  //       transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  //     }
+  //   });
+  // }
+
+  const afterLoad = (origin, destination, direction) => {
+    if (destination.isLast) {
+      if (changingParam === 'year') {
+        // if year end
+        // inter-year
+        navigateTo(nextParams.year);
+      } else {
+        // else
+        // intra-year
+        navigateTo(
+          nextParams.year,
+          nextParams.scene, // should be romanSceneNumber
+          nextParams.page
+        );
+      }
+    }
   };
 
-  const [red, green, blue] = hexToRGBTable[colourBackgroundClass];
-  const transitionContainer = document.querySelector(
-    '.transition-colour-on-scroll'
-  );
-  const overflow = document.getElementById('overflow-container');
+  const onLeave = (origin, destination, direction) => {
+    const element = document.getElementsByClassName(
+      'hidden-footer__container'
+    )[0];
 
-  if (overflow && transitionContainer && event.imageLayout) {
-    overflow.addEventListener('scroll', () => {
-      const y = 1 + overflow.scrollTop / 50 - 20;
-      if (y >= 1) {
-        const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
-        transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    if (element) {
+      if (element.classList.contains('show')) {
+        return true;
       } else {
-        const [r, g, b] = hexToRGBTable[colourBackgroundClass];
-        transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        element.classList.add('show');
+        return false;
       }
-    });
-  }
+    }
+  };
+
+  setTimeout(() => {
+    const header = document.getElementById('header');
+    if (header) {
+      setHeaderHeight(window.getComputedStyle(header).height);
+    }
+  }, 4500);
 
   if (year.id === '2020') {
     return (
       <>
-        {/* Backgrounds for page transition */}
-        <div className={`absolute top-0 w-full`}>
-          <div
-            className={`h-screen ${colourBackgroundClass} w-full ${
-              isClicked ? 'screen-shrink' : ''
-            }`}
-          />
-          {isTransitioning && (
-            <div
-              className={`h-screen ${nextBackgroundClass} bg-center bg-no-repeat bg-cover w-full`}
-            />
-          )}
-        </div>
-
-        <div className={`h-auto ${colourBackgroundClass}`}>
-          <Container className="min-h-screen grid__container">
-            <HeaderSpacer />
-
-            {/* Event */}
-            {event && (
-              <div
-                id="overflow-container"
-                ref={scrollRef}
-                className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
-              >
-                <Row
-                  className={`grid__row intro-paragraph pb-24`}
-                  id="event-paragraphs"
-                >
-                  {event.paragraphs.map((paragraph, index) => {
-                    return (
-                      <div key={`paragraph-${index}`} className="contents">
-                        <Col lg={1} md={2} />
-                        <Col lg={11} md={10} sm={12} xs={12}>
-                          <p
-                            className={`large-headline-dynamic text-white fade-first`}
-                            style={{
-                              textIndent: ['lg', 'xl', 'xxl'].includes(
-                                screenClass
-                              )
-                                ? `calc(200%/11)` // indent 2/11 columns for large
-                                : ['md'].includes(screenClass)
-                                ? `calc(200%/10)` // indent 2/10 columns for medium
-                                : '0' // indent 0 for small, x-small
-                            }}
+        <div className="event" key={`event-2020`}>
+          <ReactFullpage
+            licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+            scrollingSpeed={1000}
+            scrollOverflow={true}
+            lazyLoading={false}
+            paddingTop={headerHeight}
+            render={({ state, fullpageApi }) => {
+              return (
+                <ReactFullpage.Wrapper>
+                  <div
+                    className={`section ${colourBackgroundClass}`}
+                    style={{ height: 'max-content' }}
+                  >
+                    <Container className="min-h-screen grid__container">
+                      {/* Event */}
+                      {event && (
+                        <div className="delayed-fade-in">
+                          <Row
+                            className={`grid__row intro-paragraph pb-24`}
+                            id="event-paragraphs"
                           >
-                            {ReactHtmlParser(paragraph)}
-                            <br />
-                            <br />
-                          </p>
-                        </Col>
-                      </div>
-                    );
-                  })}
-                </Row>
-                <Row
-                  className={`grid__row bg-black theme-nav-container fade-first`}
-                >
-                  <Col lg={3} md={2} />
-                  <Col lg={6} md={10} sm={12} xs={12}>
-                    <p className="pb-5">
-                      {event.themes.map((theme, index) => {
-                        return (
-                          <>
-                            {index === 0 ? (
-                              ''
-                            ) : (
-                              <span
-                                className={`small-headline text-white fade-first ${
-                                  selectedTheme === null
-                                    ? 'text-opacity-100'
-                                    : 'text-opacity-20'
-                                }
+                            {event.paragraphs.map((paragraph, index) => {
+                              return (
+                                <div
+                                  key={`paragraph-${index}`}
+                                  className="contents"
+                                >
+                                  <Col lg={1} md={2} />
+                                  <Col lg={11} md={10} sm={12} xs={12}>
+                                    <p
+                                      className={`large-headline-dynamic text-white fade-first`}
+                                      style={{
+                                        textIndent: [
+                                          'lg',
+                                          'xl',
+                                          'xxl'
+                                        ].includes(screenClass)
+                                          ? `calc(200%/11)` // indent 2/11 columns for large
+                                          : ['md'].includes(screenClass)
+                                          ? `calc(200%/10)` // indent 2/10 columns for medium
+                                          : '0' // indent 0 for small, x-small
+                                      }}
+                                    >
+                                      {ReactHtmlParser(paragraph)}
+                                      <br />
+                                      <br />
+                                    </p>
+                                  </Col>
+                                </div>
+                              );
+                            })}
+                          </Row>
+                          <Row
+                            className={`grid__row bg-black theme-nav-container fade-first`}
+                          >
+                            <Col lg={3} md={2} />
+                            <Col lg={6} md={10} sm={12} xs={12}>
+                              <p className="pb-5">
+                                {event.themes.map((theme, index) => {
+                                  return (
+                                    <>
+                                      {index === 0 ? (
+                                        ''
+                                      ) : (
+                                        <span
+                                          className={`small-headline text-white fade-first ${
+                                            selectedTheme === null
+                                              ? 'text-opacity-100'
+                                              : 'text-opacity-20'
+                                          }
                                  `}
+                                        >
+                                          {' '}
+                                          /{' '}
+                                        </span>
+                                      )}
+                                      <a
+                                        key={`theme-${index}`}
+                                        className={`small-headline text-white cursor-pointer fade-first ${
+                                          selectedTheme === null
+                                            ? 'text-opacity-100 hover:text-opacity-20'
+                                            : isSelectedTheme(
+                                                themeLookup[index].substring(1)
+                                              ) // remove hash
+                                            ? 'text-opacity-100'
+                                            : 'text-opacity-20 hover:text-opacity-50'
+                                        } `}
+                                        href={themeLookup[index]}
+                                        onClick={() =>
+                                          setSelectedTheme(
+                                            themeLookup[index].substring(1)
+                                          )
+                                        }
+                                      >
+                                        {ReactHtmlParser(theme)}
+                                      </a>
+                                    </>
+                                  );
+                                })}
+                              </p>
+                            </Col>
+                            <Col lg={3} />
+                            <Col lg={1} md={2} />
+                            <Col lg={11} md={10} sm={12} xs={12}>
+                              <p className="border-b border-white border-opacity-20 fade-first" />
+                            </Col>
+                          </Row>
+                          {event.sections.map((section, index) => {
+                            return (
+                              <section
+                                key={`section-${index}`}
+                                id={event.themes[index]
+                                  .replace(/\s+/g, '-')
+                                  .toLowerCase()}
                               >
-                                {' '}
-                                /{' '}
-                              </span>
-                            )}
-                            <a
-                              key={`theme-${index}`}
-                              className={`small-headline text-white cursor-pointer fade-first ${
-                                selectedTheme === null
-                                  ? 'text-opacity-100 hover:text-opacity-20'
-                                  : isSelectedTheme(
-                                      themeLookup[index].substring(1)
-                                    ) // remove hash
-                                  ? 'text-opacity-100'
-                                  : 'text-opacity-20 hover:text-opacity-50'
-                              } `}
-                              href={themeLookup[index]}
-                              onClick={() =>
-                                setSelectedTheme(
-                                  themeLookup[index].substring(1)
-                                )
-                              }
-                            >
-                              {ReactHtmlParser(theme)}
-                            </a>
-                          </>
-                        );
-                      })}
-                    </p>
-                  </Col>
-                  <Col lg={3} />
-                  <Col lg={1} md={2} />
-                  <Col lg={11} md={10} sm={12} xs={12}>
-                    <p className="border-b border-white border-opacity-20 fade-first" />
-                  </Col>
-                </Row>
-                {event.sections.map((section, index) => {
-                  return (
-                    <section
-                      key={`section-${index}`}
-                      id={event.themes[index]
-                        .replace(/\s+/g, '-')
-                        .toLowerCase()}
-                    >
-                      <Row className={`grid__row intro-paragraph pb-24`}>
-                        {section.paragraphs.map((paragraph, index) => {
-                          return index === 0 ? (
-                            <div
-                              key={`paragraph-${index}`}
-                              className="contents"
-                            >
-                              <Col lg={3} md={2} />
-                              <Col lg={6} md={10} sm={12} xs={12}>
-                                <p
-                                  className={`small-headline text-white fade-first`}
-                                  style={{ paddingTop: '43px' }}
+                                <Row
+                                  className={`grid__row intro-paragraph pb-24`}
                                 >
-                                  {ReactHtmlParser(paragraph)}
-                                  <br />
-                                  <br />
-                                </p>
-                              </Col>
-                              <Col lg={3} />
-                            </div>
-                          ) : (
-                            <div
-                              key={`paragraph-${index}`}
-                              className="contents"
-                            >
-                              <Col lg={3} md={2} />
-                              <Col lg={4} md={10} sm={12} xs={12}>
-                                <p
-                                  className={`small-body-2 text-white fade-first`}
-                                >
-                                  {ReactHtmlParser(paragraph)}
-                                  <br />
-                                  <br />
-                                </p>
-                              </Col>
-                              <Col lg={5} />
-                            </div>
-                          );
-                        })}
-                      </Row>
-                      {section.image && (
-                        <Row className="pb-16 grid__row">
-                          <Col lg={3} md={2} />
-                          <Col lg={9} md={10} sm={12} xs={12}>
-                            <img
-                              className="fade-first"
-                              src={imageLookup[section.image.source]}
-                              alt=""
-                            />
-                          </Col>
+                                  {section.paragraphs.map(
+                                    (paragraph, index) => {
+                                      return index === 0 ? (
+                                        <div
+                                          key={`paragraph-${index}`}
+                                          className="contents"
+                                        >
+                                          <Col lg={3} md={2} />
+                                          <Col lg={6} md={10} sm={12} xs={12}>
+                                            <p
+                                              className={`small-headline text-white fade-first`}
+                                              style={{ paddingTop: '43px' }}
+                                            >
+                                              {ReactHtmlParser(paragraph)}
+                                              <br />
+                                              <br />
+                                            </p>
+                                          </Col>
+                                          <Col lg={3} />
+                                        </div>
+                                      ) : (
+                                        <div
+                                          key={`paragraph-${index}`}
+                                          className="contents"
+                                        >
+                                          <Col lg={3} md={2} />
+                                          <Col lg={4} md={10} sm={12} xs={12}>
+                                            <p
+                                              className={`small-body-2 text-white fade-first`}
+                                            >
+                                              {ReactHtmlParser(paragraph)}
+                                              <br />
+                                              <br />
+                                            </p>
+                                          </Col>
+                                          <Col lg={5} />
+                                        </div>
+                                      );
+                                    }
+                                  )}
+                                </Row>
+                                {section.image && (
+                                  <Row className="pb-16 grid__row">
+                                    <Col lg={3} md={2} />
+                                    <Col lg={9} md={10} sm={12} xs={12}>
+                                      <img
+                                        className="fade-first"
+                                        src={imageLookup[section.image.source]}
+                                        alt=""
+                                      />
+                                    </Col>
 
-                          <Col lg={3} md={2} />
-                          <Col lg={4} md={4}>
-                            <p
-                              className={`small-body text-white mt-8 fade-first text-opacity-70`}
-                            >
-                              {ReactHtmlParser(section.image.caption)}
-                            </p>
-                          </Col>
-                        </Row>
+                                    <Col lg={3} md={2} />
+                                    <Col lg={4} md={4}>
+                                      <p
+                                        className={`small-body text-white mt-8 fade-first text-opacity-70`}
+                                      >
+                                        {ReactHtmlParser(section.image.caption)}
+                                      </p>
+                                    </Col>
+                                  </Row>
+                                )}
+                                <ResourceTable
+                                  theme="white"
+                                  data={section.resources}
+                                  openModal={openModal}
+                                  matchesLength={filteredMatches.length}
+                                  textColourClass={textColourClass}
+                                  borderColourClass={borderColourClass}
+                                />
+                              </section>
+                            );
+                          })}
+                          {/* padding below last resource table */}
+                          <div className="pb-16" />
+                        </div>
                       )}
-                      <ResourceTable
-                        theme="white"
-                        data={section.resources}
-                        isModalActive={isModalActive}
-                        setIsModalActive={setIsModalActive}
-                        anecdoteData={anecdoteData}
-                        openModal={openModal}
-                        matchesLength={filteredMatches.length}
-                        textColourClass={textColourClass}
-                        borderColourClass={borderColourClass}
-                      />
-                    </section>
-                  );
-                })}
-                {/* padding below last resource table */}
-                <div className="pb-16" />
-              </div>
-            )}
-          </Container>
+                    </Container>
+                  </div>
+                </ReactFullpage.Wrapper>
+              );
+            }}
+          />
         </div>
       </>
     );
   } else {
     return (
       <>
-        {/* Backgrounds for page transition */}
-        <div className={`absolute top-0 w-full`}>
-          <div
-            className={`h-screen transition-colour-on-scroll ${colourBackgroundClass} w-full ${
-              isClicked ? 'screen-shrink' : ''
-            }`}
-          />
-          {isTransitioning && (
-            <div
-              className={`h-screen ${nextBackgroundClass} bg-center bg-no-repeat bg-cover w-full`}
-            />
-          )}
-        </div>
-
         <div
-          className={`story-container h-auto transition-colour-on-scroll ${colourBackgroundClass}`}
+          className="event"
+          key={`event-${nextParams.year}-${nextParams.scene}-${nextParams.page}`}
         >
-          <Container className="min-h-screen grid__container">
-            <HeaderSpacer />
-
-            {/* Event */}
-            {event && (
-              <div
-                id="overflow-container"
-                ref={scrollRef}
-                className={`${isClicked ? 'fade-out' : 'delayed-fade-in'}`}
-              >
-                <Row
-                  className={`grid__row intro-paragraph pb-24`}
-                  id="event-paragraphs"
-                >
-                  {event.paragraphs.map((paragraph, index) => {
-                    return (
-                      <div key={`paragraph-${index}`} className="contents">
-                        <Col lg={1} md={2} />
-                        <Col lg={11} md={10} sm={12} xs={12}>
-                          <p
-                            className={`large-headline-dynamic ${textColourClass} fade-first`}
-                            style={{
-                              textIndent: ['lg', 'xl', 'xxl'].includes(
-                                screenClass
-                              )
-                                ? `calc(200%/11)` // indent 2/11 columns for large
-                                : ['md'].includes(screenClass)
-                                ? `calc(200%/10)` // indent 2/10 columns for medium
-                                : '0' // indent 0 for small, x-small
-                            }}
+          <ReactFullpage
+            licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+            scrollingSpeed={1000}
+            afterLoad={afterLoad}
+            onLeave={throttle(onLeave, 1000)}
+            scrollOverflow={true}
+            lazyLoading={false}
+            paddingTop={headerHeight}
+            render={({ state, fullpageApi }) => {
+              return (
+                <ReactFullpage.Wrapper>
+                  <div
+                    className={`section h-auto transition-colour-on-scroll ${colourBackgroundClass}`}
+                  >
+                    <Container className="min-h-screen grid__container">
+                      {/* Event */}
+                      {event && (
+                        <div className={`delayed-fade-in`}>
+                          <Row
+                            className={`grid__row intro-paragraph pb-24`}
+                            id="event-paragraphs"
                           >
-                            {ReactHtmlParser(paragraph)}
-                            <br />
-                            <br />
-                          </p>
-                        </Col>
-                      </div>
-                    );
-                  })}
-                </Row>
-                <ResourceTable
-                  data={event.resources}
-                  isModalActive={isModalActive}
-                  setIsModalActive={setIsModalActive}
-                  anecdoteData={anecdoteData}
-                  openModal={openModal}
-                  matchesLength={filteredMatches.length}
-                  textColourClass={textColourClass}
-                  borderColourClass={borderColourClass}
-                />
+                            {event.paragraphs.map((paragraph, index) => {
+                              return (
+                                <div
+                                  key={`paragraph-${index}`}
+                                  className="contents"
+                                >
+                                  <Col lg={1} md={2} />
+                                  <Col lg={11} md={10} sm={12} xs={12}>
+                                    <p
+                                      className={`large-headline-dynamic ${textColourClass} fade-first`}
+                                      style={{
+                                        textIndent: [
+                                          'lg',
+                                          'xl',
+                                          'xxl'
+                                        ].includes(screenClass)
+                                          ? `calc(200%/11)` // indent 2/11 columns for large
+                                          : ['md'].includes(screenClass)
+                                          ? `calc(200%/10)` // indent 2/10 columns for medium
+                                          : '0' // indent 0 for small, x-small
+                                      }}
+                                    >
+                                      {ReactHtmlParser(paragraph)}
+                                      <br />
+                                      <br />
+                                    </p>
+                                  </Col>
+                                </div>
+                              );
+                            })}
+                          </Row>
+                          <ResourceTable
+                            data={event.resources}
+                            openModal={openModal}
+                            matchesLength={filteredMatches.length}
+                            textColourClass={textColourClass}
+                            borderColourClass={borderColourClass}
+                          />
 
-                {event.imageLayout && <div style={{ height: '50vh' }} />}
-                {event.imageLayout && event.imageLayout.type === 'custom' && (
-                  <Custom images={event.imageLayout.images} />
-                )}
-                {event.imageLayout && event.imageLayout.type === 'triptych' && (
-                  <Triptych images={event.imageLayout.images} />
-                )}
-                {event.imageLayout && event.imageLayout.type === 'diptych' && (
-                  <Diptych images={event.imageLayout.images} />
-                )}
+                          {event.imageLayout && (
+                            <div style={{ height: '50vh' }} />
+                          )}
+                          {event.imageLayout &&
+                            event.imageLayout.type === 'custom' && (
+                              <Custom images={event.imageLayout.images} />
+                            )}
+                          {event.imageLayout &&
+                            event.imageLayout.type === 'triptych' && (
+                              <Triptych images={event.imageLayout.images} />
+                            )}
+                          {event.imageLayout &&
+                            event.imageLayout.type === 'diptych' && (
+                              <Diptych images={event.imageLayout.images} />
+                            )}
 
-                {/* padding below last page element */}
-                <div className="pb-44" />
-              </div>
-            )}
-          </Container>
+                          {/* padding below last page element */}
+                          <div className="pb-44" />
+                        </div>
+                      )}
+                    </Container>
+                  </div>
+                  <div className={`section w-full bg-black`}>
+                    <Container className="grid__container">
+                      <Row
+                        className={`grid__row`}
+                        style={{ height: '100vh' }}
+                      ></Row>
+                    </Container>
+                  </div>
+                </ReactFullpage.Wrapper>
+              );
+            }}
+          />
         </div>
-        <HiddenFooter
-          pageId="event"
-          nextParams={nextParams}
-          next={next}
-          changingParam={changingParam}
-          setClicked={setClicked}
-          isClicked={isClicked}
-          navigateTo={navigateTo}
-          setIsTransitioning={setIsTransitioning}
-          textColourClass="text-white text-opacity-90"
-          isShown={showPreview}
-        />
+        <div className={`hidden-footer__container bg-black`}>
+          <HiddenFooter
+            pageId="event"
+            nextParams={nextParams}
+            next={next}
+            changingParam={changingParam}
+            textClasses="text-white text-opacity-90"
+          />
+        </div>
       </>
     );
   }
@@ -464,14 +486,13 @@ Event.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  nextBackgroundClass: PropTypes.string,
-  isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
-  setNextBackground: PropTypes.func,
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
-  borderColourClass: PropTypes.string
+  borderColourClass: PropTypes.string,
+  setAnecdoteData: PropTypes.func,
+  setIsModalActive: PropTypes.func
 };
 
 export default Event;
