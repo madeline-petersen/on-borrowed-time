@@ -26,19 +26,11 @@ const EditorsNote = () => {
                   的地方, 暫借的時間
                 </span>
                 .&rdquo; A phrase commonly used to describe
-<<<<<<< HEAD
                 Hong&nbsp;Kong&apos;s unending state of impermanence. The
                 region&apos;s transient nature and intertwining history can be
                 understood in two-folds — a colonial legacy that it has
                 struggled to reconcile, and an authoritarian future that has
                 been difficult to predict.
-=======
-                Hong&nbsp;Kong&rsquo;s perpetual impermanence. The
-                region&rsquo;s intertwining history can be understood as the
-                product of two forces — a colonial legacy that it struggles to
-                reconcile itself with, and an authoritarian future fraught with
-                uncertainty.
->>>>>>> 50e9dcce3baced304b6a106d445bc806bf2c5738
               </p>
             </Col>
             <Col lg={1} md={2} />
@@ -52,7 +44,6 @@ const EditorsNote = () => {
                   textIndent: textIndent
                 }}
               >
-<<<<<<< HEAD
                 As Britain and China negotiated the conditions of the Handover,
                 two promises were woven into the constitution in order to
                 &ldquo;ease the hearts&rdquo; of Hong&nbsp;Kong people about the
@@ -63,17 +54,6 @@ const EditorsNote = () => {
                 agreement promised Hong&nbsp;Kong the &ldquo;ultimate aim&rdquo;
                 of universal suffrage, which would allow Hong&nbsp;Kong people
                 to fully govern their own region in the future.
-=======
-                As Britain and China negotiated the Handover, two promises were
-                woven into the constitution to &ldquo;ease the hearts&rdquo; of
-                Hong&nbsp;Kong people. The first was the &ldquo;one country, two
-                systems&rdquo; principle, an arrangement that would honour the
-                region&rsquo;s unique way of life for fifty years, thus easing
-                the transition back to the motherland. The second was the
-                &ldquo;ultimate aim&rdquo; of universal suffrage, which would
-                grant Hong&nbsp;Kong people the opportunity to govern their own
-                region in the future.
->>>>>>> 50e9dcce3baced304b6a106d445bc806bf2c5738
               </p>
               <br />
               <p
@@ -82,7 +62,6 @@ const EditorsNote = () => {
                   textIndent: textIndent
                 }}
               >
-<<<<<<< HEAD
                 Beyond the constitutional details, these two promises would hold
                 a more symbolic meaning to a new generation of Hongkongers, and
                 inspire a sense of hope that the region could someday dictate
@@ -91,16 +70,6 @@ const EditorsNote = () => {
                 democratic qualities such as self-determination, universal
                 suffrage, or genuine democracy. Hong&nbsp;Kong&apos;s fate has
                 always been beholden to forces larger than itself.
-=======
-                Beyond the constitutional details, these two promises held
-                symbolic meaning for a new generation of Hongkongers. They
-                inspired the hope that the region could someday dictate its own
-                future. Throughout Hong&nbsp;Kong&rsquo;s conflicting history,
-                the region has never had the opportunity to experience
-                democratic qualities like self-determination, universal
-                suffrage, or genuine democracy. It has always been beholden to
-                forces larger than itself.
->>>>>>> 50e9dcce3baced304b6a106d445bc806bf2c5738
               </p>
               <br />
               <p
@@ -109,17 +78,10 @@ const EditorsNote = () => {
                   textIndent: textIndent
                 }}
               >
-<<<<<<< HEAD
                 Therefore, the underlying purpose of this project is to shed
                 light on the journey that Hong&nbsp;Kong has undergone, and to
                 document the courageous measures that Hongkongers have
                 undertaken in its pursuit for genuine democracy.
-=======
-                The goal of this project is to shed light on
-                Hong&nbsp;Kong&rsquo;s journey and to document the courageous
-                measures that Hongkongers have taken in their pursuit of genuine
-                democracy.
->>>>>>> 50e9dcce3baced304b6a106d445bc806bf2c5738
               </p>
               <br />
               <p
@@ -128,7 +90,6 @@ const EditorsNote = () => {
                   textIndent: textIndent
                 }}
               >
-<<<<<<< HEAD
                 In order to tell the story of Hong&nbsp;Kong with accuracy and
                 care, the project is presented in several layers. At the
                 surface, it outlines the historical account of
@@ -141,19 +102,6 @@ const EditorsNote = () => {
                 events that have transpired. It invites the question, what does
                 it mean to be a Hongkonger? Can freedom survive in the absence
                 of democracy? And what role does collective memory play in
-=======
-                To tell the story of Hong Kong with accuracy and care, the
-                project is compiled into several layers. On the surface, it
-                provides a historical account of Hong&nbsp;Kong&rsquo;s handover
-                since the Sino-Joint Declaration was signed in 1984. Beneath
-                that lies an archive of digital artifacts—a collection of
-                stories, imagery, and musings that capture how people felt as
-                their history unfolded. At its core, this project is an
-                anthology of reflections that attempts to forge meaning from the
-                tragic events that have transpired. It invites questions. What
-                does it mean to be a Hongkonger? Can freedom survive in the
-                absence of democracy? What role does collective memory play in
->>>>>>> 50e9dcce3baced304b6a106d445bc806bf2c5738
                 cultivating identity?
               </p>
               <br />
