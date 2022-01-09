@@ -24,7 +24,7 @@ const HiddenFooter = ({
     <Container className="grid__container">
       <Row
         className="grid__row clickable-area cursor-pointer"
-        onClick={() => {}}
+        onClick={() => fullpage_api.moveSectionDown()}
       >
         <Col lg={1} className="cursor-default" />
         <Col lg={2} md={3} sm={3} xs={3}>

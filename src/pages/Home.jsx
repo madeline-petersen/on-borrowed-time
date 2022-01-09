@@ -1,7 +1,7 @@
 import './Home.scss';
 
 import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import { ArrowDown20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
