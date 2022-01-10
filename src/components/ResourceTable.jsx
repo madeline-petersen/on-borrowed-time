@@ -62,11 +62,11 @@ const ResourceTable = ({
               <Col lg={4} md={4} sm={4} xs={12} className="small-body">
                 <p className={`${themeTextClass} text-opacity-100 fade-second`}>
                   {index < matchesLength ? (
-                    <span className="sm:-ml-7 md:-ml-0 sm:pr-6 md:pr-4">
+                    <span className="sm:-ml-3 md:-ml-0 sm:pr-3 md:pr-4">
                       {index + 1}
                     </span>
                   ) : (
-                    <span className="sm:-ml-7 md:-ml-0 sm:pr-6 md:pr-4">
+                    <span className="sm:-ml-3 md:-ml-0 sm:pr-3 md:pr-4">
                       &nbsp;
                     </span>
                   )}

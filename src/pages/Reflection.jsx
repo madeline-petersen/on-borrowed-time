@@ -49,8 +49,7 @@ const Reflection = ({
 
     if (element) {
       if (element.classList.contains('show')) {
-        // return true;
-        return false;
+        return true;
       } else {
         element.classList.add('show');
         return false;
