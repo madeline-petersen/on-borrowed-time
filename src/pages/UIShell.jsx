@@ -1,7 +1,7 @@
 import './UIShell.scss';
 
 import { ArrowLeft20, Close20 } from '@carbon/icons-react';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Event from './Event.jsx';
 import ThematicThreads from './ThematicThreads.jsx';
@@ -97,6 +97,18 @@ const UIShell = props => {
       setSelectedYear(null);
     }, 500);
   };
+
+  useEffect(() => {
+    if (isMenuActive) {
+      // disabling all scrolling while modals are open
+      fullpage_api.setAllowScrolling(false);
+      fullpage_api.setKeyboardScrolling(false);
+    } else {
+      // enable scrolling while modals are closed
+      fullpage_api.setAllowScrolling(true);
+      fullpage_api.setKeyboardScrolling(true);
+    }
+  }, [isMenuActive]);
 
   let timelineClasses = 'contrast-text mix-blend-difference';
 
