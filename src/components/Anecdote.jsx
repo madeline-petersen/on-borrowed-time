@@ -6,7 +6,6 @@ import { Close20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
-import imageLookup from '../images';
 
 const Anecdote = ({
   type,
@@ -213,9 +212,7 @@ const Anecdote = ({
                           <div
                             className="aspect-ratio-container bg-gray-20 mb-8"
                             key={`image-${index}`}
-                          >
-                            {/* <img src={imageLookup[image]} alt="" /> */}
-                          </div>
+                          ></div>
                         );
                       })}
                     <div className="h-12" />

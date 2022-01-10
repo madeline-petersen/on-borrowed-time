@@ -10,7 +10,6 @@ import ResourceTable from '../components/ResourceTable';
 import Triptych from '../components/imageLayouts/Triptych';
 import Diptych from '../components/imageLayouts/Diptych';
 import Custom from '../components/imageLayouts/Custom';
-import imageLookup from '../images';
 import 'fullpage.js/vendors/scrolloverflow';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { throttle } from 'lodash';
@@ -321,10 +320,12 @@ const Event = ({
                                   <Row className="pb-16 grid__row">
                                     <Col lg={3} md={2} />
                                     <Col lg={9} md={10} sm={12} xs={12}>
-                                      <img
-                                        className="fade-first"
-                                        src={imageLookup[section.image.source]}
-                                        alt=""
+                                      <div
+                                        className="fade-first aspect-ratio"
+                                        style={{
+                                          paddingTop: `calc(${section.image.height}/${section.image.width} * 100%)`,
+                                          backgroundImage: `url('/images/${section.image.source}')`
+                                        }}
                                       />
                                     </Col>
 

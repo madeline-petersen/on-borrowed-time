@@ -151,7 +151,9 @@
                 "type": "custom",
                 "images": [
                   {
-                    "source": "signingJointDeclaration",
+                    "source": "1984_Scene02.jpeg",
+                    "width": 640,
+                    "height": 393,
                     "type": "small",
                     "caption": "Former premiers Margaret Thatcher and Zhao Ziyang sign the Sino-British Joint Declaration on Hong Kong in 1984"
                   }
@@ -387,7 +389,9 @@
                 "type": "custom",
                 "images": [
                   {
-                    "source": "crowd",
+                    "source": "GettyImages-52010887_op.jpg",
+                    "width": 2000,
+                    "height": 1418,
                     "type": "large",
                     "caption": "BEIJING, CHINA - APRIL 22: Picture dated 22 April 1989 shows several hundred of 200,000 pro-democracy student protesters face to face with policemen outside the Great Hall of the People in Tiananmen Square in Beijing as they take part in the funeral ceremony of former Chinese Communist Party leader and liberal reformer Hu Yaobang during an unauthorized demonstration to mourn his death. Hu Yaobang's death in April trigged an unprecedented wave of pro-democracy demonstrations. The April-June 1989 movement was crushed by Chinese troops in June when army tanks rolled into Tiananmen Square 04 June. AFP PHOTO (Photo credit should read CATHERINE HENRIETTE/AFP via Getty Images)"
                   }
@@ -493,12 +497,16 @@
                 "type": "custom",
                 "images": [
                   {
-                    "source": "tiananmenSquareMassacreFight",
+                    "source": "GettyImages-640492299_op.jpg",
+                    "width": 2500,
+                    "height": 1700,
                     "type": "large",
                     "caption": "People transport a wounded man during the military crackdown in Tiananmen Square in June, 1989. (Photo by David Turnley/Getty Images)"
                   },
                   {
-                    "source": "tanks",
+                    "source": "GettyImages-166775260_op.jpg",
+                    "width": 2400,
+                    "height": 3568,
                     "type": "large",
                     "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier.. (Photo by Peter Charlesworth/LightRocket via Getty Images)"
                   }
@@ -859,11 +867,15 @@
               ],
               "images": [
                 {
-                  "source": "candles",
+                  "source": "candles.png",
+                  "width": 2460,
+                  "height": 1640,
                   "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong&nbsp;Kong, Hong&nbsp;Kong. Held to mark the crackdown on the pro-democracy movement in Beijing&rsquo;s Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"
                 },
                 {
-                  "source": "crowd",
+                  "source": "GettyImages-52010887_op.jpg",
+                  "width": 2000,
+                  "height": 1418,
                   "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong&nbsp;Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"
                 }
               ]
@@ -906,7 +918,9 @@
                 "type": "custom",
                 "images": [
                   {
-                    "source": "vigilRememberingCrackdown",
+                    "source": "GettyImages-475837512_op.jpg",
+                    "width": 2500,
+                    "height": 1669,
                     "type": "large",
                     "caption": "HONG KONG - JUNE 04: Participants take part at the candlelight vigil as they hold candles at Victoria Park on June 4, 2015 in Causeway Bay, Hong Kong. Hong Kong residents held a candlelight vigil as it marks 26th anniversary of 1989 student-led Tiananmen Square protest. (Photo by Anthony Kwan/Getty Images)"
                   }
@@ -1237,7 +1251,9 @@
               ],
               "images": [
                 {
-                  "source": "tanks",
+                  "source": "GettyImages-166775260_op.jpg",
+                  "width": "2400",
+                  "height": "3568",
                   "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier. Photo by Peter Charlesworth/LightRocket via Getty Images"
                 }
               ],
@@ -2190,15 +2206,21 @@
                 "type": "triptych",
                 "images": [
                   {
-                    "source": "portrait1",
+                    "source": "2014_Scene01_BennyTai.png",
+                    "width": 204,
+                    "height": 272,
                     "caption": "This is a caption"
                   },
                   {
-                    "source": "portrait2",
+                    "source": "2014_Scene01_ChuYiuMing.png",
+                    "width": 204,
+                    "height": 272,
                     "caption": "This is a caption"
                   },
                   {
-                    "source": "portrait3",
+                    "source": "2014_Scene01_ChanKinMan.png",
+                    "width": 204,
+                    "height": 272,
                     "caption": "This is a caption"
                   }
                 ]
@@ -2310,11 +2332,15 @@
                 "type": "diptych",
                 "images": [
                   {
-                    "source": "portrait1",
+                    "source": "2014_Scene01_BennyTai.png",
+                    "width": 204,
+                    "height": 272,
                     "caption": "This is a caption"
                   },
                   {
-                    "source": "portrait2",
+                    "source": "2014_Scene01_ChuYiuMing.png",
+                    "width": 204,
+                    "height": 272,
                     "caption": "This is a caption"
                   }
                 ]
@@ -2498,17 +2524,23 @@
                 "type": "custom",
                 "images": [
                   {
-                    "source": "candles",
+                    "source": "candles.png",
+                    "width": 2460,
+                    "height": 1640,
                     "type": "large",
                     "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong&nbsp;Kong, Hong&nbsp;Kong. Held to mark the crackdown on the pro-democracy movement in Beijing&rsquo;s Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"
                   },
                   {
-                    "source": "crowd",
+                    "source": "GettyImages-52010887_op.jpg",
+                    "width": 2000,
+                    "height": 1418,
                     "type": "small",
                     "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong&nbsp;Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"
                   },
                   {
-                    "source": "tanks",
+                    "source": "GettyImages-166775260_op.jpg",
+                    "width": 2400,
+                    "height": 3568,
                     "type": "large",
                     "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier. Photo by Peter Charlesworth/LightRocket via Getty Images"
                   }
@@ -4717,7 +4749,9 @@
                     "Presently, the people of the Hong Kong diaspora are observing from the outside-in—emotionally invested in Hong Kong’s eroding democratic rights and freedoms, but through the <span>“parachuted gaze of a foreign correspondent”<sup>6</sup></span>. In 2020, the implementation of the National Security Law has sparked a second wave of mass emmigration reintroducing all the familiar challenges of adjusting into foreign safe havens, in the hopes of preserving the rights and freedoms that Hongkongerss were once accustomed to."
                   ],
                   "image": {
-                    "source": "car",
+                    "source": "car.png",
+                    "width": 1548,
+                    "height": 1032,
                     "caption": "Hong Kong democracy activist Agnes Chow (C) speaks with the media outside Tai Po police station in Hong Kong on September 2, 2020, after reporting to police to extend her bail following her recent arrest under Beijings new security law. (Photo by ISAAC LAWRENCE / AFP) (Photo by ISAAC LAWRENCE/AFP via Getty Images)"
                   },
                   "resources": [
@@ -4863,7 +4897,9 @@
                     "Since the handover, the encroaching influence of Beijing has presented Hongkongers with no other choice but to protect their identity through more disruptive forms of civil disobedience. The threat to Hong Kong’s existence has inspired the impassioned resistance of the protest movement which has irreversibly reshaped a <span>new generation’s sense of identity, purpose, and belonging<sup>5</sup></span>. Although the implementation of the National Security Law attempts to stifle the region’s unique status, the essence of what it means to be a Hongkonger is not bound by geographical borders. Rather, this identity perseveres through those who continue to believe in the unwavering idea that freedom can not survive in the absence of democracy."
                   ],
                   "image": {
-                    "source": "hkIdentity",
+                    "source": "02_2020_HKIdentity.jpeg",
+                    "width": 1800,
+                    "height": 1200,
                     "caption": "Hong Kong democracy activist Agnes Chow (C) speaks with the media outside Tai Po police station in Hong Kong on September 2, 2020, after reporting to police to extend her bail following her recent arrest under Beijings new security law. (Photo by ISAAC LAWRENCE / AFP) (Photo by ISAAC LAWRENCE/AFP via Getty Images)"
                   },
                   "resources": [
@@ -5025,7 +5061,9 @@
                     "<span>Passed in secrecy<sup>1</sup></span>, the <span>National Security Law’s<sup>2</sup></span> defining purpose is to <span>silence<sup>3</sup></span> the pro-democracy movement, <span>eliminating any space<sup>4</sup></span> for Hong Kong people to advocate for genuine democracy in the foreseeable future. The ambiguous provisions were <span>broadly written<sup>5</sup></span> so that they can be interpreted to suppress <span>freedom of expression<sup>6</sup></span> and any act of dissent against the Hong Kong government and, by extension, the Mainland. Many people view this turning point as an end to Hong Kong’s long storied history of fighting for genuine democracy. The oppressive legislation has officially diminished the <span>hope<sup>7</sup></span> that Hong Kong will ever achieve full autonomy, or even gain other fundamental democratic qualities such as a <span>powerful free press<sup>8</sup></span>, fair open elections, and respect for fundamental human rights."
                   ],
                   "image": {
-                    "source": "geniuneDemocracy",
+                    "source": "03_2020_GeniuneDemocracy.jpeg",
+                    "width": 1800,
+                    "height": 1200,
                     "caption": "A general view shows the main chamber of the Legislative Council in Hong Kong on November 12, 2020. - Hong Kong's legislature sat empty of pro-democracy lawmakers on November 12 after the bloc announced it would resign in protest at Beijing, turning the semi-autonomous city's once-feisty legislature into a gathering of Chinese loyalists. (Photo by Anthony WALLACE / AFP) (Photo by ANTHONY WALLACE/AFP via Getty Images)"
                   },
                   "resources": [
@@ -5313,7 +5351,9 @@
                     "People overseas watched in <span>dismay<sup>4</sup></span> as the protest movement shifted from a fiery confrontation to a subdued struggle—Hong Kong activist groups disbanded their operations, long-time pro-democracy newspapers <span>folded<sup>5</sup></span>, and well-respected political leaders were <span>arrested one-by-one<sup>6</sup></span>. Supporters beyond the region’s borders have continued to <span>exercise their freedom of expression<sup>7</sup></span> in order to show a sense of solidarity with those who can no longer speak in Hong Kong. This international display of solidarity and new form of subtle resistance is how all Hongkongers have continued to preserve the spirit of the pro-democracy movement in the face of <span>authoritative oppression.<sup>8</sup></span>"
                   ],
                   "image": {
-                    "source": "solidarityAndResistance",
+                    "source": "04_2020_SolidarityAndResistance.jpeg",
+                    "width": 2400,
+                    "height": 1600,
                     "caption": "HONG KONG, CHINA - JUNE 30: A woman wearing a protective mask walks past a government-sponsored advertisement promoting a new national security law on June 30, 2020 in Hong Kong, China. (Photo by Billy H.C. Kwok/Getty Images)"
                   },
                   "resources": [
@@ -5495,7 +5535,9 @@
                     "Hong Kongers are reminded again of the importance of <span>preserving its collective memory<sup>8</sup></span>, history, and identity in the wake of these new measures. As the <span>pressure to self-censor<sup>9</sup></span> continues to grow, participating in subtle acts of remembrance have helped Hong Kongers to continue to uphold and defend a common truth."
                   ],
                   "image": {
-                    "source": "nationalAmnesia",
+                    "source": "05_2020_NationalAmnesia.jpeg",
+                    "width": 1800,
+                    "height": 1200,
                     "caption": "HONG KONG, HONG KONG - JUNE 04: People hold candles as they take part in a candlelight vigil at Victoria Park on June 4, 2019 in Hong Kong, China. As many as 180,000 people were expected to attend a candlelight vigil in Hong Kong on Tuesday on the 30th anniversary of the Tiananmen Square massacre. Commemorations took place in cities around the world on June 4 to remember those who died when Chinese troops cracked down on pro-democracy protesters. Thirty years ago, the People's Liberation Army opened fire and killed from hundreds to thousands of protesters in Beijing after hundreds of thousands of students and workers gathered in Tiananmen Square for weeks to call for greater political freedom. No-one knows for sure how many people were killed as China continues to censor any coverage or discussion of the event that takes place during the anniversary. (Photo by Anthony Kwan/Getty Images)"
                   },
                   "resources": [
