@@ -14,7 +14,6 @@ import NoMatch from './pages/NoMatch.jsx';
 import React from 'react';
 import ScrollToTop from './ScrollToTop.jsx';
 import Splash from './pages/Splash.jsx';
-// import Splash2 from './pages/Splash2.jsx';
 import UIShell from './pages/UIShell.jsx';
 import data from './data/years.json';
 import { roman } from '@sguest/roman-js';
