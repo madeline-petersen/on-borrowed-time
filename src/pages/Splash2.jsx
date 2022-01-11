@@ -56,11 +56,11 @@ const EditorsNote = () => {
                   的地方, 暫借的時間
                 </span>
                 .&rdquo; A phrase commonly used to describe
-                Hong&nbsp;Kong&apos;s unending state of impermanence. The
-                region&apos;s transient nature and intertwining history can be
-                understood in two-folds — a colonial legacy that it has
-                struggled to reconcile, and an authoritarian future that has
-                been difficult to predict.
+                Hong&nbsp;Kong&rsquo;s perpetual impermanence. The
+                region&rsquo;s intertwining history can be understood as the
+                product of two forces — a colonial legacy that it struggles to
+                reconcile itself with, and an authoritarian future fraught with
+                uncertainty.
               </p>
             </Col>
             <Col lg={1} md={2} />
@@ -74,16 +74,15 @@ const EditorsNote = () => {
                   textIndent: textIndent
                 }}
               >
-                As Britain and China negotiated the conditions of the Handover,
-                two promises were woven into the constitution in order to
-                &ldquo;ease the hearts&rdquo; of Hong&nbsp;Kong people about the
-                transition. The first assurance came under the &ldquo;one
-                country, two systems&rdquo; principle, an arrangement that would
-                honour the region&apos;s unique way of life for fifty years to
-                ensure a peaceful transition back to the motherland. The second
-                agreement promised Hong&nbsp;Kong the &ldquo;ultimate aim&rdquo;
-                of universal suffrage, which would allow Hong&nbsp;Kong people
-                to fully govern their own region in the future.
+                As Britain and China negotiated the Handover, two promises were
+                woven into the constitution to &ldquo;ease the hearts&rdquo; of
+                Hong&nbsp;Kong people. The first was the &ldquo;one country, two
+                systems&rdquo; principle, an arrangement that would honour the
+                region&rsquo;s unique way of life for fifty years, thus easing
+                the transition back to the motherland. The second was the
+                &ldquo;ultimate aim&rdquo; of universal suffrage, which would
+                grant Hong&nbsp;Kong people the opportunity to govern their own
+                region in the future.
               </p>
               <br />
               <p
@@ -92,14 +91,14 @@ const EditorsNote = () => {
                   textIndent: textIndent
                 }}
               >
-                Beyond the constitutional details, these two promises would hold
-                a more symbolic meaning to a new generation of Hongkongers, and
-                inspire a sense of hope that the region could someday dictate
-                its own future. Throughout Hong&nbsp;Kong&apos;s conflicting
-                history, the region has never had the opportunity to experience
-                democratic qualities such as self-determination, universal
-                suffrage, or genuine democracy. Hong&nbsp;Kong&apos;s fate has
-                always been beholden to forces larger than itself.
+                Beyond the constitutional details, these two promises held
+                symbolic meaning for a new generation of Hongkongers. They
+                inspired the hope that the region could someday dictate its own
+                future. Throughout Hong&nbsp;Kong&rsquo;s conflicting history,
+                the region has never had the opportunity to experience
+                democratic qualities like self-determination, universal
+                suffrage, or genuine democracy. It has always been beholden to
+                forces larger than itself.
               </p>
               <br />
               <p
@@ -108,10 +107,10 @@ const EditorsNote = () => {
                   textIndent: textIndent
                 }}
               >
-                Therefore, the underlying purpose of this project is to shed
-                light on the journey that Hong&nbsp;Kong has undergone, and to
-                document the courageous measures that Hongkongers have
-                undertaken in its pursuit for genuine democracy.
+                The goal of this project is to shed light on
+                Hong&nbsp;Kong&rsquo;s journey and to document the courageous
+                measures that Hongkongers have taken in their pursuit of genuine
+                democracy.
               </p>
               <br />
               <p
@@ -120,18 +119,17 @@ const EditorsNote = () => {
                   textIndent: textIndent
                 }}
               >
-                In order to tell the story of Hong&nbsp;Kong with accuracy and
-                care, the project is presented in several layers. At the
-                surface, it outlines the historical account of
-                Hong&nbsp;Kong&apos;s handover since the Sino-Joint Declaration
-                was signed in 1984. From another perspective, it is an archive
-                of digital artifacts that resurface a collection of stories,
-                imagery, and musings of how people felt in that particular
-                moment in history. And at its core, it is an anthology of
-                reflections that attempts to forge meaning from the tragic
-                events that have transpired. It invites the question, what does
-                it mean to be a Hongkonger? Can freedom survive in the absence
-                of democracy? And what role does collective memory play in
+                To tell the story of Hong Kong with accuracy and care, the
+                project is compiled into several layers. On the surface, it
+                provides a historical account of Hong&nbsp;Kong&rsquo;s handover
+                since the Sino-Joint Declaration was signed in 1984. Beneath
+                that lies an archive of digital artifacts—a collection of
+                stories, imagery, and musings that capture how people felt as
+                their history unfolded. At its core, this project is an
+                anthology of reflections that attempts to forge meaning from the
+                tragic events that have transpired. It invites questions. What
+                does it mean to be a Hongkonger? Can freedom survive in the
+                absence of democracy? What role does collective memory play in
                 cultivating identity?
               </p>
               <br />
@@ -141,12 +139,12 @@ const EditorsNote = () => {
                   textIndent: textIndent
                 }}
               >
-                On a more personal note, this project has also provided the
-                editors an opportunity to explore our own personal history and
-                sense of belonging. It has given us the space to examine how our
-                lineage is woven into our identities, and has provided us a
-                glimpse of the modest role we play within a larger narrative
-                that extends beyond ourselves.
+                On a more personal note, this project has provided us, the
+                editors and curators, an opportunity to explore our personal
+                histories and sense of belonging. It has given us the space to
+                examine how our lineage is woven into our identities, and has
+                provided us a glimpse of the modest role we play within a larger
+                narrative that extends beyond ourselves.
               </p>
               <br />
               <p
