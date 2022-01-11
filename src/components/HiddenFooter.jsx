@@ -22,9 +22,13 @@ const HiddenFooter = ({
 }) => {
   let borderClasses = 'border-white border-opacity-20';
 
+  const showBorder =
+    (pageId === 'reflection' && changingParam === 'year') ||
+    pageId === 'artifacts';
+
   return (
     <Container className="grid__container">
-      {pageId === 'artifacts' && (
+      {showBorder && (
         <Row className={`grid__row`}>
           <Col lg={1} />
           <Col lg={11} md={12}>
