@@ -22,6 +22,13 @@ import {
   useScreenClass,
   setConfiguration
 } from 'react-grid-system';
+import ReactGA from 'react-ga';
+import RouteChangeTracker from './helpers/RouteChangeTracker';
+
+const TRACKING_ID = 'G-LKR7ENMRG3';
+ReactGA.initialize(TRACKING_ID, {
+  debug: true
+});
 
 setConfiguration({
   // The breakpoints (minimum width) of devices in screen class sm, md, lg, xl, and xxl.
@@ -199,6 +206,7 @@ function App() {
 
   return (
     <Router>
+      <RouteChangeTracker />
       <ScreenClassProvider>
         {process.env.NODE_ENV === 'development' && <GridHelper />}
         <ScrollToTop>
