@@ -172,6 +172,7 @@ const UIShell = props => {
           textColourClass={textColourClass[props.year.id]}
           borderColourClass={borderColourClass[props.year.id]}
           setAnecdoteData={setAnecdoteData}
+          isModalActive={isModalActive}
           setIsModalActive={setIsModalActive}
         />
       );
