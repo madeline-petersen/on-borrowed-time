@@ -115,19 +115,12 @@ const Event = ({
 
   const afterLoad = (origin, destination, direction) => {
     if (destination.isLast) {
-      if (changingParam === 'year') {
-        // if year end
-        // inter-year
-        navigateTo(nextParams.year);
-      } else {
-        // else
-        // intra-year
-        navigateTo(
-          nextParams.year,
-          nextParams.scene, // should be romanSceneNumber
-          nextParams.page
-        );
-      }
+      // intra-year
+      navigateTo(
+        nextParams.year,
+        nextParams.scene, // should be romanSceneNumber
+        nextParams.page
+      );
     }
   };
 
@@ -381,9 +374,7 @@ const Event = ({
             render={({ state, fullpageApi }) => {
               return (
                 <ReactFullpage.Wrapper>
-                  <div
-                    className={`section h-auto transition-colour-on-scroll ${colourBackgroundClass}`}
-                  >
+                  <div className={`section h-auto ${colourBackgroundClass}`}>
                     <Container className="min-h-screen grid__container">
                       {/* Event */}
                       {event && (
@@ -452,6 +443,15 @@ const Event = ({
                         </div>
                       )}
                     </Container>
+                    <div className={`hidden-footer__container bg-black`}>
+                      <HiddenFooter
+                        pageId="event"
+                        nextParams={nextParams}
+                        next={next}
+                        changingParam={changingParam}
+                        textClasses="text-white text-opacity-90"
+                      />
+                    </div>
                   </div>
                   <div className={`section w-full bg-black`}>
                     <Container className="grid__container">
@@ -464,15 +464,6 @@ const Event = ({
                 </ReactFullpage.Wrapper>
               );
             }}
-          />
-        </div>
-        <div className={`hidden-footer__container bg-black`}>
-          <HiddenFooter
-            pageId="event"
-            nextParams={nextParams}
-            next={next}
-            changingParam={changingParam}
-            textClasses="text-white text-opacity-90"
           />
         </div>
       </>
