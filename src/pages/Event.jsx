@@ -10,7 +10,7 @@ import ResourceTable from '../components/ResourceTable';
 import Triptych from '../components/imageLayouts/Triptych';
 import Diptych from '../components/imageLayouts/Diptych';
 import Custom from '../components/imageLayouts/Custom';
-import 'fullpage.js/vendors/scrolloverflow';
+import './static/scrolloverflow';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { throttle } from 'lodash';
 
