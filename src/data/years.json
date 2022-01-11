@@ -147,18 +147,6 @@
                 "Signed in 1984, the <span>Sino-British Joint Declaration<sup>1</sup></span> between Britain and China defined the conditions in which Hong&nbsp;Kong would fall back under China&rsquo;s authority. Hong&nbsp;Kong would become a &ldquo;Special Administrative Region&rdquo; of China, as outlined in the Declaration, where its autonomy, capitalistic economy, and partial democratic political system were to remain largely unchanged for 50 years.",
                 "To codify the Joint Declaration, China and Hong Kong negotiated a constitutional document known as <span>Basic Law.<sup>2</sup></span> Its intended purpose was to protect the rights of Hong Kong citizens from Beijing oversight and to build a path to achieving universal suffrage during the 50-year transition period."
               ],
-              "imageLayout": {
-                "type": "custom",
-                "images": [
-                  {
-                    "source": "1984_Scene02.jpeg",
-                    "width": 640,
-                    "height": 393,
-                    "type": "small",
-                    "caption": "Former premiers Margaret Thatcher and Zhao Ziyang sign the Sino-British Joint Declaration on Hong Kong in 1984"
-                  }
-                ]
-              },
               "resources": [
                 {
                   "type": "Journal Excerpt",
@@ -227,6 +215,22 @@
                   "linkTo": "https://hub.hku.hk/bitstream/10722/87975/3/content.pdf?accept=1"
                 }
               ]
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "imageLayout": {
+                "type": "custom",
+                "images": [
+                  {
+                    "source": "1984_Scene02.jpeg",
+                    "width": 640,
+                    "height": 393,
+                    "type": "small",
+                    "caption": "Former premiers Margaret Thatcher and Zhao Ziyang sign the Sino-British Joint Declaration on Hong Kong in 1984"
+                  }
+                ]
+              }
             },
             {
               "type": "reflection",
@@ -385,18 +389,6 @@
                 "A high ranking official of the Chinese Communist Party, Hu was an <span>icon<sup>1</sup></span> for political reform and democratic change. His critique on Mao&rsquo;s cult-like ideology differed from other political figures, and made Hu a beloved leader.",
                 "The death of <span>Hu Yaobang<sup>2</sup></span> on April 15 1989, ignited public outcry—<span>mourning<sup>3</sup></span>, grief, and anger quickly developed into a series of student-led pro-democracy demonstrations and hunger strikes across China."
               ],
-              "imageLayout": {
-                "type": "custom",
-                "images": [
-                  {
-                    "source": "GettyImages-52010887_op.jpg",
-                    "width": 2000,
-                    "height": 1418,
-                    "type": "large",
-                    "caption": "BEIJING, CHINA - APRIL 22: Picture dated 22 April 1989 shows several hundred of 200,000 pro-democracy student protesters face to face with policemen outside the Great Hall of the People in Tiananmen Square in Beijing as they take part in the funeral ceremony of former Chinese Communist Party leader and liberal reformer Hu Yaobang during an unauthorized demonstration to mourn his death. Hu Yaobang's death in April trigged an unprecedented wave of pro-democracy demonstrations. The April-June 1989 movement was crushed by Chinese troops in June when army tanks rolled into Tiananmen Square 04 June. AFP PHOTO (Photo credit should read CATHERINE HENRIETTE/AFP via Getty Images)"
-                  }
-                ]
-              },
               "resources": [
                 {
                   "type": "Book Excerpt",
@@ -462,6 +454,22 @@
               ]
             },
             {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "imageLayout": {
+                "type": "custom",
+                "images": [
+                  {
+                    "source": "GettyImages-52010887_op.jpg",
+                    "width": 2000,
+                    "height": 1418,
+                    "type": "large",
+                    "caption": "BEIJING, CHINA - APRIL 22: Picture dated 22 April 1989 shows several hundred of 200,000 pro-democracy student protesters face to face with policemen outside the Great Hall of the People in Tiananmen Square in Beijing as they take part in the funeral ceremony of former Chinese Communist Party leader and liberal reformer Hu Yaobang during an unauthorized demonstration to mourn his death. Hu Yaobang's death in April trigged an unprecedented wave of pro-democracy demonstrations. The April-June 1989 movement was crushed by Chinese troops in June when army tanks rolled into Tiananmen Square 04 June. AFP PHOTO (Photo credit should read CATHERINE HENRIETTE/AFP via Getty Images)"
+                  }
+                ]
+              }
+            },
+            {
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
@@ -492,26 +500,6 @@
               "paragraphs": [
                 "On the nights of June 3-4, 1989, a series of peaceful demonstrations led by pro-democracy protesters in Beijing were violently suppressed by Chinese authorities. Known as &ldquo;The June Fourth Incident&rdquo;, thousands of unarmed protestors were massacred at Tiananmen Square, with thousands more arrested across cities in China."
               ],
-
-              "imageLayout": {
-                "type": "custom",
-                "images": [
-                  {
-                    "source": "GettyImages-640492299_op.jpg",
-                    "width": 2500,
-                    "height": 1700,
-                    "type": "large",
-                    "caption": "People transport a wounded man during the military crackdown in Tiananmen Square in June, 1989. (Photo by David Turnley/Getty Images)"
-                  },
-                  {
-                    "source": "GettyImages-166775260_op.jpg",
-                    "width": 2400,
-                    "height": 3568,
-                    "type": "large",
-                    "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier.. (Photo by Peter Charlesworth/LightRocket via Getty Images)"
-                  }
-                ]
-              },
               "resources": [
                 {
                   "type": "Book Excerpt",
@@ -605,6 +593,29 @@
                   "linkTo": "https://www.asiancha.com/wp/article/scott-savitt/"
                 }
               ]
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "imageLayout": {
+                "type": "custom",
+                "images": [
+                  {
+                    "source": "GettyImages-640492299_op.jpg",
+                    "width": 2500,
+                    "height": 1700,
+                    "type": "large",
+                    "caption": "People transport a wounded man during the military crackdown in Tiananmen Square in June, 1989. (Photo by David Turnley/Getty Images)"
+                  },
+                  {
+                    "source": "GettyImages-166775260_op.jpg",
+                    "width": 2400,
+                    "height": 3568,
+                    "type": "large",
+                    "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier.. (Photo by Peter Charlesworth/LightRocket via Getty Images)"
+                  }
+                ]
+              }
             },
             {
               "type": "reflection",
@@ -914,18 +925,6 @@
                 "In the years following the massacre, China began interrogating the memory of Tiananmen Square by censoring the events that occurred on June 4th, 1989. The <span>deadly suppression of protesters<sup>1</sup></span> became an unspoken moment in China&rsquo;s past, purged from its history books.",
                 "Meanwhile, Hong&nbsp;Kong became a safe haven<sup>2</sup></span> for democratic activists to commemorate the tragedy of the massacre, as China continued to use insidious tactics to <span>contest the memory of Tiananmen Square.<sup>3</sup></span>"
               ],
-              "imageLayout": {
-                "type": "custom",
-                "images": [
-                  {
-                    "source": "GettyImages-475837512_op.jpg",
-                    "width": 2500,
-                    "height": 1669,
-                    "type": "large",
-                    "caption": "HONG KONG - JUNE 04: Participants take part at the candlelight vigil as they hold candles at Victoria Park on June 4, 2015 in Causeway Bay, Hong Kong. Hong Kong residents held a candlelight vigil as it marks 26th anniversary of 1989 student-led Tiananmen Square protest. (Photo by Anthony Kwan/Getty Images)"
-                  }
-                ]
-              },
               "resources": [
                 {
                   "type": "Article Excerpt",
@@ -1056,6 +1055,22 @@
                   "linkTo": "http://archives.cnd.org/June4th/song/"
                 }
               ]
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "imageLayout": {
+                "type": "custom",
+                "images": [
+                  {
+                    "source": "GettyImages-475837512_op.jpg",
+                    "width": 2500,
+                    "height": 1669,
+                    "type": "large",
+                    "caption": "HONG KONG - JUNE 04: Participants take part at the candlelight vigil as they hold candles at Victoria Park on June 4, 2015 in Causeway Bay, Hong Kong. Hong Kong residents held a candlelight vigil as it marks 26th anniversary of 1989 student-led Tiananmen Square protest. (Photo by Anthony Kwan/Getty Images)"
+                  }
+                ]
+              }
             },
             {
               "type": "reflection",
@@ -2202,29 +2217,6 @@
                 "In 2007, the Standing Committee of the National People’s Congress (NPCSC) suggested a timetable to implement steps towards universal suffrage beginning with the nomination process for Chief Executive candidates in 2017.",
                 "In anticipation, professors <span>Benny Tai<sup>1</sup></span>, <span>Chan Kin-man<sup>2</sup></span>, and reverend Chu Yiu-ming organised a movement called Occupy Central Love and Peace—the goal was to achieve &ldquo;genuine universal suffrage&rdquo; by mobilising people to participate in a civil referendum and, <span>if necessary<sup>3</sup></span>, through <span>civil disobedience.<sup>4</sup></span>"
               ],
-              "imageLayout": {
-                "type": "triptych",
-                "images": [
-                  {
-                    "source": "2014_Scene01_BennyTai.png",
-                    "width": 204,
-                    "height": 272,
-                    "caption": "This is a caption"
-                  },
-                  {
-                    "source": "2014_Scene01_ChuYiuMing.png",
-                    "width": 204,
-                    "height": 272,
-                    "caption": "This is a caption"
-                  },
-                  {
-                    "source": "2014_Scene01_ChanKinMan.png",
-                    "width": 204,
-                    "height": 272,
-                    "caption": "This is a caption"
-                  }
-                ]
-              },
               "resources": [
                 {
                   "type": "Article Excerpt",
@@ -2299,6 +2291,37 @@
               ]
             },
             {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "paragraphs": [
+                "In 2007, the Standing Committee of the National People’s Congress (NPCSC) suggested a timetable to implement steps towards universal suffrage beginning with the nomination process for Chief Executive candidates in 2017.",
+                "In anticipation, professors <span>Benny Tai<sup>1</sup></span>, <span>Chan Kin-man<sup>2</sup></span>, and reverend Chu Yiu-ming organised a movement called Occupy Central Love and Peace—the goal was to achieve &ldquo;genuine universal suffrage&rdquo; by mobilising people to participate in a civil referendum and, <span>if necessary<sup>3</sup></span>, through <span>civil disobedience.<sup>4</sup></span>"
+              ],
+              "imageLayout": {
+                "type": "triptych",
+                "images": [
+                  {
+                    "source": "2014_Scene01_BennyTai.png",
+                    "width": 204,
+                    "height": 272,
+                    "caption": "This is a caption"
+                  },
+                  {
+                    "source": "2014_Scene01_ChuYiuMing.png",
+                    "width": 204,
+                    "height": 272,
+                    "caption": "This is a caption"
+                  },
+                  {
+                    "source": "2014_Scene01_ChanKinMan.png",
+                    "width": 204,
+                    "height": 272,
+                    "caption": "This is a caption"
+                  }
+                ]
+              }
+            },
+            {
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
@@ -2328,23 +2351,6 @@
                 "As promised, Hong&nbsp;Kong opened a <span>consultation period<sup>1</sup></span> to discuss the possibility of implementing a new Chief Executive electoral process for 2017. In response, <span>pro-democracy lawmakers provided different electoral recommendations<sup>2</sup></span> to the Hong&nbsp;Kong government, in an attempt to formally implement a form of  &ldquo;genuine universal suffrage.&rdquo;",
                 "At the same time, Beijing released a White Paper laying out their <span>re-interpretation of the &ldquo;one country, two systems&rdquo; model<sup>3</sup></span>, specifically identifying that the Hong&nbsp;Kong courts will not be the <span>&ldquo;guardians of the rule of law&rdquo;.<sup>4</sup></span> Rather, the NPCSC will have the <span>final say<sup>5</sup></span> on how the &ldquo;one country, two systems&rdquo; model will be exercised in the region."
               ],
-              "imageLayout": {
-                "type": "diptych",
-                "images": [
-                  {
-                    "source": "2014_Scene01_BennyTai.png",
-                    "width": 204,
-                    "height": 272,
-                    "caption": "This is a caption"
-                  },
-                  {
-                    "source": "2014_Scene01_ChuYiuMing.png",
-                    "width": 204,
-                    "height": 272,
-                    "caption": "This is a caption"
-                  }
-                ]
-              },
               "resources": [
                 {
                   "type": "Press",
@@ -2492,6 +2498,31 @@
               ]
             },
             {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "paragraphs": [
+                "In 2007, the Standing Committee of the National People’s Congress (NPCSC) suggested a timetable to implement steps towards universal suffrage beginning with the nomination process for Chief Executive candidates in 2017.",
+                "In anticipation, professors <span>Benny Tai<sup>1</sup></span>, <span>Chan Kin-man<sup>2</sup></span>, and reverend Chu Yiu-ming organised a movement called Occupy Central Love and Peace—the goal was to achieve &ldquo;genuine universal suffrage&rdquo; by mobilising people to participate in a civil referendum and, <span>if necessary<sup>3</sup></span>, through <span>civil disobedience.<sup>4</sup></span>"
+              ],
+              "imageLayout": {
+                "type": "diptych",
+                "images": [
+                  {
+                    "source": "2014_Scene01_BennyTai.png",
+                    "width": 204,
+                    "height": 272,
+                    "caption": "This is a caption"
+                  },
+                  {
+                    "source": "2014_Scene01_ChuYiuMing.png",
+                    "width": 204,
+                    "height": 272,
+                    "caption": "This is a caption"
+                  }
+                ]
+              }
+            },
+            {
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
@@ -2520,32 +2551,6 @@
               "paragraphs": [
                 "From June 20 to 29, an unofficial pro-democracy referendum organised by Occupy Central Love and Peace (OCLP) opened in Hong&nbsp;Kong attracting an overwhelming turnout. The referendum offered voters three reform proposals for selecting candidates for the Chief Executive election in 2017, all of which included an element of civic nomination that Beijing was opposed to. Nearly 800,000 people turned out for the unofficial referendum, and voted for their preferred election process for filling the Chief Executive&rsquo;s office."
               ],
-              "imageLayout": {
-                "type": "custom",
-                "images": [
-                  {
-                    "source": "candles.png",
-                    "width": 2460,
-                    "height": 1640,
-                    "type": "large",
-                    "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong&nbsp;Kong, Hong&nbsp;Kong. Held to mark the crackdown on the pro-democracy movement in Beijing&rsquo;s Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"
-                  },
-                  {
-                    "source": "GettyImages-52010887_op.jpg",
-                    "width": 2000,
-                    "height": 1418,
-                    "type": "small",
-                    "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong&nbsp;Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"
-                  },
-                  {
-                    "source": "GettyImages-166775260_op.jpg",
-                    "width": 2400,
-                    "height": 3568,
-                    "type": "large",
-                    "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier. Photo by Peter Charlesworth/LightRocket via Getty Images"
-                  }
-                ]
-              },
               "resources": [
                 {
                   "type": "Article Excerpt",
@@ -2665,6 +2670,36 @@
                   "linkTo": "https://www.hkupop.hku.hk/english/release/release1164.html"
                 }
               ]
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "imageLayout": {
+                "type": "custom",
+                "images": [
+                  {
+                    "source": "candles.png",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "large",
+                    "caption": "People take part in a candlelight vigil on the 25th anniversary of the Tiananmen Square protests during heavy rain on June 4, 2014 in Hong&nbsp;Kong, Hong&nbsp;Kong. Held to mark the crackdown on the pro-democracy movement in Beijing&rsquo;s Tiananmen Square on June 4, 1989, it is the only commemoration on Chinese soil. (Photo by Lam Yik Fei/Getty Images)"
+                  },
+                  {
+                    "source": "GettyImages-52010887_op.jpg",
+                    "width": 2000,
+                    "height": 1418,
+                    "type": "small",
+                    "caption": "Thousands of protestors hold candles during a candlelight vigil for the 20th anniversary of June 4 Tiananmen Square Massacre in Beijing at Victoria Park on June 4, 2009 in Hong&nbsp;Kong, China.  Pro-democracy activists reiterate their pleas for the people who ordered the massacre to be held accountable, for the release of dissidents still imprisoned and for the vindication of the pro-democracy movement of 1989. (Photo by MN Chan/Getty Images)"
+                  },
+                  {
+                    "source": "GettyImages-166775260_op.jpg",
+                    "width": 2400,
+                    "height": 3568,
+                    "type": "large",
+                    "caption": "BEIJING, CHINA - 1989/06/04: At the end of the pro-democracy movement in China, pedestrians and cyclists pass underneath a group of Chinese Army tanks. The tanks are blocking an overpass on Changan Avenue leading to Tiananmen Square where the Communist Government carried out its final brutal nighttime crackdown on protestors only hours earlier. Photo by Peter Charlesworth/LightRocket via Getty Images"
+                  }
+                ]
+              }
             },
             {
               "type": "reflection",
