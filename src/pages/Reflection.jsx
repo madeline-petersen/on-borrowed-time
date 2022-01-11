@@ -2,7 +2,6 @@ import { Col, Container, Row } from 'react-grid-system';
 import React, { useEffect } from 'react';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
-import Footer from '../components/Footer';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import 'fullpage.js/vendors/scrolloverflow';
@@ -126,7 +125,7 @@ const Reflection = ({
                             })}
                         </Row>
                         {reflection.citations && (
-                          <Row className="grid__row">
+                          <Row className="grid__row pb-24">
                             <Col lg={3} />
                             <Col lg={6} md={12}>
                               <p className="pb-5 border-t border-white border-opacity-20 fade-second" />
@@ -178,7 +177,7 @@ const Reflection = ({
                       <Row
                         className={`grid__row`}
                         style={{ height: '100vh' }}
-                      ></Row>
+                      />
                     </Container>
                   </div>
                 )}

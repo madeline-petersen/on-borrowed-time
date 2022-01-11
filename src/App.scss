@@ -460,3 +460,11 @@ a {
     animation-fill-mode: forwards;
   }
 }
+
+.aspect-ratio {
+  overflow: hidden;
+  height: 0;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

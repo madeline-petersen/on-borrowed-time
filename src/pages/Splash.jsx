@@ -1,7 +1,6 @@
 import './Splash.scss';
 
 import React from 'react';
-import onborrowedtime from '../images/onborrowedtime.jpg';
 import Countdown from '../components/Countdown';
 
 const Splash = () => {
@@ -11,7 +10,7 @@ const Splash = () => {
         <div className="flex md:hidden w-100 justify-center">
           <div className="mobile-container">
             <img
-              src={onborrowedtime}
+              src={'/images/onborrowedtime.jpg'}
               alt="A group of strangers walking towards an unidentified building in Tiananmen Square in 1982."
               className="text-fade-in"
             />
@@ -51,7 +50,11 @@ const Splash = () => {
 
       <div className="md:flex hidden w-100 justify-center">
         <div className="desktop-container">
-          <img src={onborrowedtime} alt="" className="text-fade-in" />
+          <img
+            src={'/images/onborrowedtime.jpg'}
+            alt="A group of strangers walking towards an unidentified building in Tiananmen Square in 1982."
+            className="text-fade-in"
+          />
         </div>
       </div>
 
