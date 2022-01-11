@@ -13,7 +13,7 @@ const Header = ({
   title,
   isTransitioning,
   romanSceneNumber,
-  setNextBackground,
+
   setIsTransitioning,
   navigateTo,
   colourBackgroundClass,
@@ -28,24 +28,12 @@ const Header = ({
 
   const onClickYear = () => {
     if (pageId !== 'intro') {
-      setNextBackground(currentYear);
-      setIsTransitioning(true);
-      // setSceneIndex(null); // disappear circle
-      // if (pageId !== 'home') {
-      //   if (year !== currentYear) {
-      //     setNumScenes(0); // collapse timeline (1s duration)
-      //   }
-      // }
       navigateTo(currentYear);
-      // setSceneIndex('intro');
     }
   };
 
   const onClickScene = () => {
     if (pageId !== 'event') {
-      setNextBackground(currentYear, 'event');
-      setIsTransitioning(true);
-      // setSceneIndex(null); // disappear circle
       navigateTo(currentYear, romanSceneNumber, 'event');
     }
   };
@@ -53,6 +41,7 @@ const Header = ({
   return (
     <span
       className={`absolute w-full top-0 z-10 medium-caption ${timelineClasses}`}
+      id="header"
     >
       <Container className="grid__container">
         <Row className={`grid__row pt-5`}>
@@ -163,7 +152,7 @@ Header.propTypes = {
   title: PropTypes.string,
   isTransitioning: PropTypes.bool,
   romanSceneNumber: PropTypes.string,
-  setNextBackground: PropTypes.func,
+
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
   colourBackgroundClass: PropTypes.string,

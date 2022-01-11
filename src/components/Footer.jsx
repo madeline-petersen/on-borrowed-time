@@ -7,15 +7,12 @@ import ReactHtmlParser from 'react-html-parser';
 import './Footer.scss';
 
 const Footer = ({
-  // useState variables, used in page component to transition page
-  isClicked,
-  setClicked,
   setIsTransitioning,
+  onClick,
 
   // used to determine navigation and labels
   nextParams,
   changingParam,
-  navigateTo,
 
   // object that contains title of next page
   next,
@@ -28,21 +25,7 @@ const Footer = ({
   borderColourClass
 }) => {
   const handleOnClick = () => {
-    setClicked(true);
-    setIsTransitioning(true);
-    if (changingParam === 'year') {
-      // if year end
-      // inter-year
-      navigateTo(nextParams.year);
-    } else {
-      // else
-      // intra-year
-      navigateTo(
-        nextParams.year,
-        nextParams.scene, // should be romanSceneNumber
-        nextParams.page
-      );
-    }
+    onClick();
   };
 
   let textClasses =
@@ -71,9 +54,7 @@ const Footer = ({
         </Col>
       </Row>
       <Row
-        className={`grid__row clickable-area ${
-          isClicked ? 'cursor-default' : 'cursor-pointer'
-        }`}
+        className={`grid__row clickable-area cursor-pointer`}
         onClick={() => handleOnClick()}
       >
         <Col lg={1} className="cursor-default" />
@@ -113,8 +94,6 @@ const Footer = ({
 Footer.defaultProps = {};
 
 Footer.propTypes = {
-  isClicked: PropTypes.bool,
-  setClicked: PropTypes.func,
   setIsTransitioning: PropTypes.func,
   changingParam: PropTypes.string,
   nextParams: PropTypes.shape(),
@@ -122,7 +101,8 @@ Footer.propTypes = {
   next: PropTypes.shape(),
   pageId: PropTypes.string,
   textColourClass: PropTypes.string,
-  borderColourClass: PropTypes.string
+  borderColourClass: PropTypes.string,
+  onClick: PropTypes.func
 };
 
 export default Footer;
