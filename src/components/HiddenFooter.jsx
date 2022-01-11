@@ -14,14 +14,24 @@ const HiddenFooter = ({
   // object that contains title of next page
   next,
 
-  // current page id (event, reflection)
+  // current page id (event, artifacts, reflection)
   pageId,
 
   // colours
   textClasses
 }) => {
+  let borderClasses = 'border-white border-opacity-20';
+
   return (
     <Container className="grid__container">
+      {pageId === 'artifacts' && (
+        <Row className={`grid__row`}>
+          <Col lg={1} />
+          <Col lg={11} md={12}>
+            <p className={`border-t ${borderClasses}`} />
+          </Col>
+        </Row>
+      )}
       <Row
         className="grid__row clickable-area cursor-pointer"
         onClick={() => fullpage_api.moveSectionDown()}

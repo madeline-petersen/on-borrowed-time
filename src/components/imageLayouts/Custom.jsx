@@ -32,7 +32,7 @@ const Custom = ({ images }) => {
             <Col lg={3} />
             <Col lg={7} md={12}>
               <div
-                className="fade-second aspect-ratio"
+                className="fade-first aspect-ratio"
                 style={{
                   paddingTop: `calc(${image.height}/${image.width} * 100%)`,
                   backgroundImage: `url('/images/${image.source}')`
@@ -41,7 +41,7 @@ const Custom = ({ images }) => {
             </Col>
             <Col lg={3} />
             <Col lg={4} md={4}>
-              <p className={`small-body text-white mt-5 fade-second`}>
+              <p className={`small-body text-white mt-5 fade-first`}>
                 {ReactHtmlParser(image.caption)}
               </p>
             </Col>

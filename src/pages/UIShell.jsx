@@ -13,6 +13,7 @@ import LeftMenu from '../components/LeftMenu';
 import { Link, useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Reflection from './Reflection.jsx';
+import Artifacts from './Artifacts.jsx';
 import Timeline from '../components/Timeline';
 import Anecdote from '../components/Anecdote';
 import { Visible } from 'react-grid-system';
@@ -174,6 +175,9 @@ const UIShell = props => {
           setIsModalActive={setIsModalActive}
         />
       );
+      break;
+    case 'artifacts':
+      pageComponent = <Artifacts {...props} navigateTo={navigateTo} />;
       break;
     case 'reflection':
       pageComponent = (
