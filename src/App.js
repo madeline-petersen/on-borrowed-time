@@ -27,7 +27,8 @@ import RouteChangeTracker from './helpers/RouteChangeTracker';
 
 const TRACKING_ID = 'G-LKR7ENMRG3';
 ReactGA.initialize(TRACKING_ID, {
-  debug: true
+  debug: true,
+  standardImplementation: true
 });
 
 setConfiguration({
