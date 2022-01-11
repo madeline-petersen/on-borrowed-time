@@ -96,9 +96,8 @@ const Splash = () => {
                 inspired the hope that the region could someday dictate its own
                 future. Throughout Hong&nbsp;Kong&rsquo;s conflicting history,
                 the region has never had the opportunity to experience
-                democratic qualities like self-determination, universal
-                suffrage, or genuine democracy. It has always been beholden to
-                forces larger than itself.
+                self-determination, universal suffrage, or genuine democracy. It
+                has always been beholden to forces larger than itself.
               </p>
               <br />
               <p
