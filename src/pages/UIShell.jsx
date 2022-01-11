@@ -17,6 +17,8 @@ import Artifacts from './Artifacts.jsx';
 import Timeline from '../components/Timeline';
 import Anecdote from '../components/Anecdote';
 import { Visible } from 'react-grid-system';
+import { Helmet } from 'react-helmet';
+import ReactHtmlParser from 'react-html-parser';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
@@ -215,6 +217,11 @@ const UIShell = props => {
 
   return (
     <>
+      <Helmet>
+        <title>{`On Borrowed Time | ${ReactHtmlParser(
+          props.scene?.title || props.year?.title
+        )}`}</title>
+      </Helmet>
       <Header
         currentYear={props.year.id}
         label={

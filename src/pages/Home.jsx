@@ -7,6 +7,7 @@ import { ArrowDown20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import ReactFullpage from '@fullpage/react-fullpage';
+import { Helmet } from 'react-helmet';
 
 const pluginWrapper = () => {
   require('./static/fullpage.parallax.min.js');
@@ -61,6 +62,9 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
 
   return (
     <div className="home">
+      <Helmet>
+        <title>{`On Borrowed Time`}</title>
+      </Helmet>
       <ReactFullpage
         licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
         pluginWrapper={pluginWrapper}

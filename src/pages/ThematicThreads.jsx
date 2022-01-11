@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 import './ThematicThreads.scss';
 
 const ThematicThreads = ({ backgroundColor }) => {
@@ -23,6 +24,9 @@ const ThematicThreads = ({ backgroundColor }) => {
     <div
       className={`thematic-threads h-auto black-white-background ${backgroundColor}`}
     >
+      <Helmet>
+        <title>On Borrowed Time | Thematic Threads</title>
+      </Helmet>
       <Container className="grid__container min-h-screen">
         <Row
           key={`threads-1`}
