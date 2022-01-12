@@ -51,10 +51,6 @@ const Reflection = ({
       if (element.classList.contains('show')) {
         return true;
       } else {
-        // setTimeout(() => {
-        //   fullpage_api.setAllowScrolling(true);
-        //   fullpage_api.setKeyboardScrolling(true);
-        // }, 4250);
         element.classList.add('show');
         return false;
       }

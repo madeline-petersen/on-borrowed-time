@@ -213,8 +213,6 @@ const UIShell = props => {
       );
   }
 
-  let isYearEnd = props.isLastScene && props.isLastPage;
-
   return (
     <>
       <Helmet>
@@ -296,22 +294,19 @@ const UIShell = props => {
         </Visible>
         Time
       </Link>
-      {props.pageId !== 'thematic-threads' && props.pageId !== 'editors-note' && (
-        <Timeline
-          timelineClasses={timelineClasses}
-          pageId={props.pageId}
-          sceneIndex={props.sceneIndex}
-          previewedYear={hash}
-          years={props.years}
-          currentYear={props.year} // expands timeline
-          setIsTransitioning={setIsTransitioning}
-          isTransitioning={isTransitioning}
-          isYearEnd={isYearEnd}
-          navigateTo={navigateTo}
-          colourBackgroundClass={colourBackgroundClasses[props.year.id]}
-          colourBackgroundClasses={colourBackgroundClasses}
-        />
-      )}
+      {props.pageId !== 'thematic-threads' &&
+        props.pageId !== 'editors-note' && (
+          <Timeline
+            {...props}
+            timelineClasses={timelineClasses}
+            previewedYear={hash}
+            setIsTransitioning={setIsTransitioning}
+            isTransitioning={isTransitioning}
+            navigateTo={navigateTo}
+            colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+            colourBackgroundClasses={colourBackgroundClasses}
+          />
+        )}
       {pageComponent}
     </>
   );
