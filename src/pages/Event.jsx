@@ -29,7 +29,6 @@ const Event = ({
   isModalActive,
   setIsModalActive
 }) => {
-  const [selectedTheme, setSelectedTheme] = useState(null);
   const [headerHeight, setHeaderHeight] = useState('78px');
 
   const openModal = entry => {
@@ -73,17 +72,6 @@ const Event = ({
       fullpage_api.setKeyboardScrolling(true);
     }, 4250);
   }, [event]);
-
-  let themeLookup = [];
-  if (event.themes) {
-    themeLookup = event.themes.map(theme => {
-      return `#${theme.replace(/\s+/g, '-').toLowerCase()}`;
-    });
-  }
-
-  const isSelectedTheme = theme => {
-    return theme === selectedTheme;
-  };
 
   const afterLoad = (origin, destination, direction) => {
     if (destination.isLast) {
@@ -178,66 +166,11 @@ const Event = ({
                               );
                             })}
                           </Row>
-                          <Row
-                            className={`grid__row bg-black theme-nav-container fade-first`}
-                          >
-                            <Col lg={3} md={2} />
-                            <Col lg={6} md={10} sm={12} xs={12}>
-                              <p className="pb-5">
-                                {event.themes.map((theme, index) => {
-                                  return (
-                                    <>
-                                      {index === 0 ? (
-                                        ''
-                                      ) : (
-                                        <span
-                                          className={`small-headline text-white fade-first ${
-                                            selectedTheme === null
-                                              ? 'text-opacity-100'
-                                              : 'text-opacity-20'
-                                          }
-                                 `}
-                                        >
-                                          {' '}
-                                          /{' '}
-                                        </span>
-                                      )}
-                                      <a
-                                        key={`theme-${index}`}
-                                        className={`small-headline text-white cursor-pointer fade-first ${
-                                          selectedTheme === null
-                                            ? 'text-opacity-100 hover:text-opacity-20'
-                                            : isSelectedTheme(
-                                                themeLookup[index].substring(1)
-                                              ) // remove hash
-                                            ? 'text-opacity-100'
-                                            : 'text-opacity-20 hover:text-opacity-50'
-                                        } `}
-                                        href={themeLookup[index]}
-                                        onClick={() =>
-                                          setSelectedTheme(
-                                            themeLookup[index].substring(1)
-                                          )
-                                        }
-                                      >
-                                        {ReactHtmlParser(theme)}
-                                      </a>
-                                    </>
-                                  );
-                                })}
-                              </p>
-                            </Col>
-                            <Col lg={3} />
-                            <Col lg={1} md={2} />
-                            <Col lg={11} md={10} sm={12} xs={12}>
-                              <p className="border-b border-white border-opacity-20 fade-first" />
-                            </Col>
-                          </Row>
-                          {event.sections.map((section, index) => {
+                          {event.sections.map((section, sectionIndex) => {
                             return (
                               <section
-                                key={`section-${index}`}
-                                id={event.themes[index]
+                                key={`section-${sectionIndex}`}
+                                id={event.themes[sectionIndex]
                                   .replace(/\s+/g, '-')
                                   .toLowerCase()}
                               >
@@ -251,35 +184,49 @@ const Event = ({
                                           key={`paragraph-${index}`}
                                           className="contents"
                                         >
-                                          <Col lg={3} md={2} />
-                                          <Col lg={6} md={10} sm={12} xs={12}>
+                                          <Col lg={1} md={2} />
+                                          <Col
+                                            lg={11}
+                                            md={10}
+                                            sm={12}
+                                            xs={12}
+                                            className="border-t border-white"
+                                            style={{
+                                              '--tw-border-opacity': '0.15',
+                                              paddingBottom: '30px'
+                                            }}
+                                          />
+                                          <Col lg={1} md={2} />
+                                          <Col lg={5} md={3} sm={12} xs={12}>
+                                            <p className="small-headline text-white">
+                                              {event.themes[sectionIndex]}
+                                            </p>
+                                            <br />
+                                          </Col>
+                                          <Col lg={6} md={7} sm={12} xs={12}>
                                             <p
                                               className={`small-headline text-white fade-first`}
-                                              style={{ paddingTop: '43px' }}
                                             >
                                               {ReactHtmlParser(paragraph)}
-                                              <br />
-                                              <br />
                                             </p>
+                                            <br />
                                           </Col>
-                                          <Col lg={3} />
                                         </div>
                                       ) : (
                                         <div
                                           key={`paragraph-${index}`}
                                           className="contents"
                                         >
-                                          <Col lg={3} md={2} />
-                                          <Col lg={4} md={10} sm={12} xs={12}>
+                                          <Col lg={6} md={5} />
+                                          <Col lg={5} md={7} sm={12} xs={12}>
                                             <p
                                               className={`small-body-2 text-white fade-first`}
                                             >
                                               {ReactHtmlParser(paragraph)}
-                                              <br />
-                                              <br />
                                             </p>
+                                            <br />
                                           </Col>
-                                          <Col lg={5} />
+                                          <Col lg={1} />
                                         </div>
                                       );
                                     }
