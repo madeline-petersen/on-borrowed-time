@@ -51,29 +51,37 @@ const Event = ({
     }
   };
 
-  // get paragraphs
-  const container = document.querySelector('#event-paragraphs');
+  const getFilteredMatches = () => {
+    // get paragraphs
+    const container = document.querySelector('#event-paragraphs');
 
-  // get spans within paragraphs
-  let filteredMatches = [];
-  if (container) {
-    let matches = container.querySelectorAll('span');
-    let matchesArray = Array.prototype.slice.call(matches);
-    filteredMatches = matchesArray.filter(
-      element => element.classList.length === 0
-    );
-  }
+    // get spans within paragraphs
+    let filteredMatches = [];
+    if (container) {
+      let matches = container.querySelectorAll('span');
+      let matchesArray = Array.prototype.slice.call(matches);
+      filteredMatches = matchesArray.filter(
+        element => element.classList.length === 0
+      );
+    }
+    return filteredMatches;
+  };
 
-  // set onclick for spans
-  if (filteredMatches.length) {
-    filteredMatches.forEach((match, index) => {
-      match.onclick = function() {
-        openModal(event.resources[index]);
-      };
-    });
-  }
+  const setOnClicks = () => {
+    const filteredMatches = getFilteredMatches();
+
+    // set onclick for spans
+    if (filteredMatches.length) {
+      filteredMatches.forEach((match, index) => {
+        match.onclick = function() {
+          openModal(event.resources[index]);
+        };
+      });
+    }
+  };
 
   useEffect(() => {
+    setOnClicks();
     setIsTransitioning(false);
 
     // disabling all scrolling while animation plays
@@ -274,7 +282,7 @@ const Event = ({
                                   theme="white"
                                   data={section.resources}
                                   openModal={openModal}
-                                  matchesLength={filteredMatches.length}
+                                  matches={getFilteredMatches()}
                                   textColourClass={textColourClass}
                                   borderColourClass={borderColourClass}
                                 />
@@ -345,7 +353,7 @@ const Event = ({
                           <ResourceTable
                             data={event.resources}
                             openModal={openModal}
-                            matchesLength={filteredMatches.length}
+                            matches={getFilteredMatches()}
                             textColourClass={textColourClass}
                             borderColourClass={borderColourClass}
                           />
