@@ -29,7 +29,6 @@ const Event = ({
   isModalActive,
   setIsModalActive
 }) => {
-  const [selectedTheme, setSelectedTheme] = useState(null);
   const [headerHeight, setHeaderHeight] = useState('78px');
 
   const openModal = entry => {
@@ -73,17 +72,6 @@ const Event = ({
       fullpage_api.setKeyboardScrolling(true);
     }, 4250);
   }, [event]);
-
-  let themeLookup = [];
-  if (event.themes) {
-    themeLookup = event.themes.map(theme => {
-      return `#${theme.replace(/\s+/g, '-').toLowerCase()}`;
-    });
-  }
-
-  const isSelectedTheme = theme => {
-    return theme === selectedTheme;
-  };
 
   const afterLoad = (origin, destination, direction) => {
     if (destination.isLast) {
@@ -177,61 +165,6 @@ const Event = ({
                                 </div>
                               );
                             })}
-                          </Row>
-                          <Row
-                            className={`grid__row bg-black theme-nav-container fade-first`}
-                          >
-                            <Col lg={3} md={2} />
-                            <Col lg={6} md={10} sm={12} xs={12}>
-                              <p className="pb-5">
-                                {event.themes.map((theme, index) => {
-                                  return (
-                                    <>
-                                      {index === 0 ? (
-                                        ''
-                                      ) : (
-                                        <span
-                                          className={`small-headline text-white fade-first ${
-                                            selectedTheme === null
-                                              ? 'text-opacity-100'
-                                              : 'text-opacity-20'
-                                          }
-                                 `}
-                                        >
-                                          {' '}
-                                          /{' '}
-                                        </span>
-                                      )}
-                                      <a
-                                        key={`theme-${index}`}
-                                        className={`small-headline text-white cursor-pointer fade-first ${
-                                          selectedTheme === null
-                                            ? 'text-opacity-100 hover:text-opacity-20'
-                                            : isSelectedTheme(
-                                                themeLookup[index].substring(1)
-                                              ) // remove hash
-                                            ? 'text-opacity-100'
-                                            : 'text-opacity-20 hover:text-opacity-50'
-                                        } `}
-                                        href={themeLookup[index]}
-                                        onClick={() =>
-                                          setSelectedTheme(
-                                            themeLookup[index].substring(1)
-                                          )
-                                        }
-                                      >
-                                        {ReactHtmlParser(theme)}
-                                      </a>
-                                    </>
-                                  );
-                                })}
-                              </p>
-                            </Col>
-                            <Col lg={3} />
-                            <Col lg={1} md={2} />
-                            <Col lg={11} md={10} sm={12} xs={12}>
-                              <p className="border-b border-white border-opacity-20 fade-first" />
-                            </Col>
                           </Row>
                           {event.sections.map((section, index) => {
                             return (
