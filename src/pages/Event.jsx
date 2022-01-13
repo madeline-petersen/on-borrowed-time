@@ -329,9 +329,16 @@ const Event = ({
                                   className="contents"
                                 >
                                   <Col lg={1} md={2} />
-                                  <Col lg={11} md={10} sm={12} xs={12}>
+                                  <Col
+                                    lg={11}
+                                    md={10}
+                                    sm={12}
+                                    xs={12}
+                                    className="highlight"
+                                  >
                                     <p
-                                      className={`large-headline-dynamic ${textColourClass} fade-first`}
+                                      // className={`large-headline-dynamic ${textColourClass} fade-first`}
+                                      className={`large-headline-dynamic fade-first`}
                                       style={{ textIndent: getTextIndent() }}
                                     >
                                       {ReactHtmlParser(paragraph)}

@@ -116,13 +116,34 @@ $quarterHeight: calc(30vh - #{$a});
   padding-top: calc(#{$quarterHeight} - 20px);
 }
 
-#event-paragraphs {
-  span {
-    transition: opacity 0.5s;
+// #event-paragraphs {
+//   span {
+//     transition: opacity 0.5s;
+//   }
+
+//   span:hover {
+//     cursor: pointer;
+//     opacity: 0.5;
+//   }
+// }
+
+div.highlight {
+  color: #333333;
+  * {
+    transition: color 0.1s linear;
   }
 
-  span:hover {
+  // make sure span keeps this color
+  span {
+    color: #333333 !important;
     cursor: pointer;
-    opacity: 0.5;
+  }
+
+  /*
+    change the text-color on hover, the color 
+    in span will not change due to !important.
+  */
+  &:hover {
+    color: #8d8d8d; // gray-50
   }
 }
