@@ -2,7 +2,7 @@ import { Col, Row } from 'react-grid-system';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactHtmlParser from 'react-html-parser';
 
 const ResourceTable = ({
@@ -11,7 +11,8 @@ const ResourceTable = ({
   openModal,
   matches,
   textColourClass,
-  borderColourClass
+  borderColourClass,
+  setOnClicks
 }) => {
   console.log(matches);
   let themeTextClass = 'text-black';
@@ -29,6 +30,10 @@ const ResourceTable = ({
   if (borderColourClass) {
     themeBorderClass = borderColourClass;
   }
+
+  useEffect(() => {
+    setOnClicks();
+  }, []);
 
   return (
     <>
@@ -128,7 +133,8 @@ ResourceTable.propTypes = {
   openModal: PropTypes.func,
   matches: PropTypes.arrayOf(PropTypes.node),
   textColourClass: PropTypes.string,
-  borderColourClass: PropTypes.string
+  borderColourClass: PropTypes.string,
+  setOnClicks: PropTypes.func
 };
 
 export default ResourceTable;

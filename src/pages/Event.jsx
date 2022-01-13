@@ -51,9 +51,9 @@ const Event = ({
     }
   };
 
-  const getFilteredMatches = () => {
+  const getFilteredMatches = id => {
     // get paragraphs
-    const container = document.querySelector('#event-paragraphs');
+    const container = document.querySelector(`#${id}`);
 
     // get spans within paragraphs
     let filteredMatches = [];
@@ -67,21 +67,24 @@ const Event = ({
     return filteredMatches;
   };
 
-  const setOnClicks = () => {
-    const filteredMatches = getFilteredMatches();
+  const setOnClicks = (id, sectionIndex) => {
+    const filteredMatches = getFilteredMatches(id);
 
     // set onclick for spans
     if (filteredMatches.length) {
       filteredMatches.forEach((match, index) => {
         match.onclick = function() {
-          openModal(event.resources[index]);
+          if (year.id === '2020') {
+            openModal(event.sections[sectionIndex].resources[index]);
+          } else {
+            openModal(event.resources[index]);
+          }
         };
       });
     }
   };
 
   useEffect(() => {
-    setOnClicks();
     setIsTransitioning(false);
 
     // disabling all scrolling while animation plays
@@ -145,11 +148,8 @@ const Event = ({
             render={({ state, fullpageApi }) => {
               return (
                 <ReactFullpage.Wrapper>
-                  <div
-                    className={`section ${colourBackgroundClass}`}
-                    style={{ height: 'max-content' }}
-                  >
-                    <Container className="min-h-screen grid__container">
+                  <div className={`section ${colourBackgroundClass}`}>
+                    <Container className="grid__container">
                       {/* Event */}
                       {event && (
                         <div className="delayed-fade-in">
@@ -167,17 +167,6 @@ const Event = ({
                                   <Col lg={11} md={10} sm={12} xs={12}>
                                     <p
                                       className={`large-headline-dynamic text-white fade-first`}
-                                      // style={{
-                                      //   textIndent: [
-                                      //     'lg',
-                                      //     'xl',
-                                      //     'xxl'
-                                      //   ].includes(screenClass)
-                                      //     ? `calc(200%/11)` // indent 2/11 columns for large
-                                      //     : ['md'].includes(screenClass)
-                                      //     ? `calc(200%/10)` // indent 2/10 columns for medium
-                                      //     : '0' // indent 0 for small, x-small
-                                      // }}
                                       style={{ textIndent: getTextIndent() }}
                                     >
                                       {ReactHtmlParser(paragraph)}
@@ -190,15 +179,15 @@ const Event = ({
                             })}
                           </Row>
                           {event.sections.map((section, sectionIndex) => {
+                            const sectionId = event.themes[sectionIndex]
+                              .replace(/\s+/g, '-')
+                              .replace('&', 'and')
+                              .toLowerCase();
                             return (
-                              <section
-                                key={`section-${sectionIndex}`}
-                                id={event.themes[sectionIndex]
-                                  .replace(/\s+/g, '-')
-                                  .toLowerCase()}
-                              >
+                              <section key={`section-${sectionIndex}`}>
                                 <Row
                                   className={`grid__row intro-paragraph pb-24`}
+                                  id={sectionId}
                                 >
                                   {section.paragraphs.map(
                                     (paragraph, index) => {
@@ -282,13 +271,17 @@ const Event = ({
                                   theme="white"
                                   data={section.resources}
                                   openModal={openModal}
-                                  matches={getFilteredMatches()}
+                                  matches={getFilteredMatches(sectionId)}
                                   textColourClass={textColourClass}
                                   borderColourClass={borderColourClass}
+                                  setOnClicks={() =>
+                                    setOnClicks(sectionId, sectionIndex)
+                                  }
                                 />
                               </section>
                             );
                           })}
+
                           {/* padding below last resource table */}
                           <div className="pb-16" />
                         </div>
@@ -321,7 +314,7 @@ const Event = ({
               return (
                 <ReactFullpage.Wrapper>
                   <div className={`section h-auto ${colourBackgroundClass}`}>
-                    <Container className="min-h-screen grid__container">
+                    <Container className="grid__container">
                       {/* Event */}
                       {event && (
                         <div className={`delayed-fade-in`}>
@@ -353,9 +346,10 @@ const Event = ({
                           <ResourceTable
                             data={event.resources}
                             openModal={openModal}
-                            matches={getFilteredMatches()}
+                            matches={getFilteredMatches('event-paragraphs')}
                             textColourClass={textColourClass}
                             borderColourClass={borderColourClass}
+                            setOnClicks={() => setOnClicks('event-paragraphs')}
                           />
 
                           {event.imageLayout && (
