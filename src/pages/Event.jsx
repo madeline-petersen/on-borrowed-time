@@ -244,10 +244,22 @@ const Event = ({
                                     }
                                   )}
                                 </Row>
+                                <ResourceTable
+                                  theme="white"
+                                  data={section.resources}
+                                  openModal={openModal}
+                                  matches={getFilteredMatches(sectionId)}
+                                  textColourClass={textColourClass}
+                                  borderColourClass={borderColourClass}
+                                  setOnClicks={() =>
+                                    setOnClicks(sectionId, sectionIndex)
+                                  }
+                                  fullWidth={true}
+                                />
                                 {section.image && (
-                                  <Row className="pb-16 grid__row">
-                                    <Col lg={3} md={2} />
-                                    <Col lg={9} md={10} sm={12} xs={12}>
+                                  <Row className="pt-20 grid__row">
+                                    <Col lg={1} md={2} />
+                                    <Col lg={11} md={10} sm={12} xs={12}>
                                       <div
                                         className="fade-first aspect-ratio"
                                         style={{
@@ -267,17 +279,6 @@ const Event = ({
                                     </Col>
                                   </Row>
                                 )}
-                                <ResourceTable
-                                  theme="white"
-                                  data={section.resources}
-                                  openModal={openModal}
-                                  matches={getFilteredMatches(sectionId)}
-                                  textColourClass={textColourClass}
-                                  borderColourClass={borderColourClass}
-                                  setOnClicks={() =>
-                                    setOnClicks(sectionId, sectionIndex)
-                                  }
-                                />
                               </section>
                             );
                           })}
@@ -357,6 +358,7 @@ const Event = ({
                             textColourClass={textColourClass}
                             borderColourClass={borderColourClass}
                             setOnClicks={() => setOnClicks('event-paragraphs')}
+                            fullWidth={false}
                           />
 
                           {event.imageLayout && (
