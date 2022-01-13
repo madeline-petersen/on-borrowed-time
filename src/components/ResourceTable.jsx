@@ -2,17 +2,19 @@ import { Col, Row } from 'react-grid-system';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactHtmlParser from 'react-html-parser';
 
 const ResourceTable = ({
   theme,
   data,
   openModal,
-  matchesLength,
+  matches,
   textColourClass,
-  borderColourClass
+  borderColourClass,
+  setOnClicks
 }) => {
+  console.log(matches);
   let themeTextClass = 'text-black';
   let themeBorderClass = 'border-black';
 
@@ -28,6 +30,10 @@ const ResourceTable = ({
   if (borderColourClass) {
     themeBorderClass = borderColourClass;
   }
+
+  useEffect(() => {
+    setOnClicks();
+  }, []);
 
   return (
     <>
@@ -61,7 +67,7 @@ const ResourceTable = ({
             >
               <Col lg={4} md={4} sm={4} xs={12} className="small-body">
                 <p className={`${themeTextClass} text-opacity-100 fade-second`}>
-                  {index < matchesLength && (
+                  {index < matches.length && (
                     <span className="absolute sm:-left-4 md:-left-8">
                       {index + 1}
                     </span>
@@ -125,9 +131,10 @@ ResourceTable.propTypes = {
   theme: PropTypes.string,
   data: PropTypes.arrayOf(PropTypes.shape()),
   openModal: PropTypes.func,
-  matchesLength: PropTypes.number,
+  matches: PropTypes.arrayOf(PropTypes.node),
   textColourClass: PropTypes.string,
-  borderColourClass: PropTypes.string
+  borderColourClass: PropTypes.string,
+  setOnClicks: PropTypes.func
 };
 
 export default ResourceTable;
