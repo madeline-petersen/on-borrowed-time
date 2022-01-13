@@ -335,7 +335,11 @@ const Event = ({
                                     md={10}
                                     sm={12}
                                     xs={12}
-                                    className="highlight"
+                                    className={`highlight ${
+                                      ['1989', '1997'].includes(year.id)
+                                        ? 'light'
+                                        : 'dark'
+                                    }`}
                                   >
                                     <p
                                       // className={`large-headline-dynamic ${textColourClass} fade-first`}
