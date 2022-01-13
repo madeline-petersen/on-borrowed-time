@@ -215,9 +215,15 @@ const Event = ({
                                             </p>
                                             <br />
                                           </Col>
-                                          <Col lg={6} md={7} sm={12} xs={12}>
+                                          <Col
+                                            lg={6}
+                                            md={7}
+                                            sm={12}
+                                            xs={12}
+                                            className="highlight light"
+                                          >
                                             <p
-                                              className={`small-headline text-white fade-first`}
+                                              className={`small-headline fade-first`}
                                             >
                                               {ReactHtmlParser(paragraph)}
                                             </p>
@@ -230,9 +236,15 @@ const Event = ({
                                           className="contents"
                                         >
                                           <Col lg={6} md={5} />
-                                          <Col lg={5} md={7} sm={12} xs={12}>
+                                          <Col
+                                            lg={5}
+                                            md={7}
+                                            sm={12}
+                                            xs={12}
+                                            className="highlight light"
+                                          >
                                             <p
-                                              className={`small-body-2 text-white fade-first`}
+                                              className={`small-body-2 fade-first`}
                                             >
                                               {ReactHtmlParser(paragraph)}
                                             </p>
