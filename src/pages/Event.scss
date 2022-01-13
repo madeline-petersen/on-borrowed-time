@@ -128,14 +128,14 @@ $quarterHeight: calc(30vh - #{$a});
 // }
 
 div.highlight {
-  color: #333333;
+  color: black;
   * {
     transition: color 0.1s linear;
   }
 
   // make sure span keeps this color
   span {
-    color: #333333 !important;
+    color: black !important;
     cursor: pointer;
   }
 
