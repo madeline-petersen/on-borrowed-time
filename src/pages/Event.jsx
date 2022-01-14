@@ -354,7 +354,6 @@ const Event = ({
                                     }`}
                                   >
                                     <p
-                                      // className={`large-headline-dynamic ${textColourClass} fade-first`}
                                       className={`large-headline-dynamic fade-first`}
                                       style={{ textIndent: getTextIndent() }}
                                     >
