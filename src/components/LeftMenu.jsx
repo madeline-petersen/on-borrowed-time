@@ -30,7 +30,6 @@ const LeftMenu = ({
     let romanSceneNumber = roman.toRoman(sceneIndex + 1).toUpperCase();
     setTimeout(function() {
       navigateTo(year, romanSceneNumber, 'event');
-      setSelectedYear(null);
     }, 500);
   };
 
@@ -38,7 +37,6 @@ const LeftMenu = ({
     closeModal();
     setTimeout(function() {
       navigateTo(year);
-      setSelectedYear(null);
     }, 500);
   };
 
@@ -46,7 +44,6 @@ const LeftMenu = ({
     closeModal();
     setTimeout(function() {
       navigateTo(url);
-      setSelectedYear(null);
     }, 500);
   };
 

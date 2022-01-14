@@ -98,7 +98,7 @@ const UIShell = props => {
     // show "On Borrowed Time" after menu closes
     setTimeout(function() {
       setSelectedYear(null);
-    }, 500);
+    }, 1500);
   };
 
   useEffect(() => {
