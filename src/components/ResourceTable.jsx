@@ -43,9 +43,7 @@ const ResourceTable = ({
       {data.map((entry, index) => {
         return (
           <Row
-            className={`grid__row resource-table-row transition-all cursor-pointer ${
-              index === 0 ? 'pt-4' : ''
-            }`}
+            className="grid__row resource-table-row transition-all cursor-pointer"
             key={`table-row-${index}`}
             onClick={() => openModal(entry)}
           >
