@@ -367,7 +367,7 @@ const Event = ({
                             })}
                           </Row>
                         </Container>
-                        <Container className="grid__container">
+                        <Container className="grid__container resource-table-container transition-all">
                           <ResourceTable
                             data={event.resources}
                             openModal={openModal}
