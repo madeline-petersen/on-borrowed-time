@@ -22,6 +22,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
+  const [showSiteTitle, setShowSiteTitle] = useState(true);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [selectedYear, setSelectedYear] = useState(null);
@@ -96,6 +97,11 @@ const UIShell = props => {
     setIsMenuActive(false);
 
     // show "On Borrowed Time" after menu closes
+    setTimeout(function() {
+      setShowSiteTitle(true);
+    }, 750);
+
+    // reset menu to initial state
     setTimeout(function() {
       setSelectedYear(null);
     }, 1500);
@@ -246,6 +252,7 @@ const UIShell = props => {
         setIsTransitioning={setIsTransitioning}
         selectedYear={selectedYear}
         setSelectedYear={setSelectedYear}
+        setShowSiteTitle={setShowSiteTitle}
       />
       <Anecdote
         {...anecdoteData}
@@ -271,7 +278,12 @@ const UIShell = props => {
           isMenuActive ? 'fade-in' : 'fade-out'
         } ${timelineClasses}`}
         onClick={
-          selectedYear !== null ? () => setSelectedYear(null) : toggleLeftMenu
+          selectedYear !== null
+            ? () => {
+                setSelectedYear(null);
+                setShowSiteTitle(true);
+              }
+            : toggleLeftMenu
         }
       >
         {selectedYear !== null ? <ArrowLeft20 /> : <Close20 />}
@@ -279,7 +291,7 @@ const UIShell = props => {
       <Link
         to="/home" // to do: change to "/" when homepage moves
         className={`absolute z-40 medium-caption page-title ${timelineClasses} ${
-          selectedYear === null
+          showSiteTitle
             ? 'opacity-100 cursor-pointer'
             : 'opacity-0 pointer-events-none'
         }`}

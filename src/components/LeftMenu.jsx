@@ -13,7 +13,8 @@ const LeftMenu = ({
   years,
   navigateTo,
   selectedYear,
-  setSelectedYear
+  setSelectedYear,
+  setShowSiteTitle
 }) => {
   const menu = document.getElementById('menu-card');
   const menuBackground = document.getElementById('menu-background-filler');
@@ -34,10 +35,20 @@ const LeftMenu = ({
   };
 
   const onClickYear = year => {
+    setShowSiteTitle(true);
     closeModal();
     setTimeout(function() {
       navigateTo(year);
     }, 500);
+  };
+
+  const onSelectYear = (year, index) => {
+    setShowSiteTitle(false);
+    setSelectedYear({
+      id: year.id,
+      index: index,
+      ...year
+    });
   };
 
   const onClickLink = url => {
@@ -107,11 +118,7 @@ const LeftMenu = ({
                               'fade-out-content'}`}
                             onClick={() =>
                               selectedYear === null
-                                ? setSelectedYear({
-                                    id: year.id,
-                                    index: index,
-                                    ...year
-                                  })
+                                ? onSelectYear(year, index)
                                 : onClickYear(year.id)
                             }
                           >
@@ -245,7 +252,8 @@ LeftMenu.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
   navigateTo: PropTypes.func,
   selectedYear: PropTypes.shape(),
-  setSelectedYear: PropTypes.func
+  setSelectedYear: PropTypes.func,
+  setShowSiteTitle: PropTypes.func
 };
 
 export default LeftMenu;
