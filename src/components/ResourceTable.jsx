@@ -15,7 +15,6 @@ const ResourceTable = ({
   setOnClicks,
   fullWidth
 }) => {
-  console.log(matches);
   let themeTextClass = 'text-black';
   let themeBorderClass = 'border-black';
 
