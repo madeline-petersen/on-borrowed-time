@@ -259,7 +259,7 @@ const UIShell = props => {
       />
 
       <span
-        className={`absolute text-3xl cursor-pointer z-40 left-menu-bullet ${
+        className={`absolute cursor-pointer z-40 left-menu-bullet ${
           isMenuActive ? 'fade-out' : 'fade-in'
         } ${timelineClasses}`}
         onClick={toggleLeftMenu}
@@ -267,7 +267,7 @@ const UIShell = props => {
         &#8226;
       </span>
       <span
-        className={`absolute text-3xl cursor-pointer z-40 left-menu-close ${
+        className={`absolute cursor-pointer z-40 left-menu-close ${
           isMenuActive ? 'fade-in' : 'fade-out'
         } ${timelineClasses}`}
         onClick={
