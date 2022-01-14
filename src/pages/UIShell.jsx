@@ -37,7 +37,7 @@ const UIShell = props => {
     if (year && romanSceneNumber && page) {
       history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
     } else if (year) {
-      if (year !== props.year.id) {
+      if (year !== props.year.id && props.pageId !== 'home') {
         // inter-year
         setTimeout(() => {
           history.push(`/${year}`);
