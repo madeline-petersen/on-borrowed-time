@@ -80,88 +80,86 @@ const Reflection = ({
                   >
                     {/* Final Reflection */}
                     <div className="foreground-fade-in">
-                      <div className="footer-spacer">
-                        <Row
-                          className="pb-5 grid__row"
-                          style={{ paddingTop: '20vh' }}
-                        >
-                          {reflection.paragraphs[0] &&
-                            reflection.paragraphs[0].map((paragraph, index) => {
-                              return (
-                                <span
-                                  key={`paragraph-${index}`}
-                                  className="contents"
-                                >
-                                  <Col lg={1} />
-                                  <Col lg={11} md={12}>
-                                    <p
-                                      className={`medium-headline text-white fade-first`}
-                                    >
-                                      {ReactHtmlParser(paragraph)}
-                                    </p>
-                                    <br />
-                                    <br />
-                                  </Col>
-                                </span>
-                              );
-                            })}
-                          {reflection.paragraphs[1] &&
-                            reflection.paragraphs[1].map((paragraph, index) => {
-                              return (
-                                <span
-                                  key={`paragraph-${index}`}
-                                  className="contents"
-                                >
-                                  <Col lg={3} />
-                                  <Col lg={6} md={12}>
-                                    <p
-                                      className={`medium-body text-white text-opacity-70 fade-second`}
-                                    >
-                                      {ReactHtmlParser(paragraph)}
-                                      <br />
-                                      <br />
-                                    </p>
-                                  </Col>
-                                  <Col lg={3} />
-                                </span>
-                              );
-                            })}
-                        </Row>
-                        {reflection.citations && (
-                          <Row className="grid__row pb-24">
-                            <Col lg={3} />
-                            <Col lg={6} md={12}>
-                              <p className="pb-5 border-t border-white border-opacity-20 fade-second" />
-                              {reflection.citations.map(({ text, linkTo }) => {
-                                return (
-                                  <a
-                                    key={linkTo}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href={linkTo}
-                                    className={`transition-all text-white text-opacity-50 small-body ${
-                                      linkTo ? 'hover:text-opacity-100' : ''
-                                    }`}
+                      <Row
+                        className="pb-5 grid__row"
+                        style={{ paddingTop: '20vh' }}
+                      >
+                        {reflection.paragraphs[0] &&
+                          reflection.paragraphs[0].map((paragraph, index) => {
+                            return (
+                              <span
+                                key={`paragraph-${index}`}
+                                className="contents"
+                              >
+                                <Col lg={1} />
+                                <Col lg={11} md={12}>
+                                  <p
+                                    className={`medium-headline text-white fade-first`}
                                   >
-                                    <p className="flex mb-4 fade-second flex-start">
-                                      <span>
-                                        {ReactHtmlParser(text)}
-                                        {linkTo && (
-                                          <ArrowUpRight16
-                                            className="inline-block ml-1"
-                                            style={{ minWidth: '16px' }}
-                                          />
-                                        )}
-                                      </span>
-                                    </p>
-                                  </a>
-                                );
-                              })}
-                            </Col>
-                            <Col lg={3} />
-                          </Row>
-                        )}
-                      </div>
+                                    {ReactHtmlParser(paragraph)}
+                                  </p>
+                                  <br />
+                                  <br />
+                                </Col>
+                              </span>
+                            );
+                          })}
+                        {reflection.paragraphs[1] &&
+                          reflection.paragraphs[1].map((paragraph, index) => {
+                            return (
+                              <span
+                                key={`paragraph-${index}`}
+                                className="contents"
+                              >
+                                <Col lg={3} />
+                                <Col lg={6} md={12}>
+                                  <p
+                                    className={`medium-body text-white text-opacity-70 fade-second`}
+                                  >
+                                    {ReactHtmlParser(paragraph)}
+                                    <br />
+                                    <br />
+                                  </p>
+                                </Col>
+                                <Col lg={3} />
+                              </span>
+                            );
+                          })}
+                      </Row>
+                      {reflection.citations && (
+                        <Row className="grid__row pb-48">
+                          <Col lg={3} />
+                          <Col lg={6} md={12}>
+                            <p className="pb-5 border-t border-white border-opacity-20 fade-second" />
+                            {reflection.citations.map(({ text, linkTo }) => {
+                              return (
+                                <a
+                                  key={linkTo}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  href={linkTo}
+                                  className={`transition-all text-white text-opacity-50 small-body ${
+                                    linkTo ? 'hover:text-opacity-100' : ''
+                                  }`}
+                                >
+                                  <p className="flex mb-4 fade-second flex-start">
+                                    <span>
+                                      {ReactHtmlParser(text)}
+                                      {linkTo && (
+                                        <ArrowUpRight16
+                                          className="inline-block ml-1"
+                                          style={{ minWidth: '16px' }}
+                                        />
+                                      )}
+                                    </span>
+                                  </p>
+                                </a>
+                              );
+                            })}
+                          </Col>
+                          <Col lg={3} />
+                        </Row>
+                      )}
                     </div>
                   </Container>
                   {next && (
