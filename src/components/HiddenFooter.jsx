@@ -42,12 +42,10 @@ const HiddenFooter = ({
       >
         <Col lg={1} className="cursor-default" />
         <Col lg={2} md={3} sm={3} xs={3}>
-          <p className={`small-body pb-4 pt-4 ${textClasses} fade-in-element`}>
-            Up Next
-          </p>
+          <p className={`small-body pb-4 pt-4 ${textClasses}`}>Up Next</p>
         </Col>
         <Col lg={2} md={2} sm={2} xs={2}>
-          <p className={`small-body pb-4 pt-4 ${textClasses} fade-in-element`}>
+          <p className={`small-body pb-4 pt-4 ${textClasses}`}>
             {/* current scene, next scene, next year */}
             {changingParam === 'year'
               ? nextParams.year
@@ -61,11 +59,11 @@ const HiddenFooter = ({
           xs={7}
           style={{ display: 'flex', justifyContent: 'space-between' }}
         >
-          <p className={`small-body pb-4 pt-4 ${textClasses} fade-in-element`}>
+          <p className={`small-body pb-4 pt-4 ${textClasses}`}>
             {/* next page, next scene, next year */}
             {ReactHtmlParser(next.title)}
           </p>
-          <p className={`pb-4 pt-4 ${textClasses} fade-in-element`}>
+          <p className={`pb-4 pt-4 ${textClasses}`}>
             {pageId === 'intro' ? <ArrowRight16 /> : <ArrowDown16 />}
           </p>
         </Col>

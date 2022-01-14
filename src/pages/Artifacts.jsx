@@ -9,6 +9,7 @@ import Custom from '../components/imageLayouts/Custom';
 import 'fullpage.js/vendors/scrolloverflow';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { throttle } from 'lodash';
+import './Artifacts.scss';
 
 const Artifacts = ({
   artifacts,
@@ -70,10 +71,11 @@ const Artifacts = ({
             return (
               <ReactFullpage.Wrapper>
                 <div className={`section h-auto bg-black`}>
-                  <Container className="min-h-screen grid__container">
+                  <Container className="min-h-screen grid__container caption-fade-in">
                     {/* Artifacts */}
                     {artifacts && (
                       <>
+                        <div style={{ height: '20vh' }} />
                         {artifacts.imageLayout &&
                           artifacts.imageLayout.type === 'custom' && (
                             <Custom images={artifacts.imageLayout.images} />

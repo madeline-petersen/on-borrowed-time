@@ -13,7 +13,7 @@ const Custom = ({ images }) => {
             <Col lg={1} />
             <Col lg={11} md={12}>
               <div
-                className="fade-first aspect-ratio"
+                className="aspect-ratio reveal"
                 style={{
                   paddingTop: `calc(${image.height}/${image.width} * 100%)`,
                   backgroundImage: `url('/images/${image.source}')`
@@ -22,7 +22,7 @@ const Custom = ({ images }) => {
             </Col>
             <Col lg={3} />
             <Col lg={4} md={4}>
-              <p className={`small-body text-white mt-8 fade-first`}>
+              <p className={`small-body text-white mt-8 fade-in-element`}>
                 {ReactHtmlParser(image.caption)}
               </p>
             </Col>
@@ -32,7 +32,7 @@ const Custom = ({ images }) => {
             <Col lg={3} />
             <Col lg={7} md={12}>
               <div
-                className="fade-first aspect-ratio"
+                className="aspect-ratio reveal"
                 style={{
                   paddingTop: `calc(${image.height}/${image.width} * 100%)`,
                   backgroundImage: `url('/images/${image.source}')`
@@ -41,7 +41,7 @@ const Custom = ({ images }) => {
             </Col>
             <Col lg={3} />
             <Col lg={4} md={4}>
-              <p className={`small-body text-white mt-5 fade-first`}>
+              <p className={`small-body text-white mt-5 fade-in-element`}>
                 {ReactHtmlParser(image.caption)}
               </p>
             </Col>
