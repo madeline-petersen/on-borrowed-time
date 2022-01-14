@@ -158,6 +158,21 @@ $xxl-minus-1: 1799px;
     // fade in blurb/scenes
     top: calc(264px + 12px);
 
+    .scene-container {
+      * {
+        transition: opacity 0.1s linear;
+      }
+      &:hover {
+        span > div {
+          opacity: 0.5;
+        }
+
+        span:hover > div {
+          opacity: 1 !important;
+        }
+      }
+    }
+
     @keyframes scenes-fade-in {
       0% {
         opacity: 0;

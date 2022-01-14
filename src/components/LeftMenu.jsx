@@ -203,6 +203,8 @@ const LeftMenu = ({
                               ReactHtmlParser(selectedYear.description)}
                           </div>
                         </Col>
+                      </Row>
+                      <Row className={`small-body text-white scene-container`}>
                         {selectedYear &&
                           selectedYear.scenes.map((scene, index) => (
                             <span
