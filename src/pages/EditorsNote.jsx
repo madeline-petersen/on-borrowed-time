@@ -16,7 +16,7 @@ const EditorsNote = () => {
   return (
     <>
       <Helmet>
-        <title>On Borrowed Time | Editor&rsquo;s Note</title>
+        <title>Editor&rsquo;s Note | On Borrowed Time</title>
       </Helmet>
       <ReactFullpage
         licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}

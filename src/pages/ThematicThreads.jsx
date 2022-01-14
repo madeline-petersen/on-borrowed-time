@@ -25,7 +25,7 @@ const ThematicThreads = ({ backgroundColor }) => {
       className={`thematic-threads h-auto black-white-background ${backgroundColor}`}
     >
       <Helmet>
-        <title>On Borrowed Time | Thematic Threads</title>
+        <title>Thematic Threads | On Borrowed Time</title>
       </Helmet>
       <Container className="grid__container min-h-screen">
         <Row

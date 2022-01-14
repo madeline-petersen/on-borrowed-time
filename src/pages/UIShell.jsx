@@ -216,9 +216,9 @@ const UIShell = props => {
   return (
     <>
       <Helmet>
-        <title>{`On Borrowed Time | ${ReactHtmlParser(
-          props.scene?.title || props.year?.title
-        )}`}</title>
+        <title>{`${ReactHtmlParser(
+          props.scene?.title || `${props.year?.id} ${props.year?.title}`
+        )} | On Borrowed Time`}</title>
       </Helmet>
       <Header
         currentYear={props.year.id}
