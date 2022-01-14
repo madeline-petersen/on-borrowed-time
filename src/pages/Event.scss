@@ -116,20 +116,10 @@ $quarterHeight: calc(30vh - #{$a});
   padding-top: calc(#{$quarterHeight} - 20px);
 }
 
-// #event-paragraphs {
-//   span {
-//     transition: opacity 0.5s;
-//   }
-
-//   span:hover {
-//     cursor: pointer;
-//     opacity: 0.5;
-//   }
-// }
 div.highlight.dark {
   color: black;
   * {
-    transition: color 0.1s linear;
+    transition: color 1s linear;
   }
 
   // make sure span keeps this color
@@ -150,7 +140,7 @@ div.highlight.dark {
 div.highlight.light {
   color: white;
   * {
-    transition: color 0.1s linear;
+    transition: color 1s linear;
   }
 
   // make sure span keeps this color
