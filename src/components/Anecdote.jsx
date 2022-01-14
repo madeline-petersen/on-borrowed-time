@@ -157,7 +157,7 @@ const Anecdote = ({
                         rel="noopener noreferrer"
                         href={linkTo}
                       >
-                        <p className="small-body text-black text-opacity-60">
+                        <p className="small-body text-black text-opacity-60 hover:text-opacity-80">
                           {ReactHtmlParser(citation)}
                         </p>
                       </a>
@@ -218,7 +218,7 @@ const Anecdote = ({
                     <div className="h-12" />
                     <p className="border-t border-black border-opacity-10 pb-5" />
                     <a target="_blank" rel="noopener noreferrer" href={linkTo}>
-                      <p className="small-body text-black text-opacity-60">
+                      <p className="small-body text-black text-opacity-60 hover:text-opacity-80">
                         {ReactHtmlParser(citation)}
                       </p>
                     </a>
@@ -272,7 +272,7 @@ const Anecdote = ({
                     <div className="h-12" />
                     <p className="border-t border-black border-opacity-10 pb-5" />
                     <a target="_blank" rel="noopener noreferrer" href={linkTo}>
-                      <p className="small-body text-black text-opacity-60">
+                      <p className="small-body text-black text-opacity-60 hover:text-opacity-80">
                         {ReactHtmlParser(citation)}
                       </p>
                     </a>
