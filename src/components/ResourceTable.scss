@@ -1,0 +1,13 @@
+.resource-table-container {
+  &:hover {
+    .resource-table-row {
+      opacity: 0.5;
+    }
+  }
+
+  .resource-table-row {
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+}

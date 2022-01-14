@@ -149,10 +149,10 @@ const Event = ({
               return (
                 <ReactFullpage.Wrapper>
                   <div className={`section ${colourBackgroundClass}`}>
-                    <Container className="grid__container">
-                      {/* Event */}
-                      {event && (
-                        <div className="delayed-fade-in">
+                    {/* Event */}
+                    {event && (
+                      <div className="delayed-fade-in">
+                        <Container className="grid__container">
                           <Row
                             className={`grid__row intro-paragraph pb-24`}
                             id="event-paragraphs"
@@ -178,13 +178,15 @@ const Event = ({
                               );
                             })}
                           </Row>
-                          {event.sections.map((section, sectionIndex) => {
-                            const sectionId = event.themes[sectionIndex]
-                              .replace(/\s+/g, '-')
-                              .replace('&', 'and')
-                              .toLowerCase();
-                            return (
-                              <section key={`section-${sectionIndex}`}>
+                        </Container>
+                        {event.sections.map((section, sectionIndex) => {
+                          const sectionId = event.themes[sectionIndex]
+                            .replace(/\s+/g, '-')
+                            .replace('&', 'and')
+                            .toLowerCase();
+                          return (
+                            <section key={`section-${sectionIndex}`}>
+                              <Container className="grid__container">
                                 <Row
                                   className={`grid__row intro-paragraph pb-24`}
                                   id={sectionId}
@@ -256,6 +258,8 @@ const Event = ({
                                     }
                                   )}
                                 </Row>
+                              </Container>
+                              <Container className="grid__container resource-table-container transition-all">
                                 <ResourceTable
                                   theme="white"
                                   data={section.resources}
@@ -268,6 +272,8 @@ const Event = ({
                                   }
                                   fullWidth={true}
                                 />
+                              </Container>
+                              <Container className="grid__container">
                                 {section.image && (
                                   <Row className="pt-20 grid__row">
                                     <Col lg={1} md={2} />
@@ -291,15 +297,15 @@ const Event = ({
                                     </Col>
                                   </Row>
                                 )}
-                              </section>
-                            );
-                          })}
+                              </Container>
+                            </section>
+                          );
+                        })}
 
-                          {/* padding below last resource table */}
-                          <div className="pb-16" />
-                        </div>
-                      )}
-                    </Container>
+                        {/* padding below last resource table */}
+                        <div className="pb-16" />
+                      </div>
+                    )}
                   </div>
                 </ReactFullpage.Wrapper>
               );
@@ -327,10 +333,10 @@ const Event = ({
               return (
                 <ReactFullpage.Wrapper>
                   <div className={`section h-auto ${colourBackgroundClass}`}>
-                    <Container className="grid__container">
-                      {/* Event */}
-                      {event && (
-                        <div className={`delayed-fade-in`}>
+                    {/* Event */}
+                    {event && (
+                      <div className={`delayed-fade-in`}>
+                        <Container className="grid__container">
                           <Row
                             className={`grid__row intro-paragraph pb-24`}
                             id="event-paragraphs"
@@ -366,6 +372,8 @@ const Event = ({
                               );
                             })}
                           </Row>
+                        </Container>
+                        <Container className="grid__container resource-table-container transition-all">
                           <ResourceTable
                             data={event.resources}
                             openModal={openModal}
@@ -375,7 +383,9 @@ const Event = ({
                             setOnClicks={() => setOnClicks('event-paragraphs')}
                             fullWidth={false}
                           />
+                        </Container>
 
+                        <Container className="grid__container">
                           {event.imageLayout && (
                             <div style={{ height: '50vh' }} />
                           )}
@@ -394,9 +404,9 @@ const Event = ({
 
                           {/* padding below last page element */}
                           <div className="pb-44" />
-                        </div>
-                      )}
-                    </Container>
+                        </Container>
+                      </div>
+                    )}
                     <div className={`hidden-footer__container bg-black`}>
                       <HiddenFooter
                         pageId="event"
