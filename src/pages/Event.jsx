@@ -327,10 +327,10 @@ const Event = ({
               return (
                 <ReactFullpage.Wrapper>
                   <div className={`section h-auto ${colourBackgroundClass}`}>
-                    <Container className="grid__container">
-                      {/* Event */}
-                      {event && (
-                        <div className={`delayed-fade-in`}>
+                    {/* Event */}
+                    {event && (
+                      <div className={`delayed-fade-in`}>
+                        <Container className="grid__container">
                           <Row
                             className={`grid__row intro-paragraph pb-24`}
                             id="event-paragraphs"
@@ -366,6 +366,8 @@ const Event = ({
                               );
                             })}
                           </Row>
+                        </Container>
+                        <Container className="grid__container">
                           <ResourceTable
                             data={event.resources}
                             openModal={openModal}
@@ -375,7 +377,9 @@ const Event = ({
                             setOnClicks={() => setOnClicks('event-paragraphs')}
                             fullWidth={false}
                           />
+                        </Container>
 
+                        <Container className="grid__container">
                           {event.imageLayout && (
                             <div style={{ height: '50vh' }} />
                           )}
@@ -394,9 +398,9 @@ const Event = ({
 
                           {/* padding below last page element */}
                           <div className="pb-44" />
-                        </div>
-                      )}
-                    </Container>
+                        </Container>
+                      </div>
+                    )}
                     <div className={`hidden-footer__container bg-black`}>
                       <HiddenFooter
                         pageId="event"

@@ -4,6 +4,7 @@ import { ArrowUpRight16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import './ResourceTable.scss';
 
 const ResourceTable = ({
   theme,
@@ -50,7 +51,10 @@ const ResourceTable = ({
       </Row>
       {data.map((entry, index) => {
         return (
-          <Row className={`grid__row`} key={`table-row-${index}`}>
+          <Row
+            className={`grid__row resource-table-row transition-all`}
+            key={`table-row-${index}`}
+          >
             {index !== 0 && (
               <>
                 <Col lg={columns[0]} md={2} />
