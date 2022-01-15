@@ -49,13 +49,7 @@ const Footer = ({
               : ReactHtmlParser(`Scene&nbsp;${nextParams.scene}`)}
           </p>
         </Col>
-        <Col
-          lg={7}
-          md={7}
-          sm={7}
-          xs={7}
-          style={{ display: 'flex', justifyContent: 'space-between' }}
-        >
+        <Col lg={7} md={7} sm={7} xs={7} className="flex justify-between">
           <p className={textClasses}>
             {/* next page, next scene, or next year */}
             {ReactHtmlParser(next.title)}
