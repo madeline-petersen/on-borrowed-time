@@ -121,11 +121,7 @@ const Header = ({
                 className={`medium-caption ${
                   pageId === 'event' ? 'title-animation' : 'cursor-pointer'
                 } ${
-                  isTransitioning
-                    ? pageId === 'reflection'
-                      ? 'fade-out'
-                      : ''
-                    : ''
+                  isTransitioning && pageId === 'reflection' && 'fade-out' // fade out scene title as timeline collapses
                 } pt-2 pb-5 contrast-text ${
                   pageId === 'event' ? colourBackgroundClass : ''
                 }`}
@@ -152,7 +148,6 @@ Header.propTypes = {
   title: PropTypes.string,
   isTransitioning: PropTypes.bool,
   romanSceneNumber: PropTypes.string,
-
   setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
   colourBackgroundClass: PropTypes.string,
