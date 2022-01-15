@@ -243,7 +243,6 @@ const UIShell = props => {
         title={props.scene ? props.scene.title : ''}
         isTransitioning={isTransitioning}
         romanSceneNumber={props.romanSceneNumber}
-        setIsTransitioning={setIsTransitioning}
         navigateTo={navigateTo}
         colourBackgroundClass={colourBackgroundClasses[props.year.id]}
         setBackgroundColor={() => setIsWhite(!isWhite)}
