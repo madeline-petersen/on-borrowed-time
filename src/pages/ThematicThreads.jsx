@@ -6,21 +6,11 @@ import { Col, Container, Row } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
 import ReactHtmlParser from 'react-html-parser';
 
+import data from '../data/thematic-threads.json';
+
 const ThematicThreads = ({ backgroundColor }) => {
-  const thematicThreads1 = [
-    'Fear o<span>f</span> Ambiguity',
-    'In-between Identity',
-    'Seeking to Preserve Democratic Rights <span>&amp;</span> Freedoms',
-    'Geographical Diaspora'
-  ];
-
-  const thematicThreads2 = [
-    'Solidarity <span>&amp;</span> Resistance',
-    'Hong Kong Identity',
-    'Advocating <span>f</span>or Genuine Democracy in the midst o<span>f</span> Eroding Rights <span>&amp;</span> Freedoms',
-    '<span>Cultural</span> Diaspora'
-  ];
-
+  let thematicThreads1 = data.white;
+  let thematicThreads2 = data.black;
   return (
     <div
       className={`thematic-threads h-auto black-white-background ${backgroundColor}`}
@@ -39,7 +29,7 @@ const ThematicThreads = ({ backgroundColor }) => {
             if (index % 2 === 0) {
               return (
                 <Col key={thread} lg={12} md={12}>
-                  <div className="thematic-thread-headline text-black cursor-pointer hover:opacity-60">
+                  <div className="thematic-thread-headline text-black cursor-pointer">
                     {ReactHtmlParser(thread)}
                   </div>
                 </Col>
@@ -49,7 +39,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                 <>
                   <Col key={thread} lg={3} />
                   <Col key={thread} lg={9} md={12}>
-                    <div className="thematic-thread-headline text-black cursor-pointer hover:opacity-60">
+                    <div className="thematic-thread-headline text-black cursor-pointer">
                       {ReactHtmlParser(thread)}
                     </div>
                   </Col>
@@ -68,7 +58,7 @@ const ThematicThreads = ({ backgroundColor }) => {
             if (index % 2 === 0) {
               return (
                 <Col key={thread} lg={12} md={12}>
-                  <div className="thematic-thread-headline text-white cursor-pointer hover:opacity-60">
+                  <div className="thematic-thread-headline text-white cursor-pointer">
                     {ReactHtmlParser(thread)}
                   </div>
                 </Col>
@@ -78,7 +68,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                 <>
                   <Col key={thread} lg={3} />
                   <Col key={thread} lg={9} md={12}>
-                    <div className="thematic-thread-headline text-white cursor-pointer hover:opacity-60">
+                    <div className="thematic-thread-headline text-white cursor-pointer">
                       {ReactHtmlParser(thread)}
                     </div>
                   </Col>
