@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 const Intro = ({
   year,
   navigateTo,
-  backgroundClass,
+  imageBackgroundClass,
   colourBackgroundClass,
   setIsTransitioning,
   nextParams
@@ -23,7 +23,7 @@ const Intro = ({
   const onClickYear = () => {
     navigateTo(
       nextParams.year,
-      nextParams.scene, // should be romanSceneNumber
+      nextParams.scene, // romanSceneNumber
       nextParams.page
     );
   };
@@ -45,7 +45,7 @@ const Intro = ({
             return (
               <ReactFullpage.Wrapper>
                 <div
-                  className={`section hero-image cursor-pointer ${backgroundClass}`}
+                  className={`section hero-image cursor-pointer ${imageBackgroundClass}`}
                   key={year.id}
                   id={year.id}
                   onClick={() => fullpageApi.moveSectionDown()}
@@ -99,7 +99,7 @@ const Intro = ({
 Intro.propTypes = {
   year: PropTypes.shape(),
   navigateTo: PropTypes.func,
-  backgroundClass: PropTypes.string,
+  imageBackgroundClass: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
   setIsTransitioning: PropTypes.func,
   nextParams: PropTypes.shape()

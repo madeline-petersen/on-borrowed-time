@@ -103,7 +103,7 @@ const Event = ({
       // intra-year
       navigateTo(
         nextParams.year,
-        nextParams.scene, // should be romanSceneNumber
+        nextParams.scene, // romanSceneNumber
         nextParams.page
       );
     }
