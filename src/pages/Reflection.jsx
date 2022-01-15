@@ -70,6 +70,9 @@ const Reflection = ({
           afterLoad={afterLoad}
           onLeave={throttle(onLeave, 1000)}
           scrollOverflow={true}
+          scrollOverflowOptions={{
+            preventDefault: false
+          }}
           paddingTop="78px"
           render={({ state, fullpageApi }) => {
             return (

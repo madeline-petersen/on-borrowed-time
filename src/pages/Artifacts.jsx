@@ -70,6 +70,9 @@ const Artifacts = ({
           afterLoad={afterLoad}
           onLeave={throttle(onLeave, 1000)}
           scrollOverflow={true}
+          scrollOverflowOptions={{
+            preventDefault: false
+          }}
           lazyLoading={false}
           paddingTop={headerHeight}
           render={({ state, fullpageApi }) => {
