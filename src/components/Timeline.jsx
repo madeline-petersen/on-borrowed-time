@@ -20,13 +20,13 @@ const Timeline = props => {
   };
 
   const onClickYear = year => {
-    if (year === props.year?.id && props.pageId === 'intro') {
+    if (isCurrentYear(year) && isIntroPage) {
       return;
     }
 
     setSceneIndex(null); // disappear circle
-    if (props.pageId !== 'home') {
-      if (year !== props.year?.id) {
+    if (!isHomePage) {
+      if (!isCurrentYear(year)) {
         setNumScenes(0); // collapse timeline (1s duration)
       }
     }
@@ -52,7 +52,7 @@ const Timeline = props => {
   }, [props.year?.id]);
 
   useEffect(() => {
-    if (props.pageId === 'intro') {
+    if (isIntroPage) {
       setSceneIndex('intro');
     } else {
       setSceneIndex(props.sceneIndex);
@@ -60,6 +60,8 @@ const Timeline = props => {
   }, [props.year, props.sceneIndex, props.pageId]);
 
   const isEventPage = props.pageId === 'event';
+  const isHomePage = props.pageId === 'home';
+  const isIntroPage = props.pageId === 'intro';
   const hasLightText = ['1989', '1997'].includes(props.year?.id);
   const currentYearSceneClasses = cx(
     'timeline__scenes pl-4 mb-2.5 contrast-text',
@@ -77,11 +79,15 @@ const Timeline = props => {
     return isCurrentYear(year) && numScenes > 0;
   };
 
+  const previewingCurrentYear = year => {
+    return year.id === props.previewedYear;
+  };
+
   return (
     <span
       className={cx('timeline medium-caption pb-5 h-screen contrast-text', {
         [colourClasses[props.year?.id]]: isEventPage && !hasLightText,
-        'image-background': props.pageId === 'intro' || props.pageId === 'home',
+        'image-background': isIntroPage || isHomePage,
         'mix-blend-screen': hasLightText,
         'mix-blend-difference': !hasLightText
       })}
@@ -98,15 +104,13 @@ const Timeline = props => {
               })}
             >
               <span
-                onClick={() => onClickYear(year.id)}
+                onClick={() => onClickYear(year)}
                 className={cx('year-label contrast-text cursor-pointer', {
                   [props.colourBackgroundClass]: isEventPage && !hasLightText,
                   'opacity-60 hover:opacity-100':
                     !isCurrentYear(year) ||
-                    (props.pageId === 'home' &&
-                      year.id !== props.previewedYear),
-                  'opacity-100':
-                    props.pageId === 'home' && year.id === props.previewedYear
+                    (isHomePage && !previewingCurrentYear),
+                  'opacity-100': isHomePage && previewingCurrentYear
                 })}
               >
                 {year.id}
@@ -120,7 +124,7 @@ const Timeline = props => {
                   show: yearIsActive(year),
                   hide: !yearIsActive(year)
                 })}
-                onClick={() => onClickYear(year.id)}
+                onClick={() => onClickYear(year)}
               >
                 <span
                   className={cx('dot mt-1 left-1', {
