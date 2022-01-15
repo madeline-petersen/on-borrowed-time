@@ -29,7 +29,7 @@ const HiddenFooter = ({
   return (
     <Container className="grid__container">
       {showBorder && (
-        <Row className={`grid__row`}>
+        <Row className="grid__row">
           <Col lg={1} />
           <Col lg={11} md={12}>
             <p className={`border-t ${borderClasses}`} />
@@ -52,13 +52,7 @@ const HiddenFooter = ({
               : ReactHtmlParser(`Scene&nbsp;${nextParams.scene}`)}
           </p>
         </Col>
-        <Col
-          lg={7}
-          md={7}
-          sm={7}
-          xs={7}
-          style={{ display: 'flex', justifyContent: 'space-between' }}
-        >
+        <Col lg={7} md={7} sm={7} xs={7} className="flex justify-between">
           <p className={`small-body pb-4 pt-4 ${textClasses}`}>
             {/* next page, next scene, next year */}
             {ReactHtmlParser(next.title)}
@@ -71,8 +65,6 @@ const HiddenFooter = ({
     </Container>
   );
 };
-
-HiddenFooter.defaultProps = {};
 
 HiddenFooter.propTypes = {
   nextParams: PropTypes.shape(),

@@ -72,8 +72,7 @@ const ResourceTable = ({
             </Col>
             <Col lg={columns[3]} md={3} sm={4} xs={12} className="small-body">
               <p
-                className={`${themeTextClass} text-opacity-70 fade-second`}
-                style={{ paddingRight: 'calc(100%/6)' }}
+                className={`${themeTextClass} resource-title text-opacity-70 fade-second`}
               >
                 {ReactHtmlParser(
                   `${entry.bookTitle ? entry.bookTitle : entry.publication}`
@@ -85,12 +84,10 @@ const ResourceTable = ({
               md={3}
               sm={4}
               xs={12}
-              className={`small-body`}
-              style={{ display: 'flex', justifyContent: 'space-between' }}
+              className="small-body flex justify-between"
             >
               <p
-                className={`${themeTextClass} text-opacity-70 fade-second`}
-                style={{ maxWidth: '70%' }}
+                className={`${themeTextClass} entry-type text-opacity-70 fade-second`}
               >
                 {[
                   'Journal Excerpt',

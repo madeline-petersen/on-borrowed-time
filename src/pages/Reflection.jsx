@@ -1,4 +1,5 @@
 import 'fullpage.js/vendors/scrolloverflow';
+import './Reflection.scss';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
 import ReactFullpage from '@fullpage/react-fullpage';
@@ -76,16 +77,10 @@ const Reflection = ({
             return (
               <ReactFullpage.Wrapper>
                 <div className="section bg-black">
-                  <Container
-                    className="grid__container"
-                    style={{ minHeight: `calc(100vh - 51.5px)` }}
-                  >
+                  <Container className="grid__container reflection__container">
                     {/* Final Reflection */}
                     <div className="foreground-fade-in">
-                      <Row
-                        className="pb-5 grid__row"
-                        style={{ paddingTop: '20vh' }}
-                      >
+                      <Row className="pb-5 grid__row reflection__paragraph-container">
                         {reflection.paragraphs[0] &&
                           reflection.paragraphs[0].map((paragraph, index) => {
                             return (
@@ -95,9 +90,7 @@ const Reflection = ({
                               >
                                 <Col lg={1} />
                                 <Col lg={11} md={12}>
-                                  <p
-                                    className={`medium-headline text-white fade-first`}
-                                  >
+                                  <p className="medium-headline text-white fade-first">
                                     {ReactHtmlParser(paragraph)}
                                   </p>
                                   <br />
@@ -148,10 +141,7 @@ const Reflection = ({
                                     <span>
                                       {ReactHtmlParser(text)}
                                       {linkTo && (
-                                        <ArrowUpRight16
-                                          className="inline-block ml-1"
-                                          style={{ minWidth: '16px' }}
-                                        />
+                                        <ArrowUpRight16 className="link-to inline-block ml-1" />
                                       )}
                                     </span>
                                   </p>
@@ -189,20 +179,12 @@ const Reflection = ({
                 </div>
                 {changingParam === 'year' ? (
                   <div
-                    className={`section h-screen ${imageBackgroundClass}`}
-                    style={{
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundSize: 'cover'
-                    }}
+                    className={`section h-screen next-image-class ${imageBackgroundClass}`}
                   />
                 ) : (
                   <div className={`section w-full ${colourBackgroundClass}`}>
                     <Container className="grid__container">
-                      <Row
-                        className={`grid__row`}
-                        style={{ height: '100vh' }}
-                      />
+                      <Row className="grid__row h-screen" />
                     </Container>
                   </div>
                 )}
