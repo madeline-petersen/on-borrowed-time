@@ -81,10 +81,7 @@ const Intro = ({
                 </div>
                 <div className={`section w-full ${colourBackgroundClass}`}>
                   <Container className="grid__container">
-                    <Row
-                      className={`grid__row`}
-                      style={{ height: '100vh' }}
-                    ></Row>
+                    <Row className="grid__row h-screen" />
                   </Container>
                 </div>
               </ReactFullpage.Wrapper>

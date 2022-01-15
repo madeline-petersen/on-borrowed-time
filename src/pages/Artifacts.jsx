@@ -114,7 +114,7 @@ const Artifacts = ({
                 </div>
                 <div className="section w-full bg-black">
                   <Container className="grid__container">
-                    <Row className="grid__row h-screen"></Row>
+                    <Row className="grid__row h-screen" />
                   </Container>
                 </div>
               </ReactFullpage.Wrapper>
