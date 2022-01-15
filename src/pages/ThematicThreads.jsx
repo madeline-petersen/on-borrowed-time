@@ -1,9 +1,10 @@
+import './ThematicThreads.scss';
+
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Container, Row } from 'react-grid-system';
-import ReactHtmlParser from 'react-html-parser';
-import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import './ThematicThreads.scss';
+import ReactHtmlParser from 'react-html-parser';
 
 const ThematicThreads = ({ backgroundColor }) => {
   const thematicThreads1 = [

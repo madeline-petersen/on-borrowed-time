@@ -1,12 +1,12 @@
 import './Index.scss';
 
-import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect } from 'react';
-
 import cx from 'classnames/bind';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
+import { Col, Container, Row } from 'react-grid-system';
+
 import data from '../data/index.json';
 import useHover from '../hooks/useHover';
-import { useState } from 'react';
 
 const Index = () => {
   const [selectedTheme, setSelectedTheme] = useState(null);

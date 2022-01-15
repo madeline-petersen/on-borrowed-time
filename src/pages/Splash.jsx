@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import Countdown from '../components/Countdown';
+import React from 'react';
 import { Col, Container, Row, useScreenClass } from 'react-grid-system';
+
+import Countdown from '../components/Countdown';
 
 const Splash = () => {
   const screenClass = useScreenClass();

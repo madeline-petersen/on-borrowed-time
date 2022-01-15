@@ -1,9 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Col, Container, Row, useScreenClass } from 'react-grid-system';
-import Countdown from '../components/Countdown';
+import 'fullpage.js/vendors/scrolloverflow';
+
 import ReactFullpage from '@fullpage/react-fullpage';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Col, Container, Row, useScreenClass } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
+
+import Countdown from '../components/Countdown';
 
 const EditorsNote = () => {
   const screenClass = useScreenClass();

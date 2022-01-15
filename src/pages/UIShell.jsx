@@ -1,24 +1,24 @@
 import './UIShell.scss';
 
 import { ArrowLeft20, Close20 } from '@carbon/icons-react';
-import React, { useState, useEffect } from 'react';
-
-import Event from './Event.jsx';
-import ThematicThreads from './ThematicThreads.jsx';
-import EditorsNote from './EditorsNote';
-import Header from '../components/Header';
-import Home from './Home.jsx';
-import Intro from './Intro.jsx';
-import LeftMenu from '../components/LeftMenu';
-import { Link, useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Reflection from './Reflection.jsx';
-import Artifacts from './Artifacts.jsx';
-import Timeline from '../components/Timeline';
-import Anecdote from '../components/Anecdote';
+import React, { useEffect, useState } from 'react';
 import { Visible } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
 import ReactHtmlParser from 'react-html-parser';
+import { Link, useHistory } from 'react-router-dom';
+
+import Anecdote from '../components/Anecdote';
+import Header from '../components/Header';
+import LeftMenu from '../components/LeftMenu';
+import Timeline from '../components/Timeline';
+import Artifacts from './Artifacts.jsx';
+import EditorsNote from './EditorsNote';
+import Event from './Event.jsx';
+import Home from './Home.jsx';
+import Intro from './Intro.jsx';
+import Reflection from './Reflection.jsx';
+import ThematicThreads from './ThematicThreads.jsx';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
@@ -33,7 +33,7 @@ const UIShell = props => {
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
-    setIsTransitioning(true);
+    setIsTransitioning(true); // collapses timeline when transitioning year
     if (year && romanSceneNumber && page) {
       history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
     } else if (year) {
@@ -186,7 +186,13 @@ const UIShell = props => {
       );
       break;
     case 'artifacts':
-      pageComponent = <Artifacts {...props} navigateTo={navigateTo} />;
+      pageComponent = (
+        <Artifacts
+          {...props}
+          setIsTransitioning={setIsTransitioning}
+          navigateTo={navigateTo}
+        />
+      );
       break;
     case 'reflection':
       pageComponent = (
@@ -213,7 +219,7 @@ const UIShell = props => {
           {...props}
           hash={hash}
           setHash={setHash}
-          setIsTransitioning={setIsMenuActive}
+          setIsTransitioning={setIsTransitioning}
           navigateTo={navigateTo}
         />
       );
@@ -237,7 +243,6 @@ const UIShell = props => {
         title={props.scene ? props.scene.title : ''}
         isTransitioning={isTransitioning}
         romanSceneNumber={props.romanSceneNumber}
-        setIsTransitioning={setIsTransitioning}
         navigateTo={navigateTo}
         colourBackgroundClass={colourBackgroundClasses[props.year.id]}
         setBackgroundColor={() => setIsWhite(!isWhite)}

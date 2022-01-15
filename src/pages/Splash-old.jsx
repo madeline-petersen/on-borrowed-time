@@ -1,6 +1,7 @@
 import './Splash-old.scss';
 
 import React from 'react';
+
 import Countdown from '../components/Countdown';
 
 const Splash = () => {

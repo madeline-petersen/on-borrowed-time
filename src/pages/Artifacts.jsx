@@ -1,24 +1,29 @@
-import { Container, Row } from 'react-grid-system';
-import React, { useState } from 'react';
-
-import HiddenFooter from '../components/HiddenFooter';
-import PropTypes from 'prop-types';
-import Triptych from '../components/imageLayouts/Triptych';
-import Diptych from '../components/imageLayouts/Diptych';
-import Custom from '../components/imageLayouts/Custom';
 import 'fullpage.js/vendors/scrolloverflow';
+import './Artifacts.scss';
+
 import ReactFullpage from '@fullpage/react-fullpage';
 import { throttle } from 'lodash';
-import './Artifacts.scss';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import { Container, Row } from 'react-grid-system';
+
+import HiddenFooter from '../components/HiddenFooter';
+import Custom from '../components/imageLayouts/Custom';
+import Diptych from '../components/imageLayouts/Diptych';
+import Triptych from '../components/imageLayouts/Triptych';
 
 const Artifacts = ({
   artifacts,
   nextParams,
   changingParam,
   next,
+  setIsTransitioning,
   navigateTo
 }) => {
   const [headerHeight, setHeaderHeight] = useState('78px');
+  useEffect(() => {
+    setIsTransitioning(false);
+  }, [artifacts]);
 
   const afterLoad = (origin, destination, direction) => {
     if (destination.isLast) {
@@ -126,6 +131,7 @@ Artifacts.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
+  setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func
 };
 

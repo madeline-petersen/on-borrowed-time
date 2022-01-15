@@ -1,18 +1,18 @@
 import './Event.scss';
-
-import { Col, Container, Row, useScreenClass } from 'react-grid-system';
-import React, { useEffect, useState } from 'react';
-
-import HiddenFooter from '../components/HiddenFooter';
-import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
-import ResourceTable from '../components/ResourceTable';
-import Triptych from '../components/imageLayouts/Triptych';
-import Diptych from '../components/imageLayouts/Diptych';
-import Custom from '../components/imageLayouts/Custom';
 import 'fullpage.js/vendors/scrolloverflow';
+
 import ReactFullpage from '@fullpage/react-fullpage';
 import { throttle } from 'lodash';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import { Col, Container, Row, useScreenClass } from 'react-grid-system';
+import ReactHtmlParser from 'react-html-parser';
+
+import HiddenFooter from '../components/HiddenFooter';
+import Custom from '../components/imageLayouts/Custom';
+import Diptych from '../components/imageLayouts/Diptych';
+import Triptych from '../components/imageLayouts/Triptych';
+import ResourceTable from '../components/ResourceTable';
 
 const Event = ({
   year,

@@ -1,10 +1,13 @@
-import { Col, Container, Row, Visible } from 'react-grid-system';
-
-import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
 import './Header.scss';
+
+import cx from 'classnames/bind';
+import PropTypes from 'prop-types';
 import React from 'react';
+import { Col, Container, Row, Visible } from 'react-grid-system';
+import ReactHtmlParser from 'react-html-parser';
 import { useHistory } from 'react-router-dom';
+
+import ThematicThreadsToggle from './ThematicThreadsToggle';
 
 const Header = ({
   currentYear,
@@ -13,8 +16,6 @@ const Header = ({
   title,
   isTransitioning,
   romanSceneNumber,
-
-  setIsTransitioning,
   navigateTo,
   colourBackgroundClass,
   setBackgroundColor,
@@ -44,39 +45,32 @@ const Header = ({
       id="header"
     >
       <Container className="grid__container">
-        <Row className={`grid__row pt-5`}>
+        <Row className="grid__row pt-5">
           <Col xl={3} lg={3} md={4} sm={4} xs={4} />
           <Col xl={7} lg={5} md={6} sm={8} xs={8}>
             <p
-              className={`${pageId !== 'intro' &&
-                'cursor-pointer'} contrast-text ${
-                pageId === 'event' ? colourBackgroundClass : ''
-              }`}
+              className={cx('contrast-text', {
+                'cursor-pointer': pageId !== 'intro',
+                [colourBackgroundClass]: pageId === 'event'
+              })}
               onClick={onClickYear}
             >
               {ReactHtmlParser(label)}
             </p>
             {pageId === 'thematic-threads' && (
-              <div
-                className={`flex items-center`}
-                onClick={() => setBackgroundColor(!isWhite)}
-              >
-                <div className={`${isWhite ? 'white' : 'black'}`}>
-                  <span className="slider round max-w-min" />
-                  <span className="slider round max-w-min" />
-                </div>
-                <div className="pl-4">
-                  {isWhite ? `1984-2003` : `2003—2020`}
-                </div>
-              </div>
+              <ThematicThreadsToggle
+                setBackgroundColor={setBackgroundColor}
+                isWhite={isWhite}
+              />
             )}
           </Col>
           <Visible xxl xl lg>
             <Col xl={1} lg={2}>
               <p
-                className={`cursor-pointer contrast-text
-                ${pageId === 'event' ? colourBackgroundClass : ''}
-                ${pageId === 'editors-note' && 'transparent'}`}
+                className={cx('cursor-pointer contrast-text', {
+                  [colourBackgroundClass]: pageId === 'event',
+                  transparent: pageId === 'editors-note'
+                })}
                 onClick={() => navigateToUrl('thematic-threads')}
               >
                 Thematic&nbsp;Threads
@@ -84,9 +78,10 @@ const Header = ({
             </Col>
             <Col xl={1} lg={2}>
               <p
-                className={`cursor-pointer contrast-text float-right
-                ${pageId === 'event' ? colourBackgroundClass : ''}
-                ${pageId === 'thematic-threads' && 'transparent'}`}
+                className={cx('cursor-pointer contrast-text float-right', {
+                  [colourBackgroundClass]: pageId === 'event',
+                  transparent: pageId === 'thematic-threads'
+                })}
                 onClick={() => navigateToUrl('editors-note')}
               >
                 Editor&apos;s&nbsp;Note
@@ -108,9 +103,13 @@ const Header = ({
             {pageId === 'event' && (
               <p
                 key={`${currentYear}-${romanSceneNumber}-scene`}
-                className={`medium-caption scene-animation absolute top-0 pt-2 contrast-text ${
-                  pageId === 'event' ? colourBackgroundClass : ''
-                } ${isTransitioning && 'fade-out'}`}
+                className={cx(
+                  'medium-caption scene-animation absolute top-0 pt-2 contrast-text',
+                  {
+                    [colourBackgroundClass]: pageId === 'event',
+                    'fade-out': isTransitioning
+                  }
+                )}
               >
                 Scene&nbsp;{romanSceneNumber}
               </p>
@@ -118,17 +117,12 @@ const Header = ({
             {title && (
               <p
                 key={`${currentYear}-${romanSceneNumber}-title`}
-                className={`medium-caption ${
-                  pageId === 'event' ? 'title-animation' : 'cursor-pointer'
-                } ${
-                  isTransitioning
-                    ? pageId === 'reflection'
-                      ? 'fade-out'
-                      : ''
-                    : ''
-                } pt-2 pb-5 contrast-text ${
-                  pageId === 'event' ? colourBackgroundClass : ''
-                }`}
+                className={cx('medium-caption pt-2 pb-5 contrast-text', {
+                  [`title-animation ${colourBackgroundClass}`]:
+                    pageId === 'event',
+                  'cursor-pointer': pageId !== 'event',
+                  'fade-out': isTransitioning && pageId === 'reflection'
+                })}
                 onClick={onClickScene}
               >
                 {ReactHtmlParser(title)}
@@ -152,8 +146,6 @@ Header.propTypes = {
   title: PropTypes.string,
   isTransitioning: PropTypes.bool,
   romanSceneNumber: PropTypes.string,
-
-  setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
   colourBackgroundClass: PropTypes.string,
   setBackgroundColor: PropTypes.func,
