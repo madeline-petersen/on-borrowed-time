@@ -1,20 +1,70 @@
 {
   "white": [
     {
-      "title": "Fear o<span>f</span> Ambiguity"
+      "title": "Fear o<span>f</span> Ambiguity",
+      "subtitles": [
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" }
+      ]
     },
-    { "title": "In-between Identity" },
     {
-      "title": "Seeking to Preserve Democratic Rights <span>&amp;</span> Freedoms"
+      "title": "In-between Identity",
+      "subtitles": [
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" }
+      ]
     },
-    { "title": "Geographical Diaspora" }
+    {
+      "title": "Seeking to Preserve Democratic Rights <span>&amp;</span> Freedoms",
+      "subtitles": [
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" }
+      ]
+    },
+    {
+      "title": "Geographical Diaspora",
+      "subtitles": [
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" }
+      ]
+    }
   ],
   "black": [
-    { "title": "Solidarity <span>&amp;</span> Resistance" },
-    { "title": "Hong Kong Identity" },
     {
-      "title": "Advocating <span>f</span>or Genuine Democracy in the midst o<span>f</span> Eroding Rights <span>&amp;</span> Freedoms"
+      "title": "Solidarity <span>&amp;</span> Resistance",
+      "subtitles": [
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" }
+      ]
     },
-    { "title": "<span>Cultural</span> Diaspora" }
+    {
+      "title": "Hong Kong Identity",
+      "subtitles": [
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" }
+      ]
+    },
+    {
+      "title": "Advocating <span>f</span>or Genuine Democracy in the midst o<span>f</span> Eroding Rights <span>&amp;</span> Freedoms",
+      "subtitles": [
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" }
+      ]
+    },
+    {
+      "title": "<span>Cultural</span> Diaspora",
+      "subtitles": [
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Death of An Icon" }
+      ]
+    }
   ]
 }
