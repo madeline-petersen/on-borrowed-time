@@ -4,7 +4,7 @@
     background-size: 200% 100%;
 
     &.white {
-      transition: background-position 1s 1s;
+      transition: background-position 1s 0.25s;
       transition-timing-function: cubic-bezier(
         0.83,
         0,
@@ -15,7 +15,7 @@
     }
 
     &.black {
-      transition: background-position 1s 1s;
+      transition: background-position 1s 0.25s;
       transition-timing-function: cubic-bezier(
         0.83,
         0,
@@ -29,14 +29,36 @@
       z-index: 0;
       transition: all 1s 0s; // disappear immediately
       opacity: 0;
-      transform: translateX(-20px);
     }
 
     .grid__row.show {
       z-index: 1;
-      transition: all 0.5s 2s; // reappear after background transition
+      transition: all 0.5s 0.75s; // reappear after background transition
       opacity: 1;
-      transform: translateX(0px);
+    }
+
+    .page-white {
+      &.grid__row.hide {
+        // bump left before fading out
+        transform: translateX(-20px);
+      }
+
+      &.grid__row.show {
+        // bump right before fading in
+        transform: translateX(0px);
+      }
+    }
+
+    .page-black {
+      &.grid__row.hide {
+        // bump right before fading out
+        transform: translateX(20px);
+      }
+
+      &.grid__row.show {
+        // bump left before fading in
+        transform: translateX(0px);
+      }
     }
   }
 }
