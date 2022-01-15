@@ -66,11 +66,12 @@ const Header = ({
           </Col>
           <Visible xxl xl lg>
             <Col xl={1} lg={2}>
-              <span className="hover:opacity-50 transition-all">
+              <span className="hover:opacity-70 transition-all">
                 <p
                   className={cx('cursor-pointer contrast-text float-left', {
                     [colourBackgroundClass]: pageId === 'event',
-                    transparent: pageId === 'editors-note'
+                    transparent: pageId === 'editors-note',
+                    'pointer-events-none': pageId === 'thematic-threads'
                   })}
                   onClick={() => navigateToUrl('thematic-threads')}
                 >
@@ -79,11 +80,12 @@ const Header = ({
               </span>
             </Col>
             <Col xl={1} lg={2}>
-              <span className="hover:opacity-50 transition-all">
+              <span className="hover:opacity-70 transition-all">
                 <p
                   className={cx('cursor-pointer contrast-text float-right', {
                     [colourBackgroundClass]: pageId === 'event',
-                    transparent: pageId === 'thematic-threads'
+                    transparent: pageId === 'thematic-threads',
+                    'pointer-events-none': pageId === 'editors-note'
                   })}
                   onClick={() => navigateToUrl('editors-note')}
                 >
