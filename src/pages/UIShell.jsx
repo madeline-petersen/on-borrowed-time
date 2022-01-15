@@ -119,15 +119,25 @@ const UIShell = props => {
     }, 1500);
   };
 
+  const pagesWithOverscroll = [
+    'home',
+    'intro',
+    'event',
+    'artifacts',
+    'reflection'
+  ];
+
   useEffect(() => {
-    if (isMenuActive) {
-      // disabling all scrolling while modals are open
-      fullpage_api.setAllowScrolling(false);
-      fullpage_api.setKeyboardScrolling(false);
-    } else {
-      // enable scrolling while modals are closed
-      fullpage_api.setAllowScrolling(true);
-      fullpage_api.setKeyboardScrolling(true);
+    if (pagesWithOverscroll.includes(props.pageId)) {
+      if (isMenuActive) {
+        // disabling all scrolling while modals are open
+        fullpage_api.setAllowScrolling(false);
+        fullpage_api.setKeyboardScrolling(false);
+      } else {
+        // enable scrolling while modals are closed
+        fullpage_api.setAllowScrolling(true);
+        fullpage_api.setKeyboardScrolling(true);
+      }
     }
   }, [isMenuActive]);
 
