@@ -191,7 +191,7 @@ const Event = ({
                             <section key={`section-${sectionIndex}`}>
                               <Container className="grid__container">
                                 <Row
-                                  className={`grid__row intro-paragraph pb-24`}
+                                  className="grid__row intro-paragraph pb-24"
                                   id={sectionId}
                                 >
                                   {section.paragraphs.map(
@@ -199,7 +199,7 @@ const Event = ({
                                       return index === 0 ? (
                                         <div
                                           key={`paragraph-${index}`}
-                                          className="contents"
+                                          className="contents section-introduction"
                                         >
                                           <Col lg={1} md={2} />
                                           <Col
@@ -208,10 +208,6 @@ const Event = ({
                                             sm={12}
                                             xs={12}
                                             className="border-t border-white"
-                                            style={{
-                                              '--tw-border-opacity': '0.15',
-                                              paddingBottom: '30px'
-                                            }}
                                           />
                                           <Col lg={1} md={2} />
                                           <Col lg={5} md={3} sm={12} xs={12}>
@@ -339,12 +335,11 @@ const Event = ({
               return (
                 <ReactFullpage.Wrapper>
                   <div className={`section h-auto ${colourBackgroundClass}`}>
-                    {/* Event */}
                     {event && (
-                      <div className={`delayed-fade-in`}>
+                      <div className="delayed-fade-in">
                         <Container className="grid__container">
                           <Row
-                            className={`grid__row intro-paragraph pb-24`}
+                            className="grid__row intro-paragraph pb-24"
                             id="event-paragraphs"
                           >
                             {event.paragraphs.map((paragraph, index) => {
@@ -366,7 +361,7 @@ const Event = ({
                                     }`}
                                   >
                                     <p
-                                      className={`large-headline-dynamic fade-first`}
+                                      className="large-headline-dynamic fade-first"
                                       style={{ textIndent: getTextIndent() }}
                                     >
                                       {ReactHtmlParser(paragraph)}
@@ -391,29 +386,10 @@ const Event = ({
                           />
                         </Container>
 
-                        <Container className="grid__container">
-                          {event.imageLayout && (
-                            <div style={{ height: '50vh' }} />
-                          )}
-                          {event.imageLayout &&
-                            event.imageLayout.type === 'custom' && (
-                              <Custom images={event.imageLayout.images} />
-                            )}
-                          {event.imageLayout &&
-                            event.imageLayout.type === 'triptych' && (
-                              <Triptych images={event.imageLayout.images} />
-                            )}
-                          {event.imageLayout &&
-                            event.imageLayout.type === 'diptych' && (
-                              <Diptych images={event.imageLayout.images} />
-                            )}
-
-                          {/* padding below last page element */}
-                          <div className="pb-44" />
-                        </Container>
+                        <div className="pb-44" />
                       </div>
                     )}
-                    <div className={`hidden-footer__container bg-black`}>
+                    <div className="hidden-footer__container bg-black">
                       <HiddenFooter
                         pageId="event"
                         nextParams={nextParams}
@@ -423,12 +399,9 @@ const Event = ({
                       />
                     </div>
                   </div>
-                  <div className={`section w-full bg-black`}>
+                  <div className="section w-full bg-black">
                     <Container className="grid__container">
-                      <Row
-                        className={`grid__row`}
-                        style={{ height: '100vh' }}
-                      ></Row>
+                      <Row className="grid__row h-screen"></Row>
                     </Container>
                   </div>
                 </ReactFullpage.Wrapper>

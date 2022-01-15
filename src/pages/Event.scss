@@ -157,3 +157,10 @@ div.highlight.light {
     color: #a8a8a8; // gray-40
   }
 }
+
+.section-introduction {
+  .border-t {
+    --tw-border-opacity: 0.15;
+    padding-bottom: 30px;
+  }
+}
