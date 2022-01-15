@@ -7,10 +7,13 @@ import React from 'react';
 import { Col, Container, Row } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
 import ReactHtmlParser from 'react-html-parser';
+import { useHistory } from 'react-router-dom';
 
 import data from '../data/thematic-threads.json';
 
 const ThematicThreads = ({ backgroundColor }) => {
+  let history = useHistory();
+
   const first = { content: 11, rightGutter: 1 };
   const firstSubtitles = { leftGutter: 1, content: 10, rightGutter: 1 };
   const second = { leftGutter: 4, content: 7, rightGutter: 1 };
@@ -82,6 +85,11 @@ const ThematicThreads = ({ backgroundColor }) => {
                                 <div
                                   key={subtitle}
                                   className="small-headline text-black cursor-pointer flex"
+                                  onClick={() =>
+                                    history.push(
+                                      `/${subtitle.year}/scene-${subtitle.romanSceneNumber}/event`
+                                    )
+                                  }
                                 >
                                   {ReactHtmlParser(subtitle.year)}
                                   <div className="md:ml-16 sm:ml-8">
