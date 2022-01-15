@@ -16,13 +16,13 @@ const Reflection = ({
   nextParams,
   changingParam,
   next,
-  setIsTransitioning,
+  setTransitionType,
   navigateTo,
   colourBackgroundClass,
   imageBackgroundClass
 }) => {
   useEffect(() => {
-    setIsTransitioning(false);
+    setTransitionType(null);
   }, [reflection]);
 
   const afterLoad = function(origin, destination, direction) {
@@ -229,7 +229,7 @@ Reflection.propTypes = {
   imageBackgroundClass: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
   navigateTo: PropTypes.func,
-  setIsTransitioning: PropTypes.func
+  setTransitionType: PropTypes.func
 };
 
 export default Reflection;

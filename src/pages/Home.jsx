@@ -12,7 +12,7 @@ const pluginWrapper = () => {
   require('./static/fullpage.parallax.min.js');
 };
 
-const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
+const Home = ({ years, hash, setHash, setTransitionType, navigateTo }) => {
   const onLeave = (origin, destination, direction) => {
     const destinationYear = years[destination.index].id;
     setHash(destinationYear);
@@ -42,7 +42,7 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
   }, []);
 
   useEffect(() => {
-    setIsTransitioning(false);
+    setTransitionType(null);
   }, []);
 
   const onClickYear = year => {
@@ -143,7 +143,7 @@ Home.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
   hash: PropTypes.string,
   setHash: PropTypes.func,
-  setIsTransitioning: PropTypes.func,
+  setTransitionType: PropTypes.func,
   navigateTo: PropTypes.func
 };
 

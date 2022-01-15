@@ -21,7 +21,7 @@ const Event = ({
   changingParam,
   next,
   navigateTo,
-  setIsTransitioning,
+  setTransitionType,
   colourBackgroundClass,
   textColourClass,
   borderColourClass,
@@ -85,7 +85,7 @@ const Event = ({
   };
 
   useEffect(() => {
-    setIsTransitioning(false);
+    setTransitionType(null);
 
     // disabling all scrolling while animation plays
     fullpage_api.setAllowScrolling(false);
@@ -448,7 +448,7 @@ Event.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  setIsTransitioning: PropTypes.func,
+  setTransitionType: PropTypes.func,
   navigateTo: PropTypes.func,
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,

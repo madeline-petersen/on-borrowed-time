@@ -14,7 +14,7 @@ const Header = ({
   label,
   pageId,
   title,
-  isTransitioning,
+  transitionType,
   romanSceneNumber,
   navigateTo,
   colourBackgroundClass,
@@ -107,7 +107,7 @@ const Header = ({
                   'medium-caption scene-animation absolute top-0 pt-2 contrast-text',
                   {
                     [colourBackgroundClass]: pageId === 'event',
-                    'fade-out': isTransitioning
+                    'fade-out': transitionType
                   }
                 )}
               >
@@ -121,7 +121,7 @@ const Header = ({
                   [`title-animation ${colourBackgroundClass}`]:
                     pageId === 'event',
                   'cursor-pointer': pageId !== 'event',
-                  'fade-out': isTransitioning && pageId === 'reflection'
+                  'fade-out': transitionType && pageId === 'reflection'
                 })}
                 onClick={onClickScene}
               >
@@ -144,7 +144,7 @@ Header.propTypes = {
   label: PropTypes.string,
   pageId: PropTypes.string,
   title: PropTypes.string,
-  isTransitioning: PropTypes.bool,
+  transitionType: PropTypes.bool,
   romanSceneNumber: PropTypes.string,
   navigateTo: PropTypes.func,
   colourBackgroundClass: PropTypes.string,

@@ -17,12 +17,12 @@ const Artifacts = ({
   nextParams,
   changingParam,
   next,
-  setIsTransitioning,
+  setTransitionType,
   navigateTo
 }) => {
   const [headerHeight, setHeaderHeight] = useState('78px');
   useEffect(() => {
-    setIsTransitioning(false);
+    setTransitionType(null);
   }, [artifacts]);
 
   const afterLoad = (origin, destination, direction) => {
@@ -134,7 +134,7 @@ Artifacts.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  setIsTransitioning: PropTypes.func,
+  setTransitionType: PropTypes.func,
   navigateTo: PropTypes.func
 };
 

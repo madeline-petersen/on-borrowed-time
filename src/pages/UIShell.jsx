@@ -24,7 +24,7 @@ const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [showSiteTitle, setShowSiteTitle] = useState(true);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [transitionType, setTransitionType] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
   const [isWhite, setIsWhite] = useState(true);
   const [anecdoteData, setAnecdoteData] = useState({});
@@ -33,20 +33,32 @@ const UIShell = props => {
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
-    setIsTransitioning(true);
-    if (year && romanSceneNumber && page) {
-      history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
-    } else if (year) {
-      if (year !== props.year.id && props.pageId !== 'home') {
-        // inter-year
-        setTimeout(() => {
-          history.push(`/${year}`);
-        }, 1000); // delay to allow time to collapse timeline
-      } else {
-        // intra-year
-        history.push(`/${year}`);
-      }
+    let delay = 0;
+    if (year !== props.year.id) {
+      setTransitionType('year');
+      delay = 1000; // delay 1s to collapse timeline
+    } else if (romanSceneNumber !== props.romanSceneNumber) {
+      setTransitionType('scene');
+      delay = 1000; // delay 1s to fade circle
     }
+
+    if (props.pageId === 'home') {
+      delay = 0;
+    }
+
+    if (year && romanSceneNumber && page) {
+      setTimeout(() => pushPage(year, romanSceneNumber, page), delay);
+    } else if (year) {
+      setTimeout(() => pushYear(year), delay);
+    }
+  };
+
+  const pushYear = year => {
+    history.push(`/${year}`);
+  };
+
+  const pushPage = (year, romanSceneNumber, page) => {
+    history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
   };
 
   let imageBackgroundClasses = {
@@ -154,7 +166,7 @@ const UIShell = props => {
           {...props}
           hash={hash}
           setHash={setHash}
-          setIsTransitioning={setIsTransitioning}
+          setTransitionType={setTransitionType}
           navigateTo={navigateTo}
         />
       );
@@ -166,7 +178,7 @@ const UIShell = props => {
           navigateTo={navigateTo}
           imageBackgroundClass={imageBackgroundClasses[props.year.id]}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
-          setIsTransitioning={setIsTransitioning}
+          setTransitionType={setTransitionType}
         />
       );
       break;
@@ -175,7 +187,7 @@ const UIShell = props => {
         <Event
           {...props}
           navigateTo={navigateTo}
-          setIsTransitioning={setIsTransitioning}
+          setTransitionType={setTransitionType}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           textColourClass={textColourClass[props.year.id]}
           borderColourClass={borderColourClass[props.year.id]}
@@ -189,7 +201,7 @@ const UIShell = props => {
       pageComponent = (
         <Artifacts
           {...props}
-          setIsTransitioning={setIsTransitioning}
+          setTransitionType={setTransitionType}
           navigateTo={navigateTo}
         />
       );
@@ -201,7 +213,7 @@ const UIShell = props => {
           imageBackgroundClass={imageBackgroundClasses[props.nextParams.year]}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           navigateTo={navigateTo}
-          setIsTransitioning={setIsTransitioning}
+          setTransitionType={setTransitionType}
         />
       );
       break;
@@ -219,7 +231,7 @@ const UIShell = props => {
           {...props}
           hash={hash}
           setHash={setHash}
-          setIsTransitioning={setIsTransitioning}
+          setTransitionType={setTransitionType}
           navigateTo={navigateTo}
         />
       );
@@ -241,7 +253,7 @@ const UIShell = props => {
             : `${props.year.id} ${props.year.title}`
         }
         title={props.scene ? props.scene.title : ''}
-        isTransitioning={isTransitioning}
+        transitionType={transitionType}
         romanSceneNumber={props.romanSceneNumber}
         navigateTo={navigateTo}
         colourBackgroundClass={colourBackgroundClasses[props.year.id]}
@@ -311,10 +323,9 @@ const UIShell = props => {
             {...props}
             timelineClasses={timelineClasses}
             previewedYear={hash}
-            setIsTransitioning={setIsTransitioning}
-            isTransitioning={isTransitioning}
-            navigateTo={navigateTo}
+            transitionType={transitionType}
             colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+            navigateTo={navigateTo}
           />
         )}
       {pageComponent}
