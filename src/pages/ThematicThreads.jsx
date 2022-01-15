@@ -180,7 +180,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                       return (
                         <div
                           key={subtitle}
-                          className="small-headline text-white cursor-pointer"
+                          className="small-headline text-white cursor-pointer flex"
                         >
                           {ReactHtmlParser(subtitle.year)}
                           <div className="ml-16">
@@ -229,12 +229,17 @@ const ThematicThreads = ({ backgroundColor }) => {
                     md={secondSubtitles.leftGutter}
                     sm={secondSubtitles.leftGutter}
                   />
-                  <Col xl={secondSubtitles.content}>
+                  <Col
+                    xl={secondSubtitles.content}
+                    lg={secondSubtitles.content}
+                    md={secondSubtitles.content}
+                    sm={secondSubtitles.content}
+                  >
                     {thread.subtitles.map(subtitle => {
                       return (
                         <div
                           key={subtitle}
-                          className="small-headline text-white cursor-pointer"
+                          className="small-headline text-white cursor-pointer flex"
                         >
                           {ReactHtmlParser(subtitle.year)}
                           <div className="ml-16">
