@@ -1,6 +1,7 @@
 import './Timeline.scss';
 
 import { roman } from '@sguest/roman-js';
+import cx from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
@@ -58,101 +59,81 @@ const Timeline = props => {
     }
   }, [props.year, props.sceneIndex, props.pageId]);
 
+  const setColourBackgroundClass =
+    props.pageId === 'event' && !['1989', '1997'].includes(props.year?.id);
+
   return (
     <span
-      className={`timeline medium-caption pb-5 h-screen contrast-text ${
-        props.pageId === 'event' && !['1989', '1997'].includes(props.year?.id)
-          ? colourClasses[props.year?.id]
-          : ''
-      } ${props.pageId === 'intro' ? 'image-background' : ''} ${
-        props.pageId === 'home' ? 'image-background' : ''
-      } ${
-        ['1989', '1997'].includes(props.year?.id)
-          ? 'mix-blend-screen'
-          : 'mix-blend-difference'
-      }
-      `}
+      className={cx('timeline medium-caption pb-5 h-screen contrast-text', {
+        [colourClasses[props.year?.id]]:
+          props.pageId === 'event' &&
+          !['1989', '1997'].includes(props.year?.id),
+        'image-background': props.pageId === 'intro' || props.pageId === 'home',
+        'mix-blend-screen': ['1989', '1997'].includes(props.year?.id),
+        'mix-blend-difference': !['1989', '1997'].includes(props.year?.id)
+      })}
     >
-      <span
-        className={`absolute ${props.timelineClasses}`}
-        style={{ bottom: '6px' }}
-      >
+      <span className={cx('timeline__years absolute', [props.timelineClasses])}>
         {props.years.map(year => {
           return (
             <div
               key={year.id}
-              className={`${
-                year.id === props.year?.id
-                  ? `timeline__scenes pl-4 mb-2.5 ${
-                      numScenes === 0
-                        ? 'collapsed'
-                        : `expanded num-scenes-${numScenes}`
-                    } contrast-text ${
-                      props.pageId === 'event' &&
-                      !['1989', '1997'].includes(props.year?.id)
-                        ? colourClasses[year.id]
-                        : ''
-                    }`
-                  : `pl-4 mb-2.5`
-              }`}
+              className={cx('timeline__scenes pl-4 mb-2.5 contrast-text', {
+                collapsed: numScenes === 0,
+                [`expanded num-scenes-${numScenes}`]: numScenes > 0,
+                [colourClasses[year.id]]:
+                  props.pageId === 'event' &&
+                  !['1989', '1997'].includes(props.year?.id)
+              })}
             >
               <span
                 onClick={() => onClickYear(year.id)}
-                className={`year-label contrast-text ${
-                  props.pageId === 'event' &&
-                  !['1989', '1997'].includes(props.year?.id)
-                    ? props.colourBackgroundClass
-                    : ''
-                }
-                ${
-                  year.id !== props.year?.id
-                    ? 'cursor-pointer opacity-60 hover:opacity-100'
-                    : 'cursor-pointer'
-                }
-                ${
-                  props.pageId === 'home'
-                    ? year.id !== props.previewedYear
-                      ? 'cursor-pointer opacity-60 hover:opacity-100'
-                      : 'opacity-100'
-                    : ''
-                }
-                `}
+                className={cx('year-label contrast-text cursor-pointer', {
+                  [props.colourBackgroundClass]:
+                    props.pageId === 'event' &&
+                    !['1989', '1997'].includes(props.year?.id),
+                  'opacity-60 hover:opacity-100': year.id !== props.year?.id,
+                  'cursor-pointer opacity-60 hover:opacity-100':
+                    props.pageId === 'home' && year.id !== props.previewedYear,
+                  'opacity-100':
+                    props.pageId === 'home' && year.id === props.previewedYear
+                })}
               >
                 {year.id}
               </span>
 
               <span
                 key="intro"
-                className={`circle cursor-pointer ${currentSceneIndex ===
-                  'intro' && 'current-scene'} ${props.pageId === 'event' &&
-                  !['1989', '1997'].includes(props.year?.id) &&
-                  colourClasses[year.id]}
-                  ${
-                    year.id === props.year?.id && numScenes > 0
-                      ? 'show'
-                      : 'hide'
-                  }`}
+                className={cx('circle cursor-pointer', {
+                  'current-scene': currentSceneIndex === 'intro',
+                  [colourClasses[year.id]]: !['1989', '1997'].includes(
+                    props.year?.id
+                  ),
+                  show: year.id === props.year?.id && numScenes > 0,
+                  hide: !(year.id === props.year?.id && numScenes > 0)
+                })}
                 onClick={() => onClickYear(year.id)}
               >
                 <span
-                  className={`dot mt-1 left-1 ${props.pageId === 'event' &&
-                    !['1989', '1997'].includes(props.year?.id) &&
-                    colourClasses[year.id]}`}
+                  className={cx('dot mt-1 left-1', {
+                    [colourClasses[year.id]]:
+                      props.pageId === 'event' &&
+                      !['1989', '1997'].includes(props.year?.id)
+                  })}
                 />
               </span>
 
               {year.scenes.map((scene, index) => (
                 <span
                   key={`scene-${index}`}
-                  className={`circle cursor-pointer ${currentSceneIndex ===
-                    index && 'current-scene'} ${props.pageId === 'event' &&
-                    !['1989', '1997'].includes(props.year?.id) &&
-                    colourClasses[year.id]}
-                    ${
-                      year.id === props.year?.id && numScenes > 0
-                        ? 'show'
-                        : 'hide'
-                    }`}
+                  className={cx('circle cursor-pointer', {
+                    'current-scene': currentSceneIndex === index,
+                    [colourClasses[year.id]]:
+                      props.pageId === 'event' &&
+                      !['1989', '1997'].includes(props.year?.id),
+                    show: year.id === props.year?.id && numScenes > 0,
+                    hide: !(year.id === props.year?.id && numScenes > 0)
+                  })}
                   style={{
                     marginTop: `${
                       year.id === props.year?.id
@@ -163,18 +144,24 @@ const Timeline = props => {
                   onClick={() => onClickScene(index)}
                 >
                   <span
-                    className={`dot mt-1 left-1 ${props.pageId === 'event' &&
-                      !['1989', '1997'].includes(props.year?.id) &&
-                      colourClasses[year.id]}`}
+                    className={cx('dot mt-1 left-1', {
+                      [colourClasses[year.id]]:
+                        props.pageId === 'event' &&
+                        !['1989', '1997'].includes(props.year?.id)
+                    })}
                   >
                     {year.id === props.year?.id && (
                       <span
-                        className={`absolute left-4 w-max contrast-text scene-title ${
-                          props.pageId === 'event' &&
-                          !['1989', '1997'].includes(props.year?.id)
-                            ? props.colourBackgroundClass
-                            : ''
-                        }`}
+                        className={
+                          (cx(
+                            'absolute left-4 w-max contrast-text scene-title'
+                          ),
+                          {
+                            [props.colourBackgroundClass]:
+                              props.pageId === 'event' &&
+                              !['1989', '1997'].includes(props.year?.id)
+                          })
+                        }
                       >
                         {scene.title}
                       </span>
