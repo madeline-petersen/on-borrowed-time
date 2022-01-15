@@ -66,26 +66,30 @@ const Header = ({
           </Col>
           <Visible xxl xl lg>
             <Col xl={1} lg={2}>
-              <p
-                className={cx('cursor-pointer contrast-text', {
-                  [colourBackgroundClass]: pageId === 'event',
-                  transparent: pageId === 'editors-note'
-                })}
-                onClick={() => navigateToUrl('thematic-threads')}
-              >
-                Thematic&nbsp;Threads
-              </p>
+              <span className="hover:opacity-50 transition-all">
+                <p
+                  className={cx('cursor-pointer contrast-text float-left', {
+                    [colourBackgroundClass]: pageId === 'event',
+                    transparent: pageId === 'editors-note'
+                  })}
+                  onClick={() => navigateToUrl('thematic-threads')}
+                >
+                  Thematic&nbsp;Threads
+                </p>
+              </span>
             </Col>
             <Col xl={1} lg={2}>
-              <p
-                className={cx('cursor-pointer contrast-text float-right', {
-                  [colourBackgroundClass]: pageId === 'event',
-                  transparent: pageId === 'thematic-threads'
-                })}
-                onClick={() => navigateToUrl('editors-note')}
-              >
-                Editor&apos;s&nbsp;Note
-              </p>
+              <span className="hover:opacity-50 transition-all">
+                <p
+                  className={cx('cursor-pointer contrast-text float-right', {
+                    [colourBackgroundClass]: pageId === 'event',
+                    transparent: pageId === 'thematic-threads'
+                  })}
+                  onClick={() => navigateToUrl('editors-note')}
+                >
+                  Editor&apos;s&nbsp;Note
+                </p>
+              </span>
             </Col>
           </Visible>
         </Row>
