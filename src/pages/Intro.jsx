@@ -73,8 +73,6 @@ const Intro = ({
                           nextParams={nextParams}
                           next={year.scenes[0]}
                           changingParam="scene"
-                          setIsTransitioning={setIsTransitioning}
-                          navigateTo={navigateTo}
                           onClick={() => fullpageApi.moveSectionDown()}
                         />
                       </Container>

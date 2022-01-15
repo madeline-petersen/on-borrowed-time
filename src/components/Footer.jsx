@@ -7,7 +7,7 @@ import ReactHtmlParser from 'react-html-parser';
 import './Footer.scss';
 
 const Footer = ({
-  setIsTransitioning,
+  // action on click footer
   onClick,
 
   // used to determine navigation and labels
@@ -18,54 +18,32 @@ const Footer = ({
   next,
 
   // current page id (intro, event, artifacts, reflection)
-  pageId,
-
-  // colours
-  textColourClass,
-  borderColourClass
+  pageId
 }) => {
-  const handleOnClick = () => {
-    onClick();
-  };
-
   let textClasses =
-    pageId === 'event'
-      ? 'text-black text-opacity-70'
-      : 'text-white text-opacity-90';
-  let borderClasses =
-    pageId === 'event'
-      ? 'border-black border-opacity-20'
-      : 'border-white border-opacity-20';
-
-  if (textColourClass) {
-    textClasses = textColourClass;
-  }
-
-  if (borderColourClass) {
-    borderClasses = `${borderColourClass} border-opacity-20`;
-  }
+    'pb-4 pt-4 small-body text-white text-opacity-90 fade-in-element';
+  let borderClasses = 'border-t border-white border-opacity-20 fade-in-element';
 
   return (
     <>
-      <Row className={`grid__row`}>
+      <Row className="grid__row">
         <Col lg={1} />
         <Col lg={11} md={12}>
-          <p className={`border-t ${borderClasses} mt-44 fade-in-element`} />
+          <p className={`${borderClasses} mt-44`} />
         </Col>
       </Row>
       <Row
-        className={`grid__row clickable-area cursor-pointer`}
-        onClick={() => handleOnClick()}
+        className="grid__row clickable-area cursor-pointer"
+        onClick={onClick}
       >
+        {/* override cursor-pointer for left gutter */}
         <Col lg={1} className="cursor-default" />
         <Col lg={2} md={3} sm={3} xs={3}>
-          <p className={`small-body pb-4 pt-4 ${textClasses} fade-in-element`}>
-            Up Next
-          </p>
+          <p className={textClasses}>Up Next</p>
         </Col>
         <Col lg={2} md={2} sm={2} xs={2}>
-          <p className={`small-body pb-4 pt-4 ${textClasses} fade-in-element`}>
-            {/* current scene, next scene, next year */}
+          <p className={textClasses}>
+            {/* current scene number, next scene number, or next year */}
             {changingParam === 'year'
               ? nextParams.year
               : ReactHtmlParser(`Scene&nbsp;${nextParams.scene}`)}
@@ -78,11 +56,11 @@ const Footer = ({
           xs={7}
           style={{ display: 'flex', justifyContent: 'space-between' }}
         >
-          <p className={`small-body pb-4 pt-4 ${textClasses} fade-in-element`}>
-            {/* next page, next scene, next year */}
+          <p className={textClasses}>
+            {/* next page, next scene, or next year */}
             {ReactHtmlParser(next.title)}
           </p>
-          <p className={`pb-4 pt-4 ${textClasses} fade-in-element`}>
+          <p className={textClasses}>
             {pageId === 'intro' ? <ArrowRight16 /> : <ArrowDown16 />}
           </p>
         </Col>
@@ -91,17 +69,11 @@ const Footer = ({
   );
 };
 
-Footer.defaultProps = {};
-
 Footer.propTypes = {
-  setIsTransitioning: PropTypes.func,
-  changingParam: PropTypes.string,
-  nextParams: PropTypes.shape(),
-  navigateTo: PropTypes.func,
-  next: PropTypes.shape(),
   pageId: PropTypes.string,
-  textColourClass: PropTypes.string,
-  borderColourClass: PropTypes.string,
+  nextParams: PropTypes.shape(),
+  next: PropTypes.shape(),
+  changingParam: PropTypes.string,
   onClick: PropTypes.func
 };
 
