@@ -1,11 +1,12 @@
-import { Col, Container, Row, Visible } from 'react-grid-system';
-
-import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
 import './Header.scss';
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+
 import cx from 'classnames/bind';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Col, Container, Row, Visible } from 'react-grid-system';
+import ReactHtmlParser from 'react-html-parser';
+import { useHistory } from 'react-router-dom';
+
 import ThematicThreadsToggle from './ThematicThreadsToggle';
 
 const Header = ({

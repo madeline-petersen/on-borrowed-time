@@ -1,10 +1,10 @@
-import { Col, Row } from 'react-grid-system';
+import './Footer.scss';
 
 import { ArrowDown16, ArrowRight16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Col, Row } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
-import './Footer.scss';
 
 const Footer = ({
   // action on click footer

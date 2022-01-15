@@ -1,10 +1,9 @@
 import './Anecdote.scss';
 
-import { Col, Container, Row, Visible } from 'react-grid-system';
-
 import { Close20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Col, Container, Row, Visible } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
 
 const Anecdote = ({

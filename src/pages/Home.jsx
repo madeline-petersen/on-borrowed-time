@@ -1,13 +1,12 @@
 import './Home.scss';
 
-import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect } from 'react';
-
 import { ArrowDown20 } from '@carbon/icons-react';
-import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
 import ReactFullpage from '@fullpage/react-fullpage';
+import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import { Col, Container, Row } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
+import ReactHtmlParser from 'react-html-parser';
 
 const pluginWrapper = () => {
   require('./static/fullpage.parallax.min.js');

@@ -1,11 +1,10 @@
 import './LeftMenu.scss';
 
-import { Col, Container, Row, Visible } from 'react-grid-system';
-
+import { roman } from '@sguest/roman-js';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Col, Container, Row, Visible } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
-import { roman } from '@sguest/roman-js';
 
 const LeftMenu = ({
   isActive,

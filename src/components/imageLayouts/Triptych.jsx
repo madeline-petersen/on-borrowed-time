@@ -1,7 +1,6 @@
-import { Col, Row, Visible } from 'react-grid-system';
-import React from 'react';
-
 import PropTypes from 'prop-types';
+import React from 'react';
+import { Col, Row, Visible } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
 
 const Triptych = ({ images }) => {

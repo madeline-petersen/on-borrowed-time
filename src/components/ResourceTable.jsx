@@ -1,10 +1,10 @@
-import { Col, Row } from 'react-grid-system';
+import './ResourceTable.scss';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
+import { Col, Row } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
-import './ResourceTable.scss';
 
 const ResourceTable = ({
   theme,

@@ -1,13 +1,14 @@
-import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect } from 'react';
+import 'fullpage.js/vendors/scrolloverflow';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
-import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
-import 'fullpage.js/vendors/scrolloverflow';
 import ReactFullpage from '@fullpage/react-fullpage';
-import HiddenFooter from '../components/HiddenFooter';
 import { throttle } from 'lodash';
+import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import { Col, Container, Row } from 'react-grid-system';
+import ReactHtmlParser from 'react-html-parser';
+
+import HiddenFooter from '../components/HiddenFooter';
 
 const Reflection = ({
   reflection,

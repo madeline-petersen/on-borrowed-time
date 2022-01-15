@@ -1,12 +1,12 @@
 import './Intro.scss';
 
-import { Col, Container, Row } from 'react-grid-system';
+import ReactFullpage from '@fullpage/react-fullpage';
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-grid-system';
+import ReactHtmlParser from 'react-html-parser';
 
 import Footer from '../components/Footer';
-import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
-import ReactFullpage from '@fullpage/react-fullpage';
 
 const Intro = ({
   year,

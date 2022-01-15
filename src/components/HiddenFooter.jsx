@@ -1,10 +1,10 @@
-import { Col, Container, Row } from 'react-grid-system';
+import './HiddenFooter.scss';
 
 import { ArrowDown16, ArrowRight16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Col, Container, Row } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
-import './HiddenFooter.scss';
 
 const HiddenFooter = ({
   // used to determine navigation and labels

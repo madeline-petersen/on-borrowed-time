@@ -1,7 +1,7 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
-import ReactGA from 'react-ga';
 import PropTypes from 'prop-types';
+import React from 'react';
+import ReactGA from 'react-ga';
+import { withRouter } from 'react-router-dom';
 
 const RouteChangeTracker = ({ history }) => {
   history.listen((location, action) => {

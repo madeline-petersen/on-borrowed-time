@@ -10,9 +10,10 @@ module.exports = {
     sourceType: 'module'
   },
   extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
-  plugins: [],
+  plugins: ['simple-import-sort'],
   rules: {
-    'sort-imports': ['error'],
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
     'prettier/prettier': ['error', { singleQuote: true }]
   }
 };

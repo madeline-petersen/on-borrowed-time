@@ -1,6 +1,5 @@
-import React, { Fragment, useEffect } from 'react';
-
 import PropTypes from 'prop-types';
+import React, { Fragment, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 
 function ScrollToTop({ history, children }) {
