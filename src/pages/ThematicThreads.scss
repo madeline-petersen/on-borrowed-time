@@ -60,5 +60,13 @@
         transform: translateX(0px);
       }
     }
+
+    .page-white,
+    .page-black {
+      &:hover .text-black,
+      &:hover .text-white {
+        opacity: 0.5;
+      }
+    }
   }
 }

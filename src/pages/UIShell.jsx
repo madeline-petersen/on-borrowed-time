@@ -124,7 +124,9 @@ const UIShell = props => {
     'intro',
     'event',
     'artifacts',
-    'reflection'
+    'reflection',
+    'thematic-threads',
+    'editors-note'
   ];
 
   useEffect(() => {
