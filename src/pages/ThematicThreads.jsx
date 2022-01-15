@@ -2,7 +2,7 @@ import './ThematicThreads.scss';
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Col, Container, Row, Visible } from 'react-grid-system';
+import { Col, Container, Row } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
 import ReactHtmlParser from 'react-html-parser';
 
