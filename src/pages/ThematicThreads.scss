@@ -65,20 +65,28 @@
     .page-black {
       &:hover .text-black,
       &:hover .text-white {
+        // fade all text on hover
         opacity: 0.5;
       }
 
       .text-black,
       .text-white {
         &:hover {
+          // make currently hovered element opaque
           opacity: 1 !important;
         }
       }
 
       .headline__col:hover ~ .grid__col {
-        .text-black,
-        .text-white,
+        .small-headline {
+          // make subtitles opaque when headline is hovered
+          opacity: 1 !important;
+        }
+      }
+
+      span:hover {
         .thematic-thread-headline {
+          // make headline opaque while group is hovered
           opacity: 1 !important;
         }
       }
