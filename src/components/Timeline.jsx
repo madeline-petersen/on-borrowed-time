@@ -120,7 +120,7 @@ const Timeline = props => {
                 key="intro"
                 className={cx('circle cursor-pointer', {
                   'current-scene': currentSceneIndex === 'intro',
-                  [colourClasses[year.id]]: !hasLightText,
+                  [colourClasses[year.id]]: isEventPage && !hasLightText,
                   show: yearIsActive(year),
                   hide: !yearIsActive(year)
                 })}
