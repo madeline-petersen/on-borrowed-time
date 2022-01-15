@@ -1,5 +1,5 @@
 import { Container, Row } from 'react-grid-system';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import HiddenFooter from '../components/HiddenFooter';
 import PropTypes from 'prop-types';
@@ -16,9 +16,13 @@ const Artifacts = ({
   nextParams,
   changingParam,
   next,
+  setIsTransitioning,
   navigateTo
 }) => {
   const [headerHeight, setHeaderHeight] = useState('78px');
+  useEffect(() => {
+    setIsTransitioning(false);
+  }, [artifacts]);
 
   const afterLoad = (origin, destination, direction) => {
     if (destination.isLast) {
@@ -126,6 +130,7 @@ Artifacts.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
+  setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func
 };
 

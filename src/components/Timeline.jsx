@@ -24,7 +24,6 @@ const Timeline = props => {
       return;
     }
 
-    props.setIsTransitioning(true);
     setSceneIndex(null); // disappear circle
     if (props.pageId !== 'home') {
       if (year !== props.year?.id) {
@@ -36,7 +35,6 @@ const Timeline = props => {
   };
 
   const onClickScene = sceneIndex => {
-    props.setIsTransitioning(true);
     setSceneIndex(null); // disappear circle
     props.navigateTo(props.year?.id, roman.toRoman(sceneIndex + 1), 'event');
   };
@@ -206,7 +204,6 @@ Timeline.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
   navigateTo: PropTypes.func,
   isTransitioning: PropTypes.bool,
-  setIsTransitioning: PropTypes.func,
   colourBackgroundClass: PropTypes.string,
   changingParam: PropTypes.string
 };

@@ -186,7 +186,13 @@ const UIShell = props => {
       );
       break;
     case 'artifacts':
-      pageComponent = <Artifacts {...props} navigateTo={navigateTo} />;
+      pageComponent = (
+        <Artifacts
+          {...props}
+          setIsTransitioning={setIsTransitioning}
+          navigateTo={navigateTo}
+        />
+      );
       break;
     case 'reflection':
       pageComponent = (
@@ -213,7 +219,7 @@ const UIShell = props => {
           {...props}
           hash={hash}
           setHash={setHash}
-          setIsTransitioning={setIsMenuActive}
+          setIsTransitioning={setIsTransitioning}
           navigateTo={navigateTo}
         />
       );

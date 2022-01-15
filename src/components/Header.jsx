@@ -13,8 +13,6 @@ const Header = ({
   title,
   isTransitioning,
   romanSceneNumber,
-
-  setIsTransitioning,
   navigateTo,
   colourBackgroundClass,
   setBackgroundColor,
@@ -148,7 +146,6 @@ Header.propTypes = {
   title: PropTypes.string,
   isTransitioning: PropTypes.bool,
   romanSceneNumber: PropTypes.string,
-  setIsTransitioning: PropTypes.func,
   navigateTo: PropTypes.func,
   colourBackgroundClass: PropTypes.string,
   setBackgroundColor: PropTypes.func,
