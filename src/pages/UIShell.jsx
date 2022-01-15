@@ -34,15 +34,19 @@ const UIShell = props => {
 
   const navigateTo = (year, romanSceneNumber, page) => {
     if (year !== props.year.id) {
-      console.log('transitioning year');
       setTransitionType('year');
     } else if (romanSceneNumber !== props.romanSceneNumber) {
-      console.log('transitioning scene');
       setTransitionType('scene');
     }
 
     if (year && romanSceneNumber && page) {
-      history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
+      if (romanSceneNumber !== props.romanSceneNumber) {
+        setTimeout(() => {
+          history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
+        }, 1000); // delay to allow circle to fade
+      } else {
+        history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
+      }
     } else if (year) {
       if (year !== props.year.id && props.pageId !== 'home') {
         // inter-year
