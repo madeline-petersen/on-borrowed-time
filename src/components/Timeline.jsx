@@ -61,8 +61,20 @@ const Timeline = props => {
 
   const isEventPage = props.pageId === 'event';
   const hasLightText = ['1989', '1997'].includes(props.year?.id);
+  const currentYearSceneClasses = cx(
+    'timeline__scenes pl-4 mb-2.5 contrast-text',
+    {
+      collapsed: numScenes === 0,
+      [`expanded num-scenes-${numScenes}`]: numScenes > 0
+    }
+  );
+
   const isCurrentYear = year => {
     return year.id === props.year?.id;
+  };
+
+  const yearIsActive = year => {
+    return isCurrentYear(year) && numScenes > 0;
   };
 
   return (
@@ -80,11 +92,7 @@ const Timeline = props => {
             <div
               key={year.id}
               className={cx({
-                'timeline__scenes pl-4 mb-2.5': isCurrentYear(year),
-                collapsed: isCurrentYear(year) && numScenes === 0,
-                [`expanded num-scenes-${numScenes}`]:
-                  isCurrentYear(year) && numScenes !== 0,
-                'contrast-text': isCurrentYear(year),
+                [currentYearSceneClasses]: isCurrentYear(year),
                 [colourClasses[year.id]]: isEventPage && !hasLightText,
                 'pl-4 mb-2.5': !isCurrentYear(year)
               })}
@@ -108,11 +116,9 @@ const Timeline = props => {
                 key="intro"
                 className={cx('circle cursor-pointer', {
                   'current-scene': currentSceneIndex === 'intro',
-                  [colourClasses[year.id]]: !['1989', '1997'].includes(
-                    props.year?.id
-                  ),
-                  show: isCurrentYear(year) && numScenes > 0,
-                  hide: !(isCurrentYear(year) && numScenes > 0)
+                  [colourClasses[year.id]]: !hasLightText,
+                  show: yearIsActive(year),
+                  hide: !yearIsActive(year)
                 })}
                 onClick={() => onClickYear(year.id)}
               >
@@ -129,8 +135,8 @@ const Timeline = props => {
                   className={cx('circle cursor-pointer', {
                     'current-scene': currentSceneIndex === index,
                     [colourClasses[year.id]]: isEventPage && !hasLightText,
-                    show: isCurrentYear(year) && numScenes > 0,
-                    hide: !(isCurrentYear(year) && numScenes > 0)
+                    show: yearIsActive(year),
+                    hide: !yearIsActive(year)
                   })}
                   style={{
                     marginTop: `${
