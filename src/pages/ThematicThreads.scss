@@ -1,6 +1,5 @@
 .thematic-threads {
   &.black-white-background {
-    height: 100vh;
     background: linear-gradient(to right, white 50%, black 50%);
     background-size: 200% 100%;
 
@@ -31,19 +30,13 @@
       transition: all 1s 0s; // disappear immediately
       opacity: 0;
       transform: translateX(-20px);
-      animation-duration: 1s;
-      animation-delay: 0s;
-      animation-fill-mode: forwards;
     }
 
     .grid__row.show {
       z-index: 1;
-      transition: all 1s 2s; // reappear after background transition
+      transition: all 0.5s 2s; // reappear after background transition
       opacity: 1;
       transform: translateX(0px);
-      animation-duration: 1s;
-      animation-delay: 2s;
-      animation-fill-mode: forwards;
     }
   }
 }

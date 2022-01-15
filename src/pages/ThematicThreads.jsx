@@ -6,20 +6,13 @@ import { Col, Container, Row } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
 import ReactHtmlParser from 'react-html-parser';
 
-const ThematicThreads = ({ backgroundColor }) => {
-  const thematicThreads1 = [
-    'Fear o<span>f</span> Ambiguity',
-    'In-between Identity',
-    'Seeking to Preserve Democratic Rights <span>&amp;</span> Freedoms',
-    'Geographical Diaspora'
-  ];
+import data from '../data/thematic-threads.json';
 
-  const thematicThreads2 = [
-    'Solidarity <span>&amp;</span> Resistance',
-    'Hong Kong Identity',
-    'Advocating <span>f</span>or Genuine Democracy in the midst o<span>f</span> Eroding Rights <span>&amp;</span> Freedoms',
-    '<span>Cultural</span> Diaspora'
-  ];
+const ThematicThreads = ({ backgroundColor }) => {
+  const first = { content: 11, rightGutter: 1 };
+  const firstSubtitles = { leftGutter: 1, content: 10, rightGutter: 1 };
+  const second = { leftGutter: 4, content: 7, rightGutter: 1 };
+  const secondSubtitles = { leftGutter: 5, content: 7 };
 
   return (
     <div
@@ -28,61 +21,235 @@ const ThematicThreads = ({ backgroundColor }) => {
       <Helmet>
         <title>Thematic Threads | On Borrowed Time</title>
       </Helmet>
-      <Container className="grid__container min-h-screen">
+      <Container className="grid__container">
         <Row
-          key={`threads-1`}
-          className={`grid__row pt-32 absolute ${
+          key="page-1"
+          className={`grid__row pt-32 pb-32 absolute ${
             backgroundColor === 'white' ? 'show' : 'hide'
           }`}
         >
-          {thematicThreads1.map((thread, index) => {
+          {data.white.map((thread, index) => {
             if (index % 2 === 0) {
               return (
-                <Col key={thread} lg={12} md={12}>
-                  <div className="thematic-thread-headline text-black cursor-pointer hover:opacity-60">
-                    {ReactHtmlParser(thread)}
-                  </div>
-                </Col>
+                <span key={thread.title} className="contents">
+                  <Col
+                    xl={first.content}
+                    lg={first.content}
+                    md={first.content}
+                    sm={first.content}
+                  >
+                    <div className="thematic-thread-headline text-black cursor-pointer pt-10 pb-5">
+                      {ReactHtmlParser(thread.title)}
+                    </div>
+                  </Col>
+                  <Col
+                    xl={first.rightGutter}
+                    lg={first.rightGutter}
+                    md={first.rightGutter}
+                    sm={first.rightGutter}
+                  />
+                  <Col
+                    xl={firstSubtitles.leftGutter}
+                    lg={firstSubtitles.leftGutter}
+                    md={firstSubtitles.leftGutter}
+                    sm={firstSubtitles.leftGutter}
+                  />
+                  <Col
+                    xl={firstSubtitles.content}
+                    lg={firstSubtitles.content}
+                    md={firstSubtitles.content}
+                    sm={firstSubtitles.content}
+                  >
+                    {thread.subtitles.map(subtitle => {
+                      return (
+                        <div
+                          key={subtitle}
+                          className="small-headline text-black cursor-pointer flex"
+                        >
+                          {ReactHtmlParser(subtitle.year)}
+                          <div className="ml-16">
+                            {ReactHtmlParser(subtitle.title)}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </Col>
+                  <Col
+                    xl={firstSubtitles.rightGutter}
+                    lg={firstSubtitles.rightGutter}
+                    md={firstSubtitles.rightGutter}
+                    sm={firstSubtitles.rightGutter}
+                  />
+                </span>
               );
             } else {
               return (
-                <>
-                  <Col key={thread} lg={3} />
-                  <Col key={thread} lg={9} md={12}>
-                    <div className="thematic-thread-headline text-black cursor-pointer hover:opacity-60">
-                      {ReactHtmlParser(thread)}
+                <span key={thread.title} className="contents">
+                  <Col
+                    xl={second.leftGutter}
+                    lg={second.leftGutter}
+                    md={second.leftGutter}
+                    sm={second.leftGutter}
+                  />
+                  <Col
+                    xl={second.content}
+                    lg={second.content}
+                    md={second.content}
+                    sm={second.content}
+                  >
+                    <div className="thematic-thread-headline text-black cursor-pointer pt-10 pb-5">
+                      {ReactHtmlParser(thread.title)}
                     </div>
                   </Col>
-                </>
+                  <Col
+                    xl={second.rightGutter}
+                    lg={second.rightGutter}
+                    md={second.rightGutter}
+                    sm={second.rightGutter}
+                  />
+                  <Col
+                    xl={secondSubtitles.leftGutter}
+                    lg={secondSubtitles.leftGutter}
+                    md={secondSubtitles.leftGutter}
+                    sm={secondSubtitles.leftGutter}
+                  />
+                  <Col
+                    xl={secondSubtitles.content}
+                    lg={secondSubtitles.content}
+                    md={secondSubtitles.content}
+                    sm={secondSubtitles.content}
+                  >
+                    {thread.subtitles.map(subtitle => {
+                      return (
+                        <div
+                          key={subtitle}
+                          className="small-headline text-black cursor-pointer flex"
+                        >
+                          {ReactHtmlParser(subtitle.year)}
+                          <div className="ml-16">
+                            {ReactHtmlParser(subtitle.title)}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </Col>
+                </span>
               );
             }
           })}
         </Row>
         <Row
-          key={`threads-2`}
-          className={`grid__row pt-32 ${
+          key="page-2"
+          className={`grid__row pt-32 pb-32 ${
             backgroundColor === 'white' ? 'hide' : 'show'
           }`}
         >
-          {thematicThreads2.map((thread, index) => {
+          {data.black.map((thread, index) => {
             if (index % 2 === 0) {
               return (
-                <Col key={thread} lg={12} md={12}>
-                  <div className="thematic-thread-headline text-white cursor-pointer hover:opacity-60">
-                    {ReactHtmlParser(thread)}
-                  </div>
-                </Col>
+                <span key={thread.title} className="contents">
+                  <Col
+                    xl={first.content}
+                    lg={first.content}
+                    md={first.content}
+                    sm={first.content}
+                  >
+                    <div className="thematic-thread-headline text-white cursor-pointer pt-10 pb-5">
+                      {ReactHtmlParser(thread.title)}
+                    </div>
+                  </Col>
+                  <Col
+                    xl={first.rightGutter}
+                    lg={first.rightGutter}
+                    md={first.rightGutter}
+                    sm={first.rightGutter}
+                  />
+                  <Col
+                    xl={firstSubtitles.leftGutter}
+                    lg={firstSubtitles.leftGutter}
+                    md={firstSubtitles.leftGutter}
+                    sm={firstSubtitles.leftGutter}
+                  />
+                  <Col
+                    xl={firstSubtitles.content}
+                    lg={firstSubtitles.content}
+                    md={firstSubtitles.content}
+                    sm={firstSubtitles.content}
+                  >
+                    {thread.subtitles.map(subtitle => {
+                      return (
+                        <div
+                          key={subtitle}
+                          className="small-headline text-white cursor-pointer flex"
+                        >
+                          {ReactHtmlParser(subtitle.year)}
+                          <div className="ml-16">
+                            {ReactHtmlParser(subtitle.title)}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </Col>
+                  <Col
+                    xl={firstSubtitles.rightGutter}
+                    lg={firstSubtitles.rightGutter}
+                    md={firstSubtitles.rightGutter}
+                    sm={firstSubtitles.rightGutter}
+                  />
+                </span>
               );
             } else {
               return (
-                <>
-                  <Col key={thread} lg={3} />
-                  <Col key={thread} lg={9} md={12}>
-                    <div className="thematic-thread-headline text-white cursor-pointer hover:opacity-60">
-                      {ReactHtmlParser(thread)}
+                <span key={thread.title} className="contents">
+                  <Col
+                    xl={second.leftGutter}
+                    lg={second.leftGutter}
+                    md={second.leftGutter}
+                    sm={second.leftGutter}
+                  />
+                  <Col
+                    xl={second.content}
+                    lg={second.content}
+                    md={second.content}
+                    sm={second.content}
+                  >
+                    <div className="thematic-thread-headline text-white cursor-pointer pt-10 pb-5">
+                      {ReactHtmlParser(thread.title)}
                     </div>
                   </Col>
-                </>
+                  <Col
+                    xl={second.rightGutter}
+                    lg={second.rightGutter}
+                    md={second.rightGutter}
+                    sm={second.rightGutter}
+                  />
+                  <Col
+                    xl={secondSubtitles.leftGutter}
+                    lg={secondSubtitles.leftGutter}
+                    md={secondSubtitles.leftGutter}
+                    sm={secondSubtitles.leftGutter}
+                  />
+                  <Col
+                    xl={secondSubtitles.content}
+                    lg={secondSubtitles.content}
+                    md={secondSubtitles.content}
+                    sm={secondSubtitles.content}
+                  >
+                    {thread.subtitles.map(subtitle => {
+                      return (
+                        <div
+                          key={subtitle}
+                          className="small-headline text-white cursor-pointer flex"
+                        >
+                          {ReactHtmlParser(subtitle.year)}
+                          <div className="ml-16">
+                            {ReactHtmlParser(subtitle.title)}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </Col>
+                </span>
               );
             }
           })}

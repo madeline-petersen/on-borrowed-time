@@ -1,0 +1,80 @@
+{
+  "white": [
+    {
+      "title": "Fear o<span>f</span> Ambiguity",
+      "subtitles": [
+        { "year": "1989", "title": "Death of An Icon" },
+        { "year": "1989", "title": "Tiananmen Square Massacre" },
+        { "year": "1997", "title": "Amid Changing Symbols" }
+      ]
+    },
+    {
+      "title": "In-between Identity",
+      "subtitles": [
+        { "year": "1984", "title": "On the Question of Hong Kong" },
+        { "year": "1997", "title": "The Handover" },
+        { "year": "2003", "title": "Abrupt Resignations" }
+      ]
+    },
+    {
+      "title": "Seeking to Preserve Democratic Rights <span>&amp;</span> Freedoms",
+      "subtitles": [
+        { "year": "1984", "title": "A Borrowed Place, On Borrowed Time" },
+        { "year": "1989", "title": "A Compromising Position" },
+        { "year": "2003", "title": "Implementing Article 23" },
+        { "year": "2003", "title": "An Attempt at Political Harmony" }
+      ]
+    },
+    {
+      "title": "Geographical Diaspora",
+      "subtitles": [
+        { "year": "1984", "title": "A Discourse of Semantics" },
+        { "year": "1989", "title": "A New Diasporic Condition" },
+        { "year": "1997", "title": "The Mass Exodus" }
+      ]
+    }
+  ],
+  "black": [
+    {
+      "title": "Solidarity <span>&amp;</span> Resistance",
+      "subtitles": [
+        { "year": "2003", "title": "A Confluence of Factors" },
+        { "year": "2003", "title": "A Historic Demonstration" },
+        { "year": "2014", "title": "Occupy Central Love and Peace" },
+        { "year": "2019", "title": "A Black Sea" },
+        { "year": "2019", "title": "Academic Citadels under Seige" },
+        { "year": "2020", "title": "On Solidarity and Resistance" }
+      ]
+    },
+    {
+      "title": "Hong Kong Identity",
+      "subtitles": [
+        { "year": "2014", "title": "Umbrella Generation" },
+        { "year": "2019", "title": "Five Demands, Not One Less" },
+        { "year": "2019", "title": "A Divided City" },
+        { "year": "2019", "title": "Faces of Unrest" },
+        { "year": "2020", "title": "On Hong Kong Identity" }
+      ]
+    },
+    {
+      "title": "Advocating <span>f</span>or Genuine Democracy in the midst o<span>f</span> Eroding Rights <span>&amp;</span> Freedoms",
+      "subtitles": [
+        { "year": "2003", "title": "The Ultimate Aim" },
+        { "year": "2014", "title": "The White Paper" },
+        { "year": "2014", "title": "A Civil Referendum" },
+        { "year": "2014", "title": "Seeking Geniune Suffrage" },
+        { "year": "2019", "title": "A Political Rebuke" },
+        { "year": "2020", "title": "On Geniune Democracy" }
+      ]
+    },
+    {
+      "title": "Cultural Diaspora",
+      "subtitles": [
+        { "year": "2014", "title": "The Umbrella Movement" },
+        { "year": "2014", "title": "A Stalemate" },
+        { "year": "2019", "title": "Closing the Legal Loophole" },
+        { "year": "2020", "title": "On Cultural Diaspora" }
+      ]
+    }
+  ]
+}
