@@ -1,6 +1,7 @@
 import './UIShell.scss';
 
 import { ArrowLeft20, Close20 } from '@carbon/icons-react';
+import cx from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { Visible } from 'react-grid-system';
@@ -144,31 +145,26 @@ const UIShell = props => {
   }, [isMenuActive]);
 
   let timelineClasses = 'contrast-text mix-blend-difference';
+  const mixBlendMode = ['1989', '1997'].includes(props.year.id)
+    ? 'mix-blend-screen'
+    : 'mix-blend-difference';
 
   if (isMenuActive) {
-    timelineClasses = `contrast-text ${
-      ['1989', '1997'].includes(props.year.id)
-        ? 'mix-blend-screen'
-        : 'mix-blend-difference'
-    }`;
+    timelineClasses = `contrast-text ${mixBlendMode}`;
   }
 
   if (props.pageId === 'home') {
-    timelineClasses = `contrast-text mix-blend-difference`;
+    timelineClasses = 'contrast-text mix-blend-difference';
   }
 
   if (props.pageId === 'event') {
     timelineClasses = `contrast-text ${
       colourBackgroundClasses[props.year.id]
-    } ${
-      ['1989', '1997'].includes(props.year.id)
-        ? 'mix-blend-screen'
-        : 'mix-blend-difference'
-    }`;
+    } ${mixBlendMode}`;
   }
 
   if (props.pageId === 'editors-note') {
-    timelineClasses = `contrast-text bg-blue-70 mix-blend-screen`;
+    timelineClasses = 'contrast-text bg-blue-70 mix-blend-screen';
   }
   let pageComponent;
   switch (props.pageId) {
@@ -289,17 +285,21 @@ const UIShell = props => {
       />
 
       <span
-        className={`absolute cursor-pointer z-40 left-menu-bullet ${
-          isMenuActive ? 'fade-out' : 'fade-in'
-        } ${timelineClasses}`}
+        className={cx('absolute cursor-pointer z-40 left-menu-bullet', {
+          [timelineClasses]: true,
+          'fade-out': isMenuActive,
+          'fade-in': !isMenuActive
+        })}
         onClick={toggleLeftMenu}
       >
         &#8226;
       </span>
       <span
-        className={`absolute cursor-pointer z-40 left-menu-close ${
-          isMenuActive ? 'fade-in' : 'fade-out'
-        } ${timelineClasses}`}
+        className={cx('absolute cursor-pointer z-40 left-menu-close', {
+          [timelineClasses]: true,
+          'fade-out': isMenuActive,
+          'fade-in': !isMenuActive
+        })}
         onClick={
           selectedYear !== null
             ? () => {
@@ -313,11 +313,12 @@ const UIShell = props => {
       </span>
       <Link
         to="/home" // to do: change to "/" when homepage moves
-        className={`absolute z-40 medium-caption page-title ${timelineClasses} ${
-          showSiteTitle
-            ? 'opacity-100 cursor-pointer'
-            : 'opacity-0 pointer-events-none'
-        }`}
+        className={cx('absolute z-40 medium-caption page-title', {
+          [timelineClasses]: true,
+          'opacity-100 cursor-pointer': showSiteTitle,
+          'opacity-0 pointer-events-none': !showSiteTitle,
+          'pointer-events-none': props.pageId === 'home'
+        })}
       >
         On{' '}
         <Visible sm xs>
