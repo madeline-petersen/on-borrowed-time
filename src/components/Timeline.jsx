@@ -39,14 +39,10 @@ const Timeline = props => {
   };
 
   useEffect(() => {
-    if (props.isTransitioning) {
-      if (props.changingParam !== 'page') {
-        setSceneIndex(null); // fade out circle immediately
-      }
-
-      if (props.changingParam === 'year') {
-        setNumScenes(0); // collapse timeline
-      }
+    if (props.isTransitioning === 'year') {
+      setNumScenes(0); // collapse timeline
+    } else if (props.isTransitioning === 'scene') {
+      setSceneIndex(null); // fade out circle immediately
     }
   }, [props.isTransitioning]);
 
@@ -195,16 +191,15 @@ const Timeline = props => {
 };
 
 Timeline.propTypes = {
-  timelineClasses: PropTypes.string,
+  years: PropTypes.arrayOf(PropTypes.shape()),
   sceneIndex: PropTypes.string,
   pageId: PropTypes.string,
   year: PropTypes.shape(), // current year, expands timeline
+  timelineClasses: PropTypes.string,
   previewedYear: PropTypes.string,
-  years: PropTypes.arrayOf(PropTypes.shape()),
-  navigateTo: PropTypes.func,
-  isTransitioning: PropTypes.bool,
+  isTransitioning: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
-  changingParam: PropTypes.string
+  navigateTo: PropTypes.func
 };
 
 export default Timeline;

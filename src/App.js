@@ -27,7 +27,6 @@ import ScrollToTop from './ScrollToTop.jsx';
 
 const TRACKING_ID = 'G-LKR7ENMRG3';
 ReactGA.initialize(TRACKING_ID, {
-  debug: true,
   standardImplementation: true
 });
 

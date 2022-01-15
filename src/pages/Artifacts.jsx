@@ -22,7 +22,7 @@ const Artifacts = ({
 }) => {
   const [headerHeight, setHeaderHeight] = useState('78px');
   useEffect(() => {
-    setIsTransitioning(false);
+    setIsTransitioning(null);
   }, [artifacts]);
 
   const afterLoad = (origin, destination, direction) => {

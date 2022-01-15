@@ -22,7 +22,7 @@ const Reflection = ({
   imageBackgroundClass
 }) => {
   useEffect(() => {
-    setIsTransitioning(false);
+    setIsTransitioning(null);
   }, [reflection]);
 
   const afterLoad = function(origin, destination, direction) {

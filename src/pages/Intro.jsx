@@ -17,7 +17,7 @@ const Intro = ({
   nextParams
 }) => {
   useEffect(() => {
-    setIsTransitioning(false);
+    setIsTransitioning(null);
   }, [year]);
 
   const onClickYear = () => {

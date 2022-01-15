@@ -42,7 +42,7 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
   }, []);
 
   useEffect(() => {
-    setIsTransitioning(false);
+    setIsTransitioning(null);
   }, []);
 
   const onClickYear = year => {

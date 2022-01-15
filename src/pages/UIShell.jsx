@@ -33,7 +33,14 @@ const UIShell = props => {
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
-    setIsTransitioning(true);
+    if (year !== props.year.id) {
+      console.log('transitioning year');
+      setIsTransitioning('year');
+    } else if (romanSceneNumber !== props.romanSceneNumber) {
+      console.log('transitioning scene');
+      setIsTransitioning('scene');
+    }
+
     if (year && romanSceneNumber && page) {
       history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
     } else if (year) {
@@ -311,10 +318,9 @@ const UIShell = props => {
             {...props}
             timelineClasses={timelineClasses}
             previewedYear={hash}
-            setIsTransitioning={setIsTransitioning}
             isTransitioning={isTransitioning}
-            navigateTo={navigateTo}
             colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+            navigateTo={navigateTo}
           />
         )}
       {pageComponent}

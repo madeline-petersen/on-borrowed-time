@@ -85,7 +85,7 @@ const Event = ({
   };
 
   useEffect(() => {
-    setIsTransitioning(false);
+    setIsTransitioning(null);
 
     // disabling all scrolling while animation plays
     fullpage_api.setAllowScrolling(false);
