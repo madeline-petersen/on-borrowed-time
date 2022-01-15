@@ -74,6 +74,14 @@
           opacity: 1 !important;
         }
       }
+
+      .headline__col:hover ~ .grid__col {
+        .text-black,
+        .text-white,
+        .thematic-thread-headline {
+          opacity: 1 !important;
+        }
+      }
     }
   }
 }

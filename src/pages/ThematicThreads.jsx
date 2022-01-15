@@ -46,6 +46,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                       return (
                         <span key={thread.title} className="contents">
                           <Col
+                            className="headline__col"
                             xl={first.content}
                             lg={first.content}
                             md={first.content}
@@ -56,18 +57,21 @@ const ThematicThreads = ({ backgroundColor }) => {
                             </div>
                           </Col>
                           <Col
+                            className="grid__col"
                             xl={first.rightGutter}
                             lg={first.rightGutter}
                             md={first.rightGutter}
                             sm={first.rightGutter}
                           />
                           <Col
+                            className="grid__col"
                             xl={firstSubtitles.leftGutter}
                             lg={firstSubtitles.leftGutter}
                             md={firstSubtitles.leftGutter}
                             sm={firstSubtitles.leftGutter}
                           />
                           <Col
+                            className="grid__col"
                             xl={firstSubtitles.content}
                             lg={firstSubtitles.content}
                             md={firstSubtitles.content}
@@ -88,6 +92,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                             })}
                           </Col>
                           <Col
+                            className="grid__col"
                             xl={firstSubtitles.rightGutter}
                             lg={firstSubtitles.rightGutter}
                             md={firstSubtitles.rightGutter}
@@ -99,12 +104,14 @@ const ThematicThreads = ({ backgroundColor }) => {
                       return (
                         <span key={thread.title} className="contents">
                           <Col
+                            className="grid__col"
                             xl={second.leftGutter}
                             lg={second.leftGutter}
                             md={second.leftGutter}
                             sm={first.leftGutter}
                           />
                           <Col
+                            className="headline__col"
                             xl={second.content}
                             lg={second.content}
                             md={second.content}
@@ -115,18 +122,21 @@ const ThematicThreads = ({ backgroundColor }) => {
                             </div>
                           </Col>
                           <Col
+                            className="grid__col"
                             xl={second.rightGutter}
                             lg={second.rightGutter}
                             md={second.rightGutter}
                             sm={first.rightGutter}
                           />
                           <Col
+                            className="grid__col"
                             xl={secondSubtitles.leftGutter}
                             lg={secondSubtitles.leftGutter}
                             md={secondSubtitles.leftGutter}
                             sm={firstSubtitles.leftGutter}
                           />
                           <Col
+                            className="grid__col"
                             xl={secondSubtitles.content}
                             lg={secondSubtitles.content}
                             md={secondSubtitles.content}
@@ -162,6 +172,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                       return (
                         <span key={thread.title} className="contents">
                           <Col
+                            className="headline__col"
                             xl={first.content}
                             lg={first.content}
                             md={first.content}
@@ -172,18 +183,21 @@ const ThematicThreads = ({ backgroundColor }) => {
                             </div>
                           </Col>
                           <Col
+                            className="grid__col"
                             xl={first.rightGutter}
                             lg={first.rightGutter}
                             md={first.rightGutter}
                             sm={first.rightGutter}
                           />
                           <Col
+                            className="grid__col"
                             xl={firstSubtitles.leftGutter}
                             lg={firstSubtitles.leftGutter}
                             md={firstSubtitles.leftGutter}
                             sm={firstSubtitles.leftGutter}
                           />
                           <Col
+                            className="grid__col"
                             xl={firstSubtitles.content}
                             lg={firstSubtitles.content}
                             md={firstSubtitles.content}
@@ -204,6 +218,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                             })}
                           </Col>
                           <Col
+                            className="grid__col"
                             xl={firstSubtitles.rightGutter}
                             lg={firstSubtitles.rightGutter}
                             md={firstSubtitles.rightGutter}
@@ -215,12 +230,14 @@ const ThematicThreads = ({ backgroundColor }) => {
                       return (
                         <span key={thread.title} className="contents">
                           <Col
+                            className="grid__col"
                             xl={second.leftGutter}
                             lg={second.leftGutter}
                             md={second.leftGutter}
                             sm={first.leftGutter}
                           />
                           <Col
+                            className="headline__col"
                             xl={second.content}
                             lg={second.content}
                             md={second.content}
@@ -231,18 +248,21 @@ const ThematicThreads = ({ backgroundColor }) => {
                             </div>
                           </Col>
                           <Col
+                            className="grid__col"
                             xl={second.rightGutter}
                             lg={second.rightGutter}
                             md={second.rightGutter}
                             sm={first.rightGutter}
                           />
                           <Col
+                            className="grid__col"
                             xl={secondSubtitles.leftGutter}
                             lg={secondSubtitles.leftGutter}
                             md={secondSubtitles.leftGutter}
                             sm={firstSubtitles.leftGutter}
                           />
                           <Col
+                            className="grid__col"
                             xl={secondSubtitles.content}
                             lg={secondSubtitles.content}
                             md={secondSubtitles.content}
