@@ -297,8 +297,8 @@ const UIShell = props => {
       <span
         className={cx('absolute cursor-pointer z-40 left-menu-close', {
           [timelineClasses]: true,
-          'fade-out': isMenuActive,
-          'fade-in': !isMenuActive
+          'fade-out': !isMenuActive,
+          'fade-in': isMenuActive
         })}
         onClick={
           selectedYear !== null
