@@ -30,7 +30,7 @@ const Timeline = props => {
         setNumScenes(0); // collapse timeline (1s duration)
       }
     }
-    props.navigateTo(year);
+    props.navigateTo(year.id);
     setSceneIndex('intro');
   };
 
