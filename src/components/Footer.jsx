@@ -1,6 +1,6 @@
 import { Col, Row } from 'react-grid-system';
 
-import { ArrowRight16, ArrowDown16 } from '@carbon/icons-react';
+import { ArrowDown16, ArrowRight16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';

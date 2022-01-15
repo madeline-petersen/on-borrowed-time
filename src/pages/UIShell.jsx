@@ -2,7 +2,6 @@ import './UIShell.scss';
 
 import { ArrowLeft20, Close20 } from '@carbon/icons-react';
 import React, { useState, useEffect } from 'react';
-
 import Event from './Event.jsx';
 import ThematicThreads from './ThematicThreads.jsx';
 import EditorsNote from './EditorsNote';

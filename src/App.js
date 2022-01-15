@@ -19,8 +19,8 @@ import data from './data/years.json';
 import { roman } from '@sguest/roman-js';
 import {
   ScreenClassProvider,
-  useScreenClass,
-  setConfiguration
+  setConfiguration,
+  useScreenClass
 } from 'react-grid-system';
 import ReactGA from 'react-ga';
 import RouteChangeTracker from './helpers/RouteChangeTracker';

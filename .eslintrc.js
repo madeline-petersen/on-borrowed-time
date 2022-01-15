@@ -12,6 +12,7 @@ module.exports = {
   extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
   plugins: [],
   rules: {
+    'sort-imports': ['error'],
     'prettier/prettier': ['error', { singleQuote: true }]
   }
 };

@@ -1,5 +1,5 @@
 import { Container, Row } from 'react-grid-system';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import HiddenFooter from '../components/HiddenFooter';
 import PropTypes from 'prop-types';
