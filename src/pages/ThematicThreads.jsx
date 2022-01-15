@@ -23,8 +23,8 @@ const ThematicThreads = ({ backgroundColor }) => {
       </Helmet>
       <Container className="grid__container">
         <Row
-          key="page-1"
-          className={`grid__row pt-32 pb-32 absolute ${
+          key="page-white"
+          className={`page-white grid__row pt-32 pb-32 absolute ${
             backgroundColor === 'white' ? 'show' : 'hide'
           }`}
         >
@@ -139,8 +139,8 @@ const ThematicThreads = ({ backgroundColor }) => {
           })}
         </Row>
         <Row
-          key="page-2"
-          className={`grid__row pt-32 pb-32 ${
+          key="page-black"
+          className={`page-black grid__row pt-32 pb-32 ${
             backgroundColor === 'white' ? 'hide' : 'show'
           }`}
         >
