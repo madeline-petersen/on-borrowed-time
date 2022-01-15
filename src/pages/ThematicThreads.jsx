@@ -89,13 +89,13 @@ const ThematicThreads = ({ backgroundColor }) => {
                     xl={second.leftGutter}
                     lg={second.leftGutter}
                     md={second.leftGutter}
-                    sm={second.leftGutter}
+                    sm={first.leftGutter}
                   />
                   <Col
                     xl={second.content}
                     lg={second.content}
                     md={second.content}
-                    sm={second.content}
+                    sm={first.content}
                   >
                     <div className="thematic-thread-headline text-black cursor-pointer pt-10 pb-5">
                       {ReactHtmlParser(thread.title)}
@@ -105,19 +105,19 @@ const ThematicThreads = ({ backgroundColor }) => {
                     xl={second.rightGutter}
                     lg={second.rightGutter}
                     md={second.rightGutter}
-                    sm={second.rightGutter}
+                    sm={first.rightGutter}
                   />
                   <Col
                     xl={secondSubtitles.leftGutter}
                     lg={secondSubtitles.leftGutter}
                     md={secondSubtitles.leftGutter}
-                    sm={secondSubtitles.leftGutter}
+                    sm={firstSubtitles.leftGutter}
                   />
                   <Col
                     xl={secondSubtitles.content}
                     lg={secondSubtitles.content}
                     md={secondSubtitles.content}
-                    sm={secondSubtitles.content}
+                    sm={firstSubtitles.content}
                   >
                     {thread.subtitles.map(subtitle => {
                       return (
@@ -205,13 +205,13 @@ const ThematicThreads = ({ backgroundColor }) => {
                     xl={second.leftGutter}
                     lg={second.leftGutter}
                     md={second.leftGutter}
-                    sm={second.leftGutter}
+                    sm={first.leftGutter}
                   />
                   <Col
                     xl={second.content}
                     lg={second.content}
                     md={second.content}
-                    sm={second.content}
+                    sm={first.content}
                   >
                     <div className="thematic-thread-headline text-white cursor-pointer pt-10 pb-5">
                       {ReactHtmlParser(thread.title)}
@@ -221,19 +221,19 @@ const ThematicThreads = ({ backgroundColor }) => {
                     xl={second.rightGutter}
                     lg={second.rightGutter}
                     md={second.rightGutter}
-                    sm={second.rightGutter}
+                    sm={first.rightGutter}
                   />
                   <Col
                     xl={secondSubtitles.leftGutter}
                     lg={secondSubtitles.leftGutter}
                     md={secondSubtitles.leftGutter}
-                    sm={secondSubtitles.leftGutter}
+                    sm={firstSubtitles.leftGutter}
                   />
                   <Col
                     xl={secondSubtitles.content}
                     lg={secondSubtitles.content}
                     md={secondSubtitles.content}
-                    sm={secondSubtitles.content}
+                    sm={firstSubtitles.content}
                   >
                     {thread.subtitles.map(subtitle => {
                       return (
