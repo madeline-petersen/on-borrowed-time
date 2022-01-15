@@ -10,4 +10,12 @@
       opacity: 1 !important;
     }
   }
+
+  .resource-title {
+    padding-right: calc(100% / 6);
+  }
+
+  .entry-type {
+    max-width: 70%;
+  }
 }
