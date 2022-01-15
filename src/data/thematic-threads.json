@@ -11,12 +11,12 @@
         {
           "year": "1989",
           "title": "Tiananmen Square Massacre",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "II"
         },
         {
           "year": "1997",
           "title": "Amid Changing Symbols",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "II"
         }
       ]
     },
@@ -25,14 +25,13 @@
       "subtitles": [
         {
           "year": "1984",
-          "title": "On the Question of Hong Kong",
-          "romanSceneNumber": "I"
+          "title": "On the Question of Hong Kong"
         },
-        { "year": "1997", "title": "The Handover", "romanSceneNumber": "I" },
+        { "year": "1997", "title": "The Handover", "romanSceneNumber": "III" },
         {
           "year": "2003",
           "title": "Abrupt Resignations",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "IV"
         }
       ]
     },
@@ -42,12 +41,12 @@
         {
           "year": "1984",
           "title": "A Borrowed Place, On Borrowed Time",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "II"
         },
         {
           "year": "1989",
           "title": "A Compromising Position",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "III"
         },
         {
           "year": "2003",
@@ -57,7 +56,7 @@
         {
           "year": "2003",
           "title": "An Attempt at Political Harmony",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "V"
         }
       ]
     },
@@ -67,12 +66,12 @@
         {
           "year": "1984",
           "title": "A Discourse of Semantics",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "III"
         },
         {
           "year": "1989",
           "title": "A New Diasporic Condition",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "IV"
         },
         { "year": "1997", "title": "The Mass Exodus", "romanSceneNumber": "I" }
       ]
@@ -85,12 +84,12 @@
         {
           "year": "2003",
           "title": "A Confluence of Factors",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "II"
         },
         {
           "year": "2003",
           "title": "A Historic Demonstration",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "III"
         },
         {
           "year": "2014",
@@ -101,7 +100,7 @@
         {
           "year": "2019",
           "title": "Academic Citadels Under Seige",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "VII"
         },
         {
           "year": "2020",
@@ -116,15 +115,19 @@
         {
           "year": "2014",
           "title": "Umbrella Generation",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "V"
         },
         {
           "year": "2019",
           "title": "Five Demands, Not One Less",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "V"
         },
-        { "year": "2019", "title": "A Divided City", "romanSceneNumber": "I" },
-        { "year": "2019", "title": "Faces of Unrest", "romanSceneNumber": "I" },
+        { "year": "2019", "title": "A Divided City", "romanSceneNumber": "VI" },
+        {
+          "year": "2019",
+          "title": "Faces of Unrest",
+          "romanSceneNumber": "VII"
+        },
         {
           "year": "2020",
           "title": "On Hong Kong Identity",
@@ -138,23 +141,23 @@
         {
           "year": "2003",
           "title": "The Ultimate Aim",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "VI"
         },
         { "year": "2014", "title": "The White Paper", "romanSceneNumber": "I" },
         {
           "year": "2014",
           "title": "A Civil Referendum",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "III"
         },
         {
           "year": "2014",
           "title": "Seeking Genuine Suffrage",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "IV"
         },
         {
           "year": "2019",
           "title": "A Political Rebuke",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "III"
         },
         {
           "year": "2020",
@@ -171,11 +174,11 @@
           "title": "The Umbrella Movement",
           "romanSceneNumber": "I"
         },
-        { "year": "2014", "title": "A Stalemate", "romanSceneNumber": "I" },
+        { "year": "2014", "title": "A Stalemate", "romanSceneNumber": "VII" },
         {
           "year": "2019",
           "title": "Closing the Legal Loophole",
-          "romanSceneNumber": "I"
+          "romanSceneNumber": "II"
         },
         {
           "year": "2020",

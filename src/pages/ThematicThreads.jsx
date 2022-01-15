@@ -19,6 +19,14 @@ const ThematicThreads = ({ backgroundColor }) => {
   const second = { leftGutter: 4, content: 7, rightGutter: 1 };
   const secondSubtitles = { leftGutter: 5, content: 7 };
 
+  const navigateTo = (year, romanSceneNumber) => {
+    if (year && romanSceneNumber) {
+      history.push(`/${year}/scene-${romanSceneNumber}/event`);
+    } else if (year) {
+      history.push(`/${year}`);
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -86,8 +94,9 @@ const ThematicThreads = ({ backgroundColor }) => {
                                   key={subtitle}
                                   className="small-headline text-black cursor-pointer flex"
                                   onClick={() =>
-                                    history.push(
-                                      `/${subtitle.year}/scene-${subtitle.romanSceneNumber}/event`
+                                    navigateTo(
+                                      subtitle.year,
+                                      subtitle.romanSceneNumber
                                     )
                                   }
                                 >
@@ -155,6 +164,12 @@ const ThematicThreads = ({ backgroundColor }) => {
                                 <div
                                   key={subtitle}
                                   className="small-headline text-black cursor-pointer flex"
+                                  onClick={() =>
+                                    navigateTo(
+                                      subtitle.year,
+                                      subtitle.romanSceneNumber
+                                    )
+                                  }
                                 >
                                   {ReactHtmlParser(subtitle.year)}
                                   <div className="md:ml-16 sm:ml-8">
@@ -216,6 +231,12 @@ const ThematicThreads = ({ backgroundColor }) => {
                                 <div
                                   key={subtitle}
                                   className="small-headline text-white cursor-pointer flex"
+                                  onClick={() =>
+                                    navigateTo(
+                                      subtitle.year,
+                                      subtitle.romanSceneNumber
+                                    )
+                                  }
                                 >
                                   {ReactHtmlParser(subtitle.year)}
                                   <div className="md:ml-16 sm:ml-8">
@@ -281,6 +302,12 @@ const ThematicThreads = ({ backgroundColor }) => {
                                 <div
                                   key={subtitle}
                                   className="small-headline text-white cursor-pointer flex"
+                                  onClick={() =>
+                                    navigateTo(
+                                      subtitle.year,
+                                      subtitle.romanSceneNumber
+                                    )
+                                  }
                                 >
                                   {ReactHtmlParser(subtitle.year)}
                                   <div className="md:ml-16 sm:ml-8">
