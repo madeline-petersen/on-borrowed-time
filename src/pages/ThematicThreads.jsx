@@ -144,7 +144,7 @@ const ThematicThreads = ({ backgroundColor }) => {
             backgroundColor === 'white' ? 'hide' : 'show'
           }`}
         >
-          {data.white.map((thread, index) => {
+          {data.black.map((thread, index) => {
             if (index % 2 === 0) {
               return (
                 <span key={thread.title} className="contents">
