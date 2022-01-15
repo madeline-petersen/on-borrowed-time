@@ -24,7 +24,7 @@ const ThematicThreads = ({ backgroundColor }) => {
       <Container className="grid__container">
         <Row
           key="page-1"
-          className={`grid__row pt-32 absolute ${
+          className={`grid__row pt-32 pb-32 absolute ${
             backgroundColor === 'white' ? 'show' : 'hide'
           }`}
         >
@@ -38,7 +38,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                     md={first.content}
                     sm={first.content}
                   >
-                    <div className="thematic-thread-headline text-black cursor-pointer">
+                    <div className="thematic-thread-headline text-black cursor-pointer pt-10 pb-5">
                       {ReactHtmlParser(thread.title)}
                     </div>
                   </Col>
@@ -97,7 +97,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                     md={second.content}
                     sm={second.content}
                   >
-                    <div className="thematic-thread-headline text-black cursor-pointer">
+                    <div className="thematic-thread-headline text-black cursor-pointer pt-10 pb-5">
                       {ReactHtmlParser(thread.title)}
                     </div>
                   </Col>
@@ -140,7 +140,7 @@ const ThematicThreads = ({ backgroundColor }) => {
         </Row>
         <Row
           key="page-2"
-          className={`grid__row pt-32 ${
+          className={`grid__row pt-32 pb-32 ${
             backgroundColor === 'white' ? 'hide' : 'show'
           }`}
         >
@@ -154,7 +154,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                     md={first.content}
                     sm={first.content}
                   >
-                    <div className="thematic-thread-headline text-white cursor-pointer">
+                    <div className="thematic-thread-headline text-white cursor-pointer pt-10 pb-5">
                       {ReactHtmlParser(thread.title)}
                     </div>
                   </Col>
@@ -213,7 +213,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                     md={second.content}
                     sm={second.content}
                   >
-                    <div className="thematic-thread-headline text-white cursor-pointer">
+                    <div className="thematic-thread-headline text-white cursor-pointer pt-10 pb-5">
                       {ReactHtmlParser(thread.title)}
                     </div>
                   </Col>
