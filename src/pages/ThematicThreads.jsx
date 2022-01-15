@@ -186,7 +186,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                 </Row>
                 <Row
                   key="page-black"
-                  className={`page-black grid__row ${
+                  className={`page-black pb-24 grid__row ${
                     backgroundColor === 'white' ? 'hide' : 'show'
                   }`}
                 >
