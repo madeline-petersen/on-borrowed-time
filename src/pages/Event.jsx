@@ -9,9 +9,6 @@ import { Col, Container, Row, useScreenClass } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
 
 import HiddenFooter from '../components/HiddenFooter';
-import Custom from '../components/imageLayouts/Custom';
-import Diptych from '../components/imageLayouts/Diptych';
-import Triptych from '../components/imageLayouts/Triptych';
 import ResourceTable from '../components/ResourceTable';
 
 const Event = ({

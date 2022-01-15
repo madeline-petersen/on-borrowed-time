@@ -25,6 +25,9 @@ const EditorsNote = () => {
         licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
         scrollingSpeed={1000}
         scrollOverflow={true}
+        scrollOverflowOptions={{
+          preventDefault: false
+        }}
         paddingTop="78px"
         render={({ state, fullpageApi }) => {
           return (
