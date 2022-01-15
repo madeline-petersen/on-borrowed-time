@@ -67,6 +67,13 @@
       &:hover .text-white {
         opacity: 0.5;
       }
+
+      .text-black,
+      .text-white {
+        &:hover {
+          opacity: 1 !important;
+        }
+      }
     }
   }
 }
