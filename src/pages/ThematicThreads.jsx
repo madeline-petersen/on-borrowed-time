@@ -64,9 +64,12 @@ const ThematicThreads = ({ backgroundColor }) => {
                       return (
                         <div
                           key={subtitle}
-                          className="small-headline text-black cursor-pointer"
+                          className="small-headline text-black cursor-pointer flex"
                         >
                           {ReactHtmlParser(subtitle.year)}
+                          <div className="ml-16">
+                            {ReactHtmlParser(subtitle.title)}
+                          </div>
                         </div>
                       );
                     })}
@@ -120,9 +123,12 @@ const ThematicThreads = ({ backgroundColor }) => {
                       return (
                         <div
                           key={subtitle}
-                          className="small-headline text-black cursor-pointer"
+                          className="small-headline text-black cursor-pointer flex"
                         >
                           {ReactHtmlParser(subtitle.year)}
+                          <div className="ml-16">
+                            {ReactHtmlParser(subtitle.title)}
+                          </div>
                         </div>
                       );
                     })}
@@ -177,6 +183,9 @@ const ThematicThreads = ({ backgroundColor }) => {
                           className="small-headline text-white cursor-pointer"
                         >
                           {ReactHtmlParser(subtitle.year)}
+                          <div className="ml-16">
+                            {ReactHtmlParser(subtitle.title)}
+                          </div>
                         </div>
                       );
                     })}
@@ -228,6 +237,9 @@ const ThematicThreads = ({ backgroundColor }) => {
                           className="small-headline text-white cursor-pointer"
                         >
                           {ReactHtmlParser(subtitle.year)}
+                          <div className="ml-16">
+                            {ReactHtmlParser(subtitle.title)}
+                          </div>
                         </div>
                       );
                     })}
