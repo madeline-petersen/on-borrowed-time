@@ -27,18 +27,6 @@ const Header = ({
     history.push(`/${url}`);
   };
 
-  const onClickYear = () => {
-    if (pageId !== 'intro') {
-      navigateTo(currentYear);
-    }
-  };
-
-  const onClickScene = () => {
-    if (pageId !== 'event') {
-      navigateTo(currentYear, romanSceneNumber, 'event');
-    }
-  };
-
   return (
     <span
       className={`absolute w-full top-0 z-10 medium-caption ${timelineClasses}`}
@@ -51,9 +39,10 @@ const Header = ({
             <p
               className={cx('contrast-text', {
                 'cursor-pointer': pageId !== 'intro',
-                [colourBackgroundClass]: pageId === 'event'
+                [colourBackgroundClass]: pageId === 'event',
+                'pointer-events-none': pageId === 'intro'
               })}
-              onClick={onClickYear}
+              onClick={() => navigateTo(currentYear)}
             >
               {ReactHtmlParser(label)}
             </p>
@@ -127,9 +116,12 @@ const Header = ({
                   [`title-animation ${colourBackgroundClass}`]:
                     pageId === 'event',
                   'cursor-pointer': pageId !== 'event',
-                  'fade-out': transitionType && pageId === 'reflection'
+                  'fade-out': transitionType && pageId === 'reflection',
+                  'pointer-events-none': pageId === 'event'
                 })}
-                onClick={onClickScene}
+                onClick={() =>
+                  navigateTo(currentYear, romanSceneNumber, 'event')
+                }
               >
                 {ReactHtmlParser(title)}
               </p>
