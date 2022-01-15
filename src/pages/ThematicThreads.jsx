@@ -9,8 +9,6 @@ import ReactHtmlParser from 'react-html-parser';
 import data from '../data/thematic-threads.json';
 
 const ThematicThreads = ({ backgroundColor }) => {
-  let thematicThreads1 = data.white;
-  let thematicThreads2 = data.black;
   return (
     <div
       className={`thematic-threads h-auto black-white-background ${backgroundColor}`}
@@ -20,27 +18,27 @@ const ThematicThreads = ({ backgroundColor }) => {
       </Helmet>
       <Container className="grid__container min-h-screen">
         <Row
-          key={`threads-1`}
+          key="threads-1"
           className={`grid__row pt-32 absolute ${
             backgroundColor === 'white' ? 'show' : 'hide'
           }`}
         >
-          {thematicThreads1.map((thread, index) => {
+          {data.white.map(({ title }, index) => {
             if (index % 2 === 0) {
               return (
-                <Col key={thread} lg={12} md={12}>
+                <Col key={title} lg={12} md={12}>
                   <div className="thematic-thread-headline text-black cursor-pointer">
-                    {ReactHtmlParser(thread)}
+                    {ReactHtmlParser(title)}
                   </div>
                 </Col>
               );
             } else {
               return (
                 <>
-                  <Col key={thread} lg={3} />
-                  <Col key={thread} lg={9} md={12}>
+                  <Col key={title} lg={3} />
+                  <Col key={title} lg={9} md={12}>
                     <div className="thematic-thread-headline text-black cursor-pointer">
-                      {ReactHtmlParser(thread)}
+                      {ReactHtmlParser(title)}
                     </div>
                   </Col>
                 </>
@@ -49,27 +47,27 @@ const ThematicThreads = ({ backgroundColor }) => {
           })}
         </Row>
         <Row
-          key={`threads-2`}
+          key="threads-2"
           className={`grid__row pt-32 ${
             backgroundColor === 'white' ? 'hide' : 'show'
           }`}
         >
-          {thematicThreads2.map((thread, index) => {
+          {data.black.map(({ title }, index) => {
             if (index % 2 === 0) {
               return (
-                <Col key={thread} lg={12} md={12}>
+                <Col key={title} lg={12} md={12}>
                   <div className="thematic-thread-headline text-white cursor-pointer">
-                    {ReactHtmlParser(thread)}
+                    {ReactHtmlParser(title)}
                   </div>
                 </Col>
               );
             } else {
               return (
                 <>
-                  <Col key={thread} lg={3} />
-                  <Col key={thread} lg={9} md={12}>
+                  <Col key={title} lg={3} />
+                  <Col key={title} lg={9} md={12}>
                     <div className="thematic-thread-headline text-white cursor-pointer">
-                      {ReactHtmlParser(thread)}
+                      {ReactHtmlParser(title)}
                     </div>
                   </Col>
                 </>

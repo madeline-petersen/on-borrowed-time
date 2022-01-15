@@ -1,14 +1,20 @@
 {
   "white": [
-    "Fear o<span>f</span> Ambiguity",
-    "In-between Identity",
-    "Seeking to Preserve Democratic Rights <span>&amp;</span> Freedoms",
-    "Geographical Diaspora"
+    {
+      "title": "Fear o<span>f</span> Ambiguity"
+    },
+    { "title": "In-between Identity" },
+    {
+      "title": "Seeking to Preserve Democratic Rights <span>&amp;</span> Freedoms"
+    },
+    { "title": "Geographical Diaspora" }
   ],
   "black": [
-    "Solidarity <span>&amp;</span> Resistance",
-    "Hong Kong Identity",
-    "Advocating <span>f</span>or Genuine Democracy in the midst o<span>f</span> Eroding Rights <span>&amp;</span> Freedoms",
-    "<span>Cultural</span> Diaspora"
+    { "title": "Solidarity <span>&amp;</span> Resistance" },
+    { "title": "Hong Kong Identity" },
+    {
+      "title": "Advocating <span>f</span>or Genuine Democracy in the midst o<span>f</span> Eroding Rights <span>&amp;</span> Freedoms"
+    },
+    { "title": "<span>Cultural</span> Diaspora" }
   ]
 }
