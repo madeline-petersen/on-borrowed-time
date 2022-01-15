@@ -78,12 +78,12 @@ const Artifacts = ({
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
-                <div className={`section h-auto bg-black`}>
+                <div className="section h-auto bg-black">
                   <Container className="min-h-screen grid__container caption-fade-in">
                     {/* Artifacts */}
                     {artifacts && (
                       <>
-                        <div style={{ height: '20vh' }} />
+                        <div className="artifacts__spacer" />
                         {artifacts.imageLayout &&
                           artifacts.imageLayout.type === 'custom' && (
                             <Custom images={artifacts.imageLayout.images} />
@@ -102,7 +102,7 @@ const Artifacts = ({
                       </>
                     )}
                   </Container>
-                  <div className={`hidden-footer__container bg-black`}>
+                  <div className="hidden-footer__container bg-black">
                     <HiddenFooter
                       pageId="artifacts"
                       nextParams={nextParams}
@@ -112,12 +112,9 @@ const Artifacts = ({
                     />
                   </div>
                 </div>
-                <div className={`section w-full bg-black`}>
+                <div className="section w-full bg-black">
                   <Container className="grid__container">
-                    <Row
-                      className={`grid__row`}
-                      style={{ height: '100vh' }}
-                    ></Row>
+                    <Row className="grid__row h-screen"></Row>
                   </Container>
                 </div>
               </ReactFullpage.Wrapper>
