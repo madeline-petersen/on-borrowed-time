@@ -33,7 +33,7 @@ const UIShell = props => {
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
-    setIsTransitioning(true); // collapses timeline when transitioning year
+    setIsTransitioning(true);
     if (year && romanSceneNumber && page) {
       history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
     } else if (year) {
@@ -41,7 +41,7 @@ const UIShell = props => {
         // inter-year
         setTimeout(() => {
           history.push(`/${year}`);
-        }, 1000);
+        }, 1000); // delay to allow time to collapse timeline
       } else {
         // intra-year
         history.push(`/${year}`);
@@ -164,7 +164,7 @@ const UIShell = props => {
         <Intro
           {...props}
           navigateTo={navigateTo}
-          backgroundClass={imageBackgroundClasses[props.year.id]}
+          imageBackgroundClass={imageBackgroundClasses[props.year.id]}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           setIsTransitioning={setIsTransitioning}
         />
@@ -233,13 +233,13 @@ const UIShell = props => {
         )} | On Borrowed Time`}</title>
       </Helmet>
       <Header
+        {...props}
         currentYear={props.year.id}
         label={
           props.pageId === 'home'
             ? props.year.blurb
             : `${props.year.id} ${props.year.title}`
         }
-        pageId={props.pageId}
         title={props.scene ? props.scene.title : ''}
         isTransitioning={isTransitioning}
         romanSceneNumber={props.romanSceneNumber}
@@ -250,22 +250,16 @@ const UIShell = props => {
         timelineClasses={timelineClasses}
       />
       <LeftMenu
+        {...props}
         isActive={isMenuActive}
         onCloseLeftMenu={onCloseLeftMenu}
-        years={props.years}
         navigateTo={navigateTo}
-        setIsTransitioning={setIsTransitioning}
         selectedYear={selectedYear}
         setSelectedYear={setSelectedYear}
         setShowSiteTitle={setShowSiteTitle}
       />
       <Anecdote
         {...anecdoteData}
-        title={
-          anecdoteData.articleTitle ||
-          anecdoteData.bookTitle ||
-          anecdoteData.poemTitle
-        }
         isActive={isModalActive}
         onCloseModal={() => setIsModalActive(false)}
       />
@@ -321,7 +315,6 @@ const UIShell = props => {
             isTransitioning={isTransitioning}
             navigateTo={navigateTo}
             colourBackgroundClass={colourBackgroundClasses[props.year.id]}
-            colourBackgroundClasses={colourBackgroundClasses}
           />
         )}
       {pageComponent}

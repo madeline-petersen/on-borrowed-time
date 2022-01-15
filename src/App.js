@@ -150,8 +150,6 @@ function Page() {
     return (
       <UIShell
         pageId={pageId}
-        isLastScene={isLastScene}
-        isLastPage={isLastPage}
         years={data.years}
         year={year}
         scene={scene}

@@ -28,15 +28,13 @@ const Reflection = ({
   const afterLoad = function(origin, destination, direction) {
     if (destination.isLast) {
       if (changingParam === 'year') {
-        // if year end
         // inter-year
         navigateTo(nextParams.year);
       } else {
-        // else
         // intra-year
         navigateTo(
           nextParams.year,
-          nextParams.scene, // should be romanSceneNumber
+          nextParams.scene, // romanSceneNumber
           nextParams.page
         );
       }
@@ -228,10 +226,10 @@ Reflection.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  setIsTransitioning: PropTypes.func,
-  navigateTo: PropTypes.func,
+  imageBackgroundClass: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
-  imageBackgroundClass: PropTypes.string
+  navigateTo: PropTypes.func,
+  setIsTransitioning: PropTypes.func
 };
 
 export default Reflection;

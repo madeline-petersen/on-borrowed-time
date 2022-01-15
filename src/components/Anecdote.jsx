@@ -8,10 +8,12 @@ import ReactHtmlParser from 'react-html-parser';
 
 const Anecdote = ({
   type,
+  articleTitle,
+  bookTitle,
+  poemTitle,
   shortTitle,
   publication,
   year,
-  title,
   author,
   preamble,
   content,
@@ -25,6 +27,7 @@ const Anecdote = ({
   const anecdoteBackground = document.getElementById(
     'anecdote-background-filler'
   );
+  const title = articleTitle || bookTitle || poemTitle;
 
   window.addEventListener('click', function(event) {
     // left gutter
@@ -289,17 +292,24 @@ const Anecdote = ({
 };
 
 Anecdote.propTypes = {
+  // anecdoteData
   type: PropTypes.string,
   shortTitle: PropTypes.string,
-  title: PropTypes.string,
   year: PropTypes.string,
   author: PropTypes.string,
   publication: PropTypes.string,
   preamble: PropTypes.string,
   content: PropTypes.arrayOf(PropTypes.string),
   citation: PropTypes.string,
-  isActive: PropTypes.bool,
   linkTo: PropTypes.string,
+  articleTitle: PropTypes.string,
+  bookTitle: PropTypes.string,
+  poemTitle: PropTypes.string,
+
+  // state
+  isActive: PropTypes.bool,
+
+  // functions
   onCloseModal: PropTypes.func
 };
 
