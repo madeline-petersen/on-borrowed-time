@@ -78,13 +78,20 @@ const Timeline = props => {
           return (
             <div
               key={year.id}
-              className={cx('timeline__scenes pl-4 mb-2.5 contrast-text', {
-                collapsed: numScenes === 0,
-                [`expanded num-scenes-${numScenes}`]: numScenes > 0,
-                [colourClasses[year.id]]:
-                  props.pageId === 'event' &&
-                  !['1989', '1997'].includes(props.year?.id)
-              })}
+              className={`${
+                year.id === props.year?.id
+                  ? `timeline__scenes pl-4 mb-2.5 ${
+                      numScenes === 0
+                        ? 'collapsed'
+                        : `expanded num-scenes-${numScenes}`
+                    } contrast-text ${
+                      props.pageId === 'event' &&
+                      !['1989', '1997'].includes(props.year?.id)
+                        ? colourClasses[year.id]
+                        : ''
+                    }`
+                  : `pl-4 mb-2.5`
+              }`}
             >
               <span
                 onClick={() => onClickYear(year.id)}
@@ -93,7 +100,7 @@ const Timeline = props => {
                     props.pageId === 'event' &&
                     !['1989', '1997'].includes(props.year?.id),
                   'opacity-60 hover:opacity-100': year.id !== props.year?.id,
-                  'cursor-pointer opacity-60 hover:opacity-100':
+                  'opacity-60 hover:opacity-100':
                     props.pageId === 'home' && year.id !== props.previewedYear,
                   'opacity-100':
                     props.pageId === 'home' && year.id === props.previewedYear
@@ -152,16 +159,14 @@ const Timeline = props => {
                   >
                     {year.id === props.year?.id && (
                       <span
-                        className={
-                          (cx(
-                            'absolute left-4 w-max contrast-text scene-title'
-                          ),
+                        className={cx(
+                          'absolute left-4 w-max contrast-text scene-title',
                           {
                             [props.colourBackgroundClass]:
                               props.pageId === 'event' &&
                               !['1989', '1997'].includes(props.year?.id)
-                          })
-                        }
+                          }
+                        )}
                       >
                         {scene.title}
                       </span>
