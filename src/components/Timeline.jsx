@@ -39,12 +39,12 @@ const Timeline = props => {
   };
 
   useEffect(() => {
-    if (props.isTransitioning === 'year') {
+    if (props.transitionType === 'year') {
       setNumScenes(0); // collapse timeline
-    } else if (props.isTransitioning === 'scene') {
+    } else if (props.transitionType === 'scene') {
       setSceneIndex(null); // fade out circle immediately
     }
-  }, [props.isTransitioning]);
+  }, [props.transitionType]);
 
   useEffect(() => {
     setNumScenes(props.year.scenes?.length || 0); // expand timeline
@@ -197,7 +197,7 @@ Timeline.propTypes = {
   year: PropTypes.shape(), // current year, expands timeline
   timelineClasses: PropTypes.string,
   previewedYear: PropTypes.string,
-  isTransitioning: PropTypes.string,
+  transitionType: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
   navigateTo: PropTypes.func
 };
