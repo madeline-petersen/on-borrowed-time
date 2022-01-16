@@ -89,14 +89,14 @@ const ThematicThreads = ({ backgroundColor }) => {
                             className="grid__col"
                             xl={firstSubtitles.content}
                             lg={firstSubtitles.content}
-                            md={firstSubtitles.content}
-                            sm={firstSubtitles.content}
+                            md={first.content}
+                            sm={first.content}
                           >
                             {thread.subtitles.map(subtitle => {
                               return (
                                 <div
                                   key={subtitle}
-                                  className={`small-headline text-black cursor-pointer flex ${fadeOrder[index]}`}
+                                  className={`small-headline text-black cursor-pointer flex mb-1 ${fadeOrder[index]}`}
                                   onClick={() =>
                                     navigateTo(
                                       subtitle.year,
@@ -105,8 +105,13 @@ const ThematicThreads = ({ backgroundColor }) => {
                                   }
                                 >
                                   {ReactHtmlParser(subtitle.year)}
-                                  <div className="md:ml-16 sm:ml-8 mb-1">
+                                  <div className="md:ml-16 sm:ml-8">
                                     {ReactHtmlParser(subtitle.title)}
+                                  </div>
+                                  <div className="small-body self-center lg:ml-64 md:ml-16 sm:ml-8">
+                                    {ReactHtmlParser(
+                                      `Scene&nbsp;${subtitle.romanSceneNumber}`
+                                    )}
                                   </div>
                                 </div>
                               );
@@ -116,8 +121,6 @@ const ThematicThreads = ({ backgroundColor }) => {
                             className="grid__col"
                             xl={firstSubtitles.rightGutter}
                             lg={firstSubtitles.rightGutter}
-                            md={firstSubtitles.rightGutter}
-                            sm={firstSubtitles.rightGutter}
                           />
                         </span>
                       );
@@ -169,7 +172,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                               return (
                                 <div
                                   key={subtitle}
-                                  className={`small-headline text-black cursor-pointer flex ${fadeOrder[index]}`}
+                                  className={`small-headline text-black cursor-pointer flex mb-1 ${fadeOrder[index]}`}
                                   onClick={() =>
                                     navigateTo(
                                       subtitle.year,
@@ -178,8 +181,13 @@ const ThematicThreads = ({ backgroundColor }) => {
                                   }
                                 >
                                   {ReactHtmlParser(subtitle.year)}
-                                  <div className="md:ml-16 sm:ml-8 mb-1">
+                                  <div className="md:ml-16 sm:ml-8">
                                     {ReactHtmlParser(subtitle.title)}
+                                  </div>
+                                  <div className="small-body self-center lg:ml-64 md:ml-16 sm:ml-8">
+                                    {ReactHtmlParser(
+                                      `Scene&nbsp;${subtitle.romanSceneNumber}`
+                                    )}
                                   </div>
                                 </div>
                               );
@@ -231,14 +239,14 @@ const ThematicThreads = ({ backgroundColor }) => {
                             className="grid__col"
                             xl={firstSubtitles.content}
                             lg={firstSubtitles.content}
-                            md={firstSubtitles.content}
-                            sm={firstSubtitles.content}
+                            md={first.content}
+                            sm={first.content}
                           >
                             {thread.subtitles.map(subtitle => {
                               return (
                                 <div
                                   key={subtitle}
-                                  className={`small-headline text-white cursor-pointer flex ${fadeOrder[index]}`}
+                                  className={`small-headline text-white cursor-pointer flex mb-1 ${fadeOrder[index]}`}
                                   onClick={() =>
                                     navigateTo(
                                       subtitle.year,
@@ -247,8 +255,13 @@ const ThematicThreads = ({ backgroundColor }) => {
                                   }
                                 >
                                   {ReactHtmlParser(subtitle.year)}
-                                  <div className="md:ml-16 sm:ml-8 mb-1">
+                                  <div className="md:ml-16 sm:ml-8">
                                     {ReactHtmlParser(subtitle.title)}
+                                  </div>
+                                  <div className="small-body self-center lg:ml-64 md:ml-16 sm:ml-8">
+                                    {ReactHtmlParser(
+                                      `Scene&nbsp;${subtitle.romanSceneNumber}`
+                                    )}
                                   </div>
                                 </div>
                               );
@@ -258,8 +271,6 @@ const ThematicThreads = ({ backgroundColor }) => {
                             className="grid__col"
                             xl={firstSubtitles.rightGutter}
                             lg={firstSubtitles.rightGutter}
-                            md={firstSubtitles.rightGutter}
-                            sm={firstSubtitles.rightGutter}
                           />
                         </span>
                       );
@@ -311,7 +322,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                               return (
                                 <div
                                   key={subtitle}
-                                  className={`small-headline text-white cursor-pointer flex ${fadeOrder[index]}`}
+                                  className={`small-headline text-white cursor-pointer flex mb-1 ${fadeOrder[index]}`}
                                   onClick={() =>
                                     navigateTo(
                                       subtitle.year,
@@ -320,8 +331,13 @@ const ThematicThreads = ({ backgroundColor }) => {
                                   }
                                 >
                                   {ReactHtmlParser(subtitle.year)}
-                                  <div className="md:ml-16 sm:ml-8 mb-1">
+                                  <div className="md:ml-16 sm:ml-8">
                                     {ReactHtmlParser(subtitle.title)}
+                                  </div>
+                                  <div className="small-body self-center lg:ml-64 md:ml-16 sm:ml-8">
+                                    {ReactHtmlParser(
+                                      `Scene&nbsp;${subtitle.romanSceneNumber}`
+                                    )}
                                   </div>
                                 </div>
                               );

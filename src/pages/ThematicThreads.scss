@@ -69,16 +69,30 @@
         transition-duration: 150ms;
       }
 
-      &:hover .text-black,
-      &:hover .text-white {
+      .small-body {
+        opacity: 0;
+      }
+
+      &:hover .thematic-thread-headline,
+      &:hover .small-headline {
         // fade all text on hover
         opacity: 0.5;
       }
 
-      .text-black,
-      .text-white {
+      .small-headline {
         &:hover {
           // make currently hovered element opaque
+          opacity: 1 !important;
+
+          .small-body {
+            opacity: 1 !important;
+          }
+        }
+      }
+
+      span:hover {
+        .thematic-thread-headline {
+          // make headline opaque while group is hovered
           opacity: 1 !important;
         }
       }
@@ -86,13 +100,6 @@
       .headline__col:hover ~ .grid__col {
         .small-headline {
           // make subtitles opaque when headline is hovered
-          opacity: 1 !important;
-        }
-      }
-
-      span:hover {
-        .thematic-thread-headline {
-          // make headline opaque while group is hovered
           opacity: 1 !important;
         }
       }

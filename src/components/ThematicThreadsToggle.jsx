@@ -8,7 +8,6 @@ const ThematicThreadsToggle = ({
   useEffect(() => {
     // set background based on hash
     let hash = window.location.hash.substring(1);
-    console.log('hash ', hash);
     if (hash === '1984-2003') {
       setBackgroundColor(true); // white
     } else {
