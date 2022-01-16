@@ -122,18 +122,34 @@ div.highlight.dark {
     transition: color 0.5s linear;
   }
 
-  // make sure span keeps this color
   span {
+    // make sure span keeps this color
     color: black !important;
     cursor: pointer;
   }
+}
 
-  /*
-    change the text-color on hover, the color 
-    in span will not change due to !important.
-  */
-  &:hover {
-    color: #525252; // gray-70
+.bg-gray-30 {
+  div.highlight.dark:hover {
+    color: #6f6f6f; // gray-60
+  }
+}
+
+.bg-brown {
+  div.highlight.dark:hover {
+    color: #2b201a; // dark brown
+  }
+}
+
+.bg-yellow {
+  div.highlight.dark:hover {
+    color: #464540; // dark yellow
+  }
+}
+
+.bg-purple {
+  div.highlight.dark:hover {
+    color: #2e2b36; // dark purple
   }
 }
 
@@ -143,18 +159,28 @@ div.highlight.light {
     transition: color 0.5s linear;
   }
 
-  // make sure span keeps this color
   span {
+    // make sure span keeps this color
     color: white !important;
     cursor: pointer;
   }
+}
 
-  /*
-    change the text-color on hover, the color 
-    in span will not change due to !important.
-  */
-  &:hover {
-    color: #a8a8a8; // gray-40
+.bg-red {
+  div.highlight.light:hover {
+    color: #c7b1af; // light red
+  }
+}
+
+.bg-blue-50 {
+  div.highlight.light:hover {
+    color: #91add3; // light blue
+  }
+}
+
+.bg-black {
+  div.highlight.light:hover {
+    color: #bcb9b6; // gray-30
   }
 }
 
