@@ -12,12 +12,13 @@ const ThematicThreadsToggle = ({
     if (hash === '2003-2020') {
       setBackgroundColor(false); // black
     } else {
+      // unless hash is black page, default to white
       setBackgroundColor(true); // white
     }
   }, []);
 
   useEffect(() => {
-    // set hash based on background
+    // update hash when bg is toggled
     let yearRange = thematicThreadsBgWhite ? `1984-2003` : `2003-2020`;
     if (history.pushState) {
       // IE10, Firefox, Chrome, etc.
