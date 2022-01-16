@@ -9,11 +9,11 @@ const ThematicThreadsToggle = ({
     // set background based on hash
     let hash = window.location.hash.substring(1);
     console.log('hash ', hash);
-    if (hash === '2003-2020') {
-      setBackgroundColor(false); // black
-    } else {
-      // unless hash is black page, default to white
+    if (hash === '1984-2003') {
       setBackgroundColor(true); // white
+    } else {
+      // unless hash is white page, default to black
+      setBackgroundColor(false); // black
     }
   }, []);
 
