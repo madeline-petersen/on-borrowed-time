@@ -27,6 +27,8 @@ const ThematicThreads = ({ backgroundColor }) => {
     }
   };
 
+  const fadeOrder = ['fade-first', 'fade-second', 'fade-third', 'fade-fourth'];
+
   return (
     <>
       <Helmet>
@@ -43,7 +45,7 @@ const ThematicThreads = ({ backgroundColor }) => {
         render={({ state, fullpageApi }) => {
           return (
             <div
-              className={`section thematic-threads h-auto black-white-background ${backgroundColor}`}
+              className={`section thematic-threads h-auto black-white-background foreground-fade-in ${backgroundColor}`}
             >
               <Container className="grid__container">
                 <Row
@@ -63,7 +65,9 @@ const ThematicThreads = ({ backgroundColor }) => {
                             md={first.content}
                             sm={first.content}
                           >
-                            <div className="thematic-thread-headline text-black cursor-pointer pt-10 pb-5">
+                            <div
+                              className={`thematic-thread-headline text-black cursor-pointer pt-10 pb-5 ${fadeOrder[index]}`}
+                            >
                               {ReactHtmlParser(thread.title)}
                             </div>
                           </Col>
@@ -92,7 +96,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                               return (
                                 <div
                                   key={subtitle}
-                                  className="small-headline text-black cursor-pointer flex"
+                                  className={`small-headline text-black cursor-pointer flex ${fadeOrder[index]}`}
                                   onClick={() =>
                                     navigateTo(
                                       subtitle.year,
@@ -134,7 +138,9 @@ const ThematicThreads = ({ backgroundColor }) => {
                             md={second.content}
                             sm={first.content}
                           >
-                            <div className="thematic-thread-headline text-black cursor-pointer pt-10 pb-5">
+                            <div
+                              className={`thematic-thread-headline text-black cursor-pointer pt-10 pb-5 ${fadeOrder[index]}`}
+                            >
                               {ReactHtmlParser(thread.title)}
                             </div>
                           </Col>
@@ -163,7 +169,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                               return (
                                 <div
                                   key={subtitle}
-                                  className="small-headline text-black cursor-pointer flex"
+                                  className={`small-headline text-black cursor-pointer flex ${fadeOrder[index]}`}
                                   onClick={() =>
                                     navigateTo(
                                       subtitle.year,
@@ -201,7 +207,9 @@ const ThematicThreads = ({ backgroundColor }) => {
                             md={first.content}
                             sm={first.content}
                           >
-                            <div className="thematic-thread-headline text-white cursor-pointer pt-10 pb-5">
+                            <div
+                              className={`thematic-thread-headline text-white cursor-pointer pt-10 pb-5 ${fadeOrder[index]}`}
+                            >
                               {ReactHtmlParser(thread.title)}
                             </div>
                           </Col>
@@ -230,7 +238,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                               return (
                                 <div
                                   key={subtitle}
-                                  className="small-headline text-white cursor-pointer flex"
+                                  className={`small-headline text-white cursor-pointer flex ${fadeOrder[index]}`}
                                   onClick={() =>
                                     navigateTo(
                                       subtitle.year,
@@ -272,7 +280,9 @@ const ThematicThreads = ({ backgroundColor }) => {
                             md={second.content}
                             sm={first.content}
                           >
-                            <div className="thematic-thread-headline text-white cursor-pointer pt-10 pb-5">
+                            <div
+                              className={`thematic-thread-headline text-white cursor-pointer pt-10 pb-5 ${fadeOrder[index]}`}
+                            >
                               {ReactHtmlParser(thread.title)}
                             </div>
                           </Col>
@@ -301,7 +311,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                               return (
                                 <div
                                   key={subtitle}
-                                  className="small-headline text-white cursor-pointer flex"
+                                  className={`small-headline text-white cursor-pointer flex ${fadeOrder[index]}`}
                                   onClick={() =>
                                     navigateTo(
                                       subtitle.year,
