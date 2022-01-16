@@ -27,7 +27,7 @@ const UIShell = props => {
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   const [transitionType, setTransitionType] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
-  const [isWhite, setIsWhite] = useState(true);
+  const [thematicThreadsBgWhite, setThematicThreadsBgWhite] = useState(true);
   const [anecdoteData, setAnecdoteData] = useState({});
   const [isModalActive, setIsModalActive] = useState(false);
 
@@ -227,7 +227,9 @@ const UIShell = props => {
       break;
     case 'thematic-threads':
       pageComponent = (
-        <ThematicThreads backgroundColor={isWhite ? 'white' : 'black'} />
+        <ThematicThreads
+          backgroundColor={thematicThreadsBgWhite ? 'white' : 'black'}
+        />
       );
       break;
     case 'editors-note':
@@ -265,8 +267,8 @@ const UIShell = props => {
         romanSceneNumber={props.romanSceneNumber}
         navigateTo={navigateTo}
         colourBackgroundClass={colourBackgroundClasses[props.year.id]}
-        setBackgroundColor={() => setIsWhite(!isWhite)}
-        isWhite={isWhite}
+        setBackgroundColor={setThematicThreadsBgWhite}
+        thematicThreadsBgWhite={thematicThreadsBgWhite}
         timelineClasses={timelineClasses}
       />
       <LeftMenu

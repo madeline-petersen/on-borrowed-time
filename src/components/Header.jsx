@@ -19,7 +19,7 @@ const Header = ({
   navigateTo,
   colourBackgroundClass,
   setBackgroundColor,
-  isWhite,
+  thematicThreadsBgWhite,
   timelineClasses
 }) => {
   let history = useHistory();
@@ -49,7 +49,7 @@ const Header = ({
             {pageId === 'thematic-threads' && (
               <ThematicThreadsToggle
                 setBackgroundColor={setBackgroundColor}
-                isWhite={isWhite}
+                thematicThreadsBgWhite={thematicThreadsBgWhite}
               />
             )}
           </Col>
@@ -147,7 +147,7 @@ Header.propTypes = {
   navigateTo: PropTypes.func,
   colourBackgroundClass: PropTypes.string,
   setBackgroundColor: PropTypes.func,
-  isWhite: PropTypes.bool,
+  thematicThreadsBgWhite: PropTypes.bool,
   timelineClasses: PropTypes.string
 };
 
