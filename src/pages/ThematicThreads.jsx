@@ -66,7 +66,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                             sm={first.content}
                           >
                             <div
-                              className={`thematic-thread-headline text-black cursor-pointer pt-10 pb-5 ${fadeOrder[index]}`}
+                              className={`thematic-thread-headline text-black cursor-pointer pt-9 pb-5 ${fadeOrder[index]}`}
                             >
                               {ReactHtmlParser(thread.title)}
                             </div>
@@ -105,7 +105,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                                   }
                                 >
                                   {ReactHtmlParser(subtitle.year)}
-                                  <div className="md:ml-16 sm:ml-8">
+                                  <div className="md:ml-16 sm:ml-8 mb-1">
                                     {ReactHtmlParser(subtitle.title)}
                                   </div>
                                 </div>
@@ -139,7 +139,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                             sm={first.content}
                           >
                             <div
-                              className={`thematic-thread-headline text-black cursor-pointer pt-10 pb-5 ${fadeOrder[index]}`}
+                              className={`thematic-thread-headline text-black cursor-pointer pt-9 pb-5 ${fadeOrder[index]}`}
                             >
                               {ReactHtmlParser(thread.title)}
                             </div>
@@ -178,7 +178,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                                   }
                                 >
                                   {ReactHtmlParser(subtitle.year)}
-                                  <div className="md:ml-16 sm:ml-8">
+                                  <div className="md:ml-16 sm:ml-8 mb-1">
                                     {ReactHtmlParser(subtitle.title)}
                                   </div>
                                 </div>
@@ -208,7 +208,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                             sm={first.content}
                           >
                             <div
-                              className={`thematic-thread-headline text-white cursor-pointer pt-10 pb-5 ${fadeOrder[index]}`}
+                              className={`thematic-thread-headline text-white cursor-pointer pt-9 pb-5 ${fadeOrder[index]}`}
                             >
                               {ReactHtmlParser(thread.title)}
                             </div>
@@ -247,7 +247,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                                   }
                                 >
                                   {ReactHtmlParser(subtitle.year)}
-                                  <div className="md:ml-16 sm:ml-8">
+                                  <div className="md:ml-16 sm:ml-8 mb-1">
                                     {ReactHtmlParser(subtitle.title)}
                                   </div>
                                 </div>
@@ -281,7 +281,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                             sm={first.content}
                           >
                             <div
-                              className={`thematic-thread-headline text-white cursor-pointer pt-10 pb-5 ${fadeOrder[index]}`}
+                              className={`thematic-thread-headline text-white cursor-pointer pt-9 pb-5 ${fadeOrder[index]}`}
                             >
                               {ReactHtmlParser(thread.title)}
                             </div>
@@ -320,7 +320,7 @@ const ThematicThreads = ({ backgroundColor }) => {
                                   }
                                 >
                                   {ReactHtmlParser(subtitle.year)}
-                                  <div className="md:ml-16 sm:ml-8">
+                                  <div className="md:ml-16 sm:ml-8 mb-1">
                                     {ReactHtmlParser(subtitle.title)}
                                   </div>
                                 </div>
