@@ -28,7 +28,7 @@ const UIShell = props => {
   const [transitionType, setTransitionType] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
   const [thematicThreadsBgWhite, setThematicThreadsBgWhite] = useState(
-    window.location.hash.substring(1) === '1984-2003'
+    window.location.hash.substring(1) !== '2003-2020'
   );
   const [anecdoteData, setAnecdoteData] = useState({});
   const [isModalActive, setIsModalActive] = useState(false);
