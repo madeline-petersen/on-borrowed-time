@@ -98,4 +98,53 @@
       }
     }
   }
+
+  // &.thematic-threads-fade-in {
+  //   .fade-first {
+  //     opacity: 0;
+  //     animation-name: thematic-threads-fade-in-and-translate;
+  //     animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  //     animation-duration: 2s;
+  //     animation-delay: -1s;
+  //     animation-fill-mode: forwards;
+  //   }
+  //   .fade-second {
+  //     opacity: 0;
+  //     animation-name: thematic-threads-fade-in-and-translate;
+  //     animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  //     animation-duration: 2s;
+  //     animation-delay: -0.75s;
+  //     animation-fill-mode: forwards;
+  //   }
+  //   .fade-third {
+  //     opacity: 0;
+  //     animation-name: thematic-threads-fade-in-and-translate;
+  //     animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  //     animation-duration: 2s;
+  //     animation-delay: -0.5s;
+  //     animation-fill-mode: forwards;
+  //   }
+  //   .fade-fourth {
+  //     opacity: 0;
+  //     animation-name: thematic-threads-fade-in-and-translate;
+  //     animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  //     animation-duration: 2s;
+  //     animation-delay: -0.25s;
+  //     animation-fill-mode: forwards;
+  //   }
+  // }
+
+  // @keyframes thematic-threads-fade-in-and-translate {
+  //   0% {
+  //     opacity: 0;
+  //     transform: translateY(200px);
+  //   }
+  //   50% {
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //     transform: translateY(0px);
+  //   }
+  // }
 }

@@ -45,7 +45,7 @@ const ThematicThreads = ({ backgroundColor }) => {
         render={({ state, fullpageApi }) => {
           return (
             <div
-              className={`section thematic-threads h-auto black-white-background foreground-fade-in ${backgroundColor}`}
+              className={`section thematic-threads h-auto black-white-background thematic-threads-fade-in ${backgroundColor}`}
             >
               <Container className="grid__container">
                 <Row
