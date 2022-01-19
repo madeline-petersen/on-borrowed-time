@@ -4,7 +4,7 @@ import 'fullpage.js/vendors/scrolloverflow';
 import ReactFullpage from '@fullpage/react-fullpage';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Col, Container, Row } from 'react-grid-system';
+import { Col, Container, Row, useScreenClass } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
 import ReactHtmlParser from 'react-html-parser';
 import { useHistory } from 'react-router-dom';
@@ -13,6 +13,7 @@ import data from '../data/thematic-threads.json';
 
 const ThematicThreads = ({ currentBgColour }) => {
   let history = useHistory();
+  const screenClass = useScreenClass();
 
   const evenCols = {
     title: {
@@ -73,16 +74,16 @@ const ThematicThreads = ({ currentBgColour }) => {
       sm: 3
     },
     subtitle: {
-      xl: 8,
-      lg: 8,
-      md: 8,
-      sm: 8
+      xl: 6,
+      lg: 6,
+      md: 6,
+      sm: 6
     },
     subtitleGutterRight: {
-      xl: 1,
-      lg: 1,
-      md: 1,
-      sm: 1
+      xl: 3,
+      lg: 3,
+      md: 3,
+      sm: 3
     }
   };
 
@@ -91,6 +92,26 @@ const ThematicThreads = ({ currentBgColour }) => {
       history.push(`/${year}/scene-${romanSceneNumber}/event`);
     } else if (year) {
       history.push(`/${year}`);
+    }
+  };
+
+  const getTitleIndent = () => {
+    if (['lg', 'xl', 'xxl'].includes(screenClass)) {
+      return `calc(100%/6)`; // indent 1/6 columns for large
+    } else if (['md'].includes(screenClass)) {
+      return `calc(100%/6)`; // indent 1/6 columns for medium
+    } else {
+      return `calc(100%/6)`; // indent 1/6 columns for medium
+    }
+  };
+
+  const getSceneIndent = () => {
+    if (['lg', 'xl', 'xxl'].includes(screenClass)) {
+      return `calc(400%/6)`; // indent 4/6 columns for large
+    } else if (['md'].includes(screenClass)) {
+      return `calc(400%/6)`; // indent 4/6 columns for medium
+    } else {
+      return `calc(400%/6)`; // indent 4/6 columns for medium
     }
   };
 
@@ -136,10 +157,22 @@ const ThematicThreads = ({ currentBgColour }) => {
                       }
                     >
                       {ReactHtmlParser(subtitle.year)}
-                      <div className="md:ml-16 sm:ml-8">
+                      <div
+                        className="subtitle__title absolute left-0"
+                        style={{
+                          left: getTitleIndent(),
+                          paddingLeft: '0.5rem'
+                        }}
+                      >
                         {ReactHtmlParser(subtitle.title)}
                       </div>
-                      <div className="small-body self-center lg:ml-64 md:ml-16 sm:ml-8">
+                      <div
+                        className="small-body self-center absolute left-0"
+                        style={{
+                          left: getSceneIndent(),
+                          paddingLeft: '0.5rem'
+                        }}
+                      >
                         {ReactHtmlParser(
                           `Scene&nbsp;${subtitle.romanSceneNumber}`
                         )}
