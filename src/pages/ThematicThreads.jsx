@@ -11,13 +11,85 @@ import { useHistory } from 'react-router-dom';
 
 import data from '../data/thematic-threads.json';
 
-const ThematicThreads = ({ backgroundColor }) => {
+const ThematicThreads = ({ currentBgColour }) => {
   let history = useHistory();
 
-  const first = { content: 11, rightGutter: 1 };
-  const firstSubtitles = { leftGutter: 1, content: 10, rightGutter: 1 };
-  const second = { leftGutter: 4, content: 7, rightGutter: 1 };
-  const secondSubtitles = { leftGutter: 5, content: 7 };
+  const evenTitleCols = {
+    xl: 11,
+    lg: 11,
+    md: 11,
+    sm: 11
+  };
+
+  const evenTitleGutterRightCols = {
+    xl: 1,
+    lg: 1,
+    md: 1,
+    sm: 1
+  };
+
+  const evenSubtitleGutterLeftCols = {
+    xl: 1,
+    lg: 1,
+    md: 1,
+    sm: 1
+  };
+
+  const evenSubtitleCols = {
+    xl: 6,
+    lg: 6,
+    md: 6,
+    sm: 6
+  };
+
+  const evenSubtitleGutterRightCols = {
+    xl: 5,
+    lg: 5,
+    md: 5,
+    sm: 5
+  };
+
+  const oddTitleGutterLeftCols = {
+    xl: 2,
+    lg: 2,
+    md: 2,
+    sm: 2
+  };
+
+  const oddTitleCols = {
+    xl: 9,
+    lg: 9,
+    md: 9,
+    sm: 9
+  };
+
+  const oddTitleGutterRightCols = {
+    xl: 1,
+    lg: 1,
+    md: 1,
+    sm: 1
+  };
+
+  const oddSubtitleGutterLeftCols = {
+    xl: 3,
+    lg: 3,
+    md: 3,
+    sm: 3
+  };
+
+  const oddSubtitleCols = {
+    xl: 8,
+    lg: 8,
+    md: 8,
+    sm: 8
+  };
+
+  const oddSubtitleGutterRightCols = {
+    xl: 1,
+    lg: 1,
+    md: 1,
+    sm: 1
+  };
 
   const navigateTo = (year, romanSceneNumber) => {
     if (year && romanSceneNumber) {
@@ -28,6 +100,101 @@ const ThematicThreads = ({ backgroundColor }) => {
   };
 
   const fadeOrder = ['fade-first', 'fade-second', 'fade-third', 'fade-fourth'];
+
+  const Page = background => {
+    const content = background === 'white' ? data.white : data.black;
+    const textColourClass =
+      background === 'white' ? 'text-black' : 'text-white';
+
+    return (
+      <Row
+        key={`page-${background}`}
+        className={`page-${background} grid__row ${background === 'white' &&
+          'absolute'} ${currentBgColour === background ? 'show' : 'hide'}`}
+      >
+        {content.map((thread, index) => {
+          if (index % 2 === 0) {
+            return (
+              <span key={thread.title} className="contents">
+                <Col className="headline__col" {...evenTitleCols}>
+                  <div
+                    className={`thematic-thread-headline ${textColourClass} cursor-pointer pt-9 pb-5 ${fadeOrder[index]}`}
+                  >
+                    {ReactHtmlParser(thread.title)}
+                  </div>
+                </Col>
+                <Col className="grid__col" {...evenTitleGutterRightCols} />
+                <Col className="grid__col" {...evenSubtitleGutterLeftCols} />
+                <Col className="grid__col" {...evenSubtitleCols}>
+                  {thread.subtitles.map(subtitle => {
+                    return (
+                      <div
+                        key={subtitle}
+                        className={`small-headline ${textColourClass} cursor-pointer flex mb-1 ${fadeOrder[index]}`}
+                        onClick={() =>
+                          navigateTo(subtitle.year, subtitle.romanSceneNumber)
+                        }
+                      >
+                        {ReactHtmlParser(subtitle.year)}
+                        <div className="md:ml-16 sm:ml-8">
+                          {ReactHtmlParser(subtitle.title)}
+                        </div>
+                        <div className="small-body self-center lg:ml-64 md:ml-16 sm:ml-8">
+                          {ReactHtmlParser(
+                            `Scene&nbsp;${subtitle.romanSceneNumber}`
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </Col>
+                <Col className="grid__col" {...evenSubtitleGutterRightCols} />
+              </span>
+            );
+          } else {
+            return (
+              <span key={thread.title} className="contents">
+                <Col className="grid__col" {...oddTitleGutterLeftCols} />
+                <Col className="headline__col" {...oddTitleCols}>
+                  <div
+                    className={`thematic-thread-headline ${textColourClass} cursor-pointer pt-9 pb-5 ${fadeOrder[index]}`}
+                  >
+                    {ReactHtmlParser(thread.title)}
+                  </div>
+                </Col>
+                <Col className="grid__col" {...oddTitleGutterRightCols} />
+                <Col className="grid__col" {...oddSubtitleGutterLeftCols} />
+                <Col className="grid__col" {...oddSubtitleCols}>
+                  {thread.subtitles.map(subtitle => {
+                    return (
+                      <div
+                        key={subtitle}
+                        className={`small-headline ${textColourClass} cursor-pointer flex mb-1 ${fadeOrder[index]}`}
+                        onClick={() =>
+                          navigateTo(subtitle.year, subtitle.romanSceneNumber)
+                        }
+                      >
+                        {ReactHtmlParser(subtitle.year)}
+                        <div className="md:ml-16 sm:ml-8">
+                          {ReactHtmlParser(subtitle.title)}
+                        </div>
+                        <div className="small-body self-center lg:ml-64 md:ml-16 sm:ml-8">
+                          {ReactHtmlParser(
+                            `Scene&nbsp;${subtitle.romanSceneNumber}`
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </Col>
+                <Col className="grid__col" {...oddSubtitleGutterRightCols} />
+              </span>
+            );
+          }
+        })}
+      </Row>
+    );
+  };
 
   return (
     <>
@@ -45,309 +212,11 @@ const ThematicThreads = ({ backgroundColor }) => {
         render={({ state, fullpageApi }) => {
           return (
             <div
-              className={`section thematic-threads h-auto black-white-background thematic-threads-fade-in ${backgroundColor}`}
+              className={`section thematic-threads h-auto black-white-background thematic-threads-fade-in ${currentBgColour}`}
             >
               <Container className="grid__container">
-                <Row
-                  key="page-white"
-                  className={`page-white grid__row absolute ${
-                    backgroundColor === 'white' ? 'show' : 'hide'
-                  }`}
-                >
-                  {data.white.map((thread, index) => {
-                    if (index % 2 === 0) {
-                      return (
-                        <span key={thread.title} className="contents">
-                          <Col
-                            className="headline__col"
-                            xl={first.content}
-                            lg={first.content}
-                            md={first.content}
-                            sm={first.content}
-                          >
-                            <div
-                              className={`thematic-thread-headline text-black cursor-pointer pt-9 pb-5 ${fadeOrder[index]}`}
-                            >
-                              {ReactHtmlParser(thread.title)}
-                            </div>
-                          </Col>
-                          <Col
-                            className="grid__col"
-                            xl={first.rightGutter}
-                            lg={first.rightGutter}
-                            md={first.rightGutter}
-                            sm={first.rightGutter}
-                          />
-                          <Col
-                            className="grid__col"
-                            xl={firstSubtitles.leftGutter}
-                            lg={firstSubtitles.leftGutter}
-                            md={firstSubtitles.leftGutter}
-                            sm={firstSubtitles.leftGutter}
-                          />
-                          <Col
-                            className="grid__col"
-                            xl={firstSubtitles.content}
-                            lg={firstSubtitles.content}
-                            md={first.content}
-                            sm={first.content}
-                          >
-                            {thread.subtitles.map(subtitle => {
-                              return (
-                                <div
-                                  key={subtitle}
-                                  className={`small-headline text-black cursor-pointer flex mb-1 ${fadeOrder[index]}`}
-                                  onClick={() =>
-                                    navigateTo(
-                                      subtitle.year,
-                                      subtitle.romanSceneNumber
-                                    )
-                                  }
-                                >
-                                  {ReactHtmlParser(subtitle.year)}
-                                  <div className="md:ml-16 sm:ml-8">
-                                    {ReactHtmlParser(subtitle.title)}
-                                  </div>
-                                  <div className="small-body self-center lg:ml-64 md:ml-16 sm:ml-8">
-                                    {ReactHtmlParser(
-                                      `Scene&nbsp;${subtitle.romanSceneNumber}`
-                                    )}
-                                  </div>
-                                </div>
-                              );
-                            })}
-                          </Col>
-                          <Col
-                            className="grid__col"
-                            xl={firstSubtitles.rightGutter}
-                            lg={firstSubtitles.rightGutter}
-                          />
-                        </span>
-                      );
-                    } else {
-                      return (
-                        <span key={thread.title} className="contents">
-                          <Col
-                            className="grid__col"
-                            xl={second.leftGutter}
-                            lg={second.leftGutter}
-                            md={second.leftGutter}
-                            sm={first.leftGutter}
-                          />
-                          <Col
-                            className="headline__col"
-                            xl={second.content}
-                            lg={second.content}
-                            md={second.content}
-                            sm={first.content}
-                          >
-                            <div
-                              className={`thematic-thread-headline text-black cursor-pointer pt-9 pb-5 ${fadeOrder[index]}`}
-                            >
-                              {ReactHtmlParser(thread.title)}
-                            </div>
-                          </Col>
-                          <Col
-                            className="grid__col"
-                            xl={second.rightGutter}
-                            lg={second.rightGutter}
-                            md={second.rightGutter}
-                            sm={first.rightGutter}
-                          />
-                          <Col
-                            className="grid__col"
-                            xl={secondSubtitles.leftGutter}
-                            lg={secondSubtitles.leftGutter}
-                            md={secondSubtitles.leftGutter}
-                            sm={firstSubtitles.leftGutter}
-                          />
-                          <Col
-                            className="grid__col"
-                            xl={secondSubtitles.content}
-                            lg={secondSubtitles.content}
-                            md={secondSubtitles.content}
-                            sm={firstSubtitles.content}
-                          >
-                            {thread.subtitles.map(subtitle => {
-                              return (
-                                <div
-                                  key={subtitle}
-                                  className={`small-headline text-black cursor-pointer flex mb-1 ${fadeOrder[index]}`}
-                                  onClick={() =>
-                                    navigateTo(
-                                      subtitle.year,
-                                      subtitle.romanSceneNumber
-                                    )
-                                  }
-                                >
-                                  {ReactHtmlParser(subtitle.year)}
-                                  <div className="md:ml-16 sm:ml-8">
-                                    {ReactHtmlParser(subtitle.title)}
-                                  </div>
-                                  <div className="small-body self-center lg:ml-64 md:ml-16 sm:ml-8">
-                                    {ReactHtmlParser(
-                                      `Scene&nbsp;${subtitle.romanSceneNumber}`
-                                    )}
-                                  </div>
-                                </div>
-                              );
-                            })}
-                          </Col>
-                        </span>
-                      );
-                    }
-                  })}
-                </Row>
-                <Row
-                  key="page-black"
-                  className={`page-black pb-24 grid__row ${
-                    backgroundColor === 'white' ? 'hide' : 'show'
-                  }`}
-                >
-                  {data.black.map((thread, index) => {
-                    if (index % 2 === 0) {
-                      return (
-                        <span key={thread.title} className="contents">
-                          <Col
-                            className="headline__col"
-                            xl={first.content}
-                            lg={first.content}
-                            md={first.content}
-                            sm={first.content}
-                          >
-                            <div
-                              className={`thematic-thread-headline text-white cursor-pointer pt-9 pb-5 ${fadeOrder[index]}`}
-                            >
-                              {ReactHtmlParser(thread.title)}
-                            </div>
-                          </Col>
-                          <Col
-                            className="grid__col"
-                            xl={first.rightGutter}
-                            lg={first.rightGutter}
-                            md={first.rightGutter}
-                            sm={first.rightGutter}
-                          />
-                          <Col
-                            className="grid__col"
-                            xl={firstSubtitles.leftGutter}
-                            lg={firstSubtitles.leftGutter}
-                            md={firstSubtitles.leftGutter}
-                            sm={firstSubtitles.leftGutter}
-                          />
-                          <Col
-                            className="grid__col"
-                            xl={firstSubtitles.content}
-                            lg={firstSubtitles.content}
-                            md={first.content}
-                            sm={first.content}
-                          >
-                            {thread.subtitles.map(subtitle => {
-                              return (
-                                <div
-                                  key={subtitle}
-                                  className={`small-headline text-white cursor-pointer flex mb-1 ${fadeOrder[index]}`}
-                                  onClick={() =>
-                                    navigateTo(
-                                      subtitle.year,
-                                      subtitle.romanSceneNumber
-                                    )
-                                  }
-                                >
-                                  {ReactHtmlParser(subtitle.year)}
-                                  <div className="md:ml-16 sm:ml-8">
-                                    {ReactHtmlParser(subtitle.title)}
-                                  </div>
-                                  <div className="small-body self-center lg:ml-64 md:ml-16 sm:ml-8">
-                                    {ReactHtmlParser(
-                                      `Scene&nbsp;${subtitle.romanSceneNumber}`
-                                    )}
-                                  </div>
-                                </div>
-                              );
-                            })}
-                          </Col>
-                          <Col
-                            className="grid__col"
-                            xl={firstSubtitles.rightGutter}
-                            lg={firstSubtitles.rightGutter}
-                          />
-                        </span>
-                      );
-                    } else {
-                      return (
-                        <span key={thread.title} className="contents">
-                          <Col
-                            className="grid__col"
-                            xl={second.leftGutter}
-                            lg={second.leftGutter}
-                            md={second.leftGutter}
-                            sm={first.leftGutter}
-                          />
-                          <Col
-                            className="headline__col"
-                            xl={second.content}
-                            lg={second.content}
-                            md={second.content}
-                            sm={first.content}
-                          >
-                            <div
-                              className={`thematic-thread-headline text-white cursor-pointer pt-9 pb-5 ${fadeOrder[index]}`}
-                            >
-                              {ReactHtmlParser(thread.title)}
-                            </div>
-                          </Col>
-                          <Col
-                            className="grid__col"
-                            xl={second.rightGutter}
-                            lg={second.rightGutter}
-                            md={second.rightGutter}
-                            sm={first.rightGutter}
-                          />
-                          <Col
-                            className="grid__col"
-                            xl={secondSubtitles.leftGutter}
-                            lg={secondSubtitles.leftGutter}
-                            md={secondSubtitles.leftGutter}
-                            sm={firstSubtitles.leftGutter}
-                          />
-                          <Col
-                            className="grid__col"
-                            xl={secondSubtitles.content}
-                            lg={secondSubtitles.content}
-                            md={secondSubtitles.content}
-                            sm={firstSubtitles.content}
-                          >
-                            {thread.subtitles.map(subtitle => {
-                              return (
-                                <div
-                                  key={subtitle}
-                                  className={`small-headline text-white cursor-pointer flex mb-1 ${fadeOrder[index]}`}
-                                  onClick={() =>
-                                    navigateTo(
-                                      subtitle.year,
-                                      subtitle.romanSceneNumber
-                                    )
-                                  }
-                                >
-                                  {ReactHtmlParser(subtitle.year)}
-                                  <div className="md:ml-16 sm:ml-8">
-                                    {ReactHtmlParser(subtitle.title)}
-                                  </div>
-                                  <div className="small-body self-center lg:ml-64 md:ml-16 sm:ml-8">
-                                    {ReactHtmlParser(
-                                      `Scene&nbsp;${subtitle.romanSceneNumber}`
-                                    )}
-                                  </div>
-                                </div>
-                              );
-                            })}
-                          </Col>
-                        </span>
-                      );
-                    }
-                  })}
-                </Row>
+                {Page('white')}
+                {Page('black')}
               </Container>
             </div>
           );
@@ -358,7 +227,7 @@ const ThematicThreads = ({ backgroundColor }) => {
 };
 
 ThematicThreads.propTypes = {
-  backgroundColor: PropTypes.string
+  currentBgColour: PropTypes.string
 };
 
 export default ThematicThreads;

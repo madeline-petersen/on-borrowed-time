@@ -231,7 +231,7 @@ const UIShell = props => {
     case 'thematic-threads':
       pageComponent = (
         <ThematicThreads
-          backgroundColor={thematicThreadsBgWhite ? 'white' : 'black'}
+          currentBgColour={thematicThreadsBgWhite ? 'white' : 'black'}
         />
       );
       break;
