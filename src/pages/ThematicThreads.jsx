@@ -4,7 +4,13 @@ import 'fullpage.js/vendors/scrolloverflow';
 import ReactFullpage from '@fullpage/react-fullpage';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Col, Container, Row, useScreenClass } from 'react-grid-system';
+import {
+  Col,
+  Container,
+  Row,
+  useScreenClass,
+  Visible
+} from 'react-grid-system';
 import { Helmet } from 'react-helmet';
 import ReactHtmlParser from 'react-html-parser';
 import { useHistory } from 'react-router-dom';
@@ -37,14 +43,14 @@ const ThematicThreads = ({ currentBgColour }) => {
     subtitle: {
       xl: 6,
       lg: 6,
-      md: 6,
-      sm: 6
+      md: 8,
+      sm: 10
     },
     subtitleGutterRight: {
       xl: 5,
       lg: 5,
-      md: 5,
-      sm: 5
+      md: 3,
+      sm: 1
     }
   };
 
@@ -53,7 +59,7 @@ const ThematicThreads = ({ currentBgColour }) => {
       xl: 2,
       lg: 2,
       md: 2,
-      sm: 2
+      sm: 0
     },
     title: {
       xl: 9,
@@ -65,25 +71,25 @@ const ThematicThreads = ({ currentBgColour }) => {
       xl: 1,
       lg: 1,
       md: 1,
-      sm: 1
+      sm: 3
     },
     subtitleGutterLeft: {
       xl: 3,
       lg: 3,
       md: 3,
-      sm: 3
+      sm: 1
     },
     subtitle: {
       xl: 6,
       lg: 6,
-      md: 6,
-      sm: 6
+      md: 8,
+      sm: 10
     },
     subtitleGutterRight: {
       xl: 3,
       lg: 3,
-      md: 3,
-      sm: 3
+      md: 1,
+      sm: 1
     }
   };
 
@@ -95,23 +101,29 @@ const ThematicThreads = ({ currentBgColour }) => {
     }
   };
 
-  const getTitleIndent = () => {
-    if (['lg', 'xl', 'xxl'].includes(screenClass)) {
-      return `calc(100%/6)`; // indent 1/6 columns for large
+  const getTitleIndent = type => {
+    const cols = type === 'even' ? evenCols.subtitle : oddCols.subtitle;
+    if (['xl', 'xxl'].includes(screenClass)) {
+      return `calc(100%/${xl})`;
+    } else if (['lg'].includes(screenClass)) {
+      return `calc(100%/${cols.lg})`;
     } else if (['md'].includes(screenClass)) {
-      return `calc(100%/6)`; // indent 1/6 columns for medium
+      return `calc(100%/${cols.md})`;
     } else {
-      return `calc(100%/6)`; // indent 1/6 columns for medium
+      return `calc(200%/${cols.sm})`;
     }
   };
 
-  const getSceneIndent = () => {
-    if (['lg', 'xl', 'xxl'].includes(screenClass)) {
-      return `calc(400%/6)`; // indent 4/6 columns for large
+  const getSceneIndent = type => {
+    const cols = type === 'even' ? evenCols.subtitle : oddCols.subtitle;
+    if (['xl', 'xxl'].includes(screenClass)) {
+      return `calc(400%/${cols.xl})`;
+    } else if (['lg'].includes(screenClass)) {
+      return `calc(600%/${cols.lg})`;
     } else if (['md'].includes(screenClass)) {
-      return `calc(400%/6)`; // indent 4/6 columns for medium
+      return `calc(700%/${cols.md})`;
     } else {
-      return `calc(400%/6)`; // indent 4/6 columns for medium
+      return `calc(900%/${cols.sm})`;
     }
   };
 
@@ -135,7 +147,9 @@ const ThematicThreads = ({ currentBgColour }) => {
           return (
             <span key={thread.title} className="contents">
               {type === 'odd' && (
-                <Col className="grid__col" {...cols.titleGutterLeft} />
+                <Visible md lg xl>
+                  <Col className="grid__col" {...cols.titleGutterLeft} />
+                </Visible>
               )}
               <Col className="headline__col" {...cols.title}>
                 <div
@@ -160,7 +174,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                       <div
                         className="subtitle__title absolute left-0"
                         style={{
-                          left: getTitleIndent(),
+                          left: getTitleIndent(type),
                           paddingLeft: '0.5rem'
                         }}
                       >
@@ -169,7 +183,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                       <div
                         className="small-body self-center absolute left-0"
                         style={{
-                          left: getSceneIndent(),
+                          left: getSceneIndent(type),
                           paddingLeft: '0.5rem'
                         }}
                       >
