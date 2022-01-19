@@ -25,7 +25,8 @@
       "subtitles": [
         {
           "year": "1984",
-          "title": "On the Question of Hong Kong"
+          "title": "On the Question of Hong Kong",
+          "romanSceneNumber": "I"
         },
         { "year": "1997", "title": "The Handover", "romanSceneNumber": "III" },
         {
