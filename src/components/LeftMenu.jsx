@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Container, Row, Visible } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
+import { useHistory } from 'react-router-dom';
 
 const LeftMenu = ({
   isActive,
@@ -15,6 +16,7 @@ const LeftMenu = ({
   setSelectedYear,
   setShowSiteTitle
 }) => {
+  let history = useHistory();
   const menu = document.getElementById('menu-card');
   const menuBackground = document.getElementById('menu-background-filler');
   const overlay = document.getElementById('menu-overlay');
@@ -50,10 +52,14 @@ const LeftMenu = ({
     });
   };
 
+  const navigateToUrl = url => {
+    history.push(`/${url}`);
+  };
+
   const onClickLink = url => {
     closeModal();
     setTimeout(function() {
-      navigateTo(url);
+      navigateToUrl(url);
     }, 500);
   };
 
