@@ -184,8 +184,8 @@ const ThematicThreads = ({ currentBgColour }) => {
               <Col className="grid__col" {...cols.subtitleGutterRight} />
             </span>
           );
-          // }
         })}
+        {background === 'black' && <div className="h-24 mt-24" />}
       </Row>
     );
   };
