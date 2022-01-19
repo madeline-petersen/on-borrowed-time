@@ -162,7 +162,7 @@ const UIShell = props => {
 
   if (props.pageId === 'event') {
     timelineClasses = `contrast-text ${
-      colourBackgroundClasses[props.year.id]
+      isMenuActive ? 'bg-black' : colourBackgroundClasses[props.year.id]
     } ${mixBlendMode}`;
   }
 
