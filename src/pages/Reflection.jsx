@@ -171,7 +171,7 @@ const Reflection = ({
                           ['1989', '1997'].includes(year.id) ||
                           changingParam === 'year'
                             ? `text-white text-opacity-90`
-                            : `text-black text-opacity-70`
+                            : `text-black text-opacity-90`
                         }
                       />
                     </div>
