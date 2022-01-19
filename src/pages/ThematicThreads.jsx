@@ -26,13 +26,13 @@ const ThematicThreads = ({ currentBgColour }) => {
       xl: 11,
       lg: 11,
       md: 11,
-      sm: 11
+      sm: 12
     },
     titleGutterRight: {
       xl: 1,
       lg: 1,
       md: 1,
-      sm: 1
+      sm: 0
     },
     subtitleGutterLeft: {
       xl: 1,
@@ -65,13 +65,13 @@ const ThematicThreads = ({ currentBgColour }) => {
       xl: 9,
       lg: 9,
       md: 9,
-      sm: 9
+      sm: 12
     },
     titleGutterRight: {
       xl: 1,
       lg: 1,
       md: 1,
-      sm: 3
+      sm: 0
     },
     subtitleGutterLeft: {
       xl: 3,
@@ -158,8 +158,8 @@ const ThematicThreads = ({ currentBgColour }) => {
                   {ReactHtmlParser(thread.title)}
                 </div>
               </Col>
-              <Col className="grid__col" {...cols.titleGutterRight} />
-              <Visible xl lg md>
+              <Visible md lg xl>
+                <Col className="grid__col" {...cols.titleGutterRight} />
                 <Col className="grid__col" {...cols.subtitleGutterLeft} />
               </Visible>
               <Col className="grid__col" {...cols.subtitle}>
@@ -197,7 +197,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                   );
                 })}
               </Col>
-              <Visible xl lg md>
+              <Visible md lg xl>
                 <Col className="grid__col" {...cols.subtitleGutterRight} />
               </Visible>
             </span>
