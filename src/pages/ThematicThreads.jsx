@@ -38,19 +38,19 @@ const ThematicThreads = ({ currentBgColour }) => {
       xl: 1,
       lg: 1,
       md: 1,
-      sm: 1
+      sm: 0
     },
     subtitle: {
       xl: 6,
       lg: 6,
       md: 8,
-      sm: 10
+      sm: 12
     },
     subtitleGutterRight: {
       xl: 5,
       lg: 5,
       md: 3,
-      sm: 1
+      sm: 0
     }
   };
 
@@ -77,19 +77,19 @@ const ThematicThreads = ({ currentBgColour }) => {
       xl: 3,
       lg: 3,
       md: 3,
-      sm: 1
+      sm: 0
     },
     subtitle: {
       xl: 6,
       lg: 6,
       md: 8,
-      sm: 10
+      sm: 12
     },
     subtitleGutterRight: {
       xl: 3,
       lg: 3,
       md: 1,
-      sm: 1
+      sm: 0
     }
   };
 
@@ -123,7 +123,7 @@ const ThematicThreads = ({ currentBgColour }) => {
     } else if (['md'].includes(screenClass)) {
       return `calc(700%/${cols.md})`;
     } else {
-      return `calc(900%/${cols.sm})`;
+      return `calc(1100%/${cols.sm})`;
     }
   };
 
@@ -159,7 +159,9 @@ const ThematicThreads = ({ currentBgColour }) => {
                 </div>
               </Col>
               <Col className="grid__col" {...cols.titleGutterRight} />
-              <Col className="grid__col" {...cols.subtitleGutterLeft} />
+              <Visible xl lg md>
+                <Col className="grid__col" {...cols.subtitleGutterLeft} />
+              </Visible>
               <Col className="grid__col" {...cols.subtitle}>
                 {thread.subtitles.map(subtitle => {
                   return (
@@ -195,7 +197,9 @@ const ThematicThreads = ({ currentBgColour }) => {
                   );
                 })}
               </Col>
-              <Col className="grid__col" {...cols.subtitleGutterRight} />
+              <Visible xl lg md>
+                <Col className="grid__col" {...cols.subtitleGutterRight} />
+              </Visible>
             </span>
           );
         })}
