@@ -104,7 +104,7 @@ const ThematicThreads = ({ currentBgColour }) => {
   const getTitleIndent = type => {
     const cols = type === 'even' ? evenCols.subtitle : oddCols.subtitle;
     if (['xl', 'xxl'].includes(screenClass)) {
-      return `calc(100%/${xl})`;
+      return `calc(100%/${cols.xl})`;
     } else if (['lg'].includes(screenClass)) {
       return `calc(100%/${cols.lg})`;
     } else if (['md'].includes(screenClass)) {
