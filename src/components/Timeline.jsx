@@ -109,8 +109,8 @@ const Timeline = props => {
                   [props.colourBackgroundClass]: isEventPage && !hasLightText,
                   'opacity-60 hover:opacity-100':
                     !isCurrentYear(year) ||
-                    (isHomePage && !previewingCurrentYear),
-                  'opacity-100': isHomePage && previewingCurrentYear
+                    (isHomePage && !previewingCurrentYear(year)),
+                  'opacity-100': isHomePage && previewingCurrentYear(year)
                 })}
               >
                 {year.id}
