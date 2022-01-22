@@ -1,6 +1,4 @@
 .clickable-area:hover {
-  .text-blue-10,
-  .text-gray-10,
   .text-opacity-90 {
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -11,7 +9,7 @@
 
 .hidden-footer__container {
   position: fixed;
-  bottom: -51.5px;
+  bottom: -100%; // places it will below bottom of screen
   width: 100vw;
   transition: bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 

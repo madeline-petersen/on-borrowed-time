@@ -1,9 +1,11 @@
 @import '../variables/breakpoints';
 
 .left-menu-bullet {
-  top: 6px;
+  top: 20px;
   left: 24px;
+  font-size: 1.875rem;
   transition: all 1s;
+  line-height: 8px;
 
   @media screen and (max-width: $md) {
     left: 12px;
@@ -13,6 +15,8 @@
 .left-menu-close {
   top: 16px;
   left: 20px;
+  font-size: 1.875rem;
+  line-height: 8px;
 
   @media screen and (max-width: $md) {
     left: 9px;

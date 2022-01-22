@@ -1,7 +1,6 @@
-import { Col, Row, Visible } from 'react-grid-system';
-import React from 'react';
-
 import PropTypes from 'prop-types';
+import React from 'react';
+import { Col, Row, Visible } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
 
 const Triptych = ({ images }) => {
@@ -15,13 +14,13 @@ const Triptych = ({ images }) => {
           </Visible>
           <Col key={image.source} lg={2} md={3} sm={4}>
             <div
-              className="fade-first aspect-ratio"
+              className="aspect-ratio reveal"
               style={{
                 paddingTop: `calc(${image.height}/${image.width} * 100%)`,
                 backgroundImage: `url('/images/${image.source}')`
               }}
             />
-            <p className={`small-body mt-2.5 mb-9 text-white fade-first`}>
+            <p className={`small-body mt-2.5 mb-9 text-white fade-in-element`}>
               {ReactHtmlParser(image.caption)}
             </p>
           </Col>

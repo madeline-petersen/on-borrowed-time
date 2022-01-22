@@ -2440,7 +2440,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "WORD",
+                  "publication": "Word",
                   "shortTitle": "A Prerequiste of Patriotism",
                   "bookTitle": "Discourse, democracy and diplomacy: A pragmatic analysis of the Occupy Central movement in Hong&nbsp;Kong",
                   "author": "Jacob L. Mey and Hans J. Ladegaard",
@@ -2806,7 +2806,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "WORD",
+                  "publication": "Word",
                   "shortTitle": "Democratic Centralism",
                   "bookTitle": "Discourse, Democracy and Diplomacy: a Pragmatic Analysis of the Occupy Central Movement in Hong&nbsp;Kong",
                   "author": "Jacob L. Mey, and Hans J. Ladegaard",
@@ -3227,7 +3227,7 @@
                 },
                 {
                   "type": "Journal Excerpt",
-                  "publication": "WORD",
+                  "publication": "Word",
                   "shortTitle": "Coming of Age",
                   "bookTitle": "Discourse, Democracy and Diplomacy: a Pragmatic Analysis of the Occupy Central Movement in Hong&nbsp;Kong",
                   "author": "Jacob L. Mey and Hans J. Ladegaard",
@@ -3391,8 +3391,8 @@
                 {
                   "type": "Article Excerpt",
                   "publication": "Legislation",
-                  "shortTitle": "—",
-                  "bookTitle": "Fugitive Offenders and Mutual Legal Assistance in Criminal Matters Legislation (Amendment) Bill 2019—BILL",
+                  "shortTitle": "Extradition Bill",
+                  "bookTitle": "Fugitive Offenders and Mutual Legal Assistance in Criminal Matters Legislation (Amendment) Bill 2019",
                   "author": "Hong&nbsp;Kong Government",
                   "year": "2019",
                   "content": [
@@ -3524,7 +3524,7 @@
                 },
                 {
                   "type": "Video ",
-                  "shortTitle": "On the Ground at Hong&nbsp;Kong Extradition Protests on June 9, 2019",
+                  "shortTitle": "On the Ground at Hong&nbsp;Kong Extradition Protests",
                   "bookTitle": "On the Ground at Hong&nbsp;Kong Extradition Protests on June 9, 2019",
                   "year": "2019",
                   "content": null,
@@ -3532,7 +3532,7 @@
                 },
                 {
                   "type": "Video",
-                  "shortTitle": "‘More than 1 Million’ People Join Historic Hong&nbsp;Kong March against Extradition Bill",
+                  "shortTitle": "‘Historic Hong&nbsp;Kong March against Extradition Bill",
                   "bookTitle": "‘More than 1 Million’ People Join Historic Hong&nbsp;Kong March against Extradition Bill",
                   "year": "2019",
                   "content": null,
@@ -3584,7 +3584,7 @@
                   "type": "Tweet",
                   "shortTitle": "Slowly but Steadily",
                   "bookTitle": "Instagram post by Laurel Chor",
-                  "year": "2019",
+                  "year": "2021",
                   "content": null,
                   "linkTo": "https://www.instagram.com/p/CP5MAymDEWj/?utm_medium=copy_link"
                 },
@@ -3818,12 +3818,14 @@
                   "type": "Video",
                   "shortTitle": "Sing Hallelujah to the Lord",
                   "bookTitle": "Sing Hallelujah to the Lord in Anti-extradition Protests [反送中示威詩歌頌唱]",
+                  "year": "2019",
                   "linkTo": "https://www.youtube.com/watch?v=7HLvxvyEyh8"
                 },
                 {
                   "type": "Video",
                   "shortTitle": "Carrie Lam&rsquo;s Formal Apology",
                   "bookTitle": "Carrie Lam Apologizes Again, Says She Won&rsquo;t Restart Extradition Bill",
+                  "year": "2019",
                   "linkTo": "https://www.youtube.com/watch?v=oD7KCMcl35I"
                 },
                 {
@@ -4491,6 +4493,7 @@
                 ]
               ],
               "citations": [
+                "Chung, Nathan Law Kwun. “Give Hong Kong the Autonomy It Was Promised.” The New York Times. The New York Times, October 1, 2020.",
                 {
                   "text": "",
                   "linkTo": ""
@@ -4607,6 +4610,7 @@
                 ]
               ],
               "citations": [
+                "Davis, Hana Meihan. <em>For The Love Of Hong&nbsp;Kong: A Memoir From My City Under Siege</em>, 2021. ",
                 {
                   "text": "",
                   "linkTo": ""
@@ -4741,6 +4745,7 @@
                 ]
               ],
               "citations": [
+                "Davis, Hana Meihan. <em>For The Love Of Hong&nbsp;Kong: A Memoir From My City Under Siege</em>, 2021. ",
                 {
                   "text": "",
                   "linkTo": ""

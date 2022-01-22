@@ -1,30 +1,36 @@
-import { Container, Row } from 'react-grid-system';
-import React, { useState } from 'react';
-
-import HiddenFooter from '../components/HiddenFooter';
-import PropTypes from 'prop-types';
-import Triptych from '../components/imageLayouts/Triptych';
-import Diptych from '../components/imageLayouts/Diptych';
-import Custom from '../components/imageLayouts/Custom';
 import 'fullpage.js/vendors/scrolloverflow';
+import './Artifacts.scss';
+
 import ReactFullpage from '@fullpage/react-fullpage';
 import { throttle } from 'lodash';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import { Container, Row } from 'react-grid-system';
+
+import HiddenFooter from '../components/HiddenFooter';
+import Custom from '../components/imageLayouts/Custom';
+import Diptych from '../components/imageLayouts/Diptych';
+import Triptych from '../components/imageLayouts/Triptych';
 
 const Artifacts = ({
   artifacts,
   nextParams,
   changingParam,
   next,
+  setTransitionType,
   navigateTo
 }) => {
   const [headerHeight, setHeaderHeight] = useState('78px');
+  useEffect(() => {
+    setTransitionType(null);
+  }, [artifacts]);
 
   const afterLoad = (origin, destination, direction) => {
     if (destination.isLast) {
       // intra-year
       navigateTo(
         nextParams.year,
-        nextParams.scene, // should be romanSceneNumber
+        nextParams.scene, // romanSceneNumber
         nextParams.page
       );
     }
@@ -64,16 +70,20 @@ const Artifacts = ({
           afterLoad={afterLoad}
           onLeave={throttle(onLeave, 1000)}
           scrollOverflow={true}
+          scrollOverflowOptions={{
+            preventDefault: false
+          }}
           lazyLoading={false}
           paddingTop={headerHeight}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
-                <div className={`section h-auto bg-black`}>
-                  <Container className="min-h-screen grid__container">
+                <div className="section h-auto bg-black">
+                  <Container className="min-h-screen grid__container caption-fade-in">
                     {/* Artifacts */}
                     {artifacts && (
                       <>
+                        <div className="artifacts__spacer" />
                         {artifacts.imageLayout &&
                           artifacts.imageLayout.type === 'custom' && (
                             <Custom images={artifacts.imageLayout.images} />
@@ -92,7 +102,7 @@ const Artifacts = ({
                       </>
                     )}
                   </Container>
-                  <div className={`hidden-footer__container bg-black`}>
+                  <div className="hidden-footer__container bg-black">
                     <HiddenFooter
                       pageId="artifacts"
                       nextParams={nextParams}
@@ -102,12 +112,9 @@ const Artifacts = ({
                     />
                   </div>
                 </div>
-                <div className={`section w-full bg-black`}>
+                <div className="section w-full bg-black">
                   <Container className="grid__container">
-                    <Row
-                      className={`grid__row`}
-                      style={{ height: '100vh' }}
-                    ></Row>
+                    <Row className="grid__row h-screen" />
                   </Container>
                 </div>
               </ReactFullpage.Wrapper>
@@ -124,6 +131,7 @@ Artifacts.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
+  setTransitionType: PropTypes.func,
   navigateTo: PropTypes.func
 };
 

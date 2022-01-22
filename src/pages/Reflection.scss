@@ -1,0 +1,19 @@
+.reflection {
+  &__container {
+    min-height: calc(100vh - 51.5px);
+  }
+
+  &__paragraph-container {
+    padding-top: 20vh;
+  }
+
+  svg.link-to {
+    min-width: 1rem;
+  }
+
+  .next-image-class {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

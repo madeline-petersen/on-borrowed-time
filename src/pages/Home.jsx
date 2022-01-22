@@ -1,19 +1,18 @@
 import './Home.scss';
 
-import { Col, Container, Row } from 'react-grid-system';
-import React, { useEffect } from 'react';
-
 import { ArrowDown20 } from '@carbon/icons-react';
-import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
 import ReactFullpage from '@fullpage/react-fullpage';
+import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import { Col, Container, Row } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
+import ReactHtmlParser from 'react-html-parser';
 
 const pluginWrapper = () => {
   require('./static/fullpage.parallax.min.js');
 };
 
-const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
+const Home = ({ years, hash, setHash, setTransitionType, navigateTo }) => {
   const onLeave = (origin, destination, direction) => {
     const destinationYear = years[destination.index].id;
     setHash(destinationYear);
@@ -43,7 +42,7 @@ const Home = ({ years, hash, setHash, setIsTransitioning, navigateTo }) => {
   }, []);
 
   useEffect(() => {
-    setIsTransitioning(false);
+    setTransitionType(null);
   }, []);
 
   const onClickYear = year => {
@@ -144,7 +143,7 @@ Home.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
   hash: PropTypes.string,
   setHash: PropTypes.func,
-  setIsTransitioning: PropTypes.func,
+  setTransitionType: PropTypes.func,
   navigateTo: PropTypes.func
 };
 

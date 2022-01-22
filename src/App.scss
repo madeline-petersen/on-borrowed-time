@@ -367,11 +367,6 @@ a {
   }
 }
 
-.footer-spacer {
-  // screen height - header height - footer height
-  min-height: calc(100vh - 78px - 231px);
-}
-
 // Transitions
 .fade-out {
   opacity: 0;
@@ -457,6 +452,22 @@ a {
     animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
     animation-duration: 2s;
     animation-delay: -0.75s;
+    animation-fill-mode: forwards;
+  }
+  .fade-third {
+    opacity: 0;
+    animation-name: foreground-fade-in-and-translate;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    animation-duration: 2s;
+    animation-delay: -0.5s;
+    animation-fill-mode: forwards;
+  }
+  .fade-fourth {
+    opacity: 0;
+    animation-name: foreground-fade-in-and-translate;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    animation-duration: 2s;
+    animation-delay: -0.25s;
     animation-fill-mode: forwards;
   }
 }

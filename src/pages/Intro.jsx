@@ -1,29 +1,29 @@
 import './Intro.scss';
 
-import { Col, Container, Row } from 'react-grid-system';
+import ReactFullpage from '@fullpage/react-fullpage';
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-grid-system';
+import ReactHtmlParser from 'react-html-parser';
 
 import Footer from '../components/Footer';
-import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
-import ReactFullpage from '@fullpage/react-fullpage';
 
 const Intro = ({
   year,
   navigateTo,
-  backgroundClass,
+  imageBackgroundClass,
   colourBackgroundClass,
-  setIsTransitioning,
+  setTransitionType,
   nextParams
 }) => {
   useEffect(() => {
-    setIsTransitioning(false);
+    setTransitionType(null);
   }, [year]);
 
   const onClickYear = () => {
     navigateTo(
       nextParams.year,
-      nextParams.scene, // should be romanSceneNumber
+      nextParams.scene, // romanSceneNumber
       nextParams.page
     );
   };
@@ -45,7 +45,7 @@ const Intro = ({
             return (
               <ReactFullpage.Wrapper>
                 <div
-                  className={`section hero-image cursor-pointer ${backgroundClass}`}
+                  className={`section hero-image cursor-pointer ${imageBackgroundClass}`}
                   key={year.id}
                   id={year.id}
                   onClick={() => fullpageApi.moveSectionDown()}
@@ -73,8 +73,6 @@ const Intro = ({
                           nextParams={nextParams}
                           next={year.scenes[0]}
                           changingParam="scene"
-                          setIsTransitioning={setIsTransitioning}
-                          navigateTo={navigateTo}
                           onClick={() => fullpageApi.moveSectionDown()}
                         />
                       </Container>
@@ -83,10 +81,7 @@ const Intro = ({
                 </div>
                 <div className={`section w-full ${colourBackgroundClass}`}>
                   <Container className="grid__container">
-                    <Row
-                      className={`grid__row`}
-                      style={{ height: '100vh' }}
-                    ></Row>
+                    <Row className="grid__row h-screen" />
                   </Container>
                 </div>
               </ReactFullpage.Wrapper>
@@ -101,9 +96,9 @@ const Intro = ({
 Intro.propTypes = {
   year: PropTypes.shape(),
   navigateTo: PropTypes.func,
-  backgroundClass: PropTypes.string,
+  imageBackgroundClass: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
-  setIsTransitioning: PropTypes.func,
+  setTransitionType: PropTypes.func,
   nextParams: PropTypes.shape()
 };
 

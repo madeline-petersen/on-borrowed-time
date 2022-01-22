@@ -1,33 +1,32 @@
 import './App.scss';
 
+import { roman } from '@sguest/roman-js';
+import React from 'react';
+import ReactGA from 'react-ga';
 import {
+  ScreenClassProvider,
+  setConfiguration,
+  useScreenClass
+} from 'react-grid-system';
+import {
+  BrowserRouter as Router,
   Redirect,
   Route,
-  BrowserRouter as Router,
   Switch,
   useParams
 } from 'react-router-dom';
 
+import data from './data/years.json';
 import GridHelper from './helpers/GridHelper.jsx';
+import RouteChangeTracker from './helpers/RouteChangeTracker';
 import Index from './pages/Index.jsx';
 import NoMatch from './pages/NoMatch.jsx';
-import React from 'react';
-import ScrollToTop from './ScrollToTop.jsx';
 import Splash from './pages/Splash.jsx';
 import UIShell from './pages/UIShell.jsx';
-import data from './data/years.json';
-import { roman } from '@sguest/roman-js';
-import {
-  ScreenClassProvider,
-  useScreenClass,
-  setConfiguration
-} from 'react-grid-system';
-import ReactGA from 'react-ga';
-import RouteChangeTracker from './helpers/RouteChangeTracker';
+import ScrollToTop from './ScrollToTop.jsx';
 
 const TRACKING_ID = 'G-LKR7ENMRG3';
 ReactGA.initialize(TRACKING_ID, {
-  debug: true,
   standardImplementation: true
 });
 
@@ -150,8 +149,6 @@ function Page() {
     return (
       <UIShell
         pageId={pageId}
-        isLastScene={isLastScene}
-        isLastPage={isLastPage}
         years={data.years}
         year={year}
         scene={scene}

@@ -1,11 +1,10 @@
 .thematic-threads {
   &.black-white-background {
-    height: 100vh;
     background: linear-gradient(to right, white 50%, black 50%);
     background-size: 200% 100%;
 
     &.white {
-      transition: background-position 1s 1s;
+      transition: background-position 1s 0.25s;
       transition-timing-function: cubic-bezier(
         0.83,
         0,
@@ -16,7 +15,7 @@
     }
 
     &.black {
-      transition: background-position 1s 1s;
+      transition: background-position 1s 0.25s;
       transition-timing-function: cubic-bezier(
         0.83,
         0,
@@ -30,20 +29,129 @@
       z-index: 0;
       transition: all 1s 0s; // disappear immediately
       opacity: 0;
-      transform: translateX(-20px);
-      animation-duration: 1s;
-      animation-delay: 0s;
-      animation-fill-mode: forwards;
     }
 
     .grid__row.show {
       z-index: 1;
-      transition: all 1s 2s; // reappear after background transition
+      transition: all 0.5s 0.75s; // reappear after background transition
       opacity: 1;
-      transform: translateX(0px);
-      animation-duration: 1s;
-      animation-delay: 2s;
-      animation-fill-mode: forwards;
+    }
+
+    .page-white {
+      &.grid__row.hide {
+        // bump left before fading out
+        transform: translateX(-20px);
+      }
+
+      &.grid__row.show {
+        // bump right before fading in
+        transform: translateX(0px);
+      }
+    }
+
+    .page-black {
+      &.grid__row.hide {
+        // bump right before fading out
+        transform: translateX(20px);
+      }
+
+      &.grid__row.show {
+        // bump left before fading in
+        transform: translateX(0px);
+      }
+    }
+
+    .page-white,
+    .page-black {
+      * {
+        transition-property: opacity;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+
+      .small-body {
+        opacity: 0;
+      }
+
+      &:hover .thematic-thread-headline,
+      &:hover .small-headline {
+        // fade all text on hover
+        opacity: 0.5;
+      }
+
+      .small-headline {
+        &:hover {
+          // make currently hovered element opaque
+          opacity: 1 !important;
+
+          .small-body {
+            opacity: 1 !important;
+          }
+        }
+      }
+
+      span:hover {
+        .thematic-thread-headline {
+          // make headline opaque while group is hovered
+          opacity: 1 !important;
+        }
+      }
+
+      .headline__col:hover ~ .grid__col {
+        .small-headline {
+          // make subtitles opaque when headline is hovered
+          opacity: 1 !important;
+        }
+      }
     }
   }
+
+  // &.thematic-threads-fade-in {
+  //   .fade-first {
+  //     opacity: 0;
+  //     animation-name: thematic-threads-fade-in-and-translate;
+  //     animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  //     animation-duration: 2s;
+  //     animation-delay: -1s;
+  //     animation-fill-mode: forwards;
+  //   }
+  //   .fade-second {
+  //     opacity: 0;
+  //     animation-name: thematic-threads-fade-in-and-translate;
+  //     animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  //     animation-duration: 2s;
+  //     animation-delay: -0.75s;
+  //     animation-fill-mode: forwards;
+  //   }
+  //   .fade-third {
+  //     opacity: 0;
+  //     animation-name: thematic-threads-fade-in-and-translate;
+  //     animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  //     animation-duration: 2s;
+  //     animation-delay: -0.5s;
+  //     animation-fill-mode: forwards;
+  //   }
+  //   .fade-fourth {
+  //     opacity: 0;
+  //     animation-name: thematic-threads-fade-in-and-translate;
+  //     animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  //     animation-duration: 2s;
+  //     animation-delay: -0.25s;
+  //     animation-fill-mode: forwards;
+  //   }
+  // }
+
+  // @keyframes thematic-threads-fade-in-and-translate {
+  //   0% {
+  //     opacity: 0;
+  //     transform: translateY(200px);
+  //   }
+  //   50% {
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //     transform: translateY(0px);
+  //   }
+  // }
 }

@@ -6,12 +6,14 @@ module.exports = {
   },
   parserOptions: {
     parser: 'babel-eslint',
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: 'module'
   },
   extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
-  plugins: [],
+  plugins: ['simple-import-sort'],
   rules: {
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
     'prettier/prettier': ['error', { singleQuote: true }]
   }
 };

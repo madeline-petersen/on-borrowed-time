@@ -1,18 +1,19 @@
 import './Anecdote.scss';
 
-import { Col, Container, Row, Visible } from 'react-grid-system';
-
 import { Close20 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Col, Container, Row, Visible } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
 
 const Anecdote = ({
   type,
+  articleTitle,
+  bookTitle,
+  poemTitle,
   shortTitle,
   publication,
   year,
-  title,
   author,
   preamble,
   content,
@@ -26,6 +27,7 @@ const Anecdote = ({
   const anecdoteBackground = document.getElementById(
     'anecdote-background-filler'
   );
+  const title = articleTitle || bookTitle || poemTitle;
 
   window.addEventListener('click', function(event) {
     // left gutter
@@ -157,7 +159,7 @@ const Anecdote = ({
                         rel="noopener noreferrer"
                         href={linkTo}
                       >
-                        <p className="small-body text-black text-opacity-60">
+                        <p className="small-body text-black text-opacity-60 hover:text-opacity-100 transition-all">
                           {ReactHtmlParser(citation)}
                         </p>
                       </a>
@@ -218,7 +220,7 @@ const Anecdote = ({
                     <div className="h-12" />
                     <p className="border-t border-black border-opacity-10 pb-5" />
                     <a target="_blank" rel="noopener noreferrer" href={linkTo}>
-                      <p className="small-body text-black text-opacity-60">
+                      <p className="small-body text-black text-opacity-60 hover:text-opacity-100 transition-all">
                         {ReactHtmlParser(citation)}
                       </p>
                     </a>
@@ -272,7 +274,7 @@ const Anecdote = ({
                     <div className="h-12" />
                     <p className="border-t border-black border-opacity-10 pb-5" />
                     <a target="_blank" rel="noopener noreferrer" href={linkTo}>
-                      <p className="small-body text-black text-opacity-60">
+                      <p className="small-body text-black text-opacity-60 hover:text-opacity-100 transition-all">
                         {ReactHtmlParser(citation)}
                       </p>
                     </a>
@@ -290,17 +292,24 @@ const Anecdote = ({
 };
 
 Anecdote.propTypes = {
+  // anecdoteData
   type: PropTypes.string,
   shortTitle: PropTypes.string,
-  title: PropTypes.string,
   year: PropTypes.string,
   author: PropTypes.string,
   publication: PropTypes.string,
   preamble: PropTypes.string,
   content: PropTypes.arrayOf(PropTypes.string),
   citation: PropTypes.string,
-  isActive: PropTypes.bool,
   linkTo: PropTypes.string,
+  articleTitle: PropTypes.string,
+  bookTitle: PropTypes.string,
+  poemTitle: PropTypes.string,
+
+  // state
+  isActive: PropTypes.bool,
+
+  // functions
   onCloseModal: PropTypes.func
 };
 

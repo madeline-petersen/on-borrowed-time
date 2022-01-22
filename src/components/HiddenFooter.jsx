@@ -1,10 +1,10 @@
-import { Col, Container, Row } from 'react-grid-system';
+import './HiddenFooter.scss';
 
-import { ArrowRight16, ArrowDown16 } from '@carbon/icons-react';
+import { ArrowDown16, ArrowRight16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Col, Container, Row } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
-import './HiddenFooter.scss';
 
 const HiddenFooter = ({
   // used to determine navigation and labels
@@ -29,7 +29,7 @@ const HiddenFooter = ({
   return (
     <Container className="grid__container">
       {showBorder && (
-        <Row className={`grid__row`}>
+        <Row className="grid__row">
           <Col lg={1} />
           <Col lg={11} md={12}>
             <p className={`border-t ${borderClasses}`} />
@@ -42,30 +42,22 @@ const HiddenFooter = ({
       >
         <Col lg={1} className="cursor-default" />
         <Col lg={2} md={3} sm={3} xs={3}>
-          <p className={`small-body pb-4 pt-4 ${textClasses} fade-in-element`}>
-            Up Next
-          </p>
+          <p className={`small-body pb-4 pt-4 ${textClasses}`}>Up Next</p>
         </Col>
         <Col lg={2} md={2} sm={2} xs={2}>
-          <p className={`small-body pb-4 pt-4 ${textClasses} fade-in-element`}>
+          <p className={`small-body pb-4 pt-4 ${textClasses}`}>
             {/* current scene, next scene, next year */}
             {changingParam === 'year'
               ? nextParams.year
               : ReactHtmlParser(`Scene&nbsp;${nextParams.scene}`)}
           </p>
         </Col>
-        <Col
-          lg={7}
-          md={7}
-          sm={7}
-          xs={7}
-          style={{ display: 'flex', justifyContent: 'space-between' }}
-        >
-          <p className={`small-body pb-4 pt-4 ${textClasses} fade-in-element`}>
+        <Col lg={7} md={7} sm={7} xs={7} className="flex justify-between">
+          <p className={`small-body pb-4 pt-4 ${textClasses}`}>
             {/* next page, next scene, next year */}
             {ReactHtmlParser(next.title)}
           </p>
-          <p className={`pb-4 pt-4 ${textClasses} fade-in-element`}>
+          <p className={`pb-4 pt-4 ${textClasses}`}>
             {pageId === 'intro' ? <ArrowRight16 /> : <ArrowDown16 />}
           </p>
         </Col>
@@ -73,8 +65,6 @@ const HiddenFooter = ({
     </Container>
   );
 };
-
-HiddenFooter.defaultProps = {};
 
 HiddenFooter.propTypes = {
   nextParams: PropTypes.shape(),

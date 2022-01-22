@@ -1,11 +1,11 @@
 import './LeftMenu.scss';
 
-import { Col, Container, Row, Visible } from 'react-grid-system';
-
+import { roman } from '@sguest/roman-js';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Col, Container, Row, Visible } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
-import { roman } from '@sguest/roman-js';
+import { useHistory } from 'react-router-dom';
 
 const LeftMenu = ({
   isActive,
@@ -13,8 +13,10 @@ const LeftMenu = ({
   years,
   navigateTo,
   selectedYear,
-  setSelectedYear
+  setSelectedYear,
+  setShowSiteTitle
 }) => {
+  let history = useHistory();
   const menu = document.getElementById('menu-card');
   const menuBackground = document.getElementById('menu-background-filler');
   const overlay = document.getElementById('menu-overlay');
@@ -34,16 +36,30 @@ const LeftMenu = ({
   };
 
   const onClickYear = year => {
+    setShowSiteTitle(true);
     closeModal();
     setTimeout(function() {
       navigateTo(year);
     }, 500);
   };
 
+  const onSelectYear = (year, index) => {
+    setShowSiteTitle(false);
+    setSelectedYear({
+      id: year.id,
+      index: index,
+      ...year
+    });
+  };
+
+  const navigateToUrl = url => {
+    history.push(`/${url}`);
+  };
+
   const onClickLink = url => {
     closeModal();
     setTimeout(function() {
-      navigateTo(url);
+      navigateToUrl(url);
     }, 500);
   };
 
@@ -107,11 +123,7 @@ const LeftMenu = ({
                               'fade-out-content'}`}
                             onClick={() =>
                               selectedYear === null
-                                ? setSelectedYear({
-                                    id: year.id,
-                                    index: index,
-                                    ...year
-                                  })
+                                ? onSelectYear(year, index)
                                 : onClickYear(year.id)
                             }
                           >
@@ -196,6 +208,8 @@ const LeftMenu = ({
                               ReactHtmlParser(selectedYear.description)}
                           </div>
                         </Col>
+                      </Row>
+                      <Row className={`small-body text-white scene-container`}>
                         {selectedYear &&
                           selectedYear.scenes.map((scene, index) => (
                             <span
@@ -245,7 +259,8 @@ LeftMenu.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
   navigateTo: PropTypes.func,
   selectedYear: PropTypes.shape(),
-  setSelectedYear: PropTypes.func
+  setSelectedYear: PropTypes.func,
+  setShowSiteTitle: PropTypes.func
 };
 
 export default LeftMenu;

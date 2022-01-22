@@ -1,9 +1,8 @@
 import './GridHelper.css';
 
-import { Col, Container, Row, Visible } from 'react-grid-system';
-
 // Packages
 import React from 'react';
+import { Col, Container, Row, Visible } from 'react-grid-system';
 
 class GridHelper extends React.Component {
   constructor(props) {

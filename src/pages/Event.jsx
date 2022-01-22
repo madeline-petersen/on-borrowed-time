@@ -1,18 +1,15 @@
 import './Event.scss';
-
-import { Col, Container, Row, useScreenClass } from 'react-grid-system';
-import React, { useEffect, useState } from 'react';
-
-import HiddenFooter from '../components/HiddenFooter';
-import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
-import ResourceTable from '../components/ResourceTable';
-import Triptych from '../components/imageLayouts/Triptych';
-import Diptych from '../components/imageLayouts/Diptych';
-import Custom from '../components/imageLayouts/Custom';
 import 'fullpage.js/vendors/scrolloverflow';
+
 import ReactFullpage from '@fullpage/react-fullpage';
 import { throttle } from 'lodash';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import { Col, Container, Row, useScreenClass } from 'react-grid-system';
+import ReactHtmlParser from 'react-html-parser';
+
+import HiddenFooter from '../components/HiddenFooter';
+import ResourceTable from '../components/ResourceTable';
 
 const Event = ({
   year,
@@ -21,7 +18,7 @@ const Event = ({
   changingParam,
   next,
   navigateTo,
-  setIsTransitioning,
+  setTransitionType,
   colourBackgroundClass,
   textColourClass,
   borderColourClass,
@@ -85,7 +82,7 @@ const Event = ({
   };
 
   useEffect(() => {
-    setIsTransitioning(false);
+    setTransitionType(null);
 
     // disabling all scrolling while animation plays
     fullpage_api.setAllowScrolling(false);
@@ -103,7 +100,7 @@ const Event = ({
       // intra-year
       navigateTo(
         nextParams.year,
-        nextParams.scene, // should be romanSceneNumber
+        nextParams.scene, // romanSceneNumber
         nextParams.page
       );
     }
@@ -143,16 +140,19 @@ const Event = ({
             licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
             scrollingSpeed={1000}
             scrollOverflow={true}
+            scrollOverflowOptions={{
+              preventDefault: false
+            }}
             lazyLoading={false}
             paddingTop={headerHeight}
             render={({ state, fullpageApi }) => {
               return (
                 <ReactFullpage.Wrapper>
                   <div className={`section ${colourBackgroundClass}`}>
-                    <Container className="grid__container">
-                      {/* Event */}
-                      {event && (
-                        <div className="delayed-fade-in">
+                    {/* Event */}
+                    {event && (
+                      <div className="delayed-fade-in">
+                        <Container className="grid__container">
                           <Row
                             className={`grid__row intro-paragraph pb-24`}
                             id="event-paragraphs"
@@ -178,15 +178,17 @@ const Event = ({
                               );
                             })}
                           </Row>
-                          {event.sections.map((section, sectionIndex) => {
-                            const sectionId = event.themes[sectionIndex]
-                              .replace(/\s+/g, '-')
-                              .replace('&', 'and')
-                              .toLowerCase();
-                            return (
-                              <section key={`section-${sectionIndex}`}>
+                        </Container>
+                        {event.sections.map((section, sectionIndex) => {
+                          const sectionId = event.themes[sectionIndex]
+                            .replace(/\s+/g, '-')
+                            .replace('&', 'and')
+                            .toLowerCase();
+                          return (
+                            <section key={`section-${sectionIndex}`}>
+                              <Container className="grid__container">
                                 <Row
-                                  className={`grid__row intro-paragraph pb-24`}
+                                  className="grid__row intro-paragraph pb-24"
                                   id={sectionId}
                                 >
                                   {section.paragraphs.map(
@@ -194,7 +196,7 @@ const Event = ({
                                       return index === 0 ? (
                                         <div
                                           key={`paragraph-${index}`}
-                                          className="contents"
+                                          className="contents section-introduction"
                                         >
                                           <Col lg={1} md={2} />
                                           <Col
@@ -203,10 +205,6 @@ const Event = ({
                                             sm={12}
                                             xs={12}
                                             className="border-t border-white"
-                                            style={{
-                                              '--tw-border-opacity': '0.15',
-                                              paddingBottom: '30px'
-                                            }}
                                           />
                                           <Col lg={1} md={2} />
                                           <Col lg={5} md={3} sm={12} xs={12}>
@@ -256,6 +254,8 @@ const Event = ({
                                     }
                                   )}
                                 </Row>
+                              </Container>
+                              <Container className="grid__container resource-table-container transition-all">
                                 <ResourceTable
                                   theme="white"
                                   data={section.resources}
@@ -268,6 +268,8 @@ const Event = ({
                                   }
                                   fullWidth={true}
                                 />
+                              </Container>
+                              <Container className="grid__container">
                                 {section.image && (
                                   <Row className="pt-20 grid__row">
                                     <Col lg={1} md={2} />
@@ -291,15 +293,15 @@ const Event = ({
                                     </Col>
                                   </Row>
                                 )}
-                              </section>
-                            );
-                          })}
+                              </Container>
+                            </section>
+                          );
+                        })}
 
-                          {/* padding below last resource table */}
-                          <div className="pb-16" />
-                        </div>
-                      )}
-                    </Container>
+                        {/* padding below last resource table */}
+                        <div className="pb-16" />
+                      </div>
+                    )}
                   </div>
                 </ReactFullpage.Wrapper>
               );
@@ -321,18 +323,20 @@ const Event = ({
             afterLoad={afterLoad}
             onLeave={throttle(onLeave, 1000)}
             scrollOverflow={true}
+            scrollOverflowOptions={{
+              preventDefault: false
+            }}
             lazyLoading={false}
             paddingTop={headerHeight}
             render={({ state, fullpageApi }) => {
               return (
                 <ReactFullpage.Wrapper>
                   <div className={`section h-auto ${colourBackgroundClass}`}>
-                    <Container className="grid__container">
-                      {/* Event */}
-                      {event && (
-                        <div className={`delayed-fade-in`}>
+                    {event && (
+                      <div className="delayed-fade-in">
+                        <Container className="grid__container">
                           <Row
-                            className={`grid__row intro-paragraph pb-24`}
+                            className="grid__row intro-paragraph pb-24"
                             id="event-paragraphs"
                           >
                             {event.paragraphs.map((paragraph, index) => {
@@ -354,7 +358,7 @@ const Event = ({
                                     }`}
                                   >
                                     <p
-                                      className={`large-headline-dynamic fade-first`}
+                                      className="large-headline-dynamic fade-first"
                                       style={{ textIndent: getTextIndent() }}
                                     >
                                       {ReactHtmlParser(paragraph)}
@@ -366,6 +370,8 @@ const Event = ({
                               );
                             })}
                           </Row>
+                        </Container>
+                        <Container className="grid__container resource-table-container transition-all">
                           <ResourceTable
                             data={event.resources}
                             openModal={openModal}
@@ -375,29 +381,12 @@ const Event = ({
                             setOnClicks={() => setOnClicks('event-paragraphs')}
                             fullWidth={false}
                           />
+                        </Container>
 
-                          {event.imageLayout && (
-                            <div style={{ height: '50vh' }} />
-                          )}
-                          {event.imageLayout &&
-                            event.imageLayout.type === 'custom' && (
-                              <Custom images={event.imageLayout.images} />
-                            )}
-                          {event.imageLayout &&
-                            event.imageLayout.type === 'triptych' && (
-                              <Triptych images={event.imageLayout.images} />
-                            )}
-                          {event.imageLayout &&
-                            event.imageLayout.type === 'diptych' && (
-                              <Diptych images={event.imageLayout.images} />
-                            )}
-
-                          {/* padding below last page element */}
-                          <div className="pb-44" />
-                        </div>
-                      )}
-                    </Container>
-                    <div className={`hidden-footer__container bg-black`}>
+                        <div className="pb-44" />
+                      </div>
+                    )}
+                    <div className="hidden-footer__container bg-black">
                       <HiddenFooter
                         pageId="event"
                         nextParams={nextParams}
@@ -407,12 +396,9 @@ const Event = ({
                       />
                     </div>
                   </div>
-                  <div className={`section w-full bg-black`}>
+                  <div className="section w-full bg-black">
                     <Container className="grid__container">
-                      <Row
-                        className={`grid__row`}
-                        style={{ height: '100vh' }}
-                      ></Row>
+                      <Row className="grid__row h-screen" />
                     </Container>
                   </div>
                 </ReactFullpage.Wrapper>
@@ -432,7 +418,7 @@ Event.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
-  setIsTransitioning: PropTypes.func,
+  setTransitionType: PropTypes.func,
   navigateTo: PropTypes.func,
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
