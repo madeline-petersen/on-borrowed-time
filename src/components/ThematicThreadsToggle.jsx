@@ -33,11 +33,15 @@ const ThematicThreadsToggle = ({
       className="flex items-center"
       onClick={() => setBackgroundColor(!thematicThreadsBgWhite)}
     >
-      <div className={`${thematicThreadsBgWhite ? 'white' : 'black'}`}>
+      <div
+        className={`cursor-pointer ${
+          thematicThreadsBgWhite ? 'white' : 'black'
+        }`}
+      >
         <span className="slider round max-w-min" />
         <span className="slider round max-w-min" />
       </div>
-      <div className="pl-4">
+      <div className="cursor-pointer pl-4">
         {thematicThreadsBgWhite ? `1984—2003` : `2003—2020`}
       </div>
     </div>
