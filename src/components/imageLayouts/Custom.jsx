@@ -4,6 +4,16 @@ import { Col, Row } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
 
 const Custom = ({ images }) => {
+  const getMargin = (image, index) => {
+    let margin = '80px';
+
+    if (index === 0) {
+      margin = `calc((100vh - 78px - ${image.height}/${image.width} * 100%) / 2)`;
+    }
+
+    return margin;
+  };
+
   return (
     <>
       {images.map((image, index) => {
@@ -15,6 +25,7 @@ const Custom = ({ images }) => {
                 className="aspect-ratio reveal"
                 style={{
                   paddingTop: `calc(${image.height}/${image.width} * 100%)`,
+                  marginTop: `calc((100vh - 78px - ${image.height}/${image.width} * 100%) / 2)`,
                   backgroundImage: `url('/images/${image.source}')`
                 }}
               />
@@ -27,13 +38,14 @@ const Custom = ({ images }) => {
             </Col>
           </Row>
         ) : (
-          <Row key={`image-${index}`} className="grid__row pt-20 pb-24">
+          <Row key={`image-${index}`} className="grid__row pb-24">
             <Col lg={3} />
             <Col lg={7} md={12}>
               <div
                 className="aspect-ratio reveal"
                 style={{
                   paddingTop: `calc(${image.height}/${image.width} * 100%)`,
+                  marginTop: getMargin(image, index),
                   backgroundImage: `url('/images/${image.source}')`
                 }}
               />

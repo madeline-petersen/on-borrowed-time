@@ -83,7 +83,6 @@ const Artifacts = ({
                     {/* Artifacts */}
                     {artifacts && (
                       <>
-                        <div className="artifacts__spacer" />
                         {artifacts.imageLayout &&
                           artifacts.imageLayout.type === 'custom' && (
                             <Custom images={artifacts.imageLayout.images} />
