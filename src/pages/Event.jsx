@@ -283,8 +283,8 @@ const Event = ({
                                       />
                                     </Col>
 
-                                    <Col lg={3} md={2} />
-                                    <Col lg={4} md={4}>
+                                    <Col lg={6} md={5} />
+                                    <Col lg={4} md={7}>
                                       <p
                                         className={`small-body text-white mt-8 fade-first text-opacity-70`}
                                       >
