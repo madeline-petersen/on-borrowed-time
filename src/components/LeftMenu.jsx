@@ -30,7 +30,6 @@ const LeftMenu = ({
     let romanSceneNumber = roman.toRoman(sceneIndex + 1).toUpperCase();
     setTimeout(function() {
       navigateTo(year, romanSceneNumber, 'event');
-      setSelectedYear(null);
     }, 500);
   };
 
@@ -38,7 +37,6 @@ const LeftMenu = ({
     closeModal();
     setTimeout(function() {
       navigateTo(year);
-      setSelectedYear(null);
     }, 500);
   };
 
@@ -46,7 +44,6 @@ const LeftMenu = ({
     closeModal();
     setTimeout(function() {
       navigateTo(url);
-      setSelectedYear(null);
     }, 500);
   };
 
@@ -90,7 +87,7 @@ const LeftMenu = ({
               >
                 <div
                   className={`left-menu__list flex-col h-full ${
-                    selectedYear !== null ? 'transform' : ''
+                    selectedYear !== null ? 'transform' : 'years-menu'
                   }`}
                   style={{
                     paddingTop: `${
@@ -100,77 +97,92 @@ const LeftMenu = ({
                     }`
                   }}
                 >
-                  {years.map((year, index) => (
-                    <>
-                      <span key={year.id}>
-                        <Row
-                          className={`left-menu__year mb-2 cursor-pointer ${selectedYear &&
-                            selectedYear.id !== year.id &&
-                            'fade-out-content'}`}
-                          onClick={() =>
-                            selectedYear === null
-                              ? setSelectedYear({
-                                  id: year.id,
-                                  index: index,
-                                  ...year
-                                })
-                              : onClickYear(year.id)
-                          }
-                        >
-                          {/* 1/4 of 4 columns */}
-                          <Col lg={3} md={3} sm={2} xs={2}>
-                            <div className="medium-body text-white">
-                              {year.id}
-                            </div>
-                          </Col>
-                          {/* 3/4 of 4 columns */}
-                          <Col lg={9} md={9} sm={10} xs={10}>
-                            <div className="medium-body text-white">
-                              {ReactHtmlParser(year.title)}
-                            </div>
-                          </Col>
-                        </Row>
-                      </span>
-                    </>
-                  ))}
+                  <div className="dim-menu">
+                    {years.map((year, index) => (
+                      <>
+                        <span key={year.id}>
+                          <Row
+                            className={`left-menu__year mb-2 cursor-pointer ${selectedYear &&
+                              selectedYear.id !== year.id &&
+                              'fade-out-content'}`}
+                            onClick={() =>
+                              selectedYear === null
+                                ? setSelectedYear({
+                                    id: year.id,
+                                    index: index,
+                                    ...year
+                                  })
+                                : onClickYear(year.id)
+                            }
+                          >
+                            {/* 1/4 of 4 columns */}
+                            <Col lg={3} md={3} sm={2} xs={2}>
+                              <div className="medium-body text-white">
+                                {year.id}
+                              </div>
+                            </Col>
+                            {/* 3/4 of 4 columns */}
+                            <Col lg={9} md={9} sm={10} xs={10}>
+                              <div className="medium-body text-white">
+                                {ReactHtmlParser(year.title)}
+                              </div>
+                            </Col>
+                          </Row>
+                        </span>
+                      </>
+                    ))}
 
-                  <span key="thematic-threads">
-                    <Row
-                      className={`left-menu__year mb-2 ${selectedYear &&
-                        'fade-out-content'} pt-6`}
-                      onClick={() => onClickLink('thematic-threads')}
-                    >
-                      <Col lg={11} md={11} sm={11} xs={11}>
-                        {/* dividing line */}
-                        <p className="border-t border-white border-opacity-20 pt-8" />
-                      </Col>
-                      {/* 1/4 of 4 columns */}
-                      <Col lg={3} md={3} sm={2} xs={2} />
-                      {/* 3/4 of 4 columns */}
-                      <Col lg={9} md={9} sm={10} xs={10}>
-                        <div className="medium-body text-white cursor-pointer fit-content">
-                          Thematic Threads
-                        </div>
-                      </Col>
-                    </Row>
-                  </span>
+                    <span key="page-divider">
+                      <Row
+                        className={`left-menu__year page-divider ${selectedYear &&
+                          'fade-out-content'} pt-6`}
+                      >
+                        <Col lg={11} md={11} sm={11} xs={11}>
+                          {/* dividing line */}
+                          <p className="border-t border-white border-opacity-20 pt-8" />
+                        </Col>
+                        {/* 1/4 of 4 columns */}
+                        <Col lg={3} md={3} sm={2} xs={2} />
+                        {/* 3/4 of 4 columns */}
+                        <Col lg={9} md={9} sm={10} xs={10}></Col>
+                      </Row>
+                    </span>
 
-                  <span key="editors-note">
-                    <Row
-                      className={`left-menu__year mb-2 ${selectedYear &&
-                        'fade-out-content'}`}
-                      onClick={() => onClickLink('editors-note')}
-                    >
-                      {/* 1/4 of 4 columns */}
-                      <Col lg={3} md={3} sm={2} xs={2} />
-                      {/* 3/4 of 4 columns */}
-                      <Col lg={9} md={9} sm={10} xs={10}>
-                        <div className="medium-body text-white cursor-pointer fit-content">
-                          Editor&apos;s Note
-                        </div>
-                      </Col>
-                    </Row>
-                  </span>
+                    <span key="thematic-threads">
+                      <Row
+                        className={`left-menu__year mb-2 ${selectedYear &&
+                          'fade-out-content'}`}
+                        onClick={() => onClickLink('thematic-threads')}
+                      >
+                        <Col lg={11} md={11} sm={11} xs={11}></Col>
+                        {/* 1/4 of 4 columns */}
+                        <Col lg={3} md={3} sm={2} xs={2} />
+                        {/* 3/4 of 4 columns */}
+                        <Col lg={9} md={9} sm={10} xs={10}>
+                          <div className="medium-body text-white cursor-pointer fit-content">
+                            Thematic Threads
+                          </div>
+                        </Col>
+                      </Row>
+                    </span>
+
+                    <span key="editors-note">
+                      <Row
+                        className={`left-menu__year mb-2 ${selectedYear &&
+                          'fade-out-content'}`}
+                        onClick={() => onClickLink('editors-note')}
+                      >
+                        {/* 1/4 of 4 columns */}
+                        <Col lg={3} md={3} sm={2} xs={2} />
+                        {/* 3/4 of 4 columns */}
+                        <Col lg={9} md={9} sm={10} xs={10}>
+                          <div className="medium-body text-white cursor-pointer fit-content">
+                            Editor&apos;s Note
+                          </div>
+                        </Col>
+                      </Row>
+                    </span>
+                  </div>
 
                   {selectedYear !== null && (
                     <span

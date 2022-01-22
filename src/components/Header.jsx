@@ -76,7 +76,7 @@ const Header = ({
               <p
                 className={`cursor-pointer contrast-text
                 ${pageId === 'event' ? colourBackgroundClass : ''}
-                ${pageId === 'thematic-threads' && 'underline'}`}
+                ${pageId === 'editors-note' && 'transparent'}`}
                 onClick={() => navigateToUrl('thematic-threads')}
               >
                 Thematic&nbsp;Threads
@@ -86,7 +86,7 @@ const Header = ({
               <p
                 className={`cursor-pointer contrast-text float-right
                 ${pageId === 'event' ? colourBackgroundClass : ''}
-                ${pageId === 'editors-note' && 'underline'}`}
+                ${pageId === 'thematic-threads' && 'transparent'}`}
                 onClick={() => navigateToUrl('editors-note')}
               >
                 Editor&apos;s&nbsp;Note

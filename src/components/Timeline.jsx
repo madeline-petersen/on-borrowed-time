@@ -20,14 +20,14 @@ const Timeline = props => {
   };
 
   const onClickYear = year => {
-    if (year === props.currentYear.id && props.pageId === 'intro') {
+    if (year === props.year?.id && props.pageId === 'intro') {
       return;
     }
 
     props.setIsTransitioning(true);
     setSceneIndex(null); // disappear circle
     if (props.pageId !== 'home') {
-      if (year !== props.currentYear.id) {
+      if (year !== props.year?.id) {
         setNumScenes(0); // collapse timeline (1s duration)
       }
     }
@@ -38,30 +38,24 @@ const Timeline = props => {
   const onClickScene = sceneIndex => {
     props.setIsTransitioning(true);
     setSceneIndex(null); // disappear circle
-    props.navigateTo(
-      props.currentYear.id,
-      roman.toRoman(sceneIndex + 1),
-      'event'
-    );
+    props.navigateTo(props.year?.id, roman.toRoman(sceneIndex + 1), 'event');
   };
 
   useEffect(() => {
     if (props.isTransitioning) {
-      if (props.pageId === 'reflection' || props.pageId === 'intro') {
+      if (props.changingParam !== 'page') {
         setSceneIndex(null); // fade out circle immediately
       }
 
-      if (props.isYearEnd) {
+      if (props.changingParam === 'year') {
         setNumScenes(0); // collapse timeline
       }
     }
   }, [props.isTransitioning]);
 
   useEffect(() => {
-    setNumScenes(
-      props.currentYear.scenes ? props.currentYear.scenes.length : 0
-    ); // expand timeline
-  }, [props.currentYear.id]);
+    setNumScenes(props.year.scenes?.length || 0); // expand timeline
+  }, [props.year?.id]);
 
   useEffect(() => {
     if (props.pageId === 'intro') {
@@ -69,19 +63,18 @@ const Timeline = props => {
     } else {
       setSceneIndex(props.sceneIndex);
     }
-  }, [props.currentYear, props.sceneIndex, props.pageId]);
+  }, [props.year, props.sceneIndex, props.pageId]);
 
   return (
     <span
       className={`timeline medium-caption pb-5 h-screen contrast-text ${
-        props.pageId === 'event' &&
-        !['1989', '1997'].includes(props.currentYear.id)
-          ? colourClasses[props.currentYear.id]
+        props.pageId === 'event' && !['1989', '1997'].includes(props.year?.id)
+          ? colourClasses[props.year?.id]
           : ''
       } ${props.pageId === 'intro' ? 'image-background' : ''} ${
         props.pageId === 'home' ? 'image-background' : ''
       } ${
-        ['1989', '1997'].includes(props.currentYear.id)
+        ['1989', '1997'].includes(props.year?.id)
           ? 'mix-blend-screen'
           : 'mix-blend-difference'
       }
@@ -96,14 +89,14 @@ const Timeline = props => {
             <div
               key={year.id}
               className={`${
-                year.id === props.currentYear.id
+                year.id === props.year?.id
                   ? `timeline__scenes pl-4 mb-2.5 ${
                       numScenes === 0
                         ? 'collapsed'
                         : `expanded num-scenes-${numScenes}`
                     } contrast-text ${
                       props.pageId === 'event' &&
-                      !['1989', '1997'].includes(props.currentYear.id)
+                      !['1989', '1997'].includes(props.year?.id)
                         ? colourClasses[year.id]
                         : ''
                     }`
@@ -114,12 +107,12 @@ const Timeline = props => {
                 onClick={() => onClickYear(year.id)}
                 className={`year-label contrast-text ${
                   props.pageId === 'event' &&
-                  !['1989', '1997'].includes(props.currentYear.id)
+                  !['1989', '1997'].includes(props.year?.id)
                     ? props.colourBackgroundClass
                     : ''
                 }
                 ${
-                  year.id !== props.currentYear.id
+                  year.id !== props.year?.id
                     ? 'cursor-pointer opacity-60 hover:opacity-100'
                     : 'cursor-pointer'
                 }
@@ -139,10 +132,10 @@ const Timeline = props => {
                 key="intro"
                 className={`circle cursor-pointer ${currentSceneIndex ===
                   'intro' && 'current-scene'} ${props.pageId === 'event' &&
-                  !['1989', '1997'].includes(props.currentYear.id) &&
+                  !['1989', '1997'].includes(props.year?.id) &&
                   colourClasses[year.id]}
                   ${
-                    year.id === props.currentYear.id && numScenes > 0
+                    year.id === props.year?.id && numScenes > 0
                       ? 'show'
                       : 'hide'
                   }`}
@@ -150,7 +143,7 @@ const Timeline = props => {
               >
                 <span
                   className={`dot mt-1 left-1 ${props.pageId === 'event' &&
-                    !['1989', '1997'].includes(props.currentYear.id) &&
+                    !['1989', '1997'].includes(props.year?.id) &&
                     colourClasses[year.id]}`}
                 />
               </span>
@@ -160,16 +153,16 @@ const Timeline = props => {
                   key={`scene-${index}`}
                   className={`circle cursor-pointer ${currentSceneIndex ===
                     index && 'current-scene'} ${props.pageId === 'event' &&
-                    !['1989', '1997'].includes(props.currentYear.id) &&
+                    !['1989', '1997'].includes(props.year?.id) &&
                     colourClasses[year.id]}
                     ${
-                      year.id === props.currentYear.id && numScenes > 0
+                      year.id === props.year?.id && numScenes > 0
                         ? 'show'
                         : 'hide'
                     }`}
                   style={{
                     marginTop: `${
-                      year.id === props.currentYear.id
+                      year.id === props.year?.id
                         ? `calc((${index + 1} * 24px))`
                         : '0'
                     }`
@@ -178,14 +171,14 @@ const Timeline = props => {
                 >
                   <span
                     className={`dot mt-1 left-1 ${props.pageId === 'event' &&
-                      !['1989', '1997'].includes(props.currentYear.id) &&
+                      !['1989', '1997'].includes(props.year?.id) &&
                       colourClasses[year.id]}`}
                   >
-                    {year.id === props.currentYear.id && (
+                    {year.id === props.year?.id && (
                       <span
                         className={`absolute left-4 w-max contrast-text scene-title ${
                           props.pageId === 'event' &&
-                          !['1989', '1997'].includes(props.currentYear.id)
+                          !['1989', '1997'].includes(props.year?.id)
                             ? props.colourBackgroundClass
                             : ''
                         }`}
@@ -204,22 +197,18 @@ const Timeline = props => {
   );
 };
 
-Timeline.defaultProps = {
-  currentYear: { id: '', title: '', scenes: [] }
-};
-
 Timeline.propTypes = {
   timelineClasses: PropTypes.string,
   sceneIndex: PropTypes.string,
   pageId: PropTypes.string,
-  currentYear: PropTypes.shape(),
+  year: PropTypes.shape(), // current year, expands timeline
   previewedYear: PropTypes.string,
   years: PropTypes.arrayOf(PropTypes.shape()),
   navigateTo: PropTypes.func,
   isTransitioning: PropTypes.bool,
   setIsTransitioning: PropTypes.func,
-  isYearEnd: PropTypes.bool,
-  colourBackgroundClass: PropTypes.string
+  colourBackgroundClass: PropTypes.string,
+  changingParam: PropTypes.string
 };
 
 export default Timeline;

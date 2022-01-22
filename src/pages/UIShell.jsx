@@ -13,9 +13,12 @@ import LeftMenu from '../components/LeftMenu';
 import { Link, useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Reflection from './Reflection.jsx';
+import Artifacts from './Artifacts.jsx';
 import Timeline from '../components/Timeline';
 import Anecdote from '../components/Anecdote';
 import { Visible } from 'react-grid-system';
+import { Helmet } from 'react-helmet';
+import ReactHtmlParser from 'react-html-parser';
 
 const UIShell = props => {
   const [isMenuActive, setIsMenuActive] = useState(false);
@@ -95,7 +98,7 @@ const UIShell = props => {
     // show "On Borrowed Time" after menu closes
     setTimeout(function() {
       setSelectedYear(null);
-    }, 500);
+    }, 1500);
   };
 
   useEffect(() => {
@@ -171,9 +174,13 @@ const UIShell = props => {
           textColourClass={textColourClass[props.year.id]}
           borderColourClass={borderColourClass[props.year.id]}
           setAnecdoteData={setAnecdoteData}
+          isModalActive={isModalActive}
           setIsModalActive={setIsModalActive}
         />
       );
+      break;
+    case 'artifacts':
+      pageComponent = <Artifacts {...props} navigateTo={navigateTo} />;
       break;
     case 'reflection':
       pageComponent = (
@@ -206,10 +213,13 @@ const UIShell = props => {
       );
   }
 
-  let isYearEnd = props.isLastScene && props.isLastPage;
-
   return (
     <>
+      <Helmet>
+        <title>{`On Borrowed Time | ${ReactHtmlParser(
+          props.scene?.title || props.year?.title
+        )}`}</title>
+      </Helmet>
       <Header
         currentYear={props.year.id}
         label={
@@ -284,22 +294,19 @@ const UIShell = props => {
         </Visible>
         Time
       </Link>
-      {props.pageId !== 'thematic-threads' && props.pageId !== 'editors-note' && (
-        <Timeline
-          timelineClasses={timelineClasses}
-          pageId={props.pageId}
-          sceneIndex={props.sceneIndex}
-          previewedYear={hash}
-          years={props.years}
-          currentYear={props.year} // expands timeline
-          setIsTransitioning={setIsTransitioning}
-          isTransitioning={isTransitioning}
-          isYearEnd={isYearEnd}
-          navigateTo={navigateTo}
-          colourBackgroundClass={colourBackgroundClasses[props.year.id]}
-          colourBackgroundClasses={colourBackgroundClasses}
-        />
-      )}
+      {props.pageId !== 'thematic-threads' &&
+        props.pageId !== 'editors-note' && (
+          <Timeline
+            {...props}
+            timelineClasses={timelineClasses}
+            previewedYear={hash}
+            setIsTransitioning={setIsTransitioning}
+            isTransitioning={isTransitioning}
+            navigateTo={navigateTo}
+            colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+            colourBackgroundClasses={colourBackgroundClasses}
+          />
+        )}
       {pageComponent}
     </>
   );

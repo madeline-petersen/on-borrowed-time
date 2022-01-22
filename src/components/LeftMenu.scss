@@ -117,6 +117,25 @@ $xxl-minus-1: 1799px;
       // transform up
       transition: padding-top 1s;
     }
+
+    &.years-menu {
+      .dim-menu {
+        * {
+          transition: opacity 0.1s linear;
+        }
+        &:hover {
+          .left-menu__year {
+            opacity: 0.5;
+            &.page-divider {
+              opacity: 1;
+            }
+          }
+        }
+        .left-menu__year:hover {
+          opacity: 1 !important;
+        }
+      }
+    }
   }
 
   &__year {

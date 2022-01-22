@@ -73,8 +73,11 @@ const Reflection = ({
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
-                <div className="section h-auto bg-black">
-                  <Container className="grid__container">
+                <div className="section bg-black">
+                  <Container
+                    className="grid__container"
+                    style={{ minHeight: `calc(100vh - 51.5px)` }}
+                  >
                     {/* Final Reflection */}
                     <div className="foreground-fade-in">
                       <div className="footer-spacer">
@@ -161,6 +164,28 @@ const Reflection = ({
                       </div>
                     </div>
                   </Container>
+                  {next && (
+                    <div
+                      className={`hidden-footer__container ${
+                        changingParam === 'year'
+                          ? 'bg-black'
+                          : colourBackgroundClass
+                      }`}
+                    >
+                      <HiddenFooter
+                        pageId="reflection"
+                        nextParams={nextParams}
+                        next={next}
+                        changingParam={changingParam}
+                        textClasses={
+                          ['1989', '1997'].includes(year.id) ||
+                          changingParam === 'year'
+                            ? `text-white text-opacity-90`
+                            : `text-black text-opacity-70`
+                        }
+                      />
+                    </div>
+                  )}
                 </div>
                 {changingParam === 'year' ? (
                   <div
@@ -186,32 +211,6 @@ const Reflection = ({
           }}
         />
       </div>
-      {next && (
-        <div
-          className={`hidden-footer__container ${
-            changingParam === 'year'
-              ? imageBackgroundClass
-              : colourBackgroundClass
-          }`}
-          style={{
-            backgroundPosition: '0 0',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover'
-          }}
-        >
-          <HiddenFooter
-            pageId="reflection"
-            nextParams={nextParams}
-            next={next}
-            changingParam={changingParam}
-            textClasses={
-              ['1989', '1997'].includes(year.id)
-                ? `text-white text-opacity-90`
-                : `text-black text-opacity-70`
-            }
-          />
-        </div>
-      )}
     </>
   );
 };

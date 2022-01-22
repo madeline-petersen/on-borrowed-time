@@ -26,9 +26,9 @@ const Event = ({
   textColourClass,
   borderColourClass,
   setAnecdoteData,
+  isModalActive,
   setIsModalActive
 }) => {
-  const [selectedTheme, setSelectedTheme] = useState(null);
   const [headerHeight, setHeaderHeight] = useState('78px');
 
   const openModal = entry => {
@@ -41,23 +41,48 @@ const Event = ({
   };
 
   const screenClass = useScreenClass();
-  const container = document.querySelector('#event-paragraphs');
-  let filteredMatches = [];
-  if (container) {
-    let matches = container.querySelectorAll('span');
-    let matchesArray = Array.prototype.slice.call(matches);
-    filteredMatches = matchesArray.filter(
-      element => element.classList.length === 0
-    );
-  }
+  const getTextIndent = () => {
+    if (['lg', 'xl', 'xxl'].includes(screenClass)) {
+      return `calc(200%/11)`; // indent 2/11 columns for large
+    } else if (['md'].includes(screenClass)) {
+      return `calc(200%/10)`; // indent 2/10 columns for medium
+    } else {
+      return '0'; // indent 0 for small, x-small
+    }
+  };
 
-  if (filteredMatches.length) {
-    filteredMatches.forEach((match, index) => {
-      match.onclick = function() {
-        openModal(event.resources[index]);
-      };
-    });
-  }
+  const getFilteredMatches = id => {
+    // get paragraphs
+    const container = document.querySelector(`#${id}`);
+
+    // get spans within paragraphs
+    let filteredMatches = [];
+    if (container) {
+      let matches = container.querySelectorAll('span');
+      let matchesArray = Array.prototype.slice.call(matches);
+      filteredMatches = matchesArray.filter(
+        element => element.classList.length === 0
+      );
+    }
+    return filteredMatches;
+  };
+
+  const setOnClicks = (id, sectionIndex) => {
+    const filteredMatches = getFilteredMatches(id);
+
+    // set onclick for spans
+    if (filteredMatches.length) {
+      filteredMatches.forEach((match, index) => {
+        match.onclick = function() {
+          if (year.id === '2020') {
+            openModal(event.sections[sectionIndex].resources[index]);
+          } else {
+            openModal(event.resources[index]);
+          }
+        };
+      });
+    }
+  };
 
   useEffect(() => {
     setIsTransitioning(false);
@@ -73,65 +98,22 @@ const Event = ({
     }, 4250);
   }, [event]);
 
-  let themeLookup = [];
-  if (event.themes) {
-    themeLookup = event.themes.map(theme => {
-      return `#${theme.replace(/\s+/g, '-').toLowerCase()}`;
-    });
-  }
-
-  const isSelectedTheme = theme => {
-    return theme === selectedTheme;
-  };
-
-  // const hexToRGBTable = {
-  //   'bg-blue-50': [0, 55, 120],
-  //   'bg-red': [104, 18, 12],
-  //   'bg-yellow': [232, 229, 210],
-  //   'bg-purple': [156, 140, 181],
-  //   'bg-gray-30': [188, 185, 182],
-  //   'bg-brown': [147, 103, 83],
-  //   'bg-black': [0, 0, 0]
-  // };
-
-  // const [red, green, blue] = hexToRGBTable[colourBackgroundClass];
-  // const transitionContainer = document.querySelector(
-  //   '.transition-colour-on-scroll'
-  // );
-  // const overflow = document.getElementById('overflow-container');
-
-  // if (overflow && transitionContainer && event.imageLayout) {
-  //   overflow.addEventListener('scroll', () => {
-  //     const y = 1 + overflow.scrollTop / 50 - 20;
-  //     if (y >= 1) {
-  //       const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
-  //       transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-  //     } else {
-  //       const [r, g, b] = hexToRGBTable[colourBackgroundClass];
-  //       transitionContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-  //     }
-  //   });
-  // }
-
   const afterLoad = (origin, destination, direction) => {
     if (destination.isLast) {
-      if (changingParam === 'year') {
-        // if year end
-        // inter-year
-        navigateTo(nextParams.year);
-      } else {
-        // else
-        // intra-year
-        navigateTo(
-          nextParams.year,
-          nextParams.scene, // should be romanSceneNumber
-          nextParams.page
-        );
-      }
+      // intra-year
+      navigateTo(
+        nextParams.year,
+        nextParams.scene, // should be romanSceneNumber
+        nextParams.page
+      );
     }
   };
 
   const onLeave = (origin, destination, direction) => {
+    if (isModalActive) {
+      return false;
+    }
+
     const element = document.getElementsByClassName(
       'hidden-footer__container'
     )[0];
@@ -166,11 +148,8 @@ const Event = ({
             render={({ state, fullpageApi }) => {
               return (
                 <ReactFullpage.Wrapper>
-                  <div
-                    className={`section ${colourBackgroundClass}`}
-                    style={{ height: 'max-content' }}
-                  >
-                    <Container className="min-h-screen grid__container">
+                  <div className={`section ${colourBackgroundClass}`}>
+                    <Container className="grid__container">
                       {/* Event */}
                       {event && (
                         <div className="delayed-fade-in">
@@ -188,17 +167,7 @@ const Event = ({
                                   <Col lg={11} md={10} sm={12} xs={12}>
                                     <p
                                       className={`large-headline-dynamic text-white fade-first`}
-                                      style={{
-                                        textIndent: [
-                                          'lg',
-                                          'xl',
-                                          'xxl'
-                                        ].includes(screenClass)
-                                          ? `calc(200%/11)` // indent 2/11 columns for large
-                                          : ['md'].includes(screenClass)
-                                          ? `calc(200%/10)` // indent 2/10 columns for medium
-                                          : '0' // indent 0 for small, x-small
-                                      }}
+                                      style={{ textIndent: getTextIndent() }}
                                     >
                                       {ReactHtmlParser(paragraph)}
                                       <br />
@@ -209,71 +178,16 @@ const Event = ({
                               );
                             })}
                           </Row>
-                          <Row
-                            className={`grid__row bg-black theme-nav-container fade-first`}
-                          >
-                            <Col lg={3} md={2} />
-                            <Col lg={6} md={10} sm={12} xs={12}>
-                              <p className="pb-5">
-                                {event.themes.map((theme, index) => {
-                                  return (
-                                    <>
-                                      {index === 0 ? (
-                                        ''
-                                      ) : (
-                                        <span
-                                          className={`small-headline text-white fade-first ${
-                                            selectedTheme === null
-                                              ? 'text-opacity-100'
-                                              : 'text-opacity-20'
-                                          }
-                                 `}
-                                        >
-                                          {' '}
-                                          /{' '}
-                                        </span>
-                                      )}
-                                      <a
-                                        key={`theme-${index}`}
-                                        className={`small-headline text-white cursor-pointer fade-first ${
-                                          selectedTheme === null
-                                            ? 'text-opacity-100 hover:text-opacity-20'
-                                            : isSelectedTheme(
-                                                themeLookup[index].substring(1)
-                                              ) // remove hash
-                                            ? 'text-opacity-100'
-                                            : 'text-opacity-20 hover:text-opacity-50'
-                                        } `}
-                                        href={themeLookup[index]}
-                                        onClick={() =>
-                                          setSelectedTheme(
-                                            themeLookup[index].substring(1)
-                                          )
-                                        }
-                                      >
-                                        {ReactHtmlParser(theme)}
-                                      </a>
-                                    </>
-                                  );
-                                })}
-                              </p>
-                            </Col>
-                            <Col lg={3} />
-                            <Col lg={1} md={2} />
-                            <Col lg={11} md={10} sm={12} xs={12}>
-                              <p className="border-b border-white border-opacity-20 fade-first" />
-                            </Col>
-                          </Row>
-                          {event.sections.map((section, index) => {
+                          {event.sections.map((section, sectionIndex) => {
+                            const sectionId = event.themes[sectionIndex]
+                              .replace(/\s+/g, '-')
+                              .replace('&', 'and')
+                              .toLowerCase();
                             return (
-                              <section
-                                key={`section-${index}`}
-                                id={event.themes[index]
-                                  .replace(/\s+/g, '-')
-                                  .toLowerCase()}
-                              >
+                              <section key={`section-${sectionIndex}`}>
                                 <Row
                                   className={`grid__row intro-paragraph pb-24`}
+                                  id={sectionId}
                                 >
                                   {section.paragraphs.map(
                                     (paragraph, index) => {
@@ -282,44 +196,82 @@ const Event = ({
                                           key={`paragraph-${index}`}
                                           className="contents"
                                         >
-                                          <Col lg={3} md={2} />
-                                          <Col lg={6} md={10} sm={12} xs={12}>
+                                          <Col lg={1} md={2} />
+                                          <Col
+                                            lg={11}
+                                            md={10}
+                                            sm={12}
+                                            xs={12}
+                                            className="border-t border-white"
+                                            style={{
+                                              '--tw-border-opacity': '0.15',
+                                              paddingBottom: '30px'
+                                            }}
+                                          />
+                                          <Col lg={1} md={2} />
+                                          <Col lg={5} md={3} sm={12} xs={12}>
+                                            <p className="small-headline text-white">
+                                              {event.themes[sectionIndex]}
+                                            </p>
+                                            <br />
+                                          </Col>
+                                          <Col
+                                            lg={6}
+                                            md={7}
+                                            sm={12}
+                                            xs={12}
+                                            className="highlight light"
+                                          >
                                             <p
-                                              className={`small-headline text-white fade-first`}
-                                              style={{ paddingTop: '43px' }}
+                                              className={`small-headline fade-first`}
                                             >
                                               {ReactHtmlParser(paragraph)}
-                                              <br />
-                                              <br />
                                             </p>
+                                            <br />
                                           </Col>
-                                          <Col lg={3} />
                                         </div>
                                       ) : (
                                         <div
                                           key={`paragraph-${index}`}
                                           className="contents"
                                         >
-                                          <Col lg={3} md={2} />
-                                          <Col lg={4} md={10} sm={12} xs={12}>
+                                          <Col lg={6} md={5} />
+                                          <Col
+                                            lg={5}
+                                            md={7}
+                                            sm={12}
+                                            xs={12}
+                                            className="highlight light"
+                                          >
                                             <p
-                                              className={`small-body-2 text-white fade-first`}
+                                              className={`small-body-2 fade-first`}
                                             >
                                               {ReactHtmlParser(paragraph)}
-                                              <br />
-                                              <br />
                                             </p>
+                                            <br />
                                           </Col>
-                                          <Col lg={5} />
+                                          <Col lg={1} />
                                         </div>
                                       );
                                     }
                                   )}
                                 </Row>
+                                <ResourceTable
+                                  theme="white"
+                                  data={section.resources}
+                                  openModal={openModal}
+                                  matches={getFilteredMatches(sectionId)}
+                                  textColourClass={textColourClass}
+                                  borderColourClass={borderColourClass}
+                                  setOnClicks={() =>
+                                    setOnClicks(sectionId, sectionIndex)
+                                  }
+                                  fullWidth={true}
+                                />
                                 {section.image && (
-                                  <Row className="pb-16 grid__row">
-                                    <Col lg={3} md={2} />
-                                    <Col lg={9} md={10} sm={12} xs={12}>
+                                  <Row className="pt-20 grid__row">
+                                    <Col lg={1} md={2} />
+                                    <Col lg={11} md={10} sm={12} xs={12}>
                                       <div
                                         className="fade-first aspect-ratio"
                                         style={{
@@ -339,17 +291,10 @@ const Event = ({
                                     </Col>
                                   </Row>
                                 )}
-                                <ResourceTable
-                                  theme="white"
-                                  data={section.resources}
-                                  openModal={openModal}
-                                  matchesLength={filteredMatches.length}
-                                  textColourClass={textColourClass}
-                                  borderColourClass={borderColourClass}
-                                />
                               </section>
                             );
                           })}
+
                           {/* padding below last resource table */}
                           <div className="pb-16" />
                         </div>
@@ -381,10 +326,8 @@ const Event = ({
             render={({ state, fullpageApi }) => {
               return (
                 <ReactFullpage.Wrapper>
-                  <div
-                    className={`section h-auto transition-colour-on-scroll ${colourBackgroundClass}`}
-                  >
-                    <Container className="min-h-screen grid__container">
+                  <div className={`section h-auto ${colourBackgroundClass}`}>
+                    <Container className="grid__container">
                       {/* Event */}
                       {event && (
                         <div className={`delayed-fade-in`}>
@@ -399,20 +342,20 @@ const Event = ({
                                   className="contents"
                                 >
                                   <Col lg={1} md={2} />
-                                  <Col lg={11} md={10} sm={12} xs={12}>
+                                  <Col
+                                    lg={11}
+                                    md={10}
+                                    sm={12}
+                                    xs={12}
+                                    className={`highlight ${
+                                      ['1989', '1997'].includes(year.id)
+                                        ? 'light'
+                                        : 'dark'
+                                    }`}
+                                  >
                                     <p
-                                      className={`large-headline-dynamic ${textColourClass} fade-first`}
-                                      style={{
-                                        textIndent: [
-                                          'lg',
-                                          'xl',
-                                          'xxl'
-                                        ].includes(screenClass)
-                                          ? `calc(200%/11)` // indent 2/11 columns for large
-                                          : ['md'].includes(screenClass)
-                                          ? `calc(200%/10)` // indent 2/10 columns for medium
-                                          : '0' // indent 0 for small, x-small
-                                      }}
+                                      className={`large-headline-dynamic fade-first`}
+                                      style={{ textIndent: getTextIndent() }}
                                     >
                                       {ReactHtmlParser(paragraph)}
                                       <br />
@@ -426,9 +369,11 @@ const Event = ({
                           <ResourceTable
                             data={event.resources}
                             openModal={openModal}
-                            matchesLength={filteredMatches.length}
+                            matches={getFilteredMatches('event-paragraphs')}
                             textColourClass={textColourClass}
                             borderColourClass={borderColourClass}
+                            setOnClicks={() => setOnClicks('event-paragraphs')}
+                            fullWidth={false}
                           />
 
                           {event.imageLayout && (
@@ -452,6 +397,15 @@ const Event = ({
                         </div>
                       )}
                     </Container>
+                    <div className={`hidden-footer__container bg-black`}>
+                      <HiddenFooter
+                        pageId="event"
+                        nextParams={nextParams}
+                        next={next}
+                        changingParam={changingParam}
+                        textClasses="text-white text-opacity-90"
+                      />
+                    </div>
                   </div>
                   <div className={`section w-full bg-black`}>
                     <Container className="grid__container">
@@ -464,15 +418,6 @@ const Event = ({
                 </ReactFullpage.Wrapper>
               );
             }}
-          />
-        </div>
-        <div className={`hidden-footer__container bg-black`}>
-          <HiddenFooter
-            pageId="event"
-            nextParams={nextParams}
-            next={next}
-            changingParam={changingParam}
-            textClasses="text-white text-opacity-90"
           />
         </div>
       </>
@@ -493,6 +438,7 @@ Event.propTypes = {
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
   setAnecdoteData: PropTypes.func,
+  isModalActive: PropTypes.func,
   setIsModalActive: PropTypes.func
 };
 

@@ -12,15 +12,24 @@ import GridHelper from './helpers/GridHelper.jsx';
 import Index from './pages/Index.jsx';
 import NoMatch from './pages/NoMatch.jsx';
 import React from 'react';
-import { ScreenClassProvider } from 'react-grid-system';
 import ScrollToTop from './ScrollToTop.jsx';
 import Splash from './pages/Splash.jsx';
-// import Splash2 from './pages/Splash2.jsx';
 import UIShell from './pages/UIShell.jsx';
 import data from './data/years.json';
 import { roman } from '@sguest/roman-js';
-import { setConfiguration } from 'react-grid-system';
-import { useScreenClass } from 'react-grid-system';
+import {
+  ScreenClassProvider,
+  useScreenClass,
+  setConfiguration
+} from 'react-grid-system';
+import ReactGA from 'react-ga';
+import RouteChangeTracker from './helpers/RouteChangeTracker';
+
+const TRACKING_ID = 'G-LKR7ENMRG3';
+ReactGA.initialize(TRACKING_ID, {
+  debug: true,
+  standardImplementation: true
+});
 
 setConfiguration({
   // The breakpoints (minimum width) of devices in screen class sm, md, lg, xl, and xxl.
@@ -198,6 +207,7 @@ function App() {
 
   return (
     <Router>
+      <RouteChangeTracker />
       <ScreenClassProvider>
         {process.env.NODE_ENV === 'development' && <GridHelper />}
         <ScrollToTop>

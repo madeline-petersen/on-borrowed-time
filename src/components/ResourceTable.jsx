@@ -2,17 +2,20 @@ import { Col, Row } from 'react-grid-system';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactHtmlParser from 'react-html-parser';
 
 const ResourceTable = ({
   theme,
   data,
   openModal,
-  matchesLength,
+  matches,
   textColourClass,
-  borderColourClass
+  borderColourClass,
+  setOnClicks,
+  fullWidth
 }) => {
+  console.log(matches);
   let themeTextClass = 'text-black';
   let themeBorderClass = 'border-black';
 
@@ -29,12 +32,18 @@ const ResourceTable = ({
     themeBorderClass = borderColourClass;
   }
 
+  useEffect(() => {
+    setOnClicks();
+  }, []);
+
+  let columns = fullWidth ? [1, 11, 5, 4] : [3, 9, 4, 3];
+
   return (
     <>
       {/* Resource Table */}
       <Row className={`grid__row`}>
-        <Col lg={3} md={2} />
-        <Col lg={9} md={10}>
+        <Col lg={columns[0]} md={2} />
+        <Col lg={columns[1]} md={10}>
           <p
             className={`border-t ${themeBorderClass} border-opacity-10 pb-4 fade-second`}
           />
@@ -45,8 +54,8 @@ const ResourceTable = ({
           <Row className={`grid__row`} key={`table-row-${index}`}>
             {index !== 0 && (
               <>
-                <Col lg={3} md={2} />
-                <Col lg={9} md={10}>
+                <Col lg={columns[0]} md={2} />
+                <Col lg={columns[1]} md={10}>
                   <p
                     className={`border-t ${themeBorderClass} border-opacity-10 pt-4 fade-second`}
                   />
@@ -54,14 +63,14 @@ const ResourceTable = ({
               </>
             )}
 
-            <Col lg={3} md={2} />
+            <Col lg={columns[0]} md={2} />
             <span
               onClick={() => openModal(entry)}
               className="contents cursor-pointer"
             >
-              <Col lg={4} md={4} sm={4} xs={12} className="small-body">
+              <Col lg={columns[2]} md={4} sm={4} xs={12} className="small-body">
                 <p className={`${themeTextClass} text-opacity-100 fade-second`}>
-                  {index < matchesLength && (
+                  {index < matches.length && (
                     <span className="absolute sm:-left-4 md:-left-8">
                       {index + 1}
                     </span>
@@ -72,7 +81,7 @@ const ResourceTable = ({
                   )}
                 </p>
               </Col>
-              <Col lg={3} md={3} sm={4} xs={12} className="small-body">
+              <Col lg={columns[3]} md={3} sm={4} xs={12} className="small-body">
                 <p
                   className={`${themeTextClass} text-opacity-70 fade-second`}
                   style={{ paddingRight: 'calc(100%/6)' }}
@@ -125,9 +134,11 @@ ResourceTable.propTypes = {
   theme: PropTypes.string,
   data: PropTypes.arrayOf(PropTypes.shape()),
   openModal: PropTypes.func,
-  matchesLength: PropTypes.number,
+  matches: PropTypes.arrayOf(PropTypes.node),
   textColourClass: PropTypes.string,
-  borderColourClass: PropTypes.string
+  borderColourClass: PropTypes.string,
+  setOnClicks: PropTypes.func,
+  fullWidth: PropTypes.bool
 };
 
 export default ResourceTable;

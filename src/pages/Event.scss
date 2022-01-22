@@ -116,19 +116,54 @@ $quarterHeight: calc(30vh - #{$a});
   padding-top: calc(#{$quarterHeight} - 20px);
 }
 
-#event-paragraphs {
-  span {
-    transition: opacity 0.5s;
+// #event-paragraphs {
+//   span {
+//     transition: opacity 0.5s;
+//   }
+
+//   span:hover {
+//     cursor: pointer;
+//     opacity: 0.5;
+//   }
+// }
+div.highlight.dark {
+  color: black;
+  * {
+    transition: color 0.1s linear;
   }
 
-  span:hover {
+  // make sure span keeps this color
+  span {
+    color: black !important;
     cursor: pointer;
-    opacity: 0.5;
+  }
+
+  /*
+    change the text-color on hover, the color 
+    in span will not change due to !important.
+  */
+  &:hover {
+    color: #525252; // gray-70
   }
 }
 
-.theme-nav-container {
-  position: sticky;
-  z-index: 10;
-  top: 0;
+div.highlight.light {
+  color: white;
+  * {
+    transition: color 0.1s linear;
+  }
+
+  // make sure span keeps this color
+  span {
+    color: white !important;
+    cursor: pointer;
+  }
+
+  /*
+    change the text-color on hover, the color 
+    in span will not change due to !important.
+  */
+  &:hover {
+    color: #a8a8a8; // gray-40
+  }
 }
