@@ -106,32 +106,22 @@
       ]
     },
     {
-      "title": "Advocating <span>f</span>or Genuine Democracy",
+      "title": "Cultural Diaspora",
       "subtitles": [
         {
-          "year": "2003",
-          "title": "The Ultimate Aim",
-          "romanSceneNumber": "VI"
-        },
-        { "year": "2014", "title": "The White Paper", "romanSceneNumber": "I" },
-        {
           "year": "2014",
-          "title": "A Civil Referendum",
-          "romanSceneNumber": "III"
+          "title": "The Umbrella Movement",
+          "romanSceneNumber": "I"
         },
-        {
-          "year": "2014",
-          "title": "Seeking Genuine Suffrage",
-          "romanSceneNumber": "IV"
-        },
+        { "year": "2014", "title": "A Stalemate", "romanSceneNumber": "VII" },
         {
           "year": "2019",
-          "title": "A Political Rebuke",
-          "romanSceneNumber": "III"
+          "title": "Closing the Legal Loophole",
+          "romanSceneNumber": "II"
         },
         {
           "year": "2020",
-          "title": "On Genuine Democracy",
+          "title": "On Cultural Diaspora",
           "romanSceneNumber": "I"
         }
       ]
@@ -166,27 +156,37 @@
           "romanSceneNumber": "I"
         }
       ]
-    },
+    }
     {
-      "title": "Cultural Diaspora",
+      "title": "Advocating <span>f</span>or Genuine Democracy",
       "subtitles": [
         {
-          "year": "2014",
-          "title": "The Umbrella Movement",
-          "romanSceneNumber": "I"
+          "year": "2003",
+          "title": "The Ultimate Aim",
+          "romanSceneNumber": "VI"
         },
-        { "year": "2014", "title": "A Stalemate", "romanSceneNumber": "VII" },
+        { "year": "2014", "title": "The White Paper", "romanSceneNumber": "I" },
+        {
+          "year": "2014",
+          "title": "A Civil Referendum",
+          "romanSceneNumber": "III"
+        },
+        {
+          "year": "2014",
+          "title": "Seeking Genuine Suffrage",
+          "romanSceneNumber": "IV"
+        },
         {
           "year": "2019",
-          "title": "Closing the Legal Loophole",
-          "romanSceneNumber": "II"
+          "title": "A Political Rebuke",
+          "romanSceneNumber": "III"
         },
         {
           "year": "2020",
-          "title": "On Cultural Diaspora",
+          "title": "On Genuine Democracy",
           "romanSceneNumber": "I"
         }
       ]
-    }
+    },
   ]
 }
