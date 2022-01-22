@@ -43,13 +43,13 @@ const ThematicThreads = ({ currentBgColour }) => {
     subtitleGutterLeft: {
       xl: 4,
       lg: 4,
-      md: 0,
+      md: 1,
       sm: 0
     },
     subtitle: {
       xl: 6,
       lg: 6,
-      md: 12,
+      md: 11,
       sm: 12
     },
     subtitleGutterRight: {
@@ -82,13 +82,13 @@ const ThematicThreads = ({ currentBgColour }) => {
     subtitleGutterLeft: {
       xl: 1,
       lg: 1,
-      md: 0,
+      md: 1,
       sm: 0
     },
     subtitle: {
       xl: 6,
       lg: 6,
-      md: 12,
+      md: 11,
       sm: 12
     },
     subtitleGutterRight: {
@@ -169,6 +169,8 @@ const ThematicThreads = ({ currentBgColour }) => {
               </Col>
               <Visible lg xl>
                 <Col className="grid__col" {...cols.titleGutterRight} />
+              </Visible>
+              <Visible md lg xl>
                 <Col className="grid__col" {...cols.subtitleGutterLeft} />
               </Visible>
               <Col
