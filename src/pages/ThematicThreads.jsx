@@ -145,15 +145,18 @@ const ThematicThreads = ({ currentBgColour }) => {
           const cols = type === 'even' ? evenCols : oddCols;
 
           return (
-            <span key={thread.title} className="contents">
+            <span key={thread.title} className="contents hover-container">
               {type === 'odd' && (
                 <Visible md lg xl>
                   <Col className="grid__col" {...cols.titleGutterLeft} />
                 </Visible>
               )}
-              <Col className="headline__col" {...cols.title}>
+              <Col
+                className={`headline__col ${fadeOrder[index]}`}
+                {...cols.title}
+              >
                 <div
-                  className={`thematic-thread-headline ${textColourClass} cursor-pointer pt-9 pb-5 ${fadeOrder[index]}`}
+                  className={`thematic-thread-headline ${textColourClass} cursor-pointer pt-9 pb-5`}
                 >
                   {ReactHtmlParser(thread.title)}
                 </div>
@@ -162,12 +165,15 @@ const ThematicThreads = ({ currentBgColour }) => {
                 <Col className="grid__col" {...cols.titleGutterRight} />
                 <Col className="grid__col" {...cols.subtitleGutterLeft} />
               </Visible>
-              <Col className="grid__col" {...cols.subtitle}>
+              <Col
+                className={`grid__col ${fadeOrder[index]}`}
+                {...cols.subtitle}
+              >
                 {thread.subtitles.map(subtitle => {
                   return (
                     <div
                       key={subtitle}
-                      className={`small-headline ${textColourClass} cursor-pointer flex mb-1 ${fadeOrder[index]}`}
+                      className={`small-headline ${textColourClass} cursor-pointer flex mb-1`}
                       onClick={() =>
                         navigateTo(subtitle.year, subtitle.romanSceneNumber)
                       }
