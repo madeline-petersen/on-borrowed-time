@@ -60,9 +60,7 @@ const ResourceTable = ({
             <Col lg={columns[2]} md={4} sm={4} xs={12} className="small-body">
               <p className={`${themeTextClass} text-opacity-100 fade-second`}>
                 {index < matches.length && (
-                  <span className="absolute sm:-left-4 md:-left-8">
-                    {index + 1}
-                  </span>
+                  <span className="mr-6">{index + 1}</span>
                 )}
                 {ReactHtmlParser(entry.shortTitle)}
                 {!entry.content && (
