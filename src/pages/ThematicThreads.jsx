@@ -209,7 +209,7 @@ const ThematicThreads = ({ currentBgColour }) => {
             </span>
           );
         })}
-        {background === 'black' && <div className="h-24 mt-24" />}
+        {background === 'black' && <div className="w-full mt-24" />}
       </Row>
     );
   };
