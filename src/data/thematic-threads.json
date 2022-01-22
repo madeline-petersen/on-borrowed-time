@@ -80,37 +80,6 @@
   ],
   "black": [
     {
-      "title": "Solidarity <span>&amp;</span> Resistance",
-      "subtitles": [
-        {
-          "year": "2003",
-          "title": "A Confluence of Factors",
-          "romanSceneNumber": "II"
-        },
-        {
-          "year": "2003",
-          "title": "A Historic Demonstration",
-          "romanSceneNumber": "III"
-        },
-        {
-          "year": "2014",
-          "title": "Occupy Central Love and Peace",
-          "romanSceneNumber": "I"
-        },
-        { "year": "2019", "title": "A Black Sea", "romanSceneNumber": "I" },
-        {
-          "year": "2019",
-          "title": "Academic Citadels Under Seige",
-          "romanSceneNumber": "VII"
-        },
-        {
-          "year": "2020",
-          "title": "On Solidarity and Resistance",
-          "romanSceneNumber": "I"
-        }
-      ]
-    },
-    {
       "title": "Hong Kong Identity",
       "subtitles": [
         {
@@ -163,6 +132,37 @@
         {
           "year": "2020",
           "title": "On Genuine Democracy",
+          "romanSceneNumber": "I"
+        }
+      ]
+    },
+    {
+      "title": "Solidarity <span>&amp;</span> Resistance",
+      "subtitles": [
+        {
+          "year": "2003",
+          "title": "A Confluence of Factors",
+          "romanSceneNumber": "II"
+        },
+        {
+          "year": "2003",
+          "title": "A Historic Demonstration",
+          "romanSceneNumber": "III"
+        },
+        {
+          "year": "2014",
+          "title": "Occupy Central Love and Peace",
+          "romanSceneNumber": "I"
+        },
+        { "year": "2019", "title": "A Black Sea", "romanSceneNumber": "I" },
+        {
+          "year": "2019",
+          "title": "Academic Citadels Under Seige",
+          "romanSceneNumber": "VII"
+        },
+        {
+          "year": "2020",
+          "title": "On Solidarity and Resistance",
           "romanSceneNumber": "I"
         }
       ]
