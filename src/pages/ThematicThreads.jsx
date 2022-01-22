@@ -22,73 +22,79 @@ const ThematicThreads = ({ currentBgColour }) => {
   const screenClass = useScreenClass();
 
   const evenCols = {
+    titleGutterLeft: {
+      xl: 3,
+      lg: 3,
+      md: 0,
+      sm: 0
+    },
     title: {
-      xl: 11,
-      lg: 11,
-      md: 11,
+      xl: 8,
+      lg: 8,
+      md: 12,
       sm: 12
     },
     titleGutterRight: {
       xl: 1,
       lg: 1,
-      md: 1,
+      md: 0,
       sm: 0
     },
     subtitleGutterLeft: {
-      xl: 1,
-      lg: 1,
-      md: 1,
+      xl: 4,
+      lg: 4,
+      md: 0,
       sm: 0
     },
     subtitle: {
       xl: 6,
       lg: 6,
-      md: 8,
+      md: 12,
       sm: 12
     },
     subtitleGutterRight: {
-      xl: 5,
-      lg: 5,
-      md: 3,
+      xl: 2,
+      lg: 2,
+      md: 0,
       sm: 0
     }
   };
 
   const oddCols = {
-    titleGutterLeft: {
-      xl: 2,
-      lg: 2,
-      md: 2,
-      sm: 0
-    },
+    // titleGutterLeft: {
+    //   xl: 0,
+    //   lg: 0,
+    //   md: 0,
+    //   sm: 0
+    // },
     title: {
-      xl: 9,
-      lg: 9,
-      md: 9,
+      xl: 7,
+      lg: 7,
+      md: 12,
       sm: 12
     },
     titleGutterRight: {
-      xl: 1,
-      lg: 1,
-      md: 1,
+      xl: 5,
+      lg: 5,
+      md: 0,
       sm: 0
     },
     subtitleGutterLeft: {
-      xl: 3,
-      lg: 3,
-      md: 3,
+      xl: 1,
+      lg: 1,
+      md: 0,
       sm: 0
     },
     subtitle: {
       xl: 6,
       lg: 6,
-      md: 8,
+      md: 12,
       sm: 12
     },
     subtitleGutterRight: {
-      xl: 3,
-      lg: 3,
-      md: 1,
+      xl: 5,
+      lg: 5,
+      md: 0,
       sm: 0
     }
   };
@@ -146,8 +152,8 @@ const ThematicThreads = ({ currentBgColour }) => {
 
           return (
             <span key={thread.title} className="contents hover-container">
-              {type === 'odd' && (
-                <Visible md lg xl>
+              {type === 'even' && (
+                <Visible lg xl>
                   <Col className="grid__col" {...cols.titleGutterLeft} />
                 </Visible>
               )}
@@ -161,7 +167,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                   {ReactHtmlParser(thread.title)}
                 </div>
               </Col>
-              <Visible md lg xl>
+              <Visible lg xl>
                 <Col className="grid__col" {...cols.titleGutterRight} />
                 <Col className="grid__col" {...cols.subtitleGutterLeft} />
               </Visible>
@@ -203,7 +209,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                   );
                 })}
               </Col>
-              <Visible md lg xl>
+              <Visible lg xl>
                 <Col className="grid__col" {...cols.subtitleGutterRight} />
               </Visible>
             </span>
