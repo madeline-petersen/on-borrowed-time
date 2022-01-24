@@ -114,15 +114,15 @@ const ThematicThreads = ({ currentBgColour }) => {
   const rowThree = {
     titleGutterLeft: {
       xxl: 0,
-      xl: 4,
-      lg: 4,
+      xl: 5,
+      lg: 5,
       md: 0,
       sm: 0
     },
     title: {
       xxl: 12,
-      xl: 8,
-      lg: 8,
+      xl: 7,
+      lg: 7,
       md: 12,
       sm: 12
     },
@@ -135,8 +135,8 @@ const ThematicThreads = ({ currentBgColour }) => {
     },
     subtitleGutterLeft: {
       xxl: 1,
-      xl: 5,
-      lg: 5,
+      xl: 6,
+      lg: 6,
       md: 1,
       sm: 0
     },
@@ -149,8 +149,8 @@ const ThematicThreads = ({ currentBgColour }) => {
     },
     subtitleGutterRight: {
       xxl: 0,
-      xl: 1,
-      lg: 1,
+      xl: 0,
+      lg: 0,
       md: 0,
       sm: 0
     }
@@ -284,9 +284,11 @@ const ThematicThreads = ({ currentBgColour }) => {
                   );
                 })}
               </Col>
-              <Visible lg xl>
-                <Col className="grid__col" {...cols.subtitleGutterRight} />
-              </Visible>
+              {index !== 3 && (
+                <Visible lg xl>
+                  <Col className="grid__col" {...cols.subtitleGutterRight} />
+                </Visible>
+              )}
             </span>
           );
         })}
