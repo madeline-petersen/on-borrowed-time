@@ -58,11 +58,13 @@ const ResourceTable = ({
 
             <Col lg={columns[0]} md={2} />
             <Col lg={columns[2]} md={4} sm={4} xs={12} className="small-body">
-              <p className={`${themeTextClass} text-opacity-100 fade-second`}>
+              <p
+                className={`${themeTextClass} text-opacity-100 flex fade-second`}
+              >
                 {index < matches.length && (
-                  <span className="mr-6">{index + 1}</span>
+                  <span className="absolute">{index + 1}</span>
                 )}
-                {ReactHtmlParser(entry.shortTitle)}
+                <div className="ml-8">{ReactHtmlParser(entry.shortTitle)}</div>
                 {!entry.content && (
                   <ArrowUpRight16 className="inline-block ml-1" />
                 )}
