@@ -1342,6 +1342,57 @@
               ]
             },
             {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "imageLayout": {
+                "type": "custom",
+                "images": [
+                  {
+                    "source": "PC_ACS_1.jpg",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "large",
+                    "caption": "The last British vessel with Prince Charles leaving Hong Kong(July 1997)"
+                  },
+                  {
+                    "source": "PC_ACS_2.jpg",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "large",
+                    "caption": "China flag hung over construction site in Hong Kong (1997)"
+                  },
+                  {
+                    "source": "PC_ACS_6.jpg",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "small",
+                    "caption": "“Shark Fin Feast, the Style of the Ruling Class” a Hong Kong seafood restaurant advertising"
+                  },
+                  {
+                    "source": "PC_ACS_7.jpg",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "large",
+                    "caption": "Symbols of China at Lan Guifang, Hong Kong (1997)"
+                  },
+                  {
+                    "source": "PC_ACS_3.jpg",
+                    "width": 1800,
+                    "height": 1814,
+                    "type": "small",
+                    "caption": "Queen Elizabeth II and Prince Charles on television at a rooftop residential unit of Wong Tai Sin (1997)"
+                  },
+                  {
+                    "source": "PC_ACS_5.jpg",
+                    "width": 1000,
+                    "height": 696,
+                    "type": "small",
+                    "caption": "Passer-byer looking at the &ldquo;Pillar of Shame&rdquo; statue commemorating the 1989 massacre in Tiananment Square. The monument was removed on December 23, 2021."
+                  }
+                ]
+              }
+            },
+            {
               "type": "reflection",
               "title": "Reflection",
               "paragraphs": [
@@ -1578,8 +1629,93 @@
                   ],
                   "citation": "Nie Er, lyrics by Tian Han. &ldquo;March of the Volunteers&rdquo;. 1949, Chinese National Anthem.",
                   "linkTo": "http://english1.english.gov.cn/2005-08/16/content_23523.htm#:~:text=National%20anthem&text=National%20anthem%3AMarch%20of%20the,northeast%20China%20in%20the%201930s"
+                },
+                {
+                  "type": "Imagery",
+                  "publication": "Pok Chi Lau",
+                  "shortTitle": "Handover Portraits",
+                  "bookTitle": "1997 Street Portraits",
+                  "year": "1997",
+                  "author": "Pok Chi Lau",
+                  "content": [
+
+                  ],
+                  "citation": "//",
+                  "linkTo": "https://pokchilau.format.com/315348-1997-street-portraits"
                 }
               ]
+            },
+            {
+              "type": "artifacts",
+              "title": "Artifacts",
+              "imageLayout": {
+                "type": "custom",
+                "images": [
+                  {
+                    "source": "PC_19.jpg",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "small",
+                    "caption": "Photographer Pok Chi Lau captured a series of portraits, documenting the flurry excitement and apprehension felt in the days leading to the 1997 handover."
+                  },
+                  {
+                    "source": "PC_1.jpg",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "small",
+                    "caption": "&ldquo;Bye-Bye Hong Kong&rdquo; T-shirt"
+                  },
+                  {
+                    "source": "PC_3.jpg",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "small",
+                    "caption": "Girl with buddha and British flag T-shirt"
+                  },
+                  {
+                    "source": "PC_4.jpg",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "small",
+                    "caption": "House wife standing beside a jewellery store"
+                  },
+                  {
+                    "source": "PC_5.jpg",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "small",
+                    "caption": "Joe Wong looking for work"
+                  },
+                  {
+                    "source": "PC_8.jpg",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "small",
+                    "caption": "Pakistani workers"
+                  },
+                  {
+                    "source": "PC_10.jpg",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "small",
+                    "caption": "Beijing visitor with first Hong Kong Chinese governor"
+                  },
+                  {
+                    "source": "PC_16.jpg",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "small",
+                    "caption": "A retired Toi San laundry man who previously worked in New York"
+                  },
+                  {
+                    "source": "PC_20.jpg",
+                    "width": 2460,
+                    "height": 1640,
+                    "type": "small",
+                    "caption": "Watchman"
+                  }
+                ]
+              }
             },
             {
               "type": "reflection",
