@@ -205,16 +205,10 @@ $xxl-minus-1: 1799px;
   }
 
   .aspect-ratio-container {
-    width: 100%;
-    padding-top: 75%; /* 1:1 Aspect Ratio */
-    position: relative;
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-    }
+    overflow: hidden;
+    height: 0;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

@@ -209,12 +209,16 @@ const Anecdote = ({
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={7} md={7} sm={9} xs={9}>
                     {content &&
-                      content.map((image, index) => {
+                      content.images.map((image, index) => {
                         return (
                           <div
                             className="aspect-ratio-container bg-gray-20 mb-8"
                             key={`image-${index}`}
-                          ></div>
+                            style={{
+                              paddingTop: `calc(${image.height}/${image.width} * 100%)`,
+                              backgroundImage: `url('/images/${image.source}')`
+                            }}
+                          />
                         );
                       })}
                     <div className="h-12" />
