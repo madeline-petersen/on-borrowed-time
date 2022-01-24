@@ -177,7 +177,7 @@ const ThematicThreads = ({ currentBgColour }) => {
     } else if (['sm'].includes(screenClass)) {
       return `calc(200%/${cols.sm})`;
     } else {
-      return `calc(100%/${cols.xxl})`;
+      return `calc(200%/${cols.sm})`;
     }
   };
 
@@ -194,7 +194,7 @@ const ThematicThreads = ({ currentBgColour }) => {
     } else if (['sm'].includes(screenClass)) {
       return `calc(1100%/${cols.sm})`;
     } else {
-      return `calc(500%/${cols.xxl})`;
+      return `calc(1100%/${cols.sm})`;
     }
   };
 
