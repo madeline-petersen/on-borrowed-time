@@ -23,36 +23,42 @@ const ThematicThreads = ({ currentBgColour }) => {
 
   const evenCols = {
     titleGutterLeft: {
+      xxl: 0,
       xl: 3,
       lg: 3,
       md: 0,
       sm: 0
     },
     title: {
+      xxl: 12,
       xl: 8,
       lg: 8,
       md: 12,
       sm: 12
     },
     titleGutterRight: {
+      xxl: 0,
       xl: 1,
       lg: 1,
       md: 0,
       sm: 0
     },
     subtitleGutterLeft: {
+      xxl: 0,
       xl: 4,
       lg: 4,
       md: 1,
       sm: 0
     },
     subtitle: {
+      xxl: 12,
       xl: 6,
       lg: 6,
       md: 11,
       sm: 12
     },
     subtitleGutterRight: {
+      xxl: 0,
       xl: 2,
       lg: 2,
       md: 0,
@@ -62,36 +68,42 @@ const ThematicThreads = ({ currentBgColour }) => {
 
   const oddCols = {
     // titleGutterLeft: {
+    //   xxl: 0,
     //   xl: 0,
     //   lg: 0,
     //   md: 0,
     //   sm: 0
     // },
     title: {
+      xxl: 12,
       xl: 7,
       lg: 7,
       md: 12,
       sm: 12
     },
     titleGutterRight: {
+      xxl: 0,
       xl: 5,
       lg: 5,
       md: 0,
       sm: 0
     },
     subtitleGutterLeft: {
+      xxl: 0,
       xl: 1,
       lg: 1,
       md: 1,
       sm: 0
     },
     subtitle: {
+      xxl: 12,
       xl: 6,
       lg: 6,
       md: 11,
       sm: 12
     },
     subtitleGutterRight: {
+      xxl: 0,
       xl: 5,
       lg: 5,
       md: 0,
