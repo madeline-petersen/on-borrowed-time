@@ -44,14 +44,14 @@ const ThematicThreads = ({ currentBgColour }) => {
       sm: 0
     },
     subtitleGutterLeft: {
-      xxl: 0,
+      xxl: 1,
       xl: 4,
       lg: 4,
       md: 1,
       sm: 0
     },
     subtitle: {
-      xxl: 12,
+      xxl: 11,
       xl: 6,
       lg: 6,
       md: 11,
@@ -66,7 +66,7 @@ const ThematicThreads = ({ currentBgColour }) => {
     }
   };
 
-  const oddCols = {
+  const rowOne = {
     // titleGutterLeft: {
     //   xxl: 0,
     //   xl: 0,
@@ -76,27 +76,27 @@ const ThematicThreads = ({ currentBgColour }) => {
     // },
     title: {
       xxl: 12,
-      xl: 7,
-      lg: 7,
+      xl: 8,
+      lg: 8,
       md: 12,
       sm: 12
     },
     titleGutterRight: {
       xxl: 0,
-      xl: 5,
-      lg: 5,
+      xl: 4,
+      lg: 4,
       md: 0,
       sm: 0
     },
     subtitleGutterLeft: {
-      xxl: 0,
+      xxl: 1,
       xl: 1,
       lg: 1,
       md: 1,
       sm: 0
     },
     subtitle: {
-      xxl: 12,
+      xxl: 11,
       xl: 6,
       lg: 6,
       md: 11,
@@ -111,6 +111,51 @@ const ThematicThreads = ({ currentBgColour }) => {
     }
   };
 
+  const rowThree = {
+    titleGutterLeft: {
+      xxl: 0,
+      xl: 4,
+      lg: 4,
+      md: 0,
+      sm: 0
+    },
+    title: {
+      xxl: 12,
+      xl: 8,
+      lg: 8,
+      md: 12,
+      sm: 12
+    },
+    titleGutterRight: {
+      xxl: 0,
+      xl: 0,
+      lg: 0,
+      md: 0,
+      sm: 0
+    },
+    subtitleGutterLeft: {
+      xxl: 1,
+      xl: 5,
+      lg: 5,
+      md: 1,
+      sm: 0
+    },
+    subtitle: {
+      xxl: 11,
+      xl: 6,
+      lg: 6,
+      md: 11,
+      sm: 12
+    },
+    subtitleGutterRight: {
+      xxl: 0,
+      xl: 1,
+      lg: 1,
+      md: 0,
+      sm: 0
+    }
+  };
+
   const navigateTo = (year, romanSceneNumber) => {
     if (year && romanSceneNumber) {
       history.push(`/${year}/scene-${romanSceneNumber}/event`);
@@ -120,20 +165,24 @@ const ThematicThreads = ({ currentBgColour }) => {
   };
 
   const getTitleIndent = type => {
-    const cols = type === 'even' ? evenCols.subtitle : oddCols.subtitle;
-    if (['xl', 'xxl'].includes(screenClass)) {
+    const cols = type === 'even' ? evenCols.subtitle : rowOne.subtitle;
+    if (['xxl'].includes(screenClass)) {
+      return `calc(100%/${cols.xxl})`;
+    } else if (['xl'].includes(screenClass)) {
       return `calc(100%/${cols.xl})`;
     } else if (['lg'].includes(screenClass)) {
       return `calc(100%/${cols.lg})`;
     } else if (['md'].includes(screenClass)) {
       return `calc(100%/${cols.md})`;
-    } else {
+    } else if (['sm'].includes(screenClass)) {
       return `calc(200%/${cols.sm})`;
+    } else {
+      return `calc(100%/${cols.xxl})`;
     }
   };
 
   const getSceneIndent = type => {
-    const cols = type === 'even' ? evenCols.subtitle : oddCols.subtitle;
+    const cols = type === 'even' ? evenCols.subtitle : rowOne.subtitle;
     if (['xl', 'xxl'].includes(screenClass)) {
       return `calc(500%/${cols.xl})`;
     } else if (['lg'].includes(screenClass)) {
@@ -160,11 +209,17 @@ const ThematicThreads = ({ currentBgColour }) => {
       >
         {content.map((thread, index) => {
           const type = index % 2 === 0 ? 'even' : 'odd';
-          const cols = type === 'even' ? evenCols : oddCols;
+          const cols =
+            type === 'even' ? evenCols : index === 1 ? rowOne : rowThree;
 
           return (
             <span key={thread.title} className="contents hover-container">
               {type === 'even' && (
+                <Visible lg xl>
+                  <Col className="grid__col" {...cols.titleGutterLeft} />
+                </Visible>
+              )}
+              {index === 3 && (
                 <Visible lg xl>
                   <Col className="grid__col" {...cols.titleGutterLeft} />
                 </Visible>
@@ -179,10 +234,12 @@ const ThematicThreads = ({ currentBgColour }) => {
                   {ReactHtmlParser(thread.title)}
                 </div>
               </Col>
-              <Visible lg xl>
-                <Col className="grid__col" {...cols.titleGutterRight} />
-              </Visible>
-              <Visible md lg xl>
+              {index !== 3 && (
+                <Visible lg xl>
+                  <Col className="grid__col" {...cols.titleGutterRight} />
+                </Visible>
+              )}
+              <Visible md lg xl xxl>
                 <Col className="grid__col" {...cols.subtitleGutterLeft} />
               </Visible>
               <Col

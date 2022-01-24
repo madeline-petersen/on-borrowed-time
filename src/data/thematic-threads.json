@@ -1,6 +1,38 @@
 {
   "white": [
     {
+      "title": "In-between Identity",
+      "subtitles": [
+        {
+          "year": "1984",
+          "title": "On the Question of Hong Kong",
+          "romanSceneNumber": "I"
+        },
+        { "year": "1997", "title": "The Handover", "romanSceneNumber": "III" },
+        {
+          "year": "2003",
+          "title": "Abrupt Resignations",
+          "romanSceneNumber": "IV"
+        }
+      ]
+    },
+    {
+      "title": "Geographical Diaspora",
+      "subtitles": [
+        {
+          "year": "1984",
+          "title": "A Discourse of Semantics",
+          "romanSceneNumber": "III"
+        },
+        {
+          "year": "1989",
+          "title": "A New Diasporic Condition",
+          "romanSceneNumber": "IV"
+        },
+        { "year": "1997", "title": "The Mass Exodus", "romanSceneNumber": "I" }
+      ]
+    },
+    {
       "title": "Fear o<span>f</span> Ambiguity",
       "subtitles": [
         {
@@ -21,23 +53,7 @@
       ]
     },
     {
-      "title": "In-between Identity",
-      "subtitles": [
-        {
-          "year": "1984",
-          "title": "On the Question of Hong Kong",
-          "romanSceneNumber": "I"
-        },
-        { "year": "1997", "title": "The Handover", "romanSceneNumber": "III" },
-        {
-          "year": "2003",
-          "title": "Abrupt Resignations",
-          "romanSceneNumber": "IV"
-        }
-      ]
-    },
-    {
-      "title": "Preserve Democratic Rights <span>&amp;</span> Freedoms",
+      "title": "Preserve Democratic<br />Rights <span>&amp;</span> Freedoms",
       "subtitles": [
         {
           "year": "1984",
@@ -59,22 +75,6 @@
           "title": "An Attempt at Political Harmony",
           "romanSceneNumber": "V"
         }
-      ]
-    },
-    {
-      "title": "Geographical Diaspora",
-      "subtitles": [
-        {
-          "year": "1984",
-          "title": "A Discourse of Semantics",
-          "romanSceneNumber": "III"
-        },
-        {
-          "year": "1989",
-          "title": "A New Diasporic Condition",
-          "romanSceneNumber": "IV"
-        },
-        { "year": "1997", "title": "The Mass Exodus", "romanSceneNumber": "I" }
       ]
     }
   ],
@@ -158,7 +158,7 @@
       ]
     },
     {
-      "title": "Advocating <span>f</span>or Genuine Democracy",
+      "title": "Advocating <span>f</span>or<br />Genuine Democracy",
       "subtitles": [
         {
           "year": "2003",
