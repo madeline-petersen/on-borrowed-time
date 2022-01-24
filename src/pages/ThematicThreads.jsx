@@ -183,14 +183,18 @@ const ThematicThreads = ({ currentBgColour }) => {
 
   const getSceneIndent = type => {
     const cols = type === 'even' ? evenCols.subtitle : rowOne.subtitle;
-    if (['xl', 'xxl'].includes(screenClass)) {
+    if (['xxl'].includes(screenClass)) {
+      return `calc(500%/${cols.xxl})`;
+    } else if (['xl'].includes(screenClass)) {
       return `calc(500%/${cols.xl})`;
     } else if (['lg'].includes(screenClass)) {
       return `calc(600%/${cols.lg})`;
     } else if (['md'].includes(screenClass)) {
       return `calc(700%/${cols.md})`;
-    } else {
+    } else if (['sm'].includes(screenClass)) {
       return `calc(1100%/${cols.sm})`;
+    } else {
+      return `calc(500%/${cols.xxl})`;
     }
   };
 
