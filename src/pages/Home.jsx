@@ -64,6 +64,7 @@ const Home = ({ years, hash, setHash, setTransitionType, navigateTo }) => {
       <Helmet>
         <title>{`On Borrowed Time`}</title>
       </Helmet>
+      <div className="h-screen w-screen absolute bg-black z-10" />
       <ReactFullpage
         licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
         pluginWrapper={pluginWrapper}
