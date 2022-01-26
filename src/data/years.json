@@ -1554,7 +1554,7 @@
                 {
                   "type": "Article Excerpt",
                   "publication": "Speech",
-                  "shortTitle": "The Challenge Ahead—SPEECH",
+                  "shortTitle": "The Challenge Ahead",
                   "bookTitle": "Inaugural Speech by the Honourable Tung Chee Hwa Chief Executive of the Hong Kong Special Administrative Region of the People&rsquo;s Republic of China on July 1, 1997",
                   "year": "1997",
                   "author": "Chief Executive Tung Chee Hwa",
@@ -1632,11 +1632,11 @@
                 },
                 {
                   "type": "Imagery",
-                  "publication": "Pok Chi Lau",
-                  "shortTitle": "Handover Portraits",
+                  "shortTitle": "Faces of the Handover",
                   "bookTitle": "1997 Street Portraits",
                   "year": "1997",
                   "author": "Pok Chi Lau",
+                  "preamble": "Pok Chi Lau  劉博智 is a documentary photographer born in British Hong Kong. His work focuses on the Chinese Diaspora in the Americas, China, Cuba, Malaysia, and Myanmar. As a member of the Overseas Chinese, the photographer Pok Chi Lau benefits from the convenience of observing and documenting this society from an internal and unique perspective, one that is neither wester nor local, objective and detailed at a cellular level. Never confined to one place or certain locations, Lau attempts to reach every corner in the world where Chinese communities can be found. The focus is always on the soon-to-disappear trails of life, grand or trivial: home, surroundings, room, dark corner, wall, poster, notch, posture, expressive gaze and gesture. In “1997 Street Portraits”, _____[blah]____. Beyond his work as a documentary photographer, Pok Chi Lau is a poet, essayist, and Professor Emeritus of PhotoMedia at the University of Kansas. ",
                   "content": {
                     "images": [
                       {
@@ -1648,6 +1648,13 @@
                       },
                       {
                         "source": "PC_1.jpg",
+                        "width": 2460,
+                        "height": 1640,
+                        "type": "small",
+                        "caption": "&ldquo;Bye-Bye Hong Kong&rdquo; T-shirt"
+                      },
+                      {
+                        "source": "PC_2.jpg",
                         "width": 2460,
                         "height": 1640,
                         "type": "small",
@@ -1675,7 +1682,28 @@
                         "caption": "Joe Wong looking for work"
                       },
                       {
+                        "source": "PC_6.jpg",
+                        "width": 2460,
+                        "height": 1640,
+                        "type": "small",
+                        "caption": "Pakistani workers"
+                      },
+                      {
+                        "source": "PC_7.jpg",
+                        "width": 2460,
+                        "height": 1640,
+                        "type": "small",
+                        "caption": "Pakistani workers"
+                      },
+                      {
                         "source": "PC_8.jpg",
+                        "width": 2460,
+                        "height": 1640,
+                        "type": "small",
+                        "caption": "Pakistani workers"
+                      },
+                      {
+                        "source": "PC_9.jpg",
                         "width": 2460,
                         "height": 1640,
                         "type": "small",
@@ -1689,7 +1717,56 @@
                         "caption": "Beijing visitor with first Hong Kong Chinese governor"
                       },
                       {
+                        "source": "PC_11.jpg",
+                        "width": 2460,
+                        "height": 1640,
+                        "type": "small",
+                        "caption": "Beijing visitor with first Hong Kong Chinese governor"
+                      },
+                      {
+                        "source": "PC_12.jpg",
+                        "width": 2460,
+                        "height": 1640,
+                        "type": "small",
+                        "caption": "Beijing visitor with first Hong Kong Chinese governor"
+                      },
+                      {
+                        "source": "PC_13.jpg",
+                        "width": 2460,
+                        "height": 1640,
+                        "type": "small",
+                        "caption": "Beijing visitor with first Hong Kong Chinese governor"
+                      },
+                      {
+                        "source": "PC_14.jpg",
+                        "width": 2460,
+                        "height": 1640,
+                        "type": "small",
+                        "caption": "Beijing visitor with first Hong Kong Chinese governor"
+                      },
+                      {
+                        "source": "PC_15.jpg",
+                        "width": 2460,
+                        "height": 1640,
+                        "type": "small",
+                        "caption": "Beijing visitor with first Hong Kong Chinese governor"
+                      },
+                      {
                         "source": "PC_16.jpg",
+                        "width": 2460,
+                        "height": 1640,
+                        "type": "small",
+                        "caption": "A retired Toi San laundry man who previously worked in New York"
+                      },
+                      {
+                        "source": "PC_17.jpg",
+                        "width": 2460,
+                        "height": 1640,
+                        "type": "small",
+                        "caption": "A retired Toi San laundry man who previously worked in New York"
+                      },
+                      {
+                        "source": "PC_18.jpg",
                         "width": 2460,
                         "height": 1640,
                         "type": "small",
@@ -1704,7 +1781,7 @@
                       }
                     ]
                   },
-                  "citation": "Lorem ipsum dolor sit amet",
+                  "citation": "www.pokchilau.com",
                   "linkTo": "https://pokchilau.format.com/315348-1997-street-portraits"
                 }
               ]
