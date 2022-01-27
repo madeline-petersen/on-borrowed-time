@@ -1,6 +1,7 @@
 .home {
   .bg-black {
     opacity: 1;
+    pointer-events: none;
     animation-name: cover-fade-out;
     animation-timing-function: linear;
     animation-duration: 1s;
