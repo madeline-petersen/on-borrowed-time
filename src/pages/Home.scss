@@ -2,9 +2,9 @@
   .bg-black {
     opacity: 1;
     animation-name: cover-fade-out;
-    animation-timing-function: cubic-bezier(0, 0.55, 0.45, 1);
-    animation-duration: 1.5s;
-    animation-delay: 0.5s;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-delay: 0.25s;
     animation-fill-mode: forwards;
   }
 
