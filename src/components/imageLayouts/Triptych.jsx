@@ -17,6 +17,7 @@ const Triptych = ({ images }) => {
               className="aspect-ratio reveal"
               style={{
                 paddingTop: `calc(${image.height}/${image.width} * 100%)`,
+                marginTop: `max((100vh - 78px - ${image.height}/${image.width} * 100%) / 2, 80px)`,
                 backgroundImage: `url('/images/${image.source}')`
               }}
             />
