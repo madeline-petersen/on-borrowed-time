@@ -1,4 +1,14 @@
 .home {
+  .bg-black {
+    opacity: 1;
+    pointer-events: none;
+    animation-name: cover-fade-out;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards;
+  }
+
   .hero-image {
     background-color: #000000;
     background-position: center;
@@ -50,5 +60,14 @@
       height: 20px;
       fill: white;
     }
+  }
+}
+
+@keyframes cover-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
