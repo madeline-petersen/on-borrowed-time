@@ -41,7 +41,7 @@ const ThematicThreadsToggle = ({
         <span className="slider round max-w-min" />
         <span className="slider round max-w-min" />
       </div>
-      <div className="cursor-pointer pl-4">
+      <div className="cursor-pointer pl-8">
         {thematicThreadsBgWhite ? `1984—2003` : `2003—2020`}
       </div>
     </div>
