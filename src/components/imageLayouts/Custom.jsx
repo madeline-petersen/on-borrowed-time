@@ -6,13 +6,9 @@ import ReactHtmlParser from 'react-html-parser';
 const Custom = ({ images }) => {
   const getMargin = (image, index) => {
     let margin = '80px';
-    const vh = Math.max(
-      document.documentElement.clientHeight || 0,
-      window.innerHeight || 0
-    );
 
-    if (index === 0 && image.height < vh) {
-      margin = `calc((100vh - 78px - ${image.height}/${image.width} * 100%) / 2)`;
+    if (index === 0) {
+      margin = `max((100vh - 78px - ${image.height}/${image.width} * 100%) / 2, 80px)`;
     }
 
     return margin;
