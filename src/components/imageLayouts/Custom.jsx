@@ -8,7 +8,7 @@ const Custom = ({ images }) => {
     let margin = '80px';
 
     if (index === 0) {
-      margin = `calc((100vh - 78px - ${image.height}/${image.width} * 100%) / 2)`;
+      margin = `max((100vh - 78px - ${image.height}/${image.width} * 100%) / 2, 80px)`;
     }
 
     return margin;
@@ -25,7 +25,7 @@ const Custom = ({ images }) => {
                 className="aspect-ratio reveal"
                 style={{
                   paddingTop: `calc(${image.height}/${image.width} * 100%)`,
-                  marginTop: `calc((100vh - 78px - ${image.height}/${image.width} * 100%) / 2)`,
+                  marginTop: getMargin(image, index),
                   backgroundImage: `url('/images/${image.source}')`
                 }}
               />
