@@ -108,7 +108,7 @@ const Anecdote = ({
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={7} md={7} sm={9} xs={9} className="pt-8">
                     <div className="bg-white z-30 pt-8 anecdote-fixed-header">
-                      <div className="small-body mb-8">
+                      <div className="small-body text-gray-90 mb-8">
                         {shortTitle !== title
                           ? ReactHtmlParser(shortTitle)
                           : ''}
@@ -136,7 +136,7 @@ const Anecdote = ({
                   <Col lg={5} md={7} sm={9} xs={9}>
                     <>
                       {preamble && (
-                        <div className="small-body">
+                        <div className="small-body text-gray-90">
                           {ReactHtmlParser(preamble)}
                         </div>
                       )}
@@ -144,7 +144,7 @@ const Anecdote = ({
                         content.map((paragraph, index) => {
                           return (
                             <div
-                              className="medium-body"
+                              className="medium-body text-gray-90"
                               key={`paragraph-${index}`}
                             >
                               {ReactHtmlParser(paragraph)}
@@ -155,7 +155,7 @@ const Anecdote = ({
                       <div className="h-12" />
                       <p className="border-t border-black border-opacity-10 pb-5" />
                       {postamble && (
-                        <div className="small-body mb-8">
+                        <div className="small-body text-gray-90 mb-8">
                           {ReactHtmlParser(postamble)}
                         </div>
                       )}
@@ -181,7 +181,7 @@ const Anecdote = ({
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={6} md={7} sm={9} xs={9} className="pt-8">
                     <div className="bg-white z-30 pt-8 anecdote-fixed-header">
-                      <div className="small-body mb-8">
+                      <div className="small-body text-gray-90 mb-8">
                         {shortTitle !== title
                           ? ReactHtmlParser(shortTitle)
                           : ''}
@@ -202,7 +202,7 @@ const Anecdote = ({
                       {year && `, ${year}`}
                     </div>
                     {preamble && (
-                      <div className="small-body mb-16">
+                      <div className="small-body text-gray-90 mb-16">
                         {ReactHtmlParser(preamble)}
                       </div>
                     )}
@@ -228,7 +228,7 @@ const Anecdote = ({
                     <div className="h-12" />
                     <p className="border-t border-black border-opacity-10 pb-5" />
                     {postamble && (
-                      <div className="small-body mb-8">
+                      <div className="small-body text-gray-90 mb-8">
                         {ReactHtmlParser(postamble)}
                       </div>
                     )}
@@ -249,7 +249,7 @@ const Anecdote = ({
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={5} md={7} sm={9} xs={9}>
                     <div className="bg-white z-30 pt-8 anecdote-fixed-header">
-                      <div className="small-body mb-8">
+                      <div className="small-body text-gray-90 mb-8">
                         {shortTitle !== title
                           ? ReactHtmlParser(shortTitle)
                           : ''}
@@ -275,7 +275,7 @@ const Anecdote = ({
                       content.map((paragraph, index) => {
                         return (
                           <div
-                            className="medium-body"
+                            className="medium-body text-gray-90"
                             key={`paragraph-${index}`}
                           >
                             {ReactHtmlParser(paragraph)}
@@ -286,7 +286,7 @@ const Anecdote = ({
                     <div className="h-12" />
                     <p className="border-t border-black border-opacity-10 pb-5" />
                     {postamble && (
-                      <div className="small-body mb-8">
+                      <div className="small-body text-gray-90 mb-8">
                         {ReactHtmlParser(postamble)}
                       </div>
                     )}
