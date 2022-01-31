@@ -260,11 +260,7 @@ const UIShell = props => {
       <Header
         {...props}
         currentYear={props.year.id}
-        label={
-          props.pageId === 'home'
-            ? props.year.blurb
-            : `${props.year.id} ${props.year.title}`
-        }
+        label={props.year.title}
         title={props.scene ? props.scene.title : ''}
         transitionType={transitionType}
         romanSceneNumber={props.romanSceneNumber}
