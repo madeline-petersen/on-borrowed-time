@@ -39,9 +39,6 @@ const Footer = ({
         {/* override cursor-pointer for left gutter */}
         <Col lg={1} className="cursor-default" />
         <Col lg={2} md={3} sm={3} xs={3}>
-          <p className={textClasses}>Up Next</p>
-        </Col>
-        <Col lg={2} md={2} sm={2} xs={2}>
           <p className={textClasses}>
             {/* current scene number, next scene number, or next year */}
             {changingParam === 'year'
@@ -49,11 +46,13 @@ const Footer = ({
               : ReactHtmlParser(`Scene&nbsp;${nextParams.scene}`)}
           </p>
         </Col>
-        <Col lg={7} md={7} sm={7} xs={7} className="flex justify-between">
+        <Col lg={2} md={2} sm={2} xs={2}>
           <p className={textClasses}>
             {/* next page, next scene, or next year */}
             {ReactHtmlParser(next.title)}
           </p>
+        </Col>
+        <Col lg={7} md={7} sm={7} xs={7} className="flex justify-end">
           <p className={textClasses}>
             {pageId === 'intro' ? <ArrowRight16 /> : <ArrowDown16 />}
           </p>
