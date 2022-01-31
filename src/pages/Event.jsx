@@ -351,7 +351,7 @@ const Event = ({
                                     md={10}
                                     sm={12}
                                     xs={12}
-                                    className={`highlight ${
+                                    className={`highlight transition-all ${
                                       ['1989', '1997'].includes(year.id)
                                         ? 'light'
                                         : 'dark'
