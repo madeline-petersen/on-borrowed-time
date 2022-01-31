@@ -118,6 +118,9 @@ $quarterHeight: calc(30vh - #{$a});
 
 div.highlight.dark {
   color: black;
+  * {
+    transition-duration: 0.25s;
+  }
 
   span {
     // make sure span keeps this color
@@ -152,6 +155,9 @@ div.highlight.dark {
 
 div.highlight.light {
   color: white;
+  * {
+    transition-duration: 0.25s;
+  }
 
   span {
     // make sure span keeps this color
