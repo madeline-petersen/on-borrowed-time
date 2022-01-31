@@ -120,7 +120,7 @@ const Anecdote = ({
                   <Col lg={2} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={7} md={7} sm={9} xs={9} className="anecdote-content">
-                    <div className="large-headline-static mb-6">
+                    <div className="large-headline-static mb-4">
                       {ReactHtmlParser(title)}
                     </div>
                     <div className="small-headline text-gray-90 mb-20 md:mb-10 sm:mb-10">
@@ -193,7 +193,7 @@ const Anecdote = ({
                   <Col lg={4} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={6} md={7} sm={9} xs={9} className="anecdote-content">
-                    <div className="large-headline-static mb-6">
+                    <div className="large-headline-static mb-4">
                       {ReactHtmlParser(title)}
                     </div>
                     <div className="small-headline text-gray-90 mb-20 md:mb-10 sm:mb-10">
@@ -263,7 +263,7 @@ const Anecdote = ({
                   <Col lg={6} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={5} md={7} sm={9} xs={9} className="anecdote-content">
-                    <div className="large-headline-static mb-6">
+                    <div className="large-headline-static mb-4">
                       {ReactHtmlParser(title)}
                     </div>
                     <div className="small-headline text-gray-90 mb-20 md:mb-10 sm:mb-10">
