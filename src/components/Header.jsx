@@ -33,7 +33,7 @@ const Header = ({
       id="header"
     >
       <Container className="grid__container">
-        <Row className="grid__row pt-8">
+        <Row className="grid__row pt-5">
           <Col xl={3} lg={3} md={4} sm={4} xs={4} />
           <Col xl={7} lg={5} md={6} sm={8} xs={8}>
             <p
