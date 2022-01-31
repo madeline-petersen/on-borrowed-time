@@ -154,6 +154,11 @@ const Anecdote = ({
                         })}
                       <div className="h-12" />
                       <p className="border-t border-black border-opacity-10 pb-5" />
+                      {postamble && (
+                        <div className="small-body mb-8">
+                          {ReactHtmlParser(postamble)}
+                        </div>
+                      )}
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -280,6 +285,11 @@ const Anecdote = ({
                       })}
                     <div className="h-12" />
                     <p className="border-t border-black border-opacity-10 pb-5" />
+                    {postamble && (
+                      <div className="small-body mb-8">
+                        {ReactHtmlParser(postamble)}
+                      </div>
+                    )}
                     <a target="_blank" rel="noopener noreferrer" href={linkTo}>
                       <p className="small-body text-black text-opacity-60 hover:text-opacity-100 transition-all">
                         {ReactHtmlParser(citation)}
