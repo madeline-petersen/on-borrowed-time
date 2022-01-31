@@ -96,7 +96,7 @@ const Anecdote = ({
           <Container className="grid__container">
             <Row id="scroll-container" className="grid__row modal-height">
               <span
-                className="close absolute top-5 right-6 z-40"
+                className="close absolute top-8 right-6 z-40"
                 onClick={onClickSpan}
               >
                 <Close20 />
@@ -106,9 +106,9 @@ const Anecdote = ({
                 <>
                   <Col lg={2} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
-                  <Col lg={7} md={7} sm={9} xs={9} className="pt-5">
-                    <div className="bg-white z-30 pt-5 anecdote-fixed-header">
-                      <div className="small-body mb-1">
+                  <Col lg={7} md={7} sm={9} xs={9} className="pt-8">
+                    <div className="bg-white z-30 pt-8 anecdote-fixed-header">
+                      <div className="small-body mb-8">
                         {shortTitle !== title
                           ? ReactHtmlParser(shortTitle)
                           : ''}
@@ -174,9 +174,9 @@ const Anecdote = ({
                 <>
                   <Col lg={4} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
-                  <Col lg={6} md={7} sm={9} xs={9} className="pt-5">
-                    <div className="bg-white z-30 pt-5 anecdote-fixed-header">
-                      <div className="small-body mb-1">
+                  <Col lg={6} md={7} sm={9} xs={9} className="pt-8">
+                    <div className="bg-white z-30 pt-8 anecdote-fixed-header">
+                      <div className="small-body mb-8">
                         {shortTitle !== title
                           ? ReactHtmlParser(shortTitle)
                           : ''}
@@ -243,8 +243,8 @@ const Anecdote = ({
                   <Col lg={6} md={2} sm={1} xs={1} onClick={onClickSpan} />
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={5} md={7} sm={9} xs={9}>
-                    <div className="bg-white z-30 pt-5 anecdote-fixed-header">
-                      <div className="small-body mb-1">
+                    <div className="bg-white z-30 pt-8 anecdote-fixed-header">
+                      <div className="small-body mb-8">
                         {shortTitle !== title
                           ? ReactHtmlParser(shortTitle)
                           : ''}
