@@ -112,7 +112,6 @@ const Anecdote = ({
                           ? ReactHtmlParser(shortTitle)
                           : ''}
                       </div>
-                      <div className="small-body mb-5">{type}</div>
                     </div>
                   </Col>
                   <Col lg={2} md={1} sm={1} xs={1} />
@@ -181,7 +180,6 @@ const Anecdote = ({
                           ? ReactHtmlParser(shortTitle)
                           : ''}
                       </div>
-                      <div className="small-body mb-5">{type}</div>
                     </div>
                   </Col>
                   <Col lg={1} md={1} sm={1} xs={1} />
@@ -245,7 +243,6 @@ const Anecdote = ({
                           ? ReactHtmlParser(shortTitle)
                           : ''}
                       </div>
-                      <div className="small-body mb-5">{type}</div>
                     </div>
                   </Col>
                   <Visible md sm xs>
