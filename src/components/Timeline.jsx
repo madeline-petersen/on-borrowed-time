@@ -118,25 +118,30 @@ const Timeline = props => {
 
               <span
                 key="intro"
-                className={cx('circle cursor-pointer', {
+                className={cx('circle', {
                   'current-scene': currentSceneIndex === 'intro',
                   [colourClasses[year.id]]: isEventPage && !hasLightText,
                   show: yearIsActive(year),
                   hide: !yearIsActive(year)
                 })}
+              />
+              <span
+                key="intro"
+                className={cx('circle-container cursor-pointer')}
                 onClick={() => onClickYear(year)}
               >
                 <span
-                  className={cx('dot mt-1 left-1', {
+                  className={cx('dot mt-1', {
                     [colourClasses[year.id]]: isEventPage && !hasLightText
                   })}
                 />
               </span>
 
               {year.scenes.map((scene, index) => (
+                // circle
                 <span
-                  key={`scene-${index}`}
-                  className={cx('circle cursor-pointer', {
+                  key={`scene-circle-${index}`}
+                  className={cx('circle', {
                     'current-scene': currentSceneIndex === index,
                     [colourClasses[year.id]]: isEventPage && !hasLightText,
                     show: yearIsActive(year),
@@ -147,10 +152,23 @@ const Timeline = props => {
                       isCurrentYear(year) ? `calc((${index + 1} * 24px))` : '0'
                     }`
                   }}
+                />
+              ))}
+
+              {year.scenes.map((scene, index) => (
+                // dot, hover title
+                <span
+                  key={`scene-dot-${index}`}
+                  className={cx('circle-container cursor-pointer')}
+                  style={{
+                    marginTop: `${
+                      isCurrentYear(year) ? `calc((${index + 1} * 24px))` : '0'
+                    }`
+                  }}
                   onClick={() => onClickScene(index)}
                 >
                   <span
-                    className={cx('dot mt-1 left-1', {
+                    className={cx('dot mt-1', {
                       [colourClasses[year.id]]: isEventPage && !hasLightText
                     })}
                   >
