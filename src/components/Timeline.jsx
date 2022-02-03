@@ -134,8 +134,28 @@ const Timeline = props => {
               </span>
 
               {year.scenes.map((scene, index) => (
+                // circle
                 <span
-                  key={`scene-${index}`}
+                  key={`scene-circle-${index}`}
+                  className={cx('circle cursor-pointer', {
+                    'current-scene': currentSceneIndex === index,
+                    [colourClasses[year.id]]: isEventPage && !hasLightText,
+                    show: yearIsActive(year),
+                    hide: !yearIsActive(year)
+                  })}
+                  style={{
+                    marginTop: `${
+                      isCurrentYear(year) ? `calc((${index + 1} * 24px))` : '0'
+                    }`
+                  }}
+                  // onClick={() => onClickScene(index)}
+                />
+              ))}
+
+              {year.scenes.map((scene, index) => (
+                // dot, hover title
+                <span
+                  key={`scene-dot-${index}`}
                   className={cx('circle cursor-pointer', {
                     'current-scene': currentSceneIndex === index,
                     [colourClasses[year.id]]: isEventPage && !hasLightText,
@@ -150,7 +170,7 @@ const Timeline = props => {
                   onClick={() => onClickScene(index)}
                 >
                   <span
-                    className={cx('dot mt-1 left-1', {
+                    className={cx('dot mt-1', {
                       [colourClasses[year.id]]: isEventPage && !hasLightText
                     })}
                   >
