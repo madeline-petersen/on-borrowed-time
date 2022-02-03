@@ -118,16 +118,20 @@ const Timeline = props => {
 
               <span
                 key="intro"
-                className={cx('circle cursor-pointer', {
+                className={cx('circle', {
                   'current-scene': currentSceneIndex === 'intro',
                   [colourClasses[year.id]]: isEventPage && !hasLightText,
                   show: yearIsActive(year),
                   hide: !yearIsActive(year)
                 })}
+              />
+              <span
+                key="intro"
+                className={cx('circle-container cursor-pointer')}
                 onClick={() => onClickYear(year)}
               >
                 <span
-                  className={cx('dot mt-1 left-1', {
+                  className={cx('dot mt-1', {
                     [colourClasses[year.id]]: isEventPage && !hasLightText
                   })}
                 />
@@ -137,7 +141,7 @@ const Timeline = props => {
                 // circle
                 <span
                   key={`scene-circle-${index}`}
-                  className={cx('circle cursor-pointer', {
+                  className={cx('circle', {
                     'current-scene': currentSceneIndex === index,
                     [colourClasses[year.id]]: isEventPage && !hasLightText,
                     show: yearIsActive(year),
@@ -148,7 +152,6 @@ const Timeline = props => {
                       isCurrentYear(year) ? `calc((${index + 1} * 24px))` : '0'
                     }`
                   }}
-                  // onClick={() => onClickScene(index)}
                 />
               ))}
 
@@ -156,12 +159,7 @@ const Timeline = props => {
                 // dot, hover title
                 <span
                   key={`scene-dot-${index}`}
-                  className={cx('circle cursor-pointer', {
-                    'current-scene': currentSceneIndex === index,
-                    [colourClasses[year.id]]: isEventPage && !hasLightText,
-                    show: yearIsActive(year),
-                    hide: !yearIsActive(year)
-                  })}
+                  className={cx('circle-container cursor-pointer')}
                   style={{
                     marginTop: `${
                       isCurrentYear(year) ? `calc((${index + 1} * 24px))` : '0'

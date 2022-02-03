@@ -22,6 +22,16 @@
     // scene timeline
     margin-left: -1px; // move scene timeline onto year timeline
 
+    .circle-container {
+      position: absolute;
+      left: -7px; // move circle onto timeline
+      margin-top: 1px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0); // transparent
+    }
+
     .circle {
       position: absolute;
       left: -7px; // move circle onto timeline
@@ -29,20 +39,6 @@
       height: 13px;
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0); // transparent
-
-      .scene-title {
-        opacity: 0;
-        transition: opacity 0.5s;
-        pointer-events: none;
-        top: -5px;
-      }
-
-      &:hover {
-        .scene-title {
-          opacity: 1;
-          transition: opacity 0.5s;
-        }
-      }
 
       &.current-scene {
         background-color: rgba(255, 255, 255, 1); // opaque
@@ -71,39 +67,53 @@
           background-color: #936753;
         }
       }
+    }
 
-      .dot {
-        position: absolute;
-        background-color: white;
-        border-radius: 50%;
-        height: 5px;
-        width: 5px;
-        left: 4px;
-        top: -1px;
+    .dot {
+      position: absolute;
+      background-color: white;
+      border-radius: 50%;
+      height: 5px;
+      width: 5px;
+      left: 4px;
+      top: -1px;
 
-        &.gray-30 {
-          background-color: #bcb9b6;
+      .scene-title {
+        opacity: 0;
+        transition: opacity 0.5s;
+        pointer-events: none;
+        top: -5px;
+      }
+
+      &:hover {
+        .scene-title {
+          opacity: 1;
+          transition: opacity 0.5s;
         }
+      }
 
-        &.red {
-          background-color: #68120c;
-        }
+      &.gray-30 {
+        background-color: #bcb9b6;
+      }
 
-        &.blue-50 {
-          background-color: #003778;
-        }
+      &.red {
+        background-color: #68120c;
+      }
 
-        &.yellow {
-          background-color: #e8e5d2;
-        }
+      &.blue-50 {
+        background-color: #003778;
+      }
 
-        &.purple {
-          background-color: #9c8cb5;
-        }
+      &.yellow {
+        background-color: #e8e5d2;
+      }
 
-        &.brown {
-          background-color: #936753;
-        }
+      &.purple {
+        background-color: #9c8cb5;
+      }
+
+      &.brown {
+        background-color: #936753;
       }
     }
 
