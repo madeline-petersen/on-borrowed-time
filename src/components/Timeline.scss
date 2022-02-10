@@ -169,7 +169,7 @@
 
   .circle {
     &.show {
-      opacity: 0.5;
+      opacity: 0.4;
       transition: opacity 0s 1s, background-color 1s, color 0.5s; // delay appearance of circle, fade circle in
     }
 
