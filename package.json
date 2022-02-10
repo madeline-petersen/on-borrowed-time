@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "14.x"
+    "node": "12.x",
+    "npm": "8.x"
   },
   "dependencies": {
     "@carbon/icons-react": "^10.31.0",
