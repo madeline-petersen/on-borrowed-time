@@ -60,9 +60,7 @@ const Header = ({
                   className={cx('cursor-pointer contrast-text float-left', {
                     [colourBackgroundClass]: pageId === 'event',
                     transparent: pageId === 'editors-note',
-                    'opacity-40':
-                      pageId === 'intro' &&
-                      (currentYear === '1984' || currentYear === '2020'),
+                    'opacity-40': pageId === 'intro' && currentYear === '2020',
                     'pointer-events-none': pageId === 'thematic-threads'
                   })}
                   onClick={() => navigateToUrl('thematic-threads')}
@@ -77,7 +75,6 @@ const Header = ({
                   className={cx('cursor-pointer contrast-text float-right', {
                     [colourBackgroundClass]: pageId === 'event',
                     transparent: pageId === 'thematic-threads',
-                    'opacity-40': pageId === 'intro' && currentYear === '1984',
                     'pointer-events-none': pageId === 'editors-note'
                   })}
                   onClick={() => navigateToUrl('editors-note')}
