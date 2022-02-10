@@ -141,28 +141,28 @@
       }
 
       &.num-scenes-1 {
-        padding-bottom: calc(1 * 24px);
+        padding-bottom: calc((1 * 24px) - 4px);
       }
       &.num-scenes-2 {
-        padding-bottom: calc(2 * 24px);
+        padding-bottom: calc((2 * 24px) - 4px);
       }
       &.num-scenes-3 {
-        padding-bottom: calc(3 * 24px);
+        padding-bottom: calc((3 * 24px) - 4px);
       }
       &.num-scenes-4 {
-        padding-bottom: calc(4 * 24px);
+        padding-bottom: calc((4 * 24px) - 4px);
       }
       &.num-scenes-5 {
-        padding-bottom: calc(5 * 24px);
+        padding-bottom: calc((5 * 24px) - 4px);
       }
       &.num-scenes-6 {
-        padding-bottom: calc(6 * 24px);
+        padding-bottom: calc((6 * 24px) - 4px);
       }
       &.num-scenes-7 {
-        padding-bottom: calc(7 * 24px);
+        padding-bottom: calc((7 * 24px) - 4px);
       }
       &.num-scenes-8 {
-        padding-bottom: calc(8 * 24px);
+        padding-bottom: calc((8 * 24px) - 4px);
       }
     }
   }
