@@ -149,7 +149,9 @@ const Timeline = props => {
                   })}
                   style={{
                     marginTop: `${
-                      isCurrentYear(year) ? `calc((${index + 1} * 24px))` : '0'
+                      isCurrentYear(year)
+                        ? `calc((${index + 1} * 24px) - 1px)`
+                        : '0'
                     }`
                   }}
                 />
