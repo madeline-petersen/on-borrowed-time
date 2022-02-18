@@ -208,7 +208,10 @@ const ThematicThreads = ({ currentBgColour }) => {
                     style={{
                       left: getBlurbIndent(index),
                       paddingLeft: '0.5rem',
-                      top: '40%'
+                      top: '36px', // to match pt-9 on title
+                      paddingTop: ['xxl', 'xl', 'lg'].includes(screenClass)
+                        ? '32px' // makes up for tall line height
+                        : '0px'
                     }}
                   >
                     {ReactHtmlParser(thread.blurb)}
