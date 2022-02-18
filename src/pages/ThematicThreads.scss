@@ -84,6 +84,16 @@
           // make currently hovered element opaque
           opacity: 1 !important;
 
+          // make scene number visible
+          .small-body {
+            opacity: 1 !important;
+          }
+        }
+      }
+
+      .thematic-thread-headline {
+        &:hover {
+          // make blurb number visible
           .small-body {
             opacity: 1 !important;
           }

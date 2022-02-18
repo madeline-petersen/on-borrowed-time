@@ -66,7 +66,7 @@ const ThematicThreads = ({ currentBgColour }) => {
     }
   };
 
-  const rowOne = {
+  const oddCols = {
     // titleGutterLeft: {
     //   xxl: 0,
     //   xl: 0,
@@ -76,15 +76,15 @@ const ThematicThreads = ({ currentBgColour }) => {
     // },
     title: {
       xxl: 12,
-      xl: 8,
-      lg: 8,
+      xl: 9,
+      lg: 9,
       md: 12,
       sm: 12
     },
     titleGutterRight: {
       xxl: 0,
-      xl: 4,
-      lg: 4,
+      xl: 3,
+      lg: 3,
       md: 0,
       sm: 0
     },
@@ -111,51 +111,6 @@ const ThematicThreads = ({ currentBgColour }) => {
     }
   };
 
-  const rowThree = {
-    titleGutterLeft: {
-      xxl: 0,
-      xl: 5,
-      lg: 5,
-      md: 0,
-      sm: 0
-    },
-    title: {
-      xxl: 12,
-      xl: 7,
-      lg: 7,
-      md: 12,
-      sm: 12
-    },
-    titleGutterRight: {
-      xxl: 0,
-      xl: 0,
-      lg: 0,
-      md: 0,
-      sm: 0
-    },
-    subtitleGutterLeft: {
-      xxl: 1,
-      xl: 6,
-      lg: 6,
-      md: 1,
-      sm: 0
-    },
-    subtitle: {
-      xxl: 11,
-      xl: 6,
-      lg: 6,
-      md: 11,
-      sm: 12
-    },
-    subtitleGutterRight: {
-      xxl: 0,
-      xl: 0,
-      lg: 0,
-      md: 0,
-      sm: 0
-    }
-  };
-
   const navigateTo = (year, romanSceneNumber) => {
     if (year && romanSceneNumber) {
       history.push(`/${year}/scene-${romanSceneNumber}/event`);
@@ -164,8 +119,41 @@ const ThematicThreads = ({ currentBgColour }) => {
     }
   };
 
+  const getBlurbIndent = index => {
+    const cols = index % 2 === 0 ? evenCols.title : oddCols.title;
+    if (index % 2 === 0) {
+      if (['xxl'].includes(screenClass)) {
+        return `calc(600%/${cols.xxl})`;
+      } else if (['xl'].includes(screenClass)) {
+        return `calc(600%/${cols.xl})`;
+      } else if (['lg'].includes(screenClass)) {
+        return `calc(700%/${cols.lg})`;
+      } else if (['md'].includes(screenClass)) {
+        return `calc(800%/${cols.md})`;
+      } else if (['sm'].includes(screenClass)) {
+        return `calc(1100%/${cols.sm})`;
+      } else {
+        return `calc(1100%/${cols.sm})`;
+      }
+    } else {
+      if (['xxl'].includes(screenClass)) {
+        return `calc(600%/${cols.xxl})`;
+      } else if (['xl'].includes(screenClass)) {
+        return `calc(700%/${cols.xl})`;
+      } else if (['lg'].includes(screenClass)) {
+        return `calc(700%/${cols.lg})`;
+      } else if (['md'].includes(screenClass)) {
+        return `calc(800%/${cols.md})`;
+      } else if (['sm'].includes(screenClass)) {
+        return `calc(1100%/${cols.sm})`;
+      } else {
+        return `calc(1100%/${cols.sm})`;
+      }
+    }
+  };
+
   const getTitleIndent = type => {
-    const cols = type === 'even' ? evenCols.subtitle : rowOne.subtitle;
+    const cols = type === 'even' ? evenCols.subtitle : oddCols.subtitle;
     if (['xxl'].includes(screenClass)) {
       return `calc(100%/${cols.xxl})`;
     } else if (['xl'].includes(screenClass)) {
@@ -182,7 +170,7 @@ const ThematicThreads = ({ currentBgColour }) => {
   };
 
   const getSceneIndent = type => {
-    const cols = type === 'even' ? evenCols.subtitle : rowOne.subtitle;
+    const cols = type === 'even' ? evenCols.subtitle : oddCols.subtitle;
     if (['xxl'].includes(screenClass)) {
       return `calc(500%/${cols.xxl})`;
     } else if (['xl'].includes(screenClass)) {
@@ -213,17 +201,11 @@ const ThematicThreads = ({ currentBgColour }) => {
       >
         {content.map((thread, index) => {
           const type = index % 2 === 0 ? 'even' : 'odd';
-          const cols =
-            type === 'even' ? evenCols : index === 1 ? rowOne : rowThree;
+          const cols = type === 'even' ? evenCols : oddCols;
 
           return (
             <span key={thread.title} className="contents hover-container">
               {type === 'even' && (
-                <Visible lg xl>
-                  <Col className="grid__col" {...cols.titleGutterLeft} />
-                </Visible>
-              )}
-              {index === 3 && (
                 <Visible lg xl>
                   <Col className="grid__col" {...cols.titleGutterLeft} />
                 </Visible>
@@ -236,6 +218,19 @@ const ThematicThreads = ({ currentBgColour }) => {
                   className={`thematic-thread-headline ${textColourClass} cursor-pointer pt-9 pb-5`}
                 >
                   {ReactHtmlParser(thread.title)}
+                  {/* place here */}
+                  <div
+                    className="small-body self-center absolute transition-all"
+                    style={{
+                      left: getBlurbIndent(index),
+                      paddingLeft: '0.5rem',
+                      top: '40%'
+                    }}
+                  >
+                    {ReactHtmlParser(
+                      `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut sapien suscipit, porta risus ac, euismod magna.`
+                    )}
+                  </div>
                 </div>
               </Col>
               {index !== 3 && (
@@ -270,7 +265,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                         {ReactHtmlParser(subtitle.title)}
                       </div>
                       <div
-                        className="small-body self-center absolute left-0"
+                        className="small-body self-center absolute left-0 transition-all"
                         style={{
                           left: getSceneIndent(type),
                           paddingLeft: '0.5rem'
