@@ -130,9 +130,9 @@ const ThematicThreads = ({ currentBgColour }) => {
     } else if (['md'].includes(screenClass)) {
       return `calc(800%/${cols.md})`;
     } else if (['sm'].includes(screenClass)) {
-      return `calc(1100%/${cols.sm})`;
+      return `calc(600%/${cols.sm})`;
     } else {
-      return `calc(1100%/${cols.sm})`;
+      return `calc(600%/${cols.sm})`;
     }
   };
 
