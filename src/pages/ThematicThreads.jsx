@@ -31,15 +31,15 @@ const ThematicThreads = ({ currentBgColour }) => {
     },
     title: {
       xxl: 12,
-      xl: 8,
-      lg: 8,
+      xl: 9,
+      lg: 9,
       md: 12,
       sm: 12
     },
     titleGutterRight: {
       xxl: 0,
-      xl: 1,
-      lg: 1,
+      xl: 0,
+      lg: 0,
       md: 0,
       sm: 0
     },
@@ -125,7 +125,7 @@ const ThematicThreads = ({ currentBgColour }) => {
       if (['xxl'].includes(screenClass)) {
         return `calc(600%/${cols.xxl})`;
       } else if (['xl'].includes(screenClass)) {
-        return `calc(600%/${cols.xl})`;
+        return `calc(700%/${cols.xl})`;
       } else if (['lg'].includes(screenClass)) {
         return `calc(700%/${cols.lg})`;
       } else if (['md'].includes(screenClass)) {
@@ -233,7 +233,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                   </div>
                 </div>
               </Col>
-              {index !== 3 && (
+              {index % 2 !== 0 && (
                 <Visible lg xl>
                   <Col className="grid__col" {...cols.titleGutterRight} />
                 </Visible>
