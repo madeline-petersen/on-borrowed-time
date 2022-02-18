@@ -76,15 +76,15 @@ const ThematicThreads = ({ currentBgColour }) => {
     // },
     title: {
       xxl: 12,
-      xl: 9,
-      lg: 9,
+      xl: 11,
+      lg: 11,
       md: 12,
       sm: 12
     },
     titleGutterRight: {
       xxl: 0,
-      xl: 3,
-      lg: 3,
+      xl: 1,
+      lg: 1,
       md: 0,
       sm: 0
     },
@@ -119,20 +119,53 @@ const ThematicThreads = ({ currentBgColour }) => {
     }
   };
 
-  const getBlurbIndent = index => {
+  const getBlurbWidth = index => {
     const cols = index % 2 === 0 ? evenCols.title : oddCols.title;
     if (['xxl'].includes(screenClass)) {
-      return `calc(600%/${cols.xxl})`;
+      return `calc(200%/${cols.xxl})`;
     } else if (['xl'].includes(screenClass)) {
-      return `calc(700%/${cols.xl})`;
+      return `calc(200%/${cols.xl})`;
     } else if (['lg'].includes(screenClass)) {
-      return `calc(700%/${cols.lg})`;
+      return `calc(200%/${cols.lg})`;
     } else if (['md'].includes(screenClass)) {
-      return `calc(800%/${cols.md})`;
+      return `calc(600%/${cols.md})`;
     } else if (['sm'].includes(screenClass)) {
       return `calc(600%/${cols.sm})`;
     } else {
       return `calc(600%/${cols.sm})`;
+    }
+  };
+
+  const getBlurbIndent = index => {
+    const cols = index % 2 === 0 ? evenCols.title : oddCols.title;
+    if (index % 2 === 0) {
+      if (['xxl'].includes(screenClass)) {
+        return `calc(700%/${cols.xxl})`;
+      } else if (['xl'].includes(screenClass)) {
+        return `calc(-300%/${cols.xl})`;
+      } else if (['lg'].includes(screenClass)) {
+        return `calc(-300%/${cols.lg})`;
+      } else if (['md'].includes(screenClass)) {
+        return `calc(600%/${cols.md})`;
+      } else if (['sm'].includes(screenClass)) {
+        return `calc(600%/${cols.sm})`;
+      } else {
+        return `calc(600%/${cols.sm})`;
+      }
+    } else {
+      if (['xxl'].includes(screenClass)) {
+        return `calc(700%/${cols.xxl})`;
+      } else if (['xl'].includes(screenClass)) {
+        return `calc(900%/${cols.xl})`;
+      } else if (['lg'].includes(screenClass)) {
+        return `calc(1000%/${cols.lg})`;
+      } else if (['md'].includes(screenClass)) {
+        return `calc(600%/${cols.md})`;
+      } else if (['sm'].includes(screenClass)) {
+        return `calc(600%/${cols.sm})`;
+      } else {
+        return `calc(600%/${cols.sm})`;
+      }
     }
   };
 
@@ -207,6 +240,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                     className="small-body self-center absolute transition-all"
                     style={{
                       left: getBlurbIndent(index),
+                      width: getBlurbWidth(index),
                       paddingLeft: '0.5rem',
                       top: '36px', // to match pt-9 on title
                       paddingTop: ['xxl', 'xl', 'lg'].includes(screenClass)
