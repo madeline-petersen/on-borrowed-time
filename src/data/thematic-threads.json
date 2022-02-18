@@ -2,6 +2,7 @@
   "white": [
     {
       "title": "In-between Identity",
+      "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut sapien suscipit, porta risus ac, euismod magna.",
       "subtitles": [
         {
           "year": "1984",
@@ -18,6 +19,7 @@
     },
     {
       "title": "Geographical Diaspora",
+      "blurb": "Suspendisse potenti. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
       "subtitles": [
         {
           "year": "1984",
@@ -34,6 +36,7 @@
     },
     {
       "title": "Fear o<span>f</span> Ambiguity",
+      "blurb": "Duis consectetur imperdiet odio, nec luctus quam ultricies non. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
       "subtitles": [
         {
           "year": "1989",
@@ -54,6 +57,7 @@
     },
     {
       "title": "Preserve Democratic<br />Rights <span>&amp;</span> Freedoms",
+      "blurb": "Ut vel sapien ante. Cras sed mi in mauris hendrerit elementum. Cras ut felis quam. Phasellus hendrerit sed tortor in varius.",
       "subtitles": [
         {
           "year": "1984",
@@ -81,6 +85,7 @@
   "black": [
     {
       "title": "Hong Kong Identity",
+      "blurb": "Phasellus aliquam leo eu velit rhoncus faucibus. Pellentesque placerat, ligula ut cursus cursus, urna diam condimentum mi, a rhoncus magna turpis eu elit.",
       "subtitles": [
         {
           "year": "2014",
@@ -107,6 +112,7 @@
     },
     {
       "title": "Cultural Diaspora",
+      "blurb": "Suspendisse iaculis purus est, congue pulvinar turpis rutrum sed. Nulla facilisi.",
       "subtitles": [
         {
           "year": "2014",
@@ -128,6 +134,7 @@
     },
     {
       "title": "Solidarity <span>&amp;</span> Resistance",
+      "blurb": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
       "subtitles": [
         {
           "year": "2003",
@@ -159,6 +166,7 @@
     },
     {
       "title": "Advocating <span>f</span>or<br />Genuine Democracy",
+      "blurb": "Fusce pretium augue sem, eget maximus justo suscipit et. In et nisi tempus, ultrices sapien eget, consectetur augue.",
       "subtitles": [
         {
           "year": "2003",

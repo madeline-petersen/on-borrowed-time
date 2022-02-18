@@ -227,9 +227,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                       top: '40%'
                     }}
                   >
-                    {ReactHtmlParser(
-                      `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut sapien suscipit, porta risus ac, euismod magna.`
-                    )}
+                    {ReactHtmlParser(thread.blurb)}
                   </div>
                 </div>
               </Col>
