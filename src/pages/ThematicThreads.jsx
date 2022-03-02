@@ -7,6 +7,7 @@ import React from 'react';
 import {
   Col,
   Container,
+  Hidden,
   Row,
   useScreenClass,
   Visible
@@ -235,21 +236,22 @@ const ThematicThreads = ({ currentBgColour }) => {
                   className={`thematic-thread-headline ${textColourClass} cursor-pointer pt-9 pb-5`}
                 >
                   {ReactHtmlParser(thread.title)}
-                  {/* place here */}
-                  <div
-                    className="small-body self-center absolute transition-all"
-                    style={{
-                      left: getBlurbIndent(index),
-                      width: getBlurbWidth(index),
-                      paddingLeft: '0.5rem',
-                      top: '36px', // to match pt-9 on title
-                      paddingTop: ['xxl', 'xl', 'lg'].includes(screenClass)
-                        ? '32px' // makes up for tall line height
-                        : '0px'
-                    }}
-                  >
-                    {ReactHtmlParser(thread.blurb)}
-                  </div>
+                  <Hidden sm xs>
+                    <div
+                      className="small-body self-center absolute transition-all"
+                      style={{
+                        left: getBlurbIndent(index),
+                        width: getBlurbWidth(index),
+                        paddingLeft: '0.5rem',
+                        top: '36px', // to match pt-9 on title
+                        paddingTop: ['xxl', 'xl', 'lg'].includes(screenClass)
+                          ? '32px' // makes up for tall line height
+                          : '0px'
+                      }}
+                    >
+                      {ReactHtmlParser(thread.blurb)}
+                    </div>
+                  </Hidden>
                 </div>
               </Col>
               {index % 2 !== 0 && (
