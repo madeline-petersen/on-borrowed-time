@@ -29,7 +29,9 @@ const Header = ({
 
   return (
     <span
-      className={`absolute w-full top-0 z-10 medium-caption ${timelineClasses}`}
+      className={cx('absolute w-full top-0 z-10 medium-caption', {
+        [timelineClasses]: pageId !== 'home'
+      })}
       id="header"
     >
       <Container className="grid__container">
@@ -37,7 +39,9 @@ const Header = ({
           <Col xl={3} lg={3} md={4} sm={4} xs={4} />
           <Col xl={7} lg={5} md={6} sm={8} xs={8}>
             <p
-              className={cx('contrast-text', {
+              className={cx({
+                'contrast-text': pageId !== 'home',
+                'text-white': pageId === 'home',
                 'cursor-pointer': pageId !== 'intro',
                 [colourBackgroundClass]: pageId === 'event',
                 'pointer-events-none': pageId === 'intro'
@@ -57,7 +61,9 @@ const Header = ({
             <Col xl={1} lg={2}>
               <span className="hover:opacity-70 transition-all">
                 <p
-                  className={cx('cursor-pointer contrast-text float-left', {
+                  className={cx('cursor-pointer float-left', {
+                    'contrast-text': pageId !== 'home',
+                    'text-white': pageId === 'home',
                     [colourBackgroundClass]: pageId === 'event',
                     transparent: pageId === 'editors-note',
                     'opacity-40': pageId === 'intro' && currentYear === '2020',
@@ -72,7 +78,9 @@ const Header = ({
             <Col xl={1} lg={2}>
               <span className="hover:opacity-70 transition-all">
                 <p
-                  className={cx('cursor-pointer contrast-text float-right', {
+                  className={cx('cursor-pointer float-right', {
+                    'contrast-text': pageId !== 'home',
+                    'text-white': pageId === 'home',
                     [colourBackgroundClass]: pageId === 'event',
                     transparent: pageId === 'thematic-threads',
                     'pointer-events-none': pageId === 'editors-note'
@@ -100,8 +108,10 @@ const Header = ({
               <p
                 key={`${currentYear}-${romanSceneNumber}-scene`}
                 className={cx(
-                  'medium-caption scene-animation absolute top-0 pt-2 contrast-text',
+                  'medium-caption scene-animation absolute top-0 pt-2',
                   {
+                    'contrast-text': pageId !== 'home',
+                    'text-white': pageId === 'home',
                     [colourBackgroundClass]: pageId === 'event',
                     'fade-out': transitionType
                   }
@@ -113,7 +123,9 @@ const Header = ({
             {title && (
               <p
                 key={`${currentYear}-${romanSceneNumber}-title`}
-                className={cx('medium-caption pt-2 pb-5 contrast-text', {
+                className={cx('medium-caption pt-2 pb-5', {
+                  'contrast-text': pageId !== 'home',
+                  'text-white': pageId === 'home',
                   [`title-animation ${colourBackgroundClass}`]:
                     pageId === 'event',
                   'cursor-pointer': pageId !== 'event',
