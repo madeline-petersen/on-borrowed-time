@@ -17,6 +17,7 @@ import Artifacts from './Artifacts.jsx';
 import EditorsNote from './EditorsNote';
 import Event from './Event.jsx';
 import Home from './Home.jsx';
+import Index from './Index.jsx';
 import Intro from './Intro.jsx';
 import Reflection from './Reflection.jsx';
 import ThematicThreads from './ThematicThreads.jsx';
@@ -133,6 +134,14 @@ const UIShell = props => {
     'editors-note'
   ];
 
+  const pagesWithTimeline = [
+    'home',
+    'intro',
+    'event',
+    'artifacts',
+    'reflection'
+  ];
+
   useEffect(() => {
     if (pagesWithOverscroll.includes(props.pageId)) {
       if (isMenuActive) {
@@ -238,6 +247,9 @@ const UIShell = props => {
     case 'editors-note':
       pageComponent = <EditorsNote />;
       break;
+    case 'index':
+      pageComponent = <Index />;
+      break;
     default:
       pageComponent = (
         <Home
@@ -331,17 +343,16 @@ const UIShell = props => {
         </Visible>
         Time
       </Link>
-      {props.pageId !== 'thematic-threads' &&
-        props.pageId !== 'editors-note' && (
-          <Timeline
-            {...props}
-            timelineClasses={timelineClasses}
-            previewedYear={hash}
-            transitionType={transitionType}
-            colourBackgroundClass={colourBackgroundClasses[props.year.id]}
-            navigateTo={navigateTo}
-          />
-        )}
+      {pagesWithTimeline.includes(props.pageId) && (
+        <Timeline
+          {...props}
+          timelineClasses={timelineClasses}
+          previewedYear={hash}
+          transitionType={transitionType}
+          colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+          navigateTo={navigateTo}
+        />
+      )}
       {pageComponent}
     </>
   );

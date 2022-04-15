@@ -62,6 +62,10 @@ function ThematicThreadsWrapper() {
   return <UIShell pageId="thematic-threads" years={data.years} />;
 }
 
+function IndexWrapper() {
+  return <UIShell pageId="index" years={data.years} />;
+}
+
 function Page() {
   let { yearId } = useParams();
   let { sceneId } = useParams();
@@ -216,7 +220,7 @@ function App() {
               <HomeWrapper />
             </Route>
             <Route path="/index">
-              <Index />
+              <IndexWrapper />
             </Route>
             <Route path="/editors-note">
               <EditorsNoteWrapper />
