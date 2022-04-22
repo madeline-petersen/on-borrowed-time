@@ -39,7 +39,7 @@ const Header = ({
       <Container className="grid__container">
         <Row className="grid__row pt-5">
           <Col xl={3} lg={3} md={4} sm={4} xs={4} />
-          <Col xl={7} lg={5} md={6} sm={8} xs={8}>
+          <Col xl={6} lg={6} md={6} sm={8} xs={8}>
             <p
               className={cx({
                 'contrast-text': !whiteText,
@@ -60,36 +60,55 @@ const Header = ({
             )}
           </Col>
           <Visible xxl xl lg>
-            <Col xl={1} lg={2}>
+            <Col xxl={1} xl={1} lg={1}>
               <span className="hover:opacity-70 transition-all">
                 <p
                   className={cx('cursor-pointer float-left', {
                     'contrast-text': !whiteText,
                     'text-white': whiteText,
                     [colourBackgroundClass]: pageId === 'event',
-                    transparent: pageId === 'editors-note',
-                    'opacity-40': pageId === 'intro' && currentYear === '2020',
-                    'pointer-events-none': pageId === 'thematic-threads'
+                    transparent:
+                      pageId === 'editors-note' ||
+                      pageId === 'thematic-threads',
+                    'pointer-events-none': pageId === 'index' // no pointer events if already on index page
                   })}
-                  onClick={() => navigateToUrl('thematic-threads')}
+                  onClick={() => navigateToUrl('index')}
                 >
-                  Thematic&nbsp;Threads
+                  Index
                 </p>
               </span>
             </Col>
-            <Col xl={1} lg={2}>
+            <Col xxl={1} xl={1} lg={1}>
               <span className="hover:opacity-70 transition-all">
                 <p
-                  className={cx('cursor-pointer float-right', {
+                  className={cx('cursor-pointer float-left', {
                     'contrast-text': !whiteText,
                     'text-white': whiteText,
                     [colourBackgroundClass]: pageId === 'event',
-                    transparent: pageId === 'thematic-threads',
-                    'pointer-events-none': pageId === 'editors-note'
+                    transparent:
+                      pageId === 'editors-note' || pageId === 'index',
+                    'pointer-events-none': pageId === 'thematic-threads' // no pointer events if already on threads page
+                  })}
+                  onClick={() => navigateToUrl('thematic-threads')}
+                >
+                  Threads
+                </p>
+              </span>
+            </Col>
+            <Col xxl={1} xl={1} lg={1}>
+              <span className="hover:opacity-70 transition-all">
+                <p
+                  className={cx('cursor-pointer float-left', {
+                    'contrast-text': !whiteText,
+                    'text-white': whiteText,
+                    [colourBackgroundClass]: pageId === 'event',
+                    transparent:
+                      pageId === 'thematic-threads' || pageId === 'index',
+                    'pointer-events-none': pageId === 'editors-note' // no pointer events if already on editor's note page
                   })}
                   onClick={() => navigateToUrl('editors-note')}
                 >
-                  Editor&apos;s&nbsp;Note
+                  Info
                 </p>
               </span>
             </Col>
