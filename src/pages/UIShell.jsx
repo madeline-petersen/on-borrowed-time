@@ -130,8 +130,8 @@ const UIShell = props => {
     'event',
     'artifacts',
     'reflection',
-    'thematic-threads',
-    'editors-note'
+    'threads',
+    'info'
   ];
 
   const pagesWithTimeline = [
@@ -175,7 +175,7 @@ const UIShell = props => {
     } ${mixBlendMode}`;
   }
 
-  if (props.pageId === 'editors-note') {
+  if (props.pageId === 'info') {
     timelineClasses = 'contrast-text bg-blue-70 mix-blend-screen';
   }
   let pageComponent;
@@ -237,14 +237,14 @@ const UIShell = props => {
         />
       );
       break;
-    case 'thematic-threads':
+    case 'threads':
       pageComponent = (
         <ThematicThreads
           currentBgColour={thematicThreadsBgWhite ? 'white' : 'black'}
         />
       );
       break;
-    case 'editors-note':
+    case 'info':
       pageComponent = <EditorsNote />;
       break;
     case 'index':

@@ -16,7 +16,7 @@ import { Helmet } from 'react-helmet';
 import ReactHtmlParser from 'react-html-parser';
 import { useHistory } from 'react-router-dom';
 
-import data from '../data/thematic-threads.json';
+import data from '../data/threads.json';
 
 const ThematicThreads = ({ currentBgColour }) => {
   let history = useHistory();
@@ -329,7 +329,7 @@ const ThematicThreads = ({ currentBgColour }) => {
         render={({ state, fullpageApi }) => {
           return (
             <div
-              className={`section thematic-threads h-auto black-white-background thematic-threads-fade-in ${currentBgColour}`}
+              className={`section threads h-auto black-white-background threads-fade-in ${currentBgColour}`}
             >
               <Container className="grid__container">
                 {Page('white')}

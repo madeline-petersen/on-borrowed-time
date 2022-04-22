@@ -55,11 +55,11 @@ function HomeWrapper() {
 }
 
 function EditorsNoteWrapper() {
-  return <UIShell pageId="editors-note" years={data.years} />;
+  return <UIShell pageId="info" years={data.years} />;
 }
 
 function ThematicThreadsWrapper() {
-  return <UIShell pageId="thematic-threads" years={data.years} />;
+  return <UIShell pageId="threads" years={data.years} />;
 }
 
 function IndexWrapper() {
@@ -222,10 +222,10 @@ function App() {
             <Route path="/index">
               <IndexWrapper />
             </Route>
-            <Route path="/editors-note">
+            <Route path="/info">
               <EditorsNoteWrapper />
             </Route>
-            <Route path="/thematic-threads">
+            <Route path="/threads">
               <ThematicThreadsWrapper />
             </Route>
             <Route exact path="/:yearId">

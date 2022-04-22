@@ -52,7 +52,7 @@ const Header = ({
             >
               {ReactHtmlParser(label)}
             </p>
-            {pageId === 'thematic-threads' && (
+            {pageId === 'threads' && (
               <ThematicThreadsToggle
                 setBackgroundColor={setBackgroundColor}
                 thematicThreadsBgWhite={thematicThreadsBgWhite}
@@ -67,9 +67,7 @@ const Header = ({
                     'contrast-text': !whiteText,
                     'text-white': whiteText,
                     [colourBackgroundClass]: pageId === 'event',
-                    transparent:
-                      pageId === 'editors-note' ||
-                      pageId === 'thematic-threads',
+                    transparent: pageId === 'info' || pageId === 'threads',
                     'pointer-events-none': pageId === 'index' // no pointer events if already on index page
                   })}
                   onClick={() => navigateToUrl('index')}
@@ -85,11 +83,10 @@ const Header = ({
                     'contrast-text': !whiteText,
                     'text-white': whiteText,
                     [colourBackgroundClass]: pageId === 'event',
-                    transparent:
-                      pageId === 'editors-note' || pageId === 'index',
-                    'pointer-events-none': pageId === 'thematic-threads' // no pointer events if already on threads page
+                    transparent: pageId === 'info' || pageId === 'index',
+                    'pointer-events-none': pageId === 'threads' // no pointer events if already on threads page
                   })}
-                  onClick={() => navigateToUrl('thematic-threads')}
+                  onClick={() => navigateToUrl('threads')}
                 >
                   Threads
                 </p>
@@ -102,11 +99,10 @@ const Header = ({
                     'contrast-text': !whiteText,
                     'text-white': whiteText,
                     [colourBackgroundClass]: pageId === 'event',
-                    transparent:
-                      pageId === 'thematic-threads' || pageId === 'index',
-                    'pointer-events-none': pageId === 'editors-note' // no pointer events if already on editor's note page
+                    transparent: pageId === 'threads' || pageId === 'index',
+                    'pointer-events-none': pageId === 'info' // no pointer events if already on editor's note page
                   })}
-                  onClick={() => navigateToUrl('editors-note')}
+                  onClick={() => navigateToUrl('info')}
                 >
                   Info
                 </p>
