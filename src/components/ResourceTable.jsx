@@ -3,7 +3,7 @@ import './ResourceTable.scss';
 import { ArrowUpRight16 } from '@carbon/icons-react';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
-import { Col, Row } from 'react-grid-system';
+import { Col, Hidden, Row } from 'react-grid-system';
 import ReactHtmlParser from 'react-html-parser';
 
 const ResourceTable = ({
@@ -14,7 +14,7 @@ const ResourceTable = ({
   textColourClass,
   borderColourClass,
   setOnClicks,
-  fullWidth
+  width
 }) => {
   let themeTextClass = 'text-black';
   let themeBorderClass = 'border-black';
@@ -36,76 +36,137 @@ const ResourceTable = ({
     setOnClicks();
   }, []);
 
-  let columns = fullWidth ? [1, 11, 5, 4] : [3, 9, 4, 3];
+  const columnsDefault = {
+    gutterLeft: {
+      lg: 3,
+      md: 2,
+      sm: 0
+    },
+    tableWidth: {
+      lg: 9,
+      md: 10,
+      sm: 12
+    },
+    title: {
+      lg: 4,
+      md: 4,
+      sm: 4
+    },
+    publication: {
+      lg: 3,
+      md: 3,
+      sm: 4
+    },
+    author: {
+      lg: 2,
+      md: 3,
+      sm: 4
+    }
+  };
+
+  const columnsFull = {
+    gutterLeft: {
+      lg: 1,
+      md: 2,
+      sm: 0
+    },
+    tableWidth: {
+      lg: 11,
+      md: 10,
+      sm: 12
+    },
+    title: {
+      lg: 5,
+      md: 4,
+      sm: 4
+    },
+    publication: {
+      lg: 4,
+      md: 3,
+      sm: 4
+    },
+    author: {
+      lg: 2,
+      md: 3,
+      sm: 4
+    }
+  };
+
+  const columns = width === 'full' ? columnsFull : columnsDefault;
 
   return (
     <>
       {data.map((entry, index) => {
         return (
           <Row
-            className="grid__row resource-table-row transition-all cursor-pointer"
+            className="grid__row resource-table-row transition-all cursor-pointer madeline"
             key={`table-row-${index}`}
             onClick={() => openModal(entry)}
           >
             <>
-              <Col lg={columns[0]} md={2} />
-              <Col lg={columns[1]} md={10}>
+              <Col {...columns.gutterLeft} />
+              <Col {...columns.tableWidth}>
                 <p
                   className={`md:-ml-8 border-t ${themeBorderClass} border-opacity-10 pt-4 fade-second`}
                 />
               </Col>
             </>
 
-            <Col lg={columns[0]} md={2} />
-            <Col lg={columns[2]} md={4} sm={4} xs={12} className="small-body">
-              <p
-                className={`${themeTextClass} text-opacity-100 flex fade-second`}
+            <>
+              <Hidden sm>
+                <Col {...columns.gutterLeft} />
+              </Hidden>
+              <Col {...columns.title} className="small-body">
+                <p
+                  className={`${themeTextClass} text-opacity-100 flex fade-second`}
+                >
+                  {index < matches.length && (
+                    <span className="absolute md:-ml-8">{index + 1}</span>
+                  )}
+                  <div className="sm:ml-8 md:ml-0">
+                    {ReactHtmlParser(entry.shortTitle)}
+                  </div>
+                  {!entry.content && (
+                    <ArrowUpRight16 className="inline-block ml-1" />
+                  )}
+                </p>
+              </Col>
+
+              {/* publication */}
+              <Col {...columns.publication} className="small-body">
+                <p
+                  className={`${themeTextClass} resource-title text-opacity-70 fade-second`}
+                >
+                  {ReactHtmlParser(
+                    `${entry.bookTitle ? entry.bookTitle : entry.publication}`
+                  )}
+                </p>
+              </Col>
+
+              {/* author, date */}
+              <Col
+                {...columns.author}
+                className="small-body flex justify-between"
               >
-                {index < matches.length && (
-                  <span className="absolute md:-ml-8">{index + 1}</span>
-                )}
-                <div className="sm:ml-8 md:ml-0">
-                  {ReactHtmlParser(entry.shortTitle)}
-                </div>
-                {!entry.content && (
-                  <ArrowUpRight16 className="inline-block ml-1" />
-                )}
-              </p>
-            </Col>
-            <Col lg={columns[3]} md={3} sm={4} xs={12} className="small-body">
-              <p
-                className={`${themeTextClass} resource-title text-opacity-70 fade-second`}
-              >
-                {ReactHtmlParser(
-                  `${entry.bookTitle ? entry.bookTitle : entry.publication}`
-                )}
-              </p>
-            </Col>
-            <Col
-              lg={2}
-              md={3}
-              sm={4}
-              xs={12}
-              className="small-body flex justify-between"
-            >
-              <p
-                className={`${themeTextClass} entry-type text-opacity-70 fade-second`}
-              >
-                {[
-                  'Journal Excerpt',
-                  'Article Excerpt',
-                  'Book Excerpt',
-                  'Report Excerpt'
-                ].includes(entry.type)
-                  ? entry.publication
-                  : entry.type}
-              </p>
-              <p className={`${themeTextClass} text-opacity-70 fade-second`}>
-                {entry.year}
-              </p>
-            </Col>
-            <Col lg={3} md={2} />
-            <Col lg={9} md={10} className="pb-8" />
+                <p
+                  className={`${themeTextClass} entry-type text-opacity-70 fade-second`}
+                >
+                  {[
+                    'Journal Excerpt',
+                    'Article Excerpt',
+                    'Book Excerpt',
+                    'Report Excerpt'
+                  ].includes(entry.type)
+                    ? entry.publication
+                    : entry.type}
+                </p>
+                <p className={`${themeTextClass} text-opacity-70 fade-second`}>
+                  {entry.year}
+                </p>
+              </Col>
+            </>
+
+            <Col lg={12} className="pb-8" />
           </Row>
         );
       })}
@@ -125,7 +186,7 @@ ResourceTable.propTypes = {
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
   setOnClicks: PropTypes.func,
-  fullWidth: PropTypes.bool
+  width: PropTypes.bool
 };
 
 export default ResourceTable;

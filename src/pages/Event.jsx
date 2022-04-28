@@ -266,7 +266,7 @@ const Event = ({
                                   setOnClicks={() =>
                                     setOnClicks(sectionId, sectionIndex)
                                   }
-                                  fullWidth={true}
+                                  width="full"
                                 />
                               </Container>
                               <Container className="grid__container">
@@ -379,7 +379,6 @@ const Event = ({
                             textColourClass={textColourClass}
                             borderColourClass={borderColourClass}
                             setOnClicks={() => setOnClicks('event-paragraphs')}
-                            fullWidth={false}
                           />
                         </Container>
 
