@@ -1,0 +1,8 @@
+/* breakpoints: [375, 756, 1056, 1440, 1800], */
+@import '../App.scss';
+
+.Index {
+  div {
+    @extend .small-headline;
+  }
+}
