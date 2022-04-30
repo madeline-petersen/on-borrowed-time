@@ -201,6 +201,7 @@ const ResourceTable = ({
                   <p
                     className={`md:-ml-8 ${width === 'max' &&
                       index === 0 &&
+                      'border-t'} ${width !== 'max' &&
                       'border-t'} ${themeBorderClass} border-opacity-10 pt-4 fade-second`}
                   />
                 </Col>
