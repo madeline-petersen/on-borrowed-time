@@ -187,97 +187,97 @@ const ResourceTable = ({
         </Row>
       )}
 
-      {data.data.map((entry, index) => {
-        return (
-          <Row
-            className="grid__row resource-table-row transition-all cursor-pointer"
-            key={`table-row-${index}`}
-            onClick={() => openModal(entry)}
-          >
-            <>
-              {width !== 'max' && <Col {...columns.gutterLeft} />}
-              <Col {...columns.tableWidth}>
-                <p
-                  className={`md:-ml-8 ${width === 'max' &&
-                    index === 0 &&
-                    'border-t'} ${themeBorderClass} border-opacity-10 pt-4 fade-second`}
-                />
-              </Col>
-            </>
-
-            <>
-              {width === 'max' && (
+      {data.map(section => {
+        return section.resources.map((entry, index) => {
+          return (
+            <Row
+              className="grid__row resource-table-row transition-all cursor-pointer"
+              key={`table-row-${index}`}
+              onClick={() => openModal(entry)}
+            >
+              <>
+                {width !== 'max' && <Col {...columns.gutterLeft} />}
                 <Col {...columns.tableWidth}>
                   <p
-                    className={`md:-ml-8 ${width !== 'max' &&
+                    className={`md:-ml-8 ${width === 'max' &&
+                      index === 0 &&
                       'border-t'} ${themeBorderClass} border-opacity-10 pt-4 fade-second`}
                   />
                 </Col>
-              )}
+              </>
 
-              <Hidden sm>
-                {width !== 'max' && <Col {...columns.gutterLeft} />}
-              </Hidden>
+              <>
+                <Hidden sm>
+                  {width !== 'max' && <Col {...columns.gutterLeft} />}
+                </Hidden>
 
-              {width === 'max' && (
-                <Col {...columns.section} className="small-headline">
-                  {index === 0 && <p>{data.section}</p>}
+                {width === 'max' && (
+                  <Col {...columns.section} className="small-headline">
+                    {index === 0 && (
+                      <p>
+                        {section.sectionTitle}(
+                        {ReactHtmlParser(section.resources.length)})
+                      </p>
+                    )}
+                  </Col>
+                )}
+
+                <Col {...columns.title} className="small-body">
+                  <p
+                    className={`${themeTextClass} text-opacity-100 flex fade-second`}
+                  >
+                    {index < matches.length && (
+                      <span className="absolute md:-ml-8">{index + 1}</span>
+                    )}
+                    <div className="sm:ml-8 md:ml-0">
+                      {ReactHtmlParser(entry.shortTitle)}
+                    </div>
+                    {!entry.content && (
+                      <ArrowUpRight16 className="inline-block ml-1" />
+                    )}
+                  </p>
                 </Col>
-              )}
 
-              <Col {...columns.title} className="small-body">
-                <p
-                  className={`${themeTextClass} text-opacity-100 flex fade-second`}
+                {/* publication */}
+                <Col {...columns.publication} className="small-body">
+                  <p
+                    className={`${themeTextClass} resource-title text-opacity-70 fade-second`}
+                  >
+                    {ReactHtmlParser(
+                      `${entry.bookTitle ? entry.bookTitle : entry.publication}`
+                    )}
+                  </p>
+                </Col>
+
+                {/* author, date */}
+                <Col
+                  {...columns.author}
+                  className="small-body flex justify-between"
                 >
-                  {index < matches.length && (
-                    <span className="absolute md:-ml-8">{index + 1}</span>
-                  )}
-                  <div className="sm:ml-8 md:ml-0">
-                    {ReactHtmlParser(entry.shortTitle)}
-                  </div>
-                  {!entry.content && (
-                    <ArrowUpRight16 className="inline-block ml-1" />
-                  )}
-                </p>
-              </Col>
+                  <p
+                    className={`${themeTextClass} entry-type text-opacity-70 fade-second`}
+                  >
+                    {[
+                      'Journal Excerpt',
+                      'Article Excerpt',
+                      'Book Excerpt',
+                      'Report Excerpt'
+                    ].includes(entry.type)
+                      ? entry.publication
+                      : entry.type}
+                  </p>
+                  <p
+                    className={`${themeTextClass} text-opacity-70 fade-second`}
+                  >
+                    {entry.year}
+                  </p>
+                </Col>
+              </>
 
-              {/* publication */}
-              <Col {...columns.publication} className="small-body">
-                <p
-                  className={`${themeTextClass} resource-title text-opacity-70 fade-second`}
-                >
-                  {ReactHtmlParser(
-                    `${entry.bookTitle ? entry.bookTitle : entry.publication}`
-                  )}
-                </p>
-              </Col>
-
-              {/* author, date */}
-              <Col
-                {...columns.author}
-                className="small-body flex justify-between"
-              >
-                <p
-                  className={`${themeTextClass} entry-type text-opacity-70 fade-second`}
-                >
-                  {[
-                    'Journal Excerpt',
-                    'Article Excerpt',
-                    'Book Excerpt',
-                    'Report Excerpt'
-                  ].includes(entry.type)
-                    ? entry.publication
-                    : entry.type}
-                </p>
-                <p className={`${themeTextClass} text-opacity-70 fade-second`}>
-                  {entry.year}
-                </p>
-              </Col>
-            </>
-
-            <Col lg={12} className="pb-8" />
-          </Row>
-        );
+              <Col lg={12} className="pb-8" />
+            </Row>
+          );
+        });
       })}
     </>
   );
