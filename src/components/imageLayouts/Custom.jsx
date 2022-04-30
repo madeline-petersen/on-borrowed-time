@@ -1,7 +1,7 @@
+import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Row } from 'react-grid-system';
-import ReactHtmlParser from 'react-html-parser';
 
 const Custom = ({ images }) => {
   const getMargin = (image, index) => {
@@ -33,7 +33,7 @@ const Custom = ({ images }) => {
             <Col lg={3} />
             <Col lg={4} md={4}>
               <p className={`small-body text-white mt-8 fade-in-element`}>
-                {ReactHtmlParser(image.caption)}
+                {parse(image.caption)}
               </p>
             </Col>
           </Row>
@@ -53,7 +53,7 @@ const Custom = ({ images }) => {
             <Col lg={3} />
             <Col lg={4} md={4}>
               <p className={`small-body text-white mt-5 fade-in-element`}>
-                {ReactHtmlParser(image.caption)}
+                {parse(image.caption)}
               </p>
             </Col>
           </Row>

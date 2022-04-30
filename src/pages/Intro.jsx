@@ -1,10 +1,10 @@
 import './Intro.scss';
 
 import ReactFullpage from '@fullpage/react-fullpage';
+import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-grid-system';
-import ReactHtmlParser from 'react-html-parser';
 
 import Footer from '../components/Footer';
 
@@ -59,9 +59,7 @@ const Intro = ({
                         <Row className="grid__row">
                           <Col lg={5} />
                           <Col lg={7}>
-                            <p className="fade-first">
-                              {ReactHtmlParser(year.blurb)}
-                            </p>
+                            <p className="fade-first">{parse(year.blurb)}</p>
                           </Col>
                         </Row>
                       </Container>

@@ -1,10 +1,10 @@
 import './Footer.scss';
 
 import { ArrowDown16, ArrowRight16 } from '@carbon/icons-react';
+import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Row } from 'react-grid-system';
-import ReactHtmlParser from 'react-html-parser';
 
 const Footer = ({
   // action on click footer
@@ -43,13 +43,13 @@ const Footer = ({
             {/* current scene number, next scene number, or next year */}
             {changingParam === 'year'
               ? nextParams.year
-              : ReactHtmlParser(`Scene&nbsp;${nextParams.scene}`)}
+              : parse(`Scene&nbsp;${nextParams.scene}`)}
           </p>
         </Col>
         <Col lg={2} md={2} sm={2} xs={2}>
           <p className={textClasses}>
             {/* next page, next scene, or next year */}
-            {ReactHtmlParser(next.title)}
+            {parse(next.title)}
           </p>
         </Col>
         <Col lg={7} md={7} sm={7} xs={7} className="flex justify-end">

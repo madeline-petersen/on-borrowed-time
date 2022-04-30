@@ -3,11 +3,11 @@ import './Reflection.scss';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
 import ReactFullpage from '@fullpage/react-fullpage';
+import parse from 'html-react-parser';
 import { throttle } from 'lodash';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'react-grid-system';
-import ReactHtmlParser from 'react-html-parser';
 
 import HiddenFooter from '../components/HiddenFooter';
 
@@ -91,7 +91,7 @@ const Reflection = ({
                                 <Col lg={1} />
                                 <Col lg={11} md={12}>
                                   <p className="medium-headline text-white fade-first">
-                                    {ReactHtmlParser(paragraph)}
+                                    {parse(paragraph)}
                                   </p>
                                   <br />
                                   <br />
@@ -111,7 +111,7 @@ const Reflection = ({
                                   <p
                                     className={`medium-body text-white text-opacity-70 fade-second`}
                                   >
-                                    {ReactHtmlParser(paragraph)}
+                                    {parse(paragraph)}
                                     <br />
                                     <br />
                                   </p>
@@ -139,7 +139,7 @@ const Reflection = ({
                                 >
                                   <p className="flex mb-4 fade-second flex-start">
                                     <span>
-                                      {ReactHtmlParser(text)}
+                                      {parse(text)}
                                       {linkTo && (
                                         <ArrowUpRight16 className="link-to inline-block ml-1" />
                                       )}

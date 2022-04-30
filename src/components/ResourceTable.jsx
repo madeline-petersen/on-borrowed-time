@@ -1,10 +1,10 @@
 import './ResourceTable.scss';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
+import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { Col, Hidden, Row } from 'react-grid-system';
-import ReactHtmlParser from 'react-html-parser';
 
 const ResourceTable = ({
   theme,
@@ -216,8 +216,8 @@ const ResourceTable = ({
                   <Col {...columns.section} className="small-headline">
                     {index === 0 && (
                       <p>
-                        {section.sectionTitle}(
-                        {ReactHtmlParser(section.resources.length)})
+                        {section.sectionTitle}({parse(section.resources.length)}
+                        )
                       </p>
                     )}
                   </Col>
@@ -231,7 +231,7 @@ const ResourceTable = ({
                       <span className="absolute md:-ml-8">{index + 1}</span>
                     )}
                     <div className="sm:ml-8 md:ml-0">
-                      {ReactHtmlParser(entry.shortTitle)}
+                      {parse(entry.shortTitle)}
                     </div>
                     {!entry.content && (
                       <ArrowUpRight16 className="inline-block ml-1" />
@@ -244,7 +244,7 @@ const ResourceTable = ({
                   <p
                     className={`${themeTextClass} resource-title text-opacity-70 fade-second`}
                   >
-                    {ReactHtmlParser(
+                    {parse(
                       `${entry.bookTitle ? entry.bookTitle : entry.publication}`
                     )}
                   </p>

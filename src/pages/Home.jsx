@@ -2,11 +2,11 @@ import './Home.scss';
 
 import { ArrowDown20 } from '@carbon/icons-react';
 import ReactFullpage from '@fullpage/react-fullpage';
+import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
-import ReactHtmlParser from 'react-html-parser';
 
 const pluginWrapper = () => {
   require('./static/fullpage.parallax.min.js');
@@ -104,7 +104,7 @@ const Home = ({ years, hash, setHash, setTransitionType, navigateTo }) => {
                             className="title title__english"
                             key={`english-${year.id}`}
                           >
-                            {ReactHtmlParser(year.title)}
+                            {parse(year.title)}
                           </Col>
                           <Col
                             lg={3}

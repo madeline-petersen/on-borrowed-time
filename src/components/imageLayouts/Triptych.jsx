@@ -1,7 +1,7 @@
+import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Row, Visible } from 'react-grid-system';
-import ReactHtmlParser from 'react-html-parser';
 
 const Triptych = ({ images }) => {
   return (
@@ -22,7 +22,7 @@ const Triptych = ({ images }) => {
               }}
             />
             <p className={`small-body mt-2.5 mb-9 text-white fade-in-element`}>
-              {ReactHtmlParser(image.caption)}
+              {parse(image.caption)}
             </p>
           </Col>
           <Visible md sm xs>

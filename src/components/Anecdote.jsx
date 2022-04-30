@@ -1,10 +1,10 @@
 import './Anecdote.scss';
 
 import { Close20 } from '@carbon/icons-react';
+import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Container, Row, Visible } from 'react-grid-system';
-import ReactHtmlParser from 'react-html-parser';
 
 const Anecdote = ({
   type,
@@ -109,9 +109,7 @@ const Anecdote = ({
                   <Col lg={7} md={7} sm={9} xs={9} className="pt-8">
                     <div className="bg-white z-30 pt-8 anecdote-fixed-header">
                       <div className="small-body text-gray-90 mb-8">
-                        {shortTitle !== title
-                          ? ReactHtmlParser(shortTitle)
-                          : ''}
+                        {shortTitle !== title ? parse(shortTitle) : ''}
                       </div>
                     </div>
                   </Col>
@@ -121,10 +119,10 @@ const Anecdote = ({
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={7} md={7} sm={9} xs={9} className="anecdote-content">
                     <div className="large-headline-static mb-4">
-                      {ReactHtmlParser(title)}
+                      {parse(title)}
                     </div>
                     <div className="small-headline text-gray-90 md:mb-16 sm:mb-12">
-                      {ReactHtmlParser(author)}
+                      {parse(author)}
                       {publication && `, ${publication}`}
                       {year && `, ${year}`}
                     </div>
@@ -137,7 +135,7 @@ const Anecdote = ({
                     <>
                       {preamble && (
                         <div className="small-body text-gray-90">
-                          {ReactHtmlParser(preamble)}
+                          {parse(preamble)}
                         </div>
                       )}
                       {content &&
@@ -147,7 +145,7 @@ const Anecdote = ({
                               className="medium-body text-gray-90"
                               key={`paragraph-${index}`}
                             >
-                              {ReactHtmlParser(paragraph)}
+                              {parse(paragraph)}
                               <br />
                             </div>
                           );
@@ -156,7 +154,7 @@ const Anecdote = ({
                       <p className="border-t border-black border-opacity-10 pb-5" />
                       {postamble && (
                         <div className="small-body text-gray-90 mb-8">
-                          {ReactHtmlParser(postamble)}
+                          {parse(postamble)}
                         </div>
                       )}
                       <a
@@ -165,7 +163,7 @@ const Anecdote = ({
                         href={linkTo}
                       >
                         <p className="small-body text-black text-opacity-60 hover:text-opacity-100 transition-all">
-                          {ReactHtmlParser(citation)}
+                          {parse(citation)}
                         </p>
                       </a>
                       <div className="bottom-spacer" />
@@ -182,9 +180,7 @@ const Anecdote = ({
                   <Col lg={6} md={7} sm={9} xs={9} className="pt-8">
                     <div className="bg-white z-30 pt-8 anecdote-fixed-header">
                       <div className="small-body text-gray-90 mb-8">
-                        {shortTitle !== title
-                          ? ReactHtmlParser(shortTitle)
-                          : ''}
+                        {shortTitle !== title ? parse(shortTitle) : ''}
                       </div>
                     </div>
                   </Col>
@@ -194,16 +190,16 @@ const Anecdote = ({
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={6} md={7} sm={9} xs={9} className="anecdote-content">
                     <div className="large-headline-static mb-4">
-                      {ReactHtmlParser(title)}
+                      {parse(title)}
                     </div>
                     <div className="small-headline text-gray-90 md:mb-16 sm:mb-12">
-                      {ReactHtmlParser(author)}
+                      {parse(author)}
                       {publication && `, ${publication}`}
                       {year && `, ${year}`}
                     </div>
                     {preamble && (
                       <div className="small-body text-gray-90 mb-16">
-                        {ReactHtmlParser(preamble)}
+                        {parse(preamble)}
                       </div>
                     )}
                   </Col>
@@ -229,12 +225,12 @@ const Anecdote = ({
                     <p className="border-t border-black border-opacity-10 pb-5" />
                     {postamble && (
                       <div className="small-body text-gray-90 mb-8">
-                        {ReactHtmlParser(postamble)}
+                        {parse(postamble)}
                       </div>
                     )}
                     <a target="_blank" rel="noopener noreferrer" href={linkTo}>
                       <p className="small-body text-black text-opacity-60 hover:text-opacity-100 transition-all">
-                        {ReactHtmlParser(citation)}
+                        {parse(citation)}
                       </p>
                     </a>
                     <div className="bottom-spacer" />
@@ -250,9 +246,7 @@ const Anecdote = ({
                   <Col lg={5} md={7} sm={9} xs={9}>
                     <div className="bg-white z-30 pt-8 anecdote-fixed-header">
                       <div className="small-body text-gray-90 mb-8">
-                        {shortTitle !== title
-                          ? ReactHtmlParser(shortTitle)
-                          : ''}
+                        {shortTitle !== title ? parse(shortTitle) : ''}
                       </div>
                     </div>
                   </Col>
@@ -264,10 +258,10 @@ const Anecdote = ({
                   <Col lg={1} md={2} sm={1} xs={1} />
                   <Col lg={5} md={7} sm={9} xs={9} className="anecdote-content">
                     <div className="large-headline-static mb-4">
-                      {ReactHtmlParser(title)}
+                      {parse(title)}
                     </div>
                     <div className="small-headline text-gray-90 md:mb-16 sm:mb-12">
-                      {ReactHtmlParser(author)}
+                      {parse(author)}
                       {publication && `, ${publication}`}
                       {year && `, ${year}`}
                     </div>
@@ -278,7 +272,7 @@ const Anecdote = ({
                             className="medium-body text-gray-90"
                             key={`paragraph-${index}`}
                           >
-                            {ReactHtmlParser(paragraph)}
+                            {parse(paragraph)}
                             <br />
                           </div>
                         );
@@ -287,12 +281,12 @@ const Anecdote = ({
                     <p className="border-t border-black border-opacity-10 pb-5" />
                     {postamble && (
                       <div className="small-body text-gray-90 mb-8">
-                        {ReactHtmlParser(postamble)}
+                        {parse(postamble)}
                       </div>
                     )}
                     <a target="_blank" rel="noopener noreferrer" href={linkTo}>
                       <p className="small-body text-black text-opacity-60 hover:text-opacity-100 transition-all">
-                        {ReactHtmlParser(citation)}
+                        {parse(citation)}
                       </p>
                     </a>
                     <div className="bottom-spacer" />

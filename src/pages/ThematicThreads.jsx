@@ -2,6 +2,7 @@ import './ThematicThreads.scss';
 import 'fullpage.js/vendors/scrolloverflow';
 
 import ReactFullpage from '@fullpage/react-fullpage';
+import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
@@ -13,7 +14,6 @@ import {
   Visible
 } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
-import ReactHtmlParser from 'react-html-parser';
 import { useHistory } from 'react-router-dom';
 
 import data from '../data/threads.json';
@@ -235,7 +235,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                 <div
                   className={`thematic-thread-headline ${textColourClass} cursor-pointer pt-9 pb-5`}
                 >
-                  {ReactHtmlParser(thread.title)}
+                  {parse(thread.title)}
                   <Hidden sm xs>
                     <div
                       className="small-body self-center absolute transition-all"
@@ -249,7 +249,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                           : '0px'
                       }}
                     >
-                      {ReactHtmlParser(thread.blurb)}
+                      {parse(thread.blurb)}
                     </div>
                   </Hidden>
                 </div>
@@ -275,7 +275,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                         navigateTo(subtitle.year, subtitle.romanSceneNumber)
                       }
                     >
-                      {ReactHtmlParser(subtitle.year)}
+                      {parse(subtitle.year)}
                       <div
                         className="subtitle__title absolute left-0"
                         style={{
@@ -283,7 +283,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                           paddingLeft: '0.5rem'
                         }}
                       >
-                        {ReactHtmlParser(subtitle.title)}
+                        {parse(subtitle.title)}
                       </div>
                       <div
                         className="small-body self-center absolute left-0 transition-all"
@@ -292,9 +292,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                           paddingLeft: '0.5rem'
                         }}
                       >
-                        {ReactHtmlParser(
-                          `Scene&nbsp;${subtitle.romanSceneNumber}`
-                        )}
+                        {parse(`Scene&nbsp;${subtitle.romanSceneNumber}`)}
                       </div>
                     </div>
                   );

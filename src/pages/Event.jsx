@@ -2,11 +2,11 @@ import './Event.scss';
 import 'fullpage.js/vendors/scrolloverflow';
 
 import ReactFullpage from '@fullpage/react-fullpage';
+import parse from 'html-react-parser';
 import { throttle } from 'lodash';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row, useScreenClass } from 'react-grid-system';
-import ReactHtmlParser from 'react-html-parser';
 
 import HiddenFooter from '../components/HiddenFooter';
 import ResourceTable from '../components/ResourceTable';
@@ -169,7 +169,7 @@ const Event = ({
                                       className={`large-headline-dynamic text-white fade-first`}
                                       style={{ textIndent: getTextIndent() }}
                                     >
-                                      {ReactHtmlParser(paragraph)}
+                                      {parse(paragraph)}
                                       <br />
                                       <br />
                                     </p>
@@ -223,7 +223,7 @@ const Event = ({
                                             <p
                                               className={`small-headline fade-first`}
                                             >
-                                              {ReactHtmlParser(paragraph)}
+                                              {parse(paragraph)}
                                             </p>
                                             <br />
                                           </Col>
@@ -244,7 +244,7 @@ const Event = ({
                                             <p
                                               className={`small-body-2 fade-first`}
                                             >
-                                              {ReactHtmlParser(paragraph)}
+                                              {parse(paragraph)}
                                             </p>
                                             <br />
                                           </Col>
@@ -288,7 +288,7 @@ const Event = ({
                                       <p
                                         className={`small-body text-white mt-8 fade-first text-opacity-70`}
                                       >
-                                        {ReactHtmlParser(section.image.caption)}
+                                        {parse(section.image.caption)}
                                       </p>
                                     </Col>
                                   </Row>
@@ -361,7 +361,7 @@ const Event = ({
                                       className="large-headline-dynamic fade-first"
                                       style={{ textIndent: getTextIndent() }}
                                     >
-                                      {ReactHtmlParser(paragraph)}
+                                      {parse(paragraph)}
                                       <br />
                                       <br />
                                     </p>

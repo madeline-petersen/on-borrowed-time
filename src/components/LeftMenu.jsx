@@ -1,10 +1,10 @@
 import './LeftMenu.scss';
 
 import { roman } from '@sguest/roman-js';
+import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Container, Row, Visible } from 'react-grid-system';
-import ReactHtmlParser from 'react-html-parser';
 import { useHistory } from 'react-router-dom';
 
 const LeftMenu = ({
@@ -136,7 +136,7 @@ const LeftMenu = ({
                             {/* 3/4 of 4 columns */}
                             <Col lg={9} md={9} sm={10} xs={10}>
                               <div className="medium-body text-white">
-                                {ReactHtmlParser(year.title)}
+                                {parse(year.title)}
                               </div>
                             </Col>
                           </Row>
@@ -222,8 +222,7 @@ const LeftMenu = ({
                         <Col lg={3} md={3} sm={2} xs={2} />
                         <Col lg={9} md={9} sm={10} xs={10}>
                           <div className="pb-10 pr-12">
-                            {selectedYear &&
-                              ReactHtmlParser(selectedYear.description)}
+                            {selectedYear && parse(selectedYear.description)}
                           </div>
                         </Col>
                       </Row>
@@ -248,7 +247,7 @@ const LeftMenu = ({
                                 </div>
                               </Col>
                               <Col lg={9} md={9} sm={10} xs={10}>
-                                <div>{ReactHtmlParser(scene.title)}</div>
+                                <div>{parse(scene.title)}</div>
                               </Col>
                               <Col lg={11} md={11} sm={11} xs={11}>
                                 <p className="pb-8" />

@@ -1,10 +1,10 @@
 import './HiddenFooter.scss';
 
 import { ArrowDown16, ArrowRight16 } from '@carbon/icons-react';
+import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Container, Row } from 'react-grid-system';
-import ReactHtmlParser from 'react-html-parser';
 
 const HiddenFooter = ({
   // used to determine navigation and labels
@@ -46,13 +46,13 @@ const HiddenFooter = ({
             {/* current scene, next scene, next year */}
             {changingParam === 'year'
               ? nextParams.year
-              : ReactHtmlParser(`Scene&nbsp;${nextParams.scene}`)}
+              : parse(`Scene&nbsp;${nextParams.scene}`)}
           </p>
         </Col>
         <Col lg={2} md={2} sm={2} xs={2}>
           <p className={`small-body pb-4 pt-4 ${textClasses}`}>
             {/* next page, next scene, next year */}
-            {ReactHtmlParser(next.title)}
+            {parse(next.title)}
           </p>
         </Col>
         <Col lg={7} md={7} sm={7} xs={7} className="flex justify-end">

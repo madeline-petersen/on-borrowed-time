@@ -2,11 +2,11 @@ import './UIShell.scss';
 
 import { ArrowLeft20, Close20 } from '@carbon/icons-react';
 import cx from 'classnames/bind';
+import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { Visible } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
-import ReactHtmlParser from 'react-html-parser';
 import { Link, useHistory } from 'react-router-dom';
 
 import Anecdote from '../components/Anecdote';
@@ -265,7 +265,7 @@ const UIShell = props => {
   return (
     <>
       <Helmet>
-        <title>{`${ReactHtmlParser(
+        <title>{`${parse(
           props.scene?.title || `${props.year?.id} ${props.year?.title}`
         )} | On Borrowed Time`}</title>
       </Helmet>

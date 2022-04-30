@@ -1,10 +1,10 @@
 import './Header.scss';
 
 import cx from 'classnames/bind';
+import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Container, Row, Visible } from 'react-grid-system';
-import ReactHtmlParser from 'react-html-parser';
 import { useHistory } from 'react-router-dom';
 
 import ThematicThreadsToggle from './ThematicThreadsToggle';
@@ -50,7 +50,7 @@ const Header = ({
               })}
               onClick={() => navigateTo(currentYear)}
             >
-              {ReactHtmlParser(label)}
+              {parse(label)}
             </p>
             {pageId === 'threads' && (
               <ThematicThreadsToggle
@@ -153,7 +153,7 @@ const Header = ({
                   navigateTo(currentYear, romanSceneNumber, 'event')
                 }
               >
-                {ReactHtmlParser(title)}
+                {parse(title)}
               </p>
             )}
           </Col>
