@@ -66,7 +66,7 @@ const Home = ({ years, hash, setHash, setTransitionType, navigateTo }) => {
       </Helmet>
       <div className="h-screen w-screen absolute bg-black z-10" />
       <ReactFullpage
-        licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+        licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
         pluginWrapper={pluginWrapper}
         scrollingSpeed={1000}
         parallax={true}
