@@ -1,5 +1,4 @@
 import './ThematicThreads.scss';
-import 'fullpage.js/vendors/scrolloverflow';
 
 import ReactFullpage from '@fullpage/react-fullpage';
 import parse from 'html-react-parser';

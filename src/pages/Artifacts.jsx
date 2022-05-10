@@ -1,4 +1,3 @@
-import 'fullpage.js/vendors/scrolloverflow';
 import './Artifacts.scss';
 
 import ReactFullpage from '@fullpage/react-fullpage';

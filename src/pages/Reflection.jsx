@@ -1,4 +1,3 @@
-import 'fullpage.js/vendors/scrolloverflow';
 import './Reflection.scss';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';

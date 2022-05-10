@@ -1,5 +1,3 @@
-import 'fullpage.js/vendors/scrolloverflow';
-
 import ReactFullpage from '@fullpage/react-fullpage';
 import PropTypes from 'prop-types';
 import React from 'react';
