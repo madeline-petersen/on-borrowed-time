@@ -139,9 +139,6 @@ const Event = ({
             licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
             scrollingSpeed={1000}
             scrollOverflow={true}
-            scrollOverflowOptions={{
-              preventDefault: false
-            }}
             lazyLoading={false}
             paddingTop={headerHeight}
             render={({ state, fullpageApi }) => {
@@ -322,9 +319,6 @@ const Event = ({
             afterLoad={afterLoad}
             onLeave={throttle(onLeave, 1000)}
             scrollOverflow={true}
-            scrollOverflowOptions={{
-              preventDefault: false
-            }}
             lazyLoading={false}
             paddingTop={headerHeight}
             render={({ state, fullpageApi }) => {

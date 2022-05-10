@@ -16,9 +16,6 @@ const Index = () => {
         licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
         scrollingSpeed={1000}
         scrollOverflow={true}
-        scrollOverflowOptions={{
-          preventDefault: false
-        }}
         paddingTop="78px"
         render={() => {
           return (
