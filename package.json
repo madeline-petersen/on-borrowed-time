@@ -71,7 +71,6 @@
     "postcss": "^7.0.36",
     "prettier": "^1.19.1",
     "sass": "^1.30.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4",
-    "webpack-cli": "^4.9.2"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
   }
 }
