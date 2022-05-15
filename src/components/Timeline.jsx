@@ -117,7 +117,7 @@ const Timeline = props => {
               </span>
 
               <span
-                key="intro"
+                key="intro-circle"
                 className={cx('circle', {
                   'current-scene': currentSceneIndex === 'intro',
                   [colourClasses[year.id]]: isEventPage && !hasLightText,
@@ -126,7 +126,7 @@ const Timeline = props => {
                 })}
               />
               <span
-                key="intro"
+                key="intro-dot"
                 className={cx('circle-container cursor-pointer')}
                 onClick={() => onClickYear(year)}
               >
@@ -200,7 +200,7 @@ const Timeline = props => {
 
 Timeline.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
-  sceneIndex: PropTypes.string,
+  sceneIndex: PropTypes.number,
   pageId: PropTypes.string,
   year: PropTypes.shape(), // current year, expands timeline
   timelineClasses: PropTypes.string,

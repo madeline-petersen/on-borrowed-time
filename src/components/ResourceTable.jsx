@@ -186,7 +186,6 @@ const ResourceTable = ({
           <Col lg={12} className="pb-8" />
         </Row>
       )}
-
       {data.map(section => {
         return section.resources.map((entry, index) => {
           return (

@@ -71,9 +71,11 @@ const Event = ({
       filteredMatches.forEach((match, index) => {
         match.onclick = function() {
           if (year.id === '2020') {
-            openModal(event.sections[sectionIndex].resources[index]);
+            openModal(
+              event.sections[sectionIndex].resources[0].resources[index]
+            );
           } else {
-            openModal(event.resources[index]);
+            openModal(event.resources[0].resources[index]);
           }
         };
       });
@@ -416,7 +418,7 @@ Event.propTypes = {
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
   setAnecdoteData: PropTypes.func,
-  isModalActive: PropTypes.func,
+  isModalActive: PropTypes.bool,
   setIsModalActive: PropTypes.func
 };
 
