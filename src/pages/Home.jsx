@@ -75,7 +75,9 @@ const Home = ({ years, hash, setHash, setTransitionType, navigateTo }) => {
           percentage: 30,
           property: 'translate'
         }}
-        parallaxKey={'aGstb25ib3Jyb3dlZHRpbWUuY29tX1dmR2NHRnlZV3hzWVhnPUV0cg=='}
+        parallaxKey={
+          'T0NhR3N0YjI1aWIzSnliM2RsWkhScGJXVXVZMjl0QU9fYklqY0dGeVlXeHNZWGc9cG5s'
+        }
         continuousVertical={true}
         onLeave={onLeave}
         afterLoad={afterLoad}
