@@ -1,4 +1,3 @@
-import 'fullpage.js/vendors/scrolloverflow';
 import './Reflection.scss';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
@@ -64,14 +63,11 @@ const Reflection = ({
         key={`reflection-${nextParams.year}-${nextParams.scene}-${nextParams.page}`}
       >
         <ReactFullpage
-          licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+          licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
           onLeave={throttle(onLeave, 1000)}
           scrollOverflow={true}
-          scrollOverflowOptions={{
-            preventDefault: false
-          }}
           paddingTop="78px"
           render={({ state, fullpageApi }) => {
             return (

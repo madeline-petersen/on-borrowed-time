@@ -13,12 +13,9 @@ const Index = () => {
         <title>Index | On Borrowed Time</title>
       </Helmet>
       <ReactFullpage
-        licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+        licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
         scrollingSpeed={1000}
         scrollOverflow={true}
-        scrollOverflowOptions={{
-          preventDefault: false
-        }}
         paddingTop="78px"
         render={() => {
           return (

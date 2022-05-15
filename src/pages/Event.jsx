@@ -1,5 +1,4 @@
 import './Event.scss';
-import 'fullpage.js/vendors/scrolloverflow';
 
 import ReactFullpage from '@fullpage/react-fullpage';
 import parse from 'html-react-parser';
@@ -72,9 +71,11 @@ const Event = ({
       filteredMatches.forEach((match, index) => {
         match.onclick = function() {
           if (year.id === '2020') {
-            openModal(event.sections[sectionIndex].resources[index]);
+            openModal(
+              event.sections[sectionIndex].resources[0].resources[index]
+            );
           } else {
-            openModal(event.resources[index]);
+            openModal(event.resources[0].resources[index]);
           }
         };
       });
@@ -137,12 +138,9 @@ const Event = ({
       <>
         <div className="event" key={`event-2020`}>
           <ReactFullpage
-            licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+            licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
             scrollingSpeed={1000}
             scrollOverflow={true}
-            scrollOverflowOptions={{
-              preventDefault: false
-            }}
             lazyLoading={false}
             paddingTop={headerHeight}
             render={({ state, fullpageApi }) => {
@@ -318,14 +316,11 @@ const Event = ({
           key={`event-${nextParams.year}-${nextParams.scene}-${nextParams.page}`}
         >
           <ReactFullpage
-            licenseKey={'518F7C98-E6514A4C-AF78105C-8D322AE9'}
+            licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
             scrollingSpeed={1000}
             afterLoad={afterLoad}
             onLeave={throttle(onLeave, 1000)}
             scrollOverflow={true}
-            scrollOverflowOptions={{
-              preventDefault: false
-            }}
             lazyLoading={false}
             paddingTop={headerHeight}
             render={({ state, fullpageApi }) => {
@@ -423,7 +418,7 @@ Event.propTypes = {
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
   setAnecdoteData: PropTypes.func,
-  isModalActive: PropTypes.func,
+  isModalActive: PropTypes.bool,
   setIsModalActive: PropTypes.func
 };
 

@@ -230,7 +230,7 @@ const LeftMenu = ({
                         {selectedYear &&
                           selectedYear.scenes.map((scene, index) => (
                             <span
-                              key={index}
+                              key={`scene-${index}`}
                               className="contents cursor-pointer"
                               onClick={() =>
                                 onClickScene(selectedYear.id, index)

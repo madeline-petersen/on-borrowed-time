@@ -186,7 +186,6 @@ const ResourceTable = ({
           <Col lg={12} className="pb-8" />
         </Row>
       )}
-
       {data.map(section => {
         return section.resources.map((entry, index) => {
           return (
@@ -216,8 +215,8 @@ const ResourceTable = ({
                   <Col {...columns.section} className="small-headline">
                     {index === 0 && (
                       <p>
-                        {section.sectionTitle}({parse(section.resources.length)}
-                        )
+                        {section.sectionTitle}(
+                        {parse(section.resources.length.toString())})
                       </p>
                     )}
                   </Col>
