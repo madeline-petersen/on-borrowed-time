@@ -215,8 +215,8 @@ const ResourceTable = ({
                   <Col {...columns.section} className="small-headline">
                     {index === 0 && (
                       <p>
-                        {section.sectionTitle}({parse(section.resources.length)}
-                        )
+                        {section.sectionTitle}(
+                        {parse(section.resources.length.toString())})
                       </p>
                     )}
                   </Col>
