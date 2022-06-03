@@ -4,7 +4,7 @@ import { ArrowUpRight16 } from '@carbon/icons-react';
 import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Col, Row } from 'react-grid-system';
+import { Col, Hidden, Row, Visible } from 'react-grid-system';
 
 const IndexResourceTable = ({
   theme,
@@ -32,7 +32,7 @@ const IndexResourceTable = ({
     section: {
       lg: 3,
       md: 3,
-      sm: 3
+      sm: 12
     },
     gutterLeft: {
       lg: 0,
@@ -47,32 +47,32 @@ const IndexResourceTable = ({
     title: {
       lg: 4,
       md: 4,
-      sm: 4
+      sm: 12
     },
     publication: {
       lg: 3,
       md: 3,
-      sm: 3
+      sm: 12
     },
     author: {
       lg: 2,
       md: 2,
-      sm: 2
+      sm: 12
     }
   };
 
   return (
     <>
-      <Row className="grid__row resource-table-row transition-all cursor-pointer">
-        <>
-          <Col {...columns.tableWidth}>
-            <p
-              className={`md:-ml-8 border-t ${themeBorderClass} border-opacity-50 pt-4 fade-second`}
-            />
-          </Col>
-        </>
+      <Hidden sm xs>
+        <Row className="grid__row resource-table-row transition-all cursor-pointer">
+          <>
+            <Col {...columns.tableWidth}>
+              <p
+                className={`md:-ml-8 border-t ${themeBorderClass} border-opacity-50 pt-4 fade-second`}
+              />
+            </Col>
+          </>
 
-        <>
           <Col {...columns.section} />
           <Col {...columns.title} className="small-body">
             <p
@@ -102,10 +102,11 @@ const IndexResourceTable = ({
               Date
             </p>
           </Col>
-        </>
 
-        <Col lg={12} className="pb-8" />
-      </Row>
+          <Col lg={12} className="pb-8" />
+        </Row>
+      </Hidden>
+
       {data.map(section => {
         return section.resources.map((entry, index) => {
           return (
@@ -123,7 +124,7 @@ const IndexResourceTable = ({
               </>
 
               <>
-                <Col {...columns.section} className="small-headline">
+                <Col {...columns.section} className="small-headline mb-4">
                   {index === 0 && (
                     <p>
                       {section.sectionTitle}(
@@ -171,12 +172,27 @@ const IndexResourceTable = ({
                       ? entry.publication
                       : entry.type}
                   </p>
-                  <p
-                    className={`${themeTextClass} text-opacity-70 fade-second`}
-                  >
-                    {entry.year}
-                  </p>
+
+                  {/* hide right-aligned year on small and x-small screens */}
+                  <Hidden sm xs>
+                    <p
+                      className={`${themeTextClass} text-opacity-70 fade-second`}
+                    >
+                      {entry.year}
+                    </p>
+                  </Hidden>
                 </Col>
+
+                {/* stack year on small and x-small screens */}
+                <Visible sm xs>
+                  <Col {...columns.author} className="small-body">
+                    <p
+                      className={`${themeTextClass} text-opacity-70 fade-second`}
+                    >
+                      {entry.year}
+                    </p>
+                  </Col>
+                </Visible>
               </>
 
               <Col lg={12} className="pb-8" />
