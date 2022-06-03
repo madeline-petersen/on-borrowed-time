@@ -108,7 +108,7 @@ const ResourceTable = ({
                 <Col {...columns.gutterLeft} />
                 <Col {...columns.tableWidth}>
                   <p
-                    className={`md:-ml-8 ${themeBorderClass} border-opacity-10 pt-4 fade-second`}
+                    className={`md:-ml-8 border-t ${themeBorderClass} border-opacity-10 pt-4 fade-second`}
                   />
                 </Col>
               </>
