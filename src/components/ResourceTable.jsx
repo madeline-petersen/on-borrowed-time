@@ -1,6 +1,7 @@
 import './ResourceTable.scss';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
+import cx from 'classnames/bind';
 import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
@@ -154,7 +155,9 @@ const ResourceTable = ({
               <p
                 className={`${themeTextClass} text-opacity-100 flex fade-second`}
               >
-                <div className="sm:ml-8 md:ml-0">Title</div>
+                <div className={cx({ 'sm:ml-8': width !== 'max' }, 'md:ml-0')}>
+                  Title
+                </div>
               </p>
             </Col>
 
@@ -229,7 +232,9 @@ const ResourceTable = ({
                     {index < matches.length && (
                       <span className="absolute md:-ml-8">{index + 1}</span>
                     )}
-                    <div className="sm:ml-8 md:ml-0">
+                    <div
+                      className={cx({ 'sm:ml-8': width !== 'max' }, 'md:ml-0')}
+                    >
                       {parse(entry.shortTitle)}
                     </div>
                     {!entry.content && (

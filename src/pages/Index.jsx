@@ -21,7 +21,7 @@ const Index = () => {
           return (
             <>
               <div className="Index section bg-white">
-                <Container className="grid__container">
+                <Container className="grid__container mt-16">
                   <Row className="grid__row">
                     <Col md={3} />
                     <Col md={6}>
