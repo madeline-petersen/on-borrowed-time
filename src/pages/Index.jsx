@@ -3,7 +3,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
 
-import ResourceTable from '../components/ResourceTable';
+import IndexResourceTable from '../components/IndexResourceTable';
 import resources from '../data/index.json';
 
 const Index = () => {
@@ -34,7 +34,7 @@ const Index = () => {
                   </Row>
                 </Container>
                 <Container className="grid__container resource-table-container transition-all">
-                  <ResourceTable
+                  <IndexResourceTable
                     theme="black"
                     data={resources}
                     openModal={() => {}}

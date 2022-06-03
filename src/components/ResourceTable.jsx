@@ -1,7 +1,6 @@
 import './ResourceTable.scss';
 
 import { ArrowUpRight16 } from '@carbon/icons-react';
-import cx from 'classnames/bind';
 import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
@@ -93,102 +92,10 @@ const ResourceTable = ({
     }
   };
 
-  const columnsMax = {
-    section: {
-      lg: 3,
-      md: 3,
-      sm: 3
-    },
-    gutterLeft: {
-      lg: 0,
-      md: 0,
-      sm: 0
-    },
-    tableWidth: {
-      lg: 12,
-      md: 12,
-      sm: 12
-    },
-    title: {
-      lg: 4,
-      md: 4,
-      sm: 4
-    },
-    publication: {
-      lg: 3,
-      md: 3,
-      sm: 3
-    },
-    author: {
-      lg: 2,
-      md: 2,
-      sm: 2
-    }
-  };
-
-  const columns =
-    width === 'full'
-      ? columnsFull
-      : width === 'max'
-      ? columnsMax
-      : columnsDefault;
+  const columns = width === 'full' ? columnsFull : columnsDefault;
 
   return (
     <>
-      {width === 'max' && (
-        <Row className="grid__row resource-table-row transition-all cursor-pointer">
-          <>
-            {width !== 'max' && <Col {...columns.gutterLeft} />}
-            <Col {...columns.tableWidth}>
-              <p
-                className={`md:-ml-8 border-t ${themeBorderClass} border-opacity-50 pt-4 fade-second`}
-              />
-            </Col>
-          </>
-
-          <>
-            <Hidden sm>
-              {width !== 'max' && <Col {...columns.gutterLeft} />}
-            </Hidden>
-            {width === 'max' && <Col {...columns.section} />}
-            <Col {...columns.title} className="small-body">
-              <p
-                className={`${themeTextClass} text-opacity-100 flex fade-second`}
-              >
-                <div className={cx({ 'sm:ml-8': width !== 'max' }, 'md:ml-0')}>
-                  Title
-                </div>
-              </p>
-            </Col>
-
-            {/* publication */}
-            <Col {...columns.publication} className="small-body">
-              <p
-                className={`${themeTextClass} resource-title text-opacity-70 fade-second`}
-              >
-                Publication
-              </p>
-            </Col>
-
-            {/* author, date */}
-            <Col
-              {...columns.author}
-              className="small-body flex justify-between"
-            >
-              <p
-                className={`${themeTextClass} entry-type text-opacity-70 fade-second`}
-              >
-                Author
-              </p>
-              <p className={`${themeTextClass} text-opacity-70 fade-second`}>
-                Date
-              </p>
-            </Col>
-          </>
-
-          <Col lg={12} className="pb-8" />
-        </Row>
-      )}
       {data.map(section => {
         return section.resources.map((entry, index) => {
           return (
@@ -198,32 +105,18 @@ const ResourceTable = ({
               onClick={() => openModal(entry)}
             >
               <>
-                {width !== 'max' && <Col {...columns.gutterLeft} />}
+                <Col {...columns.gutterLeft} />
                 <Col {...columns.tableWidth}>
                   <p
-                    className={`md:-ml-8 ${width === 'max' &&
-                      index === 0 &&
-                      'border-t'} ${width !== 'max' &&
-                      'border-t'} ${themeBorderClass} border-opacity-10 pt-4 fade-second`}
+                    className={`md:-ml-8 ${themeBorderClass} border-opacity-10 pt-4 fade-second`}
                   />
                 </Col>
               </>
 
               <>
                 <Hidden sm>
-                  {width !== 'max' && <Col {...columns.gutterLeft} />}
+                  <Col {...columns.gutterLeft} />
                 </Hidden>
-
-                {width === 'max' && (
-                  <Col {...columns.section} className="small-headline">
-                    {index === 0 && (
-                      <p>
-                        {section.sectionTitle}(
-                        {parse(section.resources.length.toString())})
-                      </p>
-                    )}
-                  </Col>
-                )}
 
                 <Col {...columns.title} className="small-body">
                   <p
@@ -232,9 +125,7 @@ const ResourceTable = ({
                     {index < matches.length && (
                       <span className="absolute md:-ml-8">{index + 1}</span>
                     )}
-                    <div
-                      className={cx({ 'sm:ml-8': width !== 'max' }, 'md:ml-0')}
-                    >
+                    <div className="sm:ml-8 md:ml-0">
                       {parse(entry.shortTitle)}
                     </div>
                     {!entry.content && (
