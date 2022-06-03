@@ -113,6 +113,7 @@ const IndexResourceTable = ({
             <Row
               className="grid__row resource-table-row transition-all cursor-pointer"
               key={`table-row-${index}`}
+              onClick={() => window.open(entry.linkTo)}
             >
               <>
                 <Col {...columns.tableWidth}>
@@ -138,9 +139,7 @@ const IndexResourceTable = ({
                     className={`${themeTextClass} text-opacity-100 flex fade-second`}
                   >
                     <div className="md:ml-0">{parse(entry.shortTitle)}</div>
-                    {!entry.content && (
-                      <ArrowUpRight16 className="inline-block ml-1" />
-                    )}
+                    <ArrowUpRight16 className="inline-block ml-1" />
                   </p>
                 </Col>
 
