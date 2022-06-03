@@ -37,12 +37,8 @@ const Index = () => {
                   <IndexResourceTable
                     theme="black"
                     data={resources}
-                    openModal={() => {}}
-                    matches={[]}
                     textColourClass=""
                     borderColourClass=""
-                    setOnClicks={() => {}}
-                    width="max"
                   />
                 </Container>
               </div>

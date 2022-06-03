@@ -3,17 +3,14 @@ import './IndexResourceTable.scss';
 import { ArrowUpRight16 } from '@carbon/icons-react';
 import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Col, Row } from 'react-grid-system';
 
 const IndexResourceTable = ({
   theme,
   data,
-  openModal,
-  matches,
   textColourClass,
-  borderColourClass,
-  setOnClicks
+  borderColourClass
 }) => {
   let themeTextClass = 'text-black';
   let themeBorderClass = 'border-black';
@@ -30,10 +27,6 @@ const IndexResourceTable = ({
   if (borderColourClass) {
     themeBorderClass = borderColourClass;
   }
-
-  useEffect(() => {
-    setOnClicks();
-  }, []);
 
   const columns = {
     section: {
@@ -119,7 +112,6 @@ const IndexResourceTable = ({
             <Row
               className="grid__row resource-table-row transition-all cursor-pointer"
               key={`table-row-${index}`}
-              onClick={() => openModal(entry)}
             >
               <>
                 <Col {...columns.tableWidth}>
@@ -144,9 +136,6 @@ const IndexResourceTable = ({
                   <p
                     className={`${themeTextClass} text-opacity-100 flex fade-second`}
                   >
-                    {index < matches.length && (
-                      <span className="absolute md:-ml-8">{index + 1}</span>
-                    )}
                     <div className="md:ml-0">{parse(entry.shortTitle)}</div>
                     {!entry.content && (
                       <ArrowUpRight16 className="inline-block ml-1" />
@@ -206,12 +195,8 @@ IndexResourceTable.defaultProps = {
 IndexResourceTable.propTypes = {
   theme: PropTypes.string,
   data: PropTypes.arrayOf(PropTypes.shape()),
-  openModal: PropTypes.func,
-  matches: PropTypes.arrayOf(PropTypes.node),
   textColourClass: PropTypes.string,
-  borderColourClass: PropTypes.string,
-  setOnClicks: PropTypes.func,
-  width: PropTypes.bool
+  borderColourClass: PropTypes.string
 };
 
 export default IndexResourceTable;
