@@ -3,7 +3,7 @@ import React from 'react';
 import { Col, Container, Row } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
 
-import ResourceTable from '../components/ResourceTable';
+import IndexResourceTable from '../components/IndexResourceTable';
 import resources from '../data/index.json';
 
 const Index = () => {
@@ -21,7 +21,7 @@ const Index = () => {
           return (
             <>
               <div className="Index section bg-white">
-                <Container className="grid__container">
+                <Container className="grid__container mt-16">
                   <Row className="grid__row">
                     <Col md={3} />
                     <Col md={6}>
@@ -34,15 +34,11 @@ const Index = () => {
                   </Row>
                 </Container>
                 <Container className="grid__container resource-table-container transition-all">
-                  <ResourceTable
+                  <IndexResourceTable
                     theme="black"
                     data={resources}
-                    openModal={() => {}}
-                    matches={[]}
                     textColourClass=""
                     borderColourClass=""
-                    setOnClicks={() => {}}
-                    width="max"
                   />
                 </Container>
               </div>
