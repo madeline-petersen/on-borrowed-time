@@ -162,14 +162,7 @@ const IndexResourceTable = ({
                   <p
                     className={`${themeTextClass} entry-type text-opacity-70 fade-second`}
                   >
-                    {[
-                      'Journal Excerpt',
-                      'Article Excerpt',
-                      'Book Excerpt',
-                      'Report Excerpt'
-                    ].includes(entry.type)
-                      ? entry.publication
-                      : entry.type}
+                    {entry.author}
                   </p>
 
                   {/* hide right-aligned year on small and x-small screens */}
