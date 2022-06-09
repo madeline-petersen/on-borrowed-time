@@ -3,215 +3,365 @@
     "sectionTitle": "News",
     "resources": [
       {
-        "type": "Journal Excerpt",
-        "publication": "Modern Asian Studies",
-        "shortTitle": "The Welfare of Hong&nbsp;Kong People",
-        "bookTitle": "Diasporic Memories and Conceptual Geography in Post-Colonial Hong&nbsp;Kong",
-        "year": "2014",
-        "author": "Angelina Y. Chin",
-        "citation": "Chin, Angelina Y. “Diasporic Memories and Conceptual Geography in Post-Colonial Hong&nbsp;Kong.” <em>Modern Asian Studies</em> 48, no. 6 (November 2014): 1566–67. ",
-        "linkTo": "https://www.jstor.org/stable/24494641?seq=1"
-      },
-      {
-        "type": "Journal Excerpt",
-        "publication": "Pacific Basin Law Journal",
-        "shortTitle": "An Expiring Lease",
-        "bookTitle": "The Sino-British Agreement and Nationality: Hong&nbsp;Kong&rsquo;s Future in the Hands of the People&rsquo;s Republic of China",
-        "year": "1990",
-        "author": "Christine Chua",
-        "citation": "Chua, Christine. “The Sino-British Agreement and Nationality: Hong&nbsp;Kong&rsquo;s Future in the Hands of the People&rsquo;s Republic of China.” Pacific Basin Law Journal 8, no. 1 (1990): 165–66.",
-        "linkTo": "https://escholarship.org/content/qt9j3546s0/qt9j3546s0.pdf?t=n4ov53"
-      },
-      {
-        "type": "Journal Excerpt",
-        "publication": "Journal of Democracy",
-        "shortTitle": "An Arms-Length Approach",
-        "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises",
-        "year": "2015",
-        "author": "Michael C. Davis",
-        "citation": "Davis, Michael C. “Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises.” <em>Journal of Democracy</em> 26, no. 2 (April 17, 2015): 102. ",
-        "linkTo": ""
-      },
-      {
-        "type": "Journal Excerpt",
-        "publication": "Publication name",
-        "shortTitle": "The Price of Peace",
-        "bookTitle": "Need to find this one",
-        "year": "0000",
-        "author": "First Name, Last Name",
-        "citation": "",
-        "linkTo": ""
-      },
-      {
-        "type": "Map",
-        "shortTitle": "Geography of Hong&nbsp;Kong ",
-        "bookTitle": "Geography of Hong&nbsp;Kong",
-        "year": "n.d.",
-        "linkTo": "https://en.wikipedia.org/wiki/Geography_of_Hong_Kong#/media/File:Map_of_Hong_Kong_18_Districts_en.svg"
-      },
-      {
-        "type": "Journal Excerpt",
-        "publication": "Asian Affairs: An American Review",
-        "shortTitle": "The Locus of Loyalty",
-        "bookTitle": "The Hong&nbsp;Kong Model of &lsquo;One Country, Two Systems&rsquo;",
-        "year": "1987",
-        "author": "Bryon S. Weng",
-        "citation": "Weng, Byron S. “The Hong&nbsp;Kong Model of ‘One Country, Two Systems.” Asian Affairs: An American Review 14, no. 4 (1987): 195–96.",
-        "linkTo": "https://www.jstor.org/stable/30172082"
+        "type": "Article Excerpt",
+        "publication": "The New York Times",
+        "shortTitle": "Hong Kong On Borrowed Time",
+        "year": "1989",
+        "author": "Margaret Scott",
+        "linkTo": "https://www.nytimes.com/1989/10/22/magazine/hong-kong-on-borrowed-time.html"
       },
       {
         "type": "Article Excerpt",
-        "publication": "Time",
-        "shortTitle": "Hearts At Ease",
-        "bookTitle": "Business: Hong&nbsp;Kong&rsquo;s Golden Link",
-        "year": "1979",
-        "author": "Time",
-        "citation": "“Business: Hong&nbsp;Kong&rsquo;s Golden Link.” Time. Time Inc., April 30, 1979.",
-        "linkTo": "http://content.time.com/time/subscriber/article/0,33009,723932-1,00.html"
+        "publication": "The New York Times",
+        "shortTitle": "Flowering In The Face Of a Giant Unknown",
+        "year": "1997",
+        "author": "Edward A. Gargan",
+        "linkTo": "https://www.nytimes.com/1997/02/16/arts/flowering-in-the-face-of-a-giant-unknown.html"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The New York Times",
+        "shortTitle": "China Resumes Control of Hong Kong, Concluding 156 Years of British Rule",
+        "year": "1997",
+        "author": "Edward A. Gargan",
+        "linkTo": "https://www.nytimes.com/1997/07/01/world/china-resumes-control-of-hong-kong-concluding-156-years-of-british-rule.html"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The New York Times",
+        "shortTitle": "A Complex of Moods, a Kaleidoscope of Emotions",
+        "year": "1997",
+        "author": "Edward A. Gargan",
+        "linkTo": "https://archive.nytimes.com/www.nytimes.com/specials/hongkong/060197letter.html"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The New York Times",
+        "shortTitle": "Year of the Trojan Horse",
+        "year": "1997",
+        "author": "Nicholas D. Kristof",
+        "linkTo": "https://www.nytimes.com/1997/07/01/world/year-of-the-trojan-horse.html"
+      },      
+      {
+        "type": "Article Excerpt",
+        "publication": "The New York Times",
+        "shortTitle": "Hundreds of Thousands in Hong Kong Protest Security Laws",
+        "year": "2003",
+        "author": "Keith Bradsher",
+        "linkTo": "https://www.nytimes.com/2003/07/01/international/asia/hundreds-of-thousands-in-hong-kong-protest-security-laws.html"
+      },         
+      {
+        "type": "Article Excerpt",
+        "publication": "The New York Times",
+        "shortTitle": "What Next for Hong Kong",
+        "year": "2014",
+        "author": "Benny Tai",
+        "linkTo": "https://www.nytimes.com/2014/12/05/opinion/benny-tai-on-why-occupy-central-should-end.html"
+      },      
+      {
+        "type": "Article Excerpt",
+        "publication": "The New York Times",
+        "shortTitle": "The Color of Protest",
+        "year": "2019",
+        "author": "Vanessa Friedman",
+        "linkTo": "https://www.nytimes.com/2019/10/29/style/29china-ban-black-clothing-hong-kong-protests.html"
+      },
+      {
+        "type": "Book Excerpt",
+        "publication": "Quartz",
+        "shortTitle": "What the Hong Kong Protests Can Teach the World about Enduring Social Movements",
+        "year": "2019",
+        "author": "Mary Hui",
+        "linkTo": "https://qz.com/1695788/the-hong-kong-protests-epitomize-a-resilient-social-movement/"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The Washington Post",
+        "shortTitle": "Opinion | Why Hong Kong's New Generation Won't Give in to China's Tyranny",
+        "year": "2019",
+        "author": "Hana Meihan Davis",
+        "linkTo": "https://www.washingtonpost.com/opinions/2019/06/13/hong-kongs-protests-are-about-more-than-democracy/"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "NPR",
+        "shortTitle": "A Guide to What's Happening In Hong Kong",
+        "year": "2019",
+        "author": "Colin Dwyer",
+        "linkTo": "https://www.npr.org/2019/08/20/752368384/a-guide-to-whats-happening-in-hong-kong"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The Washington Post",
+        "shortTitle": "Analysis | In Hong Kong, What Happens Now That Beijing Has Called the Protests A 'Color Revolution'?",
+        "year": "2019",
+        "author": "Hui, Victoria Tin-bor, and Michael C Davis",
+        "linkTo": "https://www.washingtonpost.com/politics/2019/08/10/hong-kong-what-happens-now-that-beijing-has-called-protests-color-revolution/"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The New York Times",
+        "shortTitle": "Give Hong Kong the Autonomy It Was Promised",
+        "year": "2020",
+        "author": "Nathan Law Kwun Chung",
+        "linkTo": "https://www.nytimes.com/2020/10/01/opinion/international-world/hong-kong-autonomy-china.html"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The New York Times",
+        "shortTitle": "Life in Hong Kong Has Always Been Impossible",
+        "year": "2020",
+        "author": "Karen Cheung",
+        "linkTo": "https://www.nytimes.com/2020/07/13/opinion/hong-kong-national-security-law.html"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "Reuters",
+        "shortTitle": "Democracy Darkens: For Hong Kong Activist, Year of Despair and Dread",
+        "year": "2020",
+        "author": "James Pomfret and Jessie Pang",
+        "linkTo": "https://www.reuters.com/investigates/special-report/hongkong-democracy-activists/"
       }
     ]
   },
   {
     "sectionTitle": "Magazine",
     "resources": [
+            {
+        "type": "Article Excerpt",
+        "publication": "Time",
+        "shortTitle": "Business: Hong Kong’s Golden Link",
+        "year": "1979",
+        "linkTo": "http://content.time.com/time/subscriber/article/0,33009,723932-1,00.html"
+      },
       {
-        "type": "Journal Excerpt",
-        "publication": "Modern Asian Studies",
-        "shortTitle": "The Welfare of Hong&nbsp;Kong People",
-        "bookTitle": "Diasporic Memories and Conceptual Geography in Post-Colonial Hong&nbsp;Kong",
+        "type": "Article Excerpt",
+        "publication": "The Atlantic",
+        "shortTitle": "A Culture of Emigration",
+        "year": "1991",
+        "author": "Cait N. Murphy",
+        "linkTo": "https://web.archive.org/web/20210216162157/https://www.theatlantic.com/past/docs/issues/91apr/emi491.htm"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The Atlantic",
+        "shortTitle": "Don't Call Hong Kong's Protests an 'Umbrella Revolution",
         "year": "2014",
-        "author": "Angelina Y. Chin",
-        "citation": "Chin, Angelina Y. “Diasporic Memories and Conceptual Geography in Post-Colonial Hong&nbsp;Kong.” <em>Modern Asian Studies</em> 48, no. 6 (November 2014): 1566–67. ",
-        "linkTo": "https://www.jstor.org/stable/24494641?seq=1"
+        "author": "Chris Yeung",
+        "linkTo": "https://www.theatlantic.com/international/archive/2014/10/dont-call-hong-kongs-protests-an-umbrella-revolution/381231/"
       },
       {
-        "type": "Journal Excerpt",
-        "publication": "Pacific Basin Law Journal",
-        "shortTitle": "An Expiring Lease",
-        "bookTitle": "The Sino-British Agreement and Nationality: Hong&nbsp;Kong&rsquo;s Future in the Hands of the People&rsquo;s Republic of China",
-        "year": "1990",
-        "author": "Christine Chua",
-        "citation": "Chua, Christine. “The Sino-British Agreement and Nationality: Hong&nbsp;Kong&rsquo;s Future in the Hands of the People&rsquo;s Republic of China.” Pacific Basin Law Journal 8, no. 1 (1990): 165–66.",
-        "linkTo": "https://escholarship.org/content/qt9j3546s0/qt9j3546s0.pdf?t=n4ov53"
-      },
-      {
-        "type": "Journal Excerpt",
-        "publication": "Journal of Democracy",
-        "shortTitle": "An Arms-Length Approach",
-        "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises",
-        "year": "2015",
-        "author": "Michael C. Davis",
-        "citation": "Davis, Michael C. “Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises.” <em>Journal of Democracy</em> 26, no. 2 (April 17, 2015): 102. ",
-        "linkTo": ""
-      },
-      {
-        "type": "Journal Excerpt",
-        "publication": "Publication name",
-        "shortTitle": "The Price of Peace",
-        "bookTitle": "Need to find this one",
-        "year": "0000",
-        "author": "First Name, Last Name",
-        "citation": "",
-        "linkTo": ""
-      },
-      {
-        "type": "Map",
-        "shortTitle": "Geography of Hong&nbsp;Kong ",
-        "bookTitle": "Geography of Hong&nbsp;Kong",
-        "year": "n.d.",
-        "linkTo": "https://en.wikipedia.org/wiki/Geography_of_Hong_Kong#/media/File:Map_of_Hong_Kong_18_Districts_en.svg"
-      },
-      {
-        "type": "Journal Excerpt",
-        "publication": "Asian Affairs: An American Review",
-        "shortTitle": "The Locus of Loyalty",
-        "bookTitle": "The Hong&nbsp;Kong Model of &lsquo;One Country, Two Systems&rsquo;",
-        "year": "1987",
-        "author": "Bryon S. Weng",
-        "citation": "Weng, Byron S. “The Hong&nbsp;Kong Model of ‘One Country, Two Systems.” Asian Affairs: An American Review 14, no. 4 (1987): 195–96.",
-        "linkTo": "https://www.jstor.org/stable/30172082"
+        "type": "Article Excerpt",
+        "publication": "The New Yorker",
+        "shortTitle": "Memories of Tiananmen Square",
+        "year": "2019",
+        "author": "Jiayang Fan",
+        "linkTo": "https://www.newyorker.com/news/daily-comment/memories-of-tiananmen-square"
       },
       {
         "type": "Article Excerpt",
         "publication": "Time",
-        "shortTitle": "Hearts At Ease",
-        "bookTitle": "Business: Hong&nbsp;Kong&rsquo;s Golden Link",
-        "year": "1979",
-        "author": "Time",
-        "citation": "“Business: Hong&nbsp;Kong&rsquo;s Golden Link.” Time. Time Inc., April 30, 1979.",
-        "linkTo": "http://content.time.com/time/subscriber/article/0,33009,723932-1,00.html"
+        "shortTitle": "A Glossary of Hong Kong Protest Slang",
+        "year": "2019",
+        "author": "Hillary Leung",
+        "linkTo": "https://time.com/5668286/hong-kong-protests-slang-language-cantonese-glossary/"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The Atlantic",
+        "shortTitle": "Hong Kong's Protests Have Cemented Its Identity",
+        "year": "2019",
+        "author": "Timothy McLaughlin",
+        "linkTo": "https://www.theatlantic.com/international/archive/2019/08/hong-kong-china-protest-identity/596320/"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The Atlantic",
+        "shortTitle": "A Polarized City, Mirrored in Its Diaspora",
+        "year": "2019",
+        "author": "Benjamin Haas",
+        "linkTo": "https://www.theatlantic.com/international/archive/2019/10/hong-kong-politics-diaspora/600250/"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "Harper's Magazine",
+        "shortTitle": "Dream State",
+        "year": "2020",
+        "author": "Yi-Ling Liu",
+        "linkTo": "https://harpers.org/archive/2020/05/dream-state-hong-kong-protests/"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "THe New Yorker",
+        "shortTitle": "Amid the Pandemic, Is Hong Kong Facing a Different Kind of Death?",
+        "year": "2020",
+        "author": "Jiayang Fan",
+        "linkTo": "https://www.newyorker.com/news/daily-comment/amid-the-pandemic-is-hong-kong-facing-a-different-kind-of-death"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The New Yorker",
+        "shortTitle": "Telling the Stories of the Protests Here and in Hong Kong",
+        "year": "2020",
+        "author": "Jiayang Fan",
+        "linkTo": "https://www.newyorker.com/news/daily-comment/telling-the-stories-of-the-protests-here-and-in-hong-kong"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The Atlantic",
+        "shortTitle": "How History Gets Rewritten",
+        "year": "2020",
+        "author": "Timothy McLaughlin",
+        "linkTo": "https://www.theatlantic.com/international/archive/2020/09/hong-kong-protests-propaganda/616135/"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The Atlantic",
+        "shortTitle": "Hong Kongers, Don't Idolize the U.K.",
+        "year": "2020",
+        "author": "Ysabelle Cheung",
+        "linkTo": "https://www.theatlantic.com/ideas/archive/2020/09/hong-kongers-dont-idolize-the-uk/616407/"
       }
     ]
   },
   {
-    "sectionTitle": "Academic Journal",
+    "sectionTitle": "Books & Independent Publications",
     "resources": [
       {
-        "type": "Journal Excerpt",
-        "publication": "Modern Asian Studies",
-        "shortTitle": "The Welfare of Hong&nbsp;Kong People",
-        "bookTitle": "Diasporic Memories and Conceptual Geography in Post-Colonial Hong&nbsp;Kong",
+        "type": "Book Excerpt",
+        "publication": "The Nation",
+        "shortTitle": "The Infinite Heartbreak of Loving Hong Kong",
+        "year": "2021",
+        "author": "Wilfred Chan",
+        "linkTo": "https://www.thenation.com/article/world hong-kong-china-national-security-law/"
+      },
+      {
+        "type": "Book Excerpt",
+        "publication": "Human Rights Watch",
+        "shortTitle": "A Question of Patriotism: Human Rights and Democratization in Hong Kong",
+        "year": "2004",
+        "author": "Human Rights Watch",
+        "linkTo": "https://www.hrw.org/report/2004/09/09/question-patriotism/human-rights-and-democratization-hong-kong"
+      },
+      {
+        "type": "Book Excerpt",
+        "publication": "",
+        "shortTitle": "Interview: Occupy Central Founder Benny Tai Yiu-Ting",
         "year": "2014",
-        "author": "Angelina Y. Chin",
-        "citation": "Chin, Angelina Y. “Diasporic Memories and Conceptual Geography in Post-Colonial Hong&nbsp;Kong.” <em>Modern Asian Studies</em> 48, no. 6 (November 2014): 1566–67. ",
-        "linkTo": "https://www.jstor.org/stable/24494641?seq=1"
+        "author": "Luke",
+        "linkTo": "https://www.redpepper.org.uk/the-spirit-of-civil-disobedience/"
       },
       {
-        "type": "Journal Excerpt",
-        "publication": "Pacific Basin Law Journal",
-        "shortTitle": "An Expiring Lease",
-        "bookTitle": "The Sino-British Agreement and Nationality: Hong&nbsp;Kong&rsquo;s Future in the Hands of the People&rsquo;s Republic of China",
-        "year": "1990",
-        "author": "Christine Chua",
-        "citation": "Chua, Christine. “The Sino-British Agreement and Nationality: Hong&nbsp;Kong&rsquo;s Future in the Hands of the People&rsquo;s Republic of China.” Pacific Basin Law Journal 8, no. 1 (1990): 165–66.",
-        "linkTo": "https://escholarship.org/content/qt9j3546s0/qt9j3546s0.pdf?t=n4ov53"
+        "type": "Book Excerpt",
+        "publication": "WordPress",
+        "shortTitle": "Manual of Disobedience",
+        "year": "2014",
+        "author": "Occupy Central with Love and Peace",
+        "linkTo": "https://oclphkenglish.wordpress.com/2014/09/24/manual-of-disobedience/"
       },
       {
-        "type": "Journal Excerpt",
-        "publication": "Journal of Democracy",
-        "shortTitle": "An Arms-Length Approach",
-        "bookTitle": "Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises",
-        "year": "2015",
-        "author": "Michael C. Davis",
-        "citation": "Davis, Michael C. “Hong&nbsp;Kong&rsquo;s Umbrella Movement: Beijing&rsquo;s Broken Promises.” <em>Journal of Democracy</em> 26, no. 2 (April 17, 2015): 102. ",
-        "linkTo": ""
+        "type": "Book Excerpt",
+        "publication": "E-International Relations",
+        "shortTitle": "The Hong Kong Umbrella Movement: A Students' or a People's Movement?",
+        "year": "2014",
+        "author": "Che-po Chan",
+        "linkTo": "https://www.e-ir.info/2014/11/11/the-hong-kong-umbrella-movement-a-students-or-a-peoples-movement/"
       },
       {
-        "type": "Journal Excerpt",
-        "publication": "Publication name",
-        "shortTitle": "The Price of Peace",
-        "bookTitle": "Need to find this one",
-        "year": "0000",
-        "author": "First Name, Last Name",
-        "citation": "",
-        "linkTo": ""
+        "type": "Book Excerpt",
+        "publication": "China File",
+        "shortTitle": "Staying’-An Excerpt from ’People’s Republic of Amnesia",
+        "year": "2016",
+        "author": "Lim Louisa",
+        "linkTo": "https://www.chinafile.com/library/excerpts/staying-excerpt-peoples-republic-amnesia"
       },
       {
-        "type": "Map",
-        "shortTitle": "Geography of Hong&nbsp;Kong ",
-        "bookTitle": "Geography of Hong&nbsp;Kong",
-        "year": "n.d.",
-        "linkTo": "https://en.wikipedia.org/wiki/Geography_of_Hong_Kong#/media/File:Map_of_Hong_Kong_18_Districts_en.svg"
+        "type": "Book Excerpt",
+        "publication": "An Asian Literary Journal",
+        "shortTitle": "A Letter to My Son",
+        "year": "2019",
+        "author": "Jason G. Coe",
+        "linkTo": "http://www.asiancha.com/wp/article/jason-coe/"
       },
       {
-        "type": "Journal Excerpt",
-        "publication": "Asian Affairs: An American Review",
-        "shortTitle": "The Locus of Loyalty",
-        "bookTitle": "The Hong&nbsp;Kong Model of &lsquo;One Country, Two Systems&rsquo;",
-        "year": "1987",
-        "author": "Bryon S. Weng",
-        "citation": "Weng, Byron S. “The Hong&nbsp;Kong Model of ‘One Country, Two Systems.” Asian Affairs: An American Review 14, no. 4 (1987): 195–96.",
-        "linkTo": "https://www.jstor.org/stable/30172082"
+        "type": "Book Excerpt",
+        "publication": "China Heritage",
+        "shortTitle": "Young Hong Kong",
+        "year": "2019",
+        "author": "Lee Yee",
+        "linkTo": "https://chinaheritage.net/journal/young-hong-kong/"
       },
       {
-        "type": "Article Excerpt",
-        "publication": "Time",
-        "shortTitle": "Hearts At Ease",
-        "bookTitle": "Business: Hong&nbsp;Kong&rsquo;s Golden Link",
-        "year": "1979",
-        "author": "Time",
-        "citation": "“Business: Hong&nbsp;Kong&rsquo;s Golden Link.” Time. Time Inc., April 30, 1979.",
-        "linkTo": "http://content.time.com/time/subscriber/article/0,33009,723932-1,00.html"
+        "type": "Book Excerpt",
+        "publication": "Hong Kong Free Press",
+        "shortTitle": "Insurgent Tongues: How Loose Cantonese Romanisation Became Hong Kong's Patois of Protest",
+        "year": "2019",
+        "author": "Rachel Ka-yin Leung",
+        "linkTo": "https://hongkongfp.com/2019/09/21/insurgent-tongues-loose-cantonese-romanisation-became-hong-kongs-patois-protest/"
+      },
+      {
+        "type": "Book Excerpt",
+        "publication": "Hong Kong Protesting",
+        "shortTitle": "We Are All Hongkongers",
+        "year": "2020",
+        "author": "Sarah Tung",
+        "linkTo": "https://hkprotesting.com/2020/09/03/hongkongers/"
+      },
+      {
+        "type": "Book Excerpt",
+        "publication": "Chinese Storytellers",
+        "shortTitle": "Speaking in Tongues",
+        "year": "2020",
+        "author": "Chinese Storytellers",
+        "linkTo": "https://chinesestorytellers.substack.com/p/speaking-in-tongues"
+      },
+      {
+        "type": "Book Excerpt",
+        "publication": "The Baffler",
+        "shortTitle": "Between Memory And Forgetting",
+        "year": "2020",
+        "author": "Yi-Ling Liu",
+        "linkTo": "https://thebaffler.com/latest/between-memory-and-forgetting-liu"
+      },
+      {
+        "type": "Book Excerpt",
+        "publication": "Chinese Storytellers",
+        "shortTitle": "Covering Hong Kong in a Darker Era",
+        "year": "2020",
+        "author": "Chinese Storytellers",
+        "linkTo": "https://chinesestorytellers.substack.com/p/covering-hong-kong-in-a-darker-era"
+      },
+      {
+        "type": "Book Excerpt",
+        "publication": "Hong Kong Protesting",
+        "shortTitle": "Resistance in Hiding",
+        "year": "2020",
+        "author": "Katherine Cheng",
+        "linkTo": "https://hkprotesting.com/2020/07/29/resistance-in-hiding/"
+      },
+      {
+        "type": "Book Excerpt",
+        "publication": "Yale Daily",
+        "shortTitle": "The Revolution of Our Time",
+        "year": "2020",
+        "author": "Hana Meihan Davis",
+        "linkTo": "http://features.yaledailynews.com/blog/2020/05/13/the-revolution-of-our-time/"
+      },
+      {
+        "type": "Book Excerpt",
+        "publication": "Lausan",
+        "shortTitle": "Can Our 'Global City' Offer Transnational Solidarity?",
+        "year": "2021",
+        "author": "Jacky Man Hei Chan",
+        "linkTo": "https://lausan.hk/2019/can-our-global-city-offer-international-solidarity/"
+      },
+      {
+        "type": "Book Excerpt",
+        "publication": "—",
+        "shortTitle": "For The Love Of Hong Kong: A Memoir From My City Under Siege",
+        "year": "2021",
+        "author": "Hana Meihan Davis",
+        "linkTo": "https://www.amazon.com/dp/B09645ZRZQ"
       }
     ]
   }
