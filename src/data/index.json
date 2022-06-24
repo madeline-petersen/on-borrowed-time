@@ -127,6 +127,21 @@
   {
     "sectionTitle": "Magazine",
     "resources": [
+            {
+        "type": "Article Excerpt",
+        "publication": "Time",
+        "shortTitle": "Business: Hong Kong’s Golden Link",
+        "year": "1979",
+        "linkTo": "http://content.time.com/time/subscriber/article/0,33009,723932-1,00.html"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The Atlantic",
+        "shortTitle": "A Culture of Emigration",
+        "year": "1991",
+        "author": "Cait N. Murphy",
+        "linkTo": "https://web.archive.org/web/20210216162157/https://www.theatlantic.com/past/docs/issues/91apr/emi491.htm"
+      },
       {
         "type": "Article Excerpt",
         "publication": "Time",

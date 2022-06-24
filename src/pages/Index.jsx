@@ -33,7 +33,7 @@ const Index = () => {
                     </Col>
                   </Row>
                 </Container>
-                <Container className="grid__container resource-table-container transition-all">
+                <Container className="grid__container index-resource-table-container transition-all">
                   <IndexResourceTable
                     theme="black"
                     data={resources}

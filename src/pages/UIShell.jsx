@@ -142,20 +142,6 @@ const UIShell = props => {
     'reflection'
   ];
 
-  useEffect(() => {
-    if (pagesWithOverscroll.includes(props.pageId)) {
-      if (isMenuActive) {
-        // disabling all scrolling while modals are open
-        fullpage_api.setAllowScrolling(false);
-        fullpage_api.setKeyboardScrolling(false);
-      } else {
-        // enable scrolling while modals are closed
-        fullpage_api.setAllowScrolling(true);
-        fullpage_api.setKeyboardScrolling(true);
-      }
-    }
-  }, [isMenuActive]);
-
   let timelineClasses = 'contrast-text mix-blend-difference';
   const mixBlendMode = ['1989', '1997'].includes(props.year.id)
     ? 'mix-blend-screen'
@@ -214,6 +200,7 @@ const UIShell = props => {
           setAnecdoteData={setAnecdoteData}
           isModalActive={isModalActive}
           setIsModalActive={setIsModalActive}
+          sceneIndex={props.sceneIndex}
         />
       );
       break;
