@@ -41,7 +41,7 @@
         "year": "1997",
         "author": "Nicholas D. Kristof",
         "linkTo": "https://www.nytimes.com/1997/07/01/world/year-of-the-trojan-horse.html"
-      },      
+      },
       {
         "type": "Article Excerpt",
         "publication": "The New York Times",
@@ -49,7 +49,7 @@
         "year": "2003",
         "author": "Keith Bradsher",
         "linkTo": "https://www.nytimes.com/2003/07/01/international/asia/hundreds-of-thousands-in-hong-kong-protest-security-laws.html"
-      },         
+      },
       {
         "type": "Article Excerpt",
         "publication": "The New York Times",
@@ -57,7 +57,7 @@
         "year": "2014",
         "author": "Benny Tai",
         "linkTo": "https://www.nytimes.com/2014/12/05/opinion/benny-tai-on-why-occupy-central-should-end.html"
-      },      
+      },
       {
         "type": "Article Excerpt",
         "publication": "The New York Times",
@@ -127,7 +127,7 @@
   {
     "sectionTitle": "Magazine",
     "resources": [
-            {
+      {
         "type": "Article Excerpt",
         "publication": "Time",
         "shortTitle": "Business: Hong Kong’s Golden Link",
@@ -160,6 +160,14 @@
       },
       {
         "type": "Article Excerpt",
+        "publication": "Harper's Magazine",
+        "shortTitle": "Dream State",
+        "year": "2020",
+        "author": "Yi-Ling Liu",
+        "linkTo": "https://harpers.org/archive/2020/05/dream-state-hong-kong-protests/"
+      },
+      {
+        "type": "Article Excerpt",
         "publication": "Time",
         "shortTitle": "A Glossary of Hong Kong Protest Slang",
         "year": "2019",
@@ -173,22 +181,6 @@
         "year": "2019",
         "author": "Timothy McLaughlin",
         "linkTo": "https://www.theatlantic.com/international/archive/2019/08/hong-kong-china-protest-identity/596320/"
-      },
-      {
-        "type": "Article Excerpt",
-        "publication": "The Atlantic",
-        "shortTitle": "A Polarized City, Mirrored in Its Diaspora",
-        "year": "2019",
-        "author": "Benjamin Haas",
-        "linkTo": "https://www.theatlantic.com/international/archive/2019/10/hong-kong-politics-diaspora/600250/"
-      },
-      {
-        "type": "Article Excerpt",
-        "publication": "Harper's Magazine",
-        "shortTitle": "Dream State",
-        "year": "2020",
-        "author": "Yi-Ling Liu",
-        "linkTo": "https://harpers.org/archive/2020/05/dream-state-hong-kong-protests/"
       },
       {
         "type": "Article Excerpt",
@@ -221,20 +213,20 @@
         "year": "2020",
         "author": "Ysabelle Cheung",
         "linkTo": "https://www.theatlantic.com/ideas/archive/2020/09/hong-kongers-dont-idolize-the-uk/616407/"
+      },
+      {
+        "type": "Article Excerpt",
+        "publication": "The Atlantic",
+        "shortTitle": "A Polarized City, Mirrored in Its Diaspora",
+        "year": "2019",
+        "author": "Benjamin Haas",
+        "linkTo": "https://www.theatlantic.com/international/archive/2019/10/hong-kong-politics-diaspora/600250/"
       }
     ]
   },
   {
     "sectionTitle": "Books & Independent Publications",
     "resources": [
-      {
-        "type": "Book Excerpt",
-        "publication": "The Nation",
-        "shortTitle": "The Infinite Heartbreak of Loving Hong Kong",
-        "year": "2021",
-        "author": "Wilfred Chan",
-        "linkTo": "https://www.thenation.com/article/world hong-kong-china-national-security-law/"
-      },
       {
         "type": "Book Excerpt",
         "publication": "Human Rights Watch",
@@ -245,10 +237,10 @@
       },
       {
         "type": "Book Excerpt",
-        "publication": "",
+        "publication": "Red Pepper",
         "shortTitle": "Interview: Occupy Central Founder Benny Tai Yiu-Ting",
         "year": "2014",
-        "author": "Luke",
+        "author": "Luke Cooper",
         "linkTo": "https://www.redpepper.org.uk/the-spirit-of-civil-disobedience/"
       },
       {
@@ -293,6 +285,14 @@
       },
       {
         "type": "Book Excerpt",
+        "publication": "—",
+        "shortTitle": "For The Love Of Hong Kong: A Memoir From My City Under Siege",
+        "year": "2021",
+        "author": "Hana Meihan Davis",
+        "linkTo": "https://www.amazon.com/dp/B09645ZRZQ"
+      },
+      {
+        "type": "Book Excerpt",
         "publication": "Hong Kong Free Press",
         "shortTitle": "Insurgent Tongues: How Loose Cantonese Romanisation Became Hong Kong's Patois of Protest",
         "year": "2019",
@@ -313,7 +313,15 @@
         "shortTitle": "Speaking in Tongues",
         "year": "2020",
         "author": "Chinese Storytellers",
-        "linkTo": "https://chinesestorytellers.substack.com/p/speaking-in-tongues"
+        "linkTo": "http://web.archive.org/web/20201029141724/https://chinesestorytellers.substack.com/p/speaking-in-tongues"
+      },
+      {
+        "type": "Book Excerpt",
+        "publication": "Chinese Storytellers",
+        "shortTitle": "Covering Hong Kong in a Darker Era",
+        "year": "2020",
+        "author": "Chinese Storytellers",
+        "linkTo": "http://web.archive.org/web/20210224072309/https://chinesestorytellers.substack.com/p/covering-hong-kong-in-a-darker-era"
       },
       {
         "type": "Book Excerpt",
@@ -322,14 +330,6 @@
         "year": "2020",
         "author": "Yi-Ling Liu",
         "linkTo": "https://thebaffler.com/latest/between-memory-and-forgetting-liu"
-      },
-      {
-        "type": "Book Excerpt",
-        "publication": "Chinese Storytellers",
-        "shortTitle": "Covering Hong Kong in a Darker Era",
-        "year": "2020",
-        "author": "Chinese Storytellers",
-        "linkTo": "https://chinesestorytellers.substack.com/p/covering-hong-kong-in-a-darker-era"
       },
       {
         "type": "Book Excerpt",
@@ -354,14 +354,6 @@
         "year": "2021",
         "author": "Jacky Man Hei Chan",
         "linkTo": "https://lausan.hk/2019/can-our-global-city-offer-international-solidarity/"
-      },
-      {
-        "type": "Book Excerpt",
-        "publication": "—",
-        "shortTitle": "For The Love Of Hong Kong: A Memoir From My City Under Siege",
-        "year": "2021",
-        "author": "Hana Meihan Davis",
-        "linkTo": "https://www.amazon.com/dp/B09645ZRZQ"
       }
     ]
   }
