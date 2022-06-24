@@ -200,6 +200,7 @@ const UIShell = props => {
           setAnecdoteData={setAnecdoteData}
           isModalActive={isModalActive}
           setIsModalActive={setIsModalActive}
+          sceneIndex={props.sceneIndex}
         />
       );
       break;

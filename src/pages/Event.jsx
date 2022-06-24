@@ -16,6 +16,7 @@ const Event = ({
   nextParams,
   changingParam,
   next,
+  sceneIndex,
   navigateTo,
   setTransitionType,
   colourBackgroundClass,
@@ -123,7 +124,7 @@ const Event = ({
     }
   }, 4500);
 
-  if (year.id === '2020') {
+  if (year.id === '2020' && sceneIndex === 0) {
     return (
       <>
         <div className="event" key={`event-2020`}>
@@ -303,7 +304,7 @@ const Event = ({
       <>
         <div
           className="event"
-          key={`event-${nextParams.year}-${nextParams.scene}-${nextParams.page}`}
+          // key={`event-${nextParams.year}-${nextParams.scene}-${nextParams.page}`}
         >
           <ReactFullpage
             licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
@@ -357,27 +358,33 @@ const Event = ({
                           </Row>
                         </Container>
                         <Container className="grid__container resource-table-container transition-all">
-                          <ResourceTable
-                            data={event.resources}
-                            openModal={openModal}
-                            matches={getFilteredMatches('event-paragraphs')}
-                            textColourClass={textColourClass}
-                            borderColourClass={borderColourClass}
-                            setOnClicks={() => setOnClicks('event-paragraphs')}
-                          />
+                          {event.resources && (
+                            <ResourceTable
+                              data={event.resources}
+                              openModal={openModal}
+                              matches={getFilteredMatches('event-paragraphs')}
+                              textColourClass={textColourClass}
+                              borderColourClass={borderColourClass}
+                              setOnClicks={() =>
+                                setOnClicks('event-paragraphs')
+                              }
+                            />
+                          )}
                         </Container>
 
                         <div className="pb-44" />
                       </div>
                     )}
                     <div className="hidden-footer__container bg-black">
-                      <HiddenFooter
-                        pageId="event"
-                        nextParams={nextParams}
-                        next={next}
-                        changingParam={changingParam}
-                        textClasses="text-white text-opacity-90"
-                      />
+                      {nextParams && (
+                        <HiddenFooter
+                          pageId="event"
+                          nextParams={nextParams}
+                          next={next}
+                          changingParam={changingParam}
+                          textClasses="text-white text-opacity-90"
+                        />
+                      )}
                     </div>
                   </div>
                   <div className="section w-full bg-black">
@@ -399,6 +406,7 @@ Event.propTypes = {
   year: PropTypes.shape(),
   years: PropTypes.arrayOf(PropTypes.shape()),
   event: PropTypes.shape(),
+  sceneIndex: PropTypes.number,
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,

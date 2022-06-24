@@ -6286,6 +6286,16 @@
               ]
             }
           ]
+        },
+        {
+          "title": "Annette",
+          "pages": [
+            {
+              "type": "event",
+              "title": "Event",
+              "paragraphs": ["Annette", "Madeline", "Michael"]
+            }
+          ]
         }
       ]
     }
