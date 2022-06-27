@@ -3694,7 +3694,7 @@
       "chineseTitle": "彌漫著不滿的夏季",
       "title": "A Summer of Discontent",
       "description": "Commonly known as the season of discontent, the accumulation of years of fighting for genuine democracy would reach a tipping point in 2019. The introduction of a controversial extradition bill would trigger an unprecedented sequence of protests that would permanently re-shape Hong&nbsp;Kong’s political landscape.",
-      "blurb": "The 2014 Umbrella Movement&rsquo;s quiet conclusion had Hong&nbsp;Kong people disillusioned about their intermediary position between two polarising regimes. However, beneath the feelings of discontentment and fatigue, remained a lingering sense of hope that Hong&nbsp;Kong could one day create a path towards genuine democracy.<br /><br />In 2019 a controversial extradition bill—in response to an unresolved murder—would provide an ideal moment to reignite the spirit of the pro-democracy movement. A re-kindled sense of solidarity would unite two million people in one last effort to save the region’s unique identity, leading to the most consequential sequence of protests in Hong&nbsp;Kong’s history.",
+      "blurb": "The 2014 Umbrella Movement&rsquo;s quiet conclusion had Hong&nbsp;Kong people disillusioned about their intermediary position between two polarising regimes. However, beneath the feelings of discontentment and fatigue, remained a lingering sense of hope that Hong&nbsp;Kong could one day create a path towards genuine democracy.</br><br>In 2019 a controversial extradition bill—in response to an unresolved murder—would provide an ideal moment to reignite the spirit of the pro-democracy movement. A re-kindled sense of solidarity would unite two million people in one last effort to save the region’s unique identity, leading to the most consequential sequence of protests in Hong&nbsp;Kong’s history.</br>",
       "scenes": [
         {
           "title": "A Sensational Crime",
@@ -6284,16 +6284,6 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "title": "Annette",
-          "pages": [
-            {
-              "type": "event",
-              "title": "Event",
-              "paragraphs": ["Annette", "Madeline", "Michael"]
             }
           ]
         }
