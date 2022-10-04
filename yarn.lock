@@ -1234,12 +1234,12 @@
     strip-json-comments "^3.1.1"
 
 "@fullpage/react-fullpage@^0.1.24":
-  version "0.1.24"
-  resolved "https://registry.yarnpkg.com/@fullpage/react-fullpage/-/react-fullpage-0.1.24.tgz#3629a71b370d83e9f3ec3ce15a08b8d5f6146207"
-  integrity sha512-1RST3+VhQ3NHn9YaYdHmfhFZrLEO/O2/DDzDrilZVciWkdDsbLQ48w261PDbgUG+VYin18Zu+4t7OF7wvoZZrg==
+  version "0.1.28"
+  resolved "https://registry.yarnpkg.com/@fullpage/react-fullpage/-/react-fullpage-0.1.28.tgz#3e9bc6bee57438a7b47d49b7209e1910631499ae"
+  integrity sha512-W33kXj4rqWhQyGGRcTC/giMaT6DCgsDJHg1Ht6BYXRgZxUkAcNyroSBOYNWTcxIRyJJGaUtaAOX6NYZpnjKyOg==
   dependencies:
     "@babel/polyfill" "^7.2.5"
-    fullpage.js "^4.0.7"
+    fullpage.js "^4.0.11"
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
@@ -4931,10 +4931,10 @@ fstream@^1.0.0, fstream@^1.0.12:
     mkdirp ">=0.5 0"
     rimraf "2"
 
-fullpage.js@^4.0.7:
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-4.0.7.tgz#43736f1bafdd5c11ed1ba14a8b1c215c1f25ba24"
-  integrity sha512-zSoft2+TdX7DbiQYI3koR87merpULVBJY2t7nZd7K0MX0/GjCs+CP+LI6t+8OZhe0fKcCdR+f+IKOFYIpoHM8A==
+fullpage.js@^4.0.11:
+  version "4.0.11"
+  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-4.0.11.tgz#a6679e1b66d55c5ca718f8b0fc8864a650a9145b"
+  integrity sha512-2YWG9mIfUqAPz8eFPHsSq/rMWT5xv+2C6dxQ6bljj1m31MgvhWNU3r+sa5+Ds35QThyrL3uo9RUPCxolp3SjuQ==
 
 function-bind@^1.1.1:
   version "1.1.1"
