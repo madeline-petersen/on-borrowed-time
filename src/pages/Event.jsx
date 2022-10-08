@@ -344,7 +344,8 @@ const Event = ({
                                     }`}
                                   >
                                     <p
-                                      className="large-headline-dynamic fade-first"
+                                      className={`large-headline-dynamic ${year.id ===
+                                        '2020' && 'text-white'} fade-first`}
                                       style={{ textIndent: getTextIndent() }}
                                     >
                                       {parse(paragraph)}
