@@ -13,11 +13,11 @@ const IndexResourceTable = ({
   borderColourClass
 }) => {
   let themeTextClass = 'text-black';
-  let themeBorderClass = 'border-black';
+  let themeBorderClass = 'border-pink';
 
   if (theme === 'white') {
     themeTextClass = 'text-white';
-    themeBorderClass = 'border-white';
+    themeBorderClass = 'border-pink';
   }
 
   if (textColourClass) {
@@ -68,7 +68,7 @@ const IndexResourceTable = ({
           <>
             <Col {...columns.tableWidth}>
               <p
-                className={`md:-ml-8 border-t ${themeBorderClass} border-opacity-50 pt-4 fade-second`}
+                className={`md:-ml-8 border-t ${themeBorderClass} pt-4 fade-second`}
               />
             </Col>
           </>
@@ -109,7 +109,7 @@ const IndexResourceTable = ({
                 <Col {...columns.tableWidth}>
                   <p
                     className={`md:-ml-8 ${index === 0 &&
-                      'border-t'} ${themeBorderClass} border-opacity-10 pt-4 fade-second`}
+                      'border-t'} ${themeBorderClass} pt-4 fade-second`}
                   />
                 </Col>
               </>

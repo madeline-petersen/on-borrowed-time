@@ -151,7 +151,7 @@ const Anecdote = ({
                           );
                         })}
                       <div className="h-12" />
-                      <p className="border-t border-black border-opacity-10 pb-5" />
+                      <p className="border-t border-pink pb-5" />
                       {postamble && (
                         <div className="small-body text-gray-90 mb-8">
                           {parse(postamble)}
@@ -222,7 +222,7 @@ const Anecdote = ({
                         );
                       })}
                     <div className="h-12" />
-                    <p className="border-t border-black border-opacity-10 pb-5" />
+                    <p className="border-t border-pink pb-5" />
                     {postamble && (
                       <div className="small-body text-gray-90 mb-8">
                         {parse(postamble)}
@@ -278,7 +278,7 @@ const Anecdote = ({
                         );
                       })}
                     <div className="h-12" />
-                    <p className="border-t border-black border-opacity-10 pb-5" />
+                    <p className="border-t border-pink pb-5" />
                     {postamble && (
                       <div className="small-body text-gray-90 mb-8">
                         {parse(postamble)}

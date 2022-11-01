@@ -35,6 +35,7 @@ module.exports = {
       })
     },
     colors: {
+      pink: '#FF69B4',
       white: '#FFFFFF',
       gray: {
         '10': '#F4F4F4',

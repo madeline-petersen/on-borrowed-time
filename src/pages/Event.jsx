@@ -193,7 +193,7 @@ const Event = ({
                                             md={10}
                                             sm={12}
                                             xs={12}
-                                            className="border-t border-white"
+                                            className="border-t border-pink"
                                           />
                                           <Col lg={1} md={2} />
                                           <Col lg={5} md={3} sm={12} xs={12}>

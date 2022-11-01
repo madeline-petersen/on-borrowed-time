@@ -20,7 +20,7 @@ const HiddenFooter = ({
   // colours
   textClasses
 }) => {
-  let borderClasses = 'border-white border-opacity-20';
+  let borderClasses = 'border-pink';
 
   const showBorder =
     (pageId === 'reflection' && changingParam === 'year') ||

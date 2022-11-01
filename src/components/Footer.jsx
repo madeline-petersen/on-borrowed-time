@@ -22,7 +22,7 @@ const Footer = ({
 }) => {
   let textClasses =
     'pb-4 pt-4 small-body text-white text-opacity-90 fade-in-element';
-  let borderClasses = 'border-t border-white border-opacity-20 fade-in-element';
+  let borderClasses = 'border-t border-pink fade-in-element';
 
   return (
     <>

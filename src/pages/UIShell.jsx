@@ -97,13 +97,13 @@ const UIShell = props => {
   };
 
   let borderColourClass = {
-    '1984': 'border-black',
-    '1989': 'border-gray-10',
-    '1997': 'border-blue-10',
-    '2003': 'border-black',
-    '2014': 'border-black',
-    '2019': 'border-black',
-    '2020': 'border-white'
+    '1984': 'border-pink',
+    '1989': 'border-pink',
+    '1997': 'border-pink',
+    '2003': 'border-pink',
+    '2014': 'border-pink',
+    '2019': 'border-pink',
+    '2020': 'border-pink'
   };
 
   const toggleLeftMenu = () => {
