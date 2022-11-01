@@ -142,17 +142,18 @@ const UIShell = props => {
     'reflection'
   ];
 
-  let timelineClasses = 'contrast-text mix-blend-difference';
-  const mixBlendMode = ['1989', '1997'].includes(props.year.id)
-    ? 'mix-blend-screen'
-    : 'mix-blend-difference';
+  let timelineClasses = 'contrast-text';
+  // const mixBlendMode = ['1989', '1997'].includes(props.year.id)
+  //   ? 'mix-blend-screen'
+  //   : 'mix-blend-difference';
+  const mixBlendMode = '';
 
   if (isMenuActive) {
     timelineClasses = `contrast-text ${mixBlendMode}`;
   }
 
   if (props.pageId === 'home') {
-    timelineClasses = 'contrast-text mix-blend-difference';
+    timelineClasses = 'contrast-text';
   }
 
   if (props.pageId === 'event') {

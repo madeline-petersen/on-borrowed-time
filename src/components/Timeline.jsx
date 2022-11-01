@@ -87,9 +87,9 @@ const Timeline = props => {
     <span
       className={cx('timeline medium-caption pb-5 h-screen contrast-text', {
         [colourClasses[props.year?.id]]: isEventPage && !hasLightText,
-        'image-background': isIntroPage || isHomePage,
-        'mix-blend-screen': hasLightText,
-        'mix-blend-difference': !hasLightText
+        'image-background': isIntroPage || isHomePage
+        // 'mix-blend-screen': hasLightText,
+        // 'mix-blend-difference': !hasLightText
       })}
     >
       <span className={cx('timeline__years absolute', [props.timelineClasses])}>
