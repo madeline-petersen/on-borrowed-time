@@ -129,30 +129,6 @@ div.highlight.dark {
   }
 }
 
-.bg-gray-30 {
-  div.highlight.dark:hover {
-    color: #6f6f6f; // gray-60
-  }
-}
-
-.bg-brown {
-  div.highlight.dark:hover {
-    color: #3f2f27; // dark brown
-  }
-}
-
-.bg-yellow {
-  div.highlight.dark:hover {
-    color: #68675f; // dark yellow
-  }
-}
-
-.bg-purple {
-  div.highlight.dark:hover {
-    color: #453f50; // dark purple
-  }
-}
-
 div.highlight.light {
   color: white;
   * {
@@ -163,24 +139,6 @@ div.highlight.light {
     // make sure span keeps this color
     color: white !important;
     cursor: pointer;
-  }
-}
-
-.bg-red {
-  div.highlight.light:hover {
-    color: #c7b1af; // light red
-  }
-}
-
-.bg-blue-50 {
-  div.highlight.light:hover {
-    color: #91add3; // light blue
-  }
-}
-
-.bg-black {
-  div.highlight.light:hover {
-    color: #bcb9b6; // gray-30
   }
 }
 
