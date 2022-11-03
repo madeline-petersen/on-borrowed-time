@@ -164,7 +164,8 @@ const Reflection = ({
                         next={next}
                         changingParam={changingParam}
                         textClasses={
-                          ['1989'].includes(year.id) || changingParam === 'year'
+                          ['1989', '1997'].includes(year.id) ||
+                          changingParam === 'year'
                             ? `text-white text-opacity-90`
                             : `text-black text-opacity-90`
                         }
