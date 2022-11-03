@@ -55,7 +55,7 @@ module.exports = {
       },
       black: '#000000',
       yellow: '#FBF8EE',
-      slate: '#191D23',
+      slate: '#17191E',
       brown: '#33262A',
       purple: '#E0D0E2'
     },
