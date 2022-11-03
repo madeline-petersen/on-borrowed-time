@@ -11,7 +11,7 @@ const Timeline = props => {
 
   let colourClasses = {
     '1984': 'gray-30',
-    '1989': 'red',
+    '1989': 'slate',
     '1997': 'blue-50',
     '2003': 'brown',
     '2014': 'yellow',

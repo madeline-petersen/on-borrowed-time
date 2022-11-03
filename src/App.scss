@@ -287,8 +287,8 @@ a {
     mix-blend-mode: difference;
   }
 
-  &.bg-red {
-    // color: #26282B;
+  &.bg-slate {
+    // color: #1F2227;
     transition: color 0.5s, opacity 1s;
     mix-blend-mode: screen;
   }
@@ -318,7 +318,7 @@ a {
   }
 
   &.bg-brown {
-    // color: #453439;
+    // color: #33262A;
     transition: color 0.5s, opacity 1s;
     mix-blend-mode: screen;
   }
