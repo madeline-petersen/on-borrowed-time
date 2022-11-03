@@ -54,10 +54,10 @@ module.exports = {
         '70': '#00244e'
       },
       black: '#000000',
-      yellow: '#F9FFD6',
+      yellow: '#FBF8EE',
       red: '#26282B',
       brown: '#453439',
-      purple: '#DBD2DC'
+      purple: '#E0D0E2'
     },
     screens: {
       sm: '375px',
