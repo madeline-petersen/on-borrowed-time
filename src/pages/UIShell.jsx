@@ -88,8 +88,8 @@ const UIShell = props => {
 
   let textColourClass = {
     '1984': 'text-black',
-    '1989': 'text-gray-10',
-    '1997': 'text-blue-10',
+    '1989': 'text-white',
+    '1997': 'text-black',
     '2003': 'text-black',
     '2014': 'text-black',
     '2019': 'text-black',
@@ -98,8 +98,8 @@ const UIShell = props => {
 
   let borderColourClass = {
     '1984': 'border-black',
-    '1989': 'border-gray-10',
-    '1997': 'border-blue-10',
+    '1989': 'border-white',
+    '1997': 'border-black',
     '2003': 'border-black',
     '2014': 'border-black',
     '2019': 'border-black',
@@ -143,7 +143,7 @@ const UIShell = props => {
   ];
 
   let timelineClasses = 'contrast-text mix-blend-difference';
-  const mixBlendMode = ['1989', '1997'].includes(props.year.id)
+  const mixBlendMode = ['1989'].includes(props.year.id)
     ? 'mix-blend-screen'
     : 'mix-blend-difference';
 

@@ -294,9 +294,9 @@ a {
   }
 
   &.bg-blue-50 {
-    // color: #003778;
+    color: #D6E6F7;
     transition: color 0.5s, opacity 1s;
-    mix-blend-mode: screen;
+    mix-blend-mode: difference;
   }
 
   &.bg-blue-70 {
