@@ -62,7 +62,7 @@ const Timeline = props => {
   const isEventPage = props.pageId === 'event';
   const isHomePage = props.pageId === 'home';
   const isIntroPage = props.pageId === 'intro';
-  const hasLightText = ['1989', '1997'].includes(props.year?.id);
+  const hasLightText = ['1989', '2003'].includes(props.year?.id);
   const currentYearSceneClasses = cx(
     'timeline__scenes pl-4 mb-2.5 contrast-text',
     {

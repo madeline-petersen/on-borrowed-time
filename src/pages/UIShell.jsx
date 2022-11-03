@@ -143,7 +143,7 @@ const UIShell = props => {
   ];
 
   let timelineClasses = 'contrast-text mix-blend-difference';
-  const mixBlendMode = ['1989', '1997'].includes(props.year.id)
+  const mixBlendMode = ['1989', '2003'].includes(props.year.id)
     ? 'mix-blend-screen'
     : 'mix-blend-difference';
 

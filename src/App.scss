@@ -318,9 +318,9 @@ a {
   }
 
   &.bg-brown {
-    color: #936753;
+    // color: #453439;
     transition: color 0.5s, opacity 1s;
-    mix-blend-mode: difference;
+    mix-blend-mode: screen;
   }
 }
 
