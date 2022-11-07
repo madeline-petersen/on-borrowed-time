@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@carbon/icons-react": "^10.31.0",
-    "@craco/craco": "^6.1.2",
+    "@craco/craco": "^6.4.5",
     "@fullpage/react-fullpage": "^0.1.24",
     "@sguest/roman-js": "^1.0.1",
     "@testing-library/jest-dom": "^5.11.6",
@@ -56,7 +56,7 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^9.8.8",
     "babel-eslint": "^10.0.3",
     "eslint": "^7.32.0",
     "eslint-config-babel": "^9.0.0",
@@ -68,9 +68,9 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-standard": "^4.0.1",
-    "postcss": "^7.0.36",
+    "postcss": "^8.4.18",
     "prettier": "^1.19.1",
     "sass": "^1.30.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
 }
