@@ -156,7 +156,7 @@ $xxl-minus-1: 1799px;
 
   &__scenes {
     // fade in blurb/scenes
-    top: calc(264px); // space between year title and blurb
+    top: calc(264px + 12px); // space between year title and blurb
 
     .scene-container {
       * {
