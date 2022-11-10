@@ -25,10 +25,10 @@ const Index = () => {
                   <Row className="grid__row">
                     <Col md={3} />
                     <Col md={6}>
-                      <div className="small-headline mb-12">
-                        A curated collection of articles, papers, and stories
-                        that contribute to shaping Hong Kong’s collective
-                        memory.
+                      <div className="large-headline-static mb-12">
+                        A curated collection of articles, academic journals{' '}
+                        <span>&</span> stories that contribute to shaping Hong
+                        Kong’s collective memory.
                       </div>
                     </Col>
                   </Row>

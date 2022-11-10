@@ -149,6 +149,10 @@ a {
   line-height: 1.2;
   letter-spacing: -0.03em;
 
+  span {
+    @extend .LyonDisplay-LightItalic-Web;
+  }
+
   // md
   @media screen and (max-width: $lg-minus-1) {
     font-size: 36px;
