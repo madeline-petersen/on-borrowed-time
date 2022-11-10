@@ -121,7 +121,7 @@ const Reflection = ({
                         <Row className="grid__row pb-48">
                           <Col lg={3} />
                           <Col lg={6} md={12}>
-                            <p className="pb-5 border-t border-white border-opacity-20 fade-second" />
+                            <p className="pb-5 border-t border-white border-opacity-10 fade-second" />
                             {reflection.citations.map(({ text, linkTo }) => {
                               return (
                                 <a

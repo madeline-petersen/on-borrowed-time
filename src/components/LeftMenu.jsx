@@ -151,7 +151,7 @@ const LeftMenu = ({
                       >
                         <Col lg={11} md={11} sm={11} xs={11}>
                           {/* dividing line */}
-                          <p className="border-t border-white border-opacity-20 pt-8" />
+                          <p className="border-t border-white border-opacity-10 pt-8" />
                         </Col>
                         {/* 1/4 of 4 columns */}
                         <Col lg={3} md={3} sm={2} xs={2} />
@@ -237,7 +237,7 @@ const LeftMenu = ({
                               }
                             >
                               <Col lg={11} md={11} sm={11} xs={11}>
-                                <p className="border-t border-white border-opacity-20 pt-4" />
+                                <p className="border-t border-white border-opacity-10 pt-4" />
                               </Col>
                               <Col lg={3} md={3} sm={2} xs={2}>
                                 <div
