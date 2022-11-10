@@ -104,7 +104,7 @@ const Header = ({
                   })}
                   onClick={() => navigateToUrl('info')}
                 >
-                  Info
+                  Intent
                 </p>
               </span>
             </Col>

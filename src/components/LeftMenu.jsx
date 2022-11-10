@@ -207,7 +207,7 @@ const LeftMenu = ({
                         {/* 3/4 of 4 columns */}
                         <Col lg={9} md={9} sm={10} xs={10}>
                           <div className="medium-body text-white cursor-pointer fit-content">
-                            Info
+                            Intent
                           </div>
                         </Col>
                       </Row>
