@@ -68,7 +68,7 @@ const IndexResourceTable = ({
           <>
             <Col {...columns.tableWidth}>
               <p
-                className={`md:-ml-8 border-t ${themeBorderClass} border-opacity-50 pt-4 fade-second`}
+                className={`border-t ${themeBorderClass} border-opacity-50 pt-4 fade-second`}
               />
             </Col>
           </>
@@ -108,7 +108,7 @@ const IndexResourceTable = ({
               <>
                 <Col {...columns.tableWidth}>
                   <p
-                    className={`md:-ml-8 ${index === 0 &&
+                    className={`${index === 0 &&
                       'border-t'} ${themeBorderClass} border-opacity-10 pt-4 fade-second`}
                   />
                 </Col>
