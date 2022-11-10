@@ -149,10 +149,6 @@ a {
   line-height: 1.2;
   letter-spacing: -0.03em;
 
-  span {
-    @extend .LyonDisplay-LightItalic-Web;
-  }
-
   // md
   @media screen and (max-width: $lg-minus-1) {
     font-size: 36px;
@@ -161,6 +157,18 @@ a {
   // sm, xs
   @media screen and (max-width: $md-minus-1) {
     font-size: 26px;
+  }
+}
+
+.event .large-headline-static {
+  span {
+    // highlight will go here
+  }
+}
+
+.Index .large-headline-static {
+  span {
+    @extend .LyonDisplay-LightItalic-Web;
   }
 }
 

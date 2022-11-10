@@ -181,7 +181,7 @@
 
 .timeline {
   border-left-width: 1px;
-  border-color: rgba(255, 255, 255, 0.15); // white, opacity 0.15
+  border-color: rgba(255, 255, 255, 0.10); // white, opacity 0.10
   transition: border-color 0.5s;
 
   &.image-background {
@@ -189,27 +189,27 @@
   }
 
   &.gray-30 {
-    border-color: rgba(203, 202, 196, 0.15);
+    border-color: rgba(203, 202, 196, 0.10);
   }
 
   &.slate {
-    border-color: rgba(23, 25, 30, 0.15);
+    border-color: rgba(23, 25, 30, 0.10);
   }
 
   &.blue-50 {
-    border-color: rgba(214, 230, 247, 0.15);
+    border-color: rgba(214, 230, 247, 0.10);
   }
 
   &.yellow {
-    border-color: rgba(251, 248, 238, 0.15);
+    border-color: rgba(251, 248, 238, 0.10);
   }
 
   &.purple {
-    border-color:rgba(224, 208, 226, 0.15);
+    border-color:rgba(224, 208, 226, 0.10);
   }
 
   &.brown {
-    border-color: rgba(51, 38, 42, 0.15);
+    border-color: rgba(51, 38, 42, 0.10);
   }
 }
 

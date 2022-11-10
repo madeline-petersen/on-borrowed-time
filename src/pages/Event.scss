@@ -123,8 +123,6 @@ div.highlight.dark {
   }
 
   span {
-    // make sure span keeps this color
-    color: black !important;
     cursor: pointer;
   }
 }
@@ -136,15 +134,13 @@ div.highlight.light {
   }
 
   span {
-    // make sure span keeps this color
-    color: white !important;
     cursor: pointer;
   }
 }
 
 .section-introduction {
   .border-t {
-    --tw-border-opacity: 0.15;
+    --tw-border-opacity: 0.10;
     padding-bottom: 30px;
   }
 }
