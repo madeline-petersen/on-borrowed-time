@@ -1,6 +1,5 @@
 import './IndexResourceTable.scss';
 
-import { ArrowUpRight16 } from '@carbon/icons-react';
 import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -132,7 +131,6 @@ const IndexResourceTable = ({
                     className={`${themeTextClass} text-opacity-100 flex fade-second`}
                   >
                     <div className="md:ml-0">{parse(entry.shortTitle)}</div>
-                    <ArrowUpRight16 className="inline-block ml-1" />
                   </p>
                 </Col>
 
