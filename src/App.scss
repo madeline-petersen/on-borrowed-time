@@ -88,7 +88,7 @@ $xxl-minus-1: 1799px;
     url('NotoSerifTC-Regular.eot') format('eot'),
     url('NotoSerifTC-Regular.ttf') format('truetype'),
     url('NotoSerifTC-Regular.svg') format('svg');
-  font-display: block;
+  font-display: swap;
 }
 
 @font-face {
@@ -99,7 +99,7 @@ $xxl-minus-1: 1799px;
     url('NotoSerifTC-Medium.eot') format('eot'),
     url('NotoSerifTC-Medium.ttf') format('truetype'),
     url('NotoSerifTC-Medium.svg') format('svg');
-  font-display: block;
+  font-display: swap;
 }
 
 @font-face {
@@ -110,7 +110,7 @@ $xxl-minus-1: 1799px;
     url('NotoSerifTC-SemiBold.eot') format('eot'),
     url('NotoSerifTC-SemiBold.ttf') format('truetype'),
     url('NotoSerifTC-SemiBold.svg') format('svg');
-  font-display: block;
+  font-display: swap;
 }
 
 a {
