@@ -143,7 +143,7 @@ const Event = ({
                       <div className="delayed-fade-in">
                         <Container className="grid__container">
                           <Row
-                            className={`grid__row intro-paragraph pb-24`}
+                            className={`grid__row intro-paragraph pb-12 lg:pb-24`}
                             id="event-paragraphs"
                           >
                             {event.paragraphs.map((paragraph, index) => {
@@ -177,7 +177,7 @@ const Event = ({
                             <section key={`section-${sectionIndex}`}>
                               <Container className="grid__container">
                                 <Row
-                                  className="grid__row intro-paragraph pb-24"
+                                  className="grid__row intro-paragraph pb-12 lg:pb-24"
                                   id={sectionId}
                                 >
                                   {section.paragraphs.map(
@@ -322,7 +322,7 @@ const Event = ({
                       <div className="delayed-fade-in">
                         <Container className="grid__container">
                           <Row
-                            className="grid__row intro-paragraph pb-24"
+                            className="grid__row intro-paragraph pb-12 lg:pb-24"
                             id="event-paragraphs"
                           >
                             {event.paragraphs.map((paragraph, index) => {
