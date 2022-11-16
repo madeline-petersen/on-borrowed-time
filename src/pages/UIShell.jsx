@@ -5,7 +5,7 @@ import cx from 'classnames/bind';
 import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { Visible } from 'react-grid-system';
+import { Hidden } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -311,25 +311,19 @@ const UIShell = props => {
       >
         {selectedYear !== null ? <ArrowLeft20 /> : <Close20 />}
       </span>
-      <Link
-        to="/home" // to do: change to "/" when homepage moves
-        className={cx('absolute z-40 medium-caption page-title', {
-          [timelineClasses]: true,
-          'opacity-100 cursor-pointer': showSiteTitle,
-          'opacity-0 pointer-events-none': !showSiteTitle,
-          'pointer-events-none': props.pageId === 'home'
-        })}
-      >
-        On{' '}
-        <Visible sm xs>
-          <br />
-        </Visible>
-        Borrowed{' '}
-        <Visible sm xs>
-          <br />
-        </Visible>
-        Time
-      </Link>
+      <Hidden sm xs>
+        <Link
+          to="/home" // to do: change to "/" when homepage moves
+          className={cx('absolute z-40 medium-caption page-title', {
+            [timelineClasses]: true,
+            'opacity-100 cursor-pointer': showSiteTitle,
+            'opacity-0 pointer-events-none': !showSiteTitle,
+            'pointer-events-none': props.pageId === 'home'
+          })}
+        >
+          On Borrowed Time
+        </Link>
+      </Hidden>
       {pagesWithTimeline.includes(props.pageId) && (
         <Timeline
           {...props}
