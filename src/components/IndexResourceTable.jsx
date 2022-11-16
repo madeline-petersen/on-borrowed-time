@@ -136,7 +136,9 @@ const IndexResourceTable = ({
 
                 {/* publication */}
                 <Col {...columns.publication} className="small-body">
-                  <p className={`${themeTextClass} resource-title fade-second`}>
+                  <p
+                    className={`${themeTextClass} resource-title text-opacity-70 fade-second`}
+                  >
                     {parse(
                       `${entry.bookTitle ? entry.bookTitle : entry.publication}`
                     )}
@@ -148,26 +150,24 @@ const IndexResourceTable = ({
                   {...columns.author}
                   className="small-body flex justify-between"
                 >
-                  <p className={`${themeTextClass} entry-type fade-second`}>
+                  <p
+                    className={`${themeTextClass} entry-type text-opacity-70 fade-second`}
+                  >
                     {entry.author}
+                    <Visible sm xs>
+                      , {entry.year}
+                    </Visible>
                   </p>
 
                   {/* hide right-aligned year on small and x-small screens */}
                   <Hidden sm xs>
-                    <p className={`${themeTextClass} fade-second`}>
+                    <p
+                      className={`${themeTextClass} text-opacity-70 fade-second`}
+                    >
                       {entry.year}
                     </p>
                   </Hidden>
                 </Col>
-
-                {/* stack year on small and x-small screens */}
-                <Visible sm xs>
-                  <Col {...columns.author} className="small-body">
-                    <p className={`${themeTextClass} fade-second`}>
-                      {entry.year}
-                    </p>
-                  </Col>
-                </Visible>
               </>
 
               <Col lg={12} className="pb-8" />
