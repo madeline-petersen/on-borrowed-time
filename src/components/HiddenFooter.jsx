@@ -42,7 +42,7 @@ const HiddenFooter = ({
       >
         <Col lg={1} className="cursor-default" />
         <Col lg={2} md={3} sm={3} xs={3}>
-          <p className={`small-body pb-4 pt-4 ${textClasses}`}>
+          <p className={`small-body pb-4 pt-4 sm:ml-8 md:ml-0 ${textClasses}`}>
             {/* current scene, next scene, next year */}
             {changingParam === 'year'
               ? nextParams.year
