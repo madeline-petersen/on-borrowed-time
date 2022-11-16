@@ -158,6 +158,10 @@ $xxl-minus-1: 1799px;
     // fade in blurb/scenes
     top: calc(264px + 12px); // space between year title and blurb
 
+    @media screen and (max-width: $md-minus-1) {
+      top: calc(264px + 4px); // space between year title and blurb
+    }
+
     .scene-container {
       * {
         transition: opacity 0.1s linear;

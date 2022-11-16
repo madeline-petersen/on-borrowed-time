@@ -28,12 +28,19 @@ const UIShell = props => {
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   const [transitionType, setTransitionType] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
+  const [isTextWhite, setIsTextWhite] = useState(
+    props.pageId === 'home' || props.pageId === 'intro'
+  );
   const [thematicThreadsBgWhite, setThematicThreadsBgWhite] = useState(
     // unless hash is white page, default to black
     window.location.hash.substring(1) === '1984-2003'
   );
   const [anecdoteData, setAnecdoteData] = useState({});
   const [isModalActive, setIsModalActive] = useState(false);
+
+  useEffect(() => {
+    setIsTextWhite(props.pageId === 'home' || props.pageId === 'intro');
+  }, [props.pageId]);
 
   let history = useHistory();
 
@@ -184,6 +191,7 @@ const UIShell = props => {
           navigateTo={navigateTo}
           imageBackgroundClass={imageBackgroundClasses[props.year.id]}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+          swapTextBeforePageChange={() => setIsTextWhite(false)}
           setTransitionType={setTransitionType}
         />
       );
@@ -268,6 +276,7 @@ const UIShell = props => {
         setBackgroundColor={setThematicThreadsBgWhite}
         thematicThreadsBgWhite={thematicThreadsBgWhite}
         timelineClasses={timelineClasses}
+        isTextWhite={isTextWhite}
       />
       <LeftMenu
         {...props}

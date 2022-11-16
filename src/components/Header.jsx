@@ -21,19 +21,18 @@ const Header = ({
   colourBackgroundClass,
   setBackgroundColor,
   thematicThreadsBgWhite,
-  timelineClasses
+  timelineClasses,
+  isTextWhite
 }) => {
   let history = useHistory();
   const navigateToUrl = url => {
     history.push(`/${url}`);
   };
 
-  const whiteText = pageId === 'home' || pageId === 'intro';
-
   return (
     <span
       className={cx('absolute w-full top-0 z-10 medium-caption', {
-        [timelineClasses]: !whiteText
+        [timelineClasses]: !isTextWhite
       })}
       id="header"
     >
@@ -45,8 +44,8 @@ const Header = ({
           <Col xl={6} lg={6} md={6} sm={12} xs={12}>
             <p
               className={cx({
-                'contrast-text': !whiteText,
-                'text-white': whiteText,
+                'contrast-text': !isTextWhite,
+                'text-white': isTextWhite,
                 'cursor-pointer': pageId !== 'intro',
                 [colourBackgroundClass]: pageId === 'event',
                 'pointer-events-none': pageId === 'intro'
@@ -67,8 +66,8 @@ const Header = ({
               <span className="hover:opacity-70 transition-all">
                 <p
                   className={cx('cursor-pointer float-left', {
-                    'contrast-text': !whiteText,
-                    'text-white': whiteText,
+                    'contrast-text': !isTextWhite,
+                    'text-white': isTextWhite,
                     [colourBackgroundClass]: pageId === 'event',
                     transparent: pageId === 'info' || pageId === 'threads',
                     'pointer-events-none': pageId === 'index' // no pointer events if already on index page
@@ -83,8 +82,8 @@ const Header = ({
               <span className="hover:opacity-70 transition-all">
                 <p
                   className={cx('cursor-pointer float-left', {
-                    'contrast-text': !whiteText,
-                    'text-white': whiteText,
+                    'contrast-text': !isTextWhite,
+                    'text-white': isTextWhite,
                     [colourBackgroundClass]: pageId === 'event',
                     transparent: pageId === 'info' || pageId === 'index',
                     'pointer-events-none': pageId === 'threads' // no pointer events if already on threads page
@@ -99,8 +98,8 @@ const Header = ({
               <span className="hover:opacity-70 transition-all">
                 <p
                   className={cx('cursor-pointer float-left', {
-                    'contrast-text': !whiteText,
-                    'text-white': whiteText,
+                    'contrast-text': !isTextWhite,
+                    'text-white': isTextWhite,
                     [colourBackgroundClass]: pageId === 'event',
                     transparent: pageId === 'threads' || pageId === 'index',
                     'pointer-events-none': pageId === 'info' // no pointer events if already on editor's note page
@@ -132,8 +131,8 @@ const Header = ({
                 className={cx(
                   'medium-caption scene-animation absolute top-0 pt-2',
                   {
-                    'contrast-text': !whiteText,
-                    'text-white': whiteText,
+                    'contrast-text': !isTextWhite,
+                    'text-white': isTextWhite,
                     [colourBackgroundClass]: pageId === 'event',
                     'fade-out': transitionType
                   }
@@ -146,8 +145,8 @@ const Header = ({
               <p
                 key={`${currentYear}-${romanSceneNumber}-title`}
                 className={cx('medium-caption pt-2 pb-5', {
-                  'contrast-text': !whiteText,
-                  'text-white': whiteText,
+                  'contrast-text': !isTextWhite,
+                  'text-white': isTextWhite,
                   [`title-animation ${colourBackgroundClass}`]:
                     pageId === 'event',
                   'cursor-pointer': pageId !== 'event',
@@ -183,7 +182,8 @@ Header.propTypes = {
   colourBackgroundClass: PropTypes.string,
   setBackgroundColor: PropTypes.func,
   thematicThreadsBgWhite: PropTypes.bool,
-  timelineClasses: PropTypes.string
+  timelineClasses: PropTypes.string,
+  isTextWhite: PropTypes.bool
 };
 
 export default Header;
