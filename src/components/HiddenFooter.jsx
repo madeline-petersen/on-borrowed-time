@@ -49,13 +49,13 @@ const HiddenFooter = ({
               : parse(`Scene&nbsp;${nextParams.scene}`)}
           </p>
         </Col>
-        <Col lg={2} md={2} sm={2} xs={2}>
+        <Col lg={8} md={8} sm={8} xs={8}>
           <p className={`small-body pb-4 pt-4 ${textClasses}`}>
             {/* next page, next scene, next year */}
             {parse(next.title)}
           </p>
         </Col>
-        <Col lg={7} md={7} sm={7} xs={7} className="flex justify-end">
+        <Col lg={1} md={1} sm={1} xs={1} className="flex justify-end">
           <p className={`pb-4 pt-4 ${textClasses}`}>
             {pageId === 'intro' ? <ArrowRight16 /> : <ArrowDown16 />}
           </p>
