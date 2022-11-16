@@ -175,6 +175,15 @@ a {
 .large-headline-dynamic {
   @extend .large-headline-static;
   font-size: clamp(1.5rem, 3vw, 3rem);
+
+  &__small {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+}
+
+.large-headline-dynamic-small {
+  @extend .large-headline-dynamic;
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .medium-headline {
@@ -311,7 +320,7 @@ a {
   }
 
   &.bg-blue-50 {
-    color: #D6E6F7;
+    color: #d6e6f7;
     transition: color 0.5s, opacity 1s;
     mix-blend-mode: difference;
   }
@@ -323,13 +332,13 @@ a {
   }
 
   &.bg-yellow {
-    color: #FBF8EE;
+    color: #fbf8ee;
     transition: color 0.5s, opacity 1s;
     mix-blend-mode: difference;
   }
 
   &.bg-purple {
-    color: #E0D0E2;
+    color: #e0d0e2;
     transition: color 0.5s, opacity 1s;
     mix-blend-mode: difference;
   }

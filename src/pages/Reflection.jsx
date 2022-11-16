@@ -86,7 +86,7 @@ const Reflection = ({
                               >
                                 <Col lg={1} />
                                 <Col lg={11} md={12}>
-                                  <p className="medium-headline text-white fade-first">
+                                  <p className="large-headline-dynamic-small text-white fade-first">
                                     {parse(paragraph)}
                                   </p>
                                   <br />
