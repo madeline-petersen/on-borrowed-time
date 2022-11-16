@@ -37,7 +37,6 @@ const Intro = ({
 
   const onSignalToLeave = fullpageApi => {
     fullpageApi.moveSectionDown();
-    swapTextBeforePageChange();
   };
 
   return (
@@ -47,6 +46,7 @@ const Intro = ({
           licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
+          onLeave={() => swapTextBeforePageChange()}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
