@@ -93,7 +93,6 @@ const Event = props => {
   };
 
   const onLeave = (origin, destination, direction) => {
-    console.log('leaving');
     if (isModalActive) {
       return false;
     }
@@ -104,11 +103,9 @@ const Event = props => {
 
     if (element) {
       if (element.classList.contains('show')) {
-        console.log('true');
         return true;
       } else {
         element.classList.add('show');
-        console.log('false');
         return false;
       }
     }
