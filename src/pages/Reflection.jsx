@@ -66,7 +66,7 @@ const Reflection = ({
           licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
-          onLeave={throttle(onLeave, 1000)}
+          onLeave={throttle(onLeave, 5000, { leading: true })}
           scrollOverflow={true}
           paddingTop="78px"
           render={({ state, fullpageApi }) => {
