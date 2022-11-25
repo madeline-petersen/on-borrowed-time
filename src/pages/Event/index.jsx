@@ -111,6 +111,12 @@ const Event = props => {
     }
   };
 
+  const generateKey = () => {
+    return nextParams.year
+      ? `event-${nextParams.year}-${nextParams.scene}-${nextParams.page}`
+      : `event-${nextParams.scene}-${nextParams.page}`;
+  };
+
   setTimeout(() => {
     const header = document.getElementById('header');
     if (header) {
@@ -124,8 +130,11 @@ const Event = props => {
         headerHeight={headerHeight}
         getTextIndent={getTextIndent}
         getFilteredMatches={getFilteredMatches}
+        afterLoad={afterLoad}
         setOnClicks={setOnClicks}
+        onLeave={onLeave}
         openModal={openModal}
+        generateKey={generateKey}
         {...props}
       />
     );
@@ -139,6 +148,7 @@ const Event = props => {
         onLeave={onLeave}
         openModal={openModal}
         setOnClicks={setOnClicks}
+        generateKey={generateKey}
         {...props}
       />
     );

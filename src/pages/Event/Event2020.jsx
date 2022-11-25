@@ -2,29 +2,39 @@ import './Event.scss';
 
 import ReactFullpage from '@fullpage/react-fullpage';
 import parse from 'html-react-parser';
+import { throttle } from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Container, Row } from 'react-grid-system';
 
+import HiddenFooter from '../../components/HiddenFooter';
 import ResourceTable from '../../components/ResourceTable';
 
 const Event = ({
   event,
+  nextParams,
+  changingParam,
+  next,
   headerHeight,
   colourBackgroundClass,
   textColourClass,
   borderColourClass,
   getFilteredMatches,
   getTextIndent,
+  onLeave,
+  afterLoad,
   openModal,
-  setOnClicks
+  setOnClicks,
+  generateKey
 }) => {
   return (
     <>
-      <div className="event" key={`event-2020`}>
+      <div className="event" key={() => generateKey()}>
         <ReactFullpage
           licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
           scrollingSpeed={1000}
+          onLeave={throttle(onLeave, 1000)}
+          afterLoad={afterLoad}
           scrollOverflow={true}
           lazyLoading={false}
           paddingTop={headerHeight}
@@ -183,6 +193,22 @@ const Event = ({
                       <div className="pb-16" />
                     </div>
                   )}
+                  <div className="hidden-footer__container bg-black">
+                    {nextParams && (
+                      <HiddenFooter
+                        pageId="event"
+                        nextParams={nextParams}
+                        next={next}
+                        changingParam={changingParam}
+                        textClasses="text-white text-opacity-90"
+                      />
+                    )}
+                  </div>
+                </div>
+                <div className="section w-full bg-black">
+                  <Container className="grid__container">
+                    <Row className="grid__row h-screen" />
+                  </Container>
                 </div>
               </ReactFullpage.Wrapper>
             );
@@ -199,10 +225,16 @@ Event.propTypes = {
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
+  next: PropTypes.shape(),
+  nextParams: PropTypes.shape(),
+  afterLoad: PropTypes.func,
+  changingParam: PropTypes.string,
+  onLeave: PropTypes.func,
   getTextIndent: PropTypes.func,
   openModal: PropTypes.func,
   getFilteredMatches: PropTypes.func,
-  setOnClicks: PropTypes.func
+  setOnClicks: PropTypes.func,
+  generateKey: PropTypes.func
 };
 
 export default Event;

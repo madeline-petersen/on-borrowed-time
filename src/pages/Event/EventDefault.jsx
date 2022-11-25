@@ -25,14 +25,12 @@ const Event = ({
   getTextIndent,
   afterLoad,
   onLeave,
-  setOnClicks
+  setOnClicks,
+  generateKey
 }) => {
   return (
     <>
-      <div
-        className="event"
-        key={`event-${nextParams.year}-${nextParams.scene}-${nextParams.page}`}
-      >
+      <div className="event" key={() => generateKey()}>
         <ReactFullpage
           licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
           scrollingSpeed={1000}
@@ -142,7 +140,8 @@ Event.propTypes = {
   getTextIndent: PropTypes.func,
   openModal: PropTypes.func,
   onLeave: PropTypes.func,
-  setOnClicks: PropTypes.func
+  setOnClicks: PropTypes.func,
+  generateKey: PropTypes.func
 };
 
 export default Event;
