@@ -189,8 +189,8 @@ const Event = ({
                         );
                       })}
 
-                      {/* padding below last resource table */}
-                      <div className="pb-16" />
+                      {/* padding below last caption */}
+                      <div className="pb-48" />
                     </div>
                   )}
                   <div className="hidden-footer__container bg-black">
