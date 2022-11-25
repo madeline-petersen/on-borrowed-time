@@ -15,7 +15,7 @@ import LeftMenu from '../components/LeftMenu';
 import Timeline from '../components/Timeline';
 import Artifacts from './Artifacts.jsx';
 import EditorsNote from './EditorsNote';
-import Event from './Event.jsx';
+import Event from './Event/';
 import Home from './Home.jsx';
 import Index from './Index.jsx';
 import Intro from './Intro.jsx';
