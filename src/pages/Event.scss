@@ -129,7 +129,7 @@ div.highlight.dark {
 
 @keyframes highlight {
   from {
-    background-position: 0;
+    background-position: -0% 0;
   }
 
   to {
@@ -165,7 +165,7 @@ div.highlight span:hover {
   text-decoration: none;
   transition: background-position 0.5s ease-out;
   background-position: -99.99% 0;
-  filter: saturate(50);
+  filter: saturate(80);
 }
 
 .section-introduction {
