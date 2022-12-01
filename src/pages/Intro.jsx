@@ -14,6 +14,7 @@ const Intro = ({
   imageBackgroundClass,
   colourBackgroundClass,
   setTransitionType,
+  swapTextBeforePageChange,
   nextParams
 }) => {
   useEffect(() => {
@@ -34,13 +35,18 @@ const Intro = ({
     }
   };
 
+  const onSignalToLeave = fullpageApi => {
+    fullpageApi.moveSectionDown();
+  };
+
   return (
     <>
       <div className="intro foreground-fade-in" key={`intro-${year.id}`}>
         <ReactFullpage
-          licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
+          licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
+          beforeLeave={() => swapTextBeforePageChange()}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
@@ -48,7 +54,7 @@ const Intro = ({
                   className={`section hero-image cursor-pointer ${imageBackgroundClass}`}
                   key={year.id}
                   id={year.id}
-                  onClick={() => fullpageApi.moveSectionDown()}
+                  onClick={() => onSignalToLeave(fullpageApi)}
                 >
                   <div
                     key={`gradient-transition-${year.id}`}
@@ -71,7 +77,7 @@ const Intro = ({
                           nextParams={nextParams}
                           next={year.scenes[0]}
                           changingParam="scene"
-                          onClick={() => fullpageApi.moveSectionDown()}
+                          onClick={() => onSignalToLeave(fullpageApi)}
                         />
                       </Container>
                     </div>
@@ -97,6 +103,7 @@ Intro.propTypes = {
   imageBackgroundClass: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
   setTransitionType: PropTypes.func,
+  swapTextBeforePageChange: PropTypes.func,
   nextParams: PropTypes.shape()
 };
 

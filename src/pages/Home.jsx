@@ -13,7 +13,7 @@ const pluginWrapper = () => {
 };
 
 const Home = ({ years, hash, setHash, setTransitionType, navigateTo }) => {
-  const onLeave = (origin, destination, direction) => {
+  const beforeLeave = (origin, destination, direction) => {
     const destinationYear = years[destination.index].id;
     setHash(destinationYear);
     if (history.pushState) {
@@ -66,7 +66,7 @@ const Home = ({ years, hash, setHash, setTransitionType, navigateTo }) => {
       </Helmet>
       <div className="h-screen w-screen absolute bg-black z-10" />
       <ReactFullpage
-        licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
+        licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
         pluginWrapper={pluginWrapper}
         scrollingSpeed={1000}
         parallax={true}
@@ -79,7 +79,7 @@ const Home = ({ years, hash, setHash, setTransitionType, navigateTo }) => {
           'T0NhR3N0YjI1aWIzSnliM2RsWkhScGJXVXVZMjl0QU9fYklqY0dGeVlXeHNZWGc9cG5s'
         }
         continuousVertical={true}
-        onLeave={onLeave}
+        beforeLeave={beforeLeave}
         afterLoad={afterLoad}
         render={({ state, fullpageApi }) => {
           return (

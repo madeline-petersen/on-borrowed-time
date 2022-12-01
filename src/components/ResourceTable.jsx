@@ -4,7 +4,7 @@ import { ArrowUpRight16 } from '@carbon/icons-react';
 import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
-import { Col, Hidden, Row } from 'react-grid-system';
+import { Col, Hidden, Row, Visible } from 'react-grid-system';
 
 const ResourceTable = ({
   theme,
@@ -50,17 +50,17 @@ const ResourceTable = ({
     title: {
       lg: 4,
       md: 4,
-      sm: 4
+      sm: 12
     },
     publication: {
       lg: 3,
       md: 3,
-      sm: 4
+      sm: 12
     },
     author: {
       lg: 2,
       md: 3,
-      sm: 4
+      sm: 12
     }
   };
 
@@ -78,17 +78,17 @@ const ResourceTable = ({
     title: {
       lg: 5,
       md: 4,
-      sm: 4
+      sm: 12
     },
     publication: {
       lg: 4,
       md: 3,
-      sm: 4
+      sm: 12
     },
     author: {
       lg: 2,
       md: 3,
-      sm: 4
+      sm: 12
     }
   };
 
@@ -122,12 +122,12 @@ const ResourceTable = ({
                   <p
                     className={`${themeTextClass} text-opacity-100 flex fade-second`}
                   >
-                    {index < matches.length && (
-                      <span className="absolute md:-ml-8">{index + 1}</span>
-                    )}
-                    <div className="sm:ml-8 md:ml-0">
-                      {parse(entry.shortTitle)}
-                    </div>
+                    <Hidden sm xs>
+                      {index < matches.length && (
+                        <span className="absolute md:-ml-8">{index + 1}</span>
+                      )}
+                    </Hidden>
+                    <div className="md:ml-0">{parse(entry.shortTitle)}</div>
                     {!entry.content && (
                       <ArrowUpRight16 className="inline-block ml-1" />
                     )}
@@ -161,12 +161,17 @@ const ResourceTable = ({
                     ].includes(entry.type)
                       ? entry.publication
                       : entry.type}
+                    <Visible sm xs>
+                      , {entry.year}
+                    </Visible>
                   </p>
-                  <p
-                    className={`${themeTextClass} text-opacity-70 fade-second`}
-                  >
-                    {entry.year}
-                  </p>
+                  <Hidden sm xs>
+                    <p
+                      className={`${themeTextClass} text-opacity-70 fade-second`}
+                    >
+                      {entry.year}
+                    </p>
+                  </Hidden>
                 </Col>
               </>
 

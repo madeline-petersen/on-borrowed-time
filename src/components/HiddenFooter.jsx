@@ -24,6 +24,7 @@ const HiddenFooter = ({
 
   const showBorder =
     (pageId === 'reflection' && changingParam === 'year') ||
+    (nextParams.year === '2020' && nextParams.scene === 'II') ||
     pageId === 'artifacts';
 
   return (

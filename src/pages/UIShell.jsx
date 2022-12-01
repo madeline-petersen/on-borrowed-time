@@ -5,7 +5,7 @@ import cx from 'classnames/bind';
 import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { Visible } from 'react-grid-system';
+import { Hidden } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ import LeftMenu from '../components/LeftMenu';
 import Timeline from '../components/Timeline';
 import Artifacts from './Artifacts.jsx';
 import EditorsNote from './EditorsNote';
-import Event from './Event.jsx';
+import Event from './Event/';
 import Home from './Home.jsx';
 import Index from './Index.jsx';
 import Intro from './Intro.jsx';
@@ -28,12 +28,19 @@ const UIShell = props => {
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
   const [transitionType, setTransitionType] = useState(null);
   const [selectedYear, setSelectedYear] = useState(null);
+  const [isTextWhite, setIsTextWhite] = useState(
+    props.pageId === 'home' || props.pageId === 'intro'
+  );
   const [thematicThreadsBgWhite, setThematicThreadsBgWhite] = useState(
     // unless hash is white page, default to black
     window.location.hash.substring(1) === '1984-2003'
   );
   const [anecdoteData, setAnecdoteData] = useState({});
   const [isModalActive, setIsModalActive] = useState(false);
+
+  useEffect(() => {
+    setIsTextWhite(props.pageId === 'home' || props.pageId === 'intro');
+  }, [props.pageId]);
 
   let history = useHistory();
 
@@ -184,6 +191,7 @@ const UIShell = props => {
           navigateTo={navigateTo}
           imageBackgroundClass={imageBackgroundClasses[props.year.id]}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+          swapTextBeforePageChange={() => setIsTextWhite(false)}
           setTransitionType={setTransitionType}
         />
       );
@@ -268,6 +276,7 @@ const UIShell = props => {
         setBackgroundColor={setThematicThreadsBgWhite}
         thematicThreadsBgWhite={thematicThreadsBgWhite}
         timelineClasses={timelineClasses}
+        isTextWhite={isTextWhite}
       />
       <LeftMenu
         {...props}
@@ -311,25 +320,19 @@ const UIShell = props => {
       >
         {selectedYear !== null ? <ArrowLeft20 /> : <Close20 />}
       </span>
-      <Link
-        to="/home" // to do: change to "/" when homepage moves
-        className={cx('absolute z-40 medium-caption page-title', {
-          [timelineClasses]: true,
-          'opacity-100 cursor-pointer': showSiteTitle,
-          'opacity-0 pointer-events-none': !showSiteTitle,
-          'pointer-events-none': props.pageId === 'home'
-        })}
-      >
-        On{' '}
-        <Visible sm xs>
-          <br />
-        </Visible>
-        Borrowed{' '}
-        <Visible sm xs>
-          <br />
-        </Visible>
-        Time
-      </Link>
+      <Hidden sm xs>
+        <Link
+          to="/home" // to do: change to "/" when homepage moves
+          className={cx('absolute z-40 medium-caption page-title', {
+            [timelineClasses]: true,
+            'opacity-100 cursor-pointer': showSiteTitle,
+            'opacity-0 pointer-events-none': !showSiteTitle,
+            'pointer-events-none': props.pageId === 'home'
+          })}
+        >
+          On Borrowed Time
+        </Link>
+      </Hidden>
       {pagesWithTimeline.includes(props.pageId) && (
         <Timeline
           {...props}

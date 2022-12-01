@@ -125,15 +125,12 @@ const Timeline = props => {
                   hide: !yearIsActive(year)
                 })}
               />
-              <span
-                key="intro-dot"
-                className={cx('circle-container cursor-pointer')}
-                onClick={() => onClickYear(year)}
-              >
+              <span key="intro-dot" className={cx('circle-container')}>
                 <span
-                  className={cx('dot mt-1', {
+                  className={cx('dot mt-1 cursor-pointer', {
                     [colourClasses[year.id]]: isEventPage && !hasLightText
                   })}
+                  onClick={() => onClickYear(year)}
                 />
               </span>
 
@@ -161,18 +158,18 @@ const Timeline = props => {
                 // dot, hover title
                 <span
                   key={`scene-dot-${index}`}
-                  className={cx('circle-container cursor-pointer')}
+                  className={cx('circle-container')}
                   style={{
                     marginTop: `${
                       isCurrentYear(year) ? `calc((${index + 1} * 24px))` : '0'
                     }`
                   }}
-                  onClick={() => onClickScene(index)}
                 >
                   <span
-                    className={cx('dot mt-1', {
+                    className={cx('dot mt-1 cursor-pointer', {
                       [colourClasses[year.id]]: isEventPage && !hasLightText
                     })}
+                    onClick={() => onClickScene(index)}
                   >
                     {isCurrentYear(year) && (
                       <span

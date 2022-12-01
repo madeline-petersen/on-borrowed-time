@@ -35,7 +35,7 @@ const Artifacts = ({
     }
   };
 
-  const onLeave = (origin, destination, direction) => {
+  const beforeLeave = (origin, destination, direction) => {
     const element = document.getElementsByClassName(
       'hidden-footer__container'
     )[0];
@@ -64,10 +64,10 @@ const Artifacts = ({
         key={`artifacts-${nextParams.year}-${nextParams.scene}-${nextParams.page}`}
       >
         <ReactFullpage
-          licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
+          licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
-          onLeave={throttle(onLeave, 1000)}
+          beforeLeave={throttle(beforeLeave, 1000)}
           scrollOverflow={true}
           lazyLoading={false}
           paddingTop={headerHeight}
@@ -97,15 +97,15 @@ const Artifacts = ({
                       </>
                     )}
                   </Container>
-                  <div className="hidden-footer__container bg-black">
-                    <HiddenFooter
-                      pageId="artifacts"
-                      nextParams={nextParams}
-                      next={next}
-                      changingParam={changingParam}
-                      textClasses="text-white text-opacity-90"
-                    />
-                  </div>
+                </div>
+                <div className="hidden-footer__container bg-black">
+                  <HiddenFooter
+                    pageId="artifacts"
+                    nextParams={nextParams}
+                    next={next}
+                    changingParam={changingParam}
+                    textClasses="text-white text-opacity-90"
+                  />
                 </div>
                 <div className="section w-full bg-black">
                   <Container className="grid__container">
