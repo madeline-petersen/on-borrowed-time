@@ -63,7 +63,7 @@ const Reflection = ({
         key={`reflection-${nextParams.year}-${nextParams.scene}-${nextParams.page}`}
       >
         <ReactFullpage
-          licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
+          licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
           onLeave={throttle(onLeave, 1000)}
