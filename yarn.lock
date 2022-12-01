@@ -1234,12 +1234,12 @@
     strip-json-comments "^3.1.1"
 
 "@fullpage/react-fullpage@^0.1.24":
-  version "0.1.28"
-  resolved "https://registry.yarnpkg.com/@fullpage/react-fullpage/-/react-fullpage-0.1.28.tgz#3e9bc6bee57438a7b47d49b7209e1910631499ae"
-  integrity sha512-W33kXj4rqWhQyGGRcTC/giMaT6DCgsDJHg1Ht6BYXRgZxUkAcNyroSBOYNWTcxIRyJJGaUtaAOX6NYZpnjKyOg==
+  version "0.1.31"
+  resolved "https://registry.yarnpkg.com/@fullpage/react-fullpage/-/react-fullpage-0.1.31.tgz#98a73e3572791699a661effa96ea4f9878200e73"
+  integrity sha512-pHjH6zj7E0oz8ziGGF9BR3fKN5E+mHtlrdaRC9Zgnj16NUEWe6PMn0os6bsjIaz3Y2EiBRBknAbWeUrxLuR+wg==
   dependencies:
     "@babel/polyfill" "^7.2.5"
-    fullpage.js "^4.0.11"
+    fullpage.js "^4.0.15"
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
@@ -4931,10 +4931,10 @@ fstream@^1.0.0, fstream@^1.0.12:
     mkdirp ">=0.5 0"
     rimraf "2"
 
-fullpage.js@^4.0.11:
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-4.0.11.tgz#a6679e1b66d55c5ca718f8b0fc8864a650a9145b"
-  integrity sha512-2YWG9mIfUqAPz8eFPHsSq/rMWT5xv+2C6dxQ6bljj1m31MgvhWNU3r+sa5+Ds35QThyrL3uo9RUPCxolp3SjuQ==
+fullpage.js@^4.0.15:
+  version "4.0.15"
+  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-4.0.15.tgz#dee9ba9b658bc42a35f794ae2297c492d7c7bb2c"
+  integrity sha512-OKyGyIY4Qlz47AmnYoJ9Kn2XzOyAufTSgkQqa+K2RENeTbmUoctFDX/Ox1LOdacsUNsYKvnty1lrKKYJNEB2Pw==
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -8545,7 +8545,12 @@ regenerate@^1.4.2:
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.2.tgz#b9346d8827e8f5a32f7ba29637d398b69014848a"
   integrity sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==
 
-regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.9:
+regenerator-runtime@^0.13.4:
+  version "0.13.11"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
+  integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
+
+regenerator-runtime@^0.13.9:
   version "0.13.9"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
   integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==

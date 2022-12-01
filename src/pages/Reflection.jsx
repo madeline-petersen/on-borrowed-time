@@ -41,7 +41,7 @@ const Reflection = ({
     }
   };
 
-  const onLeave = function(origin, destination, direction) {
+  const beforeLeave = function(origin, destination, direction) {
     const element = document.getElementsByClassName(
       'hidden-footer__container'
     )[0];
@@ -63,10 +63,10 @@ const Reflection = ({
         key={`reflection-${nextParams.year}-${nextParams.scene}-${nextParams.page}`}
       >
         <ReactFullpage
-          licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
+          licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
-          onLeave={throttle(onLeave, 1000)}
+          beforeLeave={throttle(beforeLeave, 1000)}
           scrollOverflow={true}
           paddingTop="78px"
           render={({ state, fullpageApi }) => {
@@ -150,29 +150,29 @@ const Reflection = ({
                       )}
                     </div>
                   </Container>
-                  {next && (
-                    <div
-                      className={`hidden-footer__container ${
-                        changingParam === 'year'
-                          ? 'bg-black'
-                          : colourBackgroundClass
-                      }`}
-                    >
-                      <HiddenFooter
-                        pageId="reflection"
-                        nextParams={nextParams}
-                        next={next}
-                        changingParam={changingParam}
-                        textClasses={
-                          ['1989', '2003'].includes(year.id) ||
-                          changingParam === 'year'
-                            ? `text-white text-opacity-90`
-                            : `text-black text-opacity-90`
-                        }
-                      />
-                    </div>
-                  )}
                 </div>
+                {next && (
+                  <div
+                    className={`hidden-footer__container ${
+                      changingParam === 'year'
+                        ? 'bg-black'
+                        : colourBackgroundClass
+                    }`}
+                  >
+                    <HiddenFooter
+                      pageId="reflection"
+                      nextParams={nextParams}
+                      next={next}
+                      changingParam={changingParam}
+                      textClasses={
+                        ['1989', '2003'].includes(year.id) ||
+                        changingParam === 'year'
+                          ? `text-white text-opacity-90`
+                          : `text-black text-opacity-90`
+                      }
+                    />
+                  </div>
+                )}
                 {changingParam === 'year' ? (
                   <div
                     className={`section h-screen next-image-class ${imageBackgroundClass}`}

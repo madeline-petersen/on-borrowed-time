@@ -24,7 +24,7 @@ const Event = ({
   openModal,
   getTextIndent,
   afterLoad,
-  onLeave,
+  beforeLeave,
   setOnClicks,
   generateKey
 }) => {
@@ -32,10 +32,10 @@ const Event = ({
     <>
       <div className="event" key={() => generateKey()}>
         <ReactFullpage
-          licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
+          licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
-          onLeave={throttle(onLeave, 1000)}
+          beforeLeave={throttle(beforeLeave, 1000)}
           scrollOverflow={true}
           lazyLoading={false}
           paddingTop={headerHeight}
@@ -99,17 +99,17 @@ const Event = ({
                       <div className="pb-44" />
                     </div>
                   )}
-                  <div className="hidden-footer__container bg-black">
-                    {nextParams && (
-                      <HiddenFooter
-                        pageId="event"
-                        nextParams={nextParams}
-                        next={next}
-                        changingParam={changingParam}
-                        textClasses="text-white text-opacity-90"
-                      />
-                    )}
-                  </div>
+                </div>
+                <div className="hidden-footer__container bg-black">
+                  {nextParams && (
+                    <HiddenFooter
+                      pageId="event"
+                      nextParams={nextParams}
+                      next={next}
+                      changingParam={changingParam}
+                      textClasses="text-white text-opacity-90"
+                    />
+                  )}
                 </div>
                 <div className="section w-full bg-black">
                   <Container className="grid__container">
@@ -139,7 +139,7 @@ Event.propTypes = {
   afterLoad: PropTypes.func,
   getTextIndent: PropTypes.func,
   openModal: PropTypes.func,
-  onLeave: PropTypes.func,
+  beforeLeave: PropTypes.func,
   setOnClicks: PropTypes.func,
   generateKey: PropTypes.func
 };

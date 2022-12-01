@@ -21,7 +21,7 @@ const Event = ({
   borderColourClass,
   getFilteredMatches,
   getTextIndent,
-  onLeave,
+  beforeLeave,
   afterLoad,
   openModal,
   setOnClicks,
@@ -31,9 +31,9 @@ const Event = ({
     <>
       <div className="event" key={() => generateKey()}>
         <ReactFullpage
-          licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
+          licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
           scrollingSpeed={1000}
-          onLeave={throttle(onLeave, 1000)}
+          beforeLeave={throttle(beforeLeave, 1000)}
           afterLoad={afterLoad}
           scrollOverflow={true}
           lazyLoading={false}
@@ -193,17 +193,17 @@ const Event = ({
                       <div className="pb-48" />
                     </div>
                   )}
-                  <div className="hidden-footer__container bg-black">
-                    {nextParams && (
-                      <HiddenFooter
-                        pageId="event"
-                        nextParams={nextParams}
-                        next={next}
-                        changingParam={changingParam}
-                        textClasses="text-white text-opacity-90"
-                      />
-                    )}
-                  </div>
+                </div>
+                <div className="hidden-footer__container bg-black">
+                  {nextParams && (
+                    <HiddenFooter
+                      pageId="event"
+                      nextParams={nextParams}
+                      next={next}
+                      changingParam={changingParam}
+                      textClasses="text-white text-opacity-90"
+                    />
+                  )}
                 </div>
                 <div className="section w-full bg-black">
                   <Container className="grid__container">
@@ -229,7 +229,7 @@ Event.propTypes = {
   nextParams: PropTypes.shape(),
   afterLoad: PropTypes.func,
   changingParam: PropTypes.string,
-  onLeave: PropTypes.func,
+  beforeLeave: PropTypes.func,
   getTextIndent: PropTypes.func,
   openModal: PropTypes.func,
   getFilteredMatches: PropTypes.func,

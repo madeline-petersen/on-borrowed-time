@@ -43,10 +43,10 @@ const Intro = ({
     <>
       <div className="intro foreground-fade-in" key={`intro-${year.id}`}>
         <ReactFullpage
-          licenseKey={'7K067-1U2MK-3MUI9-JIYX7-UXLKN'}
+          licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
-          onLeave={() => swapTextBeforePageChange()}
+          beforeLeave={() => swapTextBeforePageChange()}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
