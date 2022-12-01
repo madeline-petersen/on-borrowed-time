@@ -166,7 +166,8 @@ a {
   }
 }
 
-.Index .large-headline-static {
+.Index .large-headline-static,
+.Index .section-title {
   span {
     @extend .LyonDisplay-LightItalic-Web;
   }

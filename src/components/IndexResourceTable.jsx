@@ -120,7 +120,7 @@ const IndexResourceTable = ({
                 >
                   {index === 0 && (
                     <p>
-                      {section.sectionTitle}(
+                      {parse(section.sectionTitle)}(
                       {parse(section.resources.length.toString())})
                     </p>
                   )}
