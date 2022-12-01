@@ -24,7 +24,7 @@ const Event = ({
   openModal,
   getTextIndent,
   afterLoad,
-  onLeave,
+  beforeLeave,
   setOnClicks,
   generateKey
 }) => {
@@ -35,7 +35,7 @@ const Event = ({
           licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
-          onLeave={throttle(onLeave, 1000)}
+          beforeLeave={throttle(beforeLeave, 1000)}
           scrollOverflow={true}
           lazyLoading={false}
           paddingTop={headerHeight}
@@ -139,7 +139,7 @@ Event.propTypes = {
   afterLoad: PropTypes.func,
   getTextIndent: PropTypes.func,
   openModal: PropTypes.func,
-  onLeave: PropTypes.func,
+  beforeLeave: PropTypes.func,
   setOnClicks: PropTypes.func,
   generateKey: PropTypes.func
 };

@@ -13,7 +13,7 @@ const pluginWrapper = () => {
 };
 
 const Home = ({ years, hash, setHash, setTransitionType, navigateTo }) => {
-  const onLeave = (origin, destination, direction) => {
+  const beforeLeave = (origin, destination, direction) => {
     const destinationYear = years[destination.index].id;
     setHash(destinationYear);
     if (history.pushState) {
@@ -79,7 +79,7 @@ const Home = ({ years, hash, setHash, setTransitionType, navigateTo }) => {
           'T0NhR3N0YjI1aWIzSnliM2RsWkhScGJXVXVZMjl0QU9fYklqY0dGeVlXeHNZWGc9cG5s'
         }
         continuousVertical={true}
-        onLeave={onLeave}
+        beforeLeave={beforeLeave}
         afterLoad={afterLoad}
         render={({ state, fullpageApi }) => {
           return (

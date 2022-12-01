@@ -41,7 +41,7 @@ const Reflection = ({
     }
   };
 
-  const onLeave = function(origin, destination, direction) {
+  const beforeLeave = function(origin, destination, direction) {
     const element = document.getElementsByClassName(
       'hidden-footer__container'
     )[0];
@@ -66,7 +66,7 @@ const Reflection = ({
           licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
-          onLeave={throttle(onLeave, 1000)}
+          beforeLeave={throttle(beforeLeave, 1000)}
           scrollOverflow={true}
           paddingTop="78px"
           render={({ state, fullpageApi }) => {

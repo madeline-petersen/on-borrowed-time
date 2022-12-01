@@ -92,7 +92,7 @@ const Event = props => {
     }
   };
 
-  const onLeave = (origin, destination, direction) => {
+  const beforeLeave = (origin, destination, direction) => {
     if (isModalActive) {
       return false;
     }
@@ -132,7 +132,7 @@ const Event = props => {
         getFilteredMatches={getFilteredMatches}
         afterLoad={afterLoad}
         setOnClicks={setOnClicks}
-        onLeave={onLeave}
+        beforeLeave={beforeLeave}
         openModal={openModal}
         generateKey={generateKey}
         {...props}
@@ -145,7 +145,7 @@ const Event = props => {
         getTextIndent={getTextIndent}
         getFilteredMatches={getFilteredMatches}
         afterLoad={afterLoad}
-        onLeave={onLeave}
+        beforeLeave={beforeLeave}
         openModal={openModal}
         setOnClicks={setOnClicks}
         generateKey={generateKey}

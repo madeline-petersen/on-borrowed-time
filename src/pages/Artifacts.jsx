@@ -35,7 +35,7 @@ const Artifacts = ({
     }
   };
 
-  const onLeave = (origin, destination, direction) => {
+  const beforeLeave = (origin, destination, direction) => {
     const element = document.getElementsByClassName(
       'hidden-footer__container'
     )[0];
@@ -67,7 +67,7 @@ const Artifacts = ({
           licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
-          onLeave={throttle(onLeave, 1000)}
+          beforeLeave={throttle(beforeLeave, 1000)}
           scrollOverflow={true}
           lazyLoading={false}
           paddingTop={headerHeight}

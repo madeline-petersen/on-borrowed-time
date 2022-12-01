@@ -46,7 +46,7 @@ const Intro = ({
           licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
           scrollingSpeed={1000}
           afterLoad={afterLoad}
-          onLeave={() => swapTextBeforePageChange()}
+          beforeLeave={() => swapTextBeforePageChange()}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
