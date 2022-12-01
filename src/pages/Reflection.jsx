@@ -150,29 +150,29 @@ const Reflection = ({
                       )}
                     </div>
                   </Container>
-                  {next && (
-                    <div
-                      className={`hidden-footer__container ${
-                        changingParam === 'year'
-                          ? 'bg-black'
-                          : colourBackgroundClass
-                      }`}
-                    >
-                      <HiddenFooter
-                        pageId="reflection"
-                        nextParams={nextParams}
-                        next={next}
-                        changingParam={changingParam}
-                        textClasses={
-                          ['1989', '2003'].includes(year.id) ||
-                          changingParam === 'year'
-                            ? `text-white text-opacity-90`
-                            : `text-black text-opacity-90`
-                        }
-                      />
-                    </div>
-                  )}
                 </div>
+                {next && (
+                  <div
+                    className={`hidden-footer__container ${
+                      changingParam === 'year'
+                        ? 'bg-black'
+                        : colourBackgroundClass
+                    }`}
+                  >
+                    <HiddenFooter
+                      pageId="reflection"
+                      nextParams={nextParams}
+                      next={next}
+                      changingParam={changingParam}
+                      textClasses={
+                        ['1989', '2003'].includes(year.id) ||
+                        changingParam === 'year'
+                          ? `text-white text-opacity-90`
+                          : `text-black text-opacity-90`
+                      }
+                    />
+                  </div>
+                )}
                 {changingParam === 'year' ? (
                   <div
                     className={`section h-screen next-image-class ${imageBackgroundClass}`}

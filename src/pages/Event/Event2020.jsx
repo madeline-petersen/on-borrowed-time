@@ -193,17 +193,17 @@ const Event = ({
                       <div className="pb-48" />
                     </div>
                   )}
-                  <div className="hidden-footer__container bg-black">
-                    {nextParams && (
-                      <HiddenFooter
-                        pageId="event"
-                        nextParams={nextParams}
-                        next={next}
-                        changingParam={changingParam}
-                        textClasses="text-white text-opacity-90"
-                      />
-                    )}
-                  </div>
+                </div>
+                <div className="hidden-footer__container bg-black">
+                  {nextParams && (
+                    <HiddenFooter
+                      pageId="event"
+                      nextParams={nextParams}
+                      next={next}
+                      changingParam={changingParam}
+                      textClasses="text-white text-opacity-90"
+                    />
+                  )}
                 </div>
                 <div className="section w-full bg-black">
                   <Container className="grid__container">
