@@ -26,17 +26,17 @@
       position: absolute;
       left: -7px; // move circle onto timeline
       margin-top: 1px;
-      width: 13px;
-      height: 13px;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0); // transparent
     }
 
     .circle {
       position: absolute;
-      left: -7px; // move circle onto timeline
-      width: 13px;
-      height: 13px;
+      left: -8px; // move circle onto timeline
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0); // transparent
 
@@ -73,9 +73,9 @@
       position: absolute;
       background-color: white;
       border-radius: 50%;
-      height: 5px;
-      width: 5px;
-      left: 4px;
+      height: 7px;
+      width: 7px;
+      left: 3.3px;
       top: -1px;
 
       .scene-title {
