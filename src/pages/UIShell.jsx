@@ -152,6 +152,25 @@ const UIShell = props => {
     }
   };
 
+  const beforeLeave = (origin, destination, direction) => {
+    if (isModalActive) {
+      return false;
+    }
+
+    const element = document.getElementsByClassName(
+      'hidden-footer__container'
+    )[0];
+
+    if (element) {
+      if (element.classList.contains('show')) {
+        return true;
+      } else {
+        element.classList.add('show');
+        return false;
+      }
+    }
+  };
+
   const pagesWithTimeline = [
     'home',
     'intro',
@@ -217,10 +236,10 @@ const UIShell = props => {
           textColourClass={textColourClass[props.year.id]}
           borderColourClass={borderColourClass[props.year.id]}
           setAnecdoteData={setAnecdoteData}
-          isModalActive={isModalActive}
           setIsModalActive={setIsModalActive}
           sceneIndex={props.sceneIndex}
           onScrollOverflow={onScrollOverflow}
+          beforeLeave={beforeLeave}
         />
       );
       break;
@@ -231,6 +250,7 @@ const UIShell = props => {
           setTransitionType={setTransitionType}
           navigateTo={navigateTo}
           onScrollOverflow={onScrollOverflow}
+          beforeLeave={beforeLeave}
         />
       );
       break;
@@ -243,6 +263,7 @@ const UIShell = props => {
           navigateTo={navigateTo}
           setTransitionType={setTransitionType}
           onScrollOverflow={onScrollOverflow}
+          beforeLeave={beforeLeave}
         />
       );
       break;

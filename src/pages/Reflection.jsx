@@ -20,7 +20,8 @@ const Reflection = ({
   navigateTo,
   colourBackgroundClass,
   imageBackgroundClass,
-  onScrollOverflow
+  onScrollOverflow,
+  beforeLeave
 }) => {
   useEffect(() => {
     setTransitionType(null);
@@ -38,21 +39,6 @@ const Reflection = ({
           nextParams.scene, // romanSceneNumber
           nextParams.page
         );
-      }
-    }
-  };
-
-  const beforeLeave = function(origin, destination, direction) {
-    const element = document.getElementsByClassName(
-      'hidden-footer__container'
-    )[0];
-
-    if (element) {
-      if (element.classList.contains('show')) {
-        return true;
-      } else {
-        element.classList.add('show');
-        return false;
       }
     }
   };
@@ -210,7 +196,8 @@ Reflection.propTypes = {
   colourBackgroundClass: PropTypes.string,
   navigateTo: PropTypes.func,
   setTransitionType: PropTypes.func,
-  onScrollOverflow: PropTypes.func
+  onScrollOverflow: PropTypes.func,
+  beforeLeave: PropTypes.func
 };
 
 export default Reflection;

@@ -16,9 +16,9 @@ const Event = props => {
     navigateTo,
     setTransitionType,
     setAnecdoteData,
-    isModalActive,
     setIsModalActive,
-    onScrollOverflow
+    onScrollOverflow,
+    beforeLeave
   } = props;
 
   const [headerHeight, setHeaderHeight] = useState('78px');
@@ -93,12 +93,6 @@ const Event = props => {
     }
   };
 
-  const beforeLeave = (origin, destination, direction) => {
-    if (isModalActive) {
-      return false;
-    }
-  };
-
   const generateKey = () => {
     return nextParams.year
       ? `event-${nextParams.year}-${nextParams.scene}-${nextParams.page}`
@@ -159,9 +153,9 @@ Event.propTypes = {
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
   setAnecdoteData: PropTypes.func,
-  isModalActive: PropTypes.bool,
   setIsModalActive: PropTypes.func,
-  onScrollOverflow: PropTypes.func
+  onScrollOverflow: PropTypes.func,
+  beforeLeave: PropTypes.func
 };
 
 export default Event;
