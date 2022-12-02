@@ -26,7 +26,8 @@ const Event = ({
   afterLoad,
   beforeLeave,
   setOnClicks,
-  generateKey
+  generateKey,
+  onScrollOverflow
 }) => {
   return (
     <>
@@ -37,6 +38,7 @@ const Event = ({
           afterLoad={afterLoad}
           beforeLeave={throttle(beforeLeave, 1000)}
           scrollOverflow={true}
+          onScrollOverflow={onScrollOverflow}
           lazyLoading={false}
           paddingTop={headerHeight}
           render={({ state, fullpageApi }) => {
@@ -141,7 +143,8 @@ Event.propTypes = {
   openModal: PropTypes.func,
   beforeLeave: PropTypes.func,
   setOnClicks: PropTypes.func,
-  generateKey: PropTypes.func
+  generateKey: PropTypes.func,
+  onScrollOverflow: PropTypes.func
 };
 
 export default Event;

@@ -17,7 +17,8 @@ const Artifacts = ({
   changingParam,
   next,
   setTransitionType,
-  navigateTo
+  navigateTo,
+  onScrollOverflow
 }) => {
   const [headerHeight, setHeaderHeight] = useState('78px');
   useEffect(() => {
@@ -69,6 +70,7 @@ const Artifacts = ({
           afterLoad={afterLoad}
           beforeLeave={throttle(beforeLeave, 1000)}
           scrollOverflow={true}
+          onScrollOverflow={onScrollOverflow}
           lazyLoading={false}
           paddingTop={headerHeight}
           render={({ state, fullpageApi }) => {
@@ -127,7 +129,8 @@ Artifacts.propTypes = {
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
   setTransitionType: PropTypes.func,
-  navigateTo: PropTypes.func
+  navigateTo: PropTypes.func,
+  onScrollOverflow: PropTypes.func
 };
 
 export default Artifacts;

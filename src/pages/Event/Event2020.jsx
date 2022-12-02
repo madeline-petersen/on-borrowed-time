@@ -22,6 +22,7 @@ const Event = ({
   getFilteredMatches,
   getTextIndent,
   beforeLeave,
+  onScrollOverflow,
   afterLoad,
   openModal,
   setOnClicks,
@@ -36,6 +37,7 @@ const Event = ({
           beforeLeave={throttle(beforeLeave, 1000)}
           afterLoad={afterLoad}
           scrollOverflow={true}
+          onScrollOverflow={onScrollOverflow}
           lazyLoading={false}
           paddingTop={headerHeight}
           render={({ state, fullpageApi }) => {
@@ -234,7 +236,8 @@ Event.propTypes = {
   openModal: PropTypes.func,
   getFilteredMatches: PropTypes.func,
   setOnClicks: PropTypes.func,
-  generateKey: PropTypes.func
+  generateKey: PropTypes.func,
+  onScrollOverflow: PropTypes.func
 };
 
 export default Event;

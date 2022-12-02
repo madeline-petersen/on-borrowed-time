@@ -19,7 +19,8 @@ const Reflection = ({
   setTransitionType,
   navigateTo,
   colourBackgroundClass,
-  imageBackgroundClass
+  imageBackgroundClass,
+  onScrollOverflow
 }) => {
   useEffect(() => {
     setTransitionType(null);
@@ -68,6 +69,7 @@ const Reflection = ({
           afterLoad={afterLoad}
           beforeLeave={throttle(beforeLeave, 1000)}
           scrollOverflow={true}
+          onScrollOverflow={onScrollOverflow}
           paddingTop="78px"
           render={({ state, fullpageApi }) => {
             return (
@@ -207,7 +209,8 @@ Reflection.propTypes = {
   imageBackgroundClass: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
   navigateTo: PropTypes.func,
-  setTransitionType: PropTypes.func
+  setTransitionType: PropTypes.func,
+  onScrollOverflow: PropTypes.func
 };
 
 export default Reflection;
