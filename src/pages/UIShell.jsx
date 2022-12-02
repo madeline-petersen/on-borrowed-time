@@ -135,7 +135,8 @@ const UIShell = props => {
     if (
       position >=
       section.item.children[0].scrollHeight -
-        section.item.children[0].offsetHeight
+        section.item.children[0].offsetHeight -
+        1
     ) {
       const element = document.getElementsByClassName(
         'hidden-footer__container'
