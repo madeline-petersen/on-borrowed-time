@@ -17,7 +17,9 @@ const Artifacts = ({
   changingParam,
   next,
   setTransitionType,
-  navigateTo
+  navigateTo,
+  onScrollOverflow,
+  beforeLeave
 }) => {
   const [headerHeight, setHeaderHeight] = useState('78px');
   useEffect(() => {
@@ -32,21 +34,6 @@ const Artifacts = ({
         nextParams.scene, // romanSceneNumber
         nextParams.page
       );
-    }
-  };
-
-  const beforeLeave = (origin, destination, direction) => {
-    const element = document.getElementsByClassName(
-      'hidden-footer__container'
-    )[0];
-
-    if (element) {
-      if (element.classList.contains('show')) {
-        return true;
-      } else {
-        element.classList.add('show');
-        return false;
-      }
     }
   };
 
@@ -69,6 +56,7 @@ const Artifacts = ({
           afterLoad={afterLoad}
           beforeLeave={throttle(beforeLeave, 1000)}
           scrollOverflow={true}
+          onScrollOverflow={onScrollOverflow}
           lazyLoading={false}
           paddingTop={headerHeight}
           render={({ state, fullpageApi }) => {
@@ -127,7 +115,9 @@ Artifacts.propTypes = {
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
   setTransitionType: PropTypes.func,
-  navigateTo: PropTypes.func
+  navigateTo: PropTypes.func,
+  onScrollOverflow: PropTypes.func,
+  beforeLeave: PropTypes.func
 };
 
 export default Artifacts;

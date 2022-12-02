@@ -131,15 +131,45 @@ const UIShell = props => {
     }, 1500);
   };
 
-  const pagesWithOverscroll = [
-    'home',
-    'intro',
-    'event',
-    'artifacts',
-    'reflection',
-    'threads',
-    'info'
-  ];
+  const onScrollOverflow = (section, slide, position, direction) => {
+    if (
+      position >=
+      section.item.children[0].scrollHeight -
+        section.item.children[0].offsetHeight
+    ) {
+      const element = document.getElementsByClassName(
+        'hidden-footer__container'
+      )[0];
+
+      if (element) {
+        if (element.classList.contains('show')) {
+          return true;
+        } else {
+          element.classList.add('show');
+          return false;
+        }
+      }
+    }
+  };
+
+  const beforeLeave = (origin, destination, direction) => {
+    if (isModalActive) {
+      return false;
+    }
+
+    const element = document.getElementsByClassName(
+      'hidden-footer__container'
+    )[0];
+
+    if (element) {
+      if (element.classList.contains('show')) {
+        return true;
+      } else {
+        element.classList.add('show');
+        return false;
+      }
+    }
+  };
 
   const pagesWithTimeline = [
     'home',
@@ -206,9 +236,10 @@ const UIShell = props => {
           textColourClass={textColourClass[props.year.id]}
           borderColourClass={borderColourClass[props.year.id]}
           setAnecdoteData={setAnecdoteData}
-          isModalActive={isModalActive}
           setIsModalActive={setIsModalActive}
           sceneIndex={props.sceneIndex}
+          onScrollOverflow={onScrollOverflow}
+          beforeLeave={beforeLeave}
         />
       );
       break;
@@ -218,6 +249,8 @@ const UIShell = props => {
           {...props}
           setTransitionType={setTransitionType}
           navigateTo={navigateTo}
+          onScrollOverflow={onScrollOverflow}
+          beforeLeave={beforeLeave}
         />
       );
       break;
@@ -229,6 +262,8 @@ const UIShell = props => {
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           navigateTo={navigateTo}
           setTransitionType={setTransitionType}
+          onScrollOverflow={onScrollOverflow}
+          beforeLeave={beforeLeave}
         />
       );
       break;

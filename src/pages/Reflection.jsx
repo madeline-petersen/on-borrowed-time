@@ -19,7 +19,9 @@ const Reflection = ({
   setTransitionType,
   navigateTo,
   colourBackgroundClass,
-  imageBackgroundClass
+  imageBackgroundClass,
+  onScrollOverflow,
+  beforeLeave
 }) => {
   useEffect(() => {
     setTransitionType(null);
@@ -41,21 +43,6 @@ const Reflection = ({
     }
   };
 
-  const beforeLeave = function(origin, destination, direction) {
-    const element = document.getElementsByClassName(
-      'hidden-footer__container'
-    )[0];
-
-    if (element) {
-      if (element.classList.contains('show')) {
-        return true;
-      } else {
-        element.classList.add('show');
-        return false;
-      }
-    }
-  };
-
   return (
     <>
       <div
@@ -68,6 +55,7 @@ const Reflection = ({
           afterLoad={afterLoad}
           beforeLeave={throttle(beforeLeave, 1000)}
           scrollOverflow={true}
+          onScrollOverflow={onScrollOverflow}
           paddingTop="78px"
           render={({ state, fullpageApi }) => {
             return (
@@ -207,7 +195,9 @@ Reflection.propTypes = {
   imageBackgroundClass: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
   navigateTo: PropTypes.func,
-  setTransitionType: PropTypes.func
+  setTransitionType: PropTypes.func,
+  onScrollOverflow: PropTypes.func,
+  beforeLeave: PropTypes.func
 };
 
 export default Reflection;

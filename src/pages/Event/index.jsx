@@ -16,8 +16,9 @@ const Event = props => {
     navigateTo,
     setTransitionType,
     setAnecdoteData,
-    isModalActive,
-    setIsModalActive
+    setIsModalActive,
+    onScrollOverflow,
+    beforeLeave
   } = props;
 
   const [headerHeight, setHeaderHeight] = useState('78px');
@@ -92,25 +93,6 @@ const Event = props => {
     }
   };
 
-  const beforeLeave = (origin, destination, direction) => {
-    if (isModalActive) {
-      return false;
-    }
-
-    const element = document.getElementsByClassName(
-      'hidden-footer__container'
-    )[0];
-
-    if (element) {
-      if (element.classList.contains('show')) {
-        return true;
-      } else {
-        element.classList.add('show');
-        return false;
-      }
-    }
-  };
-
   const generateKey = () => {
     return nextParams.year
       ? `event-${nextParams.year}-${nextParams.scene}-${nextParams.page}`
@@ -135,6 +117,7 @@ const Event = props => {
         beforeLeave={beforeLeave}
         openModal={openModal}
         generateKey={generateKey}
+        onScrollOverflow={onScrollOverflow}
         {...props}
       />
     );
@@ -149,6 +132,7 @@ const Event = props => {
         openModal={openModal}
         setOnClicks={setOnClicks}
         generateKey={generateKey}
+        onScrollOverflow={onScrollOverflow}
         {...props}
       />
     );
@@ -169,8 +153,9 @@ Event.propTypes = {
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
   setAnecdoteData: PropTypes.func,
-  isModalActive: PropTypes.bool,
-  setIsModalActive: PropTypes.func
+  setIsModalActive: PropTypes.func,
+  onScrollOverflow: PropTypes.func,
+  beforeLeave: PropTypes.func
 };
 
 export default Event;
