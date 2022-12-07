@@ -149,8 +149,8 @@ const UIShell = props => {
         } else {
           fullpage_api.setAllowScrolling(false, 'down'); // arrest scrolling
           element.classList.add('show'); // show footer
-          // scrolling allowed again after .65 seconds
-          setTimeout(() => fullpage_api.setAllowScrolling(true, 'down'), 650);
+          // scrolling allowed again after .7 seconds
+          setTimeout(() => fullpage_api.setAllowScrolling(true, 'down'), 700);
           return false; // stay on section
         }
       }
