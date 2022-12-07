@@ -138,16 +138,20 @@ const UIShell = props => {
         section.item.children[0].offsetHeight -
         1
     ) {
+      // reached scroll bottom
       const element = document.getElementsByClassName(
         'hidden-footer__container'
       )[0];
 
       if (element) {
         if (element.classList.contains('show')) {
-          return true;
+          return true; // leave section
         } else {
-          element.classList.add('show');
-          return false;
+          fullpage_api.setAllowScrolling(false, 'down'); // arrest scrolling
+          element.classList.add('show'); // show footer
+          // scrolling allowed again after .65 seconds
+          setTimeout(() => fullpage_api.setAllowScrolling(true, 'down'), 650);
+          return false; // stay on section
         }
       }
     }
