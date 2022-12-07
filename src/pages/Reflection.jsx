@@ -51,12 +51,18 @@ const Reflection = ({
       >
         <ReactFullpage
           licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
+          // Scrolling
           scrollingSpeed={1000}
+          scrollOverflow={true}
+          // Design
+          paddingTop={'78px'}
+          // Custom selectors
+          credits={{ enabled: false }}
+          lazyLoading={false}
+          // Events
           afterLoad={afterLoad}
           beforeLeave={throttle(beforeLeave, 1000)}
-          scrollOverflow={true}
           onScrollOverflow={onScrollOverflow}
-          paddingTop="78px"
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>

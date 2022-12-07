@@ -52,13 +52,18 @@ const Artifacts = ({
       >
         <ReactFullpage
           licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
+          // Scrolling
           scrollingSpeed={1000}
+          scrollOverflow={true}
+          // Design
+          paddingTop={headerHeight}
+          // Custom selectors
+          credits={{ enabled: false }}
+          lazyLoading={false}
+          // Events
           afterLoad={afterLoad}
           beforeLeave={throttle(beforeLeave, 1000)}
-          scrollOverflow={true}
           onScrollOverflow={onScrollOverflow}
-          lazyLoading={false}
-          paddingTop={headerHeight}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>

@@ -33,13 +33,18 @@ const Event = ({
       <div className="event" key={() => generateKey()}>
         <ReactFullpage
           licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
+          // Scrolling
           scrollingSpeed={1000}
-          beforeLeave={throttle(beforeLeave, 1000)}
-          afterLoad={afterLoad}
           scrollOverflow={true}
-          onScrollOverflow={onScrollOverflow}
-          lazyLoading={false}
+          // Design
           paddingTop={headerHeight}
+          // Custom selectors
+          credits={{ enabled: false }}
+          lazyLoading={false}
+          // Events
+          afterLoad={afterLoad}
+          beforeLeave={throttle(beforeLeave, 1000)}
+          onScrollOverflow={onScrollOverflow}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>

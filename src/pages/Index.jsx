@@ -14,9 +14,13 @@ const Index = () => {
       </Helmet>
       <ReactFullpage
         licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
+        // Scrolling
         scrollingSpeed={1000}
         scrollOverflow={true}
+        // Design
         paddingTop="78px"
+        // Custom selectors
+        credits={{ enabled: false }}
         render={() => {
           return (
             <>
