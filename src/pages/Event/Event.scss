@@ -133,10 +133,20 @@ div.highlight.dark {
   }
 
   to {
+  transition: background-position 0.8s ease-out;
+  background-position: -99.99% 0;
+  }
+}
+
+@keyframes highlightHover {
+  from {
+    background-position: -0% 0;
+  }
+
+  to {
   transition: background-position 0.5s ease-out;
   background-position: -99.99% 0;
   }
-  
 }
 
 div.highlight.light {
@@ -152,20 +162,127 @@ div.highlight.light {
 
 div.highlight span {
   animation-name: highlight;
-  background-color:rgba(255, 255, 255, 0.5);
-  /*add highlight animation on load here*/
+  animation-delay: 3.5s;
+  animation-duration:2s;
+  background-position: -0% 0;
+  background-image: linear-gradient(to right, rgba(0, 255, 255, 0) 50%, #F4F4F4 50%);
+  background-size: 200% auto;
+  color:#000;
+  background-position: -99.99% 0;
+  // filter: saturate(50%);
 }
 
-div.highlight span:hover {
-  background-image: linear-gradient(to right, rgba(255,255,255,0) 50%, #ddd 50%);
-  background-position: -0% 0;
-  background-size: 200% auto;
-  color: #222;
-  background-color:rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-  transition: background-position 0.5s ease-out;
-  background-position: -99.99% 0;
-  filter: saturate(80);
+
+//1984
+.bg-gray-30 {
+  div.highlight span {
+    animation-name: highlightHover;
+    background-color:rgba(242, 241, 235, 0.5);
+    background-image: linear-gradient(to right, rgba(242, 241, 235,0) 50%, #FFFEF8 50%);
+  }
+
+  div.highlight span:hover {
+    background-image: linear-gradient(to right, rgba(242, 241, 235,0) 50%, #FFFEF8 50%);
+    background-position: -99.99% 0;
+    background-position: -0% 0;
+    background-size: 200% auto;
+    color: #000;
+    text-decoration: none;
+    transition: background-position 0.5s ease-out;
+  }
+}
+
+//1989
+.bg-slate {
+  div.highlight span {
+    animation-name: highlightHover;
+    background-color:rgba(79, 83, 90, 0.5);
+  }
+
+  div.highlight span:hover {
+    background-image: linear-gradient(to right, rgba(79, 83, 90,0) 50%, #656A73 50%);
+    background-position: -99.99% 0;
+    background-position: -0% 0;
+    background-size: 200% auto;
+    color: #000;
+    text-decoration: none;
+    transition: background-position 0.5s ease-out;
+  }
+}
+
+//1997
+.bg-blue-50 {
+  div.highlight span {
+    animation-name:highlightHover;
+    background-color:rgba(172, 213, 255, 0.5);
+    background-image: linear-gradient(to right, rgba(172, 213, 255,0) 50%, #95C9FF 50%);
+  }
+
+  div.highlight span:hover {
+    background-image: linear-gradient(to right, rgba(172, 213, 255,0) 50%, #95C9FF 50%);
+    background-position: -99.99% 0;
+    background-position: -0% 0;
+    background-size: 200% auto;
+    color: #000;
+    text-decoration: none;
+    transition: background-position 0.5s ease-out;
+  }
+}
+
+//2003
+.bg-brown {
+  div.highlight span {
+    animation: hihglightHover;
+    background-color:rgba(113, 97, 101, 0.5);
+    background-image: linear-gradient(to right, rgba(113,97,101,0) 50%, #8A767B 50%);
+  }
+
+  div.highlight span:hover {
+    background-image: linear-gradient(to right, rgba(113,97,101,0) 50%, #8A767B 50%);
+    background-position: -99.99% 0;
+    background-position: -0% 0;
+    background-size: 200% auto;
+    color: #000;
+    text-decoration: none;
+    transition: background-position 0.5s ease-out;
+  }
+}
+
+
+//2014
+.bg-yellow {
+  div.highlight span {
+    background-color:rgba(251, 248, 239, 0.5);
+    background-image: linear-gradient(to right, rgba(251, 248, 239,0) 50%, #F0FF95 50%);
+  }
+
+  div.highlight span:hover {
+    background-image: linear-gradient(to right, rgba(251, 248, 239,0) 50%, #F0FF95 50%);
+    background-position: -99.99% 0;
+    background-position: -0% 0;
+    background-size: 200% auto;
+    color: #000;
+    text-decoration: none;
+    transition: background-position 0.5s ease-out;
+  }
+}
+
+//2014
+.bg-purple {
+  div.highlight span {
+    background-color:rgba(251, 248, 239, 0.5);
+    background-image: linear-gradient(to right, rgba(229, 154, 238,0) 50%, #F6AFFF 50%);
+  }
+
+  div.highlight span:hover {
+    background-image: linear-gradient(to right, rgba(229, 154, 238,0) 50%, #F6AFFF 50%);
+    background-position: -99.99% 0;
+    background-position: -0% 0;
+    background-size: 200% auto;
+    color: #000;
+    text-decoration: none;
+    transition: background-position 0.5s ease-out;
+  }
 }
 
 .section-introduction {
