@@ -28,7 +28,7 @@ $xxl-minus-1: 1799px;
 
     // sm, xs
     @media screen and (max-width: $md-minus-1) {
-      max-width: 390px;
+      padding-right: 0;
     }
   }
 
