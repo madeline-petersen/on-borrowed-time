@@ -80,15 +80,10 @@ $xxl-minus-1: 1799px;
     url('Graphik-Medium.svg') format('svg');
 }
 
-@font-face {
-  font-family: NotoSerifTC-Regular;
-  src: url('./NotoSerifTC-Regular.otf') format('opentype'),
-    url('NotoSerifTC-Regular.woff2') format('woff2'),
-    url('NotoSerifTC-Regular.woff') format('woff'),
-    url('NotoSerifTC-Regular.eot') format('eot'),
-    url('NotoSerifTC-Regular.ttf') format('truetype'),
-    url('NotoSerifTC-Regular.svg') format('svg');
-  font-display: swap;
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+
+body {
+  font-family: 'Noto Sans', sans-serif;
 }
 
 @font-face {

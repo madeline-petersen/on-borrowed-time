@@ -39,7 +39,7 @@ const EditorsNote = () => {
                       className={`large-headline-dynamic text-white text-center fade-first`}
                     >
                       &ldquo;A Borrowed Place, On Borrowed Time.{' '}
-                      <span style={{ fontFamily: 'NotoSerifTC-Regular' }}>
+                      <span style={{ fontFamily: 'Noto Sans' }}>
                         的地方, 暫借的時間
                       </span>
                       .&rdquo; A phrase commonly used to describe
