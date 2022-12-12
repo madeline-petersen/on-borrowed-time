@@ -28,7 +28,7 @@ const Index = () => {
                 <Container className="grid__container mt-16">
                   <Row className="grid__row">
                     <Col md={3} />
-                    <Col md={5}>
+                    <Col md={8}>
                       <div className="large-headline-static mb-12">
                         A curated collection of articles, academic journals{' '}
                         <span>&</span> stories that contribute to shaping Hong

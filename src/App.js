@@ -19,7 +19,6 @@ import {
 import data from './data/years.json';
 import GridHelper from './helpers/GridHelper.jsx';
 import RouteChangeTracker from './helpers/RouteChangeTracker';
-import Index from './pages/Index.jsx';
 import NoMatch from './pages/NoMatch.jsx';
 import Splash from './pages/Splash.jsx';
 import UIShell from './pages/UIShell.jsx';
