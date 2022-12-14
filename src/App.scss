@@ -157,7 +157,20 @@ a {
 
 .event .large-headline-static {
   span {
-    // highlight will go here
+    padding: 4px 8px;
+
+    sup {
+      font-family: Graphik-Regular;
+      font-weight: 600;
+      font-size: clamp(0.25rem, 3vw, 1rem);
+      top: -1em;
+      left: 1.5px;
+
+      // md, sm, xs
+      @media screen and (max-width: $lg-minus-1) {
+        top: -0.5em;
+      }
+    }
   }
 }
 
