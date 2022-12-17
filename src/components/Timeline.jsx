@@ -63,13 +63,7 @@ const Timeline = props => {
   const isHomePage = props.pageId === 'home';
   const isIntroPage = props.pageId === 'intro';
   const hasLightText = ['1989', '2003'].includes(props.year?.id);
-  const currentYearSceneClasses = cx(
-    'timeline__scenes pl-4 mb-2.5 contrast-text',
-    {
-      collapsed: numScenes === 0,
-      [`expanded num-scenes-${numScenes}`]: numScenes > 0
-    }
-  );
+  const currentYearSceneClasses = cx('pl-4 mb-2.5 contrast-text');
 
   const isCurrentYear = year => {
     return year.id === props.year?.id;
@@ -115,78 +109,6 @@ const Timeline = props => {
               >
                 {year.id}
               </span>
-
-              <span
-                key="intro-circle"
-                className={cx('circle', {
-                  'current-scene': currentSceneIndex === 'intro',
-                  [colourClasses[year.id]]: isEventPage && !hasLightText,
-                  show: yearIsActive(year),
-                  hide: !yearIsActive(year)
-                })}
-              />
-              <span key="intro-dot" className={cx('circle-container')}>
-                <span
-                  className={cx('dot mt-1 cursor-pointer', {
-                    [colourClasses[year.id]]: isEventPage && !hasLightText
-                  })}
-                  onClick={() => onClickYear(year)}
-                />
-              </span>
-
-              {year.scenes.map((scene, index) => (
-                // circle
-                <span
-                  key={`scene-circle-${index}`}
-                  className={cx('circle', {
-                    'current-scene': currentSceneIndex === index,
-                    [colourClasses[year.id]]: isEventPage && !hasLightText,
-                    show: yearIsActive(year),
-                    hide: !yearIsActive(year)
-                  })}
-                  style={{
-                    marginTop: `${
-                      isCurrentYear(year)
-                        ? `calc((${index + 1} * 24px) - 1px)`
-                        : '0'
-                    }`
-                  }}
-                />
-              ))}
-
-              {year.scenes.map((scene, index) => (
-                // dot, hover title
-                <span
-                  key={`scene-dot-${index}`}
-                  className={cx('circle-container')}
-                  style={{
-                    marginTop: `${
-                      isCurrentYear(year) ? `calc((${index + 1} * 24px))` : '0'
-                    }`
-                  }}
-                >
-                  <span
-                    className={cx('dot mt-1 cursor-pointer', {
-                      [colourClasses[year.id]]: isEventPage && !hasLightText
-                    })}
-                    onClick={() => onClickScene(index)}
-                  >
-                    {isCurrentYear(year) && (
-                      <span
-                        className={cx(
-                          'absolute left-4 w-max contrast-text scene-title',
-                          {
-                            [props.colourBackgroundClass]:
-                              isEventPage && !hasLightText
-                          }
-                        )}
-                      >
-                        {scene.title}
-                      </span>
-                    )}
-                  </span>
-                </span>
-              ))}
             </div>
           );
         })}
