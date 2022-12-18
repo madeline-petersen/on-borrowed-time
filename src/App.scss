@@ -158,10 +158,10 @@ a {
 .event .large-headline-static {
   span {
     padding: 3px 8px;
-      // md, sm, xs
-      @media screen and (max-width: $lg-minus-1) {
-        padding: 2px 8px;
-      }
+    // md, sm, xs
+    @media screen and (max-width: $lg-minus-1) {
+      padding: 2px 8px;
+    }
 
     sup {
       font-family: Graphik-Regular;
@@ -305,7 +305,7 @@ a {
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.17;
+  line-height: 1;
   letter-spacing: normal;
 }
 

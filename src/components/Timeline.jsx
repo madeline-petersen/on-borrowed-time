@@ -53,7 +53,7 @@ const Timeline = props => {
           return (
             <div
               key={year.id}
-              className={cx('pl-4 mb-2.5', {
+              className={cx('pl-4 mb-3', {
                 [colourClasses[year.id]]:
                   isEventPage && !currentYearHasLightText
               })}
