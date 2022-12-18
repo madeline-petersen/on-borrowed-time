@@ -9,6 +9,7 @@ import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'react-grid-system';
 
 import HiddenFooter from '../components/HiddenFooter';
+import hasLightText from '../helpers/hasLightText';
 
 const Reflection = ({
   reflection,
@@ -159,8 +160,7 @@ const Reflection = ({
                       next={next}
                       changingParam={changingParam}
                       textClasses={
-                        ['1989', '2003'].includes(year.id) ||
-                        changingParam === 'year'
+                        hasLightText(year.id) || changingParam === 'year'
                           ? `text-white text-opacity-90`
                           : `text-black text-opacity-90`
                       }

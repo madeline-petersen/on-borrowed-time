@@ -17,171 +17,11 @@
   &__years {
     bottom: 50px;
   }
-
-  &__scenes {
-    // scene timeline
-    margin-left: -1px; // move scene timeline onto year timeline
-
-    .circle-container {
-      position: absolute;
-      left: -7px; // move circle onto timeline
-      margin-top: 1px;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0); // transparent
-    }
-
-    .circle {
-      position: absolute;
-      left: -8px; // move circle onto timeline
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0); // transparent
-
-      &.current-scene {
-        background-color: rgba(255, 255, 255, 1); // opaque
-
-        &.gray-30 {
-          background-color: #bcb9b6;
-        }
-
-        &.slate {
-          background-color: #17191E;
-        }
-
-        &.blue-50 {
-          background-color: #D6E6F7;
-        }
-
-        &.yellow {
-          background-color: #FBF8EE;
-        }
-
-        &.purple {
-          background-color: #E0D0E2;
-        }
-
-        &.brown {
-          background-color: #33262A;
-        }
-      }
-    }
-
-    .dot {
-      position: absolute;
-      background-color: white;
-      border-radius: 50%;
-      height: 7px;
-      width: 7px;
-      left: 3.3px;
-      top: -1px;
-
-      .scene-title {
-        opacity: 0;
-        transition: opacity 0.5s;
-        pointer-events: none;
-        top: -5px;
-      }
-
-      &:hover {
-        .scene-title {
-          opacity: 1;
-          transition: opacity 0.5s;
-        }
-      }
-
-      &.gray-30 {
-        background-color: #bcb9b6;
-      }
-
-      &.slate {
-        background-color: #17191E;
-      }
-
-      &.blue-50 {
-        background-color: #D6E6F7;
-      }
-
-      &.yellow {
-        background-color: #FBF8EE;
-      }
-
-      &.purple {
-        background-color: #E0D0E2;
-      }
-
-      &.brown {
-        background-color: #33262A;
-      }
-    }
-
-    &.collapsed {
-      padding-bottom: 0;
-      border-color: rgba(255, 255, 255, 0); // transparent left border
-      transition: padding-bottom 1s, border-color 1s, color 0.5s,
-        background-color 0.5s; // collapse timeline and fade out
-
-      .circle {
-        background-color: rgba(255, 255, 255, 0); // white, transparent
-      }
-
-      .dot {
-        opacity: 0; // disappear dot on collapse
-      }
-    }
-
-    &.expanded {
-      transition: padding-bottom 1s, border-color 0.5s, color 0.5s,
-        background-color 0.5s; // expand timeline animation
-
-      .dot {
-        transition: opacity 0.5s 1s;
-      }
-
-      &.num-scenes-1 {
-        padding-bottom: calc((1 * 24px) - 4px);
-      }
-      &.num-scenes-2 {
-        padding-bottom: calc((2 * 24px) - 4px);
-      }
-      &.num-scenes-3 {
-        padding-bottom: calc((3 * 24px) - 4px);
-      }
-      &.num-scenes-4 {
-        padding-bottom: calc((4 * 24px) - 4px);
-      }
-      &.num-scenes-5 {
-        padding-bottom: calc((5 * 24px) - 4px);
-      }
-      &.num-scenes-6 {
-        padding-bottom: calc((6 * 24px) - 4px);
-      }
-      &.num-scenes-7 {
-        padding-bottom: calc((7 * 24px) - 4px);
-      }
-      &.num-scenes-8 {
-        padding-bottom: calc((8 * 24px) - 4px);
-      }
-    }
-  }
-
-  .circle {
-    &.show {
-      opacity: 0.4;
-      transition: opacity 0s 1s, background-color 1s, color 0.5s; // delay appearance of circle, fade circle in
-    }
-
-    &.hide {
-      opacity: 0;
-    }
-  }
 }
 
 .timeline {
   border-left-width: 1px;
-  border-color: rgba(255, 255, 255, 0.10); // white, opacity 0.10
+  border-color: rgba(255, 255, 255, 0.1); // white, opacity 0.10
   transition: border-color 0.5s;
 
   &.image-background {
@@ -189,55 +29,26 @@
   }
 
   &.gray-30 {
-    border-color: rgba(203, 202, 196, 0.10);
+    border-color: rgba(203, 202, 196, 0.1);
   }
 
   &.slate {
-    border-color: rgba(23, 25, 30, 0.10);
+    border-color: rgba(23, 25, 30, 0.1);
   }
 
   &.blue-50 {
-    border-color: rgba(214, 230, 247, 0.10);
+    border-color: rgba(214, 230, 247, 0.1);
   }
 
   &.yellow {
-    border-color: rgba(251, 248, 238, 0.10);
+    border-color: rgba(251, 248, 238, 0.1);
   }
 
   &.purple {
-    border-color:rgba(224, 208, 226, 0.10);
+    border-color: rgba(224, 208, 226, 0.1);
   }
 
   &.brown {
-    border-color: rgba(51, 38, 42, 0.10);
-  }
-}
-
-.timeline__scenes {
-  border-left-width: 1px;
-  border-color: rgba(255, 255, 255, 1); // white, opaque
-
-  &.gray-30 {
-    border-color: rgba(203, 202, 196, 1);
-  }
-
-  &.slate {
-    border-color: rgba(23, 25, 30, 1);
-  }
-
-  &.blue-50 {
-    border-color: rgba(214, 230, 247, 1);
-  }
-
-  &.yellow {
-    border-color: rgba(251, 248, 238, 1);
-  }
-
-  &.purple {
-    border-color:rgba(224, 208, 226, 1);
-  }
-
-  &.brown {
-    border-color: rgba(51, 38, 42, 1);
+    border-color: rgba(51, 38, 42, 0.1);
   }
 }

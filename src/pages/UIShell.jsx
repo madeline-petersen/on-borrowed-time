@@ -13,6 +13,7 @@ import Anecdote from '../components/Anecdote';
 import Header from '../components/Header';
 import LeftMenu from '../components/LeftMenu';
 import Timeline from '../components/Timeline';
+import hasLightText from '../helpers/hasLightText';
 import Artifacts from './Artifacts.jsx';
 import EditorsNote from './EditorsNote';
 import Event from './Event/';
@@ -45,32 +46,11 @@ const UIShell = props => {
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
-    let delay = 0;
-    if (year !== props.year.id) {
-      setTransitionType('year');
-      delay = 1000; // delay 1s to collapse timeline
-    } else if (romanSceneNumber !== props.romanSceneNumber) {
-      setTransitionType('scene');
-      delay = 1000; // delay 1s to fade circle
-    }
-
-    if (props.pageId === 'home') {
-      delay = 0;
-    }
-
     if (year && romanSceneNumber && page) {
-      setTimeout(() => pushPage(year, romanSceneNumber, page), delay);
+      history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
     } else if (year) {
-      setTimeout(() => pushYear(year), delay);
+      history.push(`/${year}`);
     }
-  };
-
-  const pushYear = year => {
-    history.push(`/${year}`);
-  };
-
-  const pushPage = (year, romanSceneNumber, page) => {
-    history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
   };
 
   let imageBackgroundClasses = {
@@ -185,7 +165,7 @@ const UIShell = props => {
   ];
 
   let timelineClasses = 'contrast-text mix-blend-difference';
-  const mixBlendMode = ['1989', '2003'].includes(props.year.id)
+  const mixBlendMode = hasLightText(props.year.id)
     ? 'mix-blend-screen'
     : 'mix-blend-difference';
 
@@ -378,7 +358,6 @@ const UIShell = props => {
           {...props}
           timelineClasses={timelineClasses}
           previewedYear={hash}
-          transitionType={transitionType}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           navigateTo={navigateTo}
         />
