@@ -15,7 +15,6 @@ const Event = ({
   nextParams,
   changingParam,
   next,
-  headerHeight,
   colourBackgroundClass,
   textColourClass,
   borderColourClass,
@@ -37,7 +36,7 @@ const Event = ({
           scrollingSpeed={1000}
           scrollOverflow={true}
           // Design
-          paddingTop={headerHeight}
+          paddingTop={'78px'}
           // Custom selectors
           credits={{ enabled: false }}
           lazyLoading={false}
@@ -228,7 +227,6 @@ const Event = ({
 
 Event.propTypes = {
   event: PropTypes.shape(),
-  headerHeight: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,

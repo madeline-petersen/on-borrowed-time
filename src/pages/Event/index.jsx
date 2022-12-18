@@ -1,7 +1,7 @@
 import './Event.scss';
 
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useScreenClass } from 'react-grid-system';
 
 import Event2020 from './Event2020';
@@ -20,8 +20,6 @@ const Event = props => {
     onScrollOverflow,
     beforeLeave
   } = props;
-
-  const [headerHeight, setHeaderHeight] = useState('78px');
 
   const openModal = entry => {
     if (entry.content) {
@@ -109,7 +107,6 @@ const Event = props => {
   if (year.id === '2020' && sceneIndex === 0) {
     return (
       <Event2020
-        headerHeight={headerHeight}
         getTextIndent={getTextIndent}
         getFilteredMatches={getFilteredMatches}
         afterLoad={afterLoad}
@@ -124,7 +121,6 @@ const Event = props => {
   } else {
     return (
       <EventDefault
-        headerHeight={headerHeight}
         getTextIndent={getTextIndent}
         getFilteredMatches={getFilteredMatches}
         afterLoad={afterLoad}
