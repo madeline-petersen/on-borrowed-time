@@ -284,20 +284,22 @@ const UIShell = props => {
           props.scene?.title || `${props.year?.id} ${props.year?.title}`
         )} | On Borrowed Time`}</title>
       </Helmet>
-      <Header
-        {...props}
-        currentYear={props.year.id}
-        label={props.year.title}
-        title={props.scene ? props.scene.title : ''}
-        transitionType={transitionType}
-        romanSceneNumber={props.romanSceneNumber}
-        navigateTo={navigateTo}
-        colourBackgroundClass={colourBackgroundClasses[props.year.id]}
-        setBackgroundColor={setThematicThreadsBgWhite}
-        thematicThreadsBgWhite={thematicThreadsBgWhite}
-        timelineClasses={timelineClasses}
-        isTextWhite={isTextWhite}
-      />
+      <Hidden sm xs>
+        <Header
+          {...props}
+          currentYear={props.year.id}
+          label={props.year.title}
+          title={props.scene ? props.scene.title : ''}
+          transitionType={transitionType}
+          romanSceneNumber={props.romanSceneNumber}
+          navigateTo={navigateTo}
+          colourBackgroundClass={colourBackgroundClasses[props.year.id]}
+          setBackgroundColor={setThematicThreadsBgWhite}
+          thematicThreadsBgWhite={thematicThreadsBgWhite}
+          timelineClasses={timelineClasses}
+          isTextWhite={isTextWhite}
+        />
+      </Hidden>
       <LeftMenu
         {...props}
         isActive={isMenuActive}
@@ -340,19 +342,17 @@ const UIShell = props => {
       >
         {selectedYear !== null ? <ArrowLeft20 /> : <Close20 />}
       </span>
-      <Hidden sm xs>
-        <Link
-          to="/home" // to do: change to "/" when homepage moves
-          className={cx('absolute z-40 medium-caption page-title', {
-            [timelineClasses]: true,
-            'opacity-100 cursor-pointer': showSiteTitle,
-            'opacity-0 pointer-events-none': !showSiteTitle,
-            'pointer-events-none': props.pageId === 'home'
-          })}
-        >
-          On Borrowed Time
-        </Link>
-      </Hidden>
+      <Link
+        to="/home" // to do: change to "/" when homepage moves
+        className={cx('absolute z-40 medium-caption page-title', {
+          [timelineClasses]: true,
+          'opacity-100 cursor-pointer': showSiteTitle,
+          'opacity-0 pointer-events-none': !showSiteTitle,
+          'pointer-events-none': props.pageId === 'home'
+        })}
+      >
+        On Borrowed Time
+      </Link>
       {pagesWithTimeline.includes(props.pageId) && (
         <Timeline
           {...props}

@@ -29,13 +29,21 @@
   padding-left: 1rem;
   transition: all 1s;
 
+  // lg
   @media screen and (max-width: $xl-minus-1) {
     // left margin + padding
     left: calc(3.625rem + 12px);
   }
 
+  // md
   @media screen and (max-width: $lg-minus-1) {
     // left margin + padding
-    left: calc(3rxem + 12px);
+    left: calc(3rem + 12px);
+  }
+
+  // sm
+  @media screen and (max-width: $md-minus-1) {
+    left: 17px;
+    font-weight: bold;
   }
 }
