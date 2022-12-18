@@ -1,7 +1,7 @@
 @import '../variables/breakpoints';
 
 .left-menu-bullet {
-  top: 20px;
+  top: 24px;
   left: 24px;
   font-size: 1.875rem;
   transition: all 1s;
@@ -24,19 +24,18 @@
 }
 
 .page-title {
-  top: 20px;
+  top: 21px;
   left: calc(3rem + 12px);
   padding-left: 1rem;
-  line-height: 1.3;
   transition: all 1s;
+
+  @media screen and (max-width: $xl-minus-1) {
+    // left margin + padding
+    left: calc(3.625rem + 12px);
+  }
 
   @media screen and (max-width: $lg-minus-1) {
     // left margin + padding
-    left: calc(3rem + 12px);
-  }
-
-  @media screen and (max-width: $md-minus-1) {
-    // left margin + padding
-    left: calc(10px + 12px);
+    left: calc(3rxem + 12px);
   }
 }
