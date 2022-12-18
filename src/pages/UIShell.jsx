@@ -260,7 +260,6 @@ const UIShell = props => {
     case 'threads':
       pageComponent = (
         <ThematicThreads
-          headerHeight={headerHeight}
           currentBgColour={thematicThreadsBgWhite ? 'white' : 'black'}
         />
       );
