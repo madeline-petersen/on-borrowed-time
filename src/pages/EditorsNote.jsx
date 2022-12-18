@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 
 import Countdown from '../components/Countdown';
 
-const EditorsNote = () => {
+const EditorsNote = ({ headerHeight }) => {
   const screenClass = useScreenClass();
   let textIndent = ['lg', 'xl', 'xxl'].includes(screenClass)
     ? `calc(50%/4)` // indent 0.5/4 columns for large
@@ -25,7 +25,7 @@ const EditorsNote = () => {
         scrollingSpeed={1000}
         scrollOverflow={true}
         // Design
-        paddingTop="78px"
+        paddingTop={headerHeight}
         // Custom selectors
         credits={{ enabled: false }}
         render={({ state, fullpageApi }) => {
@@ -199,5 +199,5 @@ const EditorsNote = () => {
 export default EditorsNote;
 
 EditorsNote.propTypes = {
-  timelineClasses: PropTypes.string
+  headerHeight: PropTypes.string
 };

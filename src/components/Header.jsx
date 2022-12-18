@@ -36,7 +36,7 @@ const Header = ({
       id="header"
     >
       <Container className="grid__container">
-        <Row className="grid__row pt-5">
+        <Row className="grid__row header__container">
           <Hidden sm xs>
             <Col xl={3} lg={3} md={4} sm={0} xs={0} />
           </Hidden>
@@ -127,7 +127,8 @@ const Header = ({
             {title && (
               <p
                 key={`${currentYear}-${romanSceneNumber}-title`}
-                className={cx('medium-caption pt-2 pb-5', {
+                style={{ paddingBottom: '21px' }}
+                className={cx('medium-caption pt-2.5', {
                   'contrast-text': !isTextWhite,
                   'text-white': isTextWhite,
                   [`title-animation ${colourBackgroundClass}`]:

@@ -1,4 +1,5 @@
 import ReactFullpage from '@fullpage/react-fullpage';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Container, Row } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
@@ -6,7 +7,7 @@ import { Helmet } from 'react-helmet';
 import IndexResourceTable from '../components/IndexResourceTable';
 import resources from '../data/index.json';
 
-const Index = () => {
+const Index = ({ headerHeight }) => {
   return (
     <>
       <Helmet>
@@ -18,7 +19,7 @@ const Index = () => {
         scrollingSpeed={1000}
         scrollOverflow={true}
         // Design
-        paddingTop="78px"
+        paddingTop={headerHeight}
         // Custom selectors
         credits={{ enabled: false }}
         render={() => {
@@ -52,6 +53,10 @@ const Index = () => {
       />
     </>
   );
+};
+
+Index.propTypes = {
+  headerHeight: PropTypes.string
 };
 
 export default Index;

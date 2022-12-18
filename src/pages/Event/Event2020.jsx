@@ -15,10 +15,10 @@ const Event = ({
   nextParams,
   changingParam,
   next,
-  headerHeight,
   colourBackgroundClass,
   textColourClass,
   borderColourClass,
+  headerHeight,
   getFilteredMatches,
   getTextIndent,
   beforeLeave,
@@ -228,10 +228,10 @@ const Event = ({
 
 Event.propTypes = {
   event: PropTypes.shape(),
-  headerHeight: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
+  headerHeight: PropTypes.string,
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   afterLoad: PropTypes.func,

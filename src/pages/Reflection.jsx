@@ -17,6 +17,7 @@ const Reflection = ({
   nextParams,
   changingParam,
   next,
+  headerHeight,
   setTransitionType,
   navigateTo,
   colourBackgroundClass,
@@ -56,7 +57,7 @@ const Reflection = ({
           scrollingSpeed={1000}
           scrollOverflow={true}
           // Design
-          paddingTop={'78px'}
+          paddingTop={headerHeight}
           // Custom selectors
           credits={{ enabled: false }}
           lazyLoading={false}
@@ -200,6 +201,7 @@ Reflection.propTypes = {
   changingParam: PropTypes.string,
   imageBackgroundClass: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
+  headerHeight: PropTypes.string,
   navigateTo: PropTypes.func,
   setTransitionType: PropTypes.func,
   onScrollOverflow: PropTypes.func,

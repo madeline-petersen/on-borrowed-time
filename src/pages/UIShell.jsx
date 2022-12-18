@@ -5,7 +5,7 @@ import cx from 'classnames/bind';
 import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { Hidden } from 'react-grid-system';
+import { useScreenClass } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -24,6 +24,7 @@ import Reflection from './Reflection.jsx';
 import ThematicThreads from './ThematicThreads.jsx';
 
 const UIShell = props => {
+  const screenClass = useScreenClass();
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [showSiteTitle, setShowSiteTitle] = useState(true);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
@@ -38,6 +39,7 @@ const UIShell = props => {
   );
   const [anecdoteData, setAnecdoteData] = useState({});
   const [isModalActive, setIsModalActive] = useState(false);
+  const headerHeight = ['xs', 'sm'].includes(screenClass) ? '105px' : '78px';
 
   useEffect(() => {
     setIsTextWhite(props.pageId === 'home' || props.pageId === 'intro');
@@ -215,6 +217,7 @@ const UIShell = props => {
       pageComponent = (
         <Event
           {...props}
+          headerHeight={headerHeight}
           navigateTo={navigateTo}
           setTransitionType={setTransitionType}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
@@ -232,6 +235,7 @@ const UIShell = props => {
       pageComponent = (
         <Artifacts
           {...props}
+          headerHeight={headerHeight}
           setTransitionType={setTransitionType}
           navigateTo={navigateTo}
           onScrollOverflow={onScrollOverflow}
@@ -243,6 +247,7 @@ const UIShell = props => {
       pageComponent = (
         <Reflection
           {...props}
+          headerHeight={headerHeight}
           imageBackgroundClass={imageBackgroundClasses[props.nextParams.year]}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           navigateTo={navigateTo}
@@ -260,10 +265,10 @@ const UIShell = props => {
       );
       break;
     case 'info':
-      pageComponent = <EditorsNote />;
+      pageComponent = <EditorsNote headerHeight={headerHeight} />;
       break;
     case 'index':
-      pageComponent = <Index />;
+      pageComponent = <Index headerHeight={headerHeight} />;
       break;
     default:
       pageComponent = (
@@ -309,6 +314,7 @@ const UIShell = props => {
       />
       <Anecdote
         {...anecdoteData}
+        headerHeight={headerHeight}
         isActive={isModalActive}
         onCloseModal={() => setIsModalActive(false)}
       />
@@ -340,19 +346,17 @@ const UIShell = props => {
       >
         {selectedYear !== null ? <ArrowLeft20 /> : <Close20 />}
       </span>
-      <Hidden sm xs>
-        <Link
-          to="/home" // to do: change to "/" when homepage moves
-          className={cx('absolute z-40 medium-caption page-title', {
-            [timelineClasses]: true,
-            'opacity-100 cursor-pointer': showSiteTitle,
-            'opacity-0 pointer-events-none': !showSiteTitle,
-            'pointer-events-none': props.pageId === 'home'
-          })}
-        >
-          On Borrowed Time
-        </Link>
-      </Hidden>
+      <Link
+        to="/home" // to do: change to "/" when homepage moves
+        className={cx('absolute z-40 medium-caption page-title', {
+          [timelineClasses]: true,
+          'opacity-100 cursor-pointer': showSiteTitle,
+          'opacity-0 pointer-events-none': !showSiteTitle,
+          'pointer-events-none': props.pageId === 'home'
+        })}
+      >
+        On Borrowed Time
+      </Link>
       {pagesWithTimeline.includes(props.pageId) && (
         <Timeline
           {...props}

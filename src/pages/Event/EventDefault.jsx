@@ -5,7 +5,7 @@ import parse from 'html-react-parser';
 import { throttle } from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Col, Container, Row } from 'react-grid-system';
+import { Col, Container, Row, useScreenClass } from 'react-grid-system';
 
 import HiddenFooter from '../../components/HiddenFooter';
 import ResourceTable from '../../components/ResourceTable';
@@ -17,10 +17,10 @@ const Event = ({
   nextParams,
   changingParam,
   next,
-  headerHeight,
   colourBackgroundClass,
   textColourClass,
   borderColourClass,
+  headerHeight,
   getFilteredMatches,
   openModal,
   getTextIndent,
@@ -136,11 +136,11 @@ Event.propTypes = {
   event: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
-  headerHeight: PropTypes.string,
   changingParam: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
+  headerHeight: PropTypes.string,
   getFilteredMatches: PropTypes.func,
   afterLoad: PropTypes.func,
   getTextIndent: PropTypes.func,

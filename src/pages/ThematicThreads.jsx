@@ -321,7 +321,7 @@ const ThematicThreads = ({ currentBgColour }) => {
         scrollingSpeed={1000}
         scrollOverflow={true}
         // Design
-        paddingTop="78px"
+        paddingTop={'78px'}
         // Custom selectors
         credits={{ enabled: false }}
         render={({ state, fullpageApi }) => {
