@@ -1,14 +1,10 @@
 import './Timeline.scss';
 
-import { roman } from '@sguest/roman-js';
 import cx from 'classnames/bind';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 const Timeline = props => {
-  const [numScenes, setNumScenes] = useState(0);
-  const [currentSceneIndex, setSceneIndex] = useState(props.sceneIndex);
-
   let colourClasses = {
     '1984': 'gray-30',
     '1989': 'slate',
@@ -24,53 +20,16 @@ const Timeline = props => {
       return;
     }
 
-    setSceneIndex(null); // disappear circle
-    if (!isHomePage) {
-      if (!isCurrentYear(year)) {
-        setNumScenes(0); // collapse timeline (1s duration)
-      }
-    }
     props.navigateTo(year.id);
-    setSceneIndex('intro');
   };
-
-  const onClickScene = sceneIndex => {
-    setSceneIndex(null); // disappear circle
-    props.navigateTo(props.year?.id, roman.toRoman(sceneIndex + 1), 'event');
-  };
-
-  useEffect(() => {
-    if (props.transitionType === 'year') {
-      setNumScenes(0); // collapse timeline
-    } else if (props.transitionType === 'scene') {
-      setSceneIndex(null); // fade out circle immediately
-    }
-  }, [props.transitionType]);
-
-  useEffect(() => {
-    setNumScenes(props.year.scenes?.length || 0); // expand timeline
-  }, [props.year?.id]);
-
-  useEffect(() => {
-    if (isIntroPage) {
-      setSceneIndex('intro');
-    } else {
-      setSceneIndex(props.sceneIndex);
-    }
-  }, [props.year, props.sceneIndex, props.pageId]);
 
   const isEventPage = props.pageId === 'event';
   const isHomePage = props.pageId === 'home';
   const isIntroPage = props.pageId === 'intro';
   const hasLightText = ['1989', '2003'].includes(props.year?.id);
-  const currentYearSceneClasses = cx('pl-4 mb-2.5 contrast-text');
 
   const isCurrentYear = year => {
     return year.id === props.year?.id;
-  };
-
-  const yearIsActive = year => {
-    return isCurrentYear(year) && numScenes > 0;
   };
 
   const previewingCurrentYear = year => {
@@ -91,10 +50,8 @@ const Timeline = props => {
           return (
             <div
               key={year.id}
-              className={cx({
-                [currentYearSceneClasses]: isCurrentYear(year),
-                [colourClasses[year.id]]: isEventPage && !hasLightText,
-                'pl-4 mb-2.5': !isCurrentYear(year)
+              className={cx('pl-4 mb-2.5', {
+                [colourClasses[year.id]]: isEventPage && !hasLightText
               })}
             >
               <span
@@ -119,12 +76,10 @@ const Timeline = props => {
 
 Timeline.propTypes = {
   years: PropTypes.arrayOf(PropTypes.shape()),
-  sceneIndex: PropTypes.number,
   pageId: PropTypes.string,
-  year: PropTypes.shape(), // current year, expands timeline
+  year: PropTypes.shape(), // current year
   timelineClasses: PropTypes.string,
   previewedYear: PropTypes.string,
-  transitionType: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
   navigateTo: PropTypes.func
 };

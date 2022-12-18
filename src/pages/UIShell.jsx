@@ -378,7 +378,6 @@ const UIShell = props => {
           {...props}
           timelineClasses={timelineClasses}
           previewedYear={hash}
-          transitionType={transitionType}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           navigateTo={navigateTo}
         />
