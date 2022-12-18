@@ -97,13 +97,6 @@ const Event = props => {
       : `event-${nextParams.scene}-${nextParams.page}`;
   };
 
-  setTimeout(() => {
-    const header = document.getElementById('header');
-    if (header) {
-      setHeaderHeight(window.getComputedStyle(header).height);
-    }
-  }, 4500);
-
   if (year.id === '2020' && sceneIndex === 0) {
     return (
       <Event2020

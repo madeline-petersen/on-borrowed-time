@@ -5,7 +5,7 @@ import parse from 'html-react-parser';
 import { throttle } from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Col, Container, Row } from 'react-grid-system';
+import { Col, Container, Row, useScreenClass } from 'react-grid-system';
 
 import HiddenFooter from '../../components/HiddenFooter';
 import ResourceTable from '../../components/ResourceTable';
@@ -20,6 +20,7 @@ const Event = ({
   colourBackgroundClass,
   textColourClass,
   borderColourClass,
+  headerHeight,
   getFilteredMatches,
   openModal,
   getTextIndent,
@@ -38,7 +39,7 @@ const Event = ({
           scrollingSpeed={1000}
           scrollOverflow={true}
           // Design
-          paddingTop={'78px'}
+          paddingTop={headerHeight}
           // Custom selectors
           credits={{ enabled: false }}
           lazyLoading={false}
@@ -139,6 +140,7 @@ Event.propTypes = {
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
+  headerHeight: PropTypes.string,
   getFilteredMatches: PropTypes.func,
   afterLoad: PropTypes.func,
   getTextIndent: PropTypes.func,

@@ -36,7 +36,7 @@ const Header = ({
       id="header"
     >
       <Container className="grid__container">
-        <Row className="grid__row" style={{ paddingTop: '21px' }}>
+        <Row className="grid__row header__container">
           <Hidden sm xs>
             <Col xl={3} lg={3} md={4} sm={0} xs={0} />
           </Hidden>

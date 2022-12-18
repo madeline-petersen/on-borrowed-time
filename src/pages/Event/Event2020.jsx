@@ -18,6 +18,7 @@ const Event = ({
   colourBackgroundClass,
   textColourClass,
   borderColourClass,
+  headerHeight,
   getFilteredMatches,
   getTextIndent,
   beforeLeave,
@@ -36,7 +37,7 @@ const Event = ({
           scrollingSpeed={1000}
           scrollOverflow={true}
           // Design
-          paddingTop={'78px'}
+          paddingTop={headerHeight}
           // Custom selectors
           credits={{ enabled: false }}
           lazyLoading={false}
@@ -230,6 +231,7 @@ Event.propTypes = {
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
+  headerHeight: PropTypes.string,
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   afterLoad: PropTypes.func,

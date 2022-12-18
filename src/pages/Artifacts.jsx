@@ -3,7 +3,7 @@ import './Artifacts.scss';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { throttle } from 'lodash';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Container, Row } from 'react-grid-system';
 
 import HiddenFooter from '../components/HiddenFooter';
@@ -15,13 +15,13 @@ const Artifacts = ({
   artifacts,
   nextParams,
   changingParam,
+  headerHeight,
   next,
   setTransitionType,
   navigateTo,
   onScrollOverflow,
   beforeLeave
 }) => {
-  const [headerHeight, setHeaderHeight] = useState('78px');
   useEffect(() => {
     setTransitionType(null);
   }, [artifacts]);
@@ -74,15 +74,24 @@ const Artifacts = ({
                       <>
                         {artifacts.imageLayout &&
                           artifacts.imageLayout.type === 'custom' && (
-                            <Custom images={artifacts.imageLayout.images} />
+                            <Custom
+                              images={artifacts.imageLayout.images}
+                              headerHeight={headerHeight}
+                            />
                           )}
                         {artifacts.imageLayout &&
                           artifacts.imageLayout.type === 'triptych' && (
-                            <Triptych images={artifacts.imageLayout.images} />
+                            <Triptych
+                              images={artifacts.imageLayout.images}
+                              headerHeight={headerHeight}
+                            />
                           )}
                         {artifacts.imageLayout &&
                           artifacts.imageLayout.type === 'diptych' && (
-                            <Diptych images={artifacts.imageLayout.images} />
+                            <Diptych
+                              images={artifacts.imageLayout.images}
+                              headerHeight={headerHeight}
+                            />
                           )}
 
                         {/* padding below last page element */}
@@ -119,6 +128,7 @@ Artifacts.propTypes = {
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   changingParam: PropTypes.string,
+  headerHeight: PropTypes.string,
   setTransitionType: PropTypes.func,
   navigateTo: PropTypes.func,
   onScrollOverflow: PropTypes.func,
