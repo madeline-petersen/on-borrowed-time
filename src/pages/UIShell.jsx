@@ -45,32 +45,11 @@ const UIShell = props => {
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
-    let delay = 0;
-    if (year !== props.year.id) {
-      setTransitionType('year');
-      delay = 1000; // delay 1s to collapse timeline
-    } else if (romanSceneNumber !== props.romanSceneNumber) {
-      setTransitionType('scene');
-      delay = 1000; // delay 1s to fade circle
-    }
-
-    if (props.pageId === 'home') {
-      delay = 0;
-    }
-
     if (year && romanSceneNumber && page) {
-      setTimeout(() => pushPage(year, romanSceneNumber, page), delay);
+      history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
     } else if (year) {
-      setTimeout(() => pushYear(year), delay);
+      history.push(`/${year}`);
     }
-  };
-
-  const pushYear = year => {
-    history.push(`/${year}`);
-  };
-
-  const pushPage = (year, romanSceneNumber, page) => {
-    history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
   };
 
   let imageBackgroundClasses = {

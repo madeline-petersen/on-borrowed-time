@@ -32,7 +32,7 @@ const LeftMenu = ({
     let romanSceneNumber = roman.toRoman(sceneIndex + 1).toUpperCase();
     setTimeout(function() {
       navigateTo(year, romanSceneNumber, 'event');
-    }, 500);
+    }, 500); // delay 500ms to close menu
   };
 
   const onClickYear = year => {
@@ -40,7 +40,7 @@ const LeftMenu = ({
     closeModal();
     setTimeout(function() {
       navigateTo(year);
-    }, 500);
+    }, 500); // delay 500ms to close menu
   };
 
   const onSelectYear = (year, index) => {
@@ -60,7 +60,7 @@ const LeftMenu = ({
     closeModal();
     setTimeout(function() {
       navigateToUrl(url);
-    }, 1000);
+    }, 1000); // delay 1s to close menu
   };
 
   const closeModal = () => {
