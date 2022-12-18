@@ -139,11 +139,7 @@ $xxl-minus-1: 1799px;
     // 11 columns
     @media screen and (max-width: $md-minus-1) {
       top: 105px;
-      background: linear-gradient(
-        to right,
-        transparent calc(22px - 1px + (100vw - 44px) / 12),
-        white calc(22px - 1px + (100vw - 44px) / 12)
-      );
+      background: linear-gradient(to right, transparent 22px, white 22px);
     }
 
     &.type-poem {
