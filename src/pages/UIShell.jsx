@@ -13,6 +13,7 @@ import Anecdote from '../components/Anecdote';
 import Header from '../components/Header';
 import LeftMenu from '../components/LeftMenu';
 import Timeline from '../components/Timeline';
+import hasLightText from '../helpers/hasLightText';
 import Artifacts from './Artifacts.jsx';
 import EditorsNote from './EditorsNote';
 import Event from './Event/';
@@ -164,7 +165,7 @@ const UIShell = props => {
   ];
 
   let timelineClasses = 'contrast-text mix-blend-difference';
-  const mixBlendMode = ['1989', '2003'].includes(props.year.id)
+  const mixBlendMode = hasLightText(props.year.id)
     ? 'mix-blend-screen'
     : 'mix-blend-difference';
 

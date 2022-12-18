@@ -9,6 +9,7 @@ import { Col, Container, Row } from 'react-grid-system';
 
 import HiddenFooter from '../../components/HiddenFooter';
 import ResourceTable from '../../components/ResourceTable';
+import hasLightText from '../../helpers/hasLightText';
 
 const Event = ({
   year,
@@ -70,9 +71,7 @@ const Event = ({
                                   sm={12}
                                   xs={12}
                                   className={`highlight transition-all ${
-                                    ['1989', '2003'].includes(year.id)
-                                      ? 'light'
-                                      : 'dark'
+                                    hasLightText(year.id) ? 'light' : 'dark'
                                   }`}
                                 >
                                   <p

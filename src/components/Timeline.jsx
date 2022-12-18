@@ -4,6 +4,8 @@ import cx from 'classnames/bind';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import hasLightText from '../helpers/hasLightText';
+
 const Timeline = props => {
   let colourClasses = {
     '1984': 'gray-30',
@@ -26,7 +28,7 @@ const Timeline = props => {
   const isEventPage = props.pageId === 'event';
   const isHomePage = props.pageId === 'home';
   const isIntroPage = props.pageId === 'intro';
-  const hasLightText = ['1989', '2003'].includes(props.year?.id);
+  const currentYearHasLightText = hasLightText(props.year.id);
 
   const isCurrentYear = year => {
     return year.id === props.year?.id;
@@ -39,10 +41,11 @@ const Timeline = props => {
   return (
     <span
       className={cx('timeline medium-caption pb-5 h-screen contrast-text', {
-        [colourClasses[props.year?.id]]: isEventPage && !hasLightText,
+        [colourClasses[props.year?.id]]:
+          isEventPage && !currentYearHasLightText,
         'image-background': isIntroPage || isHomePage,
-        'mix-blend-screen': hasLightText,
-        'mix-blend-difference': !hasLightText
+        'mix-blend-screen': currentYearHasLightText,
+        'mix-blend-difference': !currentYearHasLightText
       })}
     >
       <span className={cx('timeline__years absolute', [props.timelineClasses])}>
@@ -51,13 +54,15 @@ const Timeline = props => {
             <div
               key={year.id}
               className={cx('pl-4 mb-2.5', {
-                [colourClasses[year.id]]: isEventPage && !hasLightText
+                [colourClasses[year.id]]:
+                  isEventPage && !currentYearHasLightText
               })}
             >
               <span
                 onClick={() => onClickYear(year)}
                 className={cx('year-label contrast-text cursor-pointer', {
-                  [props.colourBackgroundClass]: isEventPage && !hasLightText,
+                  [props.colourBackgroundClass]:
+                    isEventPage && !currentYearHasLightText,
                   'opacity-60 hover:opacity-100':
                     !isCurrentYear(year) ||
                     (isHomePage && !previewingCurrentYear(year)),
