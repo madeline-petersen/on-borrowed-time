@@ -92,6 +92,7 @@
       }
 
       .thematic-thread-headline {
+        pointer-events: none;
         &:hover {
           // make blurb number visible
           .small-body {
