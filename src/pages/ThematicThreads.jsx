@@ -232,7 +232,7 @@ const ThematicThreads = ({ currentBgColour }) => {
                 {...cols.title}
               >
                 <div
-                  className={`thematic-thread-headline ${textColourClass} cursor-pointer pt-9 pb-5`}
+                  className={`thematic-thread-headline ${textColourClass} pt-9 pb-5`}
                 >
                   {parse(thread.title)}
                   <Hidden sm xs>
