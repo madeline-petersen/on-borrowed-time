@@ -44,7 +44,11 @@ const Intro = ({
       <div className="intro foreground-fade-in" key={`intro-${year.id}`}>
         <ReactFullpage
           licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
+          // Scrolling
           scrollingSpeed={1000}
+          // Custom selectors
+          credits={{ enabled: false }}
+          // Events
           afterLoad={afterLoad}
           beforeLeave={() => swapTextBeforePageChange()}
           render={({ state, fullpageApi }) => {

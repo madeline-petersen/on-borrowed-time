@@ -5,7 +5,7 @@ import cx from 'classnames/bind';
 import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { Hidden } from 'react-grid-system';
+import { useScreenClass } from 'react-grid-system';
 import { Helmet } from 'react-helmet';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -13,6 +13,7 @@ import Anecdote from '../components/Anecdote';
 import Header from '../components/Header';
 import LeftMenu from '../components/LeftMenu';
 import Timeline from '../components/Timeline';
+import hasLightText from '../helpers/hasLightText';
 import Artifacts from './Artifacts.jsx';
 import EditorsNote from './EditorsNote';
 import Event from './Event/';
@@ -23,6 +24,7 @@ import Reflection from './Reflection.jsx';
 import ThematicThreads from './ThematicThreads.jsx';
 
 const UIShell = props => {
+  const screenClass = useScreenClass();
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [showSiteTitle, setShowSiteTitle] = useState(true);
   const [hash, setHash] = useState(window.location.hash.substring(1) || '1984');
@@ -37,6 +39,7 @@ const UIShell = props => {
   );
   const [anecdoteData, setAnecdoteData] = useState({});
   const [isModalActive, setIsModalActive] = useState(false);
+  const headerHeight = ['xs', 'sm'].includes(screenClass) ? '105px' : '78px';
 
   useEffect(() => {
     setIsTextWhite(props.pageId === 'home' || props.pageId === 'intro');
@@ -45,32 +48,11 @@ const UIShell = props => {
   let history = useHistory();
 
   const navigateTo = (year, romanSceneNumber, page) => {
-    let delay = 0;
-    if (year !== props.year.id) {
-      setTransitionType('year');
-      delay = 1000; // delay 1s to collapse timeline
-    } else if (romanSceneNumber !== props.romanSceneNumber) {
-      setTransitionType('scene');
-      delay = 1000; // delay 1s to fade circle
-    }
-
-    if (props.pageId === 'home') {
-      delay = 0;
-    }
-
     if (year && romanSceneNumber && page) {
-      setTimeout(() => pushPage(year, romanSceneNumber, page), delay);
+      history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
     } else if (year) {
-      setTimeout(() => pushYear(year), delay);
+      history.push(`/${year}`);
     }
-  };
-
-  const pushYear = year => {
-    history.push(`/${year}`);
-  };
-
-  const pushPage = (year, romanSceneNumber, page) => {
-    history.push(`/${year}/scene-${romanSceneNumber}/${page}`);
   };
 
   let imageBackgroundClasses = {
@@ -131,15 +113,50 @@ const UIShell = props => {
     }, 1500);
   };
 
-  const pagesWithOverscroll = [
-    'home',
-    'intro',
-    'event',
-    'artifacts',
-    'reflection',
-    'threads',
-    'info'
-  ];
+  const onScrollOverflow = (section, slide, position, direction) => {
+    if (
+      position >=
+      section.item.children[0].scrollHeight -
+        section.item.children[0].offsetHeight -
+        1
+    ) {
+      // reached scroll bottom
+      const element = document.getElementsByClassName(
+        'hidden-footer__container'
+      )[0];
+
+      if (element) {
+        if (element.classList.contains('show')) {
+          return true; // leave section
+        } else {
+          fullpage_api.setAllowScrolling(false, 'down'); // arrest scrolling
+          element.classList.add('show'); // show footer
+          // scrolling allowed again after .7 seconds
+          setTimeout(() => fullpage_api.setAllowScrolling(true, 'down'), 700);
+          return false; // stay on section
+        }
+      }
+    }
+  };
+
+  const beforeLeave = (origin, destination, direction) => {
+    if (isModalActive) {
+      return false;
+    }
+
+    const element = document.getElementsByClassName(
+      'hidden-footer__container'
+    )[0];
+
+    if (element) {
+      if (element.classList.contains('show')) {
+        return true;
+      } else {
+        element.classList.add('show');
+        return false;
+      }
+    }
+  };
 
   const pagesWithTimeline = [
     'home',
@@ -150,7 +167,7 @@ const UIShell = props => {
   ];
 
   let timelineClasses = 'contrast-text mix-blend-difference';
-  const mixBlendMode = ['1989', '2003'].includes(props.year.id)
+  const mixBlendMode = hasLightText(props.year.id)
     ? 'mix-blend-screen'
     : 'mix-blend-difference';
 
@@ -200,15 +217,17 @@ const UIShell = props => {
       pageComponent = (
         <Event
           {...props}
+          headerHeight={headerHeight}
           navigateTo={navigateTo}
           setTransitionType={setTransitionType}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           textColourClass={textColourClass[props.year.id]}
           borderColourClass={borderColourClass[props.year.id]}
           setAnecdoteData={setAnecdoteData}
-          isModalActive={isModalActive}
           setIsModalActive={setIsModalActive}
           sceneIndex={props.sceneIndex}
+          onScrollOverflow={onScrollOverflow}
+          beforeLeave={beforeLeave}
         />
       );
       break;
@@ -216,8 +235,11 @@ const UIShell = props => {
       pageComponent = (
         <Artifacts
           {...props}
+          headerHeight={headerHeight}
           setTransitionType={setTransitionType}
           navigateTo={navigateTo}
+          onScrollOverflow={onScrollOverflow}
+          beforeLeave={beforeLeave}
         />
       );
       break;
@@ -225,10 +247,13 @@ const UIShell = props => {
       pageComponent = (
         <Reflection
           {...props}
+          headerHeight={headerHeight}
           imageBackgroundClass={imageBackgroundClasses[props.nextParams.year]}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           navigateTo={navigateTo}
           setTransitionType={setTransitionType}
+          onScrollOverflow={onScrollOverflow}
+          beforeLeave={beforeLeave}
         />
       );
       break;
@@ -240,10 +265,10 @@ const UIShell = props => {
       );
       break;
     case 'info':
-      pageComponent = <EditorsNote />;
+      pageComponent = <EditorsNote headerHeight={headerHeight} />;
       break;
     case 'index':
-      pageComponent = <Index />;
+      pageComponent = <Index headerHeight={headerHeight} />;
       break;
     default:
       pageComponent = (
@@ -289,6 +314,7 @@ const UIShell = props => {
       />
       <Anecdote
         {...anecdoteData}
+        headerHeight={headerHeight}
         isActive={isModalActive}
         onCloseModal={() => setIsModalActive(false)}
       />
@@ -320,25 +346,22 @@ const UIShell = props => {
       >
         {selectedYear !== null ? <ArrowLeft20 /> : <Close20 />}
       </span>
-      <Hidden sm xs>
-        <Link
-          to="/home" // to do: change to "/" when homepage moves
-          className={cx('absolute z-40 medium-caption page-title', {
-            [timelineClasses]: true,
-            'opacity-100 cursor-pointer': showSiteTitle,
-            'opacity-0 pointer-events-none': !showSiteTitle,
-            'pointer-events-none': props.pageId === 'home'
-          })}
-        >
-          On Borrowed Time
-        </Link>
-      </Hidden>
+      <Link
+        to="/home" // to do: change to "/" when homepage moves
+        className={cx('absolute z-40 medium-caption page-title', {
+          [timelineClasses]: true,
+          'opacity-100 cursor-pointer': showSiteTitle,
+          'opacity-0 pointer-events-none': !showSiteTitle,
+          'pointer-events-none': props.pageId === 'home'
+        })}
+      >
+        On Borrowed Time
+      </Link>
       {pagesWithTimeline.includes(props.pageId) && (
         <Timeline
           {...props}
           timelineClasses={timelineClasses}
           previewedYear={hash}
-          transitionType={transitionType}
           colourBackgroundClass={colourBackgroundClasses[props.year.id]}
           navigateTo={navigateTo}
         />

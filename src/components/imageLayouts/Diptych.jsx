@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Row, Visible } from 'react-grid-system';
 
-const Diptych = ({ images }) => {
+const Diptych = ({ images, headerHeight }) => {
   return (
     <Row className="grid__row pb-20">
       <Col lg={3} />
@@ -17,7 +17,7 @@ const Diptych = ({ images }) => {
               className="aspect-ratio reveal"
               style={{
                 paddingTop: `calc(${image.height}/${image.width} * 100%)`,
-                marginTop: `max((100vh - 78px - ${image.height}/${image.width} * 100%) / 2, 80px)`,
+                marginTop: `max((100vh - ${headerHeight} - ${image.height}/${image.width} * 100%) / 2, 80px)`,
                 backgroundImage: `url('/images/${image.source}')`
               }}
             />
@@ -35,6 +35,7 @@ const Diptych = ({ images }) => {
 };
 
 Diptych.propTypes = {
+  headerHeight: PropTypes.string,
   images: PropTypes.shape()
 };
 

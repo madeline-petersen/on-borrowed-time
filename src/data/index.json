@@ -127,7 +127,7 @@
   {
     "sectionTitle": "Magazine",
     "resources": [
-            {
+      {
         "type": "Article Excerpt",
         "publication": "Time",
         "shortTitle": "Business: Hong Kong’s Golden Link",
@@ -240,7 +240,7 @@
     ]
   },
   {
-    "sectionTitle": "Books & Independent Publications",
+    "sectionTitle": "Books <span>&</span> Independent Publications",
     "resources": [
       {
         "type": "Book Excerpt",

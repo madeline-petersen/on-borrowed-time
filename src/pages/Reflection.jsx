@@ -9,6 +9,7 @@ import React, { useEffect } from 'react';
 import { Col, Container, Row } from 'react-grid-system';
 
 import HiddenFooter from '../components/HiddenFooter';
+import hasLightText from '../helpers/hasLightText';
 
 const Reflection = ({
   reflection,
@@ -16,10 +17,13 @@ const Reflection = ({
   nextParams,
   changingParam,
   next,
+  headerHeight,
   setTransitionType,
   navigateTo,
   colourBackgroundClass,
-  imageBackgroundClass
+  imageBackgroundClass,
+  onScrollOverflow,
+  beforeLeave
 }) => {
   useEffect(() => {
     setTransitionType(null);
@@ -41,21 +45,6 @@ const Reflection = ({
     }
   };
 
-  const beforeLeave = function(origin, destination, direction) {
-    const element = document.getElementsByClassName(
-      'hidden-footer__container'
-    )[0];
-
-    if (element) {
-      if (element.classList.contains('show')) {
-        return true;
-      } else {
-        element.classList.add('show');
-        return false;
-      }
-    }
-  };
-
   return (
     <>
       <div
@@ -64,11 +53,18 @@ const Reflection = ({
       >
         <ReactFullpage
           licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
+          // Scrolling
           scrollingSpeed={1000}
+          scrollOverflow={true}
+          // Design
+          paddingTop={headerHeight}
+          // Custom selectors
+          credits={{ enabled: false }}
+          lazyLoading={false}
+          // Events
           afterLoad={afterLoad}
           beforeLeave={throttle(beforeLeave, 1000)}
-          scrollOverflow={true}
-          paddingTop="78px"
+          onScrollOverflow={onScrollOverflow}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
@@ -165,8 +161,7 @@ const Reflection = ({
                       next={next}
                       changingParam={changingParam}
                       textClasses={
-                        ['1989', '2003'].includes(year.id) ||
-                        changingParam === 'year'
+                        hasLightText(year.id) || changingParam === 'year'
                           ? `text-white text-opacity-90`
                           : `text-black text-opacity-90`
                       }
@@ -206,8 +201,11 @@ Reflection.propTypes = {
   changingParam: PropTypes.string,
   imageBackgroundClass: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
+  headerHeight: PropTypes.string,
   navigateTo: PropTypes.func,
-  setTransitionType: PropTypes.func
+  setTransitionType: PropTypes.func,
+  onScrollOverflow: PropTypes.func,
+  beforeLeave: PropTypes.func
 };
 
 export default Reflection;

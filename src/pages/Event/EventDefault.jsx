@@ -5,10 +5,11 @@ import parse from 'html-react-parser';
 import { throttle } from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Col, Container, Row } from 'react-grid-system';
+import { Col, Container, Row, useScreenClass } from 'react-grid-system';
 
 import HiddenFooter from '../../components/HiddenFooter';
 import ResourceTable from '../../components/ResourceTable';
+import hasLightText from '../../helpers/hasLightText';
 
 const Event = ({
   year,
@@ -16,29 +17,36 @@ const Event = ({
   nextParams,
   changingParam,
   next,
-  headerHeight,
   colourBackgroundClass,
   textColourClass,
   borderColourClass,
+  headerHeight,
   getFilteredMatches,
   openModal,
   getTextIndent,
   afterLoad,
   beforeLeave,
   setOnClicks,
-  generateKey
+  generateKey,
+  onScrollOverflow
 }) => {
   return (
     <>
       <div className="event" key={() => generateKey()}>
         <ReactFullpage
           licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
+          // Scrolling
           scrollingSpeed={1000}
+          scrollOverflow={true}
+          // Design
+          paddingTop={headerHeight}
+          // Custom selectors
+          credits={{ enabled: false }}
+          lazyLoading={false}
+          // Events
           afterLoad={afterLoad}
           beforeLeave={throttle(beforeLeave, 1000)}
-          scrollOverflow={true}
-          lazyLoading={false}
-          paddingTop={headerHeight}
+          onScrollOverflow={onScrollOverflow}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
@@ -63,9 +71,7 @@ const Event = ({
                                   sm={12}
                                   xs={12}
                                   className={`highlight transition-all ${
-                                    ['1989', '2003'].includes(year.id)
-                                      ? 'light'
-                                      : 'dark'
+                                    hasLightText(year.id) ? 'light' : 'dark'
                                   }`}
                                 >
                                   <p
@@ -130,18 +136,19 @@ Event.propTypes = {
   event: PropTypes.shape(),
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
-  headerHeight: PropTypes.string,
   changingParam: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
+  headerHeight: PropTypes.string,
   getFilteredMatches: PropTypes.func,
   afterLoad: PropTypes.func,
   getTextIndent: PropTypes.func,
   openModal: PropTypes.func,
   beforeLeave: PropTypes.func,
   setOnClicks: PropTypes.func,
-  generateKey: PropTypes.func
+  generateKey: PropTypes.func,
+  onScrollOverflow: PropTypes.func
 };
 
 export default Event;

@@ -82,6 +82,7 @@ $xxl-minus-1: 1799px;
     // sm (up to md-minus-1)
     @media screen and (max-width: $md-minus-1) {
       padding-right: calc(13px + 10px);
+      height: calc(100vh - 105px);
     }
 
     // xs (up to sm-minus-1)
@@ -94,6 +95,11 @@ $xxl-minus-1: 1799px;
     position: fixed;
     top: 78px;
     width: 100%;
+
+    // sm (up to md-minus-1)
+    @media screen and (max-width: $md-minus-1) {
+      top: 105px;
+    }
   }
 
   .anecdote-background-filler {
@@ -130,13 +136,10 @@ $xxl-minus-1: 1799px;
     }
 
     // small, xs (margin 22px)
-    // 11 columns
+    // 12 columns
     @media screen and (max-width: $md-minus-1) {
-      background: linear-gradient(
-        to right,
-        transparent calc(22px - 1px + (100vw - 44px) / 12),
-        white calc(22px - 1px + (100vw - 44px) / 12)
-      );
+      top: 105px;
+      background: linear-gradient(to right, transparent 22px, white 22px);
     }
 
     &.type-poem {

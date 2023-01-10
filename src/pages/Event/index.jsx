@@ -1,7 +1,7 @@
 import './Event.scss';
 
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useScreenClass } from 'react-grid-system';
 
 import Event2020 from './Event2020';
@@ -16,11 +16,10 @@ const Event = props => {
     navigateTo,
     setTransitionType,
     setAnecdoteData,
-    isModalActive,
-    setIsModalActive
+    setIsModalActive,
+    onScrollOverflow,
+    beforeLeave
   } = props;
-
-  const [headerHeight, setHeaderHeight] = useState('78px');
 
   const openModal = entry => {
     if (entry.content) {
@@ -92,42 +91,15 @@ const Event = props => {
     }
   };
 
-  const beforeLeave = (origin, destination, direction) => {
-    if (isModalActive) {
-      return false;
-    }
-
-    const element = document.getElementsByClassName(
-      'hidden-footer__container'
-    )[0];
-
-    if (element) {
-      if (element.classList.contains('show')) {
-        return true;
-      } else {
-        element.classList.add('show');
-        return false;
-      }
-    }
-  };
-
   const generateKey = () => {
     return nextParams.year
       ? `event-${nextParams.year}-${nextParams.scene}-${nextParams.page}`
       : `event-${nextParams.scene}-${nextParams.page}`;
   };
 
-  setTimeout(() => {
-    const header = document.getElementById('header');
-    if (header) {
-      setHeaderHeight(window.getComputedStyle(header).height);
-    }
-  }, 4500);
-
   if (year.id === '2020' && sceneIndex === 0) {
     return (
       <Event2020
-        headerHeight={headerHeight}
         getTextIndent={getTextIndent}
         getFilteredMatches={getFilteredMatches}
         afterLoad={afterLoad}
@@ -135,13 +107,13 @@ const Event = props => {
         beforeLeave={beforeLeave}
         openModal={openModal}
         generateKey={generateKey}
+        onScrollOverflow={onScrollOverflow}
         {...props}
       />
     );
   } else {
     return (
       <EventDefault
-        headerHeight={headerHeight}
         getTextIndent={getTextIndent}
         getFilteredMatches={getFilteredMatches}
         afterLoad={afterLoad}
@@ -149,6 +121,7 @@ const Event = props => {
         openModal={openModal}
         setOnClicks={setOnClicks}
         generateKey={generateKey}
+        onScrollOverflow={onScrollOverflow}
         {...props}
       />
     );
@@ -169,8 +142,9 @@ Event.propTypes = {
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
   setAnecdoteData: PropTypes.func,
-  isModalActive: PropTypes.bool,
-  setIsModalActive: PropTypes.func
+  setIsModalActive: PropTypes.func,
+  onScrollOverflow: PropTypes.func,
+  beforeLeave: PropTypes.func
 };
 
 export default Event;

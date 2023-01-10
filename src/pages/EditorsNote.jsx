@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 
 import Countdown from '../components/Countdown';
 
-const EditorsNote = () => {
+const EditorsNote = ({ headerHeight }) => {
   const screenClass = useScreenClass();
   let textIndent = ['lg', 'xl', 'xxl'].includes(screenClass)
     ? `calc(50%/4)` // indent 0.5/4 columns for large
@@ -21,9 +21,13 @@ const EditorsNote = () => {
       </Helmet>
       <ReactFullpage
         licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
+        // Scrolling
         scrollingSpeed={1000}
         scrollOverflow={true}
-        paddingTop="78px"
+        // Design
+        paddingTop={headerHeight}
+        // Custom selectors
+        credits={{ enabled: false }}
         render={({ state, fullpageApi }) => {
           return (
             <div className={`section bg-blue-70 h-auto foreground-fade-in`}>
@@ -195,5 +199,5 @@ const EditorsNote = () => {
 export default EditorsNote;
 
 EditorsNote.propTypes = {
-  timelineClasses: PropTypes.string
+  headerHeight: PropTypes.string
 };

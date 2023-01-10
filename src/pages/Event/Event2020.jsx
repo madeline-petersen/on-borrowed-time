@@ -15,13 +15,14 @@ const Event = ({
   nextParams,
   changingParam,
   next,
-  headerHeight,
   colourBackgroundClass,
   textColourClass,
   borderColourClass,
+  headerHeight,
   getFilteredMatches,
   getTextIndent,
   beforeLeave,
+  onScrollOverflow,
   afterLoad,
   openModal,
   setOnClicks,
@@ -32,12 +33,18 @@ const Event = ({
       <div className="event" key={() => generateKey()}>
         <ReactFullpage
           licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
+          // Scrolling
           scrollingSpeed={1000}
-          beforeLeave={throttle(beforeLeave, 1000)}
-          afterLoad={afterLoad}
           scrollOverflow={true}
-          lazyLoading={false}
+          // Design
           paddingTop={headerHeight}
+          // Custom selectors
+          credits={{ enabled: false }}
+          lazyLoading={false}
+          // Events
+          afterLoad={afterLoad}
+          beforeLeave={throttle(beforeLeave, 1000)}
+          onScrollOverflow={onScrollOverflow}
           render={({ state, fullpageApi }) => {
             return (
               <ReactFullpage.Wrapper>
@@ -221,10 +228,10 @@ const Event = ({
 
 Event.propTypes = {
   event: PropTypes.shape(),
-  headerHeight: PropTypes.string,
   colourBackgroundClass: PropTypes.string,
   textColourClass: PropTypes.string,
   borderColourClass: PropTypes.string,
+  headerHeight: PropTypes.string,
   next: PropTypes.shape(),
   nextParams: PropTypes.shape(),
   afterLoad: PropTypes.func,
@@ -234,7 +241,8 @@ Event.propTypes = {
   openModal: PropTypes.func,
   getFilteredMatches: PropTypes.func,
   setOnClicks: PropTypes.func,
-  generateKey: PropTypes.func
+  generateKey: PropTypes.func,
+  onScrollOverflow: PropTypes.func
 };
 
 export default Event;

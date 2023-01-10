@@ -68,7 +68,10 @@ const Home = ({ years, hash, setHash, setTransitionType, navigateTo }) => {
       <ReactFullpage
         licenseKey={'DNAK9-ZU2SK-BDKK8-JZ61H-YIUAK'}
         pluginWrapper={pluginWrapper}
+        // Scrolling
         scrollingSpeed={1000}
+        continuousVertical={true}
+        // Design
         parallax={true}
         parallaxOptions={{
           type: 'cover',
@@ -78,9 +81,11 @@ const Home = ({ years, hash, setHash, setTransitionType, navigateTo }) => {
         parallaxKey={
           'T0NhR3N0YjI1aWIzSnliM2RsWkhScGJXVXVZMjl0QU9fYklqY0dGeVlXeHNZWGc9cG5s'
         }
-        continuousVertical={true}
-        beforeLeave={beforeLeave}
+        // Custom selectors
+        credits={{ enabled: false }}
+        // Events
         afterLoad={afterLoad}
+        beforeLeave={beforeLeave}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>

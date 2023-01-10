@@ -49,13 +49,13 @@ const IndexResourceTable = ({
       sm: 12
     },
     publication: {
-      lg: 3,
-      md: 3,
+      lg: 2,
+      md: 2,
       sm: 12
     },
     author: {
-      lg: 2,
-      md: 2,
+      lg: 3,
+      md: 3,
       sm: 12
     }
   };
@@ -92,7 +92,7 @@ const IndexResourceTable = ({
             <p className={`${themeTextClass} fade-second`}>Date</p>
           </Col>
 
-          <Col lg={12} className="pb-8" />
+          <Col lg={12} className="pb-4" />
         </Row>
       </Hidden>
 
@@ -116,11 +116,11 @@ const IndexResourceTable = ({
               <>
                 <Col
                   {...columns.section}
-                  className="small-headline section-title mb-4"
+                  className="small-headline section-title mb-4 md:mb-0"
                 >
                   {index === 0 && (
                     <p>
-                      {section.sectionTitle}(
+                      {parse(section.sectionTitle)}(
                       {parse(section.resources.length.toString())})
                     </p>
                   )}
@@ -170,7 +170,7 @@ const IndexResourceTable = ({
                 </Col>
               </>
 
-              <Col lg={12} className="pb-8" />
+              <Col lg={12} className="pb-4" />
             </Row>
           );
         });

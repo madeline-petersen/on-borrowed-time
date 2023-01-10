@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Col, Row } from 'react-grid-system';
 
-const Custom = ({ images }) => {
+const Custom = ({ images, headerHeight }) => {
   const getMargin = (image, index) => {
     let margin = '80px';
 
     if (index === 0) {
-      margin = `max((100vh - 78px - ${image.height}/${image.width} * 100%) / 2, 80px)`;
+      margin = `max((100vh - ${headerHeight} - ${image.height}/${image.width} * 100%) / 2, 80px)`;
     }
 
     return margin;
@@ -64,7 +64,8 @@ const Custom = ({ images }) => {
 };
 
 Custom.propTypes = {
-  images: PropTypes.shape()
+  images: PropTypes.shape(),
+  headerHeight: PropTypes.string
 };
 
 export default Custom;

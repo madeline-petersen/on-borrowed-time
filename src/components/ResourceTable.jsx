@@ -105,7 +105,7 @@ const ResourceTable = ({
               onClick={() => openModal(entry)}
             >
               <>
-                <Col {...columns.gutterLeft} />
+                <Col {...columns.gutterLeft} className="cursor-default" />
                 <Col {...columns.tableWidth}>
                   <p
                     className={`md:-ml-8 border-t ${themeBorderClass} border-opacity-10 pt-4 fade-second`}
@@ -115,7 +115,7 @@ const ResourceTable = ({
 
               <>
                 <Hidden sm>
-                  <Col {...columns.gutterLeft} />
+                  <Col {...columns.gutterLeft} className="cursor-default" />
                 </Hidden>
 
                 <Col {...columns.title} className="small-body">
@@ -175,7 +175,7 @@ const ResourceTable = ({
                 </Col>
               </>
 
-              <Col lg={12} className="pb-8" />
+              <Col lg={12} className="pb-8 cursor-default" />
             </Row>
           );
         });
